@@ -1,0 +1,534 @@
+---
+title: Introduction à l'intelligence artificielle
+subtitle: Une brève excursion dans le monde du machine learning 
+format: 
+  clean-revealjs:
+    self-contained: true
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+author:
+  - name: Kévin Polisano
+    email: kevin.polisano@cnrs.fr
+    affiliations: CNRS, Laboratoire Jean Kuntzmann
+date: last-modified
+bibliography: refs.bib
+---
+
+# Contexte historique {background-color="#40666e"}
+
+## Panorama de l'intelligence artificielle
+
+### Le machine learning est une branche de l'IA
+
+![](images/ia-vs-machine-learning-vs-deep-learning.jpg){fig-align="center"}
+
+::: footer
+Source : [inventiv-it.fr](https://inventiv-it.fr/ai-machine-learning-deep-learning/)
+:::
+
+## Qui suis-je ?
+
+### Un esprit visionnaire sur les potentialités des machines
+
+*"Again, it might act upon other things [besides number]{.alert}, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that [the fundamental relations of pitched sounds]{.alert} in the science of harmony and of musical composition were susceptible of such expression and adaptations, [the engine might compose elaborate and scientific pieces of music]{.alert} of any degree of complexity or extent"*
+
+**A.L.L**
+
+::: footer
+Source : [Sketch of the analytical engine](https://www.fourmilab.ch/babbage/sketch.html)
+:::
+
+::: notes
+Encore une fois, cela pourrait agir sur d'autres éléments en plus des nombres, si l'on trouvait des objets dont les relations fondamentales mutuelles pourraient être exprimées par celles de la science abstraite des opérations, et qui seraient également susceptibles d’adaptations à l’action de la notation et du mécanisme opérant de la machine. En supposant, par exemple, que les relations fondamentales entre les fréquences dans la science de l'harmonie et les règles de la composition musicale soient susceptibles d'une telle expression, la machine pourrait composer des morceaux de musique élaborés et scientifiques, de n'importe quel degré de complexité ou d'étendue.
+:::
+
+## Ada Lovelace
+
+### L'enchanteresse des nombres
+
+::::: columns
+::: {.column width="50%"}
+![](images/ada-lovelace.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+-   [1815]{.alert} - Naissance d'Ada Lovelace à Londres, fille du poète Lord Byron et d'Anne Isabella Milbanke.
+-   [1833]{.alert} - Rencontre avec Charles Babbage, mathématicien et inventeur de la machine analytique.
+-   [1842-1843]{.alert} - Publication des Notes, ajoutées à la traduction d'un article du mathématicien italien Luigi Menabrea.
+-   [1852]{.alert} - Décès à l'âge de 36 ans, des suites d'un cancer.
+:::
+:::::
+
+::: footer
+Source : [Wikipédia](https://en.wikipedia.org/wiki/Ada_Lovelace)
+:::
+
+::: notes
+un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa fascination pour les mathématiques et les machines. Elle y ajoute ses propres notes, qui occupent plus de place que l'article lui-même et dans lesquelles elle propose ce qui est souvent considéré comme le premier algorithme conçu pour une machine, visant à calculer les nombres de Bernoulli. sur la machine analytique de Babbage. - 1843 - Paternité de la Programmation : Ses notes incluent des concepts de boucles et de programmation conditionnelle. Ces idées font d'elle la première personne à conceptualiser un algorithme pour un ordinateur, lui conférant le titre de "première programmeuse".
+:::
+
+<!-- 
+
+## {background-iframe="https://danferns.github.io/linear-regression-visualizer/" background-interactive="true"}
+
+-->
+
+## La régression linéaire
+
+### Visualisation de la méthode des moindres carrés
+
+::: {style="text-align: center;"}
+<iframe scrolling="no" title="Interactive Linear Regression" src="https://www.geogebra.org/material/iframe/id/xC6zq7Zv/width/800/height/503/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="503px" style="border:0px;">
+
+</iframe>
+:::
+
+::: footer
+Source : [Geogebra](https://www.geogebra.org/m/xC6zq7Zv)
+:::
+
+## test
+
+<!-- data-autoplay -->
+
+<video onloadstart="this.playbackRate = 2;" data-autoplay start="20" src="videos/perceptron.mp4" poster="images/ada-lovelace.png" controls muted>
+
+</video>
+
+## test 1.1 {background-color="black"}
+
+### Sous-test
+
+![](videos/linear-regression-gradient-descent.mp4){loop="true" data-autoplay="true" width="120%"}
+
+## test 2
+
+<iframe data-external="1" data-autoplay="1" width="560" height="315" src="https://www.youtube.com/embed/GP6fl2nxs9k?si=2LK45_L6tP5z-3ck&amp;autoplay=1&amp;loop=1&amp;start=2&amp;end=6&amp;controls=0&amp;modestbranding=1&amp;autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## test 2.0
+
+<iframe data-external="1" width="560" height="315" src="https://www.youtube.com/embed/GP6fl2nxs9k?autoplay=1&amp;loop=1&amp;playlist=GP6fl2nxs9k&amp;start=2&amp;end=6&amp;controls=0&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## test 2.1
+
+<iframe data-external="1" width="560" height="315" data-src="https://www.youtube.com/embed/GP6fl2nxs9k?si=2LK45_L6tP5z-3ck?autoplay=1&amp;loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## test 3
+
+{{< video data-autoplay src=https://www.youtube.com/embed/GP6fl2nxs9k?si=2LK45_L6tP5z-3ck >}}
+
+<!-- {{< video  -->
+
+<!--     data-autoplay -->
+
+<!--     src=https://www.youtube.com/embed/GP6fl2nxs9k?si=2LK45_L6tP5z-3ck?autoplay=1&loop=1 -->
+
+<!--     title="What is the CERN?" -->
+
+<!--     start="116" -->
+
+<!--     autoplay="true"  -->
+
+<!--     loop="true"  -->
+
+<!--     muted="true" -->
+
+<!-- >}} -->
+
+## test 4
+
+<iframe data-external="1" width="560" height="315" src="https://www.youtube.com/embed/wo9vZccmqwc?start=116&amp;controls=0&amp;modestbranding=1&amp;autohide=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+
+</iframe>
+
+##  {background-video="videos/perceptron.mp4" background-size="contain"}
+
+##  {background-video="https://youtu.be/wo9vZccmqwc?autoplay=1"}
+
+## Before you proceed...
+
+### Requirements for the coding examples in this demo
+
+The [clean theme](https://github.com/grantmcdermott/quarto-revealjs-clean) is language agnostic. Use it with R, Python, Julia, etc. Or none of the above.
+
+However, this demo uses R code to highlight advanced theme features. You'll need to install some software if you'd like to render the demo "as-is".
+
+::: callout-warning
+## Required software (this demo only)
+
+### R packages
+
+``` r
+install.packages(c("modelsummary", "fixest", "pdftools", "tinytex", "threejs"))
+```
+
+### TinyTex
+
+``` bash
+quarto install tinytex
+```
+
+While reveal.js presentations are HTML format, we will show an example of how to embed LaTeX tables as images. This requires a working Tex distribution, of which TinyTex provides by far the easiest and lightest integration with Quarto. More details [here](https://quarto.org/docs/output-formats/pdf-engine.html).
+:::
+
+# Components {background-color="#40666e"}
+
+## Components
+
+### Ordered and Unordered Lists
+
+Here we have an unordered list.
+
+-   first item
+    -   sub-item
+-   second item
+
+And next we have an ordered one.
+
+1.  first item
+    i)  sub-item
+2.  second item
+
+## Components
+
+### Alerts & Cross-refs {#sec-crossref}
+
+To emphasize specific words or text, you can:
+
+-   Use the default `.alert` class, e.g. [important note]{.alert}.
+-   Use the `.fg` class for custom colour, e.g. [important note]{.fg style="--col: #e64173"}.
+-   Use the `.bg` class for custom background, e.g. [important note]{.bg style="--col: #e64173"}.
+
+To cross-reference, you have several options, for example:
+
+-   Beamer-like `.button` class provided by this theme, e.g. [[Appendix](#sec-appendix)]{.button}
+-   Quarto's native cross-ref syntax, e.g., "See @sec-appendix."
+
+## Components
+
+### Citations
+
+Citations follow the standard [Quarto format](https://quarto.org/docs/authoring/footnotes-and-citations.html#citations) and be sourced from BibLaTex, BibTeX, or CLS files. For example:
+
+-   [Topic 1:]{.alert} Spatial Frictions [@Fajgelbaum_Morales_Serrato_Zidar_2018; @Hsieh_Moretti_2019; @Moretti_2011]
+
+-   [Topic 2:]{.alert} Blah [@Suárez_Serrato_Zidar_2016]
+
+## Components
+
+### Blocks
+
+Quarto provides [dedicated environments](https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs) for theorems, lemmas, and so forth.
+
+But in presentation format, it's arguably more effective just to use a [Callout Block](https://quarto.org/docs/authoring/callouts.html).
+
+::: callout-note
+## Regression Specification
+
+The main specification is as follows:
+
+$$
+y_{it} = X_{it} \beta + \mu_i + \varepsilon_{it}
+$$
+:::
+
+## Components
+
+### Multicolumn I: Text only
+
+::::: columns
+::: {.column width="50%"}
+#### Column 1
+
+Here is a long sentence that will wrap onto the next line as it hits the column width, and continue this way until it stops.
+:::
+
+::: {.column width="50%"}
+#### Column 2
+
+Some other text in another column.
+
+A second paragraph.
+:::
+:::::
+
+Multicolumn support is very flexible and we can continue with a single full span column in the same slide.
+
+## Components
+
+### Multicolumn II: Text and figures
+
+::::: columns
+::: {.column width="50%"}
+![](images/kanagawa.jpg)
+:::
+
+::: {.column width="50%"}
+-   A point about the figure that is potentially important.
+-   Another point about the figure that is also potentially important.
+:::
+:::::
+
+Note that sub- and multi-panel figures are also natively supported by Quarto. See [here](https://quarto.org/docs/authoring/figures.html#subfigures).
+
+## Components
+
+### Multicolumn III: Code and output
+
+```{r}
+#| echo: true
+#| label: fig-pairs
+#| fig-cap: "Pairwise scatterplot" 
+#| fig-asp: 1
+#| output-location: column
+
+palette("Classic Tableau")
+
+par(
+  family = "HersheySans",
+  las = 1, pch = 19, cex = 1.5
+)
+
+pairs(
+  iris[,1:4],
+  col=iris$Species
+)
+```
+
+# Tables {background-color="#40666e"}
+
+## Markdown tables
+
+### Default table styling
+
+The `clean` theme rolls its own minimalist aesthetic for tables. This should interface directly with Quarto's excellent [table support](https://quarto.org/docs/authoring/tables.html).
+
+:::::: columns
+::: {.column width="55%"}
+``` md
+| fruit  | price  |
+|--------|-------:|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Fruit prices {tbl-colwidths="[75,25]"}
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="40%"}
+| fruit  | price |
+|--------|------:|
+| apple  |  2.05 |
+| pear   |  1.37 |
+| orange |  3.09 |
+
+: Fruit prices {tbl-colwidths="\[75,25\]"}
+:::
+::::::
+
+## Regression tables
+
+### Regression example
+
+These aesthetics should carry over to any computation-based tables too.
+
+Let's take a few slides to illustrate via a simple regression example:
+
+```{r}
+#| echo: true
+
+library(fixest)
+
+mods = feols(
+  rating ~ complaints + privileges + learning + csw0(raises + critical),
+  data = attitude
+)
+
+dict = c("rating"     = "Overall Rating",
+         "complaints" = "Handling of Complaints",
+         "privileges" = "No Special Priviledges",
+         "learning"   = "Opportunity to Learn",
+         "raises"     = "Performance-Based Raises",
+         "critical"   = "Too Critical")
+```
+
+## Regression tables
+
+### modelsummary
+
+Popular regression table software should play nicely with this theme out of the box. Here's an example using [modelsummary](https://modelsummary.com/) (with the default [tinytable](https://vincentarelbundock.github.io/tinytable/) backend[^1]). See the next slide for the resulting table.
+
+[^1]: For extra styling options (e.g., bootstrap themes), see [here](https://modelsummary.com/vignettes/appearance.html).
+
+```{r}
+#| echo: true
+#| output-location: slide
+
+library(modelsummary) # Make sure you have >=v2.0.0
+
+modelsummary(
+  setNames(mods, c("(1)", "(2)")),
+  coef_map = dict, stars = TRUE,
+  gof_map = NA
+  ) |>
+  # some optional stylistic tweaks
+  tinytable::group_tt(j = list("Dep. variable: Overall Rating" = 2:3)) |>
+  tinytable::style_tt(i = 1:2, j = 2:3, background = "pink")
+```
+
+## Regression tables
+
+### fixest::etable
+
+**Aside:** We used the fantastic [fixest](https://lrberge.github.io/fixest/) package to estimate our regression models. fixest bundles its own powerful tabling functions. These were designed for LaTeX output, but can work with this (HTML) theme too.[^2]
+
+[^2]: Details [here](https://lrberge.github.io/fixest/articles/etable_new_features.html). You need to install the `tinytex` & `pdftools` packages first.
+
+-   Set the `output: asis` R chunk option in your Quarto doc.
+-   Set the `markdown = TRUE` fixest::etable option.
+
+```{{{r}}}
+#| output: asis
+
+setFixest_etable(markdown = TRUE, drop = "Constant")
+setFixest_dict(dict)
+
+etable(mods, highlight = .("se" = "complaints"))
+```
+
+## Regression tables
+
+### fixest::etable (cont.)
+
+```{r}
+#| output: asis
+
+setFixest_etable(markdown = TRUE, drop = "Constant")
+setFixest_dict(dict)
+
+etable(mods, highlight = .("se" = "complaints"), arraystretch = 1.5)
+```
+
+# Figures {background-color="#40666e"}
+
+## Figure
+
+![](images/kanagawa.jpg)
+
+## Figure
+
+### Full-size Figures
+
+You can use the `{.background-image}` container environment to completely fill the slide background with an image.
+
+Ideally, your figure will be the same aspect ratio as the screen that you're presenting on.
+
+-   This can be a bit tricky because of the dynamic nature of reveal.js / HTML. But it's probably something close to 16:9.
+-   Aspect ratio can also matter for a regular full-frame images (previous slide).
+
+##  {background-image="images/kanagawa169.jpg" background-size="100%"}
+
+## Interactive plots
+
+```{r}
+#| out-width: 75%
+
+library(threejs)
+
+# Approximate locations as factors
+data(flights)
+dest = factor(sprintf("%.2f:%.2f", flights[,3], flights[,4]))
+
+# A table of destination frequencies
+freq = sort(table(dest), decreasing=TRUE)
+
+# The most frequent destinations in these data
+frequent_destinations = names(freq)[1:10]
+
+# Subset the flight data by destination frequency
+idx = dest %in% frequent_destinations
+frequent_flights = flights[idx, ]
+
+# Lat/long and counts of frequent flights
+ll = unique(frequent_flights[, 3:4])
+
+# Plot frequent destinations as bars, and the flights to and from
+# them as arcs. Adjust arc width and color by frequency.
+globejs(lat=ll[, 1], long=ll[, 2], arcs=frequent_flights,
+        # bodycolor="#aaaaff", arcsHeight=0.3, arcsLwd=2,
+        bodycolor="#fff", arcsHeight=0.3, arcsLwd=2,
+        arcsColor="#ffff00", arcsOpacity=0.15,
+        atmosphere=TRUE, color="#fff", pointsize=0.5)
+```
+
+*Note: Simple flight data example using `threejs`. There are many interactive plotting options beyond this. (More [details](https://quarto.org/docs/interactive/).)*
+
+# Other {background-color="#40666e"}
+
+## Other
+
+### What else can the clean theme do?
+
+We have highlighted some theme-specific components in this demo.
+
+But please note that all of the standard [reveal.js functionality and plugins](https://quarto.org/docs/presentations/revealjs/presenting.html) are compatible with the clean theme. This includes:
+
+-   [chalkboard](https://quarto.org/docs/presentations/revealjs/presenting.html#chalkboard) for annotating slides.
+-   [multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex) for enabling audience navigation of your slides.
+-   [pdf printing](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf) in case you don't have access to a web browser.
+-   Etc.
+
+# Summary {background-color="#40666e"}
+
+## Summary
+
+### A minimalist and elegant presentation theme
+
+The Quarto reveal.js [clean theme](grantmcdermott/quarto-revealjs-clean) aims to be a minimalist and elegant presention theme. Here are some options to get you started.
+
+Add the theme to an existing project.
+
+``` bash
+quarto install extension grantmcdermott/quarto-revealjs-clean
+```
+
+... or, create a new project using our lean template.
+
+``` bash
+quarto use template grantmcdermott/quarto-revealjs-clean
+```
+
+... or, create a new project using these demo slides as a full template.
+
+``` bash
+quarto use template grantmcdermott/quarto-revealjs-clean-demo
+```
+
+## References
+
+::: {#refs}
+:::
+
+## Appendix {#sec-appendix}
+
+```{r}
+#| cache: true
+#| label: tbl-attsum
+#| tbl-cap: Summary of the base R `attitude` dataset
+
+library(modelsummary)
+datasummary_skim(attitude)
+```
+
+[[Back to main](#sec-crossref)]{.button}

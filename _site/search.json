@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
+    "objectID": "presentations/Intro-IA.html#panorama-de-lintelligence-artificielle",
+    "href": "presentations/Intro-IA.html#panorama-de-lintelligence-artificielle",
+    "title": "Introduction à l’IA",
+    "section": "Panorama de l’intelligence artificielle",
+    "text": "Panorama de l’intelligence artificielle\n\n\nSource : test\n\n\nSpeaker notes go here."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "presentations/Intro-IA.html#qui-suis-je",
+    "href": "presentations/Intro-IA.html#qui-suis-je",
+    "title": "Introduction à l’IA",
+    "section": "Qui suis-je ?",
+    "text": "Qui suis-je ?\n“Again, it might act upon other things besides number, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that the fundamental relations of pitched sounds in the science of harmony and of musical composition were susceptible of such expression and adaptations, the engine might compose elaborate and scientific pieces of music of any degree of complexity or extent”"
+  },
+  {
+    "objectID": "presentations/Intro-IA.html#lenchanteresse-des-nombres",
+    "href": "presentations/Intro-IA.html#lenchanteresse-des-nombres",
+    "title": "Introduction à l’IA",
+    "section": "L’enchanteresse des nombres",
+    "text": "L’enchanteresse des nombres"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bienvenue",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 8, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 5, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -21,10 +35,528 @@
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Bienvenue",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 8, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nOct 5, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#example-slide",
+    "href": "presentations/clean-theme/clean-theme.html#example-slide",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Example slide",
+    "text": "Example slide\nThis is a subtitle\nBefore we dive a bit deeper, here is a simple example of the clean theme in action.\n\nNo pictures or anything fancy. Just text for the moment.\n\nNext, we’ll take a brief tour of some theme components.\n\nWe’ll use the same basic structure as the original LaTeX slides.\nNote that the full suite of Reveal.js features are available for this Quarto implementation, even if we don’t cover everything here."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#before-you-proceed",
+    "href": "presentations/clean-theme/clean-theme.html#before-you-proceed",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Before you proceed…",
+    "text": "Before you proceed…\nRequirements for the coding examples in this demo\nThe clean theme is language agnostic. Use it with R, Python, Julia, etc. Or none of the above.\nHowever, this demo uses R code to highlight advanced theme features. You’ll need to install some software if you’d like to render the demo “as-is”.\n\n\n\n\n\n\nRequired software (this demo only)\n\n\nR packages\ninstall.packages(c(\"modelsummary\", \"fixest\", \"pdftools\", \"tinytex\", \"threejs\"))\nTinyTex\nquarto install tinytex\nWhile reveal.js presentations are HTML format, we will show an example of how to embed LaTeX tables as images. This requires a working Tex distribution, of which TinyTex provides by far the easiest and lightest integration with Quarto. More details here."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-1",
+    "href": "presentations/clean-theme/clean-theme.html#components-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nOrdered and Unordered Lists\nHere we have an unordered list.\n\nfirst item\n\nsub-item\n\nsecond item\n\nAnd next we have an ordered one.\n\nfirst item\n\nsub-item\n\nsecond item"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-2",
+    "href": "presentations/clean-theme/clean-theme.html#components-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nAlerts & Cross-refs\nTo emphasize specific words or text, you can:\n\nUse the default .alert class, e.g. important note.\nUse the .fg class for custom colour, e.g. important note.\nUse the .bg class for custom background, e.g. important note.\n\nTo cross-reference, you have several options, for example:\n\nBeamer-like .button class provided by this theme, e.g. Appendix\nQuarto’s native cross-ref syntax, e.g., “See Section 6.3.”"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-3",
+    "href": "presentations/clean-theme/clean-theme.html#components-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. For example:\n\nTopic 1: Spatial Frictions (Fajgelbaum et al. 2018; Hsieh and Moretti 2019; Moretti 2011)\nTopic 2: Blah (Suárez Serrato and Zidar 2016)"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-4",
+    "href": "presentations/clean-theme/clean-theme.html#components-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nBlocks\nQuarto provides dedicated environments for theorems, lemmas, and so forth.\nBut in presentation format, it’s arguably more effective just to use a Callout Block.\n\n\n\n\n\n\nRegression Specification\n\n\nThe main specification is as follows:\n\\[\ny_{it} = X_{it} \\beta + \\mu_i + \\varepsilon_{it}\n\\]"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-5",
+    "href": "presentations/clean-theme/clean-theme.html#components-5",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nMulticolumn I: Text only\n\n\nColumn 1\nHere is a long sentence that will wrap onto the next line as it hits the column width, and continue this way until it stops.\n\nColumn 2\nSome other text in another column.\nA second paragraph.\n\nMulticolumn support is very flexible and we can continue with a single full span column in the same slide."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-6",
+    "href": "presentations/clean-theme/clean-theme.html#components-6",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nMulticolumn II: Text and figures\n\n\n\n\n\nA point about the figure that is potentially important.\nAnother point about the figure that is also potentially important.\n\n\nNote that sub- and multi-panel figures are also natively supported by Quarto. See here."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#components-7",
+    "href": "presentations/clean-theme/clean-theme.html#components-7",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nMulticolumn III: Code and output\n\n\npalette(\"Classic Tableau\")\n\npar(\n  family = \"HersheySans\",\n  las = 1, pch = 19, cex = 1.5\n)\n\npairs(\n  iris[,1:4],\n  col=iris$Species\n)\n\n\n\n\n\n\n\n\nFigure 1: Pairwise scatterplot"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#markdown-tables",
+    "href": "presentations/clean-theme/clean-theme.html#markdown-tables",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Markdown tables",
+    "text": "Markdown tables\nDefault table styling\nThe clean theme rolls its own minimalist aesthetic for tables. This should interface directly with Quarto’s excellent table support.\n\n\n| fruit  | price  |\n|--------|-------:|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[75,25]\"}\n\n\n\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#regression-tables",
+    "href": "presentations/clean-theme/clean-theme.html#regression-tables",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nRegression example\nThese aesthetics should carry over to any computation-based tables too.\nLet’s take a few slides to illustrate via a simple regression example:\n\nlibrary(fixest)\n\nmods = feols(\n  rating ~ complaints + privileges + learning + csw0(raises + critical),\n  data = attitude\n)\n\ndict = c(\"rating\"     = \"Overall Rating\",\n         \"complaints\" = \"Handling of Complaints\",\n         \"privileges\" = \"No Special Priviledges\",\n         \"learning\"   = \"Opportunity to Learn\",\n         \"raises\"     = \"Performance-Based Raises\",\n         \"critical\"   = \"Too Critical\")"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#regression-tables-1",
+    "href": "presentations/clean-theme/clean-theme.html#regression-tables-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nmodelsummary\nPopular regression table software should play nicely with this theme out of the box. Here’s an example using modelsummary (with the default tinytable backend1). See the next slide for the resulting table.\n\nlibrary(modelsummary) # Make sure you have &gt;=v2.0.0\n\nmodelsummary(\n  setNames(mods, c(\"(1)\", \"(2)\")),\n  coef_map = dict, stars = TRUE,\n  gof_map = NA\n  ) |&gt;\n  # some optional stylistic tweaks\n  tinytable::group_tt(j = list(\"Dep. variable: Overall Rating\" = 2:3)) |&gt;\n  tinytable::style_tt(i = 1:2, j = 2:3, background = \"pink\")\n\n\nFor extra styling options (e.g., bootstrap themes), see here."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#regression-tables-1-output",
+    "href": "presentations/clean-theme/clean-theme.html#regression-tables-1-output",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n    \n\n    \n    \n      \n        \n\n \nDep. variable: Overall Rating\n\n        \n              \n                 \n                (1)\n                (2)\n              \n        \n        + p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n        \n                \n                  Handling of Complaints  \n                  0.682***\n                  0.692***\n                \n                \n                                          \n                  (0.129) \n                  (0.149) \n                \n                \n                  No Special Priviledges  \n                  -0.103  \n                  -0.104  \n                \n                \n                                          \n                  (0.129) \n                  (0.135) \n                \n                \n                  Opportunity to Learn    \n                  0.238+  \n                  0.249   \n                \n                \n                                          \n                  (0.139) \n                  (0.160) \n                \n                \n                  Performance-Based Raises\n                          \n                  -0.033  \n                \n                \n                                          \n                          \n                  (0.202) \n                \n                \n                  Too Critical            \n                          \n                  0.015   \n                \n                \n                                          \n                          \n                  (0.147)"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#regression-tables-2",
+    "href": "presentations/clean-theme/clean-theme.html#regression-tables-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nfixest::etable\nAside: We used the fantastic fixest package to estimate our regression models. fixest bundles its own powerful tabling functions. These were designed for LaTeX output, but can work with this (HTML) theme too.1\n\nSet the output: asis R chunk option in your Quarto doc.\nSet the markdown = TRUE fixest::etable option.\n\n```{{r}}\n#| output: asis\n\nsetFixest_etable(markdown = TRUE, drop = \"Constant\")\nsetFixest_dict(dict)\n\netable(mods, highlight = .(\"se\" = \"complaints\"))\n```\nDetails here. You need to install the tinytex & pdftools packages first."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#regression-tables-3",
+    "href": "presentations/clean-theme/clean-theme.html#regression-tables-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nfixest::etable (cont.)"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#figure",
+    "href": "presentations/clean-theme/clean-theme.html#figure",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Figure",
+    "text": "Figure"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#figure-1",
+    "href": "presentations/clean-theme/clean-theme.html#figure-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Figure",
+    "text": "Figure\nFull-size Figures\nYou can use the {.background-image} container environment to completely fill the slide background with an image.\nIdeally, your figure will be the same aspect ratio as the screen that you’re presenting on.\n\nThis can be a bit tricky because of the dynamic nature of reveal.js / HTML. But it’s probably something close to 16:9.\nAspect ratio can also matter for a regular full-frame images (previous slide)."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#interactive-plots",
+    "href": "presentations/clean-theme/clean-theme.html#interactive-plots",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Interactive plots",
+    "text": "Interactive plots\n\n\n\n\n\n\nNote: Simple flight data example using threejs. There are many interactive plotting options beyond this. (More details.)"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#other-1",
+    "href": "presentations/clean-theme/clean-theme.html#other-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Other",
+    "text": "Other\nWhat else can the clean theme do?\nWe have highlighted some theme-specific components in this demo.\nBut please note that all of the standard reveal.js functionality and plugins are compatible with the clean theme. This includes:\n\nchalkboard for annotating slides.\nmultiplex for enabling audience navigation of your slides.\npdf printing in case you don’t have access to a web browser.\nEtc."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#summary-1",
+    "href": "presentations/clean-theme/clean-theme.html#summary-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Summary",
+    "text": "Summary\nA minimalist and elegant presentation theme\nThe Quarto reveal.js clean theme aims to be a minimalist and elegant presention theme. Here are some options to get you started.\nAdd the theme to an existing project.\nquarto install extension grantmcdermott/quarto-revealjs-clean\n… or, create a new project using our lean template.\nquarto use template grantmcdermott/quarto-revealjs-clean\n… or, create a new project using these demo slides as a full template.\nquarto use template grantmcdermott/quarto-revealjs-clean-demo"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#references",
+    "href": "presentations/clean-theme/clean-theme.html#references",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "References",
+    "text": "References\n\n\nFajgelbaum, Pablo D, Eduardo Morales, Juan Carlos Suarez Serrato, and Owen Zidar. 2018. “State Taxes and Spatial Misallocation,” 90.\n\n\nHsieh, Chang-Tai, and Enrico Moretti. 2019. “Housing Constraints and Spatial Misallocation.” American Economic Journal: Macroeconomics 11 (2): 39.\n\n\nMoretti, Enrico. 2011. “Local Labor Markets.” In Handbook of Labor Economics. Vol. 4. Elsevier.\n\n\nSuárez Serrato, Juan Carlos, and Owen Zidar. 2016. “Who Benefits from State Corporate Tax Cuts? A Local Labor Markets Approach with Heterogeneous Firms.” American Economic Review 106 (9)."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#sec-appendix",
+    "href": "presentations/clean-theme/clean-theme.html#sec-appendix",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\n\nTable 1: Summary of the base R attitude dataset\n\n\n\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                 \n                Unique\n                Missing Pct.\n                Mean\n                SD\n                Min\n                Median\n                Max\n                Histogram\n              \n        \n        \n        \n                \n                  rating\n                  22\n                  0\n                  64.6\n                  12.2\n                  40.0\n                  65.5\n                  85.0\n                  \n                \n                \n                  complaints\n                  23\n                  0\n                  66.6\n                  13.3\n                  37.0\n                  65.0\n                  90.0\n                  \n                \n                \n                  privileges\n                  24\n                  0\n                  53.1\n                  12.2\n                  30.0\n                  51.5\n                  83.0\n                  \n                \n                \n                  learning\n                  23\n                  0\n                  56.4\n                  11.7\n                  34.0\n                  56.5\n                  75.0\n                  \n                \n                \n                  raises\n                  21\n                  0\n                  64.6\n                  10.4\n                  43.0\n                  63.5\n                  88.0\n                  \n                \n                \n                  critical\n                  21\n                  0\n                  74.8\n                  9.9\n                  49.0\n                  77.5\n                  92.0\n                  \n                \n                \n                  advance\n                  20\n                  0\n                  42.9\n                  10.3\n                  25.0\n                  41.0\n                  72.0\n                  \n                \n        \n      \n    \n\n\n\n\n\n\nBack to main"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#panorama-de-lintelligence-artificielle",
+    "href": "presentations/clean-theme/clean-theme.html#panorama-de-lintelligence-artificielle",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Panorama de l’intelligence artificielle",
+    "text": "Panorama de l’intelligence artificielle\nLe machine learning est une branche de l’IA\n\n\nSource : inventiv-it.fr"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#qui-suis-je",
+    "href": "presentations/clean-theme/clean-theme.html#qui-suis-je",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Qui suis-je ?",
+    "text": "Qui suis-je ?\nUn esprit visionnaire sur les potentialités des machines\n“Again, it might act upon other things besides number, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that the fundamental relations of pitched sounds in the science of harmony and of musical composition were susceptible of such expression and adaptations, the engine might compose elaborate and scientific pieces of music of any degree of complexity or extent”\nA.L.L\n\nSource : Sketch of the analytical engine\n\n\nEncore une fois, cela pourrait agir sur d’autres éléments en plus des nombres, si l’on trouvait des objets dont les relations fondamentales mutuelles pourraient être exprimées par celles de la science abstraite des opérations, et qui seraient également susceptibles d’adaptations à l’action de la notation et du mécanisme opérant de la machine. En supposant, par exemple, que les relations fondamentales entre les fréquences dans la science de l’harmonie et les règles de la composition musicale soient susceptibles d’une telle expression, la machine pourrait composer des morceaux de musique élaborés et scientifiques, de n’importe quel degré de complexité ou d’étendue."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#lenchanteresse-des-nombres",
+    "href": "presentations/clean-theme/clean-theme.html#lenchanteresse-des-nombres",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’enchanteresse des nombres",
+    "text": "L’enchanteresse des nombres"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#ada-lovelace",
+    "href": "presentations/clean-theme/clean-theme.html#ada-lovelace",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Ada Lovelace",
+    "text": "Ada Lovelace\nL’enchanteresse des nombres\n\n\n\n\n\n\n\n\n\n1815 - Naissance d’Ada Lovelace à Londres, fille du poète Lord Byron et d’Anne Isabella Milbanke.\n1833 - Rencontre avec Charles Babbage, mathématicien et inventeur de la machine analytique.\n1842-1843 - Publication des Notes, ajoutées à la traduction d’un article du mathématicien italien Luigi Menabrea.\n1852 - Décès à l’âge de 36 ans, des suites d’un cancer.\n\n\n\nSource : Wikipédia\n\n\nun précurseur de l’ordinateur moderne. Cette rencontre marquera le début de sa fascination pour les mathématiques et les machines. Elle y ajoute ses propres notes, qui occupent plus de place que l’article lui-même et dans lesquelles elle propose ce qui est souvent considéré comme le premier algorithme conçu pour une machine, visant à calculer les nombres de Bernoulli. sur la machine analytique de Babbage. - 1843 - Paternité de la Programmation : Ses notes incluent des concepts de boucles et de programmation conditionnelle. Ces idées font d’elle la première personne à conceptualiser un algorithme pour un ordinateur, lui conférant le titre de “première programmeuse”."
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#slide-title",
+    "href": "presentations/clean-theme/clean-theme.html#slide-title",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Slide Title",
+    "text": "Slide Title"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#slide-title-background-iframehttpsdanferns.github.iolinear-regression-visualizer-background-interactivetrue",
+    "href": "presentations/clean-theme/clean-theme.html#slide-title-background-iframehttpsdanferns.github.iolinear-regression-visualizer-background-interactivetrue",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Slide Title {background-iframe=“https://danferns.github.io/linear-regression-visualizer/”, background-interactive=“true”}",
+    "text": "Slide Title {background-iframe=“https://danferns.github.io/linear-regression-visualizer/”, background-interactive=“true”}"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test",
+    "href": "presentations/clean-theme/clean-theme.html#test",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test",
+    "text": "test"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#la-régression-linéaire",
+    "href": "presentations/clean-theme/clean-theme.html#la-régression-linéaire",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "La régression linéaire",
+    "text": "La régression linéaire\nVisualisation de la méthode des moindres carrés\n\n\n\n\n\nSource : Geogebra"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-data-background-videoimagesperceptron.mp4-data-background-video-loop-data-background-video-muted",
+    "href": "presentations/clean-theme/clean-theme.html#test-data-background-videoimagesperceptron.mp4-data-background-video-loop-data-background-video-muted",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Test {data-background-video=“images/perceptron.mp4” data-background-video-loop data-background-video-muted}",
+    "text": "Test {data-background-video=“images/perceptron.mp4” data-background-video-loop data-background-video-muted}"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-1",
+    "href": "presentations/clean-theme/clean-theme.html#test-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test",
+    "text": "test"
+  },
+  {
+    "objectID": "presentations/Intro-IA.html#test",
+    "href": "presentations/Intro-IA.html#test",
+    "title": "Introduction à l’IA",
+    "section": "test",
+    "text": "test"
+  },
+  {
+    "objectID": "presentations/Intro-IA.html#test-3",
+    "href": "presentations/Intro-IA.html#test-3",
+    "title": "Introduction à l’IA",
+    "section": "test 3",
+    "text": "test 3"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-3",
+    "href": "presentations/clean-theme/clean-theme.html#test-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 3",
+    "text": "test 3\n\n\n” data-raw=“–&gt;”}\n  \n  \n  \n  \n  \n  \n  \n ]{.quarto-shortcode__ data-is-shortcode=“1” data-raw=“{{&lt; video –&gt;"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-2",
+    "href": "presentations/clean-theme/clean-theme.html#test-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 2",
+    "text": "test 2"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-4",
+    "href": "presentations/clean-theme/clean-theme.html#test-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 4",
+    "text": "test 4"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-2.1",
+    "href": "presentations/clean-theme/clean-theme.html#test-2.1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 2.1",
+    "text": "test 2.1"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#section-1",
+    "href": "presentations/clean-theme/clean-theme.html#section-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "",
+    "text": "Iframe\n\n\n\n\n            &lt;section data-background-iframe=\"https://www.youtube.com/embed/h1_nyI3z8gI\" data-background-interactive&gt;\n                &lt;h2 style=\"color: #fff;\"&gt;Iframe Background&lt;/h2&gt;\n            &lt;/section&gt;\n\n            &lt;section&gt;\n                &lt;h2&gt;Video&lt;/h2&gt;\n                &lt;video src=\"https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4\" data-autoplay&gt;&lt;/video&gt;\n            &lt;/section&gt;"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-2.0",
+    "href": "presentations/clean-theme/clean-theme.html#test-2.0",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 2.0",
+    "text": "test 2.0"
+  },
+  {
+    "objectID": "presentations/clean-theme/clean-theme.html#test-1.1",
+    "href": "presentations/clean-theme/clean-theme.html#test-1.1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 1.1",
+    "text": "test 1.1\nSous-test\nVideo"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#panorama-de-lintelligence-artificielle",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#panorama-de-lintelligence-artificielle",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Panorama de l’intelligence artificielle",
+    "text": "Panorama de l’intelligence artificielle\nLe machine learning est une branche de l’IA\n\n\nSource : inventiv-it.fr"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#qui-suis-je",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#qui-suis-je",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Qui suis-je ?",
+    "text": "Qui suis-je ?\nUn esprit visionnaire sur les potentialités des machines\n“Again, it might act upon other things besides number, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that the fundamental relations of pitched sounds in the science of harmony and of musical composition were susceptible of such expression and adaptations, the engine might compose elaborate and scientific pieces of music of any degree of complexity or extent”\nA.L.L\n\nSource : Sketch of the analytical engine\n\n\nEncore une fois, cela pourrait agir sur d’autres éléments en plus des nombres, si l’on trouvait des objets dont les relations fondamentales mutuelles pourraient être exprimées par celles de la science abstraite des opérations, et qui seraient également susceptibles d’adaptations à l’action de la notation et du mécanisme opérant de la machine. En supposant, par exemple, que les relations fondamentales entre les fréquences dans la science de l’harmonie et les règles de la composition musicale soient susceptibles d’une telle expression, la machine pourrait composer des morceaux de musique élaborés et scientifiques, de n’importe quel degré de complexité ou d’étendue."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#ada-lovelace",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#ada-lovelace",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Ada Lovelace",
+    "text": "Ada Lovelace\nL’enchanteresse des nombres\n\n\n\n\n\n\n\n\n\n1815 - Naissance d’Ada Lovelace à Londres, fille du poète Lord Byron et d’Anne Isabella Milbanke.\n1833 - Rencontre avec Charles Babbage, mathématicien et inventeur de la machine analytique.\n1842-1843 - Publication des Notes, ajoutées à la traduction d’un article du mathématicien italien Luigi Menabrea.\n1852 - Décès à l’âge de 36 ans, des suites d’un cancer.\n\n\n\nSource : Wikipédia\n\n\nun précurseur de l’ordinateur moderne. Cette rencontre marquera le début de sa fascination pour les mathématiques et les machines. Elle y ajoute ses propres notes, qui occupent plus de place que l’article lui-même et dans lesquelles elle propose ce qui est souvent considéré comme le premier algorithme conçu pour une machine, visant à calculer les nombres de Bernoulli. sur la machine analytique de Babbage. - 1843 - Paternité de la Programmation : Ses notes incluent des concepts de boucles et de programmation conditionnelle. Ces idées font d’elle la première personne à conceptualiser un algorithme pour un ordinateur, lui conférant le titre de “première programmeuse”."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#la-régression-linéaire",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#la-régression-linéaire",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "La régression linéaire",
+    "text": "La régression linéaire\nVisualisation de la méthode des moindres carrés\n\n\n\n\n\nSource : Geogebra"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test",
+    "text": "test"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-1.1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test-1.1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 1.1",
+    "text": "test 1.1\nSous-test\nVideo"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 2",
+    "text": "test 2"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-2.0",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test-2.0",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 2.0",
+    "text": "test 2.0"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-2.1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test-2.1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 2.1",
+    "text": "test 2.1"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-3",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 3",
+    "text": "test 3\n\n\n” data-raw=“–&gt;”}\n  \n  \n  \n  \n  \n  \n  \n ]{.quarto-shortcode__ data-is-shortcode=“1” data-raw=“{{&lt; video –&gt;"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-4",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#test-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "test 4",
+    "text": "test 4"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#before-you-proceed",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#before-you-proceed",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Before you proceed…",
+    "text": "Before you proceed…\nRequirements for the coding examples in this demo\nThe clean theme is language agnostic. Use it with R, Python, Julia, etc. Or none of the above.\nHowever, this demo uses R code to highlight advanced theme features. You’ll need to install some software if you’d like to render the demo “as-is”.\n\n\n\n\n\n\nRequired software (this demo only)\n\n\nR packages\ninstall.packages(c(\"modelsummary\", \"fixest\", \"pdftools\", \"tinytex\", \"threejs\"))\nTinyTex\nquarto install tinytex\nWhile reveal.js presentations are HTML format, we will show an example of how to embed LaTeX tables as images. This requires a working Tex distribution, of which TinyTex provides by far the easiest and lightest integration with Quarto. More details here."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nOrdered and Unordered Lists\nHere we have an unordered list.\n\nfirst item\n\nsub-item\n\nsecond item\n\nAnd next we have an ordered one.\n\nfirst item\n\nsub-item\n\nsecond item"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nAlerts & Cross-refs\nTo emphasize specific words or text, you can:\n\nUse the default .alert class, e.g. important note.\nUse the .fg class for custom colour, e.g. important note.\nUse the .bg class for custom background, e.g. important note.\n\nTo cross-reference, you have several options, for example:\n\nBeamer-like .button class provided by this theme, e.g. Appendix\nQuarto’s native cross-ref syntax, e.g., “See Section 6.3.”"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-3",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nCitations\nCitations follow the standard Quarto format and be sourced from BibLaTex, BibTeX, or CLS files. For example:\n\nTopic 1: Spatial Frictions (Fajgelbaum et al. 2018; Hsieh and Moretti 2019; Moretti 2011)\nTopic 2: Blah (Suárez Serrato and Zidar 2016)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-4",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nBlocks\nQuarto provides dedicated environments for theorems, lemmas, and so forth.\nBut in presentation format, it’s arguably more effective just to use a Callout Block.\n\n\n\n\n\n\nRegression Specification\n\n\nThe main specification is as follows:\n\\[\ny_{it} = X_{it} \\beta + \\mu_i + \\varepsilon_{it}\n\\]"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-5",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-5",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nMulticolumn I: Text only\n\n\nColumn 1\nHere is a long sentence that will wrap onto the next line as it hits the column width, and continue this way until it stops.\n\nColumn 2\nSome other text in another column.\nA second paragraph.\n\nMulticolumn support is very flexible and we can continue with a single full span column in the same slide."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-6",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-6",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nMulticolumn II: Text and figures\n\n\n\n\n\nA point about the figure that is potentially important.\nAnother point about the figure that is also potentially important.\n\n\nNote that sub- and multi-panel figures are also natively supported by Quarto. See here."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#components-7",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#components-7",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Components",
+    "text": "Components\nMulticolumn III: Code and output\n\n\npalette(\"Classic Tableau\")\n\npar(\n  family = \"HersheySans\",\n  las = 1, pch = 19, cex = 1.5\n)\n\npairs(\n  iris[,1:4],\n  col=iris$Species\n)\n\n\n\n\n\n\n\n\nFigure 1: Pairwise scatterplot"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#markdown-tables",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#markdown-tables",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Markdown tables",
+    "text": "Markdown tables\nDefault table styling\nThe clean theme rolls its own minimalist aesthetic for tables. This should interface directly with Quarto’s excellent table support.\n\n\n| fruit  | price  |\n|--------|-------:|\n| apple  | 2.05   |\n| pear   | 1.37   |\n| orange | 3.09   |\n\n: Fruit prices {tbl-colwidths=\"[75,25]\"}\n\n\n\n\nFruit prices\n\n\n\n\n\n\nfruit\nprice\n\n\n\n\napple\n2.05\n\n\npear\n1.37\n\n\norange\n3.09"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nRegression example\nThese aesthetics should carry over to any computation-based tables too.\nLet’s take a few slides to illustrate via a simple regression example:\n\nlibrary(fixest)\n\nmods = feols(\n  rating ~ complaints + privileges + learning + csw0(raises + critical),\n  data = attitude\n)\n\ndict = c(\"rating\"     = \"Overall Rating\",\n         \"complaints\" = \"Handling of Complaints\",\n         \"privileges\" = \"No Special Priviledges\",\n         \"learning\"   = \"Opportunity to Learn\",\n         \"raises\"     = \"Performance-Based Raises\",\n         \"critical\"   = \"Too Critical\")"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nmodelsummary\nPopular regression table software should play nicely with this theme out of the box. Here’s an example using modelsummary (with the default tinytable backend1). See the next slide for the resulting table.\n\nlibrary(modelsummary) # Make sure you have &gt;=v2.0.0\n\nmodelsummary(\n  setNames(mods, c(\"(1)\", \"(2)\")),\n  coef_map = dict, stars = TRUE,\n  gof_map = NA\n  ) |&gt;\n  # some optional stylistic tweaks\n  tinytable::group_tt(j = list(\"Dep. variable: Overall Rating\" = 2:3)) |&gt;\n  tinytable::style_tt(i = 1:2, j = 2:3, background = \"pink\")\n\n\nFor extra styling options (e.g., bootstrap themes), see here."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-1-output",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-1-output",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\n\n\n\n    \n\n    \n    \n      \n        \n\n \nDep. variable: Overall Rating\n\n        \n              \n                 \n                (1)\n                (2)\n              \n        \n        + p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n        \n                \n                  Handling of Complaints  \n                  0.682***\n                  0.692***\n                \n                \n                                          \n                  (0.129) \n                  (0.149) \n                \n                \n                  No Special Priviledges  \n                  -0.103  \n                  -0.104  \n                \n                \n                                          \n                  (0.129) \n                  (0.135) \n                \n                \n                  Opportunity to Learn    \n                  0.238+  \n                  0.249   \n                \n                \n                                          \n                  (0.139) \n                  (0.160) \n                \n                \n                  Performance-Based Raises\n                          \n                  -0.033  \n                \n                \n                                          \n                          \n                  (0.202) \n                \n                \n                  Too Critical            \n                          \n                  0.015   \n                \n                \n                                          \n                          \n                  (0.147)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nfixest::etable\nAside: We used the fantastic fixest package to estimate our regression models. fixest bundles its own powerful tabling functions. These were designed for LaTeX output, but can work with this (HTML) theme too.1\n\nSet the output: asis R chunk option in your Quarto doc.\nSet the markdown = TRUE fixest::etable option.\n\n```{{r}}\n#| output: asis\n\nsetFixest_etable(markdown = TRUE, drop = \"Constant\")\nsetFixest_dict(dict)\n\netable(mods, highlight = .(\"se\" = \"complaints\"))\n```\nDetails here. You need to install the tinytex & pdftools packages first."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-3",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#regression-tables-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Regression tables",
+    "text": "Regression tables\nfixest::etable (cont.)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#figure",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#figure",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Figure",
+    "text": "Figure"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#figure-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#figure-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Figure",
+    "text": "Figure\nFull-size Figures\nYou can use the {.background-image} container environment to completely fill the slide background with an image.\nIdeally, your figure will be the same aspect ratio as the screen that you’re presenting on.\n\nThis can be a bit tricky because of the dynamic nature of reveal.js / HTML. But it’s probably something close to 16:9.\nAspect ratio can also matter for a regular full-frame images (previous slide)."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#interactive-plots",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#interactive-plots",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Interactive plots",
+    "text": "Interactive plots\n\n\n\n\n\n\nNote: Simple flight data example using threejs. There are many interactive plotting options beyond this. (More details.)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#other-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#other-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Other",
+    "text": "Other\nWhat else can the clean theme do?\nWe have highlighted some theme-specific components in this demo.\nBut please note that all of the standard reveal.js functionality and plugins are compatible with the clean theme. This includes:\n\nchalkboard for annotating slides.\nmultiplex for enabling audience navigation of your slides.\npdf printing in case you don’t have access to a web browser.\nEtc."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#summary-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#summary-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Summary",
+    "text": "Summary\nA minimalist and elegant presentation theme\nThe Quarto reveal.js clean theme aims to be a minimalist and elegant presention theme. Here are some options to get you started.\nAdd the theme to an existing project.\nquarto install extension grantmcdermott/quarto-revealjs-clean\n… or, create a new project using our lean template.\nquarto use template grantmcdermott/quarto-revealjs-clean\n… or, create a new project using these demo slides as a full template.\nquarto use template grantmcdermott/quarto-revealjs-clean-demo"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#references",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#references",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "References",
+    "text": "References\n\n\nFajgelbaum, Pablo D, Eduardo Morales, Juan Carlos Suarez Serrato, and Owen Zidar. 2018. “State Taxes and Spatial Misallocation,” 90.\n\n\nHsieh, Chang-Tai, and Enrico Moretti. 2019. “Housing Constraints and Spatial Misallocation.” American Economic Journal: Macroeconomics 11 (2): 39.\n\n\nMoretti, Enrico. 2011. “Local Labor Markets.” In Handbook of Labor Economics. Vol. 4. Elsevier.\n\n\nSuárez Serrato, Juan Carlos, and Owen Zidar. 2016. “Who Benefits from State Corporate Tax Cuts? A Local Labor Markets Approach with Heterogeneous Firms.” American Economic Review 106 (9)."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#sec-appendix",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#sec-appendix",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Appendix",
+    "text": "Appendix\n\n\n\n\nTable 1: Summary of the base R attitude dataset\n\n\n\n\n\n    \n\n    \n    \n      \n        \n        \n              \n                 \n                Unique\n                Missing Pct.\n                Mean\n                SD\n                Min\n                Median\n                Max\n                Histogram\n              \n        \n        \n        \n                \n                  rating\n                  22\n                  0\n                  64.6\n                  12.2\n                  40.0\n                  65.5\n                  85.0\n                  \n                \n                \n                  complaints\n                  23\n                  0\n                  66.6\n                  13.3\n                  37.0\n                  65.0\n                  90.0\n                  \n                \n                \n                  privileges\n                  24\n                  0\n                  53.1\n                  12.2\n                  30.0\n                  51.5\n                  83.0\n                  \n                \n                \n                  learning\n                  23\n                  0\n                  56.4\n                  11.7\n                  34.0\n                  56.5\n                  75.0\n                  \n                \n                \n                  raises\n                  21\n                  0\n                  64.6\n                  10.4\n                  43.0\n                  63.5\n                  88.0\n                  \n                \n                \n                  critical\n                  21\n                  0\n                  74.8\n                  9.9\n                  49.0\n                  77.5\n                  92.0\n                  \n                \n                \n                  advance\n                  20\n                  0\n                  42.9\n                  10.3\n                  25.0\n                  41.0\n                  72.0\n                  \n                \n        \n      \n    \n\n\n\n\n\n\nBack to main"
   }
 ]
