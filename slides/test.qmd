@@ -1,0 +1,47 @@
+---
+title: "Introduction à l'IA"
+author: "Kévin Polisano"
+format: revealjs
+---
+
+# Contexte
+
+## Panorama de l'intelligence artificielle
+
+![](ia-vs-machine-learning-vs-deep-learning.jpg){fig-align="center"}
+
+::: footer
+Source : test
+:::
+
+::: notes
+Speaker notes go here.
+:::
+
+## Qui suis-je ?
+
+*"Again, it might act upon other things **besides number**, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that **the fundamental relations of pitched sounds** in the science of harmony and of musical composition were susceptible of such expression and adaptations, **the engine might compose elaborate and scientific pieces of music** of any degree of complexity or extent"*
+
+## L'enchanteresse des nombres
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+
+## {background-video="https://youtu.be/wo9vZccmqwc?autoplay=1"}
+
+## {background-video="clean-theme/images/perceptron.mp4" background-size="contain"}
+
+## test
+
+<!-- data-autoplay -->
+<video
+  src="clean-theme/images/perceptron.mp4"
+></video>
+
+## test 3
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc
+    title="What is the CERN?"
+    start="116"
+    aspect-ratio="21x9" 
+>}}
+
