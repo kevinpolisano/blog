@@ -17,6 +17,35 @@ date: last-modified
 bibliography: refs.bib
 ---
 
+
+```{r}
+render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 1, margin = 0) {
+  if (version == "local") {
+    return(knitr::asis_output(paste0(
+      '<video onloadstart="this.playbackRate = 2;" data-autoplay src="', local_src,'" controls muted></video>'
+    )))
+  } else if (version == "online") {
+    width <- 896*ratio
+    height <- 504*ratio
+    return(knitr::asis_output(paste0(
+      '<div style="display: flex; justify-content: center; align-items: center; height: auto; margin-bottom: ', margin, 'cm; padding: 0;">',
+      '<iframe data-external="1" data-autoplay="1" width="', width,'" height="', height, '" src="', youtube_src, '&amp;autoplay=1&amp;loop=1&amp;controls=0&amp;modestbranding=1&amp;autohide=1"',
+      ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"',
+      ' referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      '</div>'
+    )))
+  } else {
+    return("")
+  }
+}
+```
+
+```{r setup}
+# Déclaration de la variable globale version
+version <- "online"
+version <- "local"
+```
+
 # Contexte historique {background-color="#40666e"}
 
 ## Panorama de l'intelligence artificielle
@@ -34,7 +63,7 @@ Source : [inventiv-it.fr](https://inventiv-it.fr/ai-machine-learning-deep-learni
 ![](images/carte-ia.jpg){fig-align="center" width="80%"}
 
 ::: footer
-Source : [Machine Learnia](https://inventiv-it.fr/ai-machine-learning-deep-learning/) 
+Source : [Machine Learnia](https://www.youtube.com/watch?v=mT6NnslbNLM)
 :::
 
 ## Qui suis-je ?
@@ -98,20 +127,75 @@ un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa
 Source : [Geogebra](https://www.geogebra.org/m/xC6zq7Zv)
 :::
 
-## 4 ingrédients fondamentaux du ML
-
-1. Des données
-2. Un modèle
-3. Une fonction de coût
-4. Un algorithme de minimisation
-
-## Le Perceptron
-
-<video onloadstart="this.playbackRate = 2;" data-autoplay start="20" src="videos/classification-test.mp4" controls muted>
-</video>
-
 ## Visualisation de la descente de gradient {background-color="black"}
 
 ![](videos/linear-regression-gradient-descent.mp4){loop="true" data-autoplay="true" width="120%"}
+
+## Les 4 principaux ingrédients du ML {background-color="black"}
+
+1.  [Des données]{.fg style="--col: #7abce4"}
+2.  [Un modèle]{.fg style="--col: #f4ef52"}
+3.  [Une fonction de coût]{.fg style="--col: #d87a76"}
+4.  [Un algorithme d'optimisation]{.fg style="--col: #9cbb87"}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/quatre-ingredients.m4v", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=2wrQuAnmmQL8n2fu&amp;start=129&amp;end=176", ratio = 0.7, margin = -1)
+```
+
+## Types d'apprentissages 
+### Supervisés, non-supervisés et par ré-enforcement
+
+![](images/machine-learning-types.png){fig-align="center"}
+
+## L'invention des neurones artificiels {background-color="black"}
+### 1943 - Warren McCulloch et Walter Pitts
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/neurones-biologiques.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=358&amp;end=535")
+```
+
+::: footer
+Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
+:::
+	
+::: notes
+Les premiers réseaux de neurones ont donc été inventés en 1943 par deux mathématiciens et neuroscientifiques du nom de Warren McCulloch et Walter Pitts.
+Dans leur article scientifique intitulé : "A Logical Calculus of the ideas immanent in nervous activity",
+ils expliquent comment ils ont pu programmer des neurones artificiels en s'inspirant du fonctionnement des neurones biologiques.
+Rappelons le, en biologie, les neurones sont des cellules excitables connectées les unes aux autres,
+et ayant pour rôle de transmettre des informations dans notre système nerveux.
+Chaque neurone est composé de plusieurs dendrites, d'un corps cellulaire, et d'un axone.
+Les dendrites sont en quelque sorte les portes d'entrée d'un neurone. c'est à cet endroit, au niveau de la synapse, que le neurone reçoit des signaux lui provenant des neurones qui le précèdent.
+Ces signaux peuvent être de type excitateur ou à l'inverse inhibiteur. (un peu comme si nous avions des signaux qui valent +1 et d'autres qui valent -1).
+Lorsque la somme de ces signaux dépasse un certain seuil, le neurone s'active et produit alors un signal électrique.
+Ce signal circule le long de l'axone en direction des terminaisons pour être envoyé à son tour vers d'autres neurones de notre système nerveux...
+...neurones qui fonctionneront exactement de la même manière ! Voilà en gros, le fonctionnement des neurones.
+Ce que Warren McCulloch et Walter Pitts ont essayé de faire, c'est de modéliser ce fonctionnement,
+en considérant qu'un neurone pouvait être représenté par une fonction de transfert, qui prend en entrée des signaux X et qui retourne une sortie y.
+A l'intérieur de cette fonction, on trouve 2 grandes étapes.
+La première, c'est une étape d'agrégation. On fait la somme de toutes les entrées du neurone,
+en multipliant au passage chaque entrée par un coefficient W. ce coefficient représente en fait l'activité synaptique, c'est à dire le fait que le signal soit excitateur auquel cas w vaut +1, ou bien inhibiteur auquel cas il vaut -1.
+Dans cette phase d'agrégation, on obtient donc une expression de la forme w1 x1 + w 2 x 2 + w3 x3 etc etc.
+Une fois cette étape réalisée, on passe à la phase d'activation. On regarde le résultat du calcul effectué précédemment,
+et si celui ci dépasse un certain seuil, en général 0, alors le neurone s'active et retourne une sortie y = 1. Sinon, il reste à 0.
+Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer les premiers neurones artificiels
+:::
+
+## L'invention du Perceptron {background-color="black"}
+### 1957 - Frank Rosenblatt
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=657&amp;end=834")
+```
+
+::: footer
+Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
+:::
+	
+
+## Classification
+
+<video onloadstart="this.playbackRate = 2;" data-autoplay start="20" src="videos/classification-test.mp4" controls muted>
+</video>
 
 

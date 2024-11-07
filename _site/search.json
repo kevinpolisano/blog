@@ -367,8 +367,8 @@
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#test",
     "title": "Introduction à l’intelligence artificielle",
-    "section": "test",
-    "text": "test"
+    "section": "Test",
+    "text": "Test"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#test-1.1",
@@ -600,5 +600,54 @@
     "title": "Introduction à l’intelligence artificielle",
     "section": "Carte du Machine Learning (ML)",
     "text": "Carte du Machine Learning (ML)\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#les-4-principaux-ingrédients-du-ml",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-4-principaux-ingrédients-du-ml",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Les 4 principaux ingrédients du ML",
+    "text": "Les 4 principaux ingrédients du ML\n\nDes données\nUn modèle\nUne fonction de coût\nUn algorithme d’optimisation"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#apprentissages-supervisés-vs.-non-supervisés",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#apprentissages-supervisés-vs.-non-supervisés",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Apprentissages supervisés vs. non-supervisés",
+    "text": "Apprentissages supervisés vs. non-supervisés"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#apprentissages-supervisés-non-supervisés-et-par-ré-enforcement",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#apprentissages-supervisés-non-supervisés-et-par-ré-enforcement",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Apprentissages supervisés, non-supervisés et par ré-enforcement",
+    "text": "Apprentissages supervisés, non-supervisés et par ré-enforcement"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-des-neurones-artificiels",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-des-neurones-artificiels",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’invention des neurones artificiels",
+    "text": "L’invention des neurones artificiels\n1943 - Warren McCulloch et Walter Pitts\n\n\nSource : Machine Learnia\n\n\nLes premiers réseaux de neurones ont donc été inventés en 1943 par deux mathématiciens et neuroscientifiques du nom de Warren McCulloch et Walter Pitts. Dans leur article scientifique intitulé : “A Logical Calculus of the ideas immanent in nervous activity”, ils expliquent comment ils ont pu programmer des neurones artificiels en s’inspirant du fonctionnement des neurones biologiques. Rappelons le, en biologie, les neurones sont des cellules excitables connectées les unes aux autres, et ayant pour rôle de transmettre des informations dans notre système nerveux. Chaque neurone est composé de plusieurs dendrites, d’un corps cellulaire, et d’un axone. Les dendrites sont en quelque sorte les portes d’entrée d’un neurone. c’est à cet endroit, au niveau de la synapse, que le neurone reçoit des signaux lui provenant des neurones qui le précèdent. Ces signaux peuvent être de type excitateur ou à l’inverse inhibiteur. (un peu comme si nous avions des signaux qui valent +1 et d’autres qui valent -1). Lorsque la somme de ces signaux dépasse un certain seuil, le neurone s’active et produit alors un signal électrique. Ce signal circule le long de l’axone en direction des terminaisons pour être envoyé à son tour vers d’autres neurones de notre système nerveux… …neurones qui fonctionneront exactement de la même manière ! Voilà en gros, le fonctionnement des neurones. Ce que Warren McCulloch et Walter Pitts ont essayé de faire, c’est de modéliser ce fonctionnement, en considérant qu’un neurone pouvait être représenté par une fonction de transfert, qui prend en entrée des signaux X et qui retourne une sortie y. A l’intérieur de cette fonction, on trouve 2 grandes étapes. La première, c’est une étape d’agrégation. On fait la somme de toutes les entrées du neurone, en multipliant au passage chaque entrée par un coefficient W. ce coefficient représente en fait l’activité synaptique, c’est à dire le fait que le signal soit excitateur auquel cas w vaut +1, ou bien inhibiteur auquel cas il vaut -1. Dans cette phase d’agrégation, on obtient donc une expression de la forme w1 x1 + w 2 x 2 + w3 x3 etc etc. Une fois cette étape réalisée, on passe à la phase d’activation. On regarde le résultat du calcul effectué précédemment, et si celui ci dépasse un certain seuil, en général 0, alors le neurone s’active et retourne une sortie y = 1. Sinon, il reste à 0. Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer les premiers neurones artificiels"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#types-dapprentissages",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#types-dapprentissages",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Types d’apprentissages",
+    "text": "Types d’apprentissages\nSupervisés, non-supervisés et par ré-enforcement"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’invention du Perceptron",
+    "text": "L’invention du Perceptron\n1957 - Frank Rosenblatt\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification",
+    "text": "Classification"
   }
 ]
