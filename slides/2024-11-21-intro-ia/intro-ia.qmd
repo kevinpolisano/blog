@@ -17,6 +17,13 @@ date: last-modified
 bibliography: refs.bib
 ---
 
+```{=html}
+<style>
+  .colored-title {
+    color: #417D97 !important; /* Bleu personnalisé */
+  }
+</style>
+```
 
 ```{r}
 render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 1, margin = 0) {
@@ -29,7 +36,7 @@ render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 
     height <- 504*ratio
     return(knitr::asis_output(paste0(
       '<div style="display: flex; justify-content: center; align-items: center; height: auto; margin-bottom: ', margin, 'cm; padding: 0;">',
-      '<iframe data-external="1" data-autoplay="1" width="', width,'" height="', height, '" src="', youtube_src, '&amp;autoplay=1&amp;loop=1&amp;controls=0&amp;modestbranding=1&amp;autohide=1"',
+      '<iframe data-external="1" data-autoplay="1" width="', width,'" height="', height, '" src="', youtube_src, '&amp;loop=1&amp;controls=0&amp;modestbranding=1&amp;autohide=1"',
       ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"',
       ' referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
       '</div>'
@@ -43,10 +50,22 @@ render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 
 ```{r setup}
 # Déclaration de la variable globale version
 version <- "online"
-version <- "local"
+#version <- "local"
 ```
 
-# Contexte historique {background-color="#40666e"}
+
+## Définitions
+### Intelligence artificielle et apprentissage statistique
+
+- [Intelligence artificielle (IA)]{.alert} : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l'intelligence humaine.
+
+- [Apprentissage statistique]{.alert} ou [*Machine Learning* (ML)]{.alert} : champ d'étude de l'intelligence artificielle qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d'« apprendre » à partir de données, c'est-à-dire d'améliorer leurs performances à résoudre des tâches sans être explicitement programmés pour chacune.
+
+::: footer
+Source : [Wikipédia](https://fr.wikipedia.org/wiki/Intelligence_artificielle)
+:::
+
+
 
 ## Panorama de l'intelligence artificielle
 
@@ -58,13 +77,15 @@ version <- "local"
 Source : [inventiv-it.fr](https://inventiv-it.fr/ai-machine-learning-deep-learning/)
 :::
 
-## Carte du Machine Learning (ML) {background-color="black"}
+## La carte du Machine Learning {background-color="#101010"}
 
 ![](images/carte-ia.jpg){fig-align="center" width="80%"}
 
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=mT6NnslbNLM)
 :::
+
+# Contexte historique {background-color="#40666e"}
 
 ## Qui suis-je ?
 
@@ -107,11 +128,11 @@ Source : [Wikipédia](https://en.wikipedia.org/wiki/Ada_Lovelace)
 un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa fascination pour les mathématiques et les machines. Elle y ajoute ses propres notes, qui occupent plus de place que l'article lui-même et dans lesquelles elle propose ce qui est souvent considéré comme le premier algorithme conçu pour une machine, visant à calculer les nombres de Bernoulli. sur la machine analytique de Babbage. - 1843 - Paternité de la Programmation : Ses notes incluent des concepts de boucles et de programmation conditionnelle. Ces idées font d'elle la première personne à conceptualiser un algorithme pour un ordinateur, lui conférant le titre de "première programmeuse".
 :::
 
-<!-- 
+
 
 ## {background-iframe="https://danferns.github.io/linear-regression-visualizer/" background-interactive="true"}
 
--->
+
 
 ## La régression linéaire
 
@@ -147,8 +168,13 @@ render_media(version, local_src = "videos/quatre-ingredients.m4v", youtube_src =
 
 ![](images/machine-learning-types.png){fig-align="center"}
 
+::: footer
+Source : [Techplayon](https://www.techplayon.com/machine-learning-supervised-unsupervised-reinforcement/)
+:::
+
+
 ## L'invention des neurones artificiels {background-color="black"}
-### 1943 - Warren McCulloch et Walter Pitts
+### 1943 - Warren McCulloch et Walter Pitts {.colored-title}
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/neurones-biologiques.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=358&amp;end=535")
@@ -182,7 +208,7 @@ Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer 
 :::
 
 ## L'invention du Perceptron {background-color="black"}
-### 1957 - Frank Rosenblatt
+### 1957 - Frank Rosenblatt {.colored-title}
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=657&amp;end=834")
@@ -193,9 +219,50 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 :::
 	
 
-## Classification
+## Classification à l'aide d'un Perceptron {background-color="black"}
+### La classification binaire {.colored-title}
 
-<video onloadstart="this.playbackRate = 2;" data-autoplay start="20" src="videos/classification-test.mp4" controls muted>
-</video>
+```{r, results='asis'}
+render_media(version, local_src = "videos/classification-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/VlMm4VZ6lk4?si=xkbWiPBiboH0DXMa&amp;start=30&amp;end=190")
+```
 
+::: footer
+Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
+:::
+
+## Classification à l'aide d'un Perceptron {background-color="black"}
+### La fonction d'activation (sigmoïde) et la fonction de coût (vraisemblance) {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/classification-vraisemblance.mp4", youtube_src = "https://www.youtube.com/embed/VlMm4VZ6lk4?si=xkbWiPBiboH0DXMa&amp;start=230&amp;end=520")
+```
+
+::: footer
+Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
+:::
+
+## L'invention du Perceptron Multicouche {background-color="black"}
+### 1986 - Geoffrey Hinton {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/multi-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=882&amp;end=1237")
+```
+
+::: footer
+Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
+:::
+
+## Deep learning
+### Les filtres de convolution
+
+
+
+## Deep learning
+### Les couches du réseau
+
+![](images/face-features.webp){fig-align="center"}
+
+::: footer
+Source : [Medium](https://medium.com/sysinfo/convolutional-neural-network-1c8c1d7e0707)
+:::
 

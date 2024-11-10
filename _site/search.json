@@ -634,7 +634,7 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#types-dapprentissages",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Types d’apprentissages",
-    "text": "Types d’apprentissages\nSupervisés, non-supervisés et par ré-enforcement"
+    "text": "Types d’apprentissages\nSupervisés, non-supervisés et par ré-enforcement\n\n\nSource : Techplayon"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron",
@@ -649,5 +649,75 @@
     "title": "Introduction à l’intelligence artificielle",
     "section": "Classification",
     "text": "Classification"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-à-laide-dun-perceptron",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-à-laide-dun-perceptron",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification à l’aide d’un Perceptron",
+    "text": "Classification à l’aide d’un Perceptron\nLa classification binaire\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#le-continent-du-machine-learning-ml",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#le-continent-du-machine-learning-ml",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Le continent du Machine Learning (ML)",
+    "text": "Le continent du Machine Learning (ML)\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-à-laide-dun-perceptron-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-à-laide-dun-perceptron-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification à l’aide d’un Perceptron",
+    "text": "Classification à l’aide d’un Perceptron\nLa fonction d’activation (sigmoïde) et la fonction de coût (vraisemblance)\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multi-couches",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multi-couches",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’invention du Perceptron Multi-Couches",
+    "text": "L’invention du Perceptron Multi-Couches\n1986 - Geoffrey Hinton\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multicouche",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multicouche",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’invention du Perceptron Multicouche",
+    "text": "L’invention du Perceptron Multicouche\n1986 - Geoffrey Hinton\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nLes filtres de convolution"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nLes couches du réseau\n\n\nSource : Medium"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#définitions",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#définitions",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Définitions",
+    "text": "Définitions\nIntelligence artificielle et apprentissage statistique\n\nIntelligence artificielle (IA) : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l’intelligence humaine.\nApprentissage statistique ou Machine Learning (ML) : champ d’étude de l’intelligence artificielle qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d’« apprendre » à partir de données, c’est-à-dire d’améliorer leurs performances à résoudre des tâches sans être explicitement programmés pour chacune.\n\n\nSource : Wikipédia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#la-carte-du-machine-learning-ml",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#la-carte-du-machine-learning-ml",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "La carte du Machine Learning (ML)",
+    "text": "La carte du Machine Learning (ML)\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#la-carte-du-machine-learning",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#la-carte-du-machine-learning",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "La carte du Machine Learning",
+    "text": "La carte du Machine Learning\n\n\nSource : Machine Learnia"
   }
 ]
