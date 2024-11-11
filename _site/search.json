@@ -719,5 +719,96 @@
     "title": "Introduction à l’intelligence artificielle",
     "section": "La carte du Machine Learning",
     "text": "La carte du Machine Learning\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multicouche-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multicouche-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’invention du Perceptron Multicouche",
+    "text": "L’invention du Perceptron Multicouche\n3 perceptrons pour créer une forme triangulaire"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multicouche-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron-multicouche-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’invention du Perceptron Multicouche",
+    "text": "L’invention du Perceptron Multicouche\nLinéariser les frontières de décision complexes"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’efficacité du Perceptron Multicouche",
+    "text": "L’efficacité du Perceptron Multicouche\n3 perceptrons pour créer une forme triangulaire"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’efficacité du Perceptron Multicouche",
+    "text": "L’efficacité du Perceptron Multicouche\nLinéariser les frontières de décision complexes"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-du-perceptron-multicouche",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-du-perceptron-multicouche",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Formalisation du Perceptron Multicouche",
+    "text": "Formalisation du Perceptron Multicouche\nUn simple réseau de neurones à 3 couches"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-du-perceptron-multicouche-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-du-perceptron-multicouche-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Formalisation du Perceptron Multicouche",
+    "text": "Formalisation du Perceptron Multicouche\nCascades de multiplication matricielles et d’activation"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#représentation-dun-perceptron-multicouche",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#représentation-dun-perceptron-multicouche",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Représentation d’un Perceptron Multicouche",
+    "text": "Représentation d’un Perceptron Multicouche\nUn simple réseau de neurones à 3 couches"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-dun-perceptron-multicouche",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-dun-perceptron-multicouche",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Formalisation d’un Perceptron Multicouche",
+    "text": "Formalisation d’un Perceptron Multicouche\nCascades de multiplication matricielles et d’activation"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#que-se-passe-t-il-dans-un-réseau-de-neurones",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#que-se-passe-t-il-dans-un-réseau-de-neurones",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Que se passe-t-il dans un réseau de neurones ?",
+    "text": "Que se passe-t-il dans un réseau de neurones ?\nVisualisation de la linéarisation de la frontière de décision"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’efficacité du Perceptron Multicouche",
+    "text": "L’efficacité du Perceptron Multicouche\nApprendre des frontières de décision complexes"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-perceptrons-multicouche-fonctionnent-si-bien",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-perceptrons-multicouche-fonctionnent-si-bien",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Pourquoi les perceptrons multicouche fonctionnent si bien ?",
+    "text": "Pourquoi les perceptrons multicouche fonctionnent si bien ?\nParce qu’ils approchent des fonctions complexes"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-réseaux-de-neurones-fonctionnent-si-bien",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-réseaux-de-neurones-fonctionnent-si-bien",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Pourquoi les réseaux de neurones fonctionnent si bien ?",
+    "text": "Pourquoi les réseaux de neurones fonctionnent si bien ?\nParce qu’ils approchent des fonctions complexes"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#théorème-dapproximation-universelle",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#théorème-dapproximation-universelle",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Théorème d’approximation universelle",
+    "text": "Théorème d’approximation universelle\nFonctions continues approchables par un réseau à 2 couches\n\n\n\n\n\n\nThéorème (Cybenko, 1989, Hornik, 1991)\n\n\nLet \\(\\sigma:\\mathbb{R}\\mapsto \\mathbb{R}\\) be a nonconstant, bounded, and continuous function. Let \\(I_m\\) denote the \\(m\\)-dimensional unit hypercube \\([0, 1]^m\\). The space of real-valued continuous functions on \\(I_m\\) is denoted by \\(C(I_m)\\). Then, given any \\(\\epsilon &gt; 0\\) and any function \\(f\\in C(I_m)\\), there exist an integer \\(N\\), real constants \\(v_i, b_i\\in \\mathbb{R}\\) and real vectors \\(\\boldsymbol{w}_i \\in \\mathbb{R}^m\\) for \\(i = 1, \\dotsc, N\\), such that we may define:\n\\[ F(\\boldsymbol{x}) = \\sum_{i=1}^N v_i \\sigma\\left(\\boldsymbol{w}_i^T \\boldsymbol{x}+b_i\\right)=\\boldsymbol{v}^T \\sigma\\left(\\mathbf{W}^T \\boldsymbol{x}+\\boldsymbol{b}\\right)\\] as an approximate realization of the function \\(f\\); that is, \\[ |f(\\boldsymbol{x})-F(\\boldsymbol{x})|&lt;\\epsilon, \\quad \\forall \\boldsymbol{x}\\in I_m\\]"
   }
 ]

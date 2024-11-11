@@ -47,10 +47,24 @@ render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 
 }
 ```
 
+```{r}
+interactive_webpage <- function(bool, url_src) {
+   if (bool == TRUE) {
+     return(knitr::asis_output(paste0('## {background-iframe=', url_src, ' background-interactive="true"}')))
+   } else {
+     return(knitr::asis_output('## {visibility="hidden"}'))
+   }
+}
+```
+
+
 ```{r setup}
 # Déclaration de la variable globale version
 version <- "online"
 #version <- "local"
+
+interactive <- FALSE
+#interactive <- TRUE
 ```
 
 
@@ -129,10 +143,9 @@ un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa
 :::
 
 
-
-## {background-iframe="https://danferns.github.io/linear-regression-visualizer/" background-interactive="true"}
-
-
+```{r, results='asis'}
+interactive_webpage(interactive, url_src = "https://danferns.github.io/linear-regression-visualizer/")
+```
 
 ## La régression linéaire
 
@@ -140,7 +153,6 @@ un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa
 
 ::: {style="text-align: center;"}
 <iframe scrolling="no" title="Interactive Linear Regression" src="https://www.geogebra.org/material/iframe/id/xC6zq7Zv/width/800/height/503/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="503px" style="border:0px;">
-
 </iframe>
 :::
 
@@ -171,7 +183,6 @@ render_media(version, local_src = "videos/quatre-ingredients.m4v", youtube_src =
 ::: footer
 Source : [Techplayon](https://www.techplayon.com/machine-learning-supervised-unsupervised-reinforcement/)
 :::
-
 
 ## L'invention des neurones artificiels {background-color="black"}
 ### 1943 - Warren McCulloch et Walter Pitts {.colored-title}
@@ -251,6 +262,62 @@ render_media(version, local_src = "videos/multi-perceptron.mp4", youtube_src = "
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 :::
+
+## L'efficacité du Perceptron Multicouche
+### 3 perceptrons pour créer une forme triangulaire
+
+![](images/playground.jpeg){fig-align="center"}
+
+## L'efficacité du Perceptron Multicouche
+### Linéariser les frontières de décision complexes
+
+![](images/decision-boundary.webp){fig-align="center"}
+
+## Représentation d'un Perceptron Multicouche
+### Un simple réseau de neurones à 3 couches
+
+![](images/perceptron-multi.jpeg){fig-align="center"}
+
+## Formalisation d'un Perceptron Multicouche
+### Cascades de multiplication matricielles et d'activation
+
+![](images/perceptron-multi-matrices.jpeg){fig-align="center"}
+
+## Que se passe-t-il dans un réseau de neurones ? {background-color="black"}
+### Visualisation de la linéarisation de la frontière de décision {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/NN-linearisation.mp4", youtube_src = "https://www.youtube.com/embed/yFcdKE6YI0E?si=awicWiaFb046QUrj&amp;;start=162&amp;end=351")
+```
+
+## L'efficacité du Perceptron Multicouche
+### Apprendre des frontières de décision complexes
+
+![](images/playground-spirale.jpeg){fig-align="center"}
+
+
+```{r, results='asis'}
+interactive_webpage(interactive, url_src = "https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.65606&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false")
+```
+
+## Pourquoi les réseaux de neurones fonctionnent si bien ?
+### Parce qu'ils approchent des fonctions complexes
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/universal-approximator.mp4", youtube_src = "https://www.youtube.com/embed/O45AaRPQhuI?si=VIDWeg8vy7Me-MAM")
+```
+
+## Théorème d'approximation universelle
+### Fonctions continues approchables par un réseau à 2 couches
+
+::: {.callout-note}
+## Théorème (Cybenko, 1989, Hornik, 1991)
+Let $\sigma:\mathbb{R}\mapsto \mathbb{R}$ be a nonconstant, bounded, and continuous function. Let $I_m$ denote the $m$-dimensional unit hypercube $[0, 1]^m$. The space of real-valued continuous functions on $I_m$ is denoted by $C(I_m)$. Then, given any $\epsilon > 0$ and any function $f\in C(I_m)$, there exist an integer $N$, real constants $v_i, b_i\in \mathbb{R}$ and real vectors $\boldsymbol{w}_i \in \mathbb{R}^m$ for $i = 1, \dotsc, N$, such that we may define:
+
+$$ F(\boldsymbol{x}) = \sum_{i=1}^N v_i \sigma\left(\boldsymbol{w}_i^T \boldsymbol{x}+b_i\right)=\boldsymbol{v}^T \sigma\left(\mathbf{W}^T \boldsymbol{x}+\boldsymbol{b}\right)$$
+as an approximate realization of the function $f$; that is,
+$$ |f(\boldsymbol{x})-F(\boldsymbol{x})|<\epsilon, \quad \forall \boldsymbol{x}\in I_m$$
+::: 
 
 ## Deep learning
 ### Les filtres de convolution
