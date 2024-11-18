@@ -1,11 +1,13 @@
 ---
 title: Introduction à l'intelligence artificielle
+title-slide-attributes: 
+  data-notes: CR CNRS au LJK, un labo de maths applis situé sur le campus, mes travaux de recherche se situent au croisement du traitement du signal et des images, des statistiques, des graphes, et de réseaux de neurones, qui sont des objets qui appartiennent à ce qu'on appelle communément l'intelligence artificielle... et qui va donc être l'objet de cette présentation. Anne en m'invitant m'a donné comme consignes de vous familiariser avec l'IA, en vous présentant un panorama de ce qui se fait dans ce domaine, comment il a émergé historiquement, comment "ça marche"  (en partant du principe que pour la majorité d'entre vous vous partez de zéro), et enfin dans quelle mesure les méthodes d'intelligences artificielles sont ou non applicables et pertinentes pour traiter des données dont vous disposez dans vos champs de recherche respectifs. Tout un programme ! Alors je vais au moins tâcher de remplir les 2 premiers objectifs, à savoir retracer dans les grandes lignes la généalogie du machine learning et vous expliquer son fonctionnement. Et je laisserai aux discussions qui s'en suivront l'occasion pour vous de me faire part de vos problématiques afin que je puisse répondre de façon peut-être plus personnalisées sur l'applicabilité de ces méthodes. Allons-y pour une brève excursion dans le monde du machine learning.  
 subtitle: Une brève excursion dans le monde du machine learning 
 format: 
   clean-revealjs:
-    self-contained: true
+    #self-contained: true
     autoplay: true
-    #chalkboard: true
+    chalkboard: true
 html-math-method:
   method: mathjax
   url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
@@ -15,28 +17,47 @@ author:
     affiliations: CNRS, Laboratoire Jean Kuntzmann
 date: last-modified
 bibliography: refs.bib
+auto-play-media: true
+project:
+  type: website
+  output-dir: _site
+resources:
+  - videos/**
 ---
 
-```{=html}
+## Définitions
+### Intelligence artificielle et apprentissage statistique
+
+-   [Intelligence artificielle (IA)]{.alert} : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l'intelligence humaine.
+
+-   [Apprentissage statistique]{.alert} ou [*Machine Learning* (ML)]{.alert} : champ d'étude de l'intelligence artificielle qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d'« apprendre » à partir de données, c'est-à-dire d'améliorer leurs performances à résoudre des tâches sans être explicitement programmés pour chacune.
+
+::: footer
+Source : [Wikipédia](https://fr.wikipedia.org/wiki/Intelligence_artificielle)
+:::
+
+::: notes
+l’Intelligence Artificielle (IA) est un ensemble de techniques permettant à des machines d’accomplir des tâches et de résoudre des problèmes normalement réservés aux humains et à certains animaux
+:::
+
 <style>
   .colored-title {
     color: #417D97 !important; /* Bleu personnalisé */
   }
 </style>
-```
 
 ```{r}
 render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 1, margin = 0) {
   if (version == "local") {
     return(knitr::asis_output(paste0(
-      '<video onloadstart="this.playbackRate = 2;" data-autoplay src="', local_src,'" controls muted></video>'
+      '<video onloadstart="this.playbackRate = 2;" data-autoplay src="', local_src,'" controls muted preload="auto"></video>'
     )))
   } else if (version == "online") {
     width <- 896*ratio
     height <- 504*ratio
     return(knitr::asis_output(paste0(
       '<div style="display: flex; justify-content: center; align-items: center; height: auto; margin-bottom: ', margin, 'cm; padding: 0;">',
-      '<iframe data-external="1" data-autoplay="1" width="', width,'" height="', height, '" src="', youtube_src, '&amp;loop=1&amp;controls=0&amp;modestbranding=1&amp;autohide=1"',
+      '<iframe data-external="1" data-autoplay="1" width="', width,'" height="', height, '" src="', youtube_src, '&amp;loop=1&amp;controls=1&amp;modestbranding=1&amp;autohide=1"',
       ' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"',
       ' referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
       '</div>'
@@ -57,32 +78,16 @@ interactive_webpage <- function(bool, url_src) {
 }
 ```
 
-
-```{r setup}
+```{r}
 # Déclaration de la variable globale version
 version <- "online"
-#version <- "local"
+version <- "local"
 
 interactive <- FALSE
-#interactive <- TRUE
+interactive <- TRUE
 ```
 
-
-## Définitions
-### Intelligence artificielle et apprentissage statistique
-
-- [Intelligence artificielle (IA)]{.alert} : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l'intelligence humaine.
-
-- [Apprentissage statistique]{.alert} ou [*Machine Learning* (ML)]{.alert} : champ d'étude de l'intelligence artificielle qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d'« apprendre » à partir de données, c'est-à-dire d'améliorer leurs performances à résoudre des tâches sans être explicitement programmés pour chacune.
-
-::: footer
-Source : [Wikipédia](https://fr.wikipedia.org/wiki/Intelligence_artificielle)
-:::
-
-
-
 ## Panorama de l'intelligence artificielle
-
 ### Le machine learning est une branche de l'IA
 
 ![](images/ia-vs-machine-learning-vs-deep-learning.jpg){fig-align="center"}
@@ -91,12 +96,28 @@ Source : [Wikipédia](https://fr.wikipedia.org/wiki/Intelligence_artificielle)
 Source : [inventiv-it.fr](https://inventiv-it.fr/ai-machine-learning-deep-learning/)
 :::
 
+::: notes
+L'image illustre les relations entre l'Intelligence Artificielle (IA), le Machine Learning (apprentissage automatique), les réseaux neuronaux, et le Deep Learning (apprentissage profond), montrant comment ces concepts s'emboîtent et se distinguent.
+
+Intelligence Artificielle (IA) : C'est comme je le disais un domaine large qui vise à créer des systèmes capables d'exécuter des tâches nécessitant normalement l'intelligence humaine, telles que la reconnaissance vocale, la vision par ordinateur, le traitement automatique du langage naturel (NLP), la planification et la robotique. L'IA englobe divers sous-domaines, y compris le Machine Learning, et s'étend à des systèmes experts qui ne se basent pas toujours sur des méthodes d'apprentissage, mais sur des règles programmées.
+
+Machine Learning (Apprentissage automatique) : Il constitue une sous-partie de l'IA et se concentre sur le développement de modèles qui apprennent à partir de données. Contrairement aux approches traditionnelles de programmation, où des règles sont définies explicitement, le Machine Learning permet aux algorithmes de découvrir des modèles et de prendre des décisions à partir des données. 
+
+Neural Networks (Réseaux de neurones) : C'est une technique clé dans le Machine Learning inspirée par la structure du cerveau humain. Un réseau de neurones est constitué de couches de nœuds (neurones) interconnectés qui permettent d'approximer des fonctions complexes.
+
+Deep Learning (Apprentissage profond) : des réseaux neuronaux profonds, c'est-à-dire qu'ils contiennent plusieurs couches de neurones. Les architectures de réseaux de neurones comme les réseaux convolutifs (CNN), les réseaux récurrents (RNN) et les réseaux adversaires génératifs (GAN) permettent de résoudre des tâches extrêmement complexes, notamment dans des domaines tels que la reconnaissance d'image, la traduction automatique, et les systèmes de recommandation. Le Deep Learning excelle là où les techniques traditionnelles de Machine Learning atteignent leurs limites, notamment dans le traitement de grandes quantités de données non structurées comme les images et les vidéos.
+:::
+
 ## La carte du Machine Learning {background-color="#101010"}
 
 ![](images/carte-ia.jpg){fig-align="center" width="80%"}
 
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=mT6NnslbNLM)
+:::
+
+::: notes
+
 :::
 
 # Contexte historique {background-color="#40666e"}
@@ -143,16 +164,13 @@ un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa
 :::
 
 
-```{r, results='asis'}
-interactive_webpage(interactive, url_src = "https://danferns.github.io/linear-regression-visualizer/")
-```
-
 ## La régression linéaire
 
 ### Visualisation de la méthode des moindres carrés
 
 ::: {style="text-align: center;"}
 <iframe scrolling="no" title="Interactive Linear Regression" src="https://www.geogebra.org/material/iframe/id/xC6zq7Zv/width/800/height/503/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="503px" style="border:0px;">
+
 </iframe>
 :::
 
@@ -160,9 +178,18 @@ interactive_webpage(interactive, url_src = "https://danferns.github.io/linear-re
 Source : [Geogebra](https://www.geogebra.org/m/xC6zq7Zv)
 :::
 
+```{r, results='asis'}
+interactive_webpage(interactive, url_src = "https://danferns.github.io/linear-regression-visualizer/")
+```
+
 ## Visualisation de la descente de gradient {background-color="black"}
 
 ![](videos/linear-regression-gradient-descent.mp4){loop="true" data-autoplay="true" width="120%"}
+
+::: footer
+Source : [Son The Nguyen](https://www.youtube.com/watch?v=GP6fl2nxs9k)
+:::
+
 
 ## Les 4 principaux ingrédients du ML {background-color="black"}
 
@@ -175,7 +202,12 @@ Source : [Geogebra](https://www.geogebra.org/m/xC6zq7Zv)
 render_media(version, local_src = "videos/quatre-ingredients.m4v", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=2wrQuAnmmQL8n2fu&amp;start=129&amp;end=176", ratio = 0.7, margin = -1)
 ```
 
-## Types d'apprentissages 
+::: footer
+Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
+:::
+
+## Types d'apprentissages
+
 ### Supervisés, non-supervisés et par ré-enforcement
 
 ![](images/machine-learning-types.png){fig-align="center"}
@@ -184,8 +216,16 @@ render_media(version, local_src = "videos/quatre-ingredients.m4v", youtube_src =
 Source : [Techplayon](https://www.techplayon.com/machine-learning-supervised-unsupervised-reinforcement/)
 :::
 
+::: notes
+Il inclut plusieurs techniques comme :
+Apprentissage supervisé : où un modèle est formé sur des données annotées (comme la régression linéaire/logistique, les arbres de décision, et les forêts aléatoires).
+Apprentissage non supervisé : où les modèles identifient des motifs dans des données non étiquetées.
+Apprentissage par renforcement : où un agent apprend à partir d'actions et de récompenses pour maximiser ses gains au fil du temps.
+:::
+
 ## L'invention des neurones artificiels {background-color="black"}
-### 1943 - Warren McCulloch et Walter Pitts {.colored-title}
+
+### [@mcculloch1943logical] {.colored-title}
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/neurones-biologiques.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=358&amp;end=535")
@@ -194,32 +234,14 @@ render_media(version, local_src = "videos/neurones-biologiques.mp4", youtube_src
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 :::
-	
+
 ::: notes
-Les premiers réseaux de neurones ont donc été inventés en 1943 par deux mathématiciens et neuroscientifiques du nom de Warren McCulloch et Walter Pitts.
-Dans leur article scientifique intitulé : "A Logical Calculus of the ideas immanent in nervous activity",
-ils expliquent comment ils ont pu programmer des neurones artificiels en s'inspirant du fonctionnement des neurones biologiques.
-Rappelons le, en biologie, les neurones sont des cellules excitables connectées les unes aux autres,
-et ayant pour rôle de transmettre des informations dans notre système nerveux.
-Chaque neurone est composé de plusieurs dendrites, d'un corps cellulaire, et d'un axone.
-Les dendrites sont en quelque sorte les portes d'entrée d'un neurone. c'est à cet endroit, au niveau de la synapse, que le neurone reçoit des signaux lui provenant des neurones qui le précèdent.
-Ces signaux peuvent être de type excitateur ou à l'inverse inhibiteur. (un peu comme si nous avions des signaux qui valent +1 et d'autres qui valent -1).
-Lorsque la somme de ces signaux dépasse un certain seuil, le neurone s'active et produit alors un signal électrique.
-Ce signal circule le long de l'axone en direction des terminaisons pour être envoyé à son tour vers d'autres neurones de notre système nerveux...
-...neurones qui fonctionneront exactement de la même manière ! Voilà en gros, le fonctionnement des neurones.
-Ce que Warren McCulloch et Walter Pitts ont essayé de faire, c'est de modéliser ce fonctionnement,
-en considérant qu'un neurone pouvait être représenté par une fonction de transfert, qui prend en entrée des signaux X et qui retourne une sortie y.
-A l'intérieur de cette fonction, on trouve 2 grandes étapes.
-La première, c'est une étape d'agrégation. On fait la somme de toutes les entrées du neurone,
-en multipliant au passage chaque entrée par un coefficient W. ce coefficient représente en fait l'activité synaptique, c'est à dire le fait que le signal soit excitateur auquel cas w vaut +1, ou bien inhibiteur auquel cas il vaut -1.
-Dans cette phase d'agrégation, on obtient donc une expression de la forme w1 x1 + w 2 x 2 + w3 x3 etc etc.
-Une fois cette étape réalisée, on passe à la phase d'activation. On regarde le résultat du calcul effectué précédemment,
-et si celui ci dépasse un certain seuil, en général 0, alors le neurone s'active et retourne une sortie y = 1. Sinon, il reste à 0.
-Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer les premiers neurones artificiels
+Les premiers réseaux de neurones ont donc été inventés en 1943 par deux mathématiciens et neuroscientifiques du nom de Warren McCulloch et Walter Pitts. Dans leur article scientifique intitulé : "A Logical Calculus of the ideas immanent in nervous activity", ils expliquent comment ils ont pu programmer des neurones artificiels en s'inspirant du fonctionnement des neurones biologiques. Rappelons le, en biologie, les neurones sont des cellules excitables connectées les unes aux autres, et ayant pour rôle de transmettre des informations dans notre système nerveux. Chaque neurone est composé de plusieurs dendrites, d'un corps cellulaire, et d'un axone. Les dendrites sont en quelque sorte les portes d'entrée d'un neurone. c'est à cet endroit, au niveau de la synapse, que le neurone reçoit des signaux lui provenant des neurones qui le précèdent. Ces signaux peuvent être de type excitateur ou à l'inverse inhibiteur. (un peu comme si nous avions des signaux qui valent +1 et d'autres qui valent -1). Lorsque la somme de ces signaux dépasse un certain seuil, le neurone s'active et produit alors un signal électrique. Ce signal circule le long de l'axone en direction des terminaisons pour être envoyé à son tour vers d'autres neurones de notre système nerveux... ...neurones qui fonctionneront exactement de la même manière ! Voilà en gros, le fonctionnement des neurones. Ce que Warren McCulloch et Walter Pitts ont essayé de faire, c'est de modéliser ce fonctionnement, en considérant qu'un neurone pouvait être représenté par une fonction de transfert, qui prend en entrée des signaux X et qui retourne une sortie y. A l'intérieur de cette fonction, on trouve 2 grandes étapes. La première, c'est une étape d'agrégation. On fait la somme de toutes les entrées du neurone, en multipliant au passage chaque entrée par un coefficient W. ce coefficient représente en fait l'activité synaptique, c'est à dire le fait que le signal soit excitateur auquel cas w vaut +1, ou bien inhibiteur auquel cas il vaut -1. Dans cette phase d'agrégation, on obtient donc une expression de la forme w1 x1 + w 2 x 2 + w3 x3 etc etc. Une fois cette étape réalisée, on passe à la phase d'activation. On regarde le résultat du calcul effectué précédemment, et si celui ci dépasse un certain seuil, en général 0, alors le neurone s'active et retourne une sortie y = 1. Sinon, il reste à 0. Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer les premiers neurones artificiels
 :::
 
 ## L'invention du Perceptron {background-color="black"}
-### 1957 - Frank Rosenblatt {.colored-title}
+
+### [@rosenblatt1958perceptron] {.colored-title}
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=657&amp;end=834")
@@ -228,9 +250,9 @@ render_media(version, local_src = "videos/perceptron.mp4", youtube_src = "https:
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 :::
-	
 
 ## Classification à l'aide d'un Perceptron {background-color="black"}
+
 ### La classification binaire {.colored-title}
 
 ```{r, results='asis'}
@@ -242,6 +264,7 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
 :::
 
 ## Classification à l'aide d'un Perceptron {background-color="black"}
+
 ### La fonction d'activation (sigmoïde) et la fonction de coût (vraisemblance) {.colored-title}
 
 ```{r, results='asis'}
@@ -252,8 +275,9 @@ render_media(version, local_src = "videos/classification-vraisemblance.mp4", you
 Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
 :::
 
-## L'invention du Perceptron Multicouche {background-color="black"}
-### 1986 - Geoffrey Hinton {.colored-title}
+## Le Perceptron Multicouche {background-color="black"}
+
+### ... et la rétropropagation du gradient [@rumelhart1986learning]
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/multi-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=882&amp;end=1237")
@@ -264,65 +288,273 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 :::
 
 ## L'efficacité du Perceptron Multicouche
+
 ### 3 perceptrons pour créer une forme triangulaire
 
 ![](images/playground.jpeg){fig-align="center"}
 
+::: footer
+Source : [@elgendy2020deep]
+:::
+
 ## L'efficacité du Perceptron Multicouche
+
 ### Linéariser les frontières de décision complexes
 
 ![](images/decision-boundary.webp){fig-align="center"}
 
+::: footer
+Source : [Towards Data Science](https://towardsdatascience.com/guide-to-interpretable-machine-learning-d40e8a64b6cf)
+:::
+
+
 ## Représentation d'un Perceptron Multicouche
+
 ### Un simple réseau de neurones à 3 couches
 
 ![](images/perceptron-multi.jpeg){fig-align="center"}
 
+::: footer
+Source : [@elgendy2020deep]
+:::
+
 ## Formalisation d'un Perceptron Multicouche
+
 ### Cascades de multiplication matricielles et d'activation
 
 ![](images/perceptron-multi-matrices.jpeg){fig-align="center"}
 
-## Que se passe-t-il dans un réseau de neurones ? {background-color="black"}
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Que se passe-t-il dans un réseau de neurones ? {background-color="#010811"}
+
 ### Visualisation de la linéarisation de la frontière de décision {.colored-title}
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/NN-linearisation.mp4", youtube_src = "https://www.youtube.com/embed/yFcdKE6YI0E?si=awicWiaFb046QUrj&amp;;start=162&amp;end=351")
 ```
 
+::: footer
+Source : [Alexandre TL](https://www.youtube.com/watch?v=yFcdKE6YI0E&t=330s)
+:::
+
+
 ## L'efficacité du Perceptron Multicouche
+
 ### Apprendre des frontières de décision complexes
 
 ![](images/playground-spirale.jpeg){fig-align="center"}
+
+::: footer
+Source : [Playground Tensorflow](https://playground.tensorflow.org)
+:::
 
 
 ```{r, results='asis'}
 interactive_webpage(interactive, url_src = "https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.65606&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false")
 ```
 
-## Pourquoi les réseaux de neurones fonctionnent si bien ?
+## Pourquoi les réseaux de neurones fonctionnent ?
+
 ### Parce qu'ils approchent des fonctions complexes
 
 ```{r, results='asis'}
 render_media(version, local_src = "videos/universal-approximator.mp4", youtube_src = "https://www.youtube.com/embed/O45AaRPQhuI?si=VIDWeg8vy7Me-MAM")
 ```
 
+::: footer
+Source : [DataMListic](https://www.youtube.com/watch?v=O45AaRPQhuI)
+:::
+
 ## Théorème d'approximation universelle
-### Fonctions continues approchables par un réseau à 2 couches
 
-::: {.callout-note}
+### Fonctions continues approchables par un réseau de neurones à 2 couches
+
+::: callout-note
 ## Théorème (Cybenko, 1989, Hornik, 1991)
-Let $\sigma:\mathbb{R}\mapsto \mathbb{R}$ be a nonconstant, bounded, and continuous function. Let $I_m$ denote the $m$-dimensional unit hypercube $[0, 1]^m$. The space of real-valued continuous functions on $I_m$ is denoted by $C(I_m)$. Then, given any $\epsilon > 0$ and any function $f\in C(I_m)$, there exist an integer $N$, real constants $v_i, b_i\in \mathbb{R}$ and real vectors $\boldsymbol{w}_i \in \mathbb{R}^m$ for $i = 1, \dotsc, N$, such that we may define:
 
-$$ F(\boldsymbol{x}) = \sum_{i=1}^N v_i \sigma\left(\boldsymbol{w}_i^T \boldsymbol{x}+b_i\right)=\boldsymbol{v}^T \sigma\left(\mathbf{W}^T \boldsymbol{x}+\boldsymbol{b}\right)$$
-as an approximate realization of the function $f$; that is,
-$$ |f(\boldsymbol{x})-F(\boldsymbol{x})|<\epsilon, \quad \forall \boldsymbol{x}\in I_m$$
-::: 
+Soit $\sigma:\mathbb{R}\rightarrow \mathbb{R}$ une fonction non constante, bornée et continue. Soit $I_m$ le cube unité $m$-dimensionnel $[0, 1]^m$. L'espace des fonctions continues à valeurs réelles sur $I_m$ est noté $C(I_m)$. Alors, pour tout $\epsilon > 0$ et toute fonction $f \in C(I_m)$, il existe un entier $N$, des constantes réelles $v_i, b_i \in \mathbb{R}$ et des vecteurs réels $\boldsymbol{w}_i \in \mathbb{R}^m$ pour $i = 1, \dotsc, N$, tels que nous puissions définir :
 
-## Deep learning
+$$ F(\boldsymbol{x}) = \sum_{i=1}^N v_i \sigma\left(\boldsymbol{w}_i^T \boldsymbol{x}+b_i\right)=\boldsymbol{v}^T \sigma\left(\mathbf{W}^T \boldsymbol{x}+\boldsymbol{b}\right)$$ comme une approximation de la fonction $f$, c'est-à-dire, $$ |f(\boldsymbol{x})-F(\boldsymbol{x})|<\epsilon, \quad \forall \boldsymbol{x}\in I_m$$
+:::
+
+## Résumé de l'apprentissage supervisé {background-color="black"}
+
+### Point de vue général {.colored-title}
+
+1.  [Des données d'entrainement $(\boldsymbol{x}_1,y_1),\dotsc,(\boldsymbol{x}_n,y_n)$]{.fg style="--col: #7abce4"}
+2.  [Un modèle, une famille de fonctions $f\in \mathcal{H}$ assurant $y_i\approx f(\boldsymbol{x}_i)$]{.fg style="--col: #f4ef52"}
+3.  [Une fonction de coût $\ell$ mesurant la qualité de l'approximation]{.fg style="--col: #d87a76"}
+4.  [Un algorithme d'optimisation trouvant $f\in \mathcal{H}$ qui minimise le coût $$ \min_{f\in \mathcal{H}} \frac{1}{n} \sum_{i=1}^n \ell(y_i, f(\boldsymbol{x}_i))$$]{.fg style="--col: #9cbb87"}
+
+## Résumé de l'apprentissage supervisé {background-color="black"}
+
+### Point de vue des réseaux de neurones {.colored-title}
+
+1.  [Des données d'entrainement $(\boldsymbol{x}_1,y_1),\dotsc,(\boldsymbol{x}_n,y_n)$]{.fg style="--col: #7abce4"}
+2.  [Un réseau à $k$ neurones soit un groupe de poids $(\boldsymbol{w}_1,\dotsc \boldsymbol{w}_k, b_1, \dotsc, b_k)$ assurant $$y_i\approx \{NN(\boldsymbol{w}_1,\dotsc \boldsymbol{w}_k, b_1, \dotsc, b_k)\}(\boldsymbol{x}_i)$$]{.fg style="--col: #f4ef52"}
+3.  [Une fonction de coût $\ell$ mesurant la qualité de l'approximation]{.fg style="--col: #d87a76"}
+4.  [Un algorithme d'optimisation trouvant les poids $(\boldsymbol{w}_1,\dotsc \boldsymbol{w}_k, b_1, \dotsc, b_k)$ qui minimisent le coût $$ \min_{(\boldsymbol{w}_k, b_k)} \frac{1}{n} \sum_{i=1}^n \ell(y_i, \{NN(\boldsymbol{w}_1,\dotsc \boldsymbol{w}_k, b_1, \dotsc, b_k)\}(\boldsymbol{x}_i))$$]{.fg style="--col: #9cbb87"}
+
+# Deep learning – les réseaux de neurones convolutifs {background-color="#40666e"}
+
+## Classification d'images
+
+### Reconnaissance de chiffres (MNIST)
+
+![](images/digit-image.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Image en couleurs
+
+### 3 canaux RGB
+
+![](images/image-rgb.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Classification d'images
+
+### Extraction de caractéristiques
+
+![](images/features-extraction.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Classification d'images
+
+### Méthode traditionnelle (*handcrafted features*) vs moderne (*deep learning*)
+
+![](images/classification-traditionnelle.jpeg){fig-align="center"}
+
+![](images/classification-deep-learning.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Classification d'images
+
+### Discriminer deux chiffres
+
+![](images/digit-binary-classification.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Briques de base d'un CNN
+
 ### Les filtres de convolution
 
+![](images/convolution-1.jpeg){fig-align="center"}
 
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Briques de base d'un CNN
+
+### Les filtres de convolution
+
+![](images/convolution-2.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Briques de base d'un CNN
+
+### Les filtres de convolution
+
+![](images/convolution-3.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Briques de base d'un CNN
+
+### Les filtres de convolution
+
+![](images/convolution-4.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Briques de base d'un CNN
+
+### Les filtres de convolution
+
+![](images/convolution-5.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Briques de base d'un CNN
+
+### Le max pooling
+
+![](images/maxpool.jpeg){fig-align="center"}
+
+::: footer
+Source : [CS231n](https://cs231n.github.io/convolutional-networks/)
+:::
+
+## Briques de base d'un CNN
+
+### Le max pooling
+
+![](images/pool.jpeg){fig-align="center"}
+
+::: footer
+Source : [CS231n](https://cs231n.github.io/convolutional-networks/)
+:::
+
+## Classification d'images
+
+### Discriminer les chiffres MNIST [@lecun1989handwritten; @lecun1989backpropagation; @lecun1998gradient]
+
+![](images/digit-multiclass-classification.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+```{r, results='asis'}
+interactive_webpage(interactive, url_src = "https://adamharley.com/nn_vis/cnn/3d.html")
+```
+
+## Deep learning
+
+### AlexNet [@krizhevsky2012imagenet]
+
+![](images/alexnet.jpeg){fig-align="center"}
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Deep learning
+
+### La première couche du réseau
+
+![](images/weights.jpeg){fig-align="center"}
+
+::: footer
+Source : [@krizhevsky2012imagenet]
+:::
 
 ## Deep learning
 ### Les couches du réseau
@@ -332,4 +564,275 @@ $$ |f(\boldsymbol{x})-F(\boldsymbol{x})|<\epsilon, \quad \forall \boldsymbol{x}\
 ::: footer
 Source : [Medium](https://medium.com/sysinfo/convolutional-neural-network-1c8c1d7e0707)
 :::
+
+## Deep learning
+### Les couches du réseau
+
+::::: columns
+::: {.column width="50%"}
+![](images/digit-features.jpeg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/cat-features.jpeg){fig-align="center"}
+:::
+:::::
+
+::: footer
+Source : [@elgendy2020deep]
+:::
+
+## Deep learning
+### Les CNN en résumé
+
+![](images/CNN.png){fig-align="center"}
+
+::: footer
+Source : [@maried2017literature]
+:::
+
+
+## Deep learning {background-color="black"}
+### AlexNet *breakthrough* {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/alexnet.mp4", youtube_src = "https://www.youtube.com/embed/UZDiGooFs54?si=H6fRkQYYoE1FoZ9N&amp;start=233&amp;end=471")
+```
+
+::: footer
+Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
+:::
+
+## Deep learning
+### Un déluge de données
+
+- 1,2 millions d'images d'entrainement
+- 100 000 images de test
+
+![](images/imagenet.jpeg){fig-align="center"}
+
+::: footer
+Source : [Andrej Karpathy](https://cs.stanford.edu/people/karpathy/cnnembed/)
+:::
+
+
+## Deep learning
+### 1000 classes d'objets dans ImageNet
+
+![](images/imagenet-cat.jpeg){fig-align="center"}
+
+::: footer
+Source : [@krizhevsky2012imagenet]
+:::
+
+```{r, results='asis'}
+interactive_webpage(interactive, url_src = "https://poloclub.github.io/cnn-explainer/")
+```
+
+## Deep learning
+### Le succès des CNN en classification d'images
+
+![](images/imagenet-error.jpeg){fig-align="center"}
+
+::: footer
+Source : [@allen2019roadmap]
+:::
+
+## Deep learning 
+### L'une des raisons de ce succès : les ressouces computationnelles 
+
+![](images/gpu-1.jpeg){fig-align="center"}
+
+::: footer
+Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
+:::
+
+
+## Deep learning
+### L'une des raisons de ce succès : les ressouces computationnelles
+
+![](images/gpu-2.jpeg){fig-align="center"}
+
+::: footer
+Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
+:::
+
+# Conclusion {background-color="#40666e"}
+
+## Modélisation des neurones
+### Neurones biologiques vs neurones artificiels
+
+::::: columns
+::: {.column width="50%"}
+![](images/neuron-biological.png){fig-align="center"}
+
+![](images/neural-network.png){fig-align="center" width="60%"}
+:::
+
+::: {.column width="50%"}
+![](images/neuron-artificial.jpeg){fig-align="center"}
+![](images/neural-net.jpeg){fig-align="center"}
+
+:::
+:::::
+
+::: footer
+Source : [AquaPortail](https://www.aquaportail.com/dictionnaire/definition/4738/neurone) -  [CS231n](https://cs231n.github.io/convolutional-networks/)
+:::
+
+::: notes
+
+par exemple j'entends souvent
+dire qu'un neurone c'est comme un
+système binaire soit ça envoie un signal
+signal électrique soit pas alors que pas
+du tout il faut pas confrontre cette
+fonction et cette explication une
+synapse c'est infiniment plus complexe
+que un One Two que soit oui soit non ça
+c'est une synapse simplifiée il faut pas
+confondre fonction et fonctionnement j'ai une petite fille je lui ai montrer
+trois photos de chats et c'était assez
+pour qu'elle puisse reconnaître les
+chats les chiens et peut-être les
+oiseaux chadptier a dû bosser sur 45 TB
+donc à peu près 200 milliards de mots
+pour pouvoir comprendre quelque chose on
+n pas du tout les mêmes moyens
+d'apprentissage 
+
+c'est pas parce que desa cré des
+fonctions qui sont similaires sur le
+cerveau qu'on peut dire qu'il
+fonctionneent pareil 
+
+le vrai
+danger c'est que parce que ça fonctionne
+comme le cerveau c'est qu'on commence à
+y faire confiance plus donc il y a pas
+vraiment une guerre d'intelligence je
+fais pas des guerres contre ma
+calculette on fait pas des compétitions
+
+:::
+
+## Modélisation des réseaux de neurones
+### Les CNN inspirés du fonctionnement du cortex visuel [@hubel1962receptive]
+
+![](images/visual-system.jpeg){fig-align="center"} 
+
+::: footer
+Source : [@yamins2016using]
+:::
+
+
+::: notes
+« En lisant un dialogue entre Noam Chomsky et Jean Piaget sur l’apprentissage inné ou acquis du langage, j’ai repéré un argument faisant référence aux réseaux de neurones que je ne connaissais pas. Ce champ prometteur était quelque peu abandonné et je m’y suis plongé tout seul »
+:::
+
+## Modélisation bio-inspirée
+### L'oiseau vs l'avion
+
+*"L’analogie peut être faite avec les pionniers de l’aviation, dont certains essayaient de [reproduire les oiseaux ou les chauve-souris]{.alert}. Mais ils collaient un peu trop près à la biologie, comme Clément Ader. Ses travaux n’ont pas eu beaucoup de suites parce qu’il copiait les chauve-souris sans s’occuper de problèmes comme la stabilité. Alors que d’autres personnes plus proches des techniques d’ingénierie ont fait des expérimentations en soufflerie, ont essayé plusieurs profils d’ailes, etc. Et à la fin, ils ont obtenu [un artefact, un avion]{.alert}, qui utilise les mêmes principes que les oiseaux pour voler mais dont les détails sont très différents. C’est un peu ce qu’on fait avec l’intelligence artificielle, on prend de l’inspiration avec ce qu’on observe dans le monde animal, mais on en dégage surtout des principes. On fabrique [une machine dont le fonctionnement est finalement très différent de la biologie]{.alert}."*
+
+**Yann Lecun**
+
+::: footer
+Source : [Telescopemag](https://telescopemag.fr/yann-le-cun-le-mythe-de-la-machine-sans-emotion-est-faux/)
+:::
+
+## L'IA, pour quoi faire ?
+### Exemples d'applications vertueuses
+
+**Environnementales**
+
+- Smart grids
+- Optimisation des transports, éclairage, chauffage, tri des déchêts, ...
+- Gestion de la production agricole, images aériennes, ...
+- Prévoir les pics de pollution de l'air, feux de forêt, séismes, ...
+- Conception de matériaux / habitats plus performants
+- Optimisation du couvert végétal des villes
+- Modélisation du changement climatique, des écosystèmes, etc
+
+::: footer
+Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
+:::
+
+## L'IA, pour quoi faire ?
+### Exemples d'applications vertueuses
+
+**Sociales et sanitaires**
+
+- Accompagnement des personnes en situation de handicap
+- Amélioration de la productivité
+- Détection de maladies, chirurgie assistée par ordinateur
+- Médecine préventive et personnalisée 
+- Fouille de données génétiques
+- Prédiction de la forme des protéines
+- Production de médicaments, vaccins, pharmacovigilance, ...
+
+::: footer
+Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
+:::
+
+::: notes
+force est de constater que l’IA est surtout
+mise au service de domaines tels que la
+finance, le marketing ciblé et désormais
+l’industrie, et non pour entraîner et faire
+fonctionner des algorithmes d’optimisation
+bénéfiques à l’environnement. Et
+l’histoire d’Internet suggère que la plus
+grande partie des ressources utilisées
+par les SIA le seront pour générer
+des contenus de faible utilité sociale,
+voire pouvant renforcer des rapports
+sociaux inégalitaires (pour exemple : la
+pornographie)
+:::
+
+## Les problèmes que posent l'IA
+### Un pharmakon
+
+- Production massive de fausses informations, algorithmes de recommandations publicitaires, *deep fakes*, ...
+- Reproduction de biais, application dans la justice
+- Risques démocratiques : ciblages personnalisés lors des élections, hameçonnage, ...
+- Dépendance technologique  
+- Chômage structurel (?)
+- Cyberattaques
+- Surveillance de masse
+- Drônes et autres armes autonomes 
+
+::: footer
+Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
+:::
+
+## Les problèmes que posent l'IA
+### Une consommation considérable de ressources
+
+- Phase d’entraînement (GPT-3) estimée à 552 tonnes
+CO2eq sur quinze jours (environ 200 allers-retours entre Paris et
+New York)
+- Phase d'utilisation encore plus énergivore en volume (180 millions d'utilisateur de ChatGPT), IoT (100 milliards d'objets connectés)
+- Google (14 MT CO2, +48% en 2023) : *«À mesure que nous intégrons l’IA dans nos produits, la réduction des émissions pourrait s’avérer difficile»*
+- Utilisation de métaux rares, production de puces, GPU, data centers, ...
+- Consommation d'eau importante (le projet de data
+center de Meta à Talavera de la Reina, en Espagne, devrait prélever
+665 millions de litres d’eau par an
+dans une région en plein stress
+hydrique).
+- **Effets rebonds** (!)
+
+::: footer
+Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
+:::
+
+::: notes
+2 500 000 km parcourus en voiture
+150 000 tonnes d’eau par jour pour laver le silicium
+:::
+
+# Des questions ? {background-color="#40666e"}
+
+## Bibliographie 
 

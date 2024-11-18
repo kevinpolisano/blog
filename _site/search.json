@@ -340,7 +340,7 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#panorama-de-lintelligence-artificielle",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Panorama de l’intelligence artificielle",
-    "text": "Panorama de l’intelligence artificielle\nLe machine learning est une branche de l’IA\n\n\nSource : inventiv-it.fr"
+    "text": "Panorama de l’intelligence artificielle\nLe machine learning est une branche de l’IA\n\n\nSource : inventiv-it.fr\n\n\nL’image illustre les relations entre l’Intelligence Artificielle (IA), le Machine Learning (apprentissage automatique), les réseaux neuronaux, et le Deep Learning (apprentissage profond), montrant comment ces concepts s’emboîtent et se distinguent.\nIntelligence Artificielle (IA) : C’est comme je le disais un domaine large qui vise à créer des systèmes capables d’exécuter des tâches nécessitant normalement l’intelligence humaine, telles que la reconnaissance vocale, la vision par ordinateur, le traitement automatique du langage naturel (NLP), la planification et la robotique. L’IA englobe divers sous-domaines, y compris le Machine Learning, et s’étend à des systèmes experts qui ne se basent pas toujours sur des méthodes d’apprentissage, mais sur des règles programmées.\nMachine Learning (Apprentissage automatique) : Il constitue une sous-partie de l’IA et se concentre sur le développement de modèles qui apprennent à partir de données. Contrairement aux approches traditionnelles de programmation, où des règles sont définies explicitement, le Machine Learning permet aux algorithmes de découvrir des modèles et de prendre des décisions à partir des données.\nNeural Networks (Réseaux de neurones) : C’est une technique clé dans le Machine Learning inspirée par la structure du cerveau humain. Un réseau de neurones est constitué de couches de nœuds (neurones) interconnectés qui permettent d’approximer des fonctions complexes.\nDeep Learning (Apprentissage profond) : des réseaux neuronaux profonds, c’est-à-dire qu’ils contiennent plusieurs couches de neurones. Les architectures de réseaux de neurones comme les réseaux convolutifs (CNN), les réseaux récurrents (RNN) et les réseaux adversaires génératifs (GAN) permettent de résoudre des tâches extrêmement complexes, notamment dans des domaines tels que la reconnaissance d’image, la traduction automatique, et les systèmes de recommandation. Le Deep Learning excelle là où les techniques traditionnelles de Machine Learning atteignent leurs limites, notamment dans le traitement de grandes quantités de données non structurées comme les images et les vidéos."
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#qui-suis-je",
@@ -550,7 +550,7 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#references",
     "title": "Introduction à l’intelligence artificielle",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\n\n\n\n\n\n\nElgendy, Mohamed. 2020. Deep Learning for Vision Systems. Simon; Schuster."
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#sec-appendix",
@@ -578,7 +578,7 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#visualisation-de-la-descente-de-gradient",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Visualisation de la descente de gradient",
-    "text": "Visualisation de la descente de gradient\nVideo"
+    "text": "Visualisation de la descente de gradient\nVideo\n\nSource : Son The Nguyen"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#ingrédients-fondamentaux-du-ml",
@@ -606,7 +606,7 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-4-principaux-ingrédients-du-ml",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Les 4 principaux ingrédients du ML",
-    "text": "Les 4 principaux ingrédients du ML\n\nDes données\nUn modèle\nUne fonction de coût\nUn algorithme d’optimisation"
+    "text": "Les 4 principaux ingrédients du ML\n\nDes données\nUn modèle\nUne fonction de coût\nUn algorithme d’optimisation\n\n\n\nSource : Machine Learnia"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#apprentissages-supervisés-vs.-non-supervisés",
@@ -627,21 +627,21 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-des-neurones-artificiels",
     "title": "Introduction à l’intelligence artificielle",
     "section": "L’invention des neurones artificiels",
-    "text": "L’invention des neurones artificiels\n1943 - Warren McCulloch et Walter Pitts\n\n\nSource : Machine Learnia\n\n\nLes premiers réseaux de neurones ont donc été inventés en 1943 par deux mathématiciens et neuroscientifiques du nom de Warren McCulloch et Walter Pitts. Dans leur article scientifique intitulé : “A Logical Calculus of the ideas immanent in nervous activity”, ils expliquent comment ils ont pu programmer des neurones artificiels en s’inspirant du fonctionnement des neurones biologiques. Rappelons le, en biologie, les neurones sont des cellules excitables connectées les unes aux autres, et ayant pour rôle de transmettre des informations dans notre système nerveux. Chaque neurone est composé de plusieurs dendrites, d’un corps cellulaire, et d’un axone. Les dendrites sont en quelque sorte les portes d’entrée d’un neurone. c’est à cet endroit, au niveau de la synapse, que le neurone reçoit des signaux lui provenant des neurones qui le précèdent. Ces signaux peuvent être de type excitateur ou à l’inverse inhibiteur. (un peu comme si nous avions des signaux qui valent +1 et d’autres qui valent -1). Lorsque la somme de ces signaux dépasse un certain seuil, le neurone s’active et produit alors un signal électrique. Ce signal circule le long de l’axone en direction des terminaisons pour être envoyé à son tour vers d’autres neurones de notre système nerveux… …neurones qui fonctionneront exactement de la même manière ! Voilà en gros, le fonctionnement des neurones. Ce que Warren McCulloch et Walter Pitts ont essayé de faire, c’est de modéliser ce fonctionnement, en considérant qu’un neurone pouvait être représenté par une fonction de transfert, qui prend en entrée des signaux X et qui retourne une sortie y. A l’intérieur de cette fonction, on trouve 2 grandes étapes. La première, c’est une étape d’agrégation. On fait la somme de toutes les entrées du neurone, en multipliant au passage chaque entrée par un coefficient W. ce coefficient représente en fait l’activité synaptique, c’est à dire le fait que le signal soit excitateur auquel cas w vaut +1, ou bien inhibiteur auquel cas il vaut -1. Dans cette phase d’agrégation, on obtient donc une expression de la forme w1 x1 + w 2 x 2 + w3 x3 etc etc. Une fois cette étape réalisée, on passe à la phase d’activation. On regarde le résultat du calcul effectué précédemment, et si celui ci dépasse un certain seuil, en général 0, alors le neurone s’active et retourne une sortie y = 1. Sinon, il reste à 0. Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer les premiers neurones artificiels"
+    "text": "L’invention des neurones artificiels\n(McCulloch and Pitts 1943)\n\n\nSource : Machine Learnia\n\n\nLes premiers réseaux de neurones ont donc été inventés en 1943 par deux mathématiciens et neuroscientifiques du nom de Warren McCulloch et Walter Pitts. Dans leur article scientifique intitulé : “A Logical Calculus of the ideas immanent in nervous activity”, ils expliquent comment ils ont pu programmer des neurones artificiels en s’inspirant du fonctionnement des neurones biologiques. Rappelons le, en biologie, les neurones sont des cellules excitables connectées les unes aux autres, et ayant pour rôle de transmettre des informations dans notre système nerveux. Chaque neurone est composé de plusieurs dendrites, d’un corps cellulaire, et d’un axone. Les dendrites sont en quelque sorte les portes d’entrée d’un neurone. c’est à cet endroit, au niveau de la synapse, que le neurone reçoit des signaux lui provenant des neurones qui le précèdent. Ces signaux peuvent être de type excitateur ou à l’inverse inhibiteur. (un peu comme si nous avions des signaux qui valent +1 et d’autres qui valent -1). Lorsque la somme de ces signaux dépasse un certain seuil, le neurone s’active et produit alors un signal électrique. Ce signal circule le long de l’axone en direction des terminaisons pour être envoyé à son tour vers d’autres neurones de notre système nerveux… …neurones qui fonctionneront exactement de la même manière ! Voilà en gros, le fonctionnement des neurones. Ce que Warren McCulloch et Walter Pitts ont essayé de faire, c’est de modéliser ce fonctionnement, en considérant qu’un neurone pouvait être représenté par une fonction de transfert, qui prend en entrée des signaux X et qui retourne une sortie y. A l’intérieur de cette fonction, on trouve 2 grandes étapes. La première, c’est une étape d’agrégation. On fait la somme de toutes les entrées du neurone, en multipliant au passage chaque entrée par un coefficient W. ce coefficient représente en fait l’activité synaptique, c’est à dire le fait que le signal soit excitateur auquel cas w vaut +1, ou bien inhibiteur auquel cas il vaut -1. Dans cette phase d’agrégation, on obtient donc une expression de la forme w1 x1 + w 2 x 2 + w3 x3 etc etc. Une fois cette étape réalisée, on passe à la phase d’activation. On regarde le résultat du calcul effectué précédemment, et si celui ci dépasse un certain seuil, en général 0, alors le neurone s’active et retourne une sortie y = 1. Sinon, il reste à 0. Voilà donc comment Warren McCulloch et Walter Pitts ont réussi à développer les premiers neurones artificiels"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#types-dapprentissages",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#types-dapprentissages",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Types d’apprentissages",
-    "text": "Types d’apprentissages\nSupervisés, non-supervisés et par ré-enforcement\n\n\nSource : Techplayon"
+    "text": "Types d’apprentissages\nSupervisés, non-supervisés et par ré-enforcement\n\n\nSource : Techplayon\n\n\nIl inclut plusieurs techniques comme : Apprentissage supervisé : où un modèle est formé sur des données annotées (comme la régression linéaire/logistique, les arbres de décision, et les forêts aléatoires). Apprentissage non supervisé : où les modèles identifient des motifs dans des données non étiquetées. Apprentissage par renforcement : où un agent apprend à partir d’actions et de récompenses pour maximiser ses gains au fil du temps."
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#linvention-du-perceptron",
     "title": "Introduction à l’intelligence artificielle",
     "section": "L’invention du Perceptron",
-    "text": "L’invention du Perceptron\n1957 - Frank Rosenblatt\n\n\nSource : Machine Learnia"
+    "text": "L’invention du Perceptron\n(Rosenblatt 1958)\n\n\nSource : Machine Learnia"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification",
@@ -690,21 +690,21 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Deep learning",
-    "text": "Deep learning\nLes filtres de convolution"
+    "text": "Deep learning\nAlexNet (Krizhevsky, Sutskever, and Hinton 2012)\n\n\nSource : (Elgendy 2020)"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-1",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-1",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Deep learning",
-    "text": "Deep learning\nLes couches du réseau\n\n\nSource : Medium"
+    "text": "Deep learning\nLa première couche du réseau\n\n\nSource : (Krizhevsky, Sutskever, and Hinton 2012)"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#définitions",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#définitions",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Définitions",
-    "text": "Définitions\nIntelligence artificielle et apprentissage statistique\n\nIntelligence artificielle (IA) : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l’intelligence humaine.\nApprentissage statistique ou Machine Learning (ML) : champ d’étude de l’intelligence artificielle qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d’« apprendre » à partir de données, c’est-à-dire d’améliorer leurs performances à résoudre des tâches sans être explicitement programmés pour chacune.\n\n\nSource : Wikipédia"
+    "text": "Définitions\nIntelligence artificielle et apprentissage statistique\n\nIntelligence artificielle (IA) : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l’intelligence humaine.\nApprentissage statistique ou Machine Learning (ML) : champ d’étude de l’intelligence artificielle qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d’« apprendre » à partir de données, c’est-à-dire d’améliorer leurs performances à résoudre des tâches sans être explicitement programmés pour chacune.\n\n\nSource : Wikipédia\n\n\nl’Intelligence Artificielle (IA) est un ensemble de techniques permettant à des machines d’accomplir des tâches et de résoudre des problèmes normalement réservés aux humains et à certains animaux"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#la-carte-du-machine-learning-ml",
@@ -739,14 +739,14 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche",
     "title": "Introduction à l’intelligence artificielle",
     "section": "L’efficacité du Perceptron Multicouche",
-    "text": "L’efficacité du Perceptron Multicouche\n3 perceptrons pour créer une forme triangulaire"
+    "text": "L’efficacité du Perceptron Multicouche\n3 perceptrons pour créer une forme triangulaire\n\n\nSource : (Elgendy 2020)"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-1",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-1",
     "title": "Introduction à l’intelligence artificielle",
     "section": "L’efficacité du Perceptron Multicouche",
-    "text": "L’efficacité du Perceptron Multicouche\nLinéariser les frontières de décision complexes"
+    "text": "L’efficacité du Perceptron Multicouche\nLinéariser les frontières de décision complexes\n\n\nSource : Towards Data Science"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-du-perceptron-multicouche",
@@ -767,28 +767,28 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#représentation-dun-perceptron-multicouche",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Représentation d’un Perceptron Multicouche",
-    "text": "Représentation d’un Perceptron Multicouche\nUn simple réseau de neurones à 3 couches"
+    "text": "Représentation d’un Perceptron Multicouche\nUn simple réseau de neurones à 3 couches\n\n\nSource : (Elgendy 2020)"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-dun-perceptron-multicouche",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#formalisation-dun-perceptron-multicouche",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Formalisation d’un Perceptron Multicouche",
-    "text": "Formalisation d’un Perceptron Multicouche\nCascades de multiplication matricielles et d’activation"
+    "text": "Formalisation d’un Perceptron Multicouche\nCascades de multiplication matricielles et d’activation\n\n\nSource : (Elgendy 2020)"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#que-se-passe-t-il-dans-un-réseau-de-neurones",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#que-se-passe-t-il-dans-un-réseau-de-neurones",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Que se passe-t-il dans un réseau de neurones ?",
-    "text": "Que se passe-t-il dans un réseau de neurones ?\nVisualisation de la linéarisation de la frontière de décision"
+    "text": "Que se passe-t-il dans un réseau de neurones ?\nVisualisation de la linéarisation de la frontière de décision\n\n\nSource : Alexandre TL"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-2",
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#lefficacité-du-perceptron-multicouche-2",
     "title": "Introduction à l’intelligence artificielle",
     "section": "L’efficacité du Perceptron Multicouche",
-    "text": "L’efficacité du Perceptron Multicouche\nApprendre des frontières de décision complexes"
+    "text": "L’efficacité du Perceptron Multicouche\nApprendre des frontières de décision complexes\n\n\nSource : Playground Tensorflow"
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-perceptrons-multicouche-fonctionnent-si-bien",
@@ -809,6 +809,300 @@
     "href": "slides/2024-11-21-intro-ia/intro-ia.html#théorème-dapproximation-universelle",
     "title": "Introduction à l’intelligence artificielle",
     "section": "Théorème d’approximation universelle",
-    "text": "Théorème d’approximation universelle\nFonctions continues approchables par un réseau à 2 couches\n\n\n\n\n\n\nThéorème (Cybenko, 1989, Hornik, 1991)\n\n\nLet \\(\\sigma:\\mathbb{R}\\mapsto \\mathbb{R}\\) be a nonconstant, bounded, and continuous function. Let \\(I_m\\) denote the \\(m\\)-dimensional unit hypercube \\([0, 1]^m\\). The space of real-valued continuous functions on \\(I_m\\) is denoted by \\(C(I_m)\\). Then, given any \\(\\epsilon &gt; 0\\) and any function \\(f\\in C(I_m)\\), there exist an integer \\(N\\), real constants \\(v_i, b_i\\in \\mathbb{R}\\) and real vectors \\(\\boldsymbol{w}_i \\in \\mathbb{R}^m\\) for \\(i = 1, \\dotsc, N\\), such that we may define:\n\\[ F(\\boldsymbol{x}) = \\sum_{i=1}^N v_i \\sigma\\left(\\boldsymbol{w}_i^T \\boldsymbol{x}+b_i\\right)=\\boldsymbol{v}^T \\sigma\\left(\\mathbf{W}^T \\boldsymbol{x}+\\boldsymbol{b}\\right)\\] as an approximate realization of the function \\(f\\); that is, \\[ |f(\\boldsymbol{x})-F(\\boldsymbol{x})|&lt;\\epsilon, \\quad \\forall \\boldsymbol{x}\\in I_m\\]"
+    "text": "Théorème d’approximation universelle\nFonctions continues approchables par un réseau de neurones à 2 couches\n\n\n\n\n\n\nThéorème (Cybenko, 1989, Hornik, 1991)\n\n\nSoit \\(\\sigma:\\mathbb{R}\\rightarrow \\mathbb{R}\\) une fonction non constante, bornée et continue. Soit \\(I_m\\) le cube unité \\(m\\)-dimensionnel \\([0, 1]^m\\). L’espace des fonctions continues à valeurs réelles sur \\(I_m\\) est noté \\(C(I_m)\\). Alors, pour tout \\(\\epsilon &gt; 0\\) et toute fonction \\(f \\in C(I_m)\\), il existe un entier \\(N\\), des constantes réelles \\(v_i, b_i \\in \\mathbb{R}\\) et des vecteurs réels \\(\\boldsymbol{w}_i \\in \\mathbb{R}^m\\) pour \\(i = 1, \\dotsc, N\\), tels que nous puissions définir :\n\\[ F(\\boldsymbol{x}) = \\sum_{i=1}^N v_i \\sigma\\left(\\boldsymbol{w}_i^T \\boldsymbol{x}+b_i\\right)=\\boldsymbol{v}^T \\sigma\\left(\\mathbf{W}^T \\boldsymbol{x}+\\boldsymbol{b}\\right)\\] comme une approximation de la fonction \\(f\\), c’est-à-dire, \\[ |f(\\boldsymbol{x})-F(\\boldsymbol{x})|&lt;\\epsilon, \\quad \\forall \\boldsymbol{x}\\in I_m\\]"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#les-réseaux-de-neurones-convolutifs",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-réseaux-de-neurones-convolutifs",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Les réseaux de neurones convolutifs",
+    "text": "Les réseaux de neurones convolutifs"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nLes couches du réseau\n\n\nSource : Medium"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#brique-de-base-dun-cnn",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#brique-de-base-dun-cnn",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Brique de base d’un CNN",
+    "text": "Brique de base d’un CNN\nLes filtres de convolution"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#résumé-de-lapprentissage-supervisé",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#résumé-de-lapprentissage-supervisé",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Résumé de l’apprentissage supervisé",
+    "text": "Résumé de l’apprentissage supervisé\nPoint de vue général\n\nDes données d’entrainement \\((\\boldsymbol{x}_1,y_1),\\dotsc,(\\boldsymbol{x}_n,y_n)\\)\nUn modèle, une famille de fonctions \\(f\\in \\mathcal{H}\\) assurant \\(y_i\\approx f(\\boldsymbol{x}_i)\\)\nUne fonction de coût \\(\\ell\\) mesurant la qualité de l’approximation\nUn algorithme d’optimisation trouvant \\(f\\in \\mathcal{H}\\) qui minimise le coût \\[ \\min_{f\\in \\mathcal{H}} \\frac{1}{n} \\sum_{i=1}^n \\ell(y_i, f(\\boldsymbol{x}_i))\\]"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLes filtres de convolution\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#résumé-de-lapprentissage-supervisé-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#résumé-de-lapprentissage-supervisé-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Résumé de l’apprentissage supervisé",
+    "text": "Résumé de l’apprentissage supervisé\nPoint de vue des réseaux de neurones\n\nDes données d’entrainement \\((\\boldsymbol{x}_1,y_1),\\dotsc,(\\boldsymbol{x}_n,y_n)\\)\nUn réseau à \\(k\\) neurones soit un groupe de poids \\((\\boldsymbol{w}_1,\\dotsc \\boldsymbol{w}_k, b_1, \\dotsc, b_k)\\) assurant \\[y_i\\approx \\{NN(\\boldsymbol{w}_1,\\dotsc \\boldsymbol{w}_k, b_1, \\dotsc, b_k)\\}(\\boldsymbol{x}_i)\\]\nUne fonction de coût \\(\\ell\\) mesurant la qualité de l’approximation\nUn algorithme d’optimisation trouvant les poids \\((\\boldsymbol{w}_1,\\dotsc \\boldsymbol{w}_k, b_1, \\dotsc, b_k)\\) qui minimisent le coût \\[ \\min_{(\\boldsymbol{w}_k, b_k)} \\frac{1}{n} \\sum_{i=1}^n \\ell(y_i, \\{NN(\\boldsymbol{w}_1,\\dotsc \\boldsymbol{w}_k, b_1, \\dotsc, b_k)\\}(\\boldsymbol{x}_i))\\]"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLes filtres de convolution\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLes filtres de convolution\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification d’images",
+    "text": "Classification d’images\nReconnaissance de chiffres (MNIST)\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification d’images",
+    "text": "Classification d’images\nExtraction de caractéristiques\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-3",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLes filtres de convolution\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-réseaux-de-neurones-fonctionnent",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#pourquoi-les-réseaux-de-neurones-fonctionnent",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Pourquoi les réseaux de neurones fonctionnent ?",
+    "text": "Pourquoi les réseaux de neurones fonctionnent ?\nParce qu’ils approchent des fonctions complexes\n\n\nSource : DataMListic"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#image-en-couleurs",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#image-en-couleurs",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Image en couleurs",
+    "text": "Image en couleurs\n3 canaux RGB\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification d’images",
+    "text": "Classification d’images\nMéthode traditionnelle (handcrafted features) vs moderne (deep learning)\n\n\n\n\n\n\n\n\n\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-3",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification d’images",
+    "text": "Classification d’images\nDiscriminer deux chiffres\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-4",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#classification-dimages-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Classification d’images",
+    "text": "Classification d’images\nDiscriminer les chiffres MNIST (LeCun et al. 1989b, 1989a, 1998)\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-4",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLes filtres de convolution\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-5",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-5",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLe max pooling\n\n\nSource : CS231n"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-3",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-3",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nLes couches du réseau\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource : (Elgendy 2020)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-6",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#briques-de-base-dun-cnn-6",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Briques de base d’un CNN",
+    "text": "Briques de base d’un CNN\nLe max pooling\n\n\nSource : CS231n"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-4",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-4",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nLes CNN en résumé\n\n\nSource : (Maried, Omar, and Baba 2017)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-5",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-5",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nAlexNet breakthrough\n\n\nSource : Welch Labs"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-6",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-6",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nUn déluge de données\n\n1,2 millions d’images d’entrainement\n100 000 images de test\n\n\n\nSource : Andrej Karpathy"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-7",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-7",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\n1000 classes d’objets dans ImageNet\n\n\nSource : (Krizhevsky, Sutskever, and Hinton 2012)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-8",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-8",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nLe succès des CNN en classification d’images\n\n\nSource : (Allen et al. 2019)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-9",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-9",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nL’une des raisons de ce succès : les ressouces computationnelles\n\n\nSource : Welch Labs"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-10",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#deep-learning-10",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Deep learning",
+    "text": "Deep learning\nL’une des raisons de ce succès : les ressouces computationnelles\n\n\nSource : Welch Labs"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Modélisation",
+    "text": "Modélisation\nNeurones biologiques vs neurones artificiels\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nSource : AquaPortail - CS231n\n\n\npar exemple j’entends souvent dire qu’un neurone c’est comme un système binaire soit ça envoie un signal signal électrique soit pas alors que pas du tout il faut pas confrontre cette fonction et cette explication une synapse c’est infiniment plus complexe que un One Two que soit oui soit non ça c’est une synapse simplifiée il faut pas confondre fonction et fonctionnement j’ai une petite fille je lui ai montrer trois photos de chats et c’était assez pour qu’elle puisse reconnaître les chats les chiens et peut-être les oiseaux chadptier a dû bosser sur 45 TB donc à peu près 200 milliards de mots pour pouvoir comprendre quelque chose on n pas du tout les mêmes moyens d’apprentissage\nc’est pas parce que desa cré des fonctions qui sont similaires sur le cerveau qu’on peut dire qu’il fonctionneent pareil\nle vrai danger c’est que parce que ça fonctionne comme le cerveau c’est qu’on commence à y faire confiance plus donc il y a pas vraiment une guerre d’intelligence je fais pas des guerres contre ma calculette on fait pas des compétitions"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Modélisation",
+    "text": "Modélisation\nLes architectures CNN inspirées du fonctionnement du cortex visuel\n\n\nSource : (Yamins and DiCarlo 2016)\n\n\n« En lisant un dialogue entre Noam Chomsky et Jean Piaget sur l’apprentissage inné ou acquis du langage, j’ai repéré un argument faisant référence aux réseaux de neurones que je ne connaissais pas. Ce champ prometteur était quelque peu abandonné et je m’y suis plongé tout seul »"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-2",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-2",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Modélisation",
+    "text": "Modélisation\nL’oiseau vs l’avion\n“L’analogie peut être faite avec les pionniers de l’aviation, dont certains essayaient de reproduire les oiseaux ou les chauve-souris. Mais ils collaient un peu trop près à la biologie, comme Clément Ader. Ses travaux n’ont pas eu beaucoup de suites parce qu’il copiait les chauve-souris sans s’occuper de problèmes comme la stabilité. Alors que d’autres personnes plus proches des techniques d’ingénierie ont fait des expérimentations en soufflerie, ont essayé plusieurs profils d’ailes, etc. Et à la fin, ils ont obtenu un artefact, un avion, qui utilise les mêmes principes que les oiseaux pour voler mais dont les détails sont très différents. C’est un peu ce qu’on fait avec l’intelligence artificielle, on prend de l’inspiration avec ce qu’on observe dans le monde animal, mais on en dégage surtout des principes. On fabrique une machine dont le fonctionnement est finalement très différent de la biologie.”\nYann Lecun"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-bio-inspirée",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-bio-inspirée",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Modélisation bio-inspirée",
+    "text": "Modélisation bio-inspirée\nL’oiseau vs l’avion\n“L’analogie peut être faite avec les pionniers de l’aviation, dont certains essayaient de reproduire les oiseaux ou les chauve-souris. Mais ils collaient un peu trop près à la biologie, comme Clément Ader. Ses travaux n’ont pas eu beaucoup de suites parce qu’il copiait les chauve-souris sans s’occuper de problèmes comme la stabilité. Alors que d’autres personnes plus proches des techniques d’ingénierie ont fait des expérimentations en soufflerie, ont essayé plusieurs profils d’ailes, etc. Et à la fin, ils ont obtenu un artefact, un avion, qui utilise les mêmes principes que les oiseaux pour voler mais dont les détails sont très différents. C’est un peu ce qu’on fait avec l’intelligence artificielle, on prend de l’inspiration avec ce qu’on observe dans le monde animal, mais on en dégage surtout des principes. On fabrique une machine dont le fonctionnement est finalement très différent de la biologie.”\nYann Lecun\n\nSource : Telescopemag"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lia-pour-quoi-faire",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#lia-pour-quoi-faire",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’IA, pour quoi faire ?",
+    "text": "L’IA, pour quoi faire ?\nExemples d’applications vertueuses\nEnvironnementales\n\nSmart grids\nOptimisation des transports, éclairage, chauffage, tri des déchêts, …\nGestion de la production agricole, images aériennes, …\nPrévoir les pics de pollution de l’air, feux de forêt, séismes, …\nConception de matériaux / habitats plus performants\nOptimisation du couvert végétal des villes\nModélisation du changement climatique, des écosystèmes, etc\n\n\nSource : cese"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#lia-pour-quoi-faire-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#lia-pour-quoi-faire-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "L’IA, pour quoi faire ?",
+    "text": "L’IA, pour quoi faire ?\nExemples d’applications vertueuses\nSociales et sanitaires\n\nAccompagnement des personnes en situation de handicap\nAmélioration de la productivité\nDétection de maladies, chirurgie assistée par ordinateur\nMédecine préventive et personnalisée\nFouille de données génétiques\nPrédiction de la forme des protéines\nProduction de médicaments, vaccins, pharmacovigilance, …\n\n\nSource : cese\n\n\nforce est de constater que l’IA est surtout mise au service de domaines tels que la finance, le marketing ciblé et désormais l’industrie, et non pour entraîner et faire fonctionner des algorithmes d’optimisation bénéfiques à l’environnement. Et l’histoire d’Internet suggère que la plus grande partie des ressources utilisées par les SIA le seront pour générer des contenus de faible utilité sociale, voire pouvant renforcer des rapports sociaux inégalitaires (pour exemple : la pornographie)"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-de-lia",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-de-lia",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Les problèmes de l’IA",
+    "text": "Les problèmes de l’IA\nUn pharmakon\n\nProduction massive de fausses informations, algorithmes de recommandations publicitaires, deep fakes, …\nReproduction de biais, application dans la justice\nRisques démocratiques : ciblages personnalisés lors des élections, hameçonnage, …\nDépendance technologique\n\nChômage structurel (?)\nCyberattaques\nSurveillance de masse\nDrônes et autres armes autonomes"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-de-lia-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-de-lia-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Les problèmes de l’IA",
+    "text": "Les problèmes de l’IA\nUne consommation considérable de ressources\n\nPhase d’entraînement (GPT-3) estimée à 552 tonnes CO2eq sur quinze jours (environ 200 allers-retours entre Paris et New York)\nPhase d’utilisation encore plus énergivore en volume (180 millions d’utilisateur de ChatGPT), IoT (100 milliards d’objets connectés)\nGoogle (14 MT CO2, +48% en 2023) : «A mesure que nous intégrons l’IA dans nos produits, la réduction des émissions pourrait s’avérer difficile»\nUtilisation de métaux rares, production de puces, GPU, data centers, …\nConsommation d’eau importante (le projet de data center de Meta à Talavera de la Reina, en Espagne, devrait prélever 665 millions de litres d’eau par an dans une région en plein stress hydrique).\nEffets rebonds (!)\n\n\n2 500 000 km parcourus en voiture 150 000 tonnes d’eau par jour pour laver le silicium"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-que-posent-lia",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-que-posent-lia",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Les problèmes que posent l’IA",
+    "text": "Les problèmes que posent l’IA\nUn pharmakon\n\nProduction massive de fausses informations, algorithmes de recommandations publicitaires, deep fakes, …\nReproduction de biais, application dans la justice\nRisques démocratiques : ciblages personnalisés lors des élections, hameçonnage, …\nDépendance technologique\n\nChômage structurel (?)\nCyberattaques\nSurveillance de masse\nDrônes et autres armes autonomes\n\n\nSource : cese"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-que-posent-lia-1",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#les-problèmes-que-posent-lia-1",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Les problèmes que posent l’IA",
+    "text": "Les problèmes que posent l’IA\nUne consommation considérable de ressources\n\nPhase d’entraînement (GPT-3) estimée à 552 tonnes CO2eq sur quinze jours (environ 200 allers-retours entre Paris et New York)\nPhase d’utilisation encore plus énergivore en volume (180 millions d’utilisateur de ChatGPT), IoT (100 milliards d’objets connectés)\nGoogle (14 MT CO2, +48% en 2023) : «À mesure que nous intégrons l’IA dans nos produits, la réduction des émissions pourrait s’avérer difficile»\nUtilisation de métaux rares, production de puces, GPU, data centers, …\nConsommation d’eau importante (le projet de data center de Meta à Talavera de la Reina, en Espagne, devrait prélever 665 millions de litres d’eau par an dans une région en plein stress hydrique).\nEffets rebonds (!)\n\n\nSource : cese\n\n\n2 500 000 km parcourus en voiture 150 000 tonnes d’eau par jour pour laver le silicium"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#bibliographie",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#bibliographie",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Bibliographie",
+    "text": "Bibliographie\n\n\n\n\n\n\n\n\nAllen, Bibb, Steven Seltzer, Curtis Langlotz, Keith Dreyer, Ronald Summers, Nicholas Petrick, Danica Marinac-Dabic, et al. 2019. “A Road Map for Translational Research on Artificial Intelligence in Medical Imaging: From the 2018 National Institutes of Health/RSNA/ACR/the Academy Workshop.” Journal of the American College of Radiology 16 (May). https://doi.org/10.1016/j.jacr.2019.04.014.\n\n\nElgendy, Mohamed. 2020. Deep Learning for Vision Systems. Simon; Schuster.\n\n\nHubel, David H, and Torsten N Wiesel. 1962. “Receptive Fields, Binocular Interaction and Functional Architecture in the Cat’s Visual Cortex.” The Journal of Physiology 160 (1): 106.\n\n\nKrizhevsky, Alex, Ilya Sutskever, and Geoffrey E Hinton. 2012. “Imagenet Classification with Deep Convolutional Neural Networks.” Advances in Neural Information Processing Systems 25.\n\n\nLeCun, Yann, Bernhard Boser, John S Denker, Donnie Henderson, Richard E Howard, Wayne Hubbard, and Lawrence D Jackel. 1989a. “Backpropagation Applied to Handwritten Zip Code Recognition.” Neural Computation 1 (4): 541–51.\n\n\nLeCun, Yann, Bernhard Boser, John Denker, Donnie Henderson, Richard Howard, Wayne Hubbard, and Lawrence Jackel. 1989b. “Handwritten Digit Recognition with a Back-Propagation Network.” Advances in Neural Information Processing Systems 2.\n\n\nLeCun, Yann, Léon Bottou, Yoshua Bengio, and Patrick Haffner. 1998. “Gradient-Based Learning Applied to Document Recognition.” Proceedings of the IEEE 86 (11): 2278–2324.\n\n\nMaried, Esam, Osama Omar, and Abdullatif Baba. 2017. “A Literature Study of Deep Learning and Its Application in Digital Image Processing.” https://doi.org/10.13140/RG.2.2.17403.72480.\n\n\nMcCulloch, Warren S, and Walter Pitts. 1943. “A Logical Calculus of the Ideas Immanent in Nervous Activity.” The Bulletin of Mathematical Biophysics 5: 115–33.\n\n\nRosenblatt, Frank. 1958. “The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain.” Psychological Review 65 (6): 386.\n\n\nRumelhart, David E, Geoffrey E Hinton, and Ronald J Williams. 1986. “Learning Representations by Back-Propagating Errors.” Nature 323 (6088): 533–36.\n\n\nYamins, Daniel LK, and James J DiCarlo. 2016. “Using Goal-Driven Deep Learning Models to Understand Sensory Cortex.” Nature Neuroscience 19 (3): 356–65."
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-des-neurones",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-des-neurones",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Modélisation des neurones",
+    "text": "Modélisation des neurones\nNeurones biologiques vs neurones artificiels\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nSource : AquaPortail - CS231n\n\n\npar exemple j’entends souvent dire qu’un neurone c’est comme un système binaire soit ça envoie un signal signal électrique soit pas alors que pas du tout il faut pas confrontre cette fonction et cette explication une synapse c’est infiniment plus complexe que un One Two que soit oui soit non ça c’est une synapse simplifiée il faut pas confondre fonction et fonctionnement j’ai une petite fille je lui ai montrer trois photos de chats et c’était assez pour qu’elle puisse reconnaître les chats les chiens et peut-être les oiseaux chadptier a dû bosser sur 45 TB donc à peu près 200 milliards de mots pour pouvoir comprendre quelque chose on n pas du tout les mêmes moyens d’apprentissage\nc’est pas parce que desa cré des fonctions qui sont similaires sur le cerveau qu’on peut dire qu’il fonctionneent pareil\nle vrai danger c’est que parce que ça fonctionne comme le cerveau c’est qu’on commence à y faire confiance plus donc il y a pas vraiment une guerre d’intelligence je fais pas des guerres contre ma calculette on fait pas des compétitions"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-des-réseaux-de-neurones",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#modélisation-des-réseaux-de-neurones",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Modélisation des réseaux de neurones",
+    "text": "Modélisation des réseaux de neurones\nLes CNN inspirés du fonctionnement du cortex visuel (Hubel and Wiesel 1962)\n\n\nSource : (Yamins and DiCarlo 2016)\n\n\n« En lisant un dialogue entre Noam Chomsky et Jean Piaget sur l’apprentissage inné ou acquis du langage, j’ai repéré un argument faisant référence aux réseaux de neurones que je ne connaissais pas. Ce champ prometteur était quelque peu abandonné et je m’y suis plongé tout seul »"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#le-perceptron-multicouche-et-la-rétropropagation-du-gradient",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#le-perceptron-multicouche-et-la-rétropropagation-du-gradient",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Le Perceptron Multicouche et la rétropropagation du gradient",
+    "text": "Le Perceptron Multicouche et la rétropropagation du gradient\n(Rumelhart, Hinton, and Williams 1986)\n\n\nSource : Machine Learnia"
+  },
+  {
+    "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#le-perceptron-multicouche",
+    "href": "slides/2024-11-21-intro-ia/intro-ia.html#le-perceptron-multicouche",
+    "title": "Introduction à l’intelligence artificielle",
+    "section": "Le Perceptron Multicouche",
+    "text": "Le Perceptron Multicouche\n… et la rétropropagation du gradient (Rumelhart, Hinton, and Williams 1986)\n\n\nSource : Machine Learnia"
   }
 ]
