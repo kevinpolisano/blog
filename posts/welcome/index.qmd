@@ -1,12 +1,69 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2024-10-05"
-categories: [news]
+title: "Migrer son blog Wordpress vers un site statique avec Quarto"
+author: "Kévin Polisano"
+date: "2024-12-26"
+categories: [site]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Mon site perso fait peau neuve !
+
+Je vous explique ici quelles étapes j'ai suivi pour effectuer la migration. Au boulot !
 
 ![](thumbnail.jpg)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+## Exporter ses articles Wordpress en HTML vers Markdown
+
+J'ai expérimenté trois solutions :
+
+1.  [GitHub - SchumacherFM/wordpress-to-hugo-exporter](https://github.com/SchumacherFM/wordpress-to-hugo-exporter)
+2.  [GitHub - lonekorean/wordpress-export-to-markdown](https://github.com/lonekorean/wordpress-export-to-markdown)
+3.  [GitHub - palaniraja/blog2md](https://github.com/palaniraja/blog2md)
+
+La première conserve certaines balises HTML (typiquement pour l'usage de la couleur et la mise en forme), tandis que les deux suivantes exportent en pur Markdown.
+
+## Wordpress to Hugo Exporter
+
+La première solution consiste à *uploader* l'archive sur le site WP dans le dossier `wp-content/plugins` puis d'activer le plugin et utiliser `Outils > Export Hugo`. Ce dernier n'a pas fonctionné donc j'ai utilisé le Terminal de mon serveur d'hébergement (O2switch) (comme expliqué [ici](file:///Users/polisank/Zotero/storage/ERLHNLWT/jai-enfin-migre-de-wordpress-a-hugo-partie-2.html)) :
+
+``` bash
+cd wp-content/plugins/wordpress-to-hugo-exporter/
+php hugo-export-cli.php
+```
+
+Le script créé un fichier `/tmp/wp-hugo.zip` (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (*via* le Cpanel d'O2switch) j'ai effectué une recherche du fichier, il m'indique que celui-ci se trouve dans le dossier caché `.cagefs/tmp/`.
+
+### Wordpress export to Markdown
+
+Premièrement on effectue un export du contenu complet de WP au format `export.xml`, que l'on place dans l'archive du code téléchargé. Puis on exécute le script :
+
+``` bash
+npm install && node index.js
+```
+
+### Blog2md
+
+De même on exécute :
+
+``` bash
+npm install && node index.js w export.xml out
+```
+
+## Nettoyage des articles exportés, liens, images, ...
+
+## Créer son blog avec Quarto
+
+- Ouvrir `RStudio` 
+- Créer un nouveau projet `Create Quarto Blog` 
+- Cocher `Create a git repository` 
+
+Un [blog Quarto](https://quarto.org/docs/websites/website-blog.html) vierge est ainsi créé contenant ces fichiers :
+
+- `_quarto.yml`	: Fichier du projet Quarto
+- `index.qmd`	: Page d'accueil
+- `about.qmd`	: Page "À propos"
+- `posts/` : Répertoire contenant les posts en Quarto Markdown (`.qmd`)
+- `posts/_metadata.yml` :	Options partagées des posts
+- `styles.css` : CSS customisé pour le style du blog
+- `Blog.Rproj` : Raccourci d'ouverture du projet Quarto
+
+Pour avoir un rendu du blog il faut exécuter `build > Render Website` 

@@ -1,8 +1,8 @@
 ---
-title: "About"
-image: profile.jpg
+title: "Kévin Polisano"
+image: about.jpg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -13,7 +13,14 @@ about:
     - icon: github
       text: Github
       href: https://github.com
-
 ---
 
-About this blog
+## Qui suis-je ?
+
+Originaire de Lorraine, je vis depuis 2010 au milieu des montages à Grenoble, où j'ai fait mes études d'ingénieur à l'[Ensimag](https://ensimag.grenoble-inp.fr/) puis un doctorat au [Laboratoire Jean Kuntzmann](https://www-ljk.imag.fr/). Depuis 2019 je suis [chargé de recherche](https://polisano.pages.math.cnrs.fr/) au [CNRS](https://www.cnrs.fr/fr) en mathématiques appliquées.
+
+## Pourquoi ce blog ?
+
+Ce blog est un support d'expérimentation et de partage de mes réflexions sur divers sujets. 
+
+

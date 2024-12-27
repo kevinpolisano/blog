@@ -1,13 +1,17 @@
 ---
 title: Introduction à l'intelligence artificielle
-title-slide-attributes: 
-  data-notes: CR CNRS au LJK, un labo de maths applis situé sur le campus, mes travaux de recherche se situent au croisement du traitement du signal et des images, des statistiques, des graphes, et de réseaux de neurones, qui sont des objets qui appartiennent à ce qu'on appelle communément l'intelligence artificielle... et qui va donc être l'objet de cette présentation. Anne en m'invitant m'a donné comme consignes de vous familiariser avec l'IA, en vous présentant un panorama de ce qui se fait dans ce domaine, comment il a émergé historiquement, comment "ça marche"  (en partant du principe que pour la majorité d'entre vous vous partez de zéro), et enfin dans quelle mesure les méthodes d'intelligences artificielles sont ou non applicables et pertinentes pour traiter des données dont vous disposez dans vos champs de recherche respectifs. Tout un programme ! Alors je vais au moins tâcher de remplir les 2 premiers objectifs, à savoir retracer dans les grandes lignes la généalogie du machine learning et vous expliquer son fonctionnement. Et je laisserai aux discussions qui s'en suivront l'occasion pour vous de me faire part de vos problématiques afin que je puisse répondre de façon peut-être plus personnalisées sur l'applicabilité de ces méthodes. Allons-y pour une brève excursion dans le monde du machine learning.  
+#title-slide-attributes: 
+  #data-notes: CR CNRS au LJK, un labo de maths applis situé sur le campus, mes travaux de recherche se situent au croisement du traitement du signal et des images, des statistiques, des graphes, et de réseaux de neurones, qui sont des objets qui appartiennent à ce qu'on appelle communément l'intelligence artificielle... et qui va donc être l'objet de cette présentation. Anne en m'invitant m'a donné comme consignes de vous familiariser avec l'IA, en vous présentant un panorama de ce qui se fait dans ce domaine, comment il a émergé historiquement, comment "ça marche"  (en partant du principe que pour la majorité d'entre vous vous partez de zéro), et enfin dans quelle mesure les méthodes d'intelligences artificielles sont ou non applicables et pertinentes pour traiter des données dont vous disposez dans vos champs de recherche respectifs. Tout un programme ! Alors je vais au moins tâcher de remplir les 2 premiers objectifs, à savoir retracer dans les grandes lignes la généalogie du machine learning et vous expliquer son fonctionnement. Et je laisserai aux discussions qui s'en suivront l'occasion pour vous de me faire part de vos problématiques afin que je puisse répondre de façon peut-être plus personnalisées sur l'applicabilité de ces méthodes. Allons-y pour une brève excursion dans le monde du machine learning.  
 subtitle: Une brève excursion dans le monde du machine learning 
 format: 
   clean-revealjs:
-    #self-contained: true
+    self-contained: true
     autoplay: true
-    chalkboard: true
+    #chalkboard: true
+#filters:
+#  - remove-notes.lua
+revealjs-plugins:
+  - pointer
 html-math-method:
   method: mathjax
   url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
@@ -25,7 +29,22 @@ resources:
   - videos/**
 ---
 
+## Plan de la présentation {background-image="images/deep-learning-2.jpeg" background-size="contain" background-position="bottom"}
+
+1.  Introduction
+
+2.  Les modèles linéaires
+
+3.  Généalogie des réseaux de neurones artificiels
+
+4.  Deep learning – les réseaux de neurones convolutifs
+
+5.  Conclusion
+
+# Introduction {background-color="#40666e"}
+
 ## Définitions
+
 ### Intelligence artificielle et apprentissage statistique
 
 -   [Intelligence artificielle (IA)]{.alert} : ensemble de théories et de techniques visant à réaliser des machines capables de simuler l'intelligence humaine.
@@ -40,11 +59,13 @@ Source : [Wikipédia](https://fr.wikipedia.org/wiki/Intelligence_artificielle)
 l’Intelligence Artificielle (IA) est un ensemble de techniques permettant à des machines d’accomplir des tâches et de résoudre des problèmes normalement réservés aux humains et à certains animaux
 :::
 
+```{=html}
 <style>
   .colored-title {
     color: #417D97 !important; /* Bleu personnalisé */
   }
 </style>
+```
 
 ```{r}
 render_media <- function(version, local_src = NULL, youtube_src = NULL, ratio = 1, margin = 0) {
@@ -81,13 +102,14 @@ interactive_webpage <- function(bool, url_src) {
 ```{r}
 # Déclaration de la variable globale version
 version <- "online"
-version <- "local"
+#version <- "local"
 
 interactive <- FALSE
 interactive <- TRUE
 ```
 
 ## Panorama de l'intelligence artificielle
+
 ### Le machine learning est une branche de l'IA
 
 ![](images/ia-vs-machine-learning-vs-deep-learning.jpg){fig-align="center"}
@@ -99,13 +121,15 @@ Source : [inventiv-it.fr](https://inventiv-it.fr/ai-machine-learning-deep-learni
 ::: notes
 L'image illustre les relations entre l'Intelligence Artificielle (IA), le Machine Learning (apprentissage automatique), les réseaux neuronaux, et le Deep Learning (apprentissage profond), montrant comment ces concepts s'emboîtent et se distinguent.
 
-Intelligence Artificielle (IA) : C'est comme je le disais un domaine large qui vise à créer des systèmes capables d'exécuter des tâches nécessitant normalement l'intelligence humaine, telles que la reconnaissance vocale, la vision par ordinateur, le traitement automatique du langage naturel (NLP), la planification et la robotique. L'IA englobe divers sous-domaines, y compris le Machine Learning, et s'étend à des systèmes experts qui ne se basent pas toujours sur des méthodes d'apprentissage, mais sur des règles programmées.
+Intelligence Artificielle (IA) : C'est comme je le disais un domaine large qui vise à créer des systèmes capables d'exécuter des tâches nécessitant normalement l'intelligence humaine, telles que la reconnaissance vocale, la vision par ordinateur, le traitement automatique du langage naturel (NLP), la planification et la robotique. L'IA englobe divers sous-domaines, y compris le Machine Learning, et s'étend à des systèmes experts qui ne se basent pas toujours sur des méthodes d'apprentissage, mais sur des règles programmées. Dans cet exposé nous ne traiterons pas ce type d'intelligence artifielle. Nous nous focaliserons sur le :
 
-Machine Learning (Apprentissage automatique) : Il constitue une sous-partie de l'IA et se concentre sur le développement de modèles qui apprennent à partir de données. Contrairement aux approches traditionnelles de programmation, où des règles sont définies explicitement, le Machine Learning permet aux algorithmes de découvrir des modèles et de prendre des décisions à partir des données. 
+Machine Learning (Apprentissage automatique) : Il constitue une sous-partie de l'IA et se concentre sur le développement de modèles qui apprennent à partir de données. Contrairement aux approches traditionnelles de programmation, où des règles sont définies explicitement, le Machine Learning permet aux algorithmes de découvrir des modèles et de prendre des décisions à partir des données.
 
 Neural Networks (Réseaux de neurones) : C'est une technique clé dans le Machine Learning inspirée par la structure du cerveau humain. Un réseau de neurones est constitué de couches de nœuds (neurones) interconnectés qui permettent d'approximer des fonctions complexes.
 
 Deep Learning (Apprentissage profond) : des réseaux neuronaux profonds, c'est-à-dire qu'ils contiennent plusieurs couches de neurones. Les architectures de réseaux de neurones comme les réseaux convolutifs (CNN), les réseaux récurrents (RNN) et les réseaux adversaires génératifs (GAN) permettent de résoudre des tâches extrêmement complexes, notamment dans des domaines tels que la reconnaissance d'image, la traduction automatique, et les systèmes de recommandation. Le Deep Learning excelle là où les techniques traditionnelles de Machine Learning atteignent leurs limites, notamment dans le traitement de grandes quantités de données non structurées comme les images et les vidéos.
+
+Effectuons un zoom sur l'espace du Machine Learning.
 :::
 
 ## La carte du Machine Learning {background-color="#101010"}
@@ -117,56 +141,54 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=mT6NnslbNLM)
 :::
 
 ::: notes
-
+Voici un panorama du ML, partitionné en différentes composantes, des modèles paramétriques en orange, non-paramétriques en violet, des réseaux de neurones de bleu, etc. Evidemment en une heure c'est impossible de faire le tour de toutes les techniques de ML existantes, il y en a pléthore, donc je vous propose de visiter 2 familles emblématiques du ML paramétrique, à savoir les modèles linéaires – qui sont les précurseurs de tous les modèles d'apprentissage qui se sont développés depuis lors – et les CNN (les réseaux de neurones convolutifs) qui ont popularisés les méthodes dites de deep learning (ou apprentissage profond en français) qui ont révolutionné les techniques de classification d'images notamment.
 :::
 
-# Contexte historique {background-color="#40666e"}
-
-## Qui suis-je ?
-
-### Un esprit visionnaire sur les potentialités des machines
-
-*"Again, it might act upon other things [besides number]{.alert}, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that [the fundamental relations of pitched sounds]{.alert} in the science of harmony and of musical composition were susceptible of such expression and adaptations, [the engine might compose elaborate and scientific pieces of music]{.alert} of any degree of complexity or extent"*
-
-**A.L.L**
-
-::: footer
-Source : [Sketch of the analytical engine](https://www.fourmilab.ch/babbage/sketch.html)
-:::
+# Les modèles linéaires {background-color="#40666e"}
 
 ::: notes
-Encore une fois, cela pourrait agir sur d'autres éléments en plus des nombres, si l'on trouvait des objets dont les relations fondamentales mutuelles pourraient être exprimées par celles de la science abstraite des opérations, et qui seraient également susceptibles d’adaptations à l’action de la notation et du mécanisme opérant de la machine. En supposant, par exemple, que les relations fondamentales entre les fréquences dans la science de l'harmonie et les règles de la composition musicale soient susceptibles d'une telle expression, la machine pourrait composer des morceaux de musique élaborés et scientifiques, de n'importe quel degré de complexité ou d'étendue.
+Nous allons commencer par découvrir les modèles linéaires, pour cheminer ensuite vers le deep learning, et pour cela nous allons retracée leur généalogie de manière chronologique, en nous arrêtant sur les différentes innovations techniques et conceptuelles qui jalonnent leur développement.
 :::
 
-## Ada Lovelace
+## La régression linéaire
 
-### L'enchanteresse des nombres
+### Prédiction du prix d'une maison en fonction de sa superficie
+
+Des **données** d'entrainement $\color{red} (x_1,y_1),\dotsc,(x_n,y_n)$
+
+-   $x_i$ : superficie de la maison
+-   $y_i$ : prix de la maison
+-   $n$ : nombre de données
+
+![](images/linear-regression-data.png){fig-align="center" width="70%"}
+
+::: footer
+Source : [datahacker](https://datahacker.rs/002-machine-learning-linear-regression-model/)
+:::
+
+## La régression linéaire
+
+-   Un **modèle** de prédiction linéaire $\color{blue} f_{w,b}$
+-   Une **fonction de coût** mesurant l'erreur *(quadratique moyenne)* : $$ {\color{red}J({\color{blue}w},{\color{blue}b})} = \frac{1}{n} \sum_{i=1}^n {\color{red}\ell({\color{orange}y_i}, {\color{blue}f_{w,b}
+    ({\color{orange}x_i})})}, \quad {\color{red}\ell(y,\hat y)=(y-\hat y)^2} $$
 
 ::::: columns
 ::: {.column width="50%"}
-![](images/ada-lovelace.png){fig-align="center"}
+![](images/linear-regression-model.png){fig-align="center" width="60%"}
 :::
 
 ::: {.column width="50%"}
--   [1815]{.alert} - Naissance d'Ada Lovelace à Londres, fille du poète Lord Byron et d'Anne Isabella Milbanke.
--   [1833]{.alert} - Rencontre avec Charles Babbage, mathématicien et inventeur de la machine analytique.
--   [1842-1843]{.alert} - Publication des Notes, ajoutées à la traduction d'un article du mathématicien italien Luigi Menabrea.
--   [1852]{.alert} - Décès à l'âge de 36 ans, des suites d'un cancer.
+![](images/linear-regression-scheme.png){fig-align="center" width="60%"}
 :::
 :::::
 
 ::: footer
-Source : [Wikipédia](https://en.wikipedia.org/wiki/Ada_Lovelace)
+Source : [datahacker](https://datahacker.rs/002-machine-learning-linear-regression-model/)
 :::
-
-::: notes
-un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa fascination pour les mathématiques et les machines. Elle y ajoute ses propres notes, qui occupent plus de place que l'article lui-même et dans lesquelles elle propose ce qui est souvent considéré comme le premier algorithme conçu pour une machine, visant à calculer les nombres de Bernoulli. sur la machine analytique de Babbage. - 1843 - Paternité de la Programmation : Ses notes incluent des concepts de boucles et de programmation conditionnelle. Ces idées font d'elle la première personne à conceptualiser un algorithme pour un ordinateur, lui conférant le titre de "première programmeuse".
-:::
-
 
 ## La régression linéaire
 
-### Visualisation de la méthode des moindres carrés
+-   **Minimisation** du coût : $\displaystyle \color{red} (w^{\star},b^{\star})=\underset{w,b}{\mathrm{argmin}}\; J(w,b)$
 
 ::: {style="text-align: center;"}
 <iframe scrolling="no" title="Interactive Linear Regression" src="https://www.geogebra.org/material/iframe/id/xC6zq7Zv/width/800/height/503/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="800px" height="503px" style="border:0px;">
@@ -190,6 +212,15 @@ interactive_webpage(interactive, url_src = "https://danferns.github.io/linear-re
 Source : [Son The Nguyen](https://www.youtube.com/watch?v=GP6fl2nxs9k)
 :::
 
+## La régression linéaire
+
+### Une simple couche de neurone
+
+![](images/linear-regression-nn.webp){fig-align="center"}
+
+::: footer
+Source : [Learn OpenCV](https://learnopencv.com/tensorflow-keras-tutorial-linear-regression/)
+:::
 
 ## Les 4 principaux ingrédients du ML {background-color="black"}
 
@@ -206,6 +237,60 @@ render_media(version, local_src = "videos/quatre-ingredients.m4v", youtube_src =
 Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 :::
 
+## La régression polynomiale
+
+### Un autre modèle linéaire plus complexe
+
+![](images/sin-noise-data.jpeg){fig-align="center"}
+
+-   Fitting des données bruitées ${\color{blue}y_i}={\color{green}\sin(2\pi x_i)}+\epsilon_i$ avec un polynôme de degré $M$ : $$ \color{red} f_{\boldsymbol{w}}(x) = w_0 + w_1 x + w_2 x^2 + \dotsc + w_M x^M = \boldsymbol{\psi}(x)^{\intercal} \boldsymbol{w}$$
+
+-   $\boldsymbol{\psi}(x)=[1,x,x^2,\dotsc,x^M]^{\intercal}$ est un *feature mapping*. On peut utiliser les moindres carrés puisque $f_{\boldsymbol{w}}(x)=\boldsymbol{\psi}(x)^{\intercal} \boldsymbol{w}$ est linéaire en $\boldsymbol{w}$.
+
+::: footer
+Source : [@bishop2006pattern]
+:::
+
+## La régression polynomiale
+
+### Underfitting (M=0,1) vs. bon modèle (M=3) vs. overfitting (M=9)
+
+![](images/polynomial-regression.jpeg){fig-align="center"}
+
+::: footer
+Source : [@bishop2006pattern]
+:::
+
+## La régression polynomiale
+
+::::: columns
+::: {.column width="50%"}
+![](images/polynomial-regression-errors.jpeg){fig-align="center" width="70%"}
+:::
+
+::: {.column width="50%"}
+![](images/polynomial-regression-coefs.jpeg){fig-align="center" width="70%"}
+:::
+:::::
+
+-   Plus $M$ augmente, plus les coefficients $w_i^{\star}$ explosent.
+-   Le polynôme $\color{red} f_{\boldsymbol{w}}(x)$ finit par interpoler les données $\color{blue} (x_i,y_i)$ (erreur de training nulle pour $M=9$), avec de fortes oscillations entre ces points.
+-   Le modèle peine alors à généraliser sur les données de test (l'erreur grimpe pour $M=9$). Il faut ajuster l'hyperparamètre $M$ sur données de validation (étape de sélection de modèle).
+
+::: footer
+Source : [@bishop2006pattern]
+:::
+
+## Partitionnement du dataset
+
+### Training vs. validation vs. testing
+
+![](images/training-vs-test.png){fig-align="center" width="80%"}
+
+::: footer
+Source : [dhavalpatel](https://dhavalpatel2101992.wordpress.com/2021/05/21/kaggle-titanic-dataset-cleaning-split-data-into-train-validation-and-test-set/)
+:::
+
 ## Types d'apprentissages
 
 ### Supervisés, non-supervisés et par ré-enforcement
@@ -217,11 +302,10 @@ Source : [Techplayon](https://www.techplayon.com/machine-learning-supervised-uns
 :::
 
 ::: notes
-Il inclut plusieurs techniques comme :
-Apprentissage supervisé : où un modèle est formé sur des données annotées (comme la régression linéaire/logistique, les arbres de décision, et les forêts aléatoires).
-Apprentissage non supervisé : où les modèles identifient des motifs dans des données non étiquetées.
-Apprentissage par renforcement : où un agent apprend à partir d'actions et de récompenses pour maximiser ses gains au fil du temps.
+Il inclut plusieurs techniques comme : Apprentissage supervisé : où un modèle est formé sur des données annotées (comme la régression linéaire/logistique, les arbres de décision, et les forêts aléatoires). Apprentissage non supervisé : où les modèles identifient des motifs dans des données non étiquetées. Apprentissage par renforcement : où un agent apprend à partir d'actions et de récompenses pour maximiser ses gains au fil du temps.
 :::
+
+# Généalogie des réseaux de neurones artificiels {background-color="#40666e"}
 
 ## L'invention des neurones artificiels {background-color="black"}
 
@@ -244,11 +328,15 @@ Les premiers réseaux de neurones ont donc été inventés en 1943 par deux math
 ### [@rosenblatt1958perceptron] {.colored-title}
 
 ```{r, results='asis'}
-render_media(version, local_src = "videos/perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=657&amp;end=834")
+render_media(version, local_src = "videos/perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=659&amp;end=834")
 ```
 
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
+:::
+
+::: notes
+Le modèle du Perceptron ressemble en fait de très près à celui que nous venons d'étudier. Il s'agit d'un neurone artificiel, qui s'active lorsque la somme pondérée de ses entrées dépasse un certain seuil, en général 0. Mais avec ça, le perceptron dispose également d'un algorithme d'apprentissage lui permettant de trouver les valeurs de ses paramètres w afin d'obtenir les sorties y qui nous conviennent. Pour développer cet algorithme, Frank Rosenblatt s'est inspiré de la théorie de Hebb. Cette théorie suggère que lorsque deux neurones biologiques sont excités conjointement, alors ils renforcent leurs liens synaptiques c'est-à-dire qu'ils renforcent les connexions qui les unissent. En neurosciences, c'est ce qu'on appelle la plasticité synaptique, et c'est ce qui permet à notre cerveau de construire sa mémoire, d'apprendre de nouvelles choses ou encore de faire de nouvelles associations. Donc, à partir de cette idée, Frank Rosenblatt a développé un algorithme d'apprentissage, qui consiste à entraîner un neurone artificiel sur des données de référence (X, y) pour que celui ci renforce ses paramètres w à chaque fois qu'une entrée X est activé en même temps que la sortie y présente dans ces données. Pour ça, il a imaginé la formule suivante, dans laquelle les paramètres w sont mis à jour en calculant la différence entre la sortie de référence et la sortie produite par le neurone, et en multipliant cette différence par la valeur de chaque entrée X, ainsi que par un pas d'apprentissage positif. De cette manière, si notre neurone produit une sortie différente de celle qu'il est censé produire, par exemple s'il nous sort y=0, alors qu'on voudrait avoir y=1, alors notre formule nous donnera w= w + alpha X. Donc, pour les entrées x qui valent 1, le coefficient w ce verra augmenté d'un petit pas alpha, il sera "renforcé" (pour reprendre les termes de la théorie de Hebb) ce qui provoquera une augmentation de la fonction w1 x1 + w2 x2... et qui rapprochera donc notre neurone de son seuil d'activation. Aussi longtemps que l'on sera en dessous de ce seuil, c'est à dire aussi longtemps que le neurone produira une mauvaise sortie, alors le coefficient w continuera d'augmenter grâce à notre formule, jusqu'au moment où y_true vaudra y... et à ce moment là notre formule donnera w = w + 0 ! Ce qui fait que nos paramètres arrêteront d'évoluer. Et voilà ! C'est ainsi que Frank Rosenblatt a développé le premier algorithme d'apprentissage de l'histoire du Deep Learning.
 :::
 
 ## Classification à l'aide d'un Perceptron {background-color="black"}
@@ -256,11 +344,15 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
 ### La classification binaire {.colored-title}
 
 ```{r, results='asis'}
-render_media(version, local_src = "videos/classification-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/VlMm4VZ6lk4?si=xkbWiPBiboH0DXMa&amp;start=30&amp;end=190")
+render_media(version, local_src = "videos/classification-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/VlMm4VZ6lk4?si=xkbWiPBiboH0DXMa&amp;start=28&amp;end=190")
 ```
 
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
+:::
+
+::: notes
+Prenons un exemple : imaginer que l'on ait deux types de plantes, des plantes toxiques que l'on note y égal 1 et d'autres non toxique que l'on note y égal à zéro. On décide de mesurer certains attributs de ces plantes telles que la longueur et la largeur de leurs feuilles que l'on note x1 et x2. En représentant les résultats dans un graphique on observe que les deux classes de plantes sont linéairement séparables, on peut donc développé un modèle capable de prédire à quelle classe appartient une future plantes en se basant sur cette droite qu'on appelle la frontière de décision : si une plante se trouve à gauche elle sera considérée comme toxique appartenant à la classe y égal 1 et sinon elle sera considérée comme non toxique appartenant à la classe y égal zéro. Pour cela on va utiliser un modèle linéaire en fournissant comme tout à l'heure aux variables x1 et x2 à un neurone et en multipliant au passage chaque entrée du neurone par un poids w dans ce neurones et un coefficient complémentaires qu'on appelle le biais; ce qui nous donne une fonction z de x1, x2 égal w 1 x + w 2 x 2 + b. Sur notre graphique on peut colorer les régions où cette fonction retourne une valeur positive et celle où elle nous retourne une valeur négative. On constate alors que la frontière de décision correspond aux valeurs de x1 et x2 pour lesquels z est égal à zéro. Du coup pour prédire à quelle classe appartient une future plantes il va falloir régler les paramètres w et b de façon à séparer du mieux possible nos deux classes, après quoi on pourra dire si une plante est dans la classe 0 ou 1 en regardant simplement le signe de z, si négatif alors la plante sera dans la classe zéro et si positif elle sera dans la classe 1.
 :::
 
 ## Classification à l'aide d'un Perceptron {background-color="black"}
@@ -268,11 +360,19 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
 ### La fonction d'activation (sigmoïde) et la fonction de coût (vraisemblance) {.colored-title}
 
 ```{r, results='asis'}
-render_media(version, local_src = "videos/classification-vraisemblance.mp4", youtube_src = "https://www.youtube.com/embed/VlMm4VZ6lk4?si=xkbWiPBiboH0DXMa&amp;start=230&amp;end=520")
+render_media(version, local_src = "videos/classification-vraisemblance.mp4", youtube_src = "https://www.youtube.com/embed/VlMm4VZ6lk4?si=xkbWiPBiboH0DXMa&amp;start=222&amp;end=520")
 ```
 
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
+:::
+
+::: notes
+Pour améliorer ce modèle une bonne chose à faire serait d'accompagner chaque prédiction d'une probabilité. Plus une plante sera éloignée de la frontière de décision plus il sera évident c'est à dire probable qu'elles appartiennent bien à sa classe. Pour ça on pourrait utiliser une fonction d'activation nous retournant une sortie qui s'approchent de zéro ou un au fur et à mesure que l'on s'éloigne de la frontière de décision là où z est égal à zéro. Cette fonction qui nous permet de faire ça c'est la fonction sigmoïde également appelé fonction logistique, dont l'expression est égale ... Cette fonction permet de convertir la sortie z en une probabilité qu une plante appartiennent à la classe 1, par exemple si nous avons une plante dont la valeur z est égale à 1,4 alors cela donne une probabilité égale à 0,8 ce qui signifie que d'après notre modèle cette plante a 80% de chance d'appartenir à la classe 1. C'est une probabilité relativement élevée, ce qui est logique vu que cette plante se situe à droite de la frontière de décision, là où nous sommes censés obtenir des plantes toxiques. A l'inverse si nous avons une plante dont la valeur de z est égal à moins 2,1 alors cela donne une probabilité égale à 0,1 ce qui signifie que d'après notre modèle cette plante a seulement 10% de chance d'appartenir à la classe 1, c'est une probabilité bien plus faible que tout à l'heure, mais encore une fois ça reste tout à fait logique vu que cette plante se situe à gauche de la frontière de décision là où nous ne sommes pas censés obtenir de plantes toxiques mais uniquement des plantes appartenant à la classe zéro. Du coup on pourra dire à la place que cette plante aura 90 % de chances d'être non toxiques soit la probabilité complémentaires à celles que nous avons calculée.
+
+Ces probabilités suivent en fait une loi de bernoulli c'est à dire que la probabilité qu'une plante appartienne à la classe a est donnée par la probabilité qu'une plante appartienne à la classe zéro est donnée par 1 moins a(z). Le tout peut être résumé en une seule formule : il suffit de décomposer les deux cas, celui où y est égal à 1 et celui où y est égal à zéro et alors on voit qu'on retombe tout simplement sur les deux expressions de tout à l'heure.
+
+Donc pour résumer tout ce qu'on vient de voir : ce qu'on trouve à l'intérieur des neurones c'est une fonction linéaire z égal w 1 x 1 + w 2 x 2 + b suivie d'une fonction d'activation, la plus simple étant la fonction sigmoïde qui nous retourne une probabilité suivant une loi de bernoulli. Maintenant notre but ça va être de régler les paramètres w et de façon à obtenir le meilleur modèle possible c'est à dire le modèle qui fait les plus petites erreurs entre les sorties a(z) et les vraies données y. Et pour ça on va commencer par définir une fonction coût qui va permettre de mesurer ces erreurs. En machine learning une fonction coût, ou loss en anglais, c'est une fonction qui permet de quantifier les erreurs effectuées par un modèle. Dans notre cas c'est donc une fonction qui permet de mesurer les distances que l'on voit ici en rouge entre les sorties a(z) et les données y dont nous disposons. Pour ça la fonction coût que l'on va utiliser c'est la fonction de log loss, que l'on obtient par un calcul de maximum de vraisemblance. Enfin on effectue une descente de gradient pour minimiser le coût et déterminer les paramètres optimaux.
 :::
 
 ## Le Perceptron Multicouche {background-color="black"}
@@ -280,11 +380,15 @@ Source : [Machine Learnia](https://www.youtube.com/watch?v=VlMm4VZ6lk4)
 ### ... et la rétropropagation du gradient [@rumelhart1986learning]
 
 ```{r, results='asis'}
-render_media(version, local_src = "videos/multi-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=882&amp;end=1237")
+render_media(version, local_src = "videos/multi-perceptron.mp4", youtube_src = "https://www.youtube.com/embed/XUFLq6dKQok?si=uoi7RRMux0DdlKCD&amp;start=880&amp;end=1237")
 ```
 
 ::: footer
 Source : [Machine Learnia](https://www.youtube.com/watch?v=XUFLq6dKQok)
+:::
+
+::: notes
+Le perceptron est un modèle linéaire et c'est là sa limitation. On connut alors le premier hiver de l'intelligence artificielle, de 1974 à 1980, période durant laquelle il n'y eu quasiment plus d'investisseurs pour financer les recherches en I.A. L'intelligence artificielle était sur le point de mourir... mais tout changea dans les années 80 lorsque Geoffrey Hinton, un des pères du Deep Learning, développa le Perceptron multicouches, le premier véritable réseau de neurones artificiels ! Le Perceptron Multicouches de Geoffrey Hinton. Comme je vous l'ai dit à l'instant, le Perceptron est en fait un modèle linéaire. Le seul ennui, c'est qu'une grande partie des phénomènes de notre univers ne sont pas des phénomènes linéaires. Et dans ces conditions, le Perceptron à lui seul n'est pas très utile. Mais rappelez-vous l'idée de McCulloch et Pitts : en connectant ensemble plusieurs neurones, il est possible de résoudre des problèmes plus complexes qu'avec un seul. Voyons donc ce qu'il se passe si l'on connecte par exemple 3 Perceptrons ensemble. Les 2 premiers reçoivent chacun les entrées x1 et x2. Ils font leur petit calcul, en fonction de leurs paramètres, et retournent une sortie y qu'ils envoient à leur tour vers le troisième Perceptron, qui va lui aussi faire ses petits calculs pour produire une sortie finale. Eh bien si l'on trace la représentation graphique de la sortie finale en fonction des entrées x1 x2, on obtient cette fois ci un modèle non linéaire qui est bien plus intéressant. Avec cet exemple, vous avez là votre premier réseau de neurones artificiels : 3 neurones, répartis en 2 couches (une couche d'entrée et une couche de sortie) c'est ce qu'on appelle un Perceptron Multicouche? Et des couches et des neurones, vous pouvez en rajouter autant que vous voulez ! Plus vous en remettrez, plus le résultat à la sortie sera complexe et intéressant. Cependant, une question subsiste... Comment entraîner un tel réseau de neurones pour qu'il fasse ce qu'on lui demande de faire ? C'est à dire, comment trouver les valeurs de tous les paramètres w et b de façon à obtenir un bon modèle ? Eh bien, la solution est d'utiliser une technique appelée Back Propagation, qui consiste à déterminer comment la sortie du réseau varie en fonction des paramètres présents dans chaque couche du modèle. Pour ça, on calcule une chaîne de gradients, indiquant comment la sortie varie en fonction de la dernière couche, puis comment la dernière couche varie en fonction de l'avant dernière, puis comment l'avant dernière varie en fonction de l'avant avant dernière etc... ... jusqu'à arriver à la toute première couche de notre réseau. C'est une Back Propagation : une propagation vers l'arrière ! Avec ces informations, ces gradients, on peut alors mettre à jour les paramètres de chaque couche, de telle sorte à ce qu'ils minimisent l'erreur entre la sortie du modèle est la réponse attendue (la fameuse valeur y_true) par une descente de Gradient, dont nous parlerons plus en détail dans les prochaines vidéos. En résumé, pour développer et entraîner des réseaux de neurones artificiels, on répète en boucle les quatre étapes suivantes : La première étape, c'est l'étape de Forward Propagation : on fait circuler les données de la première couche jusqu'à la dernière, afin de produire une sortie y. La deuxième étape, c'est de calculer l'erreur entre cette sortie et la sortie de référence y_true que l'on désire avoir. Pour ça on utilise une fonction Coût. Ensuite, la troisième étape, c'est celle de la Back Propagation : on mesure comment cette fonction coût varie par rapport à chaque couche de notre modèle, en partant de la dernière et en remontant jusqu'à la toute première. Pour finir, la quatrième et dernière étape, c'est de corriger chaque paramètre du modèle grâce à l'algorithme de la descente de gradient, avant de re-boucler vers la première étape, celle de la Forward Propagation, pour recommencer un cycle d'entraînement.
 :::
 
 ## L'efficacité du Perceptron Multicouche
@@ -307,7 +411,6 @@ Source : [@elgendy2020deep]
 Source : [Towards Data Science](https://towardsdatascience.com/guide-to-interpretable-machine-learning-d40e8a64b6cf)
 :::
 
-
 ## Représentation d'un Perceptron Multicouche
 
 ### Un simple réseau de neurones à 3 couches
@@ -328,6 +431,18 @@ Source : [@elgendy2020deep]
 Source : [@elgendy2020deep]
 :::
 
+## Formalisation d'un Perceptron Multicouche {background-color="black"}
+
+### Cascades de multiplication matricielles et d'activation {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/3blue1brown-NN-algebra.mp4", youtube_src = "https://www.youtube.com/embed/aircAruvnKk?si=QMHBl-iPVxAp3SY6&amp;start=806&amp;end=917")
+```
+
+::: footer
+Source : [3blue1brown](https://www.youtube.com/watch?v=aircAruvnKk)
+:::
+
 ## Que se passe-t-il dans un réseau de neurones ? {background-color="#010811"}
 
 ### Visualisation de la linéarisation de la frontière de décision {.colored-title}
@@ -340,6 +455,9 @@ render_media(version, local_src = "videos/NN-linearisation.mp4", youtube_src = "
 Source : [Alexandre TL](https://www.youtube.com/watch?v=yFcdKE6YI0E&t=330s)
 :::
 
+::: notes
+Pour visualiser l'effet d'une couche on va se placer en dimension 2, on va donc seulement pouvoir visualiser des réseaux de neurones dont chaque couche possède deux neurones, mais on va voir que ça reste quand même assez intéressant. Prenons ainsi ce réseau de neurones composé de trois couches, qui était entraîné à réaliser la tâche de classification binaire sur ces données, donc c'est à la fois les données d'entraînement constituées des points de coordonnées x1x2 et leur classe associée représentée par une couleur, mais en plus des données on voit les prédictions du modèle entraîné avec, donc la couleur du fond, et donc on voit que le modèle arrive bien à prédire ces données. Évidemment ce problème de classification n'est pas linéaire c'est à dire qu'on ne peut pas séparer les deux classes par une simple droite, c'est pour ça qu'on a utilisé en réseau neurones; et ce qui va être intéressant c'est de voir comment ce réseau se débrouille pour fournir à la couche de sortie des données qui sont linéairement séparables, puisqu'on le sait la couche de sortie elle est équivalente à un seul modèle de régression logistique qui on l'a vu est un modèle linéaire. Alors commençons par visualiser les données en elle-même : on représente chaque exemple de données d'entraînement par un point, mais il faut bien voir cela comme un vecteur, donc là ce qu'on voit à l'écran c'est tout un ensemble de vecteurs et on va voir au travers de différentes visualisations comment le réseau modifie ces vecteurs. Évidemment le réseau n'a pas accès au classe c'est à dire aux couleurs de ces vecteurs mais seulement aux vecteurs en eux-mêmes. Ces vecteurs on va leur faire passer la première étape de la première couche c'est à dire la multiplication à gauche par la matrice de poids W. On voit que la matrice double V1 effectuant un agrandissement ainsi qu'une réflexion sur tous les vecteurs, ensuite on ajoute B1 le biais de la couche 1 donc là il s'agit seulement de déplacer l'ensemble des vecteurs dans la même direction puisqu'on ajoute coordonnées par coordonnées les poids de B et enfin on applique la fonction d'activation ici la fonction tangente hyperbolique qui ajoute de la non linarité dans le réseau. On le voit les vecteurs proches de l'origine sont très peu affectés mais les vecteurs avec une plus grande composante sont eux rapprochées de l'origine. La couche une est donc terminée et on voit que déjà les données sont linéairement séparables donc en fait on n'aurait pas besoin de deuxième couche cachée puisque le travail est déjà terminé mais on va quand même continuer avec une deuxième couche cachée. On multiplie donc par la matrice W2 on ajoute le biais et on applique la fonction tangente hyperbolique. On arrive alors sur la dernière couche, cette fois on passe en une dimension sur la droite puisque la sortie est un nombre. On passe en dimension une grâce à la matrice W3 puis on ajoute B3 et enfin on applique la fonction sigmoïde et là on voit clairement le travail effectué par le NN : tous les points de la classe bleue sont très proches de 1 et les points rouges sont très proches de 0 donc je le rappelle la sortie du modèle correspond à la probabilité d'appartenance à la classe une donc là on voit que les sorties du modèle sont pertinentes puisqu'il arrive à classifier correctement les données d'entraînement.
+:::
 
 ## L'efficacité du Perceptron Multicouche
 
@@ -351,10 +469,12 @@ Source : [Alexandre TL](https://www.youtube.com/watch?v=yFcdKE6YI0E&t=330s)
 Source : [Playground Tensorflow](https://playground.tensorflow.org)
 :::
 
-
 ```{r, results='asis'}
 interactive_webpage(interactive, url_src = "https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=spiral&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.65606&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=true&collectStats=false&problem=classification&initZero=false&hideText=false")
 ```
+
+::: notes
+:::
 
 ## Pourquoi les réseaux de neurones fonctionnent ?
 
@@ -366,6 +486,18 @@ render_media(version, local_src = "videos/universal-approximator.mp4", youtube_s
 
 ::: footer
 Source : [DataMListic](https://www.youtube.com/watch?v=O45AaRPQhuI)
+:::
+
+## Pourquoi les réseaux de neurones fonctionnent ? {background-color="black"}
+
+### Parce qu'ils approchent des fonctions complexes {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/relu-approx.mp4", youtube_src = "https://www.youtube.com/embed/0QczhVg5HaI?si=Q6qfHXZdTwiVCHBV&amp;start=269&amp;end=334")
+```
+
+::: footer
+Source : [Emergent Garden](https://www.youtube.com/watch?v=0QczhVg5HaI)
 :::
 
 ## Théorème d'approximation universelle
@@ -532,6 +664,18 @@ Source : [CS231n](https://cs231n.github.io/convolutional-networks/)
 Source : [@elgendy2020deep]
 :::
 
+## Classification d'images {background-color="black"}
+
+### Discriminer les chiffres MNIST {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/3blue1brown-NN-digit.mp4", youtube_src = "https://www.youtube.com/embed/aircAruvnKk?si=QMHBl-iPVxAp3SY6&amp;start=184&amp;end=253")
+```
+
+::: footer
+Source : [3blue1brown](https://www.youtube.com/watch?v=aircAruvnKk)
+:::
+
 ```{r, results='asis'}
 interactive_webpage(interactive, url_src = "https://adamharley.com/nn_vis/cnn/3d.html")
 ```
@@ -557,7 +701,8 @@ Source : [@krizhevsky2012imagenet]
 :::
 
 ## Deep learning
-### Les couches du réseau
+
+### Les couches du réseau extraient des features à différentes échelles
 
 ![](images/face-features.webp){fig-align="center"}
 
@@ -566,7 +711,8 @@ Source : [Medium](https://medium.com/sysinfo/convolutional-neural-network-1c8c1d
 :::
 
 ## Deep learning
-### Les couches du réseau
+
+### Les couches du réseau extraient des features à différentes échelles
 
 ::::: columns
 ::: {.column width="50%"}
@@ -582,7 +728,20 @@ Source : [Medium](https://medium.com/sysinfo/convolutional-neural-network-1c8c1d
 Source : [@elgendy2020deep]
 :::
 
+## Deep learning {background-color="black"}
+
+### Les couches du réseau extraient des features à différentes échelles {.colored-title}
+
+```{r, results='asis'}
+render_media(version, local_src = "videos/3blue1brown-NN-scales.mp4", youtube_src = "https://www.youtube.com/embed/aircAruvnKk?si=QMHBl-iPVxAp3SY6&amp;start=349&amp;end=480")
+```
+
+::: footer
+Source : [3blue1brown](https://www.youtube.com/watch?v=aircAruvnKk)
+:::
+
 ## Deep learning
+
 ### Les CNN en résumé
 
 ![](images/CNN.png){fig-align="center"}
@@ -591,8 +750,8 @@ Source : [@elgendy2020deep]
 Source : [@maried2017literature]
 :::
 
-
 ## Deep learning {background-color="black"}
+
 ### AlexNet *breakthrough* {.colored-title}
 
 ```{r, results='asis'}
@@ -603,11 +762,32 @@ render_media(version, local_src = "videos/alexnet.mp4", youtube_src = "https://w
 Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
 :::
 
+::: notes
+Dans les blocs convolutionnels, le tenseur d’image en entrée est transformé en faisant glisser un tenseur beaucoup plus petit, appelé noyau, constitué de valeurs de poids apprises, sur l’image. À chaque position, le produit scalaire est calculé entre l’image et le noyau. Ici, il est utile de considérer le produit scalaire comme une mesure de similarité : plus un patch de l’image et le noyau sont similaires, plus le produit scalaire sera élevé.
+
+AlexNet utilise 96 noyaux individuels dans sa première couche, chacun ayant une dimension de 11 par 11 par 3. On peut donc les visualiser facilement sous forme de petites images RGB. Ces images donnent une bonne idée de la façon dont la première couche d’AlexNet perçoit l’image. Les noyaux situés en haut de cette figure montrent qu’AlexNet a appris à détecter des contours ou des transitions rapides entre clair et sombre à différents angles. Les images avec des motifs similaires produiront des produits scalaires élevés avec ces noyaux. En bas, on observe qu’AlexNet a appris à détecter des zones de différentes couleurs. Ces noyaux sont initialisés aléatoirement et les motifs que nous voyons sont entièrement appris à partir des données.
+
+En faisant glisser chacun de nos 96 noyaux sur l’image d’entrée et en calculant le produit scalaire à chaque position, on obtient un nouvel ensemble de 96 matrices, parfois appelées cartes d’activation. Heureusement, on peut également visualiser ces cartes comme des images. Les cartes d’activation montrent quelles parties d’une image, si elles existent, correspondent bien à un noyau donné. Si je montre un motif visuellement similaire à un noyau donné, on observe une activation élevée dans cette partie de la carte d’activation. Cette activation disparaît si je fais pivoter le motif de 90°, car l’image et le noyau ne sont plus alignés.
+
+On peut également voir différentes cartes d’activation détecter des contours et d’autres caractéristiques simples dans notre image. Bien entendu, détecter des contours et des zones de couleur dans les images est encore très éloigné de la reconnaissance de concepts complexes comme des bergers allemands ou des porte-avions. Ce qui est remarquable avec les réseaux neuronaux profonds comme AlexNet (ou ChatGPT), c’est que l’on répète simplement cette opération encore et encore, mais avec un ensemble différent de poids appris.
+
+Cela signifie que ces 96 cartes d'activation sont empilées ensemble pour former un tenseur qui devient l'entrée d'un bloc de calcul convolutionnel du même type, dans la deuxième couche du modèle. On peut rendre les activations plus faciles à visualiser en supprimant les valeurs proches de zéro. Malheureusement, dans la deuxième couche, il est difficile d'apprendre quelque chose simplement en visualisant les valeurs des poids et les noyaux eux-mêmes.
+
+Le premier problème est que nous ne pouvons pas voir suffisamment de couleurs. La profondeur du noyau doit correspondre à la profondeur des données entrantes. Dans la première couche d’AlexNet, la profondeur des données entrantes est de trois, car le modèle prend en entrée des images en couleur avec des canaux rouge, vert et bleu. Cependant, comme la première couche calcule 96 cartes d’activation distinctes, le calcul dans la deuxième couche d’AlexNet revient à traiter des images avec 96 canaux de couleur distincts.
+
+Le deuxième facteur qui rend la compréhension de ce qui se passe dans la deuxième couche plus difficile est que les produits scalaires effectuent en réalité des combinaisons pondérées des calculs réalisés dans la première couche. Nous avons besoin d’un moyen de visualiser comment les couches interagissent. Une méthode simple pour voir ce qui se passe est d’identifier les parties de diverses images qui activent fortement les sorties de la deuxième couche. Par exemple, cette carte d'activation semble assembler des détecteurs de contours pour former des coins basiques.
+
+De manière remarquable, à mesure que nous progressons dans AlexNet, les activations fortes correspondent à des concepts de plus en plus abstraits. Lorsque nous atteignons la cinquième couche, nous obtenons des cartes d’activation qui répondent très fortement aux visages et à d’autres concepts de haut niveau. Ce qui est incroyable ici, c’est qu’AlexNet n’a jamais été explicitement programmé pour reconnaître un visage. Tout ce qu’AlexNet a appris provient des images et des étiquettes du jeu de données ImageNet, qui ne contient pas de classe spécifique pour une personne ou un visage. AlexNet a été capable d’apprendre, de manière totalement autonome, à la fois que les visages sont importants et comment les reconnaître.
+
+Pour mieux comprendre ce qu’un noyau donné dans AlexNet a appris, nous pouvons également examiner les exemples dans le jeu de données d’entraînement qui génèrent les valeurs d'activation les plus élevées pour ce noyau. Pour un noyau dédié aux visages, il n’est pas surprenant que nous trouvions des exemples contenant des personnes.
+:::
+
 ## Deep learning
+
 ### Un déluge de données
 
-- 1,2 millions d'images d'entrainement
-- 100 000 images de test
+-   1,2 millions d'images d'entrainement
+-   100 000 images de test
 
 ![](images/imagenet.jpeg){fig-align="center"}
 
@@ -615,8 +795,8 @@ Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
 Source : [Andrej Karpathy](https://cs.stanford.edu/people/karpathy/cnnembed/)
 :::
 
-
 ## Deep learning
+
 ### 1000 classes d'objets dans ImageNet
 
 ![](images/imagenet-cat.jpeg){fig-align="center"}
@@ -625,11 +805,16 @@ Source : [Andrej Karpathy](https://cs.stanford.edu/people/karpathy/cnnembed/)
 Source : [@krizhevsky2012imagenet]
 :::
 
+::: notes
+Capcha
+:::
+
 ```{r, results='asis'}
 interactive_webpage(interactive, url_src = "https://poloclub.github.io/cnn-explainer/")
 ```
 
 ## Deep learning
+
 ### Le succès des CNN en classification d'images
 
 ![](images/imagenet-error.jpeg){fig-align="center"}
@@ -638,17 +823,8 @@ interactive_webpage(interactive, url_src = "https://poloclub.github.io/cnn-expla
 Source : [@allen2019roadmap]
 :::
 
-## Deep learning 
-### L'une des raisons de ce succès : les ressouces computationnelles 
-
-![](images/gpu-1.jpeg){fig-align="center"}
-
-::: footer
-Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
-:::
-
-
 ## Deep learning
+
 ### L'une des raisons de ce succès : les ressouces computationnelles
 
 ![](images/gpu-2.jpeg){fig-align="center"}
@@ -657,9 +833,65 @@ Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
 Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
 :::
 
+::: notes
+Les algorithmes qui existent depuis les années 1980 fonctionnent très bien, mais cela n’était pas évident avant 2006. Le problème était peut-être simplement que ces algorithmes étaient trop coûteux en termes de calcul pour permettre beaucoup d’expérimentations avec le matériel disponible à l’époque. La grande différence en 2012 était simplement l’échelle des données et celle de la puissance de calcul. Le jeu de données ImageNet était le plus grand ensemble de données étiquetées de ce genre à ce jour, avec plus de 1,3 million d’images. Et grâce aux GPU de Nvidia, l’équipe de Hinton en 2012 avait accès à environ 10 000 fois plus de puissance de calcul que celle dont disposait Yann LeCun 15 ans auparavant.
+
+Le modèle LeNet-5 de LeCun comptait environ 60 000 paramètres apprenables. AlexNet a augmenté ce nombre d’un facteur mille, atteignant environ 60 millions de paramètres. Aujourd’hui, ChatGPT compte bien plus d’un trillion de paramètres, soit plus de 10 000 fois la taille d’AlexNet. Cette échelle vertigineuse est la marque de fabrique de cette troisième vague d’IA dans laquelle nous nous trouvons, à la fois moteur de leurs performances et de la difficulté fondamentale à comprendre comment ces modèles parviennent à leurs résultats.
+
+Il est étonnant que nous puissions comprendre qu’AlexNet apprend des représentations de visages et que les grands modèles de langage apprennent des représentations de concepts comme le Golden Gate Bridge. Mais ces modèles apprennent de nombreux autres concepts pour lesquels nous n’avons même pas de mots. Les atlas d’activation sont fascinants et magnifiques, mais restent des projections très basses dimensions d’espaces très haute dimension, où nos capacités de raisonnement spatial s’effondrent souvent.
+
+Il est notoirement difficile de prédire où l’IA ira ensuite. Presque personne n’avait prévu que les réseaux neuronaux des années 1980 et 1990, mis à l’échelle de trois ou quatre ordres de grandeur, donneraient naissance à AlexNet. Et il était presque impossible de prévoir qu’une généralisation des blocs de calcul d’AlexNet, mise à l’échelle de plusieurs ordres de grandeur, mènerait à ChatGPT. Peut-être que la prochaine avancée en IA est juste à trois ou quatre ordres de grandeur d’échelle supplémentaires, ou peut-être qu’une approche d’IA presque oubliée refera surface, comme AlexNet en 2012. Il faudra attendre et voir.
+:::
+
+## Qui suis-je ?
+
+### Un esprit visionnaire sur les potentialités des machines
+
+*"Again, it might act upon other things [besides number]{.alert}, were objects found whose mutual fundamental relations could be expressed by those of the abstract science of operations, and which should be also susceptible of adaptations to the action of the operating notation and mechanism of the engine. Supposing, for instance, that [the fundamental relations of pitched sounds]{.alert} in the science of harmony and of musical composition were susceptible of such expression and adaptations, [the engine might compose elaborate and scientific pieces of music]{.alert} of any degree of complexity or extent"*
+
+**A.L.L**
+
+::: footer
+Source : [Sketch of the analytical engine](https://www.fourmilab.ch/babbage/sketch.html)
+:::
+
+::: notes
+Au commencement était le verbe n'est-ce pas, donc je vais laisser la parole à cette personnalité énigmatique que je pose ici en devinette, et qui a eu ces paroles quasi prophétiques il y a plus de 150 ans au sujet de la potentialité des machines à manipuler des concepts :
+
+"Encore une fois, cela pourrait agir sur d'autres éléments en plus des nombres, si l'on trouvait des objets dont les relations fondamentales mutuelles pourraient être exprimées par celles de la science abstraite des opérations, et qui seraient également susceptibles d’adaptations à l’action de la notation et du mécanisme opérant de la machine. En supposant, par exemple, que les relations fondamentales entre les fréquences dans la science de l'harmonie et les règles de la composition musicale soient susceptibles d'une telle expression, la machine pourrait composer des morceaux de musique élaborés et scientifiques, de n'importe quel degré de complexité ou d'étendue."
+
+Pour le dire plus simplement, ce qu'a compris très précocément cet esprit visionnaire, c'est qu'à partir du moment où l'on pouvait automatiser une machine à réaliser des opérations abstraites, en premier lieu sur des nombres, alors si l'on est capable d'encoder à travers ces nombres des objets tels que de la musique, des images, des phrases, etc il devient alors envisageable de composer des morceaux de musiques, des images, des phrases, d'une grande complexité. Ce qui préfigure ce qu'on appelle et que l'on a découvert depuis seulement quelques années l'IA générative. Il n'en sera pas question dans cet exposé, mais je voulais souligner que cette potentialité était en germe dès l'avènement de la proto-informatique, et que cette vision prophétique on la doit à (vous l'avez reconnue ?) Lady Lovelace, très grand esprit de l'époque Victorienne qui a contribué à la machine analytique de Charles Babbage, et dont la postérité la rendue célèbre pour ses fameuses notes sur cette machine (et la trace du premier programme informatique). Alan Turing dans son célèbre article de 1950 reprendra à son compte l'objection de Lady Lovelace.
+:::
+
+## Ada Lovelace
+
+### L'enchanteresse des nombres
+
+::::: columns
+::: {.column width="50%"}
+![](images/ada-lovelace.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+-   [1815]{.alert} - Naissance d'Ada Lovelace à Londres, fille du poète Lord Byron et d'Anne Isabella Milbanke.
+-   [1833]{.alert} - Rencontre avec Charles Babbage, mathématicien et inventeur de la machine analytique.
+-   [1842-1843]{.alert} - Publication des Notes, ajoutées à la traduction d'un article du mathématicien italien Luigi Menabrea.
+-   [1852]{.alert} - Décès à l'âge de 36 ans, des suites d'un cancer.
+:::
+:::::
+
+::: footer
+Source : [Wikipédia](https://en.wikipedia.org/wiki/Ada_Lovelace)
+:::
+
+::: notes
+un précurseur de l'ordinateur moderne. Cette rencontre marquera le début de sa fascination pour les mathématiques et les machines. Elle y ajoute ses propres notes, qui occupent plus de place que l'article lui-même et dans lesquelles elle propose ce qui est souvent considéré comme le premier algorithme conçu pour une machine, visant à calculer les nombres de Bernoulli. sur la machine analytique de Babbage. - 1843 - Paternité de la Programmation : Ses notes incluent des concepts de boucles et de programmation conditionnelle. Ces idées font d'elle la première personne à conceptualiser un algorithme pour un ordinateur, lui conférant le titre de "première programmeuse".
+:::
+
 # Conclusion {background-color="#40666e"}
 
 ## Modélisation des neurones
+
 ### Neurones biologiques vs neurones artificiels
 
 ::::: columns
@@ -670,67 +902,38 @@ Source : [Welch Labs](https://www.youtube.com/watch?v=UZDiGooFs54)
 :::
 
 ::: {.column width="50%"}
-![](images/neuron-artificial.jpeg){fig-align="center"}
-![](images/neural-net.jpeg){fig-align="center"}
-
+![](images/neuron-artificial.jpeg){fig-align="center"} ![](images/neural-net.jpeg){fig-align="center"}
 :::
 :::::
 
 ::: footer
-Source : [AquaPortail](https://www.aquaportail.com/dictionnaire/definition/4738/neurone) -  [CS231n](https://cs231n.github.io/convolutional-networks/)
+Source : [AquaPortail](https://www.aquaportail.com/dictionnaire/definition/4738/neurone) - [CS231n](https://cs231n.github.io/convolutional-networks/)
 :::
 
 ::: notes
+par exemple j'entends souvent dire qu'un neurone c'est comme un système binaire soit ça envoie un signal signal électrique soit pas alors que pas du tout il faut pas confrontre cette fonction et cette explication une synapse c'est infiniment plus complexe que un One Two que soit oui soit non ça c'est une synapse simplifiée il faut pas confondre fonction et fonctionnement j'ai une petite fille je lui ai montrer trois photos de chats et c'était assez pour qu'elle puisse reconnaître les chats les chiens et peut-être les oiseaux chadptier a dû bosser sur 45 TB donc à peu près 200 milliards de mots pour pouvoir comprendre quelque chose on n pas du tout les mêmes moyens d'apprentissage
 
-par exemple j'entends souvent
-dire qu'un neurone c'est comme un
-système binaire soit ça envoie un signal
-signal électrique soit pas alors que pas
-du tout il faut pas confrontre cette
-fonction et cette explication une
-synapse c'est infiniment plus complexe
-que un One Two que soit oui soit non ça
-c'est une synapse simplifiée il faut pas
-confondre fonction et fonctionnement j'ai une petite fille je lui ai montrer
-trois photos de chats et c'était assez
-pour qu'elle puisse reconnaître les
-chats les chiens et peut-être les
-oiseaux chadptier a dû bosser sur 45 TB
-donc à peu près 200 milliards de mots
-pour pouvoir comprendre quelque chose on
-n pas du tout les mêmes moyens
-d'apprentissage 
+c'est pas parce que desa cré des fonctions qui sont similaires sur le cerveau qu'on peut dire qu'il fonctionneent pareil
 
-c'est pas parce que desa cré des
-fonctions qui sont similaires sur le
-cerveau qu'on peut dire qu'il
-fonctionneent pareil 
-
-le vrai
-danger c'est que parce que ça fonctionne
-comme le cerveau c'est qu'on commence à
-y faire confiance plus donc il y a pas
-vraiment une guerre d'intelligence je
-fais pas des guerres contre ma
-calculette on fait pas des compétitions
-
+le vrai danger c'est que parce que ça fonctionne comme le cerveau c'est qu'on commence à y faire confiance plus donc il y a pas vraiment une guerre d'intelligence je fais pas des guerres contre ma calculette on fait pas des compétitions
 :::
 
 ## Modélisation des réseaux de neurones
+
 ### Les CNN inspirés du fonctionnement du cortex visuel [@hubel1962receptive]
 
-![](images/visual-system.jpeg){fig-align="center"} 
+![](images/visual-system.jpeg){fig-align="center"}
 
 ::: footer
 Source : [@yamins2016using]
 :::
-
 
 ::: notes
 « En lisant un dialogue entre Noam Chomsky et Jean Piaget sur l’apprentissage inné ou acquis du langage, j’ai repéré un argument faisant référence aux réseaux de neurones que je ne connaissais pas. Ce champ prometteur était quelque peu abandonné et je m’y suis plongé tout seul »
 :::
 
 ## Modélisation bio-inspirée
+
 ### L'oiseau vs l'avion
 
 *"L’analogie peut être faite avec les pionniers de l’aviation, dont certains essayaient de [reproduire les oiseaux ou les chauve-souris]{.alert}. Mais ils collaient un peu trop près à la biologie, comme Clément Ader. Ses travaux n’ont pas eu beaucoup de suites parce qu’il copiait les chauve-souris sans s’occuper de problèmes comme la stabilité. Alors que d’autres personnes plus proches des techniques d’ingénierie ont fait des expérimentations en soufflerie, ont essayé plusieurs profils d’ailes, etc. Et à la fin, ils ont obtenu [un artefact, un avion]{.alert}, qui utilise les mêmes principes que les oiseaux pour voler mais dont les détails sont très différents. C’est un peu ce qu’on fait avec l’intelligence artificielle, on prend de l’inspiration avec ce qu’on observe dans le monde animal, mais on en dégage surtout des principes. On fabrique [une machine dont le fonctionnement est finalement très différent de la biologie]{.alert}."*
@@ -742,97 +945,81 @@ Source : [Telescopemag](https://telescopemag.fr/yann-le-cun-le-mythe-de-la-machi
 :::
 
 ## L'IA, pour quoi faire ?
+
 ### Exemples d'applications vertueuses
 
 **Environnementales**
 
-- Smart grids
-- Optimisation des transports, éclairage, chauffage, tri des déchêts, ...
-- Gestion de la production agricole, images aériennes, ...
-- Prévoir les pics de pollution de l'air, feux de forêt, séismes, ...
-- Conception de matériaux / habitats plus performants
-- Optimisation du couvert végétal des villes
-- Modélisation du changement climatique, des écosystèmes, etc
+-   Smart grids
+-   Optimisation des transports, éclairage, chauffage, tri des déchêts, ...
+-   Gestion de la production agricole, images aériennes, ...
+-   Prévoir les pics de pollution de l'air, feux de forêt, séismes, ...
+-   Conception de matériaux / habitats plus performants
+-   Optimisation du couvert végétal des villes
+-   Modélisation du changement climatique, des écosystèmes, etc
 
 ::: footer
 Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
 :::
 
 ## L'IA, pour quoi faire ?
+
 ### Exemples d'applications vertueuses
 
 **Sociales et sanitaires**
 
-- Accompagnement des personnes en situation de handicap
-- Amélioration de la productivité
-- Détection de maladies, chirurgie assistée par ordinateur
-- Médecine préventive et personnalisée 
-- Fouille de données génétiques
-- Prédiction de la forme des protéines
-- Production de médicaments, vaccins, pharmacovigilance, ...
+-   Accompagnement des personnes en situation de handicap
+-   Amélioration de la productivité
+-   Détection de maladies, chirurgie assistée par ordinateur
+-   Médecine préventive et personnalisée
+-   Fouille de données génétiques
+-   Prédiction de la forme des protéines
+-   Production de médicaments, vaccins, pharmacovigilance, ...
 
 ::: footer
 Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
 :::
 
 ::: notes
-force est de constater que l’IA est surtout
-mise au service de domaines tels que la
-finance, le marketing ciblé et désormais
-l’industrie, et non pour entraîner et faire
-fonctionner des algorithmes d’optimisation
-bénéfiques à l’environnement. Et
-l’histoire d’Internet suggère que la plus
-grande partie des ressources utilisées
-par les SIA le seront pour générer
-des contenus de faible utilité sociale,
-voire pouvant renforcer des rapports
-sociaux inégalitaires (pour exemple : la
-pornographie)
+force est de constater que l’IA est surtout mise au service de domaines tels que la finance, le marketing ciblé et désormais l’industrie, et non pour entraîner et faire fonctionner des algorithmes d’optimisation bénéfiques à l’environnement. Et l’histoire d’Internet suggère que la plus grande partie des ressources utilisées par les SIA le seront pour générer des contenus de faible utilité sociale, voire pouvant renforcer des rapports sociaux inégalitaires (pour exemple : la pornographie)
 :::
 
 ## Les problèmes que posent l'IA
+
 ### Un pharmakon
 
-- Production massive de fausses informations, algorithmes de recommandations publicitaires, *deep fakes*, ...
-- Reproduction de biais, application dans la justice
-- Risques démocratiques : ciblages personnalisés lors des élections, hameçonnage, ...
-- Dépendance technologique  
-- Chômage structurel (?)
-- Cyberattaques
-- Surveillance de masse
-- Drônes et autres armes autonomes 
+-   Production massive de fausses informations, algorithmes de recommandations publicitaires, *deep fakes*, ...
+-   Reproduction de biais, application dans la justice
+-   Risques démocratiques : ciblages personnalisés lors des élections, hameçonnage, ...
+-   Dépendance technologique\
+-   Chômage structurel (?)
+-   Cyberattaques
+-   Surveillance de masse
+-   Drônes et autres armes autonomes
 
 ::: footer
 Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
 :::
 
 ## Les problèmes que posent l'IA
+
 ### Une consommation considérable de ressources
 
-- Phase d’entraînement (GPT-3) estimée à 552 tonnes
-CO2eq sur quinze jours (environ 200 allers-retours entre Paris et
-New York)
-- Phase d'utilisation encore plus énergivore en volume (180 millions d'utilisateur de ChatGPT), IoT (100 milliards d'objets connectés)
-- Google (14 MT CO2, +48% en 2023) : *«À mesure que nous intégrons l’IA dans nos produits, la réduction des émissions pourrait s’avérer difficile»*
-- Utilisation de métaux rares, production de puces, GPU, data centers, ...
-- Consommation d'eau importante (le projet de data
-center de Meta à Talavera de la Reina, en Espagne, devrait prélever
-665 millions de litres d’eau par an
-dans une région en plein stress
-hydrique).
-- **Effets rebonds** (!)
+-   Phase d’entraînement (GPT-3) estimée à 552 tonnes CO2eq sur quinze jours (environ 200 allers-retours entre Paris et New York)
+-   Phase d'utilisation encore plus énergivore en volume (180 millions d'utilisateur de ChatGPT), IoT (100 milliards d'objets connectés)
+-   Google (14 MT CO2, +48% en 2023) : *«À mesure que nous intégrons l’IA dans nos produits, la réduction des émissions pourrait s’avérer difficile»*
+-   Utilisation de métaux rares, production de puces, GPU, data centers, ...
+-   Consommation d'eau importante (le projet de data center de Meta à Talavera de la Reina, en Espagne, devrait prélever 665 millions de litres d’eau par an dans une région en plein stress hydrique).
+-   **Effets rebonds** (!)
 
 ::: footer
 Source : [cese](https://www.lecese.fr/sites/default/files/pdf/Avis/2024/2024_14_IA_Environnement.pdf)
 :::
 
 ::: notes
-2 500 000 km parcourus en voiture
-150 000 tonnes d’eau par jour pour laver le silicium
+2 500 000 km parcourus en voiture 150 000 tonnes d’eau par jour pour laver le silicium
 :::
 
 # Des questions ? {background-color="#40666e"}
 
-## Bibliographie 
-
+## Bibliographie
