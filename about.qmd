@@ -19,7 +19,10 @@ about:
 
 Originaire de Lorraine, je vis depuis 2010 au milieu des montages à Grenoble, où j'ai fait mes études d'ingénieur à l'[Ensimag](https://ensimag.grenoble-inp.fr/) puis un doctorat au [Laboratoire Jean Kuntzmann](https://www-ljk.imag.fr/). Depuis 2019 je suis [chargé de recherche](https://polisano.pages.math.cnrs.fr/) au [CNRS](https://www.cnrs.fr/fr) en mathématiques appliquées.
 
+
 ## Pourquoi ce blog ?
+
+Le laïus  
 
 Ce blog est un support d'expérimentation et de partage de mes réflexions sur divers sujets. 
 
