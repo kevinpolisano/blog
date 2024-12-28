@@ -246,9 +246,104 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="héberger-son-blog-avec-github-pages" class="level2">
 <h2 class="anchored" data-anchor-id="héberger-son-blog-avec-github-pages">Héberger son blog avec GitHub pages</h2>
-<p>Après avoir créer un nouveau dépôt sur GitHub à partir du <code>.git</code> créé en local, on va dans <code>Settings &gt; Pages</code> puis dans <code>Build and deployment</code> on choisit comme source <code>Deploy from a branch</code>. On sélectionne la branche <code>main</code> et le dossier <code>/docs</code> puis on valide avec <code>save</code>. Après quelques minutes le lien vers la page du blog est généré.</p>
+<section id="déployer-le-blog" class="level3">
+<h3 class="anchored" data-anchor-id="déployer-le-blog">Déployer le blog</h3>
+<p>Après avoir créer un nouveau dépôt sur GitHub à partir du <code>.git</code> créé en local, on va dans <code>Settings &gt; Pages</code> puis dans <code>Build and deployment</code> on choisit comme source <code>Deploy from a branch</code>. On sélectionne la branche <code>main</code> et le dossier <code>/docs</code> puis on valide avec <code>save</code>. Après quelques minutes le lien vers la page du blog est généré : <code>kevinpolisano.github.io</code></p>
+</section>
+<section id="nom-de-domaine-customisé" class="level3">
+<h3 class="anchored" data-anchor-id="nom-de-domaine-customisé">Nom de domaine customisé</h3>
+<p>L’hébergeur de mon site WP était <a href="https://www.o2switch.fr/">o2switch</a>, que je recommande pour la grande réactivité de leur service technique.</p>
+<p><strong>Du côté de ce registar</strong> voici les étapes à suivre :</p>
+<ul>
+<li>Dans <code>Espace client &gt; Commander un service</code> choisir <code>Commander un nom de domaine</code> (pour ma part : <code>kevinpolisano.fr</code>)</li>
+<li>Dans <code>Espace technique &gt; Domaines configurés</code> remplir <code>Configurer un nom de domaine</code> (pour ma part : <code>kevinpolisano.fr</code>) puis activer <code>Let's Encrypt SSL</code> dans l’onglet <code>Sécurité</code> du cPanel.</li>
+<li>Dans <code>Espace technique &gt; Zone Editor</code> entrer les champs suivants (à adapter pour votre blog) :<br>
+</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Nom</th>
+<th>TLL</th>
+<th>Type</th>
+<th>Enregistrement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>www.kevinpolisano.fr.</td>
+<td>14400</td>
+<td>CNAME</td>
+<td>kevinpolisano.github.io</td>
+</tr>
+<tr class="even">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.108.153</td>
+</tr>
+<tr class="odd">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.109.153</td>
+</tr>
+<tr class="even">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.110.153</td>
+</tr>
+<tr class="odd">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.111.153</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>J’ai également créé un fichier <code>CNAME</code> à la racine du dépôt git, contenant la ligne <code>www.kevinpolisano.fr</code>.</li>
+</ul>
+<p><strong>Du côté de GitHub Pages</strong> voici les étapes à suivre :</p>
+<ul>
+<li>Dans <code>Custom Domain</code> renseigner le nouveau nom de domaine <code>www.kevinpolisano.fr</code> puis cliquer sur <code>save</code>. À ce stade j’ai obtenu à tour de rôle les messages d’erreurs suivants :</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>DNS check unsuccessful</p>
+<p>Both kevinpolisano.fr and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>DNS valid for primary</p>
+<p>kevinpolisano.fr is improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
+</div>
+</div>
+<ul>
+<li><p>J’ai du attendre quelques heures pour que la propagation du DNS soit effective. On peut suivre celle-ci sur <a href="https://dnschecker.org/">DNS Checker</a> en s’assurant pour le domaine racine <code>kevinpolisano.fr</code> que les enregistrements <code>A</code> pointent vers les IP GitHub Pages; et pour le sous-domaine <code>www.kevinpolisano.fr</code> que l’enregistrement <code>CNAME</code> pointe vers <code>kevinpolisano.github.io</code>.</p></li>
+<li><p>Une fois que le bouton <code>save</code> donne <code>DNS check successful</code> on coche <code>Enforce HTTPS</code> et on vérifie qu’en tapant <code>kevinpolisano.fr</code> dans la barre de navigateur on est bien redirigé vers le blog à l’adresse <code>https://www.kevinpolisano.fr/</code></p></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
