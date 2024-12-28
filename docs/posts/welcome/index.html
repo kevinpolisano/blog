@@ -236,9 +236,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>posts/</code> : Répertoire contenant les posts en Quarto Markdown (<code>.qmd</code>)</li>
 <li><code>posts/_metadata.yml</code> : Options partagées des posts</li>
 <li><code>styles.css</code> : CSS customisé pour le style du blog</li>
-<li><code>Blog.Rproj</code> : Raccourci d’ouverture du projet Quarto</li>
+<li><code>MyBlog.Rproj</code> : Raccourci d’ouverture du projet Quarto</li>
 </ul>
-<p>Pour avoir un rendu du blog il faut exécuter <code>build &gt; Render Website</code></p>
+<p>Dans le fichier <code>_quarto.yml</code> ajoutez la ligne <code>output-dir</code> pour renseigner le répertoire cible pour la génération du site :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Enfin pour le générer et avoir le rendu du blog il suffit d’exécuter <code>build &gt; Render Website</code></p>
+</section>
+<section id="héberger-son-blog-avec-github-pages" class="level2">
+<h2 class="anchored" data-anchor-id="héberger-son-blog-avec-github-pages">Héberger son blog avec GitHub pages</h2>
+<p>Après avoir créer un nouveau dépôt sur GitHub à partir du <code>.git</code> créé en local, on va dans <code>Settings &gt; Pages</code> puis dans <code>Build and deployment</code> on choisit comme source <code>Deploy from a branch</code>. On sélectionne la branche <code>main</code> et le dossier <code>/docs</code> puis on valide avec <code>save</code>. Après quelques minutes le lien vers la page du blog est généré.</p>
 
 
 </section>
