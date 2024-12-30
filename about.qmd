@@ -2,17 +2,73 @@
 title: "Kévin Polisano"
 image: about.jpg
 about:
-  template: trestles
-  links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
-    - icon: github
-      text: Github
-      href: https://github.com
+  template: solana
+  links: 
+    - icon: envelope
+      text: Email
+      href: 'mailto:kevin.polisano@gmail.com'
+    - icon: cv
+      text: "{{< fa circle-user >}} CV"
+      href: https://polisano.pages.math.cnrs.fr/uploads/cv.pdf
+  # links:
+  #   - icon: github
+  #     text: Github
+  #     href: https://github.com/kevinpolisano
+  #   - icon: envelope
+  #     text: Email
+  #     href: 'mailto:kevin.polisano@univ-grenoble-alpes.fr'
+  #   - icon: linkedin
+  #     text: LinkedIn
+  #     href: 'https://www.linkedin.com/in/k%C3%A9vin-polisano-38269961/'
+  #   - icon: cv
+  #     text: "{{< ai cv >}} Curriculum Vitae"
+  #     href: uploads/cv.pdf
+  #   - icon: scholar
+  #     text: "{{< ai google-scholar >}} Google Scholar"
+  #     href: 'https://scholar.google.com/citations?user=NIWw_B8AAAAJ&hl=fr'
+  #   - icon: hal
+  #     text: "{{< ai hal >}} HAL"
+  #     href: 'https://hal.archives-ouvertes.fr/search/index/?q=%2A&authIdPerson_i=749575'
+  #   - icon: researchgate
+  #     text: "{{< ai researchgate >}} Researchgate"
+  #     href: 'https://www.researchgate.net/profile/Kevin_Polisano'
+  #   - icon: publons
+  #     text: "{{< ai publons >}} Publons"
+  #     href: 'https://publons.com/researcher/3075441/kevin-polisano/'
+  #   - icon: gitlab
+  #     text: Gitlab
+  #     href: 'https://gricad-gitlab.univ-grenoble-alpes.fr/polisank'
+  #   - icon: cnrs
+  #     text: "{{< fa user-graduate >}} Page pro"
+  #     href: 'https://polisano.pages.math.cnrs.fr/'
+  #   - icon: twitter
+  #     text: Twitter
+  #     href: 'https://twitter.com/KevinPolisano'
+  #   - icon: youtube
+  #     text: YouTube
+  #     href: 'https://www.youtube.com/channel/UCrFp1wFzHl44VZAcsttepkg'
+  #   - icon: music
+  #     text: "{{< fa guitar >}} Musique"
+  #     href: https://www.youtube.com/@ospinalveinko
+  #   - icon: goodread
+  #     text: "{{< fa book-open >}} Lectures"
+  #     href: https://www.goodreads.com/user/show/157088759-k-vin-polisano
+  #   - icon: chess
+  #     text: "{{< fa chess >}} Échecs"
+  #     href: https://www.chess.com/member/kevinpolisano
+  #   - icon: mastodon
+  #     text: Mastodon
+  #     href: https://mathstodon.xyz/@KevinPolisano
+  #   - icon: academia
+  #     text: "{{< ai academia >}} Academia"
+  #     href: https://univ-grenoble-alpes.academia.edu/K%C3%A9vinPolisano
+  #   - icon: instagram
+  #     text: Instagram
+  #     href: https://www.instagram.com/kevinpolisano/
+  #   - icon: facebook
+  #     text: Facebook
+  #     href: https://www.facebook.com/kevin.polisano
+
 ---
 
 ## Qui suis-je ?
@@ -22,8 +78,39 @@ Originaire de Lorraine, je vis depuis 2010 au milieu des montages à Grenoble, o
 
 ## Pourquoi ce blog ?
 
-Le laïus  
-
 Ce blog est un support d'expérimentation et de partage de mes réflexions sur divers sujets. 
 
+## Où me trouver ?
 
+::: {.columns}
+:::: {.column width="33%"}
+**Réseaux sociaux **
+
+- {{< fa brands mastodon >}} [Mastodon](https://mathstodon.xyz/@KevinPolisano)
+- {{< fa brands twitter >}} [Twitter](https://twitter.com/KevinPolisano)
+- {{< fa brands instagram >}} [Instagram](https://www.instagram.com/kevinpolisano/)
+- {{< fa brands youtube >}} [YouTube](https://www.youtube.com/@kevinpolisano1559)
+- {{< fa brands facebook >}} [Facebook](https://www.facebook.com/kevin.polisano)
+::::
+
+:::: {.column width="33%"}
+**Académique**
+
+- {{< fa user-graduate >}} [Page pro](https://polisano.pages.math.cnrs.fr/)
+- {{< fa brands linkedin >}} [Linkedin](https://www.linkedin.com/in/k%C3%A9vin-polisano-38269961/)
+- {{< ai google-scholar >}} [Google Scholar](https://scholar.google.com/citations?user=NIWw_B8AAAAJ&hl=fr)
+- {{< ai researchgate >}} [Researchgate](https://www.researchgate.net/profile/Kevin_Polisano)
+- {{< ai publons >}} [Publons](https://publons.com/researcher/3075441/kevin-polisano/)
+- {{< ai academia >}} [Academia](https://univ-grenoble-alpes.academia.edu/K%C3%A9vinPolisano)
+- {{< ai hal >}} [HAL](https://hal.archives-ouvertes.fr/search/index/?q=%2A&authIdPerson_i=749575)
+- {{< fa brands github >}} [Github](https://github.com/kevinpolisano)
+- {{< fa brands gitlab >}} [Gitlab](https://gricad-gitlab.univ-grenoble-alpes.fr/polisank)
+::::
+
+:::: {.column width="33%"}
+**Loisirs**
+
+- {{< fa guitar >}} [Musique](https://www.youtube.com/@ospinalveinko)
+- {{< fa book-open >}} [Lectures](https://www.goodreads.com/user/show/157088759-k-vin-polisano)
+- {{< fa chess >}} [Échecs](https://www.chess.com/member/kevinpolisano)
+::::

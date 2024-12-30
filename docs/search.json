@@ -18,7 +18,7 @@
     "href": "about.html#pourquoi-ce-blog",
     "title": "Kévin Polisano",
     "section": "Pourquoi ce blog ?",
-    "text": "Pourquoi ce blog ?\nLe laïus\nCe blog est un support d’expérimentation et de partage de mes réflexions sur divers sujets."
+    "text": "Pourquoi ce blog ?\nCe blog est un support d’expérimentation et de partage de mes réflexions sur divers sujets."
   },
   {
     "objectID": "slides/2024-11-21-intro-ia/intro-ia.html#plan-de-la-présentation",
@@ -492,35 +492,35 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Migrer son blog Wordpress vers un site statique avec Quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
     "section": "",
     "text": "Mon site perso fait peau neuve !\nJe vous explique ici quelles étapes j’ai suivi pour effectuer la migration. Au boulot !"
   },
   {
     "objectID": "posts/welcome/index.html#exporter-ses-articles-wordpress-en-html-vers-markdown",
     "href": "posts/welcome/index.html#exporter-ses-articles-wordpress-en-html-vers-markdown",
-    "title": "Migrer son blog Wordpress vers un site statique avec Quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
     "section": "Exporter ses articles Wordpress en HTML vers Markdown",
     "text": "Exporter ses articles Wordpress en HTML vers Markdown\nJ’ai expérimenté trois solutions :\n\nGitHub - SchumacherFM/wordpress-to-hugo-exporter\nGitHub - lonekorean/wordpress-export-to-markdown\nGitHub - palaniraja/blog2md\n\nLa première conserve certaines balises HTML (typiquement pour l’usage de la couleur et la mise en forme), tandis que les deux suivantes exportent en pur Markdown."
   },
   {
     "objectID": "posts/welcome/index.html#wordpress-to-hugo-exporter",
     "href": "posts/welcome/index.html#wordpress-to-hugo-exporter",
-    "title": "Migrer son blog Wordpress vers un site statique avec Quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
     "section": "Wordpress to Hugo Exporter",
     "text": "Wordpress to Hugo Exporter\nLa première solution consiste à uploader l’archive sur le site WP dans le dossier wp-content/plugins puis d’activer le plugin et utiliser Outils &gt; Export Hugo. Ce dernier n’a pas fonctionné donc j’ai utilisé le Terminal de mon serveur d’hébergement (O2switch) (comme expliqué ici) :\ncd wp-content/plugins/wordpress-to-hugo-exporter/\nphp hugo-export-cli.php\nLe script créé un fichier /tmp/wp-hugo.zip (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (via le Cpanel d’O2switch) j’ai effectué une recherche du fichier, il m’indique que celui-ci se trouve dans le dossier caché .cagefs/tmp/.\n\nWordpress export to Markdown\nPremièrement on effectue un export du contenu complet de WP au format export.xml, que l’on place dans l’archive du code téléchargé. Puis on exécute le script :\nnpm install && node index.js\n\n\nBlog2md\nDe même on exécute :\nnpm install && node index.js w export.xml out"
   },
   {
     "objectID": "posts/welcome/index.html#nettoyage-des-articles-exportés-liens-images",
     "href": "posts/welcome/index.html#nettoyage-des-articles-exportés-liens-images",
-    "title": "Migrer son blog Wordpress vers un site statique avec Quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
     "section": "Nettoyage des articles exportés, liens, images, …",
     "text": "Nettoyage des articles exportés, liens, images, …"
   },
   {
     "objectID": "posts/welcome/index.html#créer-son-blog-avec-quarto",
     "href": "posts/welcome/index.html#créer-son-blog-avec-quarto",
-    "title": "Migrer son blog Wordpress vers un site statique avec Quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
     "section": "Créer son blog avec Quarto",
     "text": "Créer son blog avec Quarto\n\nOuvrir RStudio\nCréer un nouveau projet Create Quarto Blog\nCocher Create a git repository\n\nUn blog Quarto vierge est ainsi créé contenant ces fichiers :\n\n_quarto.yml : Fichier du projet Quarto\nindex.qmd : Page d’accueil\nabout.qmd : Page “À propos”\nposts/ : Répertoire contenant les posts en Quarto Markdown (.qmd)\nposts/_metadata.yml : Options partagées des posts\nstyles.css : CSS customisé pour le style du blog\nMyBlog.Rproj : Raccourci d’ouverture du projet Quarto\n\nDans le fichier _quarto.yml ajoutez la ligne output-dir pour renseigner le répertoire cible pour la génération du site :\nproject:\n  type: website\n  output-dir: docs\nEnfin pour le générer et avoir le rendu du blog il suffit d’exécuter build &gt; Render Website"
   },
@@ -534,9 +534,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Bienvenue",
+    "title": "Carnet de notes",
     "section": "",
-    "text": "Migrer son blog Wordpress vers un site statique avec Quarto\n\n\n\n\n\n\nsite\n\n\n\n\n\n\n\n\n\nDec 26, 2024\n\n\nKévin Polisano\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nOct 8, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\nNo matching items"
+    "text": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages\n\n\n\n\n\n\nsite\n\n\n\n\n\n\n\n\n\nDec 26, 2024\n\n\nKévin Polisano\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/test.html#panorama-de-lintelligence-artificielle",
@@ -723,8 +723,71 @@
   {
     "objectID": "posts/welcome/index.html#héberger-son-blog-avec-github-pages",
     "href": "posts/welcome/index.html#héberger-son-blog-avec-github-pages",
-    "title": "Migrer son blog Wordpress vers un site statique avec Quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
     "section": "Héberger son blog avec GitHub pages",
     "text": "Héberger son blog avec GitHub pages\n\nDéployer le blog\nAprès avoir créer un nouveau dépôt sur GitHub à partir du .git créé en local, on va dans Settings &gt; Pages puis dans Build and deployment on choisit comme source Deploy from a branch. On sélectionne la branche main et le dossier /docs puis on valide avec save. Après quelques minutes le lien vers la page du blog est généré : kevinpolisano.github.io\n\n\nNom de domaine customisé\nL’hébergeur de mon site WP était o2switch, que je recommande pour la grande réactivité de leur service technique.\nDu côté de ce registar voici les étapes à suivre :\n\nDans Espace client &gt; Commander un service choisir Commander un nom de domaine (pour ma part : kevinpolisano.fr)\nDans Espace technique &gt; Domaines configurés remplir Configurer un nom de domaine (pour ma part : kevinpolisano.fr) puis activer Let's Encrypt SSL dans l’onglet Sécurité du cPanel.\nDans Espace technique &gt; Zone Editor entrer les champs suivants (à adapter pour votre blog) :\n\n\n\n\n\nNom\nTLL\nType\nEnregistrement\n\n\n\n\nwww.kevinpolisano.fr.\n14400\nCNAME\nkevinpolisano.github.io\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.108.153\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.109.153\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.110.153\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.111.153\n\n\n\n\nJ’ai également créé un fichier CNAME à la racine du dépôt git, contenant la ligne www.kevinpolisano.fr.\n\nDu côté de GitHub Pages voici les étapes à suivre :\n\nDans Custom Domain renseigner le nouveau nom de domaine www.kevinpolisano.fr puis cliquer sur save. À ce stade j’ai obtenu à tour de rôle les messages d’erreurs suivants :\n\n\n\n\n\n\n\nImportant\n\n\n\nDNS check unsuccessful\nBoth kevinpolisano.fr and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDNS valid for primary\nkevinpolisano.fr is improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).\n\n\n\nJ’ai du attendre quelques heures pour que la propagation du DNS soit effective. On peut suivre celle-ci sur DNS Checker en s’assurant pour le domaine racine kevinpolisano.fr que les enregistrements A pointent vers les IP GitHub Pages; et pour le sous-domaine www.kevinpolisano.fr que l’enregistrement CNAME pointe vers kevinpolisano.github.io.\nUne fois que le bouton save donne DNS check successful on coche Enforce HTTPS et on vérifie qu’en tapant kevinpolisano.fr dans la barre de navigateur on est bien redirigé vers le blog à l’adresse https://www.kevinpolisano.fr/"
+  },
+  {
+    "objectID": "posts/migration-wp-to-quarto/index.html",
+    "href": "posts/migration-wp-to-quarto/index.html",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
+    "section": "",
+    "text": "Mon site perso fait peau neuve !\nJe vous explique ici quelles étapes j’ai suivi pour effectuer la migration. Au boulot !"
+  },
+  {
+    "objectID": "posts/migration-wp-to-quarto/index.html#exporter-ses-articles-wordpress-en-html-vers-markdown",
+    "href": "posts/migration-wp-to-quarto/index.html#exporter-ses-articles-wordpress-en-html-vers-markdown",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
+    "section": "Exporter ses articles Wordpress en HTML vers Markdown",
+    "text": "Exporter ses articles Wordpress en HTML vers Markdown\nJ’ai expérimenté trois solutions :\n\nGitHub - SchumacherFM/wordpress-to-hugo-exporter\nGitHub - lonekorean/wordpress-export-to-markdown\nGitHub - palaniraja/blog2md\n\nLa première conserve certaines balises HTML (typiquement pour l’usage de la couleur et la mise en forme), tandis que les deux suivantes exportent en pur Markdown.\n\nWordpress to Hugo Exporter\nLa première solution consiste à uploader l’archive sur le site WP dans le dossier wp-content/plugins puis d’activer le plugin et utiliser Outils &gt; Export Hugo. Ce dernier n’a pas fonctionné donc j’ai utilisé le Terminal de mon serveur d’hébergement (O2switch) (comme expliqué ici) :\ncd wp-content/plugins/wordpress-to-hugo-exporter/\nphp hugo-export-cli.php\nLe script créé un fichier /tmp/wp-hugo.zip (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (via le Cpanel d’O2switch) j’ai effectué une recherche du fichier, il m’indique que celui-ci se trouve dans le dossier caché .cagefs/tmp/.\n\n\nWordpress export to Markdown\nPremièrement on effectue un export du contenu complet de WP au format export.xml, que l’on place dans l’archive du code téléchargé. Puis on exécute le script :\nnpm install && node index.js\n\n\nBlog2md\nDe même on exécute :\nnpm install && node index.js w export.xml out"
+  },
+  {
+    "objectID": "posts/migration-wp-to-quarto/index.html#wordpress-to-hugo-exporter",
+    "href": "posts/migration-wp-to-quarto/index.html#wordpress-to-hugo-exporter",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
+    "section": "Wordpress to Hugo Exporter",
+    "text": "Wordpress to Hugo Exporter\nLa première solution consiste à uploader l’archive sur le site WP dans le dossier wp-content/plugins puis d’activer le plugin et utiliser Outils &gt; Export Hugo. Ce dernier n’a pas fonctionné donc j’ai utilisé le Terminal de mon serveur d’hébergement (O2switch) (comme expliqué ici) :\ncd wp-content/plugins/wordpress-to-hugo-exporter/\nphp hugo-export-cli.php\nLe script créé un fichier /tmp/wp-hugo.zip (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (via le Cpanel d’O2switch) j’ai effectué une recherche du fichier, il m’indique que celui-ci se trouve dans le dossier caché .cagefs/tmp/.\n\nWordpress export to Markdown\nPremièrement on effectue un export du contenu complet de WP au format export.xml, que l’on place dans l’archive du code téléchargé. Puis on exécute le script :\nnpm install && node index.js\n\n\nBlog2md\nDe même on exécute :\nnpm install && node index.js w export.xml out"
+  },
+  {
+    "objectID": "posts/migration-wp-to-quarto/index.html#nettoyage-des-articles-exportés-liens-images",
+    "href": "posts/migration-wp-to-quarto/index.html#nettoyage-des-articles-exportés-liens-images",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
+    "section": "Nettoyage des articles exportés, liens, images, …",
+    "text": "Nettoyage des articles exportés, liens, images, …"
+  },
+  {
+    "objectID": "posts/migration-wp-to-quarto/index.html#créer-son-blog-avec-quarto",
+    "href": "posts/migration-wp-to-quarto/index.html#créer-son-blog-avec-quarto",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
+    "section": "Créer son blog avec Quarto",
+    "text": "Créer son blog avec Quarto\n\nOuvrir RStudio\nCréer un nouveau projet Create Quarto Blog\nCocher Create a git repository\n\nUn blog Quarto vierge est ainsi créé contenant ces fichiers :\n\n_quarto.yml : Fichier du projet Quarto\nindex.qmd : Page d’accueil\nabout.qmd : Page “À propos”\nposts/ : Répertoire contenant les posts en Quarto Markdown (.qmd)\nposts/_metadata.yml : Options partagées des posts\nstyles.css : CSS customisé pour le style du blog\nMyBlog.Rproj : Raccourci d’ouverture du projet Quarto\n\nDans le fichier _quarto.yml ajoutez la ligne output-dir pour renseigner le répertoire cible pour la génération du site :\nproject:\n  type: website\n  output-dir: docs\nEnfin pour le générer et avoir le rendu du blog il suffit d’exécuter build &gt; Render Website"
+  },
+  {
+    "objectID": "posts/migration-wp-to-quarto/index.html#héberger-son-blog-avec-github-pages",
+    "href": "posts/migration-wp-to-quarto/index.html#héberger-son-blog-avec-github-pages",
+    "title": "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages",
+    "section": "Héberger son blog avec GitHub pages",
+    "text": "Héberger son blog avec GitHub pages\n\nDéployer le blog\nAprès avoir créer un nouveau dépôt sur GitHub à partir du .git créé en local, on va dans Settings &gt; Pages puis dans Build and deployment on choisit comme source Deploy from a branch. On sélectionne la branche main et le dossier /docs puis on valide avec save. Après quelques minutes le lien vers la page du blog est généré : kevinpolisano.github.io\n\n\nNom de domaine customisé\nL’hébergeur de mon site WP était o2switch, que je recommande pour la grande réactivité de leur service technique.\nDu côté de ce registar voici les étapes à suivre :\n\nDans Espace client &gt; Commander un service choisir Commander un nom de domaine (pour ma part : kevinpolisano.fr)\nDans Espace technique &gt; Domaines configurés remplir Configurer un nom de domaine (pour ma part : kevinpolisano.fr) puis activer Let's Encrypt SSL dans l’onglet Sécurité du cPanel.\nDans Espace technique &gt; Zone Editor entrer les champs suivants (à adapter pour votre blog) :\n\n\n\n\n\nNom\nTLL\nType\nEnregistrement\n\n\n\n\nwww.kevinpolisano.fr.\n14400\nCNAME\nkevinpolisano.github.io\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.108.153\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.109.153\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.110.153\n\n\nkevinpolisano.fr.\n14400\nA\n185.199.111.153\n\n\n\n\nJ’ai également créé un fichier CNAME à la racine du dépôt git, contenant la ligne www.kevinpolisano.fr.\n\nDu côté de GitHub Pages voici les étapes à suivre :\n\nDans Custom Domain renseigner le nouveau nom de domaine www.kevinpolisano.fr puis cliquer sur save. À ce stade j’ai obtenu à tour de rôle les messages d’erreurs suivants :\n\n\n\n\n\n\n\nImportant\n\n\n\nDNS check unsuccessful\nBoth kevinpolisano.fr and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).\n\n\n\n\n\n\n\n\nWarning\n\n\n\nDNS valid for primary\nkevinpolisano.fr is improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).\n\n\n\nJ’ai du attendre quelques heures pour que la propagation du DNS soit effective. On peut suivre celle-ci sur DNS Checker en s’assurant pour le domaine racine kevinpolisano.fr que les enregistrements A pointent vers les IP GitHub Pages; et pour le sous-domaine www.kevinpolisano.fr que l’enregistrement CNAME pointe vers kevinpolisano.github.io.\nUne fois que le bouton save donne DNS check successful on coche Enforce HTTPS et on vérifie qu’en tapant kevinpolisano.fr dans la barre de navigateur on est bien redirigé vers le blog à l’adresse https://www.kevinpolisano.fr/"
+  },
+  {
+    "objectID": "about.html#où-suis-je",
+    "href": "about.html#où-suis-je",
+    "title": "Kévin Polisano",
+    "section": "Où suis-je ?",
+    "text": "Où suis-je ?\n\n\nRéseaux sociaux \n\n Mastodon\n Twitter\n Instagram\n YouTube\n Facebook\n\n\nAcadémique\n\n Page professionnelle\n Linkedin\n Google Scholar\n Researchgate\n Publons\n Academia\n HAL\n Github\n Gitlab\n\n\nLoisirs\n\n Musique\n Lectures\n Échecs"
+  },
+  {
+    "objectID": "about.html#dans-mes-loisirs",
+    "href": "about.html#dans-mes-loisirs",
+    "title": "Kévin Polisano",
+    "section": "Dans mes loisirs :",
+    "text": "Dans mes loisirs :"
+  },
+  {
+    "objectID": "about.html#où-me-trouver",
+    "href": "about.html#où-me-trouver",
+    "title": "Kévin Polisano",
+    "section": "Où me trouver ?",
+    "text": "Où me trouver ?\n\n\nRéseaux sociaux \n\n Mastodon\n Twitter\n Instagram\n YouTube\n Facebook\n\n\nAcadémique\n\n Page pro\n Linkedin\n Google Scholar\n Researchgate\n Publons\n Academia\n HAL\n Github\n Gitlab\n\n\nLoisirs\n\n Musique\n Lectures\n Échecs"
   }
 ]

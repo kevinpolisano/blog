@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2024-12-26">
 
-<title>Carnet de notes – Blog de Kévin Polisano</title>
+<title>Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages – Blog de Kévin Polisano</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +102,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Blog de Kévin Polisano</span>
     </a>
   </div>
@@ -149,7 +125,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">Kévin Polisano</span></a>
   </li>  
   <li class="nav-item compact">
@@ -170,79 +146,230 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Carnet de notes</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">site</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 26, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#créer-son-blog-avec-quarto" id="toc-créer-son-blog-avec-quarto" class="nav-link active" data-scroll-target="#créer-son-blog-avec-quarto">Créer son blog avec Quarto</a></li>
+  <li><a href="#héberger-son-blog-avec-github-pages" id="toc-héberger-son-blog-avec-github-pages" class="nav-link" data-scroll-target="#héberger-son-blog-avec-github-pages">Héberger son blog avec GitHub pages</a>
+  <ul class="collapse">
+  <li><a href="#déployer-le-blog" id="toc-déployer-le-blog" class="nav-link" data-scroll-target="#déployer-le-blog">Déployer le blog</a></li>
+  <li><a href="#nom-de-domaine-customisé" id="toc-nom-de-domaine-customisé" class="nav-link" data-scroll-target="#nom-de-domaine-customisé">Nom de domaine customisé</a></li>
+  </ul></li>
+  <li><a href="#exporter-ses-articles-wordpress-en-html-vers-markdown" id="toc-exporter-ses-articles-wordpress-en-html-vers-markdown" class="nav-link" data-scroll-target="#exporter-ses-articles-wordpress-en-html-vers-markdown">Exporter ses articles Wordpress en HTML vers Markdown</a>
+  <ul class="collapse">
+  <li><a href="#wordpress-to-hugo-exporter" id="toc-wordpress-to-hugo-exporter" class="nav-link" data-scroll-target="#wordpress-to-hugo-exporter">Wordpress to Hugo Exporter</a></li>
+  <li><a href="#wordpress-export-to-markdown" id="toc-wordpress-export-to-markdown" class="nav-link" data-scroll-target="#wordpress-export-to-markdown">Wordpress export to Markdown</a></li>
+  <li><a href="#blog2md" id="toc-blog2md" class="nav-link" data-scroll-target="#blog2md">Blog2md</a></li>
+  </ul></li>
+  <li><a href="#nettoyage-des-articles-exportés-liens-images" id="toc-nettoyage-des-articles-exportés-liens-images" class="nav-link" data-scroll-target="#nettoyage-des-articles-exportés-liens-images">Nettoyage des articles exportés, liens, images, …</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="site">site <span class="quarto-category-count">(1)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>Mon site perso fait peau neuve !</p>
+<p>Je vous explique ici quelles étapes j’ai suivi pour effectuer la migration. Au boulot !</p>
+<p><img src="thumbnail.jpg" class="img-fluid"></p>
+<section id="créer-son-blog-avec-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="créer-son-blog-avec-quarto">Créer son blog avec Quarto</h2>
+<ul>
+<li>Ouvrir <code>RStudio</code></li>
+<li>Créer un nouveau projet <code>Create Quarto Blog</code></li>
+<li>Cocher <code>Create a git repository</code></li>
+</ul>
+<p>Un <a href="https://quarto.org/docs/websites/website-blog.html">blog Quarto</a> vierge est ainsi créé contenant ces fichiers :</p>
+<ul>
+<li><code>_quarto.yml</code> : Fichier du projet Quarto</li>
+<li><code>index.qmd</code> : Page d’accueil</li>
+<li><code>about.qmd</code> : Page “À propos”</li>
+<li><code>posts/</code> : Répertoire contenant les posts en Quarto Markdown (<code>.qmd</code>)</li>
+<li><code>posts/_metadata.yml</code> : Options partagées des posts</li>
+<li><code>styles.css</code> : CSS customisé pour le style du blog</li>
+<li><code>MyBlog.Rproj</code> : Raccourci d’ouverture du projet Quarto</li>
+</ul>
+<p>Dans le fichier <code>_quarto.yml</code> ajoutez la ligne <code>output-dir</code> pour renseigner le répertoire cible pour la génération du site :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Enfin pour le générer et avoir le rendu du blog il suffit d’exécuter <code>build &gt; Render Website</code></p>
+</section>
+<section id="héberger-son-blog-avec-github-pages" class="level2">
+<h2 class="anchored" data-anchor-id="héberger-son-blog-avec-github-pages">Héberger son blog avec GitHub pages</h2>
+<section id="déployer-le-blog" class="level3">
+<h3 class="anchored" data-anchor-id="déployer-le-blog">Déployer le blog</h3>
+<p>Après avoir créer un nouveau dépôt sur GitHub à partir du <code>.git</code> créé en local, on va dans <code>Settings &gt; Pages</code> puis dans <code>Build and deployment</code> on choisit comme source <code>Deploy from a branch</code>. On sélectionne la branche <code>main</code> et le dossier <code>/docs</code> puis on valide avec <code>save</code>. Après quelques minutes le lien vers la page du blog est généré : <code>kevinpolisano.github.io</code></p>
+</section>
+<section id="nom-de-domaine-customisé" class="level3">
+<h3 class="anchored" data-anchor-id="nom-de-domaine-customisé">Nom de domaine customisé</h3>
+<p>L’hébergeur de mon site WP était <a href="https://www.o2switch.fr/">o2switch</a>, que je recommande pour la grande réactivité de leur service technique.</p>
+<p><strong>Du côté de ce registar</strong> voici les étapes à suivre :</p>
+<ul>
+<li>Dans <code>Espace client &gt; Commander un service</code> choisir <code>Commander un nom de domaine</code> (pour ma part : <code>kevinpolisano.fr</code>)</li>
+<li>Dans <code>Espace technique &gt; Domaines configurés</code> remplir <code>Configurer un nom de domaine</code> (pour ma part : <code>kevinpolisano.fr</code>) puis activer <code>Let's Encrypt SSL</code> dans l’onglet <code>Sécurité</code> du cPanel.</li>
+<li>Dans <code>Espace technique &gt; Zone Editor</code> entrer les champs suivants (à adapter pour votre blog) :<br>
+</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Nom</th>
+<th>TLL</th>
+<th>Type</th>
+<th>Enregistrement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>www.kevinpolisano.fr.</td>
+<td>14400</td>
+<td>CNAME</td>
+<td>kevinpolisano.github.io</td>
+</tr>
+<tr class="even">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.108.153</td>
+</tr>
+<tr class="odd">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.109.153</td>
+</tr>
+<tr class="even">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.110.153</td>
+</tr>
+<tr class="odd">
+<td>kevinpolisano.fr.</td>
+<td>14400</td>
+<td>A</td>
+<td>185.199.111.153</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>J’ai également créé un fichier <code>CNAME</code> à la racine du dépôt git, contenant la ligne <code>www.kevinpolisano.fr</code>.</li>
+</ul>
+<p><strong>Du côté de GitHub Pages</strong> voici les étapes à suivre :</p>
+<ul>
+<li>Dans <code>Custom Domain</code> renseigner le nouveau nom de domaine <code>www.kevinpolisano.fr</code> puis cliquer sur <code>save</code>. À ce stade j’ai obtenu à tour de rôle les messages d’erreurs suivants :</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>DNS check unsuccessful</p>
+<p>Both kevinpolisano.fr and its alternate name are improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>DNS valid for primary</p>
+<p>kevinpolisano.fr is improperly configured Domain does not resolve to the GitHub Pages server. For more information, see documentation (NotServedByPagesError).</p>
+</div>
+</div>
+<ul>
+<li><p>J’ai du attendre quelques heures pour que la propagation du DNS soit effective. On peut suivre celle-ci sur <a href="https://dnschecker.org/">DNS Checker</a> en s’assurant pour le domaine racine <code>kevinpolisano.fr</code> que les enregistrements <code>A</code> pointent vers les IP GitHub Pages; et pour le sous-domaine <code>www.kevinpolisano.fr</code> que l’enregistrement <code>CNAME</code> pointe vers <code>kevinpolisano.github.io</code>.</p></li>
+<li><p>Une fois que le bouton <code>save</code> donne <code>DNS check successful</code> on coche <code>Enforce HTTPS</code> et on vérifie qu’en tapant <code>kevinpolisano.fr</code> dans la barre de navigateur on est bien redirigé vers le blog à l’adresse <code>https://www.kevinpolisano.fr/</code></p></li>
+</ul>
+</section>
+</section>
+<section id="exporter-ses-articles-wordpress-en-html-vers-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="exporter-ses-articles-wordpress-en-html-vers-markdown">Exporter ses articles Wordpress en HTML vers Markdown</h2>
+<p>J’ai expérimenté trois solutions :</p>
+<ol type="1">
+<li><a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter">GitHub - SchumacherFM/wordpress-to-hugo-exporter</a></li>
+<li><a href="https://github.com/lonekorean/wordpress-export-to-markdown">GitHub - lonekorean/wordpress-export-to-markdown</a></li>
+<li><a href="https://github.com/palaniraja/blog2md">GitHub - palaniraja/blog2md</a></li>
+</ol>
+<p>La première conserve certaines balises HTML (typiquement pour l’usage de la couleur et la mise en forme), tandis que les deux suivantes exportent en pur Markdown.</p>
+<section id="wordpress-to-hugo-exporter" class="level3">
+<h3 class="anchored" data-anchor-id="wordpress-to-hugo-exporter">Wordpress to Hugo Exporter</h3>
+<p>La première solution consiste à <em>uploader</em> l’archive sur le site WP dans le dossier <code>wp-content/plugins</code> puis d’activer le plugin et utiliser <code>Outils &gt; Export Hugo</code>. Ce dernier n’a pas fonctionné donc j’ai utilisé le Terminal de mon serveur d’hébergement (O2switch) (comme expliqué <a href="file:///Users/polisank/Zotero/storage/ERLHNLWT/jai-enfin-migre-de-wordpress-a-hugo-partie-2.html">ici</a>) :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> wp-content/plugins/wordpress-to-hugo-exporter/</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">php</span> hugo-export-cli.php</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Le script créé un fichier <code>/tmp/wp-hugo.zip</code> (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (<em>via</em> le Cpanel d’O2switch) j’ai effectué une recherche du fichier, il m’indique que celui-ci se trouve dans le dossier caché <code>.cagefs/tmp/</code>.</p>
+</section>
+<section id="wordpress-export-to-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="wordpress-export-to-markdown">Wordpress export to Markdown</h3>
+<p>Premièrement on effectue un export du contenu complet de WP au format <code>export.xml</code>, que l’on place dans l’archive du code téléchargé. Puis on exécute le script :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="kw">&amp;&amp;</span> <span class="ex">node</span> index.js</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="blog2md" class="level3">
+<h3 class="anchored" data-anchor-id="blog2md">Blog2md</h3>
+<p>De même on exécute :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="kw">&amp;&amp;</span> <span class="ex">node</span> index.js w export.xml out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="nettoyage-des-articles-exportés-liens-images" class="level2">
+<h2 class="anchored" data-anchor-id="nettoyage-des-articles-exportés-liens-images">Nettoyage des articles exportés, liens, images, …</h2>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="site" data-listing-date-sort="1735167600000" data-listing-file-modified-sort="1735576074798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="846">
-<div class="thumbnail">
-<p><a href="./posts/migration-wp-to-quarto/index.html" class="no-external"></a></p><a href="./posts/migration-wp-to-quarto/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/migration-wp-to-quarto/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/migration-wp-to-quarto/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/migration-wp-to-quarto/index.html" class="no-external">Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/migration-wp-to-quarto/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('site'); return false;">
-site
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/migration-wp-to-quarto/index.html" class="no-external">Mon site perso fait peau neuve !</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/migration-wp-to-quarto/index.html" class="no-external">
-<div class="listing-date">
-Dec 26, 2024
-</div>
-<div class="listing-author">
-Kévin Polisano
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

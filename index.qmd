@@ -1,5 +1,5 @@
 ---
-title: "Bienvenue"
+title: "Carnet de notes"
 listing:
   contents: posts
   sort: "date desc"
