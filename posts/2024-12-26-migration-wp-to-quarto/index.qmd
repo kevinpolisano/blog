@@ -2,7 +2,7 @@
 title: "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages"
 author: "Kévin Polisano"
 date: "2024-12-26"
-categories: [site]
+categories: [site, quarto]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -32,7 +32,7 @@ Un [blog Quarto](https://quarto.org/docs/websites/website-blog.html) vierge est 
 -   `styles.css` : CSS customisé pour le style du blog
 -   `MyBlog.Rproj` : Raccourci d'ouverture du projet Quarto
 
-Dans le fichier `_quarto.yml` ajoutez la ligne `output-dir` pour renseigner le répertoire cible pour la génération du site :
+Dans le fichier `_quarto.yml` ajouter la ligne `output-dir` pour renseigner le répertoire cible pour la génération du site :
 
 ``` yaml
 project:
@@ -40,13 +40,13 @@ project:
   output-dir: docs
 ```
 
-Enfin pour le générer et avoir le rendu du blog il suffit d'exécuter `build > Render Website`
+Enfin pour le générer et avoir le rendu du blog il suffit d'exécuter `build > Render Website`.
 
 ## Héberger son blog avec GitHub pages
 
 ### Déployer le blog
 
-Après avoir créer un nouveau dépôt sur GitHub à partir du `.git` créé en local, on va dans `Settings > Pages` puis dans `Build and deployment` on choisit comme source `Deploy from a branch`. On sélectionne la branche `main` et le dossier `/docs` puis on valide avec `save`. Après quelques minutes le lien vers la page du blog est généré : `kevinpolisano.github.io`
+Après avoir créé un nouveau dépôt sur GitHub à partir du `.git` local, aller dans `Settings > Pages` puis dans `Build and deployment` et choisir comme source `Deploy from a branch`. Puis sélectionner la branche `main` et le dossier `/docs` avant de valider avec `save`. Après quelques minutes le lien vers la page du blog est généré : `kevinpolisano.github.io`
 
 ### Nom de domaine customisé
 
@@ -56,7 +56,7 @@ L'hébergeur de mon site WP était [o2switch](https://www.o2switch.fr/), que je 
 
 -   Dans `Espace client > Commander un service` choisir `Commander un nom de domaine` (pour ma part : `kevinpolisano.fr`)
 -   Dans `Espace technique > Domaines configurés` remplir `Configurer un nom de domaine` (pour ma part : `kevinpolisano.fr`) puis activer `Let's Encrypt SSL` dans l'onglet `Sécurité` du cPanel.
--   Dans `Espace technique > Zone Editor` entrer les champs suivants (à adapter pour votre blog) :\
+-   Dans `Espace technique > Zone Editor` entrer les champs suivants (à adapter selon le blog) :\
 
 | Nom                   | TLL   | Type  | Enregistrement          |
 |-----------------------|-------|-------|-------------------------|
@@ -100,14 +100,14 @@ La première conserve certaines balises HTML (typiquement pour l'usage de la cou
 
 ### Wordpress to Hugo Exporter
 
-La première solution consiste à *uploader* l'archive sur le site WP dans le dossier `wp-content/plugins` puis d'activer le plugin et utiliser `Outils > Export Hugo`. Ce dernier n'a pas fonctionné donc j'ai utilisé le Terminal de mon serveur d'hébergement (O2switch) (comme expliqué [ici](file:///Users/polisank/Zotero/storage/ERLHNLWT/jai-enfin-migre-de-wordpress-a-hugo-partie-2.html)) :
+La première solution consiste à *uploader* l'archive sur le site WP dans le dossier `wp-content/plugins` à activer le plugin et utiliser `Outils > Export Hugo`. Ce dernier n'a pas fonctionné donc j'ai utilisé le Terminal de mon serveur d'hébergement (O2switch) (comme expliqué [ici](file:///Users/polisank/Zotero/storage/ERLHNLWT/jai-enfin-migre-de-wordpress-a-hugo-partie-2.html)) :
 
 ``` bash
 cd wp-content/plugins/wordpress-to-hugo-exporter/
 php hugo-export-cli.php
 ```
 
-Le script créé un fichier `/tmp/wp-hugo.zip` (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (*via* le Cpanel d'O2switch) j'ai effectué une recherche du fichier, il m'indique que celui-ci se trouve dans le dossier caché `.cagefs/tmp/`.
+Le script créé un fichier `/tmp/wp-hugo.zip` (cela peut prendre quelques minutes). Dans le gestionnaire de fichiers (*via* le Cpanel d'O2switch) j'ai effectué une recherche du fichier, qui m'a indiquée que celui-ci se trouvait dans le dossier caché `.cagefs/tmp/`.
 
 ### Wordpress export to Markdown
 
