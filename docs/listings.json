@@ -2,7 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/migration-wp-to-quarto/index.html"
+      "/posts/2024-12-26-migration-wp-to-quarto/index.html",
+      "/posts/test/index.html",
+      "/posts/test/index2.html",
+      "/posts/2024-04-01-laah-pour-les-nuls-comprendre-par-lexemple/index_prev.html",
+      "/posts/2024-04-01-laah-pour-les-nuls-comprendre-par-lexemple/index.html",
+      "/posts/2024-04-01-laah-pour-les-nuls-comprendre-par-lexemple/index_prev_.html"
     ]
   }
 ]

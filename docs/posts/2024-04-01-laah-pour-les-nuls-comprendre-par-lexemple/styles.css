@@ -1,0 +1,10 @@
+pre {
+  max-width: 80%; /* Ajustez ce pourcentage selon vos besoins */
+  margin: auto;   /* Centre le bloc de code */
+  overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+  padding: 1em;    /* Ajoute de l'espace autour du code */
+  background-color: red; /* Optionnel : couleur de fond pour différencier le code */
+  border-radius: 5px; /* Optionnel : arrondir les coins */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optionnel : ajout d'ombre subtile */
+}
+/* css styles */
