@@ -8,6 +8,7 @@ toc-title: "Sommaire"
 toc-location: left
 reference-location: margin
 citation-location: margin
+image: thumbnail.jpg
 ---
 
 ## Qu'est-ce que QGLViewer ?
