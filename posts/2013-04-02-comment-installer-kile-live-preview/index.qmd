@@ -14,7 +14,7 @@ citation-location: margin
 
 <a href="http://fr.wikipedia.org/wiki/Kile" target="_blank" class="broken_link">Kile</a> est un éditeur puissant pour rédiger des documents en <a href="http://fr.wikipedia.org/wiki/LaTeX" target="_blank">LaTeX</a>. C'est LaTeX qui une fois le fichier _compilé,_ génère un document PDF avec une mise en forme parfaite et pouvant contenir des formules mathématiques. A chaque modification il faut donc :
 
-1. Revenir au fichier .tex pour effectuer la modification, puis enregistrer
+1. Revenir au fichier `.tex` pour effectuer la modification, puis enregistrer
 2. Compiler le fichier
 3. Visualiser le résultat sur le PDF qui s'ouvre dans une nouvelle fenêtre
 4. Entrevoir les futures modifications à apporter, fermer la fenêtre, et réitérer 1
@@ -73,7 +73,7 @@ make
 make install
 ```
 
-Enfin on va modifier la variable `PATH` de manière à pouvoir lancer l'exécutable directement par son nom. Ouvrez le fichier `.bashrc` (qui se situe en général dans votre $HOME) et copiez la ligne suivante en fin de fichier :
+Enfin on va modifier la variable `PATH` de manière à pouvoir lancer l'exécutable directement par son nom. Ouvrez le fichier `.bashrc` (qui se situe en général dans votre `$HOME`) et copiez la ligne suivante en fin de fichier :
 
 ```bash
 PATH=$PATH:$HOME/CMAKE/bin/
@@ -89,7 +89,7 @@ Et voilà l'installation de l'outil `CMake` est terminée.
 
   * <span style="color: #0000ff;">Installation des librairies KDE</span>
 
-Il est nécessaire d'avoir une version récente (>= 4.6), pour connaître votre version actuelle tapez  dans un terminal :
+Il est nécessaire d'avoir une version récente (`>= 4.6`), pour connaître votre version actuelle tapez  dans un terminal :
 
 ```bash
 kde-config -v
@@ -114,7 +114,7 @@ make check
 make install
 ```
 
-Remarque : si make check se solde par des échecs sur certains tests ce n'est pas forcément grave, poursuivez tout de même l'installation. Pour plus de détails sur celle-ci consultez le fichier `INSTALL` du dossier.
+Remarque : si `make check` se solde par des échecs sur certains tests ce n'est pas forcément grave, poursuivez tout de même l'installation. Pour plus de détails sur celle-ci consultez le fichier `INSTALL` du dossier.
 
 Si l'installation s'est bien déroulée les exécutables pdf devraient se trouver dans le dossier `/usr/local/bin`.
 
@@ -148,7 +148,7 @@ cmake ../src/okular -DCMAKE_INSTALL_PREFIX=$HOME/kile-livepreview/install -DCMAK
 make install -j 2
 ```
 
-Remarque : si un bug survient au cmake, voir éventuellement plus bas : bug n°1 et n°2_
+Remarque : si un bug survient au cmake, voir éventuellement plus bas : bug n°1 et n°2.
 
   * <span style="color: #0000ff;"><span style="color: #0000ff;">Installation de Kile<br /> </span></span></p> ```bash
 cd ..
