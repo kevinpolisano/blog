@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="quest-ce-que-kile-live-preview">Qu’est-ce que Kile Live Preview ?</h2>
 <p><a href="http://fr.wikipedia.org/wiki/Kile" target="_blank" class="broken_link">Kile</a> est un éditeur puissant pour rédiger des documents en <a href="http://fr.wikipedia.org/wiki/LaTeX" target="_blank">LaTeX</a>. C’est LaTeX qui une fois le fichier <em>compilé,</em> génère un document PDF avec une mise en forme parfaite et pouvant contenir des formules mathématiques. A chaque modification il faut donc :</p>
 <ol type="1">
-<li>Revenir au fichier .tex pour effectuer la modification, puis enregistrer</li>
+<li>Revenir au fichier <code>.tex</code> pour effectuer la modification, puis enregistrer</li>
 <li>Compiler le fichier</li>
 <li>Visualiser le résultat sur le PDF qui s’ouvre dans une nouvelle fenêtre</li>
 <li>Entrevoir les futures modifications à apporter, fermer la fenêtre, et réitérer 1</li>
@@ -234,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Puis on compile et on installe :</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Enfin on va modifier la variable <code>PATH</code> de manière à pouvoir lancer l’exécutable directement par son nom. Ouvrez le fichier <code>.bashrc</code> (qui se situe en général dans votre $HOME) et copiez la ligne suivante en fin de fichier :</p>
+<p>Enfin on va modifier la variable <code>PATH</code> de manière à pouvoir lancer l’exécutable directement par son nom. Ouvrez le fichier <code>.bashrc</code> (qui se situe en général dans votre <code>$HOME</code>) et copiez la ligne suivante en fin de fichier :</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">PATH</span><span class="op">=</span><span class="va">$PATH</span>:<span class="va">$HOME</span>/CMAKE/bin/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Fermez le fichier et dans un terminal rafraîchir en tapant :</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -242,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><span style="color: #0000ff;">Installation des librairies KDE</span></li>
 </ul>
-<p>Il est nécessaire d’avoir une version récente (&gt;= 4.6), pour connaître votre version actuelle tapez&nbsp; dans un terminal :</p>
+<p>Il est nécessaire d’avoir une version récente (<code>&gt;= 4.6</code>), pour connaître votre version actuelle tapez&nbsp; dans un terminal :</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kde-config</span> <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>La dernière version à ce jour est <code>kdelibs5-dev</code></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install kdelibs5-dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> check</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Remarque : si make check se solde par des échecs sur certains tests ce n’est pas forcément grave, poursuivez tout de même l’installation. Pour plus de détails sur celle-ci consultez le fichier <code>INSTALL</code> du dossier.</p>
+<p>Remarque : si <code>make check</code> se solde par des échecs sur certains tests ce n’est pas forcément grave, poursuivez tout de même l’installation. Pour plus de détails sur celle-ci consultez le fichier <code>INSTALL</code> du dossier.</p>
 <p>Si l’installation s’est bien déroulée les exécutables pdf devraient se trouver dans le dossier <code>/usr/local/bin</code>.</p>
 <ul>
 <li><span style="color: #0000ff;">Installation de git</span></li>
@@ -279,7 +279,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build-okular</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> ../src/okular <span class="at">-DCMAKE_INSTALL_PREFIX</span><span class="op">=</span><span class="va">$HOME</span>/kile-livepreview/install <span class="at">-DCMAKE_BUILD_TYPE</span><span class="op">=</span><span class="st">"Debug"</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install <span class="at">-j</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Remarque : si un bug survient au cmake, voir éventuellement plus bas : bug n°1 et n°2_</p>
+<p>Remarque : si un bug survient au cmake, voir éventuellement plus bas : bug n°1 et n°2.</p>
 <ul>
 <li><span style="color: #0000ff;"><span style="color: #0000ff;">Installation de Kile<br> </span></span>
 <p></p>
