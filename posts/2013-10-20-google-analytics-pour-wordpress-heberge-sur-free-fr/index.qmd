@@ -1,0 +1,22 @@
+---
+title: "Google analytics pour Wordpress hébergé sur free.fr"
+author: "Kévin Polisano"
+date: "2013-10-20"
+categories: [wordpress]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/google-analytics.png
+---
+
+**Google Analytics** vous permet d’obtenir tout un tas d’informations vraiment utiles et grâce auxquelles vous pourrez améliorer les performances de votre blog.
+
+Encore une fois free.fr étant assez restrictif, du point de vue communication sortante, et du point de vue mémoire, il n'est pas conseillé d'utiliser Google Analytics via le pluggin Wordpress.
+
+Plutôt, inscrivez vous sur le site de [Google Analytics](http://www.google.com/analytics/) et récupérez le code du script à insérer dans le header.php (juste avant la balise fermante </head>). Vous aurez ensuite accès à toutes les statistiques via votre compte google analytics.
+
+![](images/analytics2.jpg)
+
+La procédure d'installation détaillée est décrite [ici](http://www.virtuose-marketing.com/comment-installer-google-analytics-sur-votre-blog-wordpress/).
