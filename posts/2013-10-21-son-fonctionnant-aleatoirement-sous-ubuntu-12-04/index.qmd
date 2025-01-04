@@ -1,0 +1,28 @@
+---
+title: "Son fonctionnant aléatoirement sous Ubuntu 12.04"
+author: "Kévin Polisano"
+date: "2013-10-21"
+categories: [linux]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/dismute.jpg
+---
+
+Fréquemment il m'arrive qu'il n'y ait plus de son, sans raison apparente, et seul un (ou plusieurs) reboot permet de rétablir le son.
+
+Après avoir essayer multiples manipulations plus compliquées les unes que les autres (réinstallation des librairies de son, kill des processus pulseaudio, etc) il s'est avéré que le problème était en fin de compte tout bête : parfois certains canaux passent en "Mute" et il est nécessaire de changer cette configuration, via la commande :
+
+```bash
+alsamixer
+```
+
+![](images/mute.jpg)
+
+On s'aperçoit de 2 choses : premièrement le canal des hauts parleurs "Headphone" est en mode `Mute` `MM`, et deuxièmement que le mode `Auto-Mute` est activé. Déplacez vous avec les flèches pour vous positionner sur "Headphone" puis appuyez sur la touche `M` pour (dé)activer le "Mute" du canal. De même en vous positionnant sur `Auto-Mute` utilisez la flèche du haut/bas pour désactiver ce mode. On obtient alors :
+
+![](images/dismute.jpg)
+
+Et le son est normalement rétabli...
