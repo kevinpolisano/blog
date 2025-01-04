@@ -1,0 +1,60 @@
+---
+title: "Casse-tête n°3 : une moyenne bien entourée"
+author: "Kévin Polisano"
+date: "2014-07-16"
+categories: [énigme]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/suite.jpg
+---
+
+On m'a récemment suggéré un joli problème tiré des [OIM 2014](https://www.imo-official.org/problems.aspx) qui ont eu lieu le 8 juillet dernier. L'énoncé est le suivant :
+
+::: callout-note
+
+Soit $a_0<a_1<a_2<...$ une suite infinie d'entiers strictement positifs. Prouver qu'il existe un unique entier $n\ge 1$ tel que $$a_n<\frac{a_0+a_1+...+a_n}{n}\le a_{n+1}$$ 
+
+:::
+
+J'ai cherché en vain une jolie solution géométrique en réécrivant le problème comme suit : $$na_n<a_0+a_1+...+a_n\leq na_{n+1}$$
+
+en voyant les $a_0,a_1,...,a_n$ comme des rectangles de largeur 1 et de hauteur $a_i$, et $na_n$ le "gros rectangles" qui les englobent.
+
+Cette écriture m'a ensuite suggéré de retrancher $n$ fois le $a_n$  (comme on fait souvent pour démontrer Césaro en redistribuant une valeur sur chacun des termes) :
+
+$$0<a_0+(a_1-a_n)+(a_2-a_n)+...+(a_{n-1}-a_n)\le n(a_{n+1}-a_n)$$
+
+Mais là ça me plaisait moyen parce que les termes $(a_i-a_n)$ étaient négatifs (puisque la suite est strictement croissante). Qu'à cela ne tienne on les vire de l'autre côté des inégalités :
+
+$$(a_n-a_1)+(a_n-a_2)+...+(a_n-a_{n-1})<a_0$$ $$a_0\le (a_n-a_1)+(a_n-a_2)+...+(a_n-a_{n-1})+ n(a_{n+1}-a_n)$$
+
+Bon et là je pensais faire intervenir une suite auxiliaire croissante et espérer voir apparaître un truc intéressant de part et d'autre, mais non :D
+
+Pourtant je sentais qu'il y avait de l'idée en reformulant le problème par l'encadrement de la valeur $a_0$ avec une suite croissante... Alors je refais marche arrière, et cette fois-ci ce n'est pas les $a_n$ que je déplace, mais les $\displaystyle a_1+...+a_n=\sum_{k=1}^{n}a_k$ :
+
+$$na_n<a_0+a_1+...+a_n\le na_{n+1}\Leftrightarrow na_n-\sum_{k=1}^na_k<a_0\le na_{n+1}-\sum_{k=1}^{n}a_k$$
+
+A gauche on peut faire sauter un des $a_n$ puisqu'il s'annule avec celui de la somme :
+
+$$(n-1)a_n-\sum_{k=1}^{n-1}a_k<a_0\le na_{n+1}-\sum_{k=1}^{n}a_k$$
+
+C'est maintenant qu'on fait rentrer les $a_n$ dans la somme ! :)
+
+$$\sum_{k=1}^{n-1}(a_n-a_k)<a_0\le \sum_{k=1}^{n}(a_{n+1}-a_k)$$
+
+Ca y est on tient le bon bout ! Si je note $b_n=\displaystyle \sum_{k=1}^{n-1}(a_n-a_k)$ alors on a :
+
+$$b_n<a_0\le b_{n+1}$$
+
+Une fois le problème reformulé via cette suite auxiliaire, la résolution devient très simple :
+
+En effet puisque la suite $(a_n)$ est strictement croissante, on a : $$\displaystyle \begin{array}{rcl}b_{n+1}-b_n&=&\displaystyle \sum_{k=1}^{n}(a_{n+1}-a_k)-\sum_{k=1}^{n-1}(a_n-a_k)\\ &=&\displaystyle a_{n+1}-a_n+\sum_{k=1}^{n-1}[(a_{n+1}-a_k)-(a_{n}-a_k)]\\ &=& \displaystyle a_{n+1}-a_n+\sum_{k=1}^{n-1}(a_{n+1}-a_n)\\ &=& n(a_{n+1}-a_n)>0\end{array}$$
+
+Donc la suite d'entiers naturels $(b_n)$ est **strictement croissante** également, avec pour premier terme $b_1=0$.
+
+Ainsi une fois l'entier $a_0>0$ fixé, **il existe un unique rang** $n$ tel que $$b_n<a_0\le b_{n+1}$$
+
+CQFD.
