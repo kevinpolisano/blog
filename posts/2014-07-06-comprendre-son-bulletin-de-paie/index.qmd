@@ -1,0 +1,145 @@
+---
+title: "Comprendre son bulletin de paie"
+author: "Kévin Polisano"
+date: "2014-07-06"
+categories: [impôts]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/fiche-paie-annotation.png
+---
+
+Vous connaissez certainement tous <span style="text-decoration: underline;">la différence entre le salaire brut et le salaire net</span>, mais :
+
+  * **Savez vous comment ces cotisations salariales sont calculées ?**
+  *  **A quoi servent-elles ?** 
+  * **Quel pourcentage de votre salaire brut représentent-elles ?** 
+  * **Avez vous remarqué que votre salaire net imposable était différent du salaire net réellement perçu ?**
+
+Voilà un certain nombre de questions que je me suis posé lorsque que j'ai eu sous le nez ma première fiche de paie, et auxquelles je vais tâcher de répondre.
+
+Pour commencer jetons un oeil à une telle fiche de paie :
+
+![](images/fiche-de-paie-de-kevin.png)
+
+Afin d'y voir plus clair, j'ai annoté et colorié la fiche de paie, ce qui facilitera les explications :
+
+![](images/fiche-paie-annotation.png)
+
+### Comment est calculé votre salaire net à partir du salaire brut ?
+
+Le <span style="color: #ff0000;"><strong>salaire brut</strong></span> est ici l'intégralité de la somme délivrée par le CNRS : <span style="color: #ff0000;"><strong>1757,00 €</strong></span>
+
+De cette somme, on soustrait un certain nombre de <span style="color: #ffcc00;"><strong>cotisations salariales</strong></span> pour obtenir le **<span style="color: #008000;">salaire net</span>** (la somme versée sur notre compte en banque).
+
+<p style="text-align: center;">
+  <strong><span style="color: #008000;">salaire net</span></strong> = <span style="color: #ff0000;"><strong>salaire brut</strong></span> - <strong><span style="color: #ffcc00;"><span style="color: #ffcc00;">cotisations salariales</span></span></strong></p>
+
+<p style="text-align: left;">
+  <em><strong>Remarque</strong> : on ne tient pas compte ici de la dernière colonne qui correspond aux cotisations patronales et qui sont simplement données à titre indicatif.</em></p>
+
+<p style="text-align: center;">
+  <span style="color: #000000;"><strong><span style="color: #008000;">salaire net</span></strong> = <strong><span style="color: #ff0000;">1757,00</span></strong> - <strong><span style="color: #ffcc00;">335,53</span></strong> = <strong><span style="color: #008000;">1421,47 €</span></strong></span></p>
+
+### De quoi sont constituées les cotisations salariales ?
+
+Les cotisations salariales regroupent un certain nombre de <a href="http://fr.wikipedia.org/wiki/Cotisations_sociales" target="_blank" rel="noopener noreferrer">cotisations sociales</a>, sommes qui sont prélevées sur votre salaire brut et collectées par différentes caisses afin d'être redistribuées, elles reposent donc sur un <span style="text-decoration: underline;">principe de solidarité</span>. <span style="text-decoration: underline;">En contrepartie nous bénéficions d’une couverture</span> partielle ou totale de frais divers, engendrés par l'un des grands « risques » que sont le chômage, la vieillesse, la famille, la maladie et les accidents du travail et maladies professionnelles. Ces cotisations permettent entre autres de <span style="text-decoration: underline;">payer nos retraites</span>.
+
+La liste des cotisations (non exhaustive) présentes sur ma fiche de paie est composée de :
+
+  1. **<span style="line-height: 15px; color: #0000ff;">CSG non déductible</span>**
+  2. **<span style="color: #0000ff;">Contribution au Remboursement de la Dette Sociale (CRDS)</span>**
+  3. **CSG déductible**
+  4. <span style="color: #33cccc;"><strong>Cotisation assurance maladie</strong></span>
+  5. **<span style="color: #33cccc;">Cotisation assurance vieillesse sur le salaire Total</span>**
+  6. **<span style="color: #33cccc;">Cotisation assurance vieillesse sur le salaire plafonné</span>**
+  7. **<span style="color: #800080;">Contribution exceptionnelle de solidarité</span>**
+  8. <span style="color: #33cccc;"><strong>Ircantec tranche A</strong></span>
+
+<span style="text-decoration: underline;">Explications</span> :
+
+- On peut voir que je cotise pour l'<a href="http://fr.wikipedia.org/wiki/Assurance_maladie_en_France" target="_blank" rel="noopener noreferrer">assurance maladie</a>, qui nous protège des cinq risques suivants : maternité, maladie, accidents du travail/maladies professionnelles, invalidité, décès. Elle finance près de 75 % des dépenses de santé.  
+- Je cotise également pour l'<a href="http://fr.wikipedia.org/wiki/Caisse_nationale_de_l%27assurance_vieillesse_des_travailleurs_salariés" target="_blank" rel="noopener noreferrer">assurance vieillesse</a>, qui gère la retraite des salariés "classiques", c'est-à-dire hors secteur agricole et fonction publique. La cotisation est composée de 2 taux distincts, l'un s'appliquant au salaire total, et l'autre à la part de salaire qui est inférieure au <a href="http://fr.wikipedia.org/wiki/Plafond_de_la_Sécurité_sociale" target="_blank" rel="noopener noreferrer">plafond de la sécurité sociale</a>.  
+- A cette dernière cotisation s'ajoute l'<a href="http://fr.wikipedia.org/wiki/Ircantec" target="_blank" rel="noopener noreferrer">Ircantec</a> (appliquée sur la tranche A également), qui est un régime de <a href="http://fr.wikipedia.org/wiki/Retraite_complémentaire" target="_blank" rel="noopener noreferrer">retraite complémentaire</a>, qui comme son nom l'indique complète la retraite de la caisse d'assurance vieillesse.  
+- Une contribution exceptionnelle de la solidarité, destinée à financer l’aide de l’État aux allocations de solidarité versées aux travailleurs privés d’emploi qui ne peuvent en raison de leur situation personnelle, bénéficier du régime d’assurance chômage.  
+- La CSG (<a href="http://fr.wikipedia.org/wiki/Contribution_sociale_généralisée" target="_blank" rel="noopener noreferrer">Contribution Sociale Généralisée</a>), qui est "un impôt assis sur l’ensemble des revenus des personnes résidant en France. À la différence des cotisations sociales qui ne portent que sur les revenus d’activité, la CSG concerne, outre les revenus d’activité et de remplacement (allocations chômage, indemnités journalières), les revenus du patrimoine, les produits de placement ou les sommes engagées ou redistribuées par les jeux. La CSG **vise à diversifier le mode de financement de la protection sociale** qui, avant la création de cet impôt, reposait essentiellement sur les cotisations sociales et ne concernait que les salariés." L'impôt CSG est composée d'une part déductible et non déductible des ... impôts ! Nous y reviendrons.  
+- Vient enfin la CRDS (<a href="http://fr.wikipedia.org/wiki/Contribution_pour_le_remboursement_de_la_dette_sociale" target="_blank" rel="noopener noreferrer">Contribution pour le remboursement de la dette sociale</a>), est un impôt créé dans le but de résorber la dette de la sécurité sociale.
+
+### Comment les cotisations salariales sont-elle calculées ?
+
+Le taux (en pourcentage) de chacune des ces cotisations est donné dans la colonne "Taux du nombre", et s'applique au nombre correspondant de la colonne "Base" qui est en général le salaire brut. Sauf pour la <span style="color: #ff6600;">CSG/CRDS</span> et la <span style="color: #800080;">Contribution solidarité</span> dont la base est différente. Le résultat Taux*Base figure dans la colonne "A déduire".
+
+- La base de la CSG/CRDS correspond à **<span style="color: #ff6600;">98,25%</span>** du **<span style="color: #ff0000;">salaire brut</span>**, soit effectivement :<em id="__mceDel"> </em>**<span style="color: #ff6600;">0,9825</span>*****<span style="color: #ff0000;">1757</span>** = **<span style="color: #ff6600;">1726,25</span>** €.
+
+<p style="text-align: left;">
+  - La base de Contribution Exceptionnelle de Solidarité, se calcule en soustrayant au salaire brut les cotisations vieillesses (Tot, PL, Ircantec) et maladies, soit : <strong><span style="color: #ff0000;">1757</span></strong>-<strong><span style="color: #33cccc;">13,18</span></strong>-<strong><span style="color: #33cccc;">4,49</span></strong>-<strong><span style="color: #33cccc;">119,48</span></strong>-<strong><span style="color: #33cccc;">44,63</span></strong> = <strong><span style="color: #800080;">1575,32 €</span></strong>.</p>
+
+<p style="text-align: left;">
+  En ajoutant toutes les cotisations en jaune on obtient le montant des cotisations salariales :</p>
+
+<p style="text-align: center;">
+  <span style="color: #ffcc00;"><strong>cotisations salariales</strong></span> = 41,43+8,63+88,04+13,18+4,39+119,48+17,75+44,63       = <strong><span style="color: #ffcc00;">335,53 €</span></strong></p>
+
+### Quel pourcentage du salaire brut représentent-elles ?
+
+Pour y répondre il faut dans un premier temps faire en sorte que <span style="text-decoration: underline;">tous les taux s'appliquent à la même base</span>, à savoir le salaire brut :
+
+- La base de la CSG/CRDS correspond à <span style="color: #ff6600;">98,25 %</span> du salaire brut, donc cela revient au même de garder la base du salaire brut et de multiplier les taux par 98,25%. Ainsi les nouveaux taux sont les suivants :
+
+**CSG non déductible** = 2,40 x <span style="color: #ff6600;">0,9825</span> = **2,358**  
+**CRDS** = 0,5 x <span style="color: #ff6600;">0,9825</span> = **0,481**  
+**CSG déductible** = 5,10 x <span style="color: #ff6600;">0,9825</span> = **5,01**
+
+- La base de la Contribution solidarité, on l'a vu, se calculait comme suit :
+
+<p style="text-align: center;">
+  <span style="color: #ff0000;"><strong>1757</strong></span>-<span style="color: #00ccff;"><strong>13,18</strong>-<strong>4,49</strong>-<strong>119,48</strong>-<strong>44,63</strong></span> = <span style="color: #800080;"><strong>1575,32 €</strong></span>.</p>
+
+ Autrement dit : **1757 x (<span style="color: #ff0000;">1</span>-<span style="color: #00ccff;">0,75%-0,25%-6,80%-2,54%</span>)** = <span style="color: #800080;"><strong>1575,32 €</strong></span>.
+
+Le nouveau taux est donc : **1-0,75%-0,25%-6,80%-2,54% = 0,896 %**
+
+En sommant tous les taux de cotisations on obtient finalement :
+
+<p style="text-align: center;">
+  <span style="color: #ffcc00;"><strong>cotisations salariales</strong></span> = <strong><span style="color: #008000;">19,1 %</span></strong> du <strong><span style="color: #ff0000;">salaire brut</span></strong></p>
+
+<p style="text-align: left;">
+  <em><strong>Remarque</strong> : en moyenne on estime que les cotisations salariales représentent 22 % du salaire brut.</em></p>
+
+<p style="text-align: left;">
+  On peut alors s'amuser à donner le salaire net en fonction du brut, de même le salaire net imposable en fonction du brut ou encore le salaire net imposable en fonction du salaire net, et <em>vice versa</em>.</p>
+
+<p style="text-align: center;">
+  ![](images/tableau-pourcentage.png)</p>
+
+<a name="smicimposable"></a>
+
+<p style="text-align: left;">
+  <span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Calcul du smic net imposable 2014</span></p>
+
+<p style="text-align: center;">
+  <strong><span style="color: #ff00ff;">smic net imposable</span> = <span style="color: #008000;">smic net</span> + <span style="color: #0000ff;">CSG non déductible + CRDS</span></strong></p>
+
+<p style="text-align: left;">
+  D'après le tableau précédent: <strong><span style="color: #0000ff;">CSG non déductible+CRDS</span>=(<span style="color: #ff6600;">2,36 %</span>+<span style="color: #ff6600;">0,49%</span>)x<span style="color: #ff0000;">smic brut</span></strong></p>
+
+<p style="text-align: left;">
+  Comme à ce jour on a : <strong><span style="color: #ff0000;">smic brut</span> = 1445,38 €</strong> et <strong><span style="color: #008000;">smic net</span> = 1128,70 €</strong></p>
+
+<p style="text-align: center;">
+  <strong><span style="color: #ff00ff;">smic net imposable</span> = <span style="color: #008000;">1128,70</span> + (<span style="color: #ff6600;">2,36%</span>+<span style="color: #ff6600;">0,49%</span>)x<span style="color: #ff0000;">1445,38</span> = <span style="color: #ff00ff;">1173,36</span></strong></p>
+
+### Pourquoi le salaire net imposable est-il supérieur au net perçu ?
+
+Ce constat un peu curieux, réside dans le fait que le salaire net imposable est obtenu en ajoutant au salaire net perçu la CSG non déductible et la CRDS :
+
+<p style="text-align: center;">
+  <span style="color: #ff00ff;"><strong>salaire net imposable</strong></span> = <strong><span style="color: #008000;">salaire net perçu</span></strong> + <strong><span style="color: #0000ff;">CSG non déductible</span></strong> + <span style="color: #0000ff;"><strong>CRDS</strong></span></p>
+
+<p style="text-align: left;">
+  <p style="text-align: left;">
+    <em> </em></p>
+
