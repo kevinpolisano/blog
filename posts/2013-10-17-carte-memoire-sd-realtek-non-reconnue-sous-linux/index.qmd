@@ -8,7 +8,7 @@ toc-title: "Sommaire"
 toc-location: left
 reference-location: margin
 citation-location: margin
-image: images/carte-sd.jpg
+image: images/card-sd.jpg
 ---
 
 Par défaut ma carte mémoire SD n'était pas reconnue sous Ubuntu, ce qui m'obligeait à redémarrer sous Windows pour transférer mes photos/vidéos. Le problème est en fait lié au lecteur de carte Realtek. En effet si on jette un oeil au matériel via la commande :
