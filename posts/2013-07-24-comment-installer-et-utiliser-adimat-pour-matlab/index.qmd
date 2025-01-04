@@ -8,7 +8,7 @@ toc-title: "Sommaire"
 toc-location: left
 reference-location: margin
 citation-location: margin
-image: images/rlogo.png
+image: images/matlablogo.jpg
 ---
 
 ## Qu'est-ce que ADiMat ?
