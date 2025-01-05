@@ -1,0 +1,17 @@
+.lightbox-gallery img {
+    width: 150px; /* Ajustez la taille des miniatures */
+    height: auto; /* Conservez le ratio d'aspect */
+    margin: 5px; /* Espacement entre les images */
+    display: inline-block; /* Positionnement côte-à-côte */
+    cursor: pointer; /* Curseur interactif */
+}
+
+.lightbox-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacement entre les images */
+}
+.lightbox-gallery img {
+    flex: 1 1 auto;
+    max-width: 150px;
+}
