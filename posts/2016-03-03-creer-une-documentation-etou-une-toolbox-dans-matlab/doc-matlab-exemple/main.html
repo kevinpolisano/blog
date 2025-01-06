@@ -1,0 +1,232 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Denoising and deblurring an image containing K blurred lines</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-03-02"><meta name="DC.source" content="main.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Denoising and deblurring an image containing K blurred lines</h1><!--introduction--><div><ul><li>Generate <img src="main_eq14888.png" alt="$K$"> lines with parameters <img src="main_eq00010.png" alt="$(\theta_k,\alpha_k,\eta_k)$">, blurred with a spread, in an image of size <img src="main_eq44095.png" alt="$W\times H$"> degraded by noise</li><li>Launch the minimization algorithm with parameters <img src="main_eq31572.png" alt="$(Nbiter,\rho,\tau,c)$"></li><li>From the solution <img src="main_eq12401.png" alt="$\hat w_r^{\ast}$">, estimate the lines by Prony</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">DATA GENERATION</a></li><li><a href="#5">MINIMIZATION ALGORITHM</a></li><li><a href="#6">IMAGE RECONSTRUCTION AND LINES ESTIMATION</a></li></ul></div><h2>DATA GENERATION<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>; close <span class="string">all</span>;
+</pre><p>Add current folder and all subfolders to the path</p><pre class="codeinput">tmp=which(<span class="string">'main'</span>);          <span class="comment">% complete path to the main file</span>
+index=strfind(tmp,<span class="string">'/'</span>);     <span class="comment">% index of '/' into the string tmp</span>
+p=tmp(1:index(end));        <span class="comment">% folder which contains the file</span>
+addpath(genpath(p));        <span class="comment">% add folder and its subfolders to the path</span>
+clear <span class="string">tmp</span> <span class="string">p</span> <span class="string">index</span>           <span class="comment">% clear these temporary variables</span>
+
+W=65;               <span class="comment">% image width (must be odd W=2M+1)</span>
+H=65;               <span class="comment">% image height</span>
+K=3;                <span class="comment">% number of lines</span>
+spread=1;           <span class="comment">% std of the gaussian blur</span>
+noiselevel=0;     <span class="comment">% level of noise</span>
+randomgen=0;        <span class="comment">% boolean if lines are generated randomly of manually</span>
+rng(0);             <span class="comment">% seed of random numbers generator</span>
+plotData=1;         <span class="comment">% display images v, x and y</span>
+plotComp=0;         <span class="comment">% display others comparaisons theo vs. emp</span>
+
+t_k = zeros(1,K);   <span class="comment">% array containing angles of lines</span>
+a_k = zeros(1,K);   <span class="comment">% array containing amplitude of lines</span>
+p_k = zeros(1,K);   <span class="comment">% array containing offset of lines</span>
+<span class="keyword">for</span> k=1:K
+    <span class="keyword">if</span> randomgen
+        t_k(k)=rand*pi/2-pi/4;       <span class="comment">% angle varying between -pi/4 and pi/4</span>
+        a_k(k)=(0.2+0.7*rand)*255;   <span class="comment">% amplitude varying between 0.2 and 1</span>
+        p_k(k)=rand*W-(W-1)/2;       <span class="comment">% offset varying betweeen -M and M</span>
+    <span class="keyword">else</span>
+        t_k(k)=(-1)^k*pi/6;
+        a_k(k)=255;
+        p_k(k)=0;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><p>This has to be commented if you want to test with another number of lines and other parameters, possibly randoms.</p><pre class="codeinput">t_k=[pi/6 -pi/5 pi/16];
+a_k=[255 255 255];
+p_k=[10 0 -15];
+</pre><p>Generation of the data</p><pre class="codeinput">data_generation;    <span class="comment">% Generate the blurred image xstar</span>
+                    <span class="comment">% of these K lines with additional</span>
+                    <span class="comment">% noise y=xstar+randn(H,W)*noiselevel</span>
+</pre><img vspace="5" hspace="5" src="main_01.png" alt=""> <h2>MINIMIZATION ALGORITHM<a name="5"></a></h2><pre class="codeinput">Nbiter=2000;            <span class="comment">% number of iterations</span>
+rho=1.9;                <span class="comment">% weigth coefficient</span>
+tau=150000000;          <span class="comment">% primal step (sigma is then computed from tau)</span>
+c=sum(a_k./cos(t_k));   <span class="comment">% theoritical atomic norm of each line</span>
+plotError=1;            <span class="comment">% compute and display error</span>
+displayIter=0;          <span class="comment">% display the counter iteration</span>
+algo=2;                 <span class="comment">% choose the minimization algorithm to use</span>
+
+<span class="keyword">switch</span> algo
+    <span class="keyword">case</span> 2                      <span class="comment">% Algorithm 2 find by minimization an</span>
+        minimization_Chambolle; <span class="comment">% approximation wr of wstar which is the</span>
+                                <span class="comment">% horizontal Fourier transform of the</span>
+                                <span class="comment">% deblurred image sstar</span>
+    <span class="keyword">otherwise</span>
+        minimization_Condat;    <span class="comment">% Algorithm 1 converges toward the same</span>
+                                <span class="comment">% solution but is slower than Algorithm 2</span>
+                                <span class="comment">% Note that it needs rho&lt;=1 and tau&lt;1.9</span>
+                                <span class="comment">% For the given example take rho=1, tau=1.7</span>
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Elapsed time is 259.959483 seconds.
+</pre><img vspace="5" hspace="5" src="main_02.png" alt=""> <img vspace="5" hspace="5" src="main_03.png" alt=""> <img vspace="5" hspace="5" src="main_04.png" alt=""> <h2>IMAGE RECONSTRUCTION AND LINES ESTIMATION<a name="6"></a></h2><p>Reconstruct the denoised image xstar from wstar:</p><pre class="codeinput">resynthesis;
+</pre><img vspace="5" hspace="5" src="main_05.png" alt=""> <p>Estimate lines parameters and display it</p><pre class="codeinput">cstar=sum(a_k./cos(t_k));  <span class="comment">% theoritical atomic norm of each line</span>
+coef=cstar/c;              <span class="comment">% factor between experimental and true amplitude</span>
+prony;
+</pre><pre class="codeoutput">thetamean = -0.62837     0.17872      0.5198
+alphamean = 647.0155      642.9302      633.8648
+eta = -0.179142     -14.9009      10.2207
+(thetamean-t_k)/t_k = 8.7911e-05   -0.089811  -0.0072628
+(alphamean*coef-a_k)/a_k = 0.012517   0.0061234  -0.0080631
+eta-p_k = -0.17914    0.099138     0.22073
+</pre><img vspace="5" hspace="5" src="main_06.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Denoising and deblurring an image containing K blurred lines 
+% * Generate $K$ lines with parameters $(\theta_k,\alpha_k,\eta_k)$, 
+% blurred with a spread, in an image of size $W\times H$ degraded by noise
+% * Launch the minimization algorithm with parameters $(Nbiter,\rho,\tau,c)$
+% * From the solution $\hat w_r^{\ast}$, estimate the lines by Prony        
+
+%% DATA GENERATION
+
+clear all; close all;
+
+%%
+% Add current folder and all subfolders to the path
+
+tmp=which('main');          % complete path to the main file
+index=strfind(tmp,'/');     % index of '/' into the string tmp              
+p=tmp(1:index(end));        % folder which contains the file
+addpath(genpath(p));        % add folder and its subfolders to the path 
+clear tmp p index           % clear these temporary variables
+
+W=65;               % image width (must be odd W=2M+1)
+H=65;               % image height
+K=3;                % number of lines
+spread=1;           % std of the gaussian blur
+noiselevel=0;     % level of noise
+randomgen=0;        % boolean if lines are generated randomly of manually
+rng(0);             % seed of random numbers generator
+plotData=1;         % display images v, x and y
+plotComp=0;         % display others comparaisons theo vs. emp
+
+t_k = zeros(1,K);   % array containing angles of lines
+a_k = zeros(1,K);   % array containing amplitude of lines
+p_k = zeros(1,K);   % array containing offset of lines
+for k=1:K
+    if randomgen
+        t_k(k)=rand*pi/2-pi/4;       % angle varying between -pi/4 and pi/4
+        a_k(k)=(0.2+0.7*rand)*255;   % amplitude varying between 0.2 and 1
+        p_k(k)=rand*W-(W-1)/2;       % offset varying betweeen -M and M
+    else 
+        t_k(k)=(-1)^k*pi/6;
+        a_k(k)=255;
+        p_k(k)=0;
+    end
+end
+
+%%
+% This has to be commented if you want to test with another number of
+% lines and other parameters, possibly randoms.
+t_k=[pi/6 -pi/5 pi/16];
+a_k=[255 255 255];
+p_k=[10 0 -15];
+
+%%
+% Generation of the data
+
+data_generation;    % Generate the blurred image xstar 
+                    % of these K lines with additional 
+                    % noise y=xstar+randn(H,W)*noiselevel
+
+%% MINIMIZATION ALGORITHM
+
+Nbiter=2000;            % number of iterations
+rho=1.9;                % weigth coefficient
+tau=150000000;          % primal step (sigma is then computed from tau)
+c=sum(a_k./cos(t_k));   % theoritical atomic norm of each line
+plotError=1;            % compute and display error
+displayIter=0;          % display the counter iteration
+algo=2;                 % choose the minimization algorithm to use
+
+switch algo
+    case 2                      % Algorithm 2 find by minimization an
+        minimization_Chambolle; % approximation wr of wstar which is the
+                                % horizontal Fourier transform of the 
+                                % deblurred image sstar
+    otherwise
+        minimization_Condat;    % Algorithm 1 converges toward the same
+                                % solution but is slower than Algorithm 2
+                                % Note that it needs rho<=1 and tau<1.9
+                                % For the given example take rho=1, tau=1.7
+end
+
+%% IMAGE RECONSTRUCTION AND LINES ESTIMATION
+
+%%
+% Reconstruct the denoised image xstar from wstar:
+
+resynthesis;               
+
+%%
+% Estimate lines parameters and display it
+
+cstar=sum(a_k./cos(t_k));  % theoritical atomic norm of each line
+coef=cstar/c;              % factor between experimental and true amplitude
+prony;              
+
+##### SOURCE END #####
+--></body></html>
