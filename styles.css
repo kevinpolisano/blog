@@ -15,3 +15,13 @@
     flex: 1 1 auto;
     max-width: 150px;
 }
+
+blockquote {
+    font-size: 1.5em; /* Taille de la citation */
+    font-style: italic; /* Style italique pour le texte */
+    color: #555; /* Couleur du texte */
+    border-left: 4px solid #ccc; /* Barre verticale décorative */
+    padding-left: 1em; /* Espacement avec la barre */
+    position: relative; /* Nécessaire pour placer les guillemets */
+}
+

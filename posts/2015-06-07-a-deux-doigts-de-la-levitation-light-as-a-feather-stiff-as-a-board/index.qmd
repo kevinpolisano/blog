@@ -16,7 +16,7 @@ lightbox:
   loop: true
 ---
 
-_Au cours d'une formation de l'école doctorale, j'ai eu l'occasion de suivre un cours de [zététique](http://fr.wikipedia.org/wiki/Zététique), qui est une displicine scientifique qui étudie de manière rationnelle les phénomènes présentés comme paranormaux, des pseudosciences et des thérapies étranges. C'est Richard Monvoisin, membre fondateur du **COllectif de Recherche Transdisciplinaire Esprit Critique & Science** ([Cortecs](http://cortecs.org)) qui nous a initié, moi ainsi que d'autres doctorants, à la zététique. Afin de mettre en application les quelques procédés d'autodéfense intellectuelle qui m'ont été suggérés, j'ai choisi de traiter l'expérience très répandue suivante._
+Au cours d'une formation de l'école doctorale, j'ai eu l'occasion de suivre un cours de [zététique](http://fr.wikipedia.org/wiki/Zététique), qui est une displicine scientifique qui étudie de manière rationnelle les phénomènes présentés comme paranormaux, des pseudosciences et des thérapies étranges. C'est Richard Monvoisin, membre fondateur du **COllectif de Recherche Transdisciplinaire Esprit Critique & Science** ([Cortecs](http://cortecs.org)) qui nous a initié, moi ainsi que d'autres doctorants, à la zététique. Afin de mettre en application les quelques procédés d'autodéfense intellectuelle qui m'ont été suggérés, j'ai choisi de traiter l'expérience très répandue suivante.
 
 # La lévitation en groupe
 
@@ -24,13 +24,13 @@ _Au cours d'une formation de l'école doctorale, j'ai eu l'occasion de suivre un
 
 Il s'agit d'un jeu dérivé de "[Light as a feather, stiff as a board](http://en.wikipedia.org/wiki/Light_as_a_feather,_stiff_as_a_board)" (léger comme une plume, raide comme une planche) qui consiste pour un groupe, de pouvoir faire léviter sur sa chaise une tierce personne. Historiquement ce jeu remonte au XVIIe siècle à Londres, et l'histoire nous ait rapportée par [Samuel Pepys](http://en.wikipedia.org/wiki/Samuel_Pepys), qui aurait vu des petites filles soulever un garçon (puis un cuisinier bien plus gros) avec une facilité déconcertante en chantant l'incantation suivante :
 
-```
-Voici un corps mort
-Raide comme un bâton,
-Froid comme le marbre
-Léger comme un esprit,
+> Voici un corps mort  
+Raide comme un bâton,  
+Froid comme le marbre 
+Léger comme un esprit,  
 Lève-toi au nom de Jésus-Christ!
-```
+
+
 
  **Comment y joue-t-on ?**
 
@@ -55,9 +55,7 @@ Ce qui suit donne une liste de phénomènes physiques et psychologiques qui, com
 
 ## 1) On sous estime la force de nos index !
 
-Physiquement parlant, quatre personnes sont tout à fait capable de soulever un individu de 100 kg uniquement à l'aide de leurs index. En pratique vous pouvez facilement soulever à vous seul entre 20 et 30 kg ! Si, si ! Même que [Louis Cyr](http://fr.wikipedia.org/wiki/Louis_Cyr) a réussi à soulever 251 kg d'un seul doigt[^rec] 
-
-[^rec]: Records officiels de Louis Cyr - [lien](http://louiscyr.connexion-lanaudiere.ca/e8.htm)
+Physiquement parlant, quatre personnes sont tout à fait capable de soulever un individu de 100 kg uniquement à l'aide de leurs index. En pratique vous pouvez facilement soulever à vous seul entre 20 et 30 kg ! Si, si ! Même que [Louis Cyr](http://fr.wikipedia.org/wiki/Louis_Cyr) a réussi à soulever 251 kg d'un seul doigt.
 
 Un simple calcul montre que chacune des 4 personnes devra donc soulever :
 
