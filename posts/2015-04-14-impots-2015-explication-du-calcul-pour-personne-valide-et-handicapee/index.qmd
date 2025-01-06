@@ -88,7 +88,7 @@ Pour calculer le revenu brut, vous devrez faire l'addition sur l'année des :
   * **Plus-values immobilières, sur valeurs mobilières, sur biens meubles, professionnelles**
   * **Rémunérations des dirigeants de société**
 
-Dans notre cas puisque l'on considère uniquement les revenus issus des salaires perçus, le **revenu brut** se réduit aux **salaires imposables**. Le salaire imposable est mentionné sur votre bulletin de paie (cf.[Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)).
+Dans notre cas puisque l'on considère uniquement les revenus issus des salaires perçus, le **revenu brut** se réduit aux **salaires imposables**. Le salaire imposable est mentionné sur votre bulletin de paie (cf. [Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)).
 
 **--> Que faut-il déclarer aux impôts dans la case 1AJ ?**
 
