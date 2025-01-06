@@ -1,0 +1,136 @@
+---
+title: "Supprimer la bordure blanche d'une image EPS en modifiant la BoundingBox"
+author: "Kévin Polisano"
+date: "2016-01-31"
+categories: [matlab]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/Bordure_blanche_fine.png
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
+---
+
+Lorsque l'on exporte une image au format `.eps` il arrive qu'un cadre blanc, une bordure blanche, entoure l'image que l'on visualise (dans mon cas avec le lecteur Aperçu de Mac OS X). Par exemple, cette image générée à partir de Matlab :
+
+```matlab
+figure; 
+imagesc(monimage); 
+colormap gray; 
+axis image; 
+set(gca,'xtick',[],'ytick',[]); 
+set(gcf,'color','w');
+```
+
+Si on l'enregistre simplement avec `save` voilà ce qu'on visualise :
+
+![](images/bordure-blanche-epaisse.png)
+
+Insérer cette image dans un fichier TeX serait **esthétiquement mauvais** du fait du gaspillage de place important imposé par cette bordure !
+
+Qu'à cela ne tienne, il existe des solutions dans Matlab pour réduire fortement cette bordure, notamment [print](http://fr.mathworks.com/help/matlab/ref/print.html) et [export\_fig](http://www.mathworks.com/matlabcentral/fileexchange/23629-export-fig) pour ne citer qu'elles. La première ne nécessite aucun téléchargement supplémentaire, donc allons-y :
+
+```matlab
+figure; 
+imagesc(monimage); 
+colormap gray; 
+axis image; 
+set(gca,'xtick',[],'ytick',[]); 
+set(gcf,'color','w');
+print -depsc -r300 monimage.eps % ou bien export_fig('monimage.eps');
+```
+
+Visualisation le résultat :
+
+![](images/Bordure_blanche_fine.png){width=60% fig-align="center"}
+
+C'est mieux, mais **il subsiste toujours une fine bordure blanche** !
+
+Alors comment procéder ? Je vous propose quatre solutions :
+
+- **Modifier manuellement la** `BoundingBox` de `monimage.eps` :
+
+Pour connaître ses dimensions tapez la commande suivante dans un terminal (dans le répertoire contenant votre image).
+
+```bash
+gs -dNOPAUSE -dBATCH -q -sDEVICE=bbox monimage.eps
+```
+
+Cela devrait vous renvoyer quelque chose comme :
+
+```bash
+%%BoundingBox: 3 0 346 343
+%%HiResBoundingBox: 3.240000 0.486000 345.599989 342.758943
+```
+
+Cela signifie que vous devez remplacer les coordonnées de la première ligne par celles calculées dans la seconde dans le fichier monimage.eps. Pour cela ouvrez monimage.eps en mode texte (pour ma part je l'ouvre avec TextEdit) et modifier les coordonnées de BoundingBox :
+
+![](images/en-tete-bounding-box.png)
+
+-  **Modifier automatiquement la BoundingBox** à partir d'[Epstool](http://pages.cs.wisc.edu/~ghost/gsview/epstool.htm)
+
+Tapez dans le terminal :
+
+```bash
+epstool --copy --bbox monimage.eps monimagecorrigee.eps
+```
+
+Bien sûr il faut avoir au préalable installer epstool sur sa machine. Sous Unix (Linux, Mac) on peut le faire simplement grâce à brew :
+
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+brew install epstool
+```
+
+**Remarque** : avec la dernière mise à jour de Mac "El Capitan" les permissions d'écriture dans les répertoires `usr/`, `System/` et `bin/` sont plus restrictives si vous n'êtes pas en root. Pour obtenir l'autorisation tapez la commande suivante :
+
+```bash
+sudo chown -R $(whoami):admin /usr/local
+```
+
+- **Modifier automatiquement la BoundingBox** avec [ps2epsi](http://www.ghostscript.com/doc/9.05/Ps2epsi.htm)
+
+Cette solution, fournie par Ghostscript, est certainement la plus simple :
+
+```bash
+ps2epsi monimage.eps monimagecorrigee.eps
+```
+
+Dans les trois solutions proposées, on obtient la visualisation suivante :
+
+![](images/bordure-blanche-supprimee.png){width=60% fig-align="center"}
+
+Cette fois la bordure a été **(presque) complètement supprimée** **!**
+
+Une **quatrième solution** consiste à exporter l'image non pas directement en `.eps`, mais en premier lieu en bitmap sans perte, par exemple au format `TIFF`, puis de convertir cette image en `.eps` via la commande [tif2eps](https://www.ctan.org/pkg/tif2eps).
+
+- **Ecrire l'image au format .tif** :
+
+```bash
+imwrite(uint8(image),'image.tif')
+```
+
+- **Installation de tif2eps** :
+
+Télécharger l'archive à [cette adresse](https://www.ctan.org/pkg/tif2eps). Elle comporte 3 fichiers : `tif2eps`, `tif2eps.bat` et `tif2eps.ps`. Copier les deux premiers dans le dossier de votre PATH système. Pour savoir où cela se situe, tapez dans le shell (invite des commandes) :
+
+```bash
+echo $PATH
+```
+
+qui me renvoie `/usr/local/bin/`. C'est donc dans ce dossier que je dois copier tif2eps et tif2eps.bat. Enfin le troisième fichier tif2eps.ps doit être copié dans le répertoire suivant : `/usr/local/share/ghostscript/<version>/lib/`. Vous devez avoir Ghostscript d'installé.
+
+- Convertir l'image `TIFF` en `EPS` :
+
+```
+tif2eps image.tif
+```
+
+vous produit un fichier image.eps dont **la bordure a été complètement supprimée !**
+
+![](images/supprimer-bordure-bounding.png){width=60% fig-align="center"}
