@@ -12,7 +12,7 @@ image: images/LoG_2D.jpg
 ---
 
 
-Un billet suite à la question d'une étudiante au sujet du [TP](http://www.kevinpolisano.com/Formation/Ensimag2A/TP/ti_sujet_tp3.pdf) de traitement d'image.
+Un billet suite à la question d'une étudiante au sujet du TP de traitement d'image.
 
 Dans la partie _Opérateurs laplacien et FFT_, on demande d'approximer le filtre Laplacien par une couronne dans le domaine fréquentiel. Sa question est la suivante :
 
