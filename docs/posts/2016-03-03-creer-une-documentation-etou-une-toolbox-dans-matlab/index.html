@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2016-03-03">
+
+<title>Créer une documentation et/ou une Toolbox dans Matlab – Blog de Kévin Polisano</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog de Kévin Polisano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Kévin Polisano</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Créer une documentation et/ou une Toolbox dans Matlab</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">matlab</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 3, 2016</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#structurer-son-code-matlab-en-bonne-et-due-forme" id="toc-structurer-son-code-matlab-en-bonne-et-due-forme" class="nav-link active" data-scroll-target="#structurer-son-code-matlab-en-bonne-et-due-forme">Structurer son code Matlab en bonne et due forme</a></li>
+  <li><a href="#générer-la-doc-html-de-chaque-fichier-.m-via-la-commande-publish" id="toc-générer-la-doc-html-de-chaque-fichier-.m-via-la-commande-publish" class="nav-link" data-scroll-target="#générer-la-doc-html-de-chaque-fichier-.m-via-la-commande-publish">Générer la doc html de chaque fichier .m via la commande publish</a></li>
+  <li><a href="#créer-un-index-pour-organiser-les-pages-html-entre-elles" id="toc-créer-un-index-pour-organiser-les-pages-html-entre-elles" class="nav-link" data-scroll-target="#créer-un-index-pour-organiser-les-pages-html-entre-elles">Créer un index pour organiser les pages html entre elles</a></li>
+  <li><a href="#produire-une-toolbox-accessible-dans-le-help-browser-de-matlab" id="toc-produire-une-toolbox-accessible-dans-le-help-browser-de-matlab" class="nav-link" data-scroll-target="#produire-une-toolbox-accessible-dans-le-help-browser-de-matlab">Produire une Toolbox accessible dans le <em>Help Browser</em> de Matlab</a></li>
+  <li><a href="#annexe-1-générer-un-fichier-contents.m-listant-tous-les-help-descriptions" id="toc-annexe-1-générer-un-fichier-contents.m-listant-tous-les-help-descriptions" class="nav-link" data-scroll-target="#annexe-1-générer-un-fichier-contents.m-listant-tous-les-help-descriptions">Annexe 1 : générer un fichier Contents.m listant tous les <em>help descriptions</em></a></li>
+  <li><a href="#annexe-2-générer-la-documentation-dans-un-fichier-.pdf-ou-.tex" id="toc-annexe-2-générer-la-documentation-dans-un-fichier-.pdf-ou-.tex" class="nav-link" data-scroll-target="#annexe-2-générer-la-documentation-dans-un-fichier-.pdf-ou-.tex">Annexe 2 : générer la documentation dans un fichier .pdf ou .tex</a>
+  <ul class="collapse">
+  <li><a href="#commençons-par-lexport-au-format-.pdf" id="toc-commençons-par-lexport-au-format-.pdf" class="nav-link" data-scroll-target="#commençons-par-lexport-au-format-.pdf"><strong>Commençons par l’export au format .pdf</strong></a></li>
+  <li><a href="#comment-générer-un-fichier-.tex-de-documentation-via-la-commande-publish" id="toc-comment-générer-un-fichier-.tex-de-documentation-via-la-commande-publish" class="nav-link" data-scroll-target="#comment-générer-un-fichier-.tex-de-documentation-via-la-commande-publish">Comment générer un fichier .tex de documentation via la commande publish ?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Cet article va vous expliquer comment créer une jolie doc pour vos programmes Matlab 🙂</p>
+<p>A titre d’exemple, voici le lien vers la documentation de la Toolbox de mon dernier papier de recherche (voir rubrique Publications pour télécharger l’archive des sources) :</p>
+<p><a href="doc-matlab-exemple/index.html">Mon exemple de documentation html</a></p>
+<p>dont je vous extrais une partie en screenshot :</p>
+<p><a href="images/extrait-doc-matlab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/extrait-doc-matlab.png" class="img-fluid"></a></p>
+<p>Si c’est le genre de doc que vous voulez réalisez, vous êtes à la bonne adresse ! 😉</p>
+<section id="structurer-son-code-matlab-en-bonne-et-due-forme" class="level2">
+<h2 class="anchored" data-anchor-id="structurer-son-code-matlab-en-bonne-et-due-forme">Structurer son code Matlab en bonne et due forme</h2>
+<p>La première chose à faire, pour être en mesure de générer une page html comportant le code ainsi que les figures obtenues par celui-ci, est de le structurer de manière à ce que la commande <code>publish</code> puisse identifier les différentes zones : titre, parties, code, etc.</p>
+<p>Ci-dessous la visualisation de ma fenêtre d’édition, montrant la structuration du code correspondant au screenshot précédent :</p>
+<p><a href="images/structure-code-matlab-explications.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/structure-code-matlab-explications.png" class="img-fluid"></a></p>
+<ul>
+<li><strong>Titre</strong> : décrit en une ligne (appelée ligne H1) la fonction principale de votre fichier, et doit se situer tout en haut, pour apparaître en orange dans le titre du html, précédé obligatoirement de deux pourcents <code>%%</code> :</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">%% Denoising and deblurring an image containing K blurred lines</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note : c’est cette ligne de code qui apparaîtra également dans le fichier Contents.m.</em></p>
+<ul>
+<li><strong>Description</strong> : accolées juste en dessous du titre, ces quelques lignes permettent de préciser un peu plus en détail le rôle joué par votre script/fonction, son fonctionnement, ses entrées/sorties, etc. Elles sont précédées d’un seul <code>%</code> :</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">%% Denoising and deblurring an image containing K blurred lines </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">% \* Generate $K$ lines with parameters $(\\theta\_k,\\alpha\_k,\\eta\_k)$, </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">% blurred with a spread, in an image of size $W\\times H$ degraded by noise </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">% \* Launch the minimization algorithm with parameters $(Nbiter,\\rho,\\tau,c)$ </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">% \* From the solution $\\hat w\_r^{\\ast}$, estimate the lines by Prony</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note : les * suivi d’un espace dans un commentaire sont interprétés comme des puces, tandis que *texte* (sans espace) affichera le texte en gras. Pour plus de détails sur la mise en forme du texte voir <a href="http://fr.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html#btj5hz8-1">ici</a>.</em></p>
+<ul>
+<li><strong>Titre des sous parties</strong> : permet de diviser le fichier en plusieurs parties et de créer une table des matières ‘Contents’ comme vous pouvez le voir sur le premier screenshot. Ces noms de parties sont repérées par deux pourcents <code>%%</code> :</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">%% DATA GENERATION</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Texte explicatif</strong> : vous permet d’insérer des explications afin d’articuler et d’éclaircir les encadrés comportant du code, et peut éventuellement comporter des formules <span class="math inline">\(\\LaTeX\)</span>, il se présente sous la forme suivante :</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">%%% Add current folder and subfolders to the path</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note : il est également possible d’insérer à cet endroit des liens, des images, etc.</em></p>
+<ul>
+<li><strong>Code</strong> : vous permet d’insérer du code dans un encadré, avec les commentaires associés, les lignes ne sont précédés d’aucun symbole <code>%</code> :</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="va">tmp</span><span class="op">=</span><span class="va">which</span>(<span class="ss">'main'</span>)<span class="op">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="co">% complete path to the main file  index=strfind(tmp,'/');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; % index of '/' into the string tmp   p=tmp(1:index(end));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; % folder which contains the file </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="va">addpath</span>(<span class="va">genpath</span>(<span class="va">p</span>))<span class="op">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="co">% add folder and its subfolders to the path </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="va">clear</span> <span class="va">tmp</span> <span class="va">p</span> <span class="va">index</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="co">% clear these temporary variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="générer-la-doc-html-de-chaque-fichier-.m-via-la-commande-publish" class="level2">
+<h2 class="anchored" data-anchor-id="générer-la-doc-html-de-chaque-fichier-.m-via-la-commande-publish">Générer la doc html de chaque fichier .m via la commande publish</h2>
+<p>Une fois votre code correctement structuré, vous pouvez générer la page html correspondante de l’une des deux façons suivantes :</p>
+<p>Cliquez sur l’<strong>onglet PUBLISH</strong> en haut de la fenêtre d’édition, puis le bouton <code>Publish</code> pour générer la doc html. Un dossier html sera créé dans le répertoire contenant votre fichier filename.m, contenant une page <code>filename.html</code> et des images utilisées dans celle-ci.</p>
+<p><a href="images/generer-doc-matlab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/generer-doc-matlab.png" class="img-fluid"></a></p>
+<p>Autre méthode : tapez la commande suivante dans la fenêtre de commande Matlab</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">publish</span>(<span class="ss">'filename.m'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Vous pouvez également spécifier un certain nombre d’options tels que le format de la publication (par défaut html, mais possible en <span class="math inline">\(\\LaTeX\)</span>, en .doc ou encore .ppt), son emplacement, etc. Pour plus d’information consulter la doc de <a href="http://fr.mathworks.com/help/matlab/ref/publish.html?refresh=true">publish</a>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="va">publish</span>(<span class="ss">'index.m'</span><span class="op">,</span><span class="va">struct</span>(<span class="ss">'format'</span><span class="op">,</span><span class="ss">'html'</span><span class="op">,</span><span class="ss">'outputDir'</span><span class="op">,</span><span class="ss">'doc'</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pour résumer cette partie vous pouvez également vous référer à cette <a href="http://fr.mathworks.com/help/matlab/matlab_prog/publishing-matlab-code.html">aide Matlab</a>.</p>
+</section>
+<section id="créer-un-index-pour-organiser-les-pages-html-entre-elles" class="level2">
+<h2 class="anchored" data-anchor-id="créer-un-index-pour-organiser-les-pages-html-entre-elles">Créer un index pour organiser les pages html entre elles</h2>
+<p>Une fois générées toutes les pages html au sein d’un même répertoire, il peut être utile de les “regrouper” au sein d’une même page, disons index.html, contenant des liens pointant vers ces pages.</p>
+<p>Pour cela, on créé de même un fichier index.m, qui présente la même structure de code décrite précédemment, et que l’on va également convertir en <code>index.html</code> via la commande <em>publish</em> :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">%% Convex Super-Resolution Detection of Lines in Images</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">%% Main functions</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">%%</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;data_generation.html Data Generation&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;minimization_Chambolle.html Minimization Algorithm&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;resynthesis.html Resynthesis&gt;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;prony.html Prony Estimation&gt;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">%% Tests</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">%%</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;noiseless.html Experiment 1 : normal blur and noiseless&gt;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;strong_noise.html Experiment 2 : normal blur and strong noise&gt;</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;strong_blur.html Experiment 3 : strong blur and noiseless&gt;</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;hough_lines_detection.html Hough lines detection&gt;</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">% * &lt;radon_lines_detection.html Radon lines detection&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ici la <strong>mise en forme pour un lien</strong> dont le nom est “texte” pointant vers le fichier <code>filename.html</code> est la suivante :</p>
+<p><strong>&lt;filename.html texte&gt;</strong></p>
+<p>Le résultat est le suivant :</p>
+<p><img src="images/example-bibliography-matlab.png" class="img-fluid">Pour afficher la page html à partir de la fenêtre de commande Matlab, tapez :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a> <span class="va">web</span>(<span class="ss">'chemin_vers_repertoire/index.html'</span><span class="op">,</span><span class="ss">'-helpbrowser'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>L’option <code>'-helpbrower'</code> permet d’ouvrir l’index et de naviguer entre les pages dans le “Help Browser” de Matlab, ce qui est plus commode. Si on ne spécifie pas cette option c’est votre navigateur web qui s’en chargera.</p>
+</section>
+<section id="produire-une-toolbox-accessible-dans-le-help-browser-de-matlab" class="level2">
+<h2 class="anchored" data-anchor-id="produire-une-toolbox-accessible-dans-le-help-browser-de-matlab">Produire une Toolbox accessible dans le <em>Help Browser</em> de Matlab</h2>
+<p>Maintenant que notre documentation html est complètement générée, on peut vouloir en faire une Toolbox référencée dans Matlab. Cette procédure s’appuie sur deux fichiers que nous allons créer :</p>
+<ul>
+<li><code>info.xml</code> : qui permet de trouver et d’<strong>identifier vos pages</strong> de documentation.</li>
+<li><code>helptoc.xml</code> : qui permet de <strong>créer une table des matières</strong> de la documentation et permet de l’afficher dans “Contents pane” (à gauche) de votre “Help Browser”.</li>
+</ul>
+<p>Le fichier <code>info.xml</code> doit se situer dans le même répertoire que vos pages html de documentation, et ressembler à ceci :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="va">productinfo</span> <span class="va">xmlns</span><span class="op">:</span><span class="va">xsi</span><span class="op">=</span><span class="st">"http://www.w3.org/2001/XMLSchema-instance"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">xsi</span><span class="op">:</span><span class="va">noNamespaceSchemaLocation</span><span class="op">=</span><span class="st">"optional"</span><span class="op">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>?<span class="va">xml</span><span class="op">-</span><span class="va">stylesheet</span> <span class="va">type</span><span class="op">=</span><span class="st">"text/xsl"</span><span class="va">href</span><span class="op">=</span><span class="st">"optional"</span>?<span class="op">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="va">matlabrelease</span><span class="op">&gt;</span><span class="fl">2013</span><span class="va">a</span><span class="op">&lt;/</span><span class="va">matlabrelease</span><span class="op">&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="va">name</span><span class="op">&gt;</span><span class="va">Convex</span> <span class="va">Super</span><span class="op">-</span><span class="va">Resolution</span> <span class="va">Detection</span> <span class="va">of</span> <span class="va">Lines</span> <span class="va">in</span> <span class="va">Images</span><span class="op">&lt;/</span><span class="va">name</span><span class="op">&gt;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="va">type</span><span class="op">&gt;</span><span class="va">toolbox</span><span class="op">&lt;/</span><span class="va">type</span><span class="op">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="va">icon</span><span class="op">&gt;&lt;/</span><span class="va">icon</span><span class="op">&gt;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span><span class="va">help_location</span><span class="op">&gt;</span>.<span class="op">./</span><span class="va">doc</span><span class="op">&lt;/</span><span class="va">help_location</span><span class="op">&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span><span class="va">productinfo</span><span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Changer le nom de la Toolbox par le vôtre dans la balise <name>, et la version de matlab dans <matlabrelease> (qui n’a pas d’effet en réalité, juste à titre informatif). La seule chose que <strong>vous devez impérativement renseigner est le chemin vers le répertoire qui contient info.xml</strong> et les pages html dans la balise <strong>&lt;help_location&gt;</strong>.</matlabrelease></name></p>
+<p>Exemple : dans mon cas, je l’ai mentionné en relatif, en effet mon fichier <code>info.xml</code> étant situé dans le répertoire <code>doc/</code>, le chemin vers doc, relativement à <code>info.xml</code>, est bien <code>../doc</code>.</p>
+<p>En fait, quand le répertoire <code>doc/</code> contenant vos pages html et <code>info.xml</code> va être ajouté au path de Matlab, il va identifier le fichier <code>info.xml</code>, et renseigner la position de votre Toolbox en consultant la balise &lt;help_location&gt;.</p>
+<p><em>Note : pour ajouter un répertoire au path faites un clic droit sur celui-ci et choisissez <code>Add to Path</code>, ou bien en ligne de commande <code>addpath('chemin\_vers\_repertoire')</code>. Pour ajouter tous les dossiers et sous dossiers de votre répertoire de travail au path, voir le code de l’encadré bleu de l’image plus haut, qui utilise les commandes <code>which</code> et <code>genpath</code>.</em></p>
+<p><strong>Attention</strong> : si vous modifiez le fichier <code>info.xml</code> ou <code>helptoc.xml</code>, il vous faudra retirer du path le répertoire les contenant, puis la rajouter au path pour prendre en compte les modifications.</p>
+<p><a href="images/add-remove-path-matlab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/add-remove-path-matlab.png" class="img-fluid"></a></p>
+<p>Le fichier <code>helptoc.xml</code> doit également se situer dans le même répertoire que les pages html de documentation. Il permet de créer une table des matières de votre documentation (comme son nom l’indique toc = table of contents). Il se présente sous cette forme :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">'1.0'</span><span class="ot"> encoding=</span><span class="st">"utf-8"</span><span class="fu">?&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">toc</span><span class="ot"> version=</span><span class="st">"2.0"</span>&gt;</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"index.html"</span>&gt;Convex Super-Resolution Detection of Lines in Images</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"main.html"</span>&gt;Main functions</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"data_generation.html"</span>&gt;Data Generation&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"minimization_Chambolle.html"</span>&gt;Minimization Algorithm&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"resynthesis.html"</span>&gt;Resynthesis&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"prony.html"</span>&gt;Prony Estimation&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"main.html"</span>&gt;Tests</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"noiseless.html"</span>&gt;Experiment 1 : normal blur and noiseless&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"strong_noise.html"</span>&gt;Experiment 2 : normal blur and strong noise&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"strong_blur.html"</span>&gt;Experiment 3 : strong blur and noiseless&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"hough_lines_detection.html"</span>&gt;Hough lines detection&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>           &lt;<span class="kw">tocitem</span><span class="ot"> target=</span><span class="st">"radon_lines_detection.html"</span>&gt;Radon lines detection&lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">tocitem</span>&gt;</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">toc</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Après avoir retirer/ajouter du path le répertoire de votre documentation, vous pouvez visualiser le résultat comme suit :</p>
+<ul>
+<li>Cliquer sur <code>Help&gt;Documentation</code> dans la barre d’outil</li>
+<li>Puis tout en bas de la fenêtre qui s’ouvre, cliquez sur <code>Supplemental Software</code> (qui contient vos Toolbox).</li>
+<li>Cela ouvre conjointement le <code>Help Browser</code> sur le fichier <code>index.html</code> (dans mon cas, voir les tocitem ci-dessus qui le spécifie) ainsi qu’une <strong>table des matières à gauche</strong> qui vous permet de naviguer au sein de la documentation de votre Toolbox ainsi hiérarchisée.</li>
+</ul>
+<p>En images :</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="images/matlab-help.png" class="lightbox" data-gallery="my-gallery"><img src="images/matlab-help.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="images/matlab-supplemental-software-content.png" class="lightbox" data-gallery="my-gallery"><img src="images/matlab-supplemental-software-content.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="images/supplemental-software-matlab.png" class="lightbox" data-gallery="my-gallery"><img src="images/supplemental-software-matlab.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+<p>Ou plus rapide à partir de la fenêtre de commande, tapez simplement :</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">doc</span> <span class="op">-</span><span class="va">classic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Enfin vous pouvez créer une entrée dans la base de donnée de Matlab pour effectuer une recherche de vos pages de documentation inhérentes à votre Toolbox en tapant :</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="va">builddocsearchdb</span>(<span class="ss">'chemin_vers_repertoire'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>La procédure est récapitulée dans cette <a href="http://fr.mathworks.com/help/matlab/matlab_prog/display-custom-documentation.html">aide Matlab</a>.</p>
+</section>
+<section id="annexe-1-générer-un-fichier-contents.m-listant-tous-les-help-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="annexe-1-générer-un-fichier-contents.m-listant-tous-les-help-descriptions">Annexe 1 : générer un fichier Contents.m listant tous les <em>help descriptions</em></h2>
+<p>En dernière analyse, il me semble intéressant de disposer d’une liste de tous les fichiers <code>.m</code> avec leur description associée, et de pouvoir s’y référer rapidement via la commande help.</p>
+<p>C’est le rôle du fichier <code>Contents.m</code> qui se génère en cliquant sur :</p>
+<p><code>Current Folder&gt;Reports&gt;Contents Report</code></p>
+<p><a href="images/reports-contents.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/reports-contents.png" class="img-fluid"></a></p>
+<p>Cela créé le fichier Contents.m contenant la liste des fichiers .m ainsi que leur description. Si vous avez respecté la structure du code suggéré, la description succinte correspond à la première ligne H1 du fichier. Le répertoire qui contient mes fichiers .m se nomme “main functions” comme vous pouvez le voir dans la barre d’adresse. Ainsi en tapant :</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="va">help</span> <span class="ss">'main functions'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On visualise la description de toutes les fonctions du répertoire :</p>
+<p><a href="images/help-documentation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/help-documentation.png" class="img-fluid"></a></p>
+<p><strong>Améliorons encore un peu les choses</strong>. Imaginons que nos fichiers <code>.m</code> sont répartis dans plusieurs répertoires. On peut bien évidemment répéter la même opération dans chaque répertoire, mais cela peut rapidement s’avérer pénible si la Toolbox contient un grand nombre de répertoires. Par conséquent, on aimerait pouvoir effectuer récursivement cette tâche. C’est ce que propose la fonction <a href="http://www.mathworks.com/matlabcentral/fileexchange/53127-recursive-contents-report">update_contents</a> (qui requiert la fonction <a href="http://www.mathworks.com/matlabcentral/fileexchange/30835-get-contents">get_contents</a>). Ainsi en tapant :</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="va">update_contents</span>(<span class="ss">'chemin_repertoire_principal'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cela créé un unique fichier <code>Contents.m</code> à la racine qui a cette tête :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">% MATLAB CODE</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">% </span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">%   Contents file for MATLAB CODE and its subfolders.</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">%   </span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">%   MATLAB CODE</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">%   main                     - Denoising and deblurring an image containing K blurred lines</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">%   make_doc                 - Generate a html documentation in folder doc/</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">%   </span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">%   MATLAB CODE/MAIN FUNCTIONS</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">%   data_generation          - Generate K lines in a degraded image</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">%   minimization_Chambolle   - Minimization algorithm - relaxed Chambolle-Pock version</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">%   minimization_Condat      - Minimization algorithm - based on Condat's framework</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co">%   prony                    - Recovering parameters of lines by the Prony method</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">%   resynthesis              - The denoised image xstar</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="co">%   </span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">%   MATLAB CODE/TESTS</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">%   hough_lines_detection    - Hough transform applied to lines detection</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">%   noiseless                - Deblurred and estimate parameters of K blurred lines with high accuracy</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co">%   radon_lines_detection    - Radon transform applied to lines detection</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co">%   strong_blur              - Deblurred an image containing K strong blurred lines</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">%   strong_noise             - Denoising an image containing K blurred lines</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co">%</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co">%   MATLAB CODE/AUXILIARY FUNCTIONS</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="co">%   adjconv                  - Check the expression of the adjoint of a convolution</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="co">%   convmat                  - Check the equivalence between matrix product and operator convolution</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="co">%   Dirichlet_Kernel         - Dirichlet Kernel expression</span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="co">%   dot2                     - Canonical inner product on complex vectors</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotF                     - Frobenius inner product</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotH                     - Inner product defined on space H=WxQ</span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotQ                     - Inner product defined on space Q</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotQC                    - Inner production defined on space QC</span></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotW                     - Inner product defined on space W</span></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotWC                    - Inner product defined on space WC</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a><span class="co">%   dotWL                    - Inner product defined on space WL</span></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a><span class="co">%   FastPeakFind             - Analyze noisy 2D images and find peaks using local maxima</span></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a><span class="co">%   fixPSlinestyle           - Fix line styles in exported post script files</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="co">%   get_contents             - Get the contents of a specified directory</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="co">%   gradient                 - Of the operator A</span></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a><span class="co">%   normW                    - Norm defined on space W</span></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a><span class="co">%   opA                      - Operator A</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="co">%   opadjA                   - Adjoint of the operator A</span></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="co">%   opadjL1                  - Adjoint of the operator L1</span></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="co">%   opadjL2                  - Adjoint of the operator L2</span></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="co">%   opadjL3                  - Adjoint of the operator L3</span></span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a><span class="co">%   opadjL4                  - Adjoint of the operator L4</span></span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="co">%   opL1                     - Operator L1=L3+L4</span></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="co">%   opL2                     - Operator L2</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a><span class="co">%   opL3                     - Operator L3</span></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a><span class="co">%   opL4                     - Operator L4</span></span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a><span class="co">%   proxsigmahconj           - Proximal operator of H*</span></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a><span class="co">%   proxsigmahNconj          - Proximal operator of H_N*</span></span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a><span class="co">%   proxtaug                 - Proximal operator of G</span></span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="co">%   proxtaugfour             - Proximal operator of G by FFT</span></span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="co">%   proxtaugmat              - Proximal operator of G involving a big Kronecker product</span></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a><span class="co">%   proxtaugmat2             - Proximal operator of g involving M+1 smaller matrix products</span></span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a><span class="co">%   test_adjoints            - Test adjoints</span></span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a><span class="co">%   test_parametres_algo1    - Test which is the best parameters (tau,sigma) to perform minimization 1</span></span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a><span class="co">%   test_parametres_algo2    - Test which is the best parameters (tau,sigma) to perform minimization 2</span></span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a><span class="co">%   tightfig                 - Remove excess space around the figure</span></span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a><span class="co">%   update_contents          - Create a Contents.m file including subdirectories</span></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a><span class="co">%    </span></span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a><span class="co">%   This file was generated by update_contents.m .</span></span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a><span class="co">%    </span></span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a><span class="co">%   02-Mar-2016 17:46:52 .</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="annexe-2-générer-la-documentation-dans-un-fichier-.pdf-ou-.tex" class="level2">
+<h2 class="anchored" data-anchor-id="annexe-2-générer-la-documentation-dans-un-fichier-.pdf-ou-.tex">Annexe 2 : générer la documentation dans un fichier .pdf ou .tex</h2>
+<section id="commençons-par-lexport-au-format-.pdf" class="level3">
+<h3 class="anchored" data-anchor-id="commençons-par-lexport-au-format-.pdf"><strong>Commençons par l’export au format .pdf</strong></h3>
+<p>Pour cela cliquez sur <code>Publish&gt;Edit Publishing Options</code> puis choisissez <code>Output file&gt;pdf</code></p>
+<p><img src="images/matlab-bouton-publish.png" class="img-fluid"> ou bien en ligne de commande :</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="va">publish</span>(<span class="ss">'filename.m'</span><span class="op">,</span><span class="va">struct</span>(<span class="ss">'format'</span><span class="op">,</span><span class="ss">'pdf'</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si vous êtes aussi pointilleux que moi, vous estimerez peut-être que <strong>les formules</strong> <span class="math inline">\(\\LaTeX\)</span> <strong>ainsi générées sont trop petites et floutées.</strong> Si tel est le cas alors voici la <a href="http://stackoverflow.com/questions/21948601/how-to-set-the-font-settings-in-pdf-publish-via-matlab-and-Latex">procédure</a> à suivre pour y remédier :</p>
+<ul>
+<li>Nous allons <strong>modifier la commande <em>publish</em></strong>, pour cela commençons par déterminer son emplacement via la commande <em>which</em>.</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span><span class="er">(</span><span class="st">'publish'</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Rendez-vous dans le répertoire la contenant (pour ma part codetools), ouvrez la avec votre éditeur préféré (éventuellement en mode root pour avoir la permission de modifier le fichier). Allez à la ligne 780 (pour les utilisateurs de Matlab R2013a), et <strong>modifier la valeur de</strong> <code>FontSize</code>, par exemple prenez 30 au lieu de 22 :</li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="va">temptext</span> <span class="op">=</span> <span class="va">text</span>(<span class="ss">'Parent'</span><span class="op">,</span><span class="va">tempaxes</span><span class="op">,</span><span class="ss">'Position'</span><span class="op">,</span>[<span class="fl">.5</span> <span class="fl">.5</span>]<span class="op">,</span> <span class="op">...</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="ss">'HorizontalAlignment'</span><span class="op">,</span><span class="ss">'center'</span><span class="op">,</span><span class="ss">'FontSize'</span><span class="op">,</span><span class="fl">22</span><span class="op">,</span> <span class="op">...</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="ss">'Interpreter'</span><span class="op">,</span><span class="ss">'latex'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Allez ensuite à la ligne 717, et <strong>remplacer la ligne suivante</strong> :</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="va">swapTexForImg</span>(<span class="va">dom</span><span class="op">,</span><span class="va">equationNode</span><span class="op">,</span><span class="va">outputDir</span><span class="op">,</span><span class="va">fullFilename</span><span class="op">,</span><span class="va">equationText</span><span class="op">,</span><span class="va">newSize</span>(<span class="fl">2</span>)<span class="op">,</span><span class="va">newSize</span>(<span class="fl">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>par :</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>    <span class="va">swapTexForImg</span>(<span class="va">dom</span><span class="op">,</span><span class="va">equationNode</span><span class="op">,</span><span class="va">outputDir</span><span class="op">,</span><span class="va">fullFilename</span><span class="op">,</span><span class="va">equationText</span><span class="op">,</span><span class="va">newSize</span>(<span class="fl">2</span>)<span class="op">/</span><span class="va">scale</span><span class="op">,</span><span class="va">newSize</span>(<span class="fl">1</span>)<span class="op">/</span><span class="va">scale</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>avec <code>scale</code> un facteur de votre choix, par exemple 2.</p>
+<ul>
+<li><strong>Enregistrer les modifications</strong>, et <strong>tapez</strong> successivement dans la fenêtre des commandes :</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="va">rehash</span> <span class="va">toolboxcache</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="va">clear</span> <span class="va">functions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Relancer la commande publish</strong>, le tour est joué !</li>
+</ul>
+<p>Les formules apparaissent plus grandes, moins floutées et donc plus lisibles.</p>
+<p>Néanmoins elles ne sont toujours pas parfaites, pour la simple et bonne raison qu’elles sont converties en image bitmap (png par défaut) avant d’être insérées dans le pdf. Une autre façon de procéder est de générer un fichier .tex pour la doc puis de la compiler pour obtenir dans le <code>.pdf</code> produit des formules vectorielles.</p>
+</section>
+<section id="comment-générer-un-fichier-.tex-de-documentation-via-la-commande-publish" class="level3">
+<h3 class="anchored" data-anchor-id="comment-générer-un-fichier-.tex-de-documentation-via-la-commande-publish">Comment générer un fichier .tex de documentation via la commande publish ?</h3>
+<p>Pour cela tapez la commande :</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="va">publish</span>(<span class="ss">'filename.m'</span><span class="op">,</span><span class="va">struct</span>(<span class="ss">'format'</span><span class="op">,</span><span class="ss">'latex'</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>puis compiler le <code>.tex</code> généré avec votre éditeur <span class="math inline">\(\\LaTeX\)</span> favori.</p>
+<p>Le résultat pour les formules est maintenant impeccable!</p>
+<p>Malheureusement c’est maintenant au tour du code de ne plus être formaté aussi bien qu’en html ou en pdf, puisqu’il est converti de manière brute <strong>dans un environnement verbatim</strong>. Pour y remédier, vous pouvez :</p>
+<ul>
+<li>Soit <strong>retoucher manuellement</strong> le fichier <code>.tex</code> en utilisant par exemple <a href="https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings">lstlisting</a></li>
+<li>Soit <strong>changer le style</strong> en l’indiquant directement à la commande <code>publish</code></li>
+</ul>
+<p>Dans ce dernier cas, il vous faut inventer à votre sauce un fichier <code>matlab2latex\_pretty.xsl</code> qui spécifie le style que vous désirez donner au code, et taper :</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="va">publish</span>(<span class="ss">'filename.m'</span><span class="op">,</span><span class="va">struct</span>(<span class="ss">'format'</span><span class="op">,</span><span class="ss">'latex'</span><span class="op">,</span><span class="ss">'stylesheet'</span><span class="op">,</span><span class="ss">'matlab2latex_pretty.xsl'</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Voilà le tuto est terminé, j’espère qu’il vous aura été utile</strong> 🙂</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"right","openEffect":"fade","selector":".lightbox","closeEffect":"fade"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

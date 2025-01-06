@@ -1,0 +1,326 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Hough transform applied to lines detection</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-03-02"><meta name="DC.source" content="hough_lines_detection.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Hough transform applied to lines detection</h1><!--introduction--><div><ul><li>Compute the Hough transform of im2bw(xstar)</li><li>Compute also the Hough transform of a thresholding version of xstar</li><li>Peaks correspond to an estimation of parameters of the lines with parameters <img src="hough_lines_detection_eq45598.png" alt="$(\theta_k,\eta_k)$"></li><li>Display relative errors (for both)</li><li>Display and save this image + peaks (for both)</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">DATA GENERATION</a></li><li><a href="#2">HOUGH TRANSFORM OF THE BINARY VERSION OF XSTAR</a></li><li><a href="#8">HOUGH TRANSFORM ON A THRESHOLDING VERSION OF XSTAR</a></li></ul></div><h2>DATA GENERATION<a name="1"></a></h2><pre class="codeinput">W=65;               <span class="comment">% image width (must be odd W=2M+1)</span>
+H=65;               <span class="comment">% image height</span>
+K=3;                <span class="comment">% number of lines</span>
+spread=1;           <span class="comment">% std of the gaussian blur</span>
+noiselevel=0;       <span class="comment">% level of noise</span>
+randomgen=0;        <span class="comment">% boolean if lines are generated randomly of manually</span>
+rng(0);             <span class="comment">% seed of random numbers generator</span>
+plotData=1;         <span class="comment">% display images v, x and y</span>
+plotComp=0;         <span class="comment">% display others comparaisons theo vs. emp</span>
+
+t_k=[pi/6 -pi/5 pi/16]; <span class="comment">% array containing angles of lines</span>
+a_k=[255 255 255];      <span class="comment">% array containing amplitude of lines</span>
+p_k=[10 0 -15];         <span class="comment">% array containing offset of lines</span>
+
+data_generation;    <span class="comment">% Generate the blurred image xstar</span>
+                    <span class="comment">% of these K lines with additional</span>
+                    <span class="comment">% noise y=xstar+randn(H,W)*noiselevel</span>
+</pre><img vspace="5" hspace="5" src="hough_lines_detection_01.png" alt=""> <h2>HOUGH TRANSFORM OF THE BINARY VERSION OF XSTAR<a name="2"></a></h2><p>Binary version of xstar</p><pre class="codeinput">BW=im2bw(xstar,0.7);
+</pre><p>Hough transform on BW</p><pre class="codeinput">[H,theta,rho] = hough(BW,<span class="string">'RhoResolution'</span>,0.45,<span class="string">'ThetaResolution'</span>,0.45);
+peaks = houghpeaks(H,3,<span class="string">'NHoodSize'</span>,2*floor(size(H)/50)+1);
+lines = houghlines(xstar, theta, rho, peaks);
+</pre><p>Display the results</p><pre class="codeinput">f=figure;
+subplot(1,3,1);
+imshow(BW);
+title(<span class="string">'im2bw(xsharp)'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+subplot(1,3,2);
+imshow(H,[],<span class="string">'XData'</span>,theta,<span class="string">'YData'</span>,rho,<span class="string">'InitialMagnification'</span>,<span class="string">'fit'</span>);
+xlabel(<span class="string">'\theta'</span>), ylabel(<span class="string">'\rho'</span>);
+axis <span class="string">on</span>, axis <span class="string">ij</span>, hold <span class="string">on</span>;
+plot(theta(peaks(:,2)),rho(peaks(:,1)),<span class="string">'gs'</span>,<span class="string">'Linewidth'</span>,2);
+title(<span class="string">'Hough transform'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+subplot(1,3,3);
+imagesc(xstar); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+<span class="keyword">for</span> k = 1:length(lines)
+xy = [lines(k).point1; lines(k).point2];
+line(xy(:,1),xy(:,2),<span class="string">'LineWidth'</span>,1.5,<span class="string">'Color'</span>,<span class="string">'g'</span>);
+<span class="keyword">end</span>
+title(<span class="string">'Detected lines'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+warning <span class="string">off</span>;
+truesize(f,[200 200]);
+tightfig;
+</pre><img vspace="5" hspace="5" src="hough_lines_detection_02.png" alt=""> <p>Peaks of the Hough transform <a href="-">-</a> Estimation of lines parameters</p><pre class="codeinput">thetapeaks=theta(peaks(:,2));
+rhopeaks=rho(peaks(:,1));
+thetapeaks=-thetapeaks/180*pi;
+[t_k_emp,jj]=sort(thetapeaks);
+[t_k,ii]=sort(t_k);
+p_k_emp=(rhopeaks+M*sin(thetapeaks))./cos(thetapeaks)-M;
+</pre><p>Display the estimated parameters and the relative errors</p><pre class="codeinput">disp([<span class="string">'t_k = '</span>,num2str(t_k)]);
+disp([<span class="string">'t_k_emp = '</span>,num2str(t_k_emp)]);
+disp([<span class="string">'p_k = '</span>,num2str(p_k)]);
+disp([<span class="string">'p_k_emp = '</span>,num2str(p_k_emp)]);
+disp([<span class="string">'(t_k-t_k_emp)/t_k = '</span>,num2str((t_k-t_k_emp)./t_k)]);
+disp([<span class="string">'p_k-p_k_emp = '</span>,num2str(p_k(ii)-p_k_emp(jj))]);
+</pre><pre class="codeoutput">t_k = -0.62832     0.19635      0.5236
+t_k_emp = -0.64403    0.007854     0.58905
+p_k = 10   0 -15
+p_k_emp = -2.00499     -15.9982      10.4889
+(t_k-t_k_emp)/t_k = -0.025        0.96      -0.125
+p_k-p_k_emp = 2.005     0.99818    -0.48892
+</pre><h2>HOUGH TRANSFORM ON A THRESHOLDING VERSION OF XSTAR<a name="8"></a></h2><p>Thresholding version of xstar</p><pre class="codeinput">TH=xstar;
+i = find ( TH &lt;= 230 );
+j = find ( 230 &lt; TH );
+TH(i) = 0;
+TH(j) = 255;
+</pre><p>Hough transform on BW</p><pre class="codeinput">[H,theta,rho] = hough(TH,<span class="string">'RhoResolution'</span>,0.45,<span class="string">'ThetaResolution'</span>,0.45);
+peaks = houghpeaks(H,3,<span class="string">'NHoodSize'</span>,2*floor(size(H)/50)+1);
+lines = houghlines(xstar, theta, rho, peaks);
+</pre><p>Display the results</p><pre class="codeinput">f=figure;
+subplot(1,3,1);
+imshow(BW);
+title(<span class="string">'im2bw(xsharp)'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+subplot(1,3,2);
+imshow(H,[],<span class="string">'XData'</span>,theta,<span class="string">'YData'</span>,rho,<span class="string">'InitialMagnification'</span>,<span class="string">'fit'</span>);
+xlabel(<span class="string">'\theta'</span>), ylabel(<span class="string">'\rho'</span>);
+axis <span class="string">on</span>, axis <span class="string">ij</span>, hold <span class="string">on</span>;
+plot(theta(peaks(:,2)),rho(peaks(:,1)),<span class="string">'gs'</span>,<span class="string">'Linewidth'</span>,2);
+title(<span class="string">'Hough transform'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+subplot(1,3,3);
+imagesc(xstar); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+<span class="keyword">for</span> k = 1:length(lines)
+xy = [lines(k).point1; lines(k).point2];
+line(xy(:,1),xy(:,2),<span class="string">'LineWidth'</span>,1.5,<span class="string">'Color'</span>,<span class="string">'g'</span>);
+<span class="keyword">end</span>
+title(<span class="string">'Detected lines'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+warning <span class="string">off</span>;
+truesize(f,[200 200]);
+tightfig;
+</pre><img vspace="5" hspace="5" src="hough_lines_detection_03.png" alt=""> <p>Peaks of the Hough transform <a href="-">-</a> Estimation of lines parameters</p><pre class="codeinput">thetapeaks=theta(peaks(:,2));
+rhopeaks=rho(peaks(:,1));
+thetapeaks=-thetapeaks/180*pi;
+[t_k_emp,jj]=sort(thetapeaks);
+[t_k,ii]=sort(t_k);
+p_k_emp=(rhopeaks+M*sin(thetapeaks))./cos(thetapeaks)-M;
+</pre><p>Display the estimated parameters and the relative errors</p><pre class="codeinput">disp([<span class="string">'t_k = '</span>,num2str(t_k)]);
+disp([<span class="string">'t_k_emp = '</span>,num2str(t_k_emp)]);
+disp([<span class="string">'p_k = '</span>,num2str(p_k)]);
+disp([<span class="string">'p_k_emp = '</span>,num2str(p_k_emp)]);
+disp([<span class="string">'(t_k-t_k_emp)/t_k = '</span>,num2str((t_k-t_k_emp)./t_k)]);
+disp([<span class="string">'p_k-p_k_emp = '</span>,num2str(p_k(ii)-p_k_emp(jj))]);
+</pre><pre class="codeoutput">t_k = -0.62832     0.19635      0.5236
+t_k_emp = -0.62046      0.2042     0.51836
+p_k = 10   0 -15
+p_k_emp = 10.0831    -0.111469     -14.8035
+(t_k-t_k_emp)/t_k = 0.0125       -0.04        0.01
+p_k-p_k_emp = 10.1115      14.8035     -25.0831
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Hough transform applied to lines detection  
+% * Compute the Hough transform of im2bw(xstar)
+% * Compute also the Hough transform of a thresholding version of xstar
+% * Peaks correspond to an estimation of parameters of the lines
+% with parameters $(\theta_k,\eta_k)$
+% * Display relative errors (for both)
+% * Display and save this image + peaks (for both)
+
+%% DATA GENERATION
+
+W=65;               % image width (must be odd W=2M+1)
+H=65;               % image height
+K=3;                % number of lines
+spread=1;           % std of the gaussian blur
+noiselevel=0;       % level of noise
+randomgen=0;        % boolean if lines are generated randomly of manually
+rng(0);             % seed of random numbers generator
+plotData=1;         % display images v, x and y
+plotComp=0;         % display others comparaisons theo vs. emp
+
+t_k=[pi/6 -pi/5 pi/16]; % array containing angles of lines
+a_k=[255 255 255];      % array containing amplitude of lines
+p_k=[10 0 -15];         % array containing offset of lines
+
+data_generation;    % Generate the blurred image xstar 
+                    % of these K lines with additional 
+                    % noise y=xstar+randn(H,W)*noiselevel
+
+%% HOUGH TRANSFORM OF THE BINARY VERSION OF XSTAR
+
+%%
+% Binary version of xstar
+BW=im2bw(xstar,0.7);
+
+%%
+% Hough transform on BW
+[H,theta,rho] = hough(BW,'RhoResolution',0.45,'ThetaResolution',0.45);
+peaks = houghpeaks(H,3,'NHoodSize',2*floor(size(H)/50)+1);
+lines = houghlines(xstar, theta, rho, peaks);
+
+%%
+% Display the results
+f=figure;
+subplot(1,3,1);
+imshow(BW);
+title('im2bw(xsharp)');
+set(gca,'xtick',[],'ytick',[]);
+subplot(1,3,2);
+imshow(H,[],'XData',theta,'YData',rho,'InitialMagnification','fit');
+xlabel('\theta'), ylabel('\rho');
+axis on, axis ij, hold on; 
+plot(theta(peaks(:,2)),rho(peaks(:,1)),'gs','Linewidth',2);
+title('Hough transform');
+set(gca,'xtick',[],'ytick',[]);
+subplot(1,3,3);
+imagesc(xstar); colormap gray; axis image;
+for k = 1:length(lines)
+xy = [lines(k).point1; lines(k).point2];
+line(xy(:,1),xy(:,2),'LineWidth',1.5,'Color','g');
+end
+title('Detected lines');
+set(gca,'xtick',[],'ytick',[]);
+warning off;
+truesize(f,[200 200]);
+tightfig;
+
+%%
+% Peaks of the Hough transform <-> Estimation of lines parameters
+thetapeaks=theta(peaks(:,2));
+rhopeaks=rho(peaks(:,1));
+thetapeaks=-thetapeaks/180*pi;
+[t_k_emp,jj]=sort(thetapeaks);
+[t_k,ii]=sort(t_k);
+p_k_emp=(rhopeaks+M*sin(thetapeaks))./cos(thetapeaks)-M;
+
+%%
+% Display the estimated parameters and the relative errors
+disp(['t_k = ',num2str(t_k)]);
+disp(['t_k_emp = ',num2str(t_k_emp)]);
+disp(['p_k = ',num2str(p_k)]);
+disp(['p_k_emp = ',num2str(p_k_emp)]);
+disp(['(t_k-t_k_emp)/t_k = ',num2str((t_k-t_k_emp)./t_k)]);
+disp(['p_k-p_k_emp = ',num2str(p_k(ii)-p_k_emp(jj))]);
+
+%% HOUGH TRANSFORM ON A THRESHOLDING VERSION OF XSTAR
+
+%%
+% Thresholding version of xstar
+TH=xstar;
+i = find ( TH <= 230 );
+j = find ( 230 < TH );
+TH(i) = 0;
+TH(j) = 255;
+
+%%
+% Hough transform on BW
+[H,theta,rho] = hough(TH,'RhoResolution',0.45,'ThetaResolution',0.45);
+peaks = houghpeaks(H,3,'NHoodSize',2*floor(size(H)/50)+1);
+lines = houghlines(xstar, theta, rho, peaks);
+
+%%
+% Display the results
+f=figure;
+subplot(1,3,1);
+imshow(BW);
+title('im2bw(xsharp)');
+set(gca,'xtick',[],'ytick',[]);
+subplot(1,3,2);
+imshow(H,[],'XData',theta,'YData',rho,'InitialMagnification','fit');
+xlabel('\theta'), ylabel('\rho');
+axis on, axis ij, hold on; 
+plot(theta(peaks(:,2)),rho(peaks(:,1)),'gs','Linewidth',2);
+title('Hough transform');
+set(gca,'xtick',[],'ytick',[]);
+subplot(1,3,3);
+imagesc(xstar); colormap gray; axis image;
+for k = 1:length(lines)
+xy = [lines(k).point1; lines(k).point2];
+line(xy(:,1),xy(:,2),'LineWidth',1.5,'Color','g');
+end
+title('Detected lines');
+set(gca,'xtick',[],'ytick',[]);
+warning off;
+truesize(f,[200 200]);
+tightfig;
+
+%%
+% Peaks of the Hough transform <-> Estimation of lines parameters
+thetapeaks=theta(peaks(:,2));
+rhopeaks=rho(peaks(:,1));
+thetapeaks=-thetapeaks/180*pi;
+[t_k_emp,jj]=sort(thetapeaks);
+[t_k,ii]=sort(t_k);
+p_k_emp=(rhopeaks+M*sin(thetapeaks))./cos(thetapeaks)-M;
+
+%%
+% Display the estimated parameters and the relative errors
+disp(['t_k = ',num2str(t_k)]);
+disp(['t_k_emp = ',num2str(t_k_emp)]);
+disp(['p_k = ',num2str(p_k)]);
+disp(['p_k_emp = ',num2str(p_k_emp)]);
+disp(['(t_k-t_k_emp)/t_k = ',num2str((t_k-t_k_emp)./t_k)]);
+disp(['p_k-p_k_emp = ',num2str(p_k(ii)-p_k_emp(jj))]);
+
+##### SOURCE END #####
+--></body></html>
