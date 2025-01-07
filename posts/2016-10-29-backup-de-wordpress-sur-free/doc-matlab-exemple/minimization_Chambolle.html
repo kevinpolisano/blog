@@ -1,0 +1,383 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Minimization algorithm - relaxed Chambolle-Pock version</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-03-02"><meta name="DC.source" content="minimization_Chambolle.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Minimization algorithm - relaxed Chambolle-Pock version</h1><p>Perform a primal-dual splitting algorithm initialized with the horizontal Fourier transform of the degraded image <img src="minimization_Chambolle_eq44020.png" alt="$y$"> To compute the solution <img src="minimization_Chambolle_eq47814.png" alt="$\hat w_r^{\sharp}$"> of the optimization problem</p><p><img src="minimization_Chambolle_eq21690.png" alt="$$\hat w_r^{\sharp}\in {arg\,min}_{\hat w_r,q_r}\frac 1 2 \|A\hat w_r-\hat y_r\|^2,\left\{\begin{array}{l} \forall n_2=0,...,H_S-1, \forall m=0,...,M,\\ \hat w_r[0,n_2]=\hat w_r[0,0]< c,\\q_r[m,0]< c,\\ L_1(\hat w_r[m,:],q_r[m,:])&gt;0 , L_2(\hat w_r[:,n_2])&gt;0.\end{array}\right.$$"></p><pre class="codeinput"><span class="keyword">global</span> Gfour h hadj Hs M S T invopPQI invopPgI;
+</pre><p>Parameters for the minimization</p><pre class="codeinput">normLsquare=M+Hs+1;                 <span class="comment">% norm of the operator L</span>
+sigma=1/(tau*normLsquare);          <span class="comment">% dual step sigma computed from tau</span>
+Amat=transpose(convmtx(h,H));       <span class="comment">% matrix A_h of the convolution by h</span>
+Astarmat=convmtx(flipud(hadj),H);   <span class="comment">% adjoint matrix of A_h</span>
+P=tau*Astarmat*Amat;                <span class="comment">% matrix tauA_h*A_h</span>
+Q=Gfour*conj(Gfour);                <span class="comment">% diagonal matrix of coef |\hat g[m]|^2</span>
+sp=size(P,1);                       <span class="comment">% dimension of the square matrix P</span>
+sq=size(Q,1);                       <span class="comment">% dimension of the square matrix Q</span>
+PQkron=kron(transpose(Q),P);        <span class="comment">% Kronecker product to resolve the</span>
+opPQI=PQkron+eye(sp*sq);            <span class="comment">% system equation PXQ+X=Y, but it is</span>
+invopPQI=inv(opPQI);                <span class="comment">% slower than the following method:</span>
+invopPgI=cell(M+1,1);               <span class="comment">% Compute the M inverse (I+Q[m,m]P)^-1</span>
+<span class="keyword">for</span> m=0:M
+    invopPgI{m+1}=inv(eye(Hs)+Q(m+1,m+1)*P);
+<span class="keyword">end</span>
+</pre><p>Variables declaration</p><pre class="codeinput">wr=zeros(Hs,M+1);       <span class="comment">% w_r optimization variable, x_n=(wr,qr)</span>
+qr=zeros(Hs,M+1);       <span class="comment">% q_r optimization variable x_n=(wr,qr)</span>
+yr=zeros(H,M+1);        <span class="comment">% y_r horizontal Fourier transform of the data y</span>
+wr1=zeros(Hs,M+1);      <span class="comment">% x_{n+1}=(wr1,qr1)</span>
+qr1=zeros(Hs,M+1);      <span class="comment">% x_{n+1}=(wr1,qr1)</span>
+wr1tilde=zeros(Hs,M+1); <span class="comment">% ~x_{n+1}=(wr1tilde,qr1tilde)</span>
+qr1tilde=zeros(Hs,M+1); <span class="comment">% ~x_{n+1}=(wr1tilde,qr1tilde)</span>
+Ym=cell(M+1);           <span class="comment">% y_{i,n} for i=0..M</span>
+Yn2=cell(Hs);           <span class="comment">% y_{i,n} for i=0..Hs-1</span>
+YNw=zeros(Hs,M+1);      <span class="comment">% y_{N,n}=(YNw,YNq) corresponding to \iota_E</span>
+YNq=zeros(Hs,M+1);      <span class="comment">% y_{N,n}=(YNw,YNq) corresponding to \iota_E</span>
+Tab=zeros(1,Nbiter+1);  <span class="comment">% Store error ||Aw_r-y_r|| for each step</span>
+Tab2=zeros(1,Nbiter+1); <span class="comment">% Store error ||w_r-wstar|| for each step</span>
+</pre><p>Variables initialization</p><pre class="codeinput"><span class="comment">% Dual variables initialization to zero</span>
+<span class="keyword">for</span> m=0:M
+    Ym{m+1}=zeros(Hs+1);
+<span class="keyword">end</span>
+<span class="keyword">for</span> n2=0:Hs-1
+    Yn2{n2+1}=zeros(M+1);
+<span class="keyword">end</span>
+
+yr=yfour(:,M+1:end);    <span class="comment">% The data fidelity term is the horizontal</span>
+                        <span class="comment">% Fourier transform of the degraded image y</span>
+T=S;
+NORMW=normW(wstar(T+1:end-T,M+1:end)); <span class="comment">% we ignore the borders</span>
+
+<span class="comment">% Initial relative errors</span>
+<span class="keyword">if</span> plotError
+    Tab(1)=normW(opA(wr)-yr);
+    Tab2(1)=normW(wr(T+1:end-T,:)-wstar(T+1:end-T,M+1:end))/NORMW;
+<span class="keyword">end</span>
+</pre><p>Primal-dual splitting algorithm</p><pre class="codeinput">tic
+<span class="keyword">for</span> iter=1:Nbiter
+    <span class="comment">% ~x_{n+1}=prox_{tau.G}(x_n-grad(x_n)-\sum Li*y_{i,n})</span>
+    wr1tilde=wr;
+    qr1tilde=qr;
+    <span class="keyword">for</span> m=0:M
+       [wr_m,qr_m]=opadjL1(Ym{m+1});
+       <span class="keyword">if</span> m==0
+           wr_m=real(wr_m);
+           wr1tilde(:,m+1)=wr1tilde(:,m+1)-tau*2*wr_m;
+       <span class="keyword">else</span>
+           wr1tilde(:,m+1)=wr1tilde(:,m+1)-tau*wr_m;
+       <span class="keyword">end</span>
+       qr1tilde(:,m+1)=qr1tilde(:,m+1)-tau*qr_m;
+    <span class="keyword">end</span>
+    <span class="keyword">for</span> n2=0:Hs-1
+       wr_n2=opadjL2(Yn2{n2+1});
+       wr1tilde(n2+1,:)=wr1tilde(n2+1,:)-tau*wr_n2;
+    <span class="keyword">end</span>
+    <span class="comment">% -L_N*y_{N,n}=-Id*.(YNw,YNq)</span>
+    wr1tilde=wr1tilde-tau*YNw;
+    qr1tilde=qr1tilde-tau*YNq;
+    <span class="comment">% prox_taug</span>
+    wr1tilde=proxtaugmat2(wr1tilde+tau*opadjA(yr),tau);
+    <span class="comment">% x_{n+1}=rho*~x_{n+1} + (1-rho)*x_n</span>
+    wr1=rho*wr1tilde+(1-rho)*wr;
+    qr1=rho*qr1tilde+(1-rho)*qr;
+    <span class="comment">% y_{i,n+1}=rho*prox_{sigma*Hi*}(y_{i,n}+sigma*Li(2~x_{n+1}-x_n))+(1-rho)*y_{i,n}</span>
+    diffw=2*wr1tilde-wr;
+    diffq=2*qr1tilde-qr;
+    <span class="keyword">for</span> m=0:M
+       Ym{m+1}=rho*proxsigmahconj(Ym{m+1}+<span class="keyword">...</span>
+           sigma*opL1(diffw(:,m+1),diffq(:,m+1)),sigma)+(1-rho)*Ym{m+1};
+    <span class="keyword">end</span>
+    <span class="keyword">for</span> n2=0:Hs-1
+       Yn2{n2+1}=rho*proxsigmahconj(Yn2{n2+1}+<span class="keyword">...</span>
+           sigma*opL2(diffw(n2+1,:)),sigma)+(1-rho)*Yn2{n2+1};
+    <span class="keyword">end</span>
+    [YNwtilde,YNqtilde]=proxsigmahNconj(YNw+sigma*diffw,<span class="keyword">...</span>
+        YNq+sigma*diffq,sigma,c);
+    YNw=rho*YNwtilde+(1-rho)*YNw;
+    YNq=rho*YNqtilde+(1-rho)*YNq;
+    <span class="comment">% update</span>
+    wr=wr1;
+    qr=qr1;
+    <span class="keyword">if</span> plotError
+        <span class="comment">% store the relative errors at this step</span>
+        Tab(iter+1)=normW(opA(wr)-yr);
+        Tab2(iter+1)=normW(wr(T+1:end-T,:)-wstar(T+1:end-T,M+1:end))/NORMW;
+    <span class="keyword">end</span>
+    <span class="comment">% display current iteration step</span>
+    <span class="keyword">if</span> displayIter &amp;&amp; mod(iter-1,Nbiter/100)==0
+       iter
+       <span class="comment">%Tab2(iter)</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><p>Time execution:</p><pre class="codeinput">toc
+</pre><pre class="codeoutput">Elapsed time is 255.391501 seconds.
+</pre><p>Display the results</p><pre class="codeinput">wrsym=[fliplr(conj(wr(:,2:end))) wr];   <span class="comment">% extend symetrically</span>
+xx = 1 : 1 : M+1;                       <span class="comment">% define a 2D grid (xx,yy)</span>
+yy = 1 : 1 : Hs;                        <span class="comment">% for a 3D representation</span>
+[X,Y] = meshgrid(xx,yy);                <span class="comment">% of the error pixel by pixel</span>
+
+<span class="keyword">if</span> plotError
+    <span class="comment">% Compare the images of the solution of the algorithm and the theoric</span>
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(wstar)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$\hat w^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(wrsym)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Solution of the minimization problem'</span>);
+    xlabel(<span class="string">'$$\hat w$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+
+    <span class="comment">% Plot the error pixel by pixel</span>
+    figure; surf(X,Y,abs(wstar(:,M+1:end)-wr));
+    title(<span class="string">'Error pixel by pixel'</span>);
+
+    <span class="comment">% Plot the variation of the norm error at each iteration</span>
+    figure;
+    loglog(1:iter,Tab2(1:iter),<span class="string">'Color'</span>,[1 0.6 0],<span class="string">'Linewidth'</span>,1.5); grid <span class="string">on</span>; hold <span class="string">on</span>;
+    loglog(1:iter,Tab(1:iter)/normW(yr),<span class="string">'Color'</span>,[0.8 0 1],<span class="string">'Linewidth'</span>,1.5);
+    set(gcf,<span class="string">'color'</span>,<span class="string">'w'</span>);
+    set(gca,<span class="string">'XMinorGrid'</span>,<span class="string">'Off'</span>);
+    xlabel(<span class="string">'Iterations'</span>);
+    ylabel(<span class="string">'Relative errors'</span>);
+    title(<span class="string">'Variation of the relative errors according to iterations'</span>);
+    legend({<span class="string">'$$\frac{\|\hat w_r-\hat w^{\sharp}\|_{\mathcal{W}}}{\|\hat w^{\sharp}\|_{\mathcal{W}}}$$'</span>,<span class="string">'$$\frac{\|\mathbf{A}\hat w_r-\hat y_r\|_{\mathcal{W}}}{\|\hat y_r\|_{\mathcal{W}}}$$'</span>},<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    <span class="comment">%print -depsc essai_fig2.eps</span>
+    <span class="comment">%fixPSlinestyle('essai_fig2.eps','essai_fig_fixed.eps')</span>
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="minimization_Chambolle_01.png" alt=""> <img vspace="5" hspace="5" src="minimization_Chambolle_02.png" alt=""> <img vspace="5" hspace="5" src="minimization_Chambolle_03.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Minimization algorithm - relaxed Chambolle-Pock version
+% Perform a primal-dual splitting algorithm initialized with
+% the horizontal Fourier transform of the degraded image $y$
+% To compute the solution $\hat w_r^{\sharp}$ of the optimization problem
+%
+% $$\hat w_r^{\sharp}\in {arg\,min}_{\hat w_r,q_r}\frac 1 2 \|A\hat w_r-\hat y_r\|^2,\left\{\begin{array}{l} \forall n_2=0,...,H_S-1, \forall m=0,...,M,\\ \hat w_r[0,n_2]=\hat w_r[0,0]< c,\\q_r[m,0]< c,\\ L_1(\hat w_r[m,:],q_r[m,:])>0 , L_2(\hat w_r[:,n_2])>0.\end{array}\right.$$
+
+global Gfour h hadj Hs M S T invopPQI invopPgI;
+
+%%
+% Parameters for the minimization
+
+normLsquare=M+Hs+1;                 % norm of the operator L
+sigma=1/(tau*normLsquare);          % dual step sigma computed from tau
+Amat=transpose(convmtx(h,H));       % matrix A_h of the convolution by h
+Astarmat=convmtx(flipud(hadj),H);   % adjoint matrix of A_h
+P=tau*Astarmat*Amat;                % matrix tauA_h*A_h
+Q=Gfour*conj(Gfour);                % diagonal matrix of coef |\hat g[m]|^2
+sp=size(P,1);                       % dimension of the square matrix P
+sq=size(Q,1);                       % dimension of the square matrix Q
+PQkron=kron(transpose(Q),P);        % Kronecker product to resolve the
+opPQI=PQkron+eye(sp*sq);            % system equation PXQ+X=Y, but it is
+invopPQI=inv(opPQI);                % slower than the following method:
+invopPgI=cell(M+1,1);               % Compute the M inverse (I+Q[m,m]P)^-1
+for m=0:M
+    invopPgI{m+1}=inv(eye(Hs)+Q(m+1,m+1)*P);
+end
+
+%%
+% Variables declaration
+
+wr=zeros(Hs,M+1);       % w_r optimization variable, x_n=(wr,qr)
+qr=zeros(Hs,M+1);       % q_r optimization variable x_n=(wr,qr)
+yr=zeros(H,M+1);        % y_r horizontal Fourier transform of the data y
+wr1=zeros(Hs,M+1);      % x_{n+1}=(wr1,qr1)
+qr1=zeros(Hs,M+1);      % x_{n+1}=(wr1,qr1)
+wr1tilde=zeros(Hs,M+1); % ~x_{n+1}=(wr1tilde,qr1tilde)
+qr1tilde=zeros(Hs,M+1); % ~x_{n+1}=(wr1tilde,qr1tilde)
+Ym=cell(M+1);           % y_{i,n} for i=0..M
+Yn2=cell(Hs);           % y_{i,n} for i=0..Hs-1
+YNw=zeros(Hs,M+1);      % y_{N,n}=(YNw,YNq) corresponding to \iota_E
+YNq=zeros(Hs,M+1);      % y_{N,n}=(YNw,YNq) corresponding to \iota_E
+Tab=zeros(1,Nbiter+1);  % Store error ||Aw_r-y_r|| for each step
+Tab2=zeros(1,Nbiter+1); % Store error ||w_r-wstar|| for each step
+
+%%
+% Variables initialization
+
+% Dual variables initialization to zero
+for m=0:M
+    Ym{m+1}=zeros(Hs+1);
+end
+for n2=0:Hs-1
+    Yn2{n2+1}=zeros(M+1); 
+end
+ 
+yr=yfour(:,M+1:end);    % The data fidelity term is the horizontal 
+                        % Fourier transform of the degraded image y
+T=S; 
+NORMW=normW(wstar(T+1:end-T,M+1:end)); % we ignore the borders
+
+% Initial relative errors
+if plotError
+    Tab(1)=normW(opA(wr)-yr);
+    Tab2(1)=normW(wr(T+1:end-T,:)-wstar(T+1:end-T,M+1:end))/NORMW; 
+end
+
+%%
+% Primal-dual splitting algorithm
+
+tic 
+for iter=1:Nbiter
+    % ~x_{n+1}=prox_{tau.G}(x_n-grad(x_n)-\sum Li*y_{i,n})
+    wr1tilde=wr;
+    qr1tilde=qr;    
+    for m=0:M
+       [wr_m,qr_m]=opadjL1(Ym{m+1});
+       if m==0
+           wr_m=real(wr_m);
+           wr1tilde(:,m+1)=wr1tilde(:,m+1)-tau*2*wr_m; 
+       else
+           wr1tilde(:,m+1)=wr1tilde(:,m+1)-tau*wr_m;
+       end      
+       qr1tilde(:,m+1)=qr1tilde(:,m+1)-tau*qr_m;
+    end
+    for n2=0:Hs-1
+       wr_n2=opadjL2(Yn2{n2+1});
+       wr1tilde(n2+1,:)=wr1tilde(n2+1,:)-tau*wr_n2;
+    end
+    % -L_N*y_{N,n}=-Id*.(YNw,YNq)
+    wr1tilde=wr1tilde-tau*YNw;
+    qr1tilde=qr1tilde-tau*YNq;
+    % prox_taug
+    wr1tilde=proxtaugmat2(wr1tilde+tau*opadjA(yr),tau);
+    % x_{n+1}=rho*~x_{n+1} + (1-rho)*x_n
+    wr1=rho*wr1tilde+(1-rho)*wr;
+    qr1=rho*qr1tilde+(1-rho)*qr;
+    % y_{i,n+1}=rho*prox_{sigma*Hi*}(y_{i,n}+sigma*Li(2~x_{n+1}-x_n))+(1-rho)*y_{i,n}
+    diffw=2*wr1tilde-wr;
+    diffq=2*qr1tilde-qr;
+    for m=0:M       
+       Ym{m+1}=rho*proxsigmahconj(Ym{m+1}+...
+           sigma*opL1(diffw(:,m+1),diffq(:,m+1)),sigma)+(1-rho)*Ym{m+1};
+    end
+    for n2=0:Hs-1
+       Yn2{n2+1}=rho*proxsigmahconj(Yn2{n2+1}+...
+           sigma*opL2(diffw(n2+1,:)),sigma)+(1-rho)*Yn2{n2+1};
+    end
+    [YNwtilde,YNqtilde]=proxsigmahNconj(YNw+sigma*diffw,...
+        YNq+sigma*diffq,sigma,c);
+    YNw=rho*YNwtilde+(1-rho)*YNw;
+    YNq=rho*YNqtilde+(1-rho)*YNq;
+    % update
+    wr=wr1;
+    qr=qr1;
+    if plotError
+        % store the relative errors at this step
+        Tab(iter+1)=normW(opA(wr)-yr); 
+        Tab2(iter+1)=normW(wr(T+1:end-T,:)-wstar(T+1:end-T,M+1:end))/NORMW; 
+    end
+    % display current iteration step
+    if displayIter && mod(iter-1,Nbiter/100)==0
+       iter
+       %Tab2(iter)
+    end
+end
+%%
+% Time execution:
+toc
+
+%%
+% Display the results
+
+wrsym=[fliplr(conj(wr(:,2:end))) wr];   % extend symetrically
+xx = 1 : 1 : M+1;                       % define a 2D grid (xx,yy)
+yy = 1 : 1 : Hs;                        % for a 3D representation
+[X,Y] = meshgrid(xx,yy);                % of the error pixel by pixel
+
+if plotError
+    % Compare the images of the solution of the algorithm and the theoric
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(wstar)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$\hat w^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(wrsym)); colormap gray; axis image;
+    title('Solution of the minimization problem');
+    xlabel('$$\hat w$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+    
+    % Plot the error pixel by pixel
+    figure; surf(X,Y,abs(wstar(:,M+1:end)-wr));
+    title('Error pixel by pixel');
+    
+    % Plot the variation of the norm error at each iteration
+    figure;
+    loglog(1:iter,Tab2(1:iter),'Color',[1 0.6 0],'Linewidth',1.5); grid on; hold on;
+    loglog(1:iter,Tab(1:iter)/normW(yr),'Color',[0.8 0 1],'Linewidth',1.5);
+    set(gcf,'color','w');
+    set(gca,'XMinorGrid','Off');
+    xlabel('Iterations');
+    ylabel('Relative errors');
+    title('Variation of the relative errors according to iterations');
+    legend({'$$\frac{\|\hat w_r-\hat w^{\sharp}\|_{\mathcal{W}}}{\|\hat w^{\sharp}\|_{\mathcal{W}}}$$','$$\frac{\|\mathbf{A}\hat w_r-\hat y_r\|_{\mathcal{W}}}{\|\hat y_r\|_{\mathcal{W}}}$$'},'Interpreter','latex');
+    %print -depsc essai_fig2.eps
+    %fixPSlinestyle('essai_fig2.eps','essai_fig_fixed.eps')
+end
+##### SOURCE END #####
+--></body></html>
