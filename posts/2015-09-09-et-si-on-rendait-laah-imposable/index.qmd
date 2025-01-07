@@ -43,7 +43,7 @@ Autrement dit **de par son caractère juridique, l'AAH est vouée à la prise en
 
 Si vous ne percevez aucun revenu vous touchez l'**AAH à taux plein**, à savoir **800,45 €** en 2015 (éventuellement majoré de la MVA et du complément de ressources). Si en revanche vous touchez un salaire, celui-ci sera soumis à un **abattement 80/40** pour déterminer le montant de l'AAH versée. J'explique tout ceci en détail dans cet article fondamental :
 
-[L'AAH pour les nuls, comprendre par l'exemple](../2024-04-01-laah-pour-les-nuls-comprendre-par-lexemple)
+[L'AAH pour les nuls, comprendre par l'exemple](../2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple)
 
 **Pour résumer**, un petit graphique qui représente l'AAH versée suivant votre salaire :
 

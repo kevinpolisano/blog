@@ -1,0 +1,34 @@
+---
+title: "L'AAH INVESTIGATION – Le prix de l'amour"
+author: "Kévin Polisano"
+date: "2017-01-03"
+categories: [handicap]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/andythumb.jpg
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
+---
+
+<iframe src="https://www.youtube.com/embed/oyXnj2ygViU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+La vie en couple reste encore inaccessible pour un grand nombre de personnes handicapées, et pour cause, le mode de calcul de l'AAH (l'allocation aux adultes handicapés) induit une situation de **dépendance vis-à-vis de leur partenaire**, les dissuadant de vivre sous le même toit, de se pacser ou a fortiori de se marier.
+
+En effet, les revenus du conjoint, du concubin ou du pacsé sont pris en compte pour déterminer le droit à percevoir l'AAH. Si ces derniers sont supérieurs à 1112€ par mois, l'AAH du bénéficiaire diminue, et dès lors qu'ils dépassent 2246€, **il ne perçoit plus aucun centime d'AAH**. Cette situation fait porter toute la responsabilité financière sur le seul partenaire en mesure de travailler, condamnant son conjoint handicapé à une totale dépendance à son égard et le couple à une grande précarité.
+
+Cette animation fait le récit d'une telle situation à travers le personnage d'Andy, tâchant de synthétiser en 5 minutes le fonctionnement de l'AAH en couple et les effets qu'il est susceptible de produire sur celui-ci.
+
+En espérant que ce support pédagogique puisse participer à relancer le débat sur cette question, et contribuer à le porter sur le devant de la scène politique.
+
+_Pour aller plus loin :_
+
+- [Le mariage pour tous, sauf pour les personnes handicapées](../2014-07-25-le-mariage-pour-tous-sauf-pour-les-personnes-handicapees)
+- [Et si l'on rendait l'AAH imposable](../2015-09-09-et-si-on-rendait-laah-imposable)
+- [L'AAH pour les nuls, comprendre par l'exemple](../2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple)
+
