@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2018-05-11">
+
+<title>Rédiger efficacement sa thèse avec LaTeX : Maîtriser son éditeur préféré – Blog de Kévin Polisano</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog de Kévin Polisano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Kévin Polisano</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Rédiger efficacement sa thèse avec LaTeX : Maîtriser son éditeur préféré</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">latex</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 11, 2018</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#fonctionnalités-de-base" id="toc-fonctionnalités-de-base" class="nav-link" data-scroll-target="#fonctionnalités-de-base">Fonctionnalités de base</a>
+  <ul class="collapse">
+  <li><a href="#activer-les-touches-rémanentes" id="toc-activer-les-touches-rémanentes" class="nav-link" data-scroll-target="#activer-les-touches-rémanentes">Activer les touches rémanentes</a></li>
+  <li><a href="#maîtriser-son-clavier-dans-le-traitement-de-texte" id="toc-maîtriser-son-clavier-dans-le-traitement-de-texte" class="nav-link" data-scroll-target="#maîtriser-son-clavier-dans-le-traitement-de-texte">Maîtriser son clavier dans le traitement de texte</a></li>
+  </ul></li>
+  <li><a href="#les-commandes-de-complétion-et-modèles-de-texshop" id="toc-les-commandes-de-complétion-et-modèles-de-texshop" class="nav-link" data-scroll-target="#les-commandes-de-complétion-et-modèles-de-texshop">Les commandes de complétion et modèles de TeXShop</a>
+  <ul class="collapse">
+  <li><a href="#générer-des-environnements-via-quelques-caractères" id="toc-générer-des-environnements-via-quelques-caractères" class="nav-link" data-scroll-target="#générer-des-environnements-via-quelques-caractères">Générer des environnements via quelques caractères</a></li>
+  <li><a href="#la-complétion-pour-les-références-déquations-ou-biblio" id="toc-la-complétion-pour-les-références-déquations-ou-biblio" class="nav-link" data-scroll-target="#la-complétion-pour-les-références-déquations-ou-biblio">La complétion pour les références d’équations ou biblio</a></li>
+  <li><a href="#générer-des-templates-latex-via-des-modèles-prédéfinis" id="toc-générer-des-templates-latex-via-des-modèles-prédéfinis" class="nav-link" data-scroll-target="#générer-des-templates-latex-via-des-modèles-prédéfinis">Générer des templates LaTeX via des “Modèles” prédéfinis</a></li>
+  <li><a href="#redéfinir-ou-supprimer-des-raccourcis-claviers-du-menu-texshop" id="toc-redéfinir-ou-supprimer-des-raccourcis-claviers-du-menu-texshop" class="nav-link" data-scroll-target="#redéfinir-ou-supprimer-des-raccourcis-claviers-du-menu-texshop">Redéfinir ou supprimer des raccourcis claviers du menu TeXShop</a></li>
+  </ul></li>
+  <li><a href="#les-commandes-macros-à-personnaliser" id="toc-les-commandes-macros-à-personnaliser" class="nav-link" data-scroll-target="#les-commandes-macros-à-personnaliser">Les commandes macros à personnaliser</a></li>
+  <li><a href="#un-raccourci-peut-en-cacher-un-autre-les-keybindings" id="toc-un-raccourci-peut-en-cacher-un-autre-les-keybindings" class="nav-link" data-scroll-target="#un-raccourci-peut-en-cacher-un-autre-les-keybindings">Un raccourci peut en cacher un autre : les KeyBindings !</a></li>
+  <li><a href="#un-pense-bête-latex-à-accrocher-au-mur-de-votre-bureau" id="toc-un-pense-bête-latex-à-accrocher-au-mur-de-votre-bureau" class="nav-link" data-scroll-target="#un-pense-bête-latex-à-accrocher-au-mur-de-votre-bureau">Un pense-bête LaTeX à accrocher au mur de votre bureau</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p><strong>Rédiger sa thèse</strong> n’est pas un long fleuve tranquille. Cette étape nécessite de prendre du recul sur les 3 années (ou plus !) de recherches effectuées, de rassembler ses résultats puis de les organiser de telle sorte à identifier un fil conducteur répondant à sa problématique initiale. Si l’histoire que vous allez raconter, et la façon de la mettre en forme, sont des initiatives singulières, les moyens techniques utilisés eux, sont généralement partagés par l’ensemble des doctorants se lançant dans la phase terminale de rédaction. La composition de thèses scientifiques requiert bien souvent l’utilisation de <a href="https://fr.wikipedia.org/wiki/LaTeX">LaTeX</a>, permettant la production de formules mathématiques élégantes et la mise en forme du texte de très grande qualité. Cependant, même pour les utilisateurs confirmés de <span class="math inline">\(\LaTeX\)</span>, l’emploi systématique de commandes et d’environnements qu’il faut taper de façon récurrente au clavier, peut vite s’avérer chronophage pour de gros documents. <a href="https://tel.archives-ouvertes.fr/tel-01728616v2/document">Ma thèse</a> ayant dépassé les 300 pages, je me suis rapidement rendu compte au fil de l’écriture qu’il était indispensable d’optimiser sa production pour <em>gagner du temps</em> (ou ne pas en perdre, c’est selon), afin de finir en temps voulu et se concentrer sur l’essentiel.</p>
+<p><strong>Dans ce tutoriel</strong> je vous partage différentes astuces qui m’ont permis de rédiger efficacement du contenu <span class="math inline">\(\LaTeX\)</span> grâce aux fonctionnalités qu’offrent certains éditeurs. Pour le besoin de la démonstration j’ai utilisé l’éditeur <a href="https://en.wikipedia.org/wiki/TeXShop">TeXShop</a> disponible par défaut sous Mac OS X, mais la plupart des fonctionnalités exposées ici sont transposables aux autres éditeurs (le <em>meilleur</em> éditeur est selon moi celui que l’on maîtrise). J’avais par ailleurs dans <a href="../2013-04-02-comment-installer-kile-live-preview">un autre billet</a> fait la promotion de <a href="https://en.wikipedia.org/wiki/Kile">Kile</a> pour Linux et rédigé un tutoriel pour l’installation de Kile Live Preview.</p>
+<p><a href="images/jim-carrey-typing.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/jim-carrey-typing.gif" class="img-fluid"></a></p>
+<p><strong>Exemple introductif.</strong> Quand on est atteint comme moi d’un handicap, et qu’on veut s’éviter une tendinite, on prend l’habitude d’optimiser ses mouvements. Ne pouvant taper qu’avec mes deux index, la composition d’une formule LaTeX et donc des&nbsp;balises qui l’accompagnent, par exemple</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">....</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>me prend <strong>environ 5 à 6 secondes</strong> : il faut presser (et maintenir!) pour obtenir le backslash “\” les touches <code>⌥+⇧+/</code>&nbsp;(ce qu fait 3 touches), écrire “begin” (5 touches), presser et maintenir <code>⌥+(</code> (2 touches) pour obtenir l’accolade ouvrante “{”, écrire “equation” (8 touches), de nouveau l’accolade fermante “}” (2 touches), soit à ce stade 20 touches ont été frappées ; puis tout pareil avec la balise de fin qui nécessite de presser quant à elle 18 touches, <strong>ce qui totalise 38 frappes au clavier</strong> pour obtenir ces balises permettant d’écrire UNE formule. Enfin même pas la formule en elle-même avec les différents symboles mathématiques qui la composent, eux aussi représentés par des commandes spécifiques, mais 38 frappes QUE pour créer l’environnement qui permet l’écriture de la formule. Multiplié par le nombre de formules que comportera votre document LaTeX, voyez la perte de temps que cela engendre de réécrire à chaque fois ces balises…</p>
+<p>Nous allons voir différentes façons d’optimiser l’insertion de telles balises, environnements, commandes, etc suivant vos besoins. Je donnerai quelques exemples d’astuces personnelles pour gagner du temps précieux. Typiquement sur l’exemple précédent, nous allons voir comment <strong>en 3 touches (au lieu de 38!)</strong>, il est possible d’insérer d’un coup :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">•</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}•</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>et en prime en positionnant votre curseur en lieu et place du premier “bullet” (le rond noir), ce qui vous place directement entre les balises pour écrire votre formule. Et ensuite pouvoir en sortir <strong>sans toucher à la souris</strong>, par exemple en pressant <code>⌘+N</code> (N comme Next) qui vous téléporte directement après la balise, au niveau du deuxième “bullet”.</p>
+<p>Plusieurs astuces sont possibles pour devenir un AS du clavier, et se déclinent en 3 catégories :</p>
+<ul>
+<li><strong>Les commandes de complétions</strong></li>
+<li><strong>Les Macros (éventuellement couplées à des programmes AppleScript)</strong></li>
+<li><strong>Les raccourcis claviers (Key Bindings)</strong></li>
+</ul>
+<p>C’est parti !</p>
+<p>En guise de préliminaires, commençons par rappeler quelques fonctionnalités de base propre à votre OS (ici pour Mac)&nbsp; qui peuvent s’avérer utiles.</p>
+</section>
+<section id="fonctionnalités-de-base" class="level1">
+<h1>Fonctionnalités de base</h1>
+<section id="activer-les-touches-rémanentes" class="level2">
+<h2 class="anchored" data-anchor-id="activer-les-touches-rémanentes">Activer les touches rémanentes</h2>
+<p>La première chose qui fait gagner un peu de temps (et indispensable pour ceux qui tapent à moins de trois&nbsp;doigts), c’est d’éviter d’avoir à maintenir les touches de modifications ⌘, ⌥, ⇧, ⌃, etc pour taper des caractères comme le backslash “\” (⌥+⇧+/).&nbsp;Pour cela aller dans <code>Préférences système &gt; Accessibilité</code>, et cochez <code>Activer les touches à auto-maintien</code>.</p>
+<p><a href="images/accessibilite-touches-remanentes-maintien.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/accessibilite-touches-remanentes-maintien.jpg" class="img-fluid"></a></p>
+</section>
+<section id="maîtriser-son-clavier-dans-le-traitement-de-texte" class="level2">
+<h2 class="anchored" data-anchor-id="maîtriser-son-clavier-dans-le-traitement-de-texte">Maîtriser son clavier dans le traitement de texte</h2>
+<p>Pour se mouvoir au sein de votre document, il peut être utile d’avoir en tête les combinaisons de touches classiques dont dispose votre clavier sous votre OS. Par exemple :</p>
+<ul>
+<li>La touche ⌘ suivi des touches directionnelles&nbsp;←↓→↑ permettent respectivement d’aller en début de ligne, en bas de page, en fin de ligne et en haut de page.</li>
+<li>La recherche (et remplacement) d’un mot se fait par&nbsp;⌘+F, ⌘+G pour aller au mot suivant</li>
+<li>Se déplacer au début du mot précédent par&nbsp;⌥+← (resp.&nbsp;⌥+→ pour la fin du mot) et idem en maintenant&nbsp;⇧ pour la sélection.</li>
+<li>Sélectionner tout par&nbsp;⌘+A, supprimer le caractère à droite du curseur par Fn+⌫, supprimer jusqu’à la fin de ligne ce qui suit le curseur par ⌃+K</li>
+</ul>
+<p>et bien d’autres disponibles par exemple <a href="https://support.apple.com/fr-fr/HT201236">ici</a>.</p>
+</section>
+</section>
+<section id="les-commandes-de-complétion-et-modèles-de-texshop" class="level1">
+<h1>Les commandes de complétion et modèles de TeXShop</h1>
+<section id="générer-des-environnements-via-quelques-caractères" class="level2">
+<h2 class="anchored" data-anchor-id="générer-des-environnements-via-quelques-caractères">Générer des environnements via quelques caractères</h2>
+<p>Pour afficher d’un coup de baguette magique l’environnement</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ss">•</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}•</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>tapez dans l’éditeur <code>beq</code> puis presser la touche de complétion Tab (ou Escape, vous pouvez configurer l’une ou l’autre dans les préférences de TeXShop), et paf ça écrit tout ça pour vous!</p>
+<p><em>Comment ça marche ?</em></p>
+<p>Et bien vous avez un fichier texte dans TeXShop qui contient toutes ces commandes de complétion extrêmement utile, ce fichier se trouve dans <code>Source &gt; Commandes de complètement &gt; Editer le fichier de commande</code>. Pour la commande qui nous intéresse, la complétion est définie par cette ligne :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>beq:=<span class="kw">\begin</span>{<span class="ex">equation</span>}<span class="ss">#RET##INS#•#INS##RET#</span><span class="kw">\end</span>{<span class="ex">equation</span>}•</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>dont #RET signale un retour à la ligne, et #INS spécifie où le curseur atterri une fois les balises affichées, ici ça sélectionne le premier “bullet”.</p>
+<p>Il y en a pléthore! Par exemple <code>bf</code> pour insérer&nbsp;<code>\textbf{#INS#•#INS#}</code>, <code>usep</code> pour&nbsp;<code>\usepackage{#INS#•#INS#}#RET#</code> ou encore toutes les symboles mathématiques grecs : <code>xa</code> pour <code>\alpha</code>, <code>xe</code> pour <code>\epsilon</code>, et ainsi de suite.</p>
+<p>Ce qui est super c’est que vous pouvez également créer les vôtres en les ajoutant à cette liste et en sauvegardant !&nbsp;Cela fait économiser un temps fou en évitant d’avoir à taper le nom entier du symbole avec surtout le backslash systématique ! Même plus besoin d’utiliser les touches rémanentes pour le coup. Aller un exemple plus tricky pour percevoir la puissance de l’astuce :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>incgt:=<span class="kw">\begin</span>{<span class="ex">figure</span>}#RET#<span class="fu">\centering</span>#RET#<span class="kw">\begin</span>{<span class="ex">tabular</span>}{cc}#RET#</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">#INS#•#INS#</span>}<span class="op">&amp;</span><span class="bu">\includegraphics</span>{<span class="ex">•</span>}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>#RET#<span class="kw">\end</span>{<span class="ex">tabular</span>}#RET#<span class="fu">\caption</span>{•}#RET#<span class="kw">\end</span>{<span class="ex">figure</span>}#RET#•</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cette commande de complétion <code>incgt</code> (pour includegraphics with tabular) insère :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\centering</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{cc}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">•</span>}<span class="op">&amp;</span><span class="bu">\includegraphics</span>{<span class="ex">•</span>}</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\caption</span>{•}</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>•</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Avouez que c’est quand même bien pratique !</p>
+</section>
+<section id="la-complétion-pour-les-références-déquations-ou-biblio" class="level2">
+<h2 class="anchored" data-anchor-id="la-complétion-pour-les-références-déquations-ou-biblio">La complétion pour les références d’équations ou biblio</h2>
+<p>En activant la fonctionnalité <strong>“Complétion de Bibtex”</strong> dans les <code>Préférences &gt; Document &gt; Editeur</code>, si votre fichier .bib (contenu dans le même dossier que votre fichier .tex) est ouvert dans Bibtex, alors en positionnant votre curseur dans la commande <code>\cite{}</code>, le fait d’écrire les premiers caractères d’une références biblio puis de presser la touche <code>Fn + F5</code>&nbsp;fait apparaitre une liste déroulante avec les entrées possibles débutant par ces même caractères :</p>
+<p><img src="images/cite-completion-texshop.jpg" class="img-fluid"> On a la même fonctionnalité pour les références internes associées&nbsp;à un <code>\label{}</code> :</p>
+<p><a href="images/ref-completion-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/ref-completion-texshop.jpg" class="img-fluid"></a></p>
+<p><strong>NB</strong> : Vous pouvez aussi insérer une référence via une fenêtre pop-up par le raccourci&nbsp;&nbsp;⌘+⇧+R.</p>
+</section>
+<section id="générer-des-templates-latex-via-des-modèles-prédéfinis" class="level2">
+<h2 class="anchored" data-anchor-id="générer-des-templates-latex-via-des-modèles-prédéfinis">Générer des templates LaTeX via des “Modèles” prédéfinis</h2>
+<p>Une autre possibilité pour insérer ces gros blocs de code <span class="math inline">\(\LaTeX\)</span> (pas forcément pratique à écrire sur une ligne dans le fichier texte de complétion) est de l’enregistrer sous forme de template en .tex et de le stocker dans le repertoire suivant de TeXShop : <code>~/Library/TeXShop/Templates/</code> qui sera ensuite disponible dans le menu déroulant “Modèles” de votre fenêtre d’édition.</p>
+<p><a href="images/templates-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/templates-texshop.jpg" class="img-fluid"></a></p>
+<p>Il est également possible d’utiliser la <strong>palette</strong> <span class="math inline">\(\LaTeX\)</span> du menu Fenêtre, accessible par&nbsp;⌥+⌘+-, qui vous fourni visuellement la plupart des symboles et environnements <span class="math inline">\(\LaTeX\)</span> à portée de clic.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/palette-latex-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Palette LaTeX TeXShop"><img src="images/palette-latex-texshop.jpg" class="img-fluid figure-img" alt="Palette LaTeX TeXShop"></a></p>
+<figcaption>Palette LaTeX TeXShop</figcaption>
+</figure>
+</div>
+<p>De même la <strong>palette Matrix</strong> vous permet de remplir directement votre matrice dans l’interface prévue à cette effet.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/palette-matrix-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Palette Matrix TeXShop"><img src="images/palette-matrix-texshop.jpg" class="img-fluid figure-img" alt="Palette Matrix TeXShop"></a></p>
+<figcaption>Palette Matrix TeXShop</figcaption>
+</figure>
+</div>
+<p>Tout ceci est&nbsp;davantage <em>user-friendly</em>, mais ça demande de se saisir de la souris, là où les geeks préfèrent tout avoir à portée de clavier pour ne pas faire de va et vient entre la souris et le clavier. Au choix selon ses goûts :)</p>
+<p>Enfin&nbsp;pour de gros tableaux ou matrices comportant non pas des nombres mais des formules volumineuses il peut être préférable d’insérer uniquement la trame de l’environnement avec le nombre de cellules qui va bien, séparées par des “bullet”, que l’on remplit ensuite dans l’éditeur. Pour cela on peut se rendre dans <code>Macros &gt; Column macros &gt; New Tabular</code> (⌃+⌘+T), spécifier les dimensions du tableau et obtenir :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/new-tabular-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Nouveau Tableau TeXShop"><img src="images/new-tabular-texshop.jpg" class="img-fluid figure-img" alt="Nouveau Tableau TeXShop"></a></p>
+<figcaption>Nouveau Tableau TeXShop</figcaption>
+</figure>
+</div>
+<p>Notez au passage que l’avantage d’avoir recours à des raccourcis qui insèrent directement le code <span class="math inline">\(\LaTeX\)</span> des différents environnements, commandes, etc, permet de ne pas se planter dans l’oubli d’accolades ou autres joyeusetés provoquant des erreurs de compilations dont on passe ensuite trois plombes façon <em>où est Charlie</em> à trouver où est cette *** d’accolade manquante ! (Vu la qualité des messages d’erreurs du compilateur <span class="math inline">\(\LaTeX\)</span> :D )</p>
+<p>La prochaine étape consiste donc une fois les balises&nbsp;insérées, à taper la formule bien sûr, mais ensuite à <strong>sauter jusqu’au second “bullet”</strong> pour sortir de la balise sans toucher à la souris, en pressant ⌘+N par exemple. Le problème, c’est que ce raccourci est déjà utilisé par le menu de TeXShop pour créer un nouveau document (ce qui est en général utilisé qu’une seule fois, contrairement aux nombreuses fois où l’on voudrait sortir d’un environnement <span class="math inline">\(\LaTeX\)</span> à&nbsp;chaque formule du document). Il faut donc voir comment redéfinir, ou carrément supprimer un raccourci menu de TeXShop.</p>
+</section>
+<section id="redéfinir-ou-supprimer-des-raccourcis-claviers-du-menu-texshop" class="level2">
+<h2 class="anchored" data-anchor-id="redéfinir-ou-supprimer-des-raccourcis-claviers-du-menu-texshop">Redéfinir ou supprimer des raccourcis claviers du menu TeXShop</h2>
+<p>Bien entendu commencez par exploiter tous les raccourcis bien utiles que propose le menu TeXShop (comme la composition <span class="math inline">\(\LaTeX\)</span> avec ⌘+T, passer de la source à l’aperçu par ⌘+1, utiliser les palettes <span class="math inline">\(\LaTeX\)</span> si vous cherchez un symbole via ⌥+⌘+- ou la palette matrice via ⌥+⌘+=. Pour autant il y en a certains que vous utiliserez probablement jamais, ou que très rarement, cela ne vous servent donc pas, et mieux ils pourraient être utilisés comme raccourci pour d’autres actions plus intéressantes et plus récurrentes. Voyons donc comment redéfinir ou supprimer ces raccourcis menu.</p>
+<p>Pour cela deux possibilités s’offrent à nous : éditer le fichier KeyEquivalent.plist ou créer un raccourci d’application à partir des raccourcis clavier de Mac.</p>
+<p><strong>Editer le fichier KeyEquivalent.plist</strong></p>
+<p>Vous trouverez ce fichier dans le répertoire <code>~/Library/TeXShop/Menus/</code></p>
+<p>Voici comment est construit ce fichier :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="ot"> encoding=</span><span class="st">"UTF-8"</span><span class="fu">?&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> <span class="dt">plist</span> PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"<span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">plist</span><span class="ot"> version=</span><span class="st">"1.0"</span>&gt;</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dict</span>&gt;</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">key</span>&gt;3&lt;/<span class="kw">key</span>&gt;</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">dict</span>&gt;</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">key</span>&gt;12&lt;/<span class="kw">key</span>&gt;</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">array</span>&gt;</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">string</span>&gt;O&lt;/<span class="kw">string</span>&gt;</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">false</span>/&gt;</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">false</span>/&gt;</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>          &lt;/<span class="kw">array</span>&gt;</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">dict</span>&gt;</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">key</span>&gt;2&lt;/<span class="kw">key</span>&gt;</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">dict</span>&gt;</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">key</span>&gt;1&lt;/<span class="kw">key</span>&gt;</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">array</span>&gt;</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">string</span>&gt;&lt;/<span class="kw">string</span>&gt;</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">false</span>/&gt;</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">false</span>/&gt;</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>          &lt;/<span class="kw">array</span>&gt;</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">dict</span>&gt;</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">dict</span>&gt;</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">plist</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cela signifie qu’on cherche dans le 3ème onglet du Menu (key=3) à savoir Edition (car TeXShop=1, Fichier=2, Edition=3, etc), puis la commande n°12 (key=12) à savoir “Vérifier l’orthographe et la grammaire”, et que l’on renomme dans string ⌘+O au lieu de ⌘+: initialement. Les balises qui suivent sont à false, mais dans le cas contraire cela signifierait qu’il faut maintenir également les touches ⌥ et ⌃. De même le groupe de balises suivantes signifie qu’on supprime le raccourci clavier ⌘+N correspondant à <code>Edition &gt; Nouveau</code>. On pourrait directement écrire les noms des commandes <code>Vérifier l'orthographe et la grammaire</code> ou <code>Nouveau</code> à la place des numéros dans Key, mais l’avantage des numéros est qu’il ne dépend que de l’ordre d’affichage dans le menu et est indépendant du langage utilisé (Français, Anglais, etc).</p>
+<p><strong>Attention</strong> : cette méthode ne permet pas de redéfinir des commandes menu qui sont situés dans une arborescence ≥ 2, auquel cas il est préférable d’avoir recours à l’alternative qui suit :</p>
+<p><strong>Utiliser les raccourcis clavier de Mac</strong></p>
+<p>Il faut se rendre dans <strong>Préférences Système &gt; Clavier &gt; Raccourcis &gt; Raccourcis de l’application</strong> et créer un raccourcis clavier correspond à l’entrée de la commande menu que vous voulez modifier. Par exemple je voudrais assigner à la commande <strong>Source &gt; Commande de complètement &gt; Repères &gt; Repère suivant (Ôter)</strong>&nbsp;le raccourci&nbsp;⌘ + N (N pour “Next”). Pour cela je tape l’entrée exacte “Repère suivant (Ôter)” et je mets “N” dans le case raccourci, comme suit :</p>
+<p><a href="images/mac-shortcuts.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/mac-shortcuts.jpg" class="img-fluid"></a></p>
+<p>Une fois cela fait, vous pouvez en effet sortir de l’environnement equation (et de tous les autres comportant un bullet) en pressant ⌘+N, qui va aller au <strong>“Repère suivant”</strong> tout en l’ôtant.</p>
+<p><strong>Remarque</strong> : Notez que&nbsp;j’ai décrit au passage la méthode pour supprimer le raccourci menu ⌘+:. Il y a une raison à cela. Dans vos documents <span class="math inline">\(\LaTeX\)</span>, il y a forte chances que vous soyez amené, temporairement, à créer des commandes <span class="math inline">\(\LaTeX\)</span> qui ne serviront que pour ce document-ci, ou qui ne seront appelées que très sporadiquement. Ainsi&nbsp;il n’est pas forcément nécessaire d’y faire correspondre une commande TeXShop de complétion, c’est-à-dire&nbsp;trouver un nom de raccourci et éditer le fichier de commande en conséquence, ce qui de plus aurait tendance à la longue à surcharger inutilement ce fichier et à ne plus s’y retrouver. Par conséquent pour certaines commandes ponctuelles, il est préférable de taper directement le nom de la commande que vous aurez défini dans votre préambule (via&nbsp;\newcommand etc), disons : . Mais dans ce cas <strong>on peut encore gagner en rapidité, en s’évitant de taper</strong> ⌥+⇧+/ pour obtenir le backslash impératif à toute commande <span class="math inline">\(\LaTeX\)</span>. On préfèrera taper typiquement ⌘+/ qui est une combinaison de 2 touches au lieu de trois. Or de nouveau la commande ⌘+: est déjà utilisée par le menu TeXShop pour Vérifier l’orthographe et la grammaire, c’est la raison pour laquelle on la supprime en première instance, puis on la redéfinit en utilisant cette fois l’éditeur de macros de TeXShop…</p>
+</section>
+</section>
+<section id="les-commandes-macros-à-personnaliser" class="level1">
+<h1>Les commandes macros à personnaliser</h1>
+<p>Allez dans <code>Macros &gt; Ouvrir l'éditeur de macros</code>&nbsp;et faites une entrée “Backslash” avec pour commande ⌘ + : qui insèrera le symbole “\”.</p>
+<p><a href="images/macros-editor-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/macros-editor-texshop.jpg" class="img-fluid"></a></p>
+<p>Vous pouvez constater que j’ai défini d’autres macros comme par exemple ⌘+( qui m’insère un crochet ouvrant à la place de l’usuel ⌥+⇧+(, ou encore ⌘+L que j’ai redéfini pour insérer une valeur absolue ou une norme <code>\lVert #SEL##INS \rVert</code>. Le marqueur <code>#SEL#</code> permet d’appeler la macro sur une portion de texte sélectionné et de le placer à l’endroit où le marqueur est présent, ce qui permet donc a posteriori dans notre cas de normer telle ou telle formule en 2 frappes! Utile également une macro qui me permet d’afficher les symboles mathématiques en gras (pour les vecteurs, les matrices, les opérateurs, etc), ce qui s’effectue en tapant ⌘+B qui m’insère <code>\vect{•}•</code> pour les vecteurs,&nbsp;⌘+⇧+B soit <code>\mat{•}•</code> pour les matrices, ou encore ⌘+⇧+⌃+B soit <code>\ope{•}•</code> pour les opérateurs,&nbsp;qui sont autant&nbsp;d’alias de que je définis dans mon fichier de preambule par un <code>\newcommand</code>.</p>
+<p><strong>Remarque</strong>&nbsp;: Pourquoi me direz-vous ne pas simplement associé la macro ⌘+B à <code>\mathbf{}</code> ? Pour une raison de <strong>généricité</strong>. En effet suivant la typologie utilisée dans certains articles scientifiques, les vecteurs sont ou non en gras, les matrices si elles sont en gras sont ou non en italiques, et ainsi de suite. Par conséquent rattacher les macros à une commande générique&nbsp;permet ensuite de l’instancier comme bon vous semble sans avoir à remplacer toutes les occurrences de <code>\mathbf{}</code> qu’il pourrait y avoir dans votre document, et qui pourraient très bien concerner autre chose qu’un vecteur, une matrice ou un opérateur… De même en réalité mes macros pourvues pour la norme ou pour le&nbsp;produit scalaire renvoient à une commande <span class="math inline">\(\LaTeX\)</span>, qui me permet de moduler leur représentation suivant le contexte (la norme est-elle représentée par des barres verticales simples ou doubles <span class="math inline">\(\lvert x\rvert\)</span> vs.&nbsp;<span class="math inline">\(\lVert x\rVert\)</span>, le produit scalaire est-il représenté par <span class="math inline">\(\langle \mathbf{x},\mathbf{y}\rangle\)</span>, <span class="math inline">\((\mathbf{x}\,|\,\mathbf{y})\)</span> ou <span class="math inline">\(\mathbf{x}\cdot \mathbf{y}\)</span> ?), etc.</p>
+<p>Autant&nbsp;de combinaisons astucieuses possible au gré de votre imagination…</p>
+</section>
+<section id="un-raccourci-peut-en-cacher-un-autre-les-keybindings" class="level1">
+<h1>Un raccourci peut en cacher un autre : les KeyBindings !</h1>
+<p>Je vous ai parlé des commandes de complétion, de l’éditeur de macros que vous savez maintenant créer, mais il reste un type de raccourci que je n’ai pas encore évoqué : les raccourcis claviers à proprement parlé ! Ceux dont une touche de caractère spécial provoque une action spéciale, par exemple, je souhaiterais que l’accent circonflexe ^ suivi de la touche espace me produise :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>^{}•</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>en me plaçant dans les accolades. Plutôt pratique pour écrire des exposants qui comportent plusieurs éléments n’est-ce pas ?</p>
+<p>Pour cela il faut se rendre dans <code>Source &gt; Raccourcis claviers &gt; Editer le fichier des raccourcis</code>, et indiquer en sortie <code>{#SEL##INS#}</code>•</p>
+<p><a href="images/editeur-raccourcis-clavier-texshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/editeur-raccourcis-clavier-texshop.jpg" class="img-fluid"></a></p>
+<p>Un des raccourcis déjà présent est&nbsp;⌥+&lt; (resp.&nbsp;⌥+⇧+&gt;) qui correspond au caractère spécial ≤ (resp. ≥) et qui produit <code>\leq</code> et <code>\geq</code>, soit en <span class="math inline">\(\LaTeX\)</span> : <span class="math inline">\(\leq\)</span> et <span class="math inline">\(\geq\)</span>. D’autres encore,&nbsp;⌥+p produit π, et&nbsp;⌥+, produit ∞, qui font office de raccourcis aux symboles <span class="math inline">\(\LaTeX\)</span> correspond <code>\pi</code> et <code>\infty</code>. Voyez que par rapport à la complétion du symbole <span class="math inline">\(\pi\)</span> que l’on a défini par <code>xp</code>, qui nécessite l’usage de 3 touches (x,p,Tab), ici&nbsp;⌥+p n’en nécessite que 2. De même on peut redéfinir le raccourci&nbsp;⌥+/ qui donne initialement ÷, pour qu’il insère •, ce qui là encore permet d’économiser une touche (à la place de la complétion <code>fr</code>).</p>
+<p><strong>Remarque</strong> : Pour revenir à l’exposant suivant d’accolades, je préfère utiliser la macro&nbsp;⌘+P (qu’il faut au préalable désaffecter à “Imprimer…” dans le menu) plutôt que le raccourcis ⌃&nbsp;car la plupart du temps l’exposant se réduit à un caractère <span class="math inline">\(x^2\)</span> suivi d’un espace pour passer à la suite, là où l’usage&nbsp;d’accolades nécessite de frapper 2 touches (⌘+N ou →+espace) pour en sortir. J’aurais préféré pour utiliser la commande&nbsp;⌘+⌃ mais cela ne semble malheureusement pas fonctionner, du fait certainement que cette touche est une <a href="https://en.wikipedia.org/wiki/Dead_key"><em>dead key</em></a>.&nbsp;De même pour les indices, je conserve la touche “_” pour les indices simples, et j’ai redéfinis pour les indices nécessitant des accolades la macro&nbsp;⌘+_ (soit&nbsp;⌘+- qui était affecté au zoom décroissant sur le texte dont je me sers que très peu), qui produit donc _{•}•.</p>
+</section>
+<section id="un-pense-bête-latex-à-accrocher-au-mur-de-votre-bureau" class="level1">
+<h1>Un pense-bête LaTeX à accrocher au mur de votre bureau</h1>
+<p>Au départ, créer et retenir tous ces raccourcis de commandes peut vous donner l’impression de perdre du temps, mais très vite tous ces automatismes vous rendront un grand service et vous feront à coup sur économiser pas mal de temps quand vous les multiplierez par le nombre de pages que vous noircissez.</p>
+<p>Pour vous faciliter la tâche je vous ai créé un mémo <span class="math inline">\(\LaTeX\)</span> sous forme de tableau qui synthétise les commandes usuelles et les raccourcis que j’utilise personnellement et que vous pouvez personnaliser avec vos propres raccourcis !</p>
+<ul>
+<li><a href="pense-bete.tex">pense-bete.tex</a></li>
+<li><a href="pense-bete.pdf">pense-bete.pdf</a></li>
+</ul>
+<p>Il ne me reste plus qu’à vous souhaiter une bonne rédaction, et du courage … 😉</p>
+<p><em>PS : N’hésitez pas à poster vos propres astuces en commentaires !</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","selector":".lightbox","openEffect":"fade","loop":true});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
