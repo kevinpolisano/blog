@@ -1,0 +1,573 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Generate K lines in a degraded image</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-03-02"><meta name="DC.source" content="data_generation.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Generate K lines in a degraded image</h1><p>Generate <img src="data_generation_eq14888.png" alt="$K$"> lines with parameters <img src="data_generation_eq00010.png" alt="$(\theta_k,\alpha_k,\eta_k)$"> where:</p><div><ul><li><img src="data_generation_eq33988.png" alt="$\theta_k$"> is the angle of the line</li><li><img src="data_generation_eq32378.png" alt="$\alpha_k$"> is the amplitude of the line</li><li><img src="data_generation_eq32957.png" alt="$\eta_k$"> is the horizontal offset of the line</li></ul></div><p>Lines are blurred with a horizontal filter <img src="data_generation_eq31049.png" alt="$g$"> and a vertical one <img src="data_generation_eq60012.png" alt="$h$">. The image of size <img src="data_generation_eq44095.png" alt="$W\times H$"> degraded by some noiselevel is called <img src="data_generation_eq44020.png" alt="$y$">.</p><pre class="codeinput"><span class="keyword">global</span> h hadj hfourextend Hs M Gfour S;
+
+S=ceil(spread*4)-1;            <span class="comment">% half-length of the discrete filter h</span>
+Hs=H+2*S;                      <span class="comment">% height after adding S pixels beyond border</span>
+M=(W-1)/2;                     <span class="comment">% half-width of the image</span>
+h=exp(-((-S:S)'/spread).^2/2); <span class="comment">% the Gaussian filter h</span>
+h=h/sum(h);                    <span class="comment">% filter normalization</span>
+vstar=zeros((H+2*S),W);        <span class="comment">% image of the lines horizontally blurred</span>
+g=h;                           <span class="comment">% same blur g horizontally and h vertically</span>
+</pre><p>Compute <img src="data_generation_eq80571.png" alt="$v^{\star}$"> thanks to these two relations:</p><p><img src="data_generation_eq67041.png" alt="$$v^\sharp(t_1,t_2)=\sum_{k=1}^K \frac{\alpha_k}{\cos(\theta_k)}&#xA;\varphi_1\Big(t_1+\tan(\theta_k)t_2+\frac{\gamma_k}{\cos(\theta_k)}\Big)$$"></p><pre class="codeinput"><span class="keyword">for</span> k=1:K,
+    Angle=t_k(k);           <span class="comment">% the angle of line with respect to -y axis</span>
+    a_k(k)=a_k(k)/max(h);   <span class="comment">% after blurring a_k*h is at most equal to 255</span>
+    amplitude=a_k(k);       <span class="comment">% horizontal offset p_k from the image's center</span>
+    offset=p_k(k);          <span class="comment">% may varying between -M and M</span>
+    <span class="keyword">for</span> n2=1:(H+2*S),
+        t=(0:W-1)-M+tan(Angle)*((H+1)/2+S-n2)-offset;
+        vec=zeros(1,W);
+        <span class="keyword">for</span> n=-S:S,         <span class="comment">% Dirichlet : sin(pi*(t-n))./sin(pi*(t-n)/W);</span>
+            vec=vec+g(n+S+1)*arrayfun(@(x) Dirichlet_Kernel(x,W),t-n);
+        <span class="keyword">end</span>
+        vstar(n2,:)=vstar(n2,:)+amplitude/cos(Angle)*vec/W;
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+xstar=conv2(vstar,h,<span class="string">'valid'</span>);  <span class="comment">% vertical blur convolution</span>
+noise=randn(H,W)*noiselevel;   <span class="comment">% additionnal Gaussian noise</span>
+y=xstar+noise;                 <span class="comment">% degraded image</span>
+
+<span class="comment">%imwrite(uint8(y),'degraded.tif');</span>
+</pre><p>We display the images <img src="data_generation_eq47450.png" alt="$v^{\sharp}$">, <img src="data_generation_eq32213.png" alt="$x^{\sharp}$"> and <img src="data_generation_eq44020.png" alt="$y$"></p><pre class="codeinput"><span class="keyword">if</span> plotData
+    f=figure;
+    subplot(1,3,1);
+    imagesc(vstar); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'$$v^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,3,2);
+    imagesc(xstar); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'$$x^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,3,3);
+    imagesc(y); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'$$y$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    warning <span class="string">off</span>;
+    truesize(f,[200 200]);
+    tightfig;
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_01.png" alt=""> <p>We compute the FFT of these filters for a later use</p><pre class="codeinput">gextend = [zeros(M-S,1) ; g ; zeros(M-S,1)]; <span class="comment">% size 2M+1=W cause we need</span>
+gfour=fftshift(fft(ifftshift(gextend)));     <span class="comment">% W Fourier coefficients ^g[m]</span>
+
+Hm=(Hs-1)/2;
+hextend=[zeros(Hm-S,1) ; h ; zeros(Hm-S,1)];
+hfourextend=fftshift(fft(ifftshift(hextend)));
+
+Gfour=diag(gfour(M+1:end)); <span class="comment">% matrix diag containing the Fourier coefs</span>
+hadj=conj(flipud(h));       <span class="comment">% filter of the adjoint of convolution by h</span>
+</pre><p>At this stage, we have all we need to perform the minimization on the data <img src="data_generation_eq44020.png" alt="$y$"> which is the degraded image, in order to recover the solution <img src="data_generation_eq32862.png" alt="$w^{\sharp}=\mathcal{F}_1 s$"> and then the parameters of lines.</p><p>The exact solution <img src="data_generation_eq92036.png" alt="$w^{\sharp}$"> we want to recover is</p><p><img src="data_generation_eq63759.png" alt="$$\hat w^{\sharp}[m,n_2]=\sum_{k=1}^K \frac{\alpha_k}{\cos \theta_k}e^{j2\pi \left(\tan (\theta_k)n_2+\gamma_k/\cos(\theta_k)\right)m/W}$$"></p><pre class="codeinput"><span class="comment">% Theoritical formula for wstar</span>
+wstar=zeros((H+2*S),W);
+<span class="keyword">for</span> n2=1:(H+2*S)
+    <span class="keyword">for</span> m=-M:M
+        wstar(n2,m+M+1)=sum(a_k./cos(t_k).*exp(1i*2*pi*<span class="keyword">...</span>
+            (tan(t_k).*((H+1)/2+S-n2)-p_k).*m/W));
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><p>We compute other images to compare with the future provided solution</p><p>Compare theoritical and empirical <img src="data_generation_eq55299.png" alt="$\mathcal{F}_1 v^{\sharp}$"></p><pre class="codeinput"><span class="comment">% Theoritical formula for F_1(v)</span>
+vfourtheo=zeros(Hs,W);
+<span class="keyword">for</span> m=1:W
+    vfourtheo(:,m)=wstar(:,m).*gfour(m);
+<span class="keyword">end</span>
+
+<span class="comment">% Compute empirical F_1(v)</span>
+vfouremp=zeros((H+2*S),W);
+<span class="keyword">for</span> n2=1:(H+2*S)
+    vfouremp(n2,:) = fftshift(fft(ifftshift(vstar(n2,:)))); <span class="comment">% horizontal FFT</span>
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(vfourtheo)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$\mathcal{F}_1 v^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(vfouremp)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Empirical'</span>);
+    xlabel(<span class="string">'$$\mathcal{F}_1 v^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_02.png" alt=""> <p>Compare theoritical and empirical <img src="data_generation_eq47450.png" alt="$v^{\sharp}$"></p><pre class="codeinput"><span class="comment">% Compute theoritical v</span>
+vtheo=zeros(Hs,W);
+<span class="keyword">for</span> n2=1:H+2*S
+    vtheo(n2,:)=fftshift(ifft(ifftshift(vfourtheo(n2,:))));
+<span class="keyword">end</span>
+
+<span class="comment">% Explicit formula for v (for one vertical line at m=offset)</span>
+vtheo1=zeros((H+2*S),W);
+<span class="keyword">for</span> n2=1:(H+2*S)
+    <span class="keyword">for</span> m=-M:M
+        vtheo1(n2,m+M+1) = 255*exp(-((m-offset)/spread)^2/2);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="comment">% Compute empirical v</span>
+vemp=zeros(Hs,W);
+<span class="keyword">for</span> n2=1:H+2*S
+    vemp(n2,:)=fftshift(ifft(ifftshift(vfouremp(n2,:))));
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(vtheo)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$v^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(vemp)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Empirical'</span>);
+    xlabel(<span class="string">'$$v^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_03.png" alt=""> <p>Compare theoritical and empirical <img src="data_generation_eq60567.png" alt="$\hat w^{\sharp}$"></p><pre class="codeinput"><span class="comment">% Compute empirical wstar</span>
+wemp=zeros((H+2*S),W);
+<span class="keyword">for</span> m=1:W
+    wemp(:,m)=vfouremp(:,m)./gfour(m);
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(wstar)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$\hat w^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(wemp)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Empirical'</span>);
+    xlabel(<span class="string">'$$\hat w^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_04.png" alt=""> <p>Compare theoritical and empirical <img src="data_generation_eq37080.png" alt="$s^{\sharp}$"></p><pre class="codeinput"><span class="comment">% Compute theoritical sstar</span>
+stheo=zeros((H+2*S),W);
+<span class="keyword">for</span> n2=1:(H+2*S)
+    stheo(n2,:) = fftshift(ifft(ifftshift(wstar(n2,:)))); <span class="comment">% horizontal FFT</span>
+<span class="keyword">end</span>
+
+<span class="comment">% Compute empirical sstar</span>
+semp=zeros((H+2*S),W);
+<span class="keyword">for</span> n2=1:(H+2*S)
+    semp(n2,:) = fftshift(ifft(ifftshift(wemp(n2,:)))); <span class="comment">% horizontal FFT</span>
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(stheo)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$s^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(semp)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Empirical'</span>);
+    xlabel(<span class="string">'$$s^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_05.png" alt=""> <p>Compare theoritical and empirical <img src="data_generation_eq90322.png" alt="$\mathcal{F}_1 x^{\sharp}$"></p><pre class="codeinput"><span class="comment">% Compute theoritical F_1(x)</span>
+xfourtheo=conv2(vfourtheo,h,<span class="string">'valid'</span>);
+
+<span class="comment">% Compute empirical F_1(x)</span>
+xfour=zeros(H,W);
+<span class="keyword">for</span> n2=1:H
+    xfour(n2,:)=fftshift(fft(ifftshift(xstar(n2,:)))); <span class="comment">% horizontal FFT</span>
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(xfourtheo)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$\mathcal{F}_1 x^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(xfour)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Empirical'</span>);
+    xlabel(<span class="string">'$$\mathcal{F}_1 x^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_06.png" alt=""> <p>Compare theoritical and empirical <img src="data_generation_eq86753.png" alt="$\mathcal{F}_1 y$"></p><pre class="codeinput">noisefour=zeros(H,W);
+<span class="keyword">for</span> n2=1:H
+    noisefour(n2,:)=fftshift(fft(ifftshift(noise(n2,:)))); <span class="comment">% horizontal FFT</span>
+<span class="keyword">end</span>
+yfourtheo=xfourtheo+noisefour;
+
+yfour=zeros(H,W);
+<span class="keyword">for</span> n2=1:H
+    yfour(n2,:)=fftshift(fft(ifftshift(y(n2,:)))); <span class="comment">% horizontal FFT</span>
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(yfourtheo)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Theoritical'</span>);
+    xlabel(<span class="string">'$$\mathcal{F}_1 y$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    subplot(1,2,2);
+    imagesc(abs(yfour)); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+    title(<span class="string">'Empirical'</span>);
+    xlabel(<span class="string">'$$\mathcal{F}_1 y$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+    set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+    truesize(f,[300 300]);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="data_generation_07.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Generate K lines in a degraded image
+% Generate $K$ lines with parameters $(\theta_k,\alpha_k,\eta_k)$ where:
+%
+% * $\theta_k$ is the angle of the line
+% * $\alpha_k$ is the amplitude of the line
+% * $\eta_k$ is the horizontal offset of the line
+%
+% Lines are blurred with a horizontal filter $g$ and a vertical one $h$.
+% The image of size $W\times H$ degraded by some noiselevel is called $y$.
+
+global h hadj hfourextend Hs M Gfour S;
+
+S=ceil(spread*4)-1;            % half-length of the discrete filter h
+Hs=H+2*S;                      % height after adding S pixels beyond border 
+M=(W-1)/2;                     % half-width of the image
+h=exp(-((-S:S)'/spread).^2/2); % the Gaussian filter h
+h=h/sum(h);                    % filter normalization
+vstar=zeros((H+2*S),W);        % image of the lines horizontally blurred
+g=h;                           % same blur g horizontally and h vertically
+
+%%
+% Compute $v^{\star}$ thanks to these two relations:
+%
+% $$v^\sharp(t_1,t_2)=\sum_{k=1}^K \frac{\alpha_k}{\cos(\theta_k)}
+% \varphi_1\Big(t_1+\tan(\theta_k)t_2+\frac{\gamma_k}{\cos(\theta_k)}\Big)$$
+%
+
+for k=1:K,	
+    Angle=t_k(k);           % the angle of line with respect to -y axis
+    a_k(k)=a_k(k)/max(h);   % after blurring a_k*h is at most equal to 255
+    amplitude=a_k(k);       % horizontal offset p_k from the image's center
+    offset=p_k(k);          % may varying between -M and M
+    for n2=1:(H+2*S),
+        t=(0:W-1)-M+tan(Angle)*((H+1)/2+S-n2)-offset;
+        vec=zeros(1,W);
+        for n=-S:S,         % Dirichlet : sin(pi*(t-n))./sin(pi*(t-n)/W);
+            vec=vec+g(n+S+1)*arrayfun(@(x) Dirichlet_Kernel(x,W),t-n);
+        end
+        vstar(n2,:)=vstar(n2,:)+amplitude/cos(Angle)*vec/W;
+    end
+end
+
+xstar=conv2(vstar,h,'valid');  % vertical blur convolution
+noise=randn(H,W)*noiselevel;   % additionnal Gaussian noise
+y=xstar+noise;                 % degraded image 
+
+%imwrite(uint8(y),'degraded.tif');
+
+%%
+% We display the images $v^{\sharp}$, $x^{\sharp}$ and $y$
+
+if plotData
+    f=figure;
+    subplot(1,3,1);
+    imagesc(vstar); colormap gray; axis image;
+    title('$$v^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,3,2);
+    imagesc(xstar); colormap gray; axis image;
+    title('$$x^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,3,3);
+    imagesc(y); colormap gray; axis image;
+    title('$$y$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    warning off;
+    truesize(f,[200 200]);
+    tightfig;
+end
+
+%%
+% We compute the FFT of these filters for a later use
+
+gextend = [zeros(M-S,1) ; g ; zeros(M-S,1)]; % size 2M+1=W cause we need
+gfour=fftshift(fft(ifftshift(gextend)));     % W Fourier coefficients ^g[m]
+
+Hm=(Hs-1)/2;
+hextend=[zeros(Hm-S,1) ; h ; zeros(Hm-S,1)];
+hfourextend=fftshift(fft(ifftshift(hextend)));
+
+Gfour=diag(gfour(M+1:end)); % matrix diag containing the Fourier coefs
+hadj=conj(flipud(h));       % filter of the adjoint of convolution by h
+
+%%
+%
+% At this stage, we have all we need to perform the minimization on the
+% data $y$ which is the degraded image, in order to recover the solution
+% $w^{\sharp}=\mathcal{F}_1 s$ and then the parameters of lines. 
+% 
+% The exact solution $w^{\sharp}$ we want to recover is
+%
+% $$\hat w^{\sharp}[m,n_2]=\sum_{k=1}^K \frac{\alpha_k}{\cos \theta_k}e^{j2\pi \left(\tan (\theta_k)n_2+\gamma_k/\cos(\theta_k)\right)m/W}$$
+%
+
+% Theoritical formula for wstar
+wstar=zeros((H+2*S),W); 
+for n2=1:(H+2*S)
+    for m=-M:M
+        wstar(n2,m+M+1)=sum(a_k./cos(t_k).*exp(1i*2*pi*...
+            (tan(t_k).*((H+1)/2+S-n2)-p_k).*m/W));
+    end
+end
+
+%%
+% We compute other images to compare with the future provided solution
+
+%%
+% Compare theoritical and empirical $\mathcal{F}_1 v^{\sharp}$
+
+% Theoritical formula for F_1(v)
+vfourtheo=zeros(Hs,W);
+for m=1:W
+    vfourtheo(:,m)=wstar(:,m).*gfour(m);
+end
+
+% Compute empirical F_1(v)
+vfouremp=zeros((H+2*S),W);
+for n2=1:(H+2*S)
+    vfouremp(n2,:) = fftshift(fft(ifftshift(vstar(n2,:)))); % horizontal FFT
+end
+
+if plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(vfourtheo)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$\mathcal{F}_1 v^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(vfouremp)); colormap gray; axis image;
+    title('Empirical');
+    xlabel('$$\mathcal{F}_1 v^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+end
+
+%%
+% Compare theoritical and empirical $v^{\sharp}$
+
+% Compute theoritical v
+vtheo=zeros(Hs,W);
+for n2=1:H+2*S
+    vtheo(n2,:)=fftshift(ifft(ifftshift(vfourtheo(n2,:))));
+end
+
+% Explicit formula for v (for one vertical line at m=offset)
+vtheo1=zeros((H+2*S),W);
+for n2=1:(H+2*S)
+    for m=-M:M
+        vtheo1(n2,m+M+1) = 255*exp(-((m-offset)/spread)^2/2);
+    end
+end
+
+% Compute empirical v
+vemp=zeros(Hs,W);
+for n2=1:H+2*S
+    vemp(n2,:)=fftshift(ifft(ifftshift(vfouremp(n2,:))));
+end
+
+if plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(vtheo)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$v^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(vemp)); colormap gray; axis image;
+    title('Empirical');
+    xlabel('$$v^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+end
+
+%%
+% Compare theoritical and empirical $\hat w^{\sharp}$
+
+% Compute empirical wstar
+wemp=zeros((H+2*S),W); 
+for m=1:W
+    wemp(:,m)=vfouremp(:,m)./gfour(m);
+end
+
+if plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(wstar)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$\hat w^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(wemp)); colormap gray; axis image;
+    title('Empirical');
+    xlabel('$$\hat w^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+end
+
+%%
+% Compare theoritical and empirical $s^{\sharp}$
+
+% Compute theoritical sstar
+stheo=zeros((H+2*S),W);
+for n2=1:(H+2*S)
+    stheo(n2,:) = fftshift(ifft(ifftshift(wstar(n2,:)))); % horizontal FFT
+end
+
+% Compute empirical sstar
+semp=zeros((H+2*S),W);
+for n2=1:(H+2*S)
+    semp(n2,:) = fftshift(ifft(ifftshift(wemp(n2,:)))); % horizontal FFT
+end
+
+if plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(stheo)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$s^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(semp)); colormap gray; axis image;
+    title('Empirical');
+    xlabel('$$s^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+end
+
+%%
+% Compare theoritical and empirical $\mathcal{F}_1 x^{\sharp}$
+
+% Compute theoritical F_1(x)
+xfourtheo=conv2(vfourtheo,h,'valid');
+
+% Compute empirical F_1(x)
+xfour=zeros(H,W);
+for n2=1:H
+    xfour(n2,:)=fftshift(fft(ifftshift(xstar(n2,:)))); % horizontal FFT
+end
+
+if plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(xfourtheo)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$\mathcal{F}_1 x^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(xfour)); colormap gray; axis image;
+    title('Empirical');
+    xlabel('$$\mathcal{F}_1 x^{\sharp}$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+end
+
+%%
+% Compare theoritical and empirical $\mathcal{F}_1 y$
+
+noisefour=zeros(H,W);
+for n2=1:H
+    noisefour(n2,:)=fftshift(fft(ifftshift(noise(n2,:)))); % horizontal FFT
+end
+yfourtheo=xfourtheo+noisefour;
+
+yfour=zeros(H,W);
+for n2=1:H
+    yfour(n2,:)=fftshift(fft(ifftshift(y(n2,:)))); % horizontal FFT
+end
+
+if plotComp
+    f=figure;
+    subplot(1,2,1);
+    imagesc(abs(yfourtheo)); colormap gray; axis image;
+    title('Theoritical');
+    xlabel('$$\mathcal{F}_1 y$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    subplot(1,2,2);
+    imagesc(abs(yfour)); colormap gray; axis image;
+    title('Empirical');
+    xlabel('$$\mathcal{F}_1 y$$','Interpreter','latex');
+    set(gca,'xtick',[],'ytick',[]);
+    truesize(f,[300 300]);
+end
+
+##### SOURCE END #####
+--></body></html>

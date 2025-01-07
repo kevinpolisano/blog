@@ -1,0 +1,294 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Recovering parameters of lines by the Prony method</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-03-02"><meta name="DC.source" content="prony.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Recovering parameters of lines by the Prony method</h1><!--introduction--><!--/introduction--><p>Parameters of the considered image</p><pre class="codeinput">T=0;                <span class="comment">% extra crop of the image if necessary</span>
+Ht=1*(Hs-2*T);      <span class="comment">% height of the considered image</span>
+Nt=(H-1)/2+S-T;     <span class="comment">% center of the considered image</span>
+</pre><p>Image on which the Prony method is performed</p><pre class="codeinput"><span class="comment">%wrtronc=wstar(T+1:end-T,M+1:end);              % test on exact solution</span>
+wrtronc=wr(T+1:end-T,:);                        <span class="comment">% minimization solution wr</span>
+wrsym=[fliplr(conj(wrtronc(:,2:end))) wrtronc]; <span class="comment">% symetrize the image</span>
+</pre><p>Variables declaration</p><pre class="codeinput">hm=zeros(M,K+1);        <span class="comment">% estimated singular vector h_m of T_K(\hat w_m)</span>
+xim=zeros(M,K);         <span class="comment">% estimated roots xi_{m,k} on each column m</span>
+freqm=zeros(M,K);       <span class="comment">% estimated frequencies ~f_{m,k} on each column m</span>
+theta=zeros(M,K);       <span class="comment">% estimated angles ~theta_{m,k} on each column m</span>
+dm=zeros(M,K);          <span class="comment">% estimated vector d_m of the least square system</span>
+cktilde=zeros(M,K);     <span class="comment">% estimated atoms coefs ~c_{m,k} on each column m</span>
+alpha=zeros(M,K);       <span class="comment">% estimated amplitude ~alpha_{m,k} on each column m</span>
+expphi=zeros(M,K);      <span class="comment">% estimated coefficients ~e_{m,k} on each column m</span>
+thetamean=zeros(1,K);   <span class="comment">% estimated angle ~theta_k of the k-th line</span>
+alphamean=zeros(1,K);   <span class="comment">% estimated amplitude ~alpha_k of the k-th line</span>
+eta=zeros(1,K);         <span class="comment">% estimated hor. offset ~eta_k of the k-th line</span>
+</pre><p>Perform the Prony method on columns of the right part of wrsym</p><pre class="codeinput"><span class="keyword">for</span> m=1:M
+    whatm=wrsym(:,M+1+m);
+    Tk=toeplitz(whatm(K+1:end),whatm(K+1:-1:1));
+    [V1,D,V2]=svd(Tk,0);
+    hm(m,:)=flipud(V2(:,K+1));
+    xim(m,:)=roots(hm(m,:));
+    freqm(m,:)=angle(conj(xim(m,:)))/(2*pi);
+    theta(m,:)=-atan(W*freqm(m,:)/m);
+    [theta(m,:),Ind]=sort(theta(m,:));
+    freqm(m,:)=freqm(m,Ind);
+    dm(m,:)=pinv(exp(1i*2*pi*(-Nt:Nt)'*freqm(m,:)))*whatm;
+    cktilde(m,:)=abs(dm(m,:));
+    alpha(m,:)=cktilde(m,:).*cos(theta(m,:));
+    expphi(m,:)=dm(m,:)./abs(dm(m,:));
+<span class="keyword">end</span>
+</pre><p>Compute the mean of all estimated angles <img src="prony_eq12794.png" alt="$\tilde \theta_k=\frac{1}{M}\sum_{m=1}^M \tilde \theta_{m,k}$"> and amplitudes <img src="prony_eq87935.png" alt="$\tilde \alpha_k=\frac{1}{M}\sum_{m=1}^M \tilde \alpha_{m,k}$"></p><pre class="codeinput"><span class="keyword">for</span> k=1:K
+    thetamean(k)=mean(theta(:,k));
+    alphamean(k)=mean(alpha(:,k));
+<span class="keyword">end</span>
+</pre><p>Compute the frequency <img src="prony_eq15155.png" alt="$\tilde \nu_k$"> as previously from <img src="prony_eq15188.png" alt="$\mathbf{T}_K(\tilde e_k)$"> with <img src="prony_eq80295.png" alt="$\tilde e_k=(\tilde e_{m,k})_m$"> and <img src="prony_eq33944.png" alt="$I=\{-M,...,M\}$"> ; and then deduce estimated offset <img src="prony_eq21910.png" alt="$\tilde n_k$"></p><pre class="codeinput"><span class="keyword">for</span> k=1:K
+   ek=expphi(:,k);
+   Tk=toeplitz(ek(2:end),ek(2:-1:1));
+   [V1,D,V2]=svd(Tk,0);
+   eta(k)=-W*angle(conj(roots(flipud(V2(:,2)))))/(2*pi);
+<span class="keyword">end</span>
+</pre><p>Display the estimated parameters and the relative errors</p><pre class="codeinput">disp([<span class="string">'thetamean = '</span>,num2str(thetamean)]);
+disp([<span class="string">'alphamean = '</span>,num2str(alphamean)]);
+disp([<span class="string">'eta = '</span>,num2str(eta)]);
+
+<span class="comment">% Relatives errors</span>
+[ss ii] = sort(t_k);
+disp([<span class="string">'(thetamean-t_k)/t_k = '</span>,num2str((thetamean-t_k(ii))./t_k(ii))]);
+disp([<span class="string">'(alphamean*coef-a_k)/a_k = '</span>,num2str((alphamean*coef-a_k(ii))./a_k(ii))]);
+disp([<span class="string">'eta-p_k = '</span>,num2str(eta-p_k(ii))]);
+</pre><pre class="codeoutput">thetamean = -0.62672     0.18368     0.52158
+alphamean = 228.4453      218.3839      164.4555
+eta = -0.0905946     -15.0978       10.151
+(thetamean-t_k)/t_k = -0.0025467   -0.064539  -0.0038565
+(alphamean*coef-a_k)/a_k = -0.55587    -0.57543    -0.68027
+eta-p_k = -0.090595   -0.097792     0.15105
+</pre><p>Display the deblurred lines on a super-resolution image</p><pre class="codeinput">homot=7;
+N2 = linspace(1/homot,H,1000);
+mat = zeros(homot*H,homot*W);
+<span class="keyword">for</span> k=1:K
+    N1 = tan(thetamean(k))*(N2-(H+1)/2)+M+eta(k);
+    posind = (N1&gt;=1/homot) &amp; (N1&lt;=W); <span class="comment">% negative y-axis coordinates are not displayed</span>
+    index = sub2ind(size(mat),round(homot*N2(posind)),round(homot*N1(posind)));
+    mat(index) = mat(index)+alphamean(k);
+<span class="keyword">end</span>
+
+<span class="comment">% periodize to the left of the image (-W)</span>
+<span class="keyword">for</span> k=1:K
+    N1 = tan(thetamean(k))*(N2-(H+1)/2)+M+eta(k)-W;
+    posind = (N1&gt;=1/homot) &amp; (N1&lt;=W); <span class="comment">% negative y-axis coordinates are not displayed</span>
+    index = sub2ind(size(mat),round(homot*N2(posind)),round(homot*N1(posind)));
+    mat(index) = mat(index)+alphamean(k);
+<span class="keyword">end</span>
+
+<span class="comment">% periodize to the right of the image (+W)</span>
+<span class="keyword">for</span> k=1:K
+    N1 = tan(thetamean(k))*(N2-(H+1)/2)+M+eta(k)+W;
+    posind = (N1&gt;=1/homot) &amp; (N1&lt;=W); <span class="comment">% negative y-axis coordinates are not displayed</span>
+    index = sub2ind(size(mat),round(homot*N2(posind)),round(homot*N1(posind)));
+    mat(index) = mat(index)+alphamean(k);
+<span class="keyword">end</span>
+
+f=figure;
+subplot(1,2,1);
+imagesc(xstar); colormap <span class="string">gray</span>; axis <span class="string">image</span>;
+title(<span class="string">'Blurred lines'</span>);
+xlabel(<span class="string">'$$x^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+subplot(1,2,2);
+imshow(mat/max(max(mat)));
+title(<span class="string">'Recover lines in super-resolution'</span>);
+xlabel(<span class="string">'$$s^{\sharp}$$'</span>,<span class="string">'Interpreter'</span>,<span class="string">'latex'</span>);
+set(gca,<span class="string">'xtick'</span>,[],<span class="string">'ytick'</span>,[]);
+truesize(f,[300 300]);
+</pre><img vspace="5" hspace="5" src="prony_01.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Recovering parameters of lines by the Prony method
+
+%%
+% Parameters of the considered image
+
+T=0;                % extra crop of the image if necessary
+Ht=1*(Hs-2*T);      % height of the considered image
+Nt=(H-1)/2+S-T;     % center of the considered image
+
+%%
+% Image on which the Prony method is performed
+
+%wrtronc=wstar(T+1:end-T,M+1:end);              % test on exact solution
+wrtronc=wr(T+1:end-T,:);                        % minimization solution wr
+wrsym=[fliplr(conj(wrtronc(:,2:end))) wrtronc]; % symetrize the image
+
+%%
+% Variables declaration
+
+hm=zeros(M,K+1);        % estimated singular vector h_m of T_K(\hat w_m)
+xim=zeros(M,K);         % estimated roots xi_{m,k} on each column m
+freqm=zeros(M,K);       % estimated frequencies ~f_{m,k} on each column m
+theta=zeros(M,K);       % estimated angles ~theta_{m,k} on each column m
+dm=zeros(M,K);          % estimated vector d_m of the least square system
+cktilde=zeros(M,K);     % estimated atoms coefs ~c_{m,k} on each column m
+alpha=zeros(M,K);       % estimated amplitude ~alpha_{m,k} on each column m
+expphi=zeros(M,K);      % estimated coefficients ~e_{m,k} on each column m
+thetamean=zeros(1,K);   % estimated angle ~theta_k of the k-th line
+alphamean=zeros(1,K);   % estimated amplitude ~alpha_k of the k-th line
+eta=zeros(1,K);         % estimated hor. offset ~eta_k of the k-th line
+
+%%
+% Perform the Prony method on columns of the right part of wrsym
+
+for m=1:M
+    whatm=wrsym(:,M+1+m);
+    Tk=toeplitz(whatm(K+1:end),whatm(K+1:-1:1));
+    [V1,D,V2]=svd(Tk,0);
+    hm(m,:)=flipud(V2(:,K+1));
+    xim(m,:)=roots(hm(m,:));
+    freqm(m,:)=angle(conj(xim(m,:)))/(2*pi);
+    theta(m,:)=-atan(W*freqm(m,:)/m);
+    [theta(m,:),Ind]=sort(theta(m,:));
+    freqm(m,:)=freqm(m,Ind);
+    dm(m,:)=pinv(exp(1i*2*pi*(-Nt:Nt)'*freqm(m,:)))*whatm;
+    cktilde(m,:)=abs(dm(m,:));
+    alpha(m,:)=cktilde(m,:).*cos(theta(m,:));
+    expphi(m,:)=dm(m,:)./abs(dm(m,:));
+end
+
+%%
+% Compute the mean of all estimated angles 
+% $\tilde \theta_k=\frac{1}{M}\sum_{m=1}^M \tilde \theta_{m,k}$ and 
+% amplitudes $\tilde \alpha_k=\frac{1}{M}\sum_{m=1}^M \tilde \alpha_{m,k}$
+
+for k=1:K
+    thetamean(k)=mean(theta(:,k));
+    alphamean(k)=mean(alpha(:,k));
+end
+
+%%
+% Compute the frequency $\tilde \nu_k$ as previously from 
+% $\mathbf{T}_K(\tilde e_k)$ with $\tilde e_k=(\tilde e_{m,k})_m$ 
+% and $I=\{-M,...,M\}$ ; and then deduce estimated offset $\tilde n_k$
+
+for k=1:K
+   ek=expphi(:,k);
+   Tk=toeplitz(ek(2:end),ek(2:-1:1));
+   [V1,D,V2]=svd(Tk,0); 
+   eta(k)=-W*angle(conj(roots(flipud(V2(:,2)))))/(2*pi);
+end
+
+%%
+% Display the estimated parameters and the relative errors
+    
+disp(['thetamean = ',num2str(thetamean)]);
+disp(['alphamean = ',num2str(alphamean)]);
+disp(['eta = ',num2str(eta)]);
+
+% Relatives errors
+[ss ii] = sort(t_k);
+disp(['(thetamean-t_k)/t_k = ',num2str((thetamean-t_k(ii))./t_k(ii))]);
+disp(['(alphamean*coef-a_k)/a_k = ',num2str((alphamean*coef-a_k(ii))./a_k(ii))]);
+disp(['eta-p_k = ',num2str(eta-p_k(ii))]);
+
+%%
+% Display the deblurred lines on a super-resolution image
+
+homot=7;
+N2 = linspace(1/homot,H,1000);
+mat = zeros(homot*H,homot*W);
+for k=1:K
+    N1 = tan(thetamean(k))*(N2-(H+1)/2)+M+eta(k);
+    posind = (N1>=1/homot) & (N1<=W); % negative y-axis coordinates are not displayed 
+    index = sub2ind(size(mat),round(homot*N2(posind)),round(homot*N1(posind)));
+    mat(index) = mat(index)+alphamean(k); 
+end
+
+% periodize to the left of the image (-W)
+for k=1:K
+    N1 = tan(thetamean(k))*(N2-(H+1)/2)+M+eta(k)-W;
+    posind = (N1>=1/homot) & (N1<=W); % negative y-axis coordinates are not displayed 
+    index = sub2ind(size(mat),round(homot*N2(posind)),round(homot*N1(posind)));
+    mat(index) = mat(index)+alphamean(k); 
+end
+
+% periodize to the right of the image (+W)
+for k=1:K
+    N1 = tan(thetamean(k))*(N2-(H+1)/2)+M+eta(k)+W;
+    posind = (N1>=1/homot) & (N1<=W); % negative y-axis coordinates are not displayed 
+    index = sub2ind(size(mat),round(homot*N2(posind)),round(homot*N1(posind)));
+    mat(index) = mat(index)+alphamean(k); 
+end
+
+f=figure;
+subplot(1,2,1);
+imagesc(xstar); colormap gray; axis image;
+title('Blurred lines');
+xlabel('$$x^{\sharp}$$','Interpreter','latex');
+set(gca,'xtick',[],'ytick',[]);
+subplot(1,2,2);
+imshow(mat/max(max(mat)));
+title('Recover lines in super-resolution');
+xlabel('$$s^{\sharp}$$','Interpreter','latex');
+set(gca,'xtick',[],'ytick',[]);
+truesize(f,[300 300]);
+
+
+##### SOURCE END #####
+--></body></html>

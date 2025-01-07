@@ -1,0 +1,88 @@
+---
+title: "Backup de Wordpress sur Free"
+author: "Kévin Polisano"
+date: "2016-10-29"
+categories: [site]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+image: images/hdd.jpg
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
+---
+
+Lorsque vous faites une sauvegarde (un backup) de votre site, il faut en fait deux choses qui communiquent (et donc sont indispensables) et ne se situent pas au même endroit :
+
+1. **L'ensemble de vos fichiers/répertoires WP uploadés sur le serveur qui vous héberge.**
+2. **Une copie de la base de donnée qui elle contient tout le contenu texte/commentaires/etc de votre site.**
+
+## Comment télécharger les fichiers uploadés sur le serveur Free.fr ?
+
+La première chose est de se connecter au serveur grâce à un client tel que [FileZilla](https://filezilla-project.org/).
+
+Clic droit sur le répertoire à la racine / et faites `Télécharger` :
+
+![](images/backup_wp.png)
+
+##  Pourquoi certains fichiers avec accents indiquent un "transfert échoué" ?
+
+Typiquement ces fichiers (où le 'é' est transformé en 'Ã©') ne sont pas téléchargés... 
+
+![](images/transfert-echoues-accents.png)
+
+C'est souvent du à un problème d'encodage... pour y remédier il faut se rendre dans :
+
+```bash
+FileZilla > Fichier > "Ajouter la connexion actuelle dans le Gestionnaire de site"
+```
+
+Puis dans : `Gestionnaire de site > Jeu de caractères`. Indiquez comme nouvel encodage `ISO-8859-1`. ![](images/jeu-caractere-filezilla.png)Il va falloir redémarrer FileZilla mais avant ça vous pouvez sauvegarder la liste des transferts qui ont échoué en faisant `clic droit > Exporter.` Ce qui vous enregistrera un fichier `FileZilla.xml`.
+
+Redémarrer FileZilla, puis faites `Fichier > Importer > FileZilla.xml` pour retrouver la liste en question, puis clic droit dans la file d'attente `Traiter la file d'attente`.
+
+![](images/file-attente.png)
+
+Les fichiers accentués devraient maintenant être téléchargés.
+
+##  Non ça ne fonctionne toujours pas...
+
+La plupart du temps cela fonctionne, mais dans certains cas, comme ce fut le mien, cette procédure ne résout pas le problème (peut-être uniquement sur Free?).
+
+Les fichiers accentués étaient majoritairement des noms d'images uploadés, qui se trouvent dans le répertoire `/wp-content/uploads/`.
+
+On aimerait bien récupérer ce dossier sans passer par FileZilla, et pour cela on va utiliser le navigateur (pour ma part Mozilla Firefox) ! Mais avant tout il nous faut pouvoir accéder à l'url du répertoire en question, ce que ne permet pas les réglages par défaut. Pour cela il faut **modifier le fichier .htaccess** qui se situe à la racine du serveur, faites `clic droit > Afficher / éditer` :
+
+![](images/htaccess.png)
+
+Puis ajouter la ligne : `Options +Indexes`
+
+![](images/editeur.png)
+
+Quitter l'éditeur de texte et cliquez sur un nombre fichier à la racine, FileZilla va vous demander si vous voulez enregistrer les modifications et exporter le nouveau fichier sur le serveur, acceptez.
+
+Maintenant vous avez accès au répertoire depuis votre navigateur :
+
+![](images/index-uploads.png)
+
+Munissez vous ensuite d'un plugin Firefox vous permettant de télécharger ce dossier, j'ai utilisé pour ma part [DownThemAll](https://addons.mozilla.org/fr/firefox/addon/downthemall/). Faites ensuite :
+
+`Outils > Outils DownThemAll > DownThemAll` 
+
+![](images/down-them-all.png)
+
+Vous pouvez maintenant **télécharger tout le dossier** `/wp-content/uploads`, sélectionner les images possédant un accent (via un terminal et quelques commandes unix par exemple si vous ne voulez pas le faire à la main), et vous pouvez ainsi les adjoindre pour compléter le répertoire de sauvegarde local `/wp-content/uploads` que vous avez déjà téléchargé sur votre disque dur.
+
+Le tour est joué !
+
+## Comment télécharger la base de donnée SQL ?
+
+Il y a bien sûr des plugins qui le font très bien, mais voici la procédure manuelle vous permettant de la récupérer sur Free :
+
+Rendez à l'adresse suivante (anciennement sql.free.fr) : [http://phpmyadmin.free.fr/phpMyAdmin/](http://phpmyadmin.free.fr/phpMyAdmin/) puis cliquez sur l'onglet `Exporter`, ce qui vous permet d'afficher dans le navigateur les instructions SQL, qu'il vous suffit de copier-coller dans un fichier texte.
+
+Le tour est joué ! 😉
