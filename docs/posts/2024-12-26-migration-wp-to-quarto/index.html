@@ -103,6 +103,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -188,6 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#blog2md" id="toc-blog2md" class="nav-link" data-scroll-target="#blog2md">Blog2md</a></li>
   </ul></li>
   <li><a href="#nettoyage-des-articles-exportés-liens-images" id="toc-nettoyage-des-articles-exportés-liens-images" class="nav-link" data-scroll-target="#nettoyage-des-articles-exportés-liens-images">Nettoyage des articles exportés, liens, images, …</a></li>
+  <li><a href="#gestion-des-commentaires" id="toc-gestion-des-commentaires" class="nav-link" data-scroll-target="#gestion-des-commentaires">Gestion des commentaires</a></li>
   </ul>
 </nav>
 </nav>
@@ -204,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Mon site perso fait peau neuve !</p>
 <p>Je vous explique ici quelles étapes j’ai suivi pour effectuer la migration. Au boulot !</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
+<p><img src="wp-to-quarto.jpg" class="img-fluid"></p>
 <section id="créer-son-blog-avec-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="créer-son-blog-avec-quarto">Créer son blog avec Quarto</h2>
 <ul>
@@ -356,6 +386,132 @@ Warning
 </section>
 <section id="nettoyage-des-articles-exportés-liens-images" class="level2">
 <h2 class="anchored" data-anchor-id="nettoyage-des-articles-exportés-liens-images">Nettoyage des articles exportés, liens, images, …</h2>
+<p>Lorsque mes billets WP contenaient du texte brut, du code ou du <span class="math inline">\(\LaTeX\)</span>, j’ai utilisé l’export Markdown de <code>Wordpress export to Markdown</code>; tandis que pour mes billets contenant une mise en forme travaillée (avec notamment l’usage de couleurs), j’ai utilisé l’export Markdown + HTML de <code>Wordpress to Hugo Exporter</code>, qui a aussi le bon goût d’exporter toutes les images dans <code>wp-content/uploads/</code>. Pour ces fichiers Markdown + HTML, j’ai écrit un script Python permettant entre autres de :</p>
+<ul>
+<li>Remplacer les liens HTML par des liens Markdown, pour les images en particulier par l’insertion de <code>![](images/img)</code> en ayant préalablement copié l’image courante <code>img</code> (privée de sa dimension) du dossier <code>uploads/</code> vers le dossier <code>images/</code>du répertoire courant correspondant au billet.</li>
+<li>Remplacer les footnotes HTML par des footnotes Markdown.</li>
+<li>Remplacer les blocs de code HTML par des balises de code Markdown (ici précisant le language Matlab)</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Dossiers source et destination pour les images</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>UPLOADS_DIR <span class="op">=</span> <span class="st">"../uploads"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>IMAGES_DIR <span class="op">=</span> <span class="st">"images"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>INPUT_FILE <span class="op">=</span> <span class="st">"index_prev.qmd"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>OUTPUT_FILE <span class="op">=</span> <span class="st">"index.qmd"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer le dossier images s'il n'existe pas</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(IMAGES_DIR):</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    os.makedirs(IMAGES_DIR)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Lire le fichier d'entrée</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(INPUT_FILE, <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    content <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour traiter les images</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_images(content):</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    image_pattern <span class="op">=</span> re.<span class="bu">compile</span>(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="vs">r'&lt;a [^&gt;]*?href="[^"]*?/([^/"]+)"[^&gt;]*?&gt;&lt;img [^&gt;]*?src="[^"]*?/([^/"]+)"[^&gt;]*?&gt;&lt;/a&gt;'</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> replace_image(match):</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        image_file <span class="op">=</span> match.group(<span class="dv">1</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        base_name, ext <span class="op">=</span> os.path.splitext(image_file)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Vérifier si le nom contient les dimensions WxH</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        dimension_pattern <span class="op">=</span> re.<span class="bu">compile</span>(<span class="vs">r"^(?P&lt;name&gt;.+)-\d+x\d+$"</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        dimension_match <span class="op">=</span> dimension_pattern.match(base_name)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> dimension_match:</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>            base_name <span class="op">=</span> dimension_match.group(<span class="st">"name"</span>)  <span class="co"># Nom sans dimensions</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            original_image_file <span class="op">=</span> base_name <span class="op">+</span> ext</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            original_path <span class="op">=</span> os.path.join(UPLOADS_DIR, original_image_file)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Si l'image sans dimensions existe, utiliser celle-ci</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> os.path.exists(original_path):</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>                image_file <span class="op">=</span> original_image_file</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Copier l'image</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>        src_path <span class="op">=</span> os.path.join(UPLOADS_DIR, image_file)</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        dest_path <span class="op">=</span> os.path.join(IMAGES_DIR, image_file)</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> os.path.exists(src_path):</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>            shutil.copy2(src_path, dest_path)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"![](images/</span><span class="sc">{</span>image_file<span class="sc">}</span><span class="ss">)"</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> image_pattern.sub(replace_image, content)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour traiter les blocs de code</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_code_blocks(content):</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    code_block_pattern <span class="op">=</span> re.<span class="bu">compile</span>(</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>        <span class="vs">r'&lt;pre class="brush:[^"]+"&gt;(.*?)&lt;/pre&gt;'</span>, re.DOTALL</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> replace_code_block(match):</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>        code_content <span class="op">=</span> match.group(<span class="dv">1</span>).replace(<span class="st">"&amp;gt;"</span>, <span class="st">"&gt;"</span>).replace(<span class="st">"&amp;lt;"</span>, <span class="st">"&lt;"</span>).replace(<span class="st">"&amp;amp;"</span>, <span class="st">"&amp;"</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"```matlab</span><span class="ch">\n</span><span class="sc">{</span>code_content<span class="sc">}</span><span class="ch">\n</span><span class="ss">```"</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> code_block_pattern.sub(replace_code_block, content)</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour traiter les footnotes</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_footnotes(content):</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    footnote_body_pattern <span class="op">=</span> re.<span class="bu">compile</span>(</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>        <span class="vs">r'&lt;sup id="(?P&lt;id&gt;[^"]+)"&gt;&lt;a href="#[^"]+" title="(?P&lt;title&gt;[^"]+)"[^&gt;]*&gt;\d+&lt;/a&gt;&lt;/sup&gt;'</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> replace_footnote_body(match):</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>        footnote_id <span class="op">=</span> match.group(<span class="st">"id"</span>)</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>        footnote_content <span class="op">=</span> match.group(<span class="st">"title"</span>).replace(<span class="st">"&amp;#039;"</span>, <span class="st">"'"</span>).replace(<span class="st">"&amp;quot;"</span>, <span class="st">'"'</span>)</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>        markdown_footnote <span class="op">=</span> <span class="ss">f"[^</span><span class="sc">{</span>footnote_id<span class="sc">}</span><span class="ss">]"</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>        markdown_definition <span class="op">=</span> <span class="ss">f"[^</span><span class="sc">{</span>footnote_id<span class="sc">}</span><span class="ss">]: </span><span class="sc">{</span>footnote_content<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> markdown_footnote, markdown_definition</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>    paragraphs <span class="op">=</span> content.split(<span class="st">"</span><span class="ch">\n\n</span><span class="st">"</span>)  <span class="co"># Diviser en paragraphes</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>    updated_paragraphs <span class="op">=</span> []</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> paragraph <span class="kw">in</span> paragraphs:</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>        matches <span class="op">=</span> <span class="bu">list</span>(footnote_body_pattern.finditer(paragraph))</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> matches:</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>            definitions <span class="op">=</span> []</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> match <span class="kw">in</span> matches:</span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>                footnote_markdown, footnote_definition <span class="op">=</span> replace_footnote_body(match)</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>                paragraph <span class="op">=</span> paragraph.replace(match.group(<span class="dv">0</span>), footnote_markdown)</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>                definitions.append(footnote_definition)</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>            updated_paragraphs.append(paragraph)</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>            updated_paragraphs.extend(definitions)</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>            updated_paragraphs.append(paragraph)</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">"</span>.join(updated_paragraphs)</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour supprimer les balises &lt;li id=X&gt;</span></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_list_items(content):</span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a>    list_item_pattern <span class="op">=</span> re.<span class="bu">compile</span>(<span class="vs">r'&lt;li id="[^"]+"&gt;.*?&lt;/li&gt;'</span>, re.DOTALL)</span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> list_item_pattern.sub(<span class="st">""</span>, content)</span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour supprimer l’indentation des balises de paragraphes</span></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_paragraph_indentation(content):</span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a>    paragraph_pattern <span class="op">=</span> re.<span class="bu">compile</span>(<span class="vs">r"\s*&lt;(/?p)&gt;"</span>)</span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> paragraph_pattern.sub(<span class="vs">r"&lt;\1&gt;"</span>, content)</span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Appliquer les transformations</span></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> process_images(content)</span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> process_code_blocks(content)</span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> process_footnotes(content)</span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> remove_list_items(content)</span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>content <span class="op">=</span> remove_paragraph_indentation(content)</span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire le fichier de sortie</span></span>
+<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(OUTPUT_FILE, <span class="st">"w"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(content)</span>
+<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Transformation terminée. Résultat enregistré dans </span><span class="sc">{</span>OUTPUT_FILE<span class="sc">}</span><span class="ss">."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Bien sûr j’ai aussi modifié les exports à la main lorsque je repérais des rectifications ponctuelles (non automatisables). L’export en pur Markdown a quant à lui le bon goût de renseigner les liens cassés, ce qui permet au passage de faire un nettoyage des <a href="https://fr.wikipedia.org/wiki/Lien_mort">liens morts</a> témoins du pourrissement des liens du web. À l’avenir, je vais tâcher de privilégier la bibliographie (<code>.bib</code>) renseignant les métadonnées des sources (titre, journal, date, …) pour que celles-ci restent identifiables en cas de liens morts, et donc potentiellement trouvables ailleurs si l’article a été hébergé à une autre adresse.</p>
+</section>
+<section id="gestion-des-commentaires" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-des-commentaires">Gestion des commentaires</h2>
 
 
 </section>
