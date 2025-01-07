@@ -1,0 +1,1820 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry} 
+\geometry{letterpaper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tabularx,booktabs}
+\usepackage{adjustbox}
+
+\usepackage{array}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{y}[1]{>{\centering\arraybackslash\vspace{-0pt} }m{#1}}
+
+\usepackage{fancybox}
+\makeatletter
+\newenvironment{CenteredBox}{% 
+\begin{Sbox}}{% Save the content in a box
+\end{Sbox}\centerline{\hspace{-2ex}\parbox[b][][b]{\wd\@Sbox}{\TheSbox}}}% And output it centered
+\makeatother
+
+\usepackage{color}
+\usepackage{menukeys}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0,0.6,0}
+\newcommand{\CodeSymbol}[1]{\textcolor{darkgreen}{#1}}
+
+\usepackage{listings}
+\lstset{
+  language=[LaTeX]{TeX},
+  basicstyle=\small,
+  texcsstyle=*\bfseries\color{blue},
+  keywordstyle=\color{red},
+  literate={\{}{{\CodeSymbol{\{}}}1
+  	       {\}}{{\CodeSymbol{\}}}}1
+	       {]}{{\CodeSymbol{]}}}1
+	       {[}{{\CodeSymbol{[}}}1
+	       {\$}{{\CodeSymbol{\$}}}1,
+  commentstyle=\color{red},
+  keywords={$, \{, \}, [, ]},
+  escapeinside={(*@}{@*)},          % if you want to add LaTeX within your code
+  breaklines=true,
+  }
+  
+\newcommand{\rep}{$\bullet$}
+
+\title{Pense bête}
+\author{Kévin Polisano}
+
+\begin{document}
+\maketitle
+
+\begin{lstlisting}
+\newcommand{\val}[1]{\left\lvert#1\right\rvert} 
+\newcommand{\norme}[1]{\left\lVert#1\right\rVert}
+\newcommand{\eu}{\ensuremath{\mathrm{e}}}
+\newcommand{\ii}{\ensuremath{\mathrm{i}}}
+\newcommand{\jj}{\ensuremath{\mathrm{j}}}
+\newcommand{\expj}[1]{\ensuremath{\eu^{\,\jj#1}}}
+\renewoperator{\Re}{\mathrm{Re}}{\nolimits}
+\renewoperator{\Im}{\mathrm{Im}}{\nolimits}
+\newcommand{\vect}[1]{\bm{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\ope}[1]{\mathbf{#1}}
+\newcommand{\ip}[2]{\left\langle#1,\,#2\right\rangle}
+\end{lstlisting}
+
+\begin{table}[htbp]
+\caption{Raccourcis Mac traitement de texte}
+\begin{tabular}{|c|c|}
+\hline
+Shortcut & Effet \\
+\hline \hline
+\cmd\,+\,\arrowkeyleft & Début de ligne\\ \hline
+\cmd\,+\,\arrowkeyright & Fin de ligne\\ \hline
+\cmd\,+\,\arrowkeyup & Début de document\\ \hline
+\cmd\,+\,\arrowkeydown & Fin de document\\ \hline
+\cmd\,+Z & Annuler l'opération\\ \hline
+\cmd\,+A & Sélectionner tout\\ \hline
+\cmd\,+F & Rechercher\\ \hline
+\cmd\,+G & Rechercher à nouveau\\ \hline
+\cmd\,+S & Enregistrer\\ \hline
+\Alt\,+\, \arrowkeyleft & Se place au début du mot précédent\\ \hline
+\Alt\,+\, \del & Supprimer le mot précédent\\ \hline
+\Alt\,+\, \arrowkeyright & Se place à la fin du mot suivant\\ \hline
+Fn+\,\del & Supprime le caractère à droite \\ \hline
+\cmd\,+\,\shift\,+\arrowkeyleft & Sélectionne à gauche jusqu'en début de ligne \\ \hline
+\cmd\,+\,\shift\,+\arrowkeyright & Sélectionne à droite jusqu'en fin de ligne \\ \hline
+$\wedge$\,+\,K & Supprimer jusqu'à la fin de ligne \\ \hline
+\shift\,+\,\arrowkeyup & \'Etendre la sélection à la ligne du dessus\\ \hline
+\shift\,+\,\arrowkeydown & \'Etendre la sélection à la ligne du dessous\\ \hline
+\shift\,+\,\arrowkeyleft & \'Etendre la sélection d'un caractère à gauche\\ \hline
+\shift\,+\,\arrowkeyright & \'Etendre la sélection d'un caractère à droite\\ \hline
+\shift\,+\,\Alt\,+\,\arrowkeyleft & \'Etendre la sélection d'un mot à gauche\\ \hline
+\shift\,+\,\Alt\,+\,\arrowkeyright & \'Etendre la sélection d'un mot à droite\\ \hline
+$\wedge$\,+L & Center l'éditeur sur la position du curseur\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Macros TeXShop}
+\begin{tabular}{|c|c|}
+\hline
+Macro & Résultat \\
+\hline \hline
+\cmd\,+: & $\backslash$ \\ \hline
+\cmd\,+( & [ \\ \hline
+\cmd\,+) & ] \\ \hline
+\cmd\,+L & 
+\begin{lstlisting}
+\val{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+\Alt\,+L & 
+\begin{lstlisting}
+\norme{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+B & 
+\begin{lstlisting}
+\vect{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+\Alt\,+B & 
+\begin{lstlisting}
+\mat{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+\Alt\,+$\wedge$\,+B & 
+\begin{lstlisting}
+\ope{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+P & 
+\begin{lstlisting}
+^{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+- & 
+\begin{lstlisting}
+_{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+< & 
+\begin{lstlisting}
+\ip{(*@ \rep @*)}{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\cmd\,+\Alt\,+( & 
+\begin{lstlisting}
+\left((*@ \rep @*)\right)
+\end{lstlisting} \\ \hline
+\cmd\,+\Alt\,+$\wedge$\,+( & 
+\begin{lstlisting}
+\left[(*@ \rep @*)\right]
+\end{lstlisting} \\ \hline
+\cmd\,+\shift\,+\Alt\,+$\wedge$\,+( & 
+\begin{lstlisting}
+\left\{(*@ \rep @*)\right\}
+\end{lstlisting} \\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Raccourcis claviers TeXShop}
+\begin{tabular}{|c|c|}
+\hline
+Shortcut & Résultat \\
+\hline \hline
+\Alt\,+/ & 
+\begin{lstlisting}
+\frac{(*@ \rep @*)}{(*@ \rep @*)}
+\end{lstlisting} \\ \hline
+\Alt\,+< & \lstinline{\leq} \\ \hline
+\Alt\,+\shift\,+< & \lstinline{\geq} \\ \hline
+\Alt\,+p & \lstinline{\pi} \\ \hline
+\Alt\,+, & \lstinline{\infty} \\ \hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%% ENVIRONNEMENTS THEOREM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Environnements Theorem}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+% Environnement Theorem ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+btheo
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+btheo:=\begin{theorem}#RET##INS#(*@ \rep @*)#INS##RET#\end{theorem}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{theorem}
+  (*@ \rep @*)
+  \end{theorem}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+ % Environnement Proposition ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bprop
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bprop:=\begin{proposition}#RET##INS#(*@ \rep @*)#INS##RET#\end{proposition}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{proposition}
+  (*@ \rep @*)
+  \end{proposition}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+ % Environnement Definition ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bdef
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bdef:=\begin{definition}#RET##INS#(*@ \rep @*)#INS##RET#\end{definition}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{definition}
+  (*@ \rep @*)
+  \end{definition}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+   % Environnement Corollary ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bcor
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bcor:=\begin{corollary}#RET##INS#(*@ \rep @*)#INS##RET#\end{corollary}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{corollary}
+  (*@ \rep @*)
+  \end{corollary}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+   % Environnement Lemma ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+blem
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+blem:=\begin{lemma}#RET##INS#(*@ \rep @*)#INS##RET#\end{lemma}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{lemma}
+  (*@ \rep @*)
+  \end{lemma}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+ % Environnement Proof ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bproof
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bproof:=\begin{proof}#RET##INS#(*@ \rep @*)#INS##RET#\end{proof}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{proof}
+  (*@ \rep @*)
+  \end{proof}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% ENVIRONNEMENTS TABLEAUX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Environnements tableaux}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{16cm}|x{6cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+ % Environnement Tabular ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+btab
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+btab:=\begin{tabular}{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)#RET#\end{tabular}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{tabular}{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{tabular}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+   % Environnement Tabularx ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+btabx
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+btabx:=\begin{tabularx}{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}#RET#(*@ \rep @*)#RET#\end{tabularx}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{tabularx}{(*@ \rep @*)}{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{tabularx}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+   % Environnement Table ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+btabl
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+btabl:=\begin{table}{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)#RET#\end{table}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{table}
+  (*@ \rep @*)
+  \end{table}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+  % Environnement Array ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+barr
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+barr:=\begin{array}#RET##INS#(*@ \rep @*)#INS##RET#\end{array}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{array}
+  (*@ \rep @*)
+  \end{array}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+ % Environnement (p)Matrix ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bpmat
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bpmat:=\begin{pmatrix}#RET##INS#(*@ \rep @*)#INS##RET#\end{pmatrix}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{pmatrix}
+  (*@ \rep @*)
+  \end{pmatrix}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+  % Environnement (b)Matrix ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bbmat
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bbmat:=\begin{bmatrix}#RET##INS#(*@ \rep @*)#INS##RET#\end{bmatrix}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{bmatrix}
+  (*@ \rep @*)
+  \end{bmatrix}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline 
+ % Environnement (v)Matrix ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bvmat
+&
+\begin{CenteredBox}
+  \begin{lstlisting}
+bvmat:=\begin{vmatrix}#RET##INS#(*@ \rep @*)#INS##RET#\end{vmatrix}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{vmatrix}
+  (*@ \rep @*)
+  \end{vmatrix}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+  \\ \hline
+\end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% ENVIRONNEMENTS EQUATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Environnements équation}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+ % Environnement Equation ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+beq 
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+beq:=\begin{equation}#RET##INS#(*@ \rep @*)#INS##RET#\end{equation}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{equation}
+  (*@ \rep @*)
+  \end{equation}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ % Environnement Align ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bali
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bali:=\begin{align}#RET##INS#(*@ \rep @*)#INS##RET#\end{align}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{align}
+  (*@ \rep @*)
+  \end{align}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+  % Environnement Case ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bcase
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bcase:=\begin{cases}#RET##INS#(*@ \rep @*)#INS##RET#\end{cases}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{cases}
+  (*@ \rep @*)
+  \end{cases}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Environnement Center ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bcent
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bcent:=\begin{center}#RET##INS#(*@ \rep @*)#INS##RET#\end{center}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{center}
+  (*@ \rep @*)
+  \end{center}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Environnement Verbatim ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bverb
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bverb:=\begin{verbatim}#RET##INS#(*@ \rep @*)#INS##RET#\end{verbatim}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{verbatim}
+  (*@ \rep @*)
+  \end{verbatim}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+  % Environnement Enumerate ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+benu
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+benu:=\begin{enumerate}#RET#\item#INS#(*@ \rep @*)#INS##RET#\end{enumerate}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{enumerate}
+  \item (*@ \rep @*)
+  \end{enumerate}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+  % Environnement Itemize ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bite
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bite:=\begin{itemize}#RET#\item#INS#(*@ \rep @*)#INS##RET#\end{itemize}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{itemize}
+  \item (*@ \rep @*)
+  \end{itemize}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+
+  \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% ENVIRONNEMENTS GRAPHIQUE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Environnements et commandes graphiques}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+ % Environnement Figure ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bite
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bfig:=\begin{figure}#RET##INS#(*@ \rep @*)#INS##RET#\end{figure}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{figure}
+  (*@ \rep @*)
+  \end{figure}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+% Commande centering ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+center
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+center:=centering
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \centering
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ % Commande caption ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+cap
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+cap:=\caption{#INS#(*@ \rep @*)#INS#}
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \caption{(*@ \rep @*)}
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ % Commande includegraphics ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+incg
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+incg:=\includegraphics{#INS#(*@ \rep @*)#INS#}#RET#
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \includegraphics{(*@ \rep @*)}
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+% Commande includegraphics tabular ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+incgt
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+incgt:=\begin{figure}#RET#\centering#RET#\begin{tabular}{cc}#RET#
+\includegraphics{#INS#(*@ \rep @*)#INS#}&\includegraphics{(*@ \rep @*)}
+#RET#\end{tabular}#RET#\caption{(*@ \rep @*)}#RET#\end{figure}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{figure}
+  \centering
+  \begin{tabular}{cc}
+  \includegraphics{(*@ \rep @*)}&
+  \includegraphics{(*@ \rep @*)}
+  \end{tabular}
+  \caption{(*@ \rep @*)}
+  \end{figure}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ % Environnement Tikzpicture ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+btikz
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+btikz:=\begin{tikzpicture}#RET##INS#(*@ \rep @*)#INS##RET#\end{tikzpicture}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{tikzpicture}
+  (*@ \rep @*)
+  \end{tikzpicture}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+
+  \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% ORGANISATION DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Organisation du document}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+% Environnement Abstract ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+babs
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+babs:=\begin{abstract}#RET##INS#(*@ \rep @*)#INS##RET#\end{abstract}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{abstract}
+  (*@ \rep @*)
+  \end{abstract}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ % Environnement Appendix ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bapp
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bapp:=\begin{appendix}#RET##INS#(*@ \rep @*)#INS##RET#\end{appendix}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \begin{appendix}
+  (*@ \rep @*)
+  \end{appendix}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ % Commande chapter ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+chap
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+chap:=\chapter{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \chapter{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+  % Commande section ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sec
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sec:=\section{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \section{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande subsection ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssec
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ssec:=\subsection{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \subsection{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande subsubsection ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sssec
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sssec:=\subsubsection{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \subsubsection{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+    % Commande bibliography / bibliographystyle ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bib
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bib:=\bibliography{#INS#(*@ \rep @*)#INS#}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \bibliography{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+
+   \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+ 
+ %%%%%%%%%%%%%%%%%%%%% COMMADES DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Commandes du document}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+
+  % Commande newcommand ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ncm
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ncm:=\newcommand{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \newcommand{(*@ \rep @*)}{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande renewcommand ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+rncm
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ncm:=\renewcommand{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \renewcommand{(*@ \rep @*)}{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande newpage ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+npg
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+npg:=\newpage #RET#
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \newpage
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande newenvironnement ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+nenv
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+nenv:=\newenvironnement{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}{(*@ \rep @*)}#RET#(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \newcommand{(*@ \rep @*)}{(*@ \rep @*)}{(*@ \rep @*)}
+  (*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+    % Commande label ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+lbl
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+lbl:=\label{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \label{(*@ \rep @*)}(*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+  % Commande ref ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ref
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ref:=\ref{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \ref{(*@ \rep @*)}(*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande href ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+href
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+href:=\ref{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \href{(*@ \rep @*)}{(*@ \rep @*)}(*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande url ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+url
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+url:=\url{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \url{(*@ \rep @*)}(*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+   % Commande cite ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ci
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ci:=\cite{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \cite{(*@ \rep @*)}(*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+    % Commande usepackage ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+usep
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+usep:=\usepackage{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\begin{CenteredBox}
+  \begin{lstlisting}
+  \usepackage{(*@ \rep @*)}{(*@ \rep @*)}(*@ \rep @*)
+  \end{lstlisting}
+\end{CenteredBox}
+ \\ \hline
+ 
+  \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% MISE EN FORME TEXTE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Mise en forme du texte}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+  % Commande textit ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+it
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+it:=\textit{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\textit{texte}
+ \\ \hline
+  % Commande emph ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+emph
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+emph:=\emph{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\emph{texte}
+ \\ \hline
+   % Commande textbf ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bf
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bf:=\textbf{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\textbf{texte}
+ \\ \hline
+  % Commande textsf ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sf
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sf:=\textsf{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\textsf{texte}
+ \\ \hline
+  % Commande textsc ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sc
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sc:=\textsc{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\textsc{texte}
+ \\ \hline
+  % Commande textbf ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sl
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sl:=\textsl{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\textsl{texte}
+ \\ \hline
+  % Commande textbf ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+tt
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+tt:=\texttt{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+\texttt{texte}
+ \\ \hline
+    % Commande foot ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+foot
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+foot:=\footnote{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+texte\footnote{Note de bas de page associé au \emph{texte}} 
+ \\ \hline
+
+  \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% OPERATIONS MATHEMATIQUES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Opérations mathématiques}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+   % Commande frac ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+fr
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+fr:=\frac{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\frac{1}{2}$
+ \\ \hline
+  % Commande sqrt ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sq
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sq:=\sqrt{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\sqrt{2}$
+ \\ \hline
+   % Commande inner prod ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ip
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ip:=\langle #INS#(*@ \rep @*)#INS#, (*@ \rep @*) \rangle (*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\langle \mathbf{x},\mathbf{y}\rangle$
+ \\ \hline
+    % Commande sum ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sum
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+sum:=\sum_{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\displaystyle \sum_{n=1}^{N}\frac 1 n$
+ \\ \hline
+    % Commande int ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+int
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+int:=\int_{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\displaystyle \int_{a}^{b}\frac 1 x\,\mathrm{d}x$
+ \\ \hline
+     % Commande prod ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+prod
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+prod:=\prod_{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\displaystyle \prod_{n=1}^{N}x_n$
+ \\ \hline
+    % Commande bcap ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+bcap
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+bcap:=\bcap_{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\displaystyle \bigcap_{n=1}^{N}x_n$
+ \\ \hline
+    % Commande lim ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+lim
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+lim:=\lim_{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\displaystyle \lim_{x\to +\infty} \mathrm{e}^{x}$
+ \\ \hline
+    % Commande hat ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ht
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ht:=\hat{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\hat x$
+ \\ \hline
+   % Commande widehat ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+wht
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+wht:=\widehat{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\widehat x$
+ \\ \hline
+   % Commande underline ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+unl
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+unl:=\underline{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\underline{x}$
+ \\ \hline
+   % Commande ovl ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ovl
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ovl:=\overline{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\overline{x}$
+ \\ \hline
+
+
+
+ 
+\end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+ 
+ %%%%%%%%%%%%%%%%%%%%% OPERATIONS MATHEMATIQUES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Opérations mathématiques}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+  % Commande vect ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+vc
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+vc:=\vec{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\vec x$
+ \\ \hline
+   % Commande long vect ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+lvc
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+lvc:=\overrightarrow{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\overrightarrow{x}$
+ \\ \hline
+    % Commande xrightarrow ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xra
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xra:=\xrightarrow{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$x \xrightarrow{\text{texte}} y$
+ \\ \hline
+   % Commande binom ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+binom
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+binom:=\binom{#INS#(*@ \rep @*)#INS#}{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\binom{n}{k}$
+ \\ \hline
+   % Commande underbrace----------------------------------------------------------------------------------------------------------------------------------------------------------------
+unb
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+unb:=\underbrace{#INS#(*@ \rep @*)#INS#}_{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\underbrace{1+\cdots+100}_{\text{somme}}$
+ \\ \hline
+    % Commande underbrace----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ovb
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ovb:=\overbrace{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\overbrace{1+\cdots+100}^{5500}$
+ \\ \hline
+     % Commande underset----------------------------------------------------------------------------------------------------------------------------------------------------------------
+uns
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+uns:=\underset{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\underset{?}{=}$
+ \\ \hline
+     % Commande overset----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ovs
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+ovs:=\overset{#INS#(*@ \rep @*)#INS#}^{(*@ \rep @*)}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\overset{?}{=}$
+ \\ \hline
+    % Commande mathbb ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mbb
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+mbb:=\mathbf{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\mathbb{R}$
+ \\ \hline
+    % Commande mathcal ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mcal
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+mcal:=\mathcal{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\mathcal{R}$
+ \\ \hline
+    % Commande mathbf ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mbf
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+mbf:=\mathbf{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\mathbf{R}$
+ \\ \hline
+   % Commande mathrm ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mrm
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+mrm:=\mathrm{#INS#(*@ \rep @*)#INS#}(*@ \rep @*)
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\mathrm{R}$
+ \\ \hline
+
+
+  \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% SYMBOLES MATHEMATIQUES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Symboles mathématiques}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+  % Commande alpha ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xa
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xa:=\alpha
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\alpha$, $A$
+ \\ \hline
+   % Commande beta ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xb
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xb:=\beta
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\beta$, $B$
+ \\ \hline
+  % Commande gamma ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xg, xdg, xcg
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xg:=\gamma, xdg:=\digamma, xcg:=\Gamma
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\gamma$, $\digamma$, $\Gamma$
+ \\ \hline
+ % Commande delta ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xd, xcd
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xd:=\delta, xcd:=\Delta
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\delta$, $\Delta$
+ \\ \hline
+ % Commande epsilon ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xe, xve
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xe:=\epsilon, xve:=\varepsilon
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\epsilon$, $\varepsilon$, $E$
+ \\ \hline
+ % Commande zeta ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xz
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xz:=\zeta
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\zeta$, $Z$
+ \\ \hline
+ % Commande eta ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xet
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xet:=\eta
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\eta$, $H$
+ \\ \hline
+ % Commande theta ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xth, xvth, xcth
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xth:=\theta, xvth:=\vartheta, xcth:=\Theta
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\theta$,  $\vartheta$, $\Theta$
+ \\ \hline
+ % Commande iota ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xi
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xi:=\iota
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\iota$, $I$
+ \\ \hline
+ % Commande kappa ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xk, xvk
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xk:=\kappa, xvk:=\varkappa
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\kappa$, $\varkappa$, $K$
+ \\ \hline
+  % Commande lambda ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xl
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xl:=\lambda, xcl:=\Lambda
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\lambda$, $\Lambda$
+ \\ \hline
+  % Commande mu ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xm
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xm:=\mu
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\mu$, $M$
+ \\ \hline
+
+  \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%% SYMBOLES MATHEMATIQUES (SUITE) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\small  % Switch from 12pt to 11pt; otherwise, table won't fit
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}           % default: \fill
+\begin{table}[t]
+\caption{Symboles mathématiques}
+\begin{adjustbox}{width=\linewidth}
+\begin{tabular}{|x{2.6cm}|y{15cm}|x{5cm}|}
+\hline 
+Commande complétion &    
+ Macro correspondante & Résultat produit \\
+\hline \hline
+  % Commande nu ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xn
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xn:=\nu
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\nu$, $N$
+ \\ \hline
+  % Commande xi ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xx, xcx
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xx:=\xi, xcx:=\Xi
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\xi$, $\Xi$
+ \\ \hline
+  % Commande pi ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xp, xvp, xcp
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xp:=\pi, xvp:=\varpi, xcp:=\Pi
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\pi$, $\varpi$, $\Pi$
+ \\ \hline
+  % Commande rho ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xr, xvr
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xr:=\rho, xvr:=\varrho
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\rho$, $\varrho$, $P$
+ \\ \hline
+  % Commande sigma ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xs, xcs
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xs:=\sigma, xcs:=\Sigma
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\sigma$, $\Sigma$
+ \\ \hline
+  % Commande tau ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xt
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xt:=\tau
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\tau$, $T$
+ \\ \hline
+  % Commande upsilon ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xu, xcu
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xu:=\upsilon, xcu:=\Upsilon
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\upsilon$, $\Upsilon$
+ \\ \hline
+  % Commande phi ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xph, xvph, xcph
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xph:=\phi, xvph:=\varphi, xcph:=\Phi
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\phi$, $\varphi$, $\Phi$
+ \\ \hline
+  % Commande chi ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xch
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xch:=\chi
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\chi$, $X$
+ \\ \hline
+  % Commande psi ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xps, xcps
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xps:=\psi, xcps:=\Psi
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\psi$, $\Psi$
+ \\ \hline
+  % Commande omega ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+xo, xco
+&
+\vspace{2pt}
+\begin{CenteredBox}
+  \begin{lstlisting}
+xo:=\omega, xco:=\Omega
+\end{lstlisting}
+\end{CenteredBox}
+& 
+$\omega$, $\Omega$
+ \\ \hline
+ 
+ \end{tabular}
+\end{adjustbox}
+\end{table}
+\end{landscape}
+
+\end{document}  
