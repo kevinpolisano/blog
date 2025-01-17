@@ -7,10 +7,21 @@ website:
   navbar:
     right:
       - about.qmd
+  comments:
+    giscus:
+      repo: "kevinpolisano/blog"
+      repo-id: "R_kgDOM9ReCA"
+      category: "Announcements"
+      category-id: "DIC_kwDOM9ReCM4CmGgm"
+      mapping: "pathname"
+      reactions-enabled: true
+      input-position: "bottom"
+      theme: "light"
+      language: "fr"
+      loading: "lazy"
 format:
   html:
     theme: flatly
     css: styles.css
 
 editor: visual
-
