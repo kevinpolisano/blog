@@ -222,6 +222,7 @@ window.Quarto = {
   <li><a href="#mise-en-place-de-la-fonctionnalité" id="toc-mise-en-place-de-la-fonctionnalité" class="nav-link" data-scroll-target="#mise-en-place-de-la-fonctionnalité">Mise en place de la fonctionnalité</a></li>
   <li><a href="#extraction-des-commentaires-wordpress" id="toc-extraction-des-commentaires-wordpress" class="nav-link" data-scroll-target="#extraction-des-commentaires-wordpress">Extraction des commentaires Wordpress</a></li>
   <li><a href="#création-dun-token-github" id="toc-création-dun-token-github" class="nav-link" data-scroll-target="#création-dun-token-github">Création d’un Token GitHub</a></li>
+  <li><a href="#création-des-discussions" id="toc-création-des-discussions" class="nav-link" data-scroll-target="#création-des-discussions">Création des discussions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -625,6 +626,132 @@ Warning
 <li>Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)</li>
 <li>Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d’environnement dans <code>Settings &gt; Secrets and variables &gt; Actions</code> avec le nom <code>GH_TOKEN</code> (ou un autre nom significatif) et collez le token.</li>
 </ul>
+</section>
+<section id="création-des-discussions" class="level3">
+<h3 class="anchored" data-anchor-id="création-des-discussions">Création des discussions</h3>
+<p>Voici un script Python qui utilise l’API <code>graphql</code> pour créer automatiquement toutes les discussions avec les titres correspondant au <code>pathname</code> (pour être raccord avec <code>mapping: pathname</code> dans <code>_quarto.yml</code>).</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔹 Configuration</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>GITHUB_TOKEN <span class="op">=</span> <span class="st">"ghp_"</span>  <span class="co"># Remplacez par votre token GitHub</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>REPO_OWNER <span class="op">=</span> <span class="st">"kevinpolisano"</span>  <span class="co"># Votre nom d'utilisateur GitHub</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>REPO_NAME <span class="op">=</span> <span class="st">"blog"</span>  <span class="co"># Nom du dépôt GitHub</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>CATEGORY_ID <span class="op">=</span> <span class="st">"DIC_kwDOM9ReCM4CmGgm"</span>  <span class="co"># ID de la catégorie des discussions</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>POSTS_DIR <span class="op">=</span> <span class="st">"/posts/"</span>  <span class="co"># Dossier contenant vos articles Quarto</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>GITHUB_GRAPHQL_URL <span class="op">=</span> <span class="st">"https://api.github.com/graphql"</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔹 Fonction pour envoyer une requête GraphQL</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> send_graphql_query(query, variables<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    headers <span class="op">=</span> {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>GITHUB_TOKEN<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Content-Type"</span>: <span class="st">"application/json"</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    payload <span class="op">=</span> {<span class="st">"query"</span>: query, <span class="st">"variables"</span>: variables}</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    response <span class="op">=</span> requests.post(GITHUB_GRAPHQL_URL, json<span class="op">=</span>payload, headers<span class="op">=</span>headers)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    response.raise_for_status()</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> response.json()</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔹 Vérifie si une discussion existe déjà pour un post</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> discussion_exists(title):</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="st">    query($owner: String!, $name: String!) {</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="st">        repository(owner: $owner, name: $name) {</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="st">            discussions(first: 100) {</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="st">                nodes {</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="st">                    title</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="st">                }</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="st">            }</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="st">    }</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    variables <span class="op">=</span> {<span class="st">"owner"</span>: REPO_OWNER, <span class="st">"name"</span>: REPO_NAME}</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> send_graphql_query(query, variables)</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    discussions <span class="op">=</span> result.get(<span class="st">"data"</span>, {}).get(<span class="st">"repository"</span>, {}).get(<span class="st">"discussions"</span>, {}).get(<span class="st">"nodes"</span>, [])</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">any</span>(d[<span class="st">"title"</span>] <span class="op">==</span> title <span class="cf">for</span> d <span class="kw">in</span> discussions)</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_repository_id():</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>    query <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="st">    query($owner: String!, $name: String!) {</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="st">        repository(owner: $owner, name: $name) {</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="st">            id</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="st">    }</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    variables <span class="op">=</span> {<span class="st">"owner"</span>: REPO_OWNER, <span class="st">"name"</span>: REPO_NAME}</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> send_graphql_query(query, variables)</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result.get(<span class="st">"data"</span>, {}).get(<span class="st">"repository"</span>, {}).get(<span class="st">"id"</span>, <span class="va">None</span>)</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔹 Crée une discussion pour un post donné</span></span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_discussion(title, repository_id):</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>    mutation <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a><span class="st">    mutation($title: String!, $body: String!, $categoryId: ID!, $repositoryId: ID!) {</span></span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a><span class="st">        createDiscussion(input: {title: $title, body: $body, categoryId: $categoryId, repositoryId: $repositoryId}) {</span></span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a><span class="st">            discussion {</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a><span class="st">                id</span></span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="st">                title</span></span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a><span class="st">                url</span></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a><span class="st">            }</span></span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a><span class="st">        }</span></span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a><span class="st">    }</span></span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>    variables <span class="op">=</span> {</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span>: title,</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>        <span class="st">"body"</span>: <span class="st">"Discussion for this post"</span>,</span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>        <span class="st">"categoryId"</span>: CATEGORY_ID,</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>        <span class="st">"repositoryId"</span>: repository_id</span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"🔹 Tentative de création de la discussion pour : </span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> send_graphql_query(mutation, variables)</span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"🔍 Réponse GitHub :"</span>, result)  <span class="co"># Debugging</span></span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">"errors"</span> <span class="kw">in</span> result:</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"❌ Échec : </span><span class="sc">{</span>result[<span class="st">'errors'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a>        discussion <span class="op">=</span> result.get(<span class="st">"data"</span>, {}).get(<span class="st">"createDiscussion"</span>, {}).get(<span class="st">"discussion"</span>, {})</span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> discussion:</span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"✅ Discussion créée : </span><span class="sc">{</span>discussion[<span class="st">'title'</span>]<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>discussion[<span class="st">'url'</span>]<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"❌ Échec de la création pour </span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a><span class="co"># 🔹 Parcours des fichiers posts/ et création des discussions</span></span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>    repository_id <span class="op">=</span> get_repository_id()</span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> repository_id:</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"❌ Impossible de récupérer l'ID du dépôt. Vérifie ton token et le nom du repo."</span>)</span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>        exit(<span class="dv">1</span>)</span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> folder <span class="kw">in</span> os.listdir(POSTS_DIR):</span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>        post_path <span class="op">=</span> os.path.join(POSTS_DIR, folder)</span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> os.path.isdir(post_path):  <span class="co"># Vérifie que c'est bien un dossier</span></span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>            title <span class="op">=</span> <span class="ss">f"posts/</span><span class="sc">{</span>folder<span class="sc">}</span><span class="ss">/"</span></span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> discussion_exists(title):</span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"🔹 Discussion déjà existante pour : </span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"📌 Création de la discussion pour : </span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>                create_discussion(title, repository_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>À noter que j’ai du déjà faire apparaître en défilant la section commentaire en local (avec <code>quarto preview</code>) pour chaque post afin que le fichier <code>html</code> contienne la portion de code suivante :</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://giscus.app/client.js"</span><span class="ot"> </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ot">data-repo</span><span class="op">=</span><span class="st">"kevinpolisano/blog"</span><span class="ot"> </span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ot">data-repo-id</span><span class="op">=</span><span class="st">"R_kgDOM9ReCA"</span><span class="ot"> </span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ot">data-category</span><span class="op">=</span><span class="st">"Announcements"</span><span class="ot"> </span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ot">data-category-id</span><span class="op">=</span><span class="st">"DIC_kwDOM9ReCM4CmGgm"</span><span class="ot"> </span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ot">data-mapping</span><span class="op">=</span><span class="st">"pathname"</span><span class="ot"> </span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ot">data-reactions-enabled</span><span class="op">=</span><span class="st">"1"</span><span class="ot"> </span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ot">data-emit-metadata</span><span class="op">=</span><span class="st">"0"</span><span class="ot"> </span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ot">data-input-position</span><span class="op">=</span><span class="st">"bottom"</span><span class="ot"> </span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="ot">data-theme</span><span class="op">=</span><span class="st">"light"</span><span class="ot"> </span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="ot">data-lang</span><span class="op">=</span><span class="st">"fr"</span><span class="ot"> </span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="ot">crossorigin</span><span class="op">=</span><span class="st">"anonymous"</span><span class="ot"> </span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="ot">data-loading</span><span class="op">=</span><span class="st">"lazy"</span><span class="ot"> async</span><span class="op">=</span><span class="st">""</span><span class="dt">&gt;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!-- ## Conclusion -->
 <!-- La seule inquiétude que j'ai concerne l'espace de stockage. -->
 
