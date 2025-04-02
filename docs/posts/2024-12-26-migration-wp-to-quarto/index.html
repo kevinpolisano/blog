@@ -217,7 +217,12 @@ window.Quarto = {
   <li><a href="#blog2md" id="toc-blog2md" class="nav-link" data-scroll-target="#blog2md">Blog2md</a></li>
   </ul></li>
   <li><a href="#nettoyage-des-articles-exportés-liens-images" id="toc-nettoyage-des-articles-exportés-liens-images" class="nav-link" data-scroll-target="#nettoyage-des-articles-exportés-liens-images">Nettoyage des articles exportés, liens, images, …</a></li>
-  <li><a href="#gestion-des-commentaires" id="toc-gestion-des-commentaires" class="nav-link" data-scroll-target="#gestion-des-commentaires">Gestion des commentaires</a></li>
+  <li><a href="#gestion-des-commentaires" id="toc-gestion-des-commentaires" class="nav-link" data-scroll-target="#gestion-des-commentaires">Gestion des commentaires</a>
+  <ul class="collapse">
+  <li><a href="#mise-en-place-de-la-fonctionnalité" id="toc-mise-en-place-de-la-fonctionnalité" class="nav-link" data-scroll-target="#mise-en-place-de-la-fonctionnalité">Mise en place de la fonctionnalité</a></li>
+  <li><a href="#extraction-des-commentaires-wordpress" id="toc-extraction-des-commentaires-wordpress" class="nav-link" data-scroll-target="#extraction-des-commentaires-wordpress">Extraction des commentaires Wordpress</a></li>
+  <li><a href="#création-dun-token-github" id="toc-création-dun-token-github" class="nav-link" data-scroll-target="#création-dun-token-github">Création d’un Token GitHub</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -375,7 +380,7 @@ Warning
 </section>
 <section id="wordpress-export-to-markdown" class="level3">
 <h3 class="anchored" data-anchor-id="wordpress-export-to-markdown">Wordpress export to Markdown</h3>
-<p>Premièrement on effectue un export du contenu complet de WP au format <code>export.xml</code>, que l’on place dans l’archive du code téléchargé. Puis on exécute le script :</p>
+<p>Premièrement on effectue un export du contenu complet de WP au format <code>export.xml</code> (dans <code>Outils &gt; Exporter</code>), que l’on place dans l’archive du code téléchargé. Puis on exécute le script :</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="kw">&amp;&amp;</span> <span class="ex">node</span> index.js</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="blog2md" class="level3">
@@ -512,8 +517,119 @@ Warning
 </section>
 <section id="gestion-des-commentaires" class="level2">
 <h2 class="anchored" data-anchor-id="gestion-des-commentaires">Gestion des commentaires</h2>
+<p>J’ai opté pour <a href="https://giscus.app/fr">giscus</a>, qui est un dispositif relativement léger, basé sur les discussions GitHub, open-source et sans publicité. Le seul bémol est qu’il faut disposer d’un compte Github pour être autorisé à commenter. L’avantage par ailleurs est que l’on est moins sujet aux spams et aux commentaires injurieux (l’authentification, plus coûteuse en temps, en dissuadent plus d’un).</p>
+<section id="mise-en-place-de-la-fonctionnalité" class="level3">
+<h3 class="anchored" data-anchor-id="mise-en-place-de-la-fonctionnalité">Mise en place de la fonctionnalité</h3>
+<p>Pour activer les commentaires il faut remplir la <a href="https://giscus.app/fr">page giscus</a> détaillant la marche à suivre :</p>
+<ul>
+<li>Installer <a href="https://github.com/apps/giscus">l’application giscus</a></li>
+<li>Activer les <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">discussions Github</a> dans l’onglet <code>Settings &gt; Features</code> du dépôt en cochant la case <code>Discussions</code>.</li>
+<li>Renseigner le dépôt public (dans mon cas <code>kevinpolisano/blog</code>) ainsi que les propriétés escomptées.</li>
+</ul>
+<p>La balise HTML générée est la suivante dans mon cas :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://giscus.app/client.js"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-repo</span><span class="op">=</span><span class="st">"kevinpolisano/blog"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-repo-id</span><span class="op">=</span><span class="st">"R_kgDOM9ReCA"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-category</span><span class="op">=</span><span class="st">"Announcements"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-category-id</span><span class="op">=</span><span class="st">"DIC_kwDOM9ReCM4CmGgm"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-mapping</span><span class="op">=</span><span class="st">"pathname"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-strict</span><span class="op">=</span><span class="st">"0"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-reactions-enabled</span><span class="op">=</span><span class="st">"1"</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-emit-metadata</span><span class="op">=</span><span class="st">"0"</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-input-position</span><span class="op">=</span><span class="st">"bottom"</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-theme</span><span class="op">=</span><span class="st">"preferred_color_scheme"</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-lang</span><span class="op">=</span><span class="st">"fr"</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ot">        data-loading</span><span class="op">=</span><span class="st">"lazy"</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ot">        crossorigin</span><span class="op">=</span><span class="st">"anonymous"</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ot">        async</span><span class="dt">&gt;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ce qui me permet de remplir les options de commentaires dans le fichier <code>_quarto.yml</code> comme suit :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Blog de Kévin Polisano"</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">comments</span><span class="kw">:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">giscus</span><span class="kw">:</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">repo</span><span class="kw">:</span><span class="at"> </span><span class="st">"kevinpolisano/blog"</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">repo-id</span><span class="kw">:</span><span class="at"> </span><span class="st">"R_kgDOM9ReCA"</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">category</span><span class="kw">:</span><span class="at"> </span><span class="st">"Announcements"</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">category-id</span><span class="kw">:</span><span class="at"> </span><span class="st">"DIC_kwDOM9ReCM4CmGgm"</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">mapping</span><span class="kw">:</span><span class="at"> </span><span class="st">"pathname"</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">reactions-enabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">input-position</span><span class="kw">:</span><span class="at"> </span><span class="st">"bottom"</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="st">"light"</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">language</span><span class="kw">:</span><span class="at"> </span><span class="st">"fr"</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">loading</span><span class="kw">:</span><span class="at"> </span><span class="st">"lazy"</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> flatly</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="extraction-des-commentaires-wordpress" class="level3">
+<h3 class="anchored" data-anchor-id="extraction-des-commentaires-wordpress">Extraction des commentaires Wordpress</h3>
+<p>On commence par extraire les commentaires dans un fichier <code>comments.csv</code> à partir de <code>export.xml</code> grâce à ce script python qui <em>parse</em> les commentaires :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xml.etree.ElementTree <span class="im">as</span> ET</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Chemin vers le fichier XML exporté</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>xml_file <span class="op">=</span> <span class="st">"export.xml"</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>output_file <span class="op">=</span> <span class="st">"comments.csv"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Charger le fichier XML</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> ET.parse(xml_file)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> tree.getroot()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Namespace de WordPress</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>ns <span class="op">=</span> {<span class="st">"wp"</span>: <span class="st">"http://wordpress.org/export/1.2/"</span>}</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraire les commentaires</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>comments <span class="op">=</span> []</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> root.findall(<span class="st">".//item"</span>):</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    post_title <span class="op">=</span> item.find(<span class="st">"title"</span>).text</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    post_url <span class="op">=</span> item.find(<span class="st">"link"</span>).text</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> comment <span class="kw">in</span> item.findall(<span class="st">"wp:comment"</span>, ns):</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        author <span class="op">=</span> comment.find(<span class="st">"wp:comment_author"</span>, ns).text</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        content <span class="op">=</span> comment.find(<span class="st">"wp:comment_content"</span>, ns).text</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        date <span class="op">=</span> comment.find(<span class="st">"wp:comment_date"</span>, ns).text</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        comments.append([post_title, post_url, author, content, date])</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Écrire dans un fichier CSV</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">"w"</span>, newline<span class="op">=</span><span class="st">""</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    writer <span class="op">=</span> csv.writer(f)</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    writer.writerow([<span class="st">"Post Title"</span>, <span class="st">"Post URL"</span>, <span class="st">"Author"</span>, <span class="st">"Comment"</span>, <span class="st">"Date"</span>])</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    writer.writerows(comments)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Commentaires exportés dans </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="création-dun-token-github" class="level3">
+<h3 class="anchored" data-anchor-id="création-dun-token-github">Création d’un Token GitHub</h3>
+<p>Voici les étapes pour créer un token personnel GitHub avec l’autorisation pour gérer les discussions (comme les commentaires pour Giscus) :</p>
+<ul>
+<li>Allez dans <code>Settings &gt; Developer Settings</code> (général pas dans un dépôt) puis <code>Personal access tokens &gt; Tokens (classic)</code>.</li>
+<li>Sélectionnez <code>Generate new token &gt; Generate new token (classic)</code>.</li>
+<li>Donnez un nom au token : <code>Giscus Discussions Token</code>.</li>
+<li>Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou No expiration pour un usage prolongé.</li>
+<li>Sélectionnez les autorisations nécessaires :
+<ul>
+<li><code>public_repo</code> : Accéder aux dépôts publics</li>
+<li><code>read:discussion</code> : Lire les discussions.</li>
+<li><code>write:discussion</code> : Ajouter ou modifier des discussions.</li>
+</ul></li>
+<li>Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)</li>
+<li>Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d’environnement dans <code>Settings &gt; Secrets and variables &gt; Actions</code> avec le nom <code>GH_TOKEN</code> (ou un autre nom significatif) et collez le token.</li>
+</ul>
+<!-- ## Conclusion -->
+<!-- La seule inquiétude que j'ai concerne l'espace de stockage. -->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
