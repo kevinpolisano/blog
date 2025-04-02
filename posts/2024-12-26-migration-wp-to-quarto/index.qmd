@@ -373,6 +373,139 @@ Voici les étapes pour créer un token personnel GitHub avec l'autorisation pour
 - Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)
 - Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d'environnement dans `Settings > Secrets and variables > Actions` avec le nom `GH_TOKEN` (ou un autre nom significatif) et collez le token.
 
+### Création des discussions
+
+Voici un script Python qui utilise l'API `graphql` pour créer automatiquement toutes les discussions avec les titres correspondant au `pathname` (pour être raccord avec `mapping: pathname` dans `_quarto.yml`).
+
+```python
+import os
+import requests
+
+# 🔹 Configuration
+GITHUB_TOKEN = "ghp_"  # Remplacez par votre token GitHub
+REPO_OWNER = "kevinpolisano"  # Votre nom d'utilisateur GitHub
+REPO_NAME = "blog"  # Nom du dépôt GitHub
+CATEGORY_ID = "DIC_kwDOM9ReCM4CmGgm"  # ID de la catégorie des discussions
+POSTS_DIR = "/posts/"  # Dossier contenant vos articles Quarto
+
+GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
+
+# 🔹 Fonction pour envoyer une requête GraphQL
+def send_graphql_query(query, variables=None):
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Content-Type": "application/json",
+    }
+    payload = {"query": query, "variables": variables}
+    response = requests.post(GITHUB_GRAPHQL_URL, json=payload, headers=headers)
+    response.raise_for_status()
+    return response.json()
+
+# 🔹 Vérifie si une discussion existe déjà pour un post
+def discussion_exists(title):
+    query = """
+    query($owner: String!, $name: String!) {
+        repository(owner: $owner, name: $name) {
+            discussions(first: 100) {
+                nodes {
+                    title
+                }
+            }
+        }
+    }
+    """
+    variables = {"owner": REPO_OWNER, "name": REPO_NAME}
+    result = send_graphql_query(query, variables)
+    discussions = result.get("data", {}).get("repository", {}).get("discussions", {}).get("nodes", [])
+
+    return any(d["title"] == title for d in discussions)
+
+
+def get_repository_id():
+    query = """
+    query($owner: String!, $name: String!) {
+        repository(owner: $owner, name: $name) {
+            id
+        }
+    }
+    """
+    variables = {"owner": REPO_OWNER, "name": REPO_NAME}
+    result = send_graphql_query(query, variables)
+    return result.get("data", {}).get("repository", {}).get("id", None)
+
+
+# 🔹 Crée une discussion pour un post donné
+def create_discussion(title, repository_id):
+    mutation = """
+    mutation($title: String!, $body: String!, $categoryId: ID!, $repositoryId: ID!) {
+        createDiscussion(input: {title: $title, body: $body, categoryId: $categoryId, repositoryId: $repositoryId}) {
+            discussion {
+                id
+                title
+                url
+            }
+        }
+    }
+    """
+    variables = {
+        "title": title,
+        "body": "Discussion for this post",
+        "categoryId": CATEGORY_ID,
+        "repositoryId": repository_id
+    }
+    
+    print(f"🔹 Tentative de création de la discussion pour : {title}")
+    
+    result = send_graphql_query(mutation, variables)
+    print("🔍 Réponse GitHub :", result)  # Debugging
+
+    if "errors" in result:
+        print(f"❌ Échec : {result['errors']}")
+    else:
+        discussion = result.get("data", {}).get("createDiscussion", {}).get("discussion", {})
+        if discussion:
+            print(f"✅ Discussion créée : {discussion['title']} ({discussion['url']})")
+        else:
+            print(f"❌ Échec de la création pour {title}")
+
+
+# 🔹 Parcours des fichiers posts/ et création des discussions
+if __name__ == "__main__":
+    repository_id = get_repository_id()
+    if not repository_id:
+        print("❌ Impossible de récupérer l'ID du dépôt. Vérifie ton token et le nom du repo.")
+        exit(1)
+
+    for folder in os.listdir(POSTS_DIR):
+        post_path = os.path.join(POSTS_DIR, folder)
+        if os.path.isdir(post_path):  # Vérifie que c'est bien un dossier
+            title = f"posts/{folder}/"
+            if discussion_exists(title):
+                print(f"🔹 Discussion déjà existante pour : {title}")
+            else:
+                print(f"📌 Création de la discussion pour : {title}")
+                create_discussion(title, repository_id)
+```
+
+À noter que j'ai du déjà faire apparaître en défilant la section commentaire en local (avec `quarto preview`) pour chaque post afin que le fichier `html` contienne la portion de code suivante :
+
+```html
+<script src="https://giscus.app/client.js" 
+data-repo="kevinpolisano/blog" 
+data-repo-id="R_kgDOM9ReCA" 
+data-category="Announcements" 
+data-category-id="DIC_kwDOM9ReCM4CmGgm" 
+data-mapping="pathname" 
+data-reactions-enabled="1" 
+data-emit-metadata="0" 
+data-input-position="bottom" 
+data-theme="light" 
+data-lang="fr" 
+crossorigin="anonymous" 
+data-loading="lazy" async="">
+</script> 
+```
+
 <!-- ## Conclusion -->
 
 <!-- La seule inquiétude que j'ai concerne l'espace de stockage. -->
