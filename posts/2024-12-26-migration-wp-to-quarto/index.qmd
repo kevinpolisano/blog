@@ -326,9 +326,10 @@ On commence par extraire les commentaires dans un fichier `comments.csv` à part
 ```python
 import xml.etree.ElementTree as ET
 import csv
+from datetime import datetime
 
 # Chemin vers le fichier XML exporté
-xml_file = "export.xml"
+xml_file = "wp.xml"
 output_file = "comments.csv"
 
 # Charger le fichier XML
@@ -349,9 +350,12 @@ for item in root.findall(".//item"):
         date = comment.find("wp:comment_date", ns).text
         comments.append([post_title, post_url, author, content, date])
 
+# Trier les commentaires par date croissante
+comments.sort(key=lambda x: datetime.strptime(x[4], "%Y-%m-%d %H:%M:%S"))
+
 # Écrire dans un fichier CSV
 with open(output_file, "w", newline="", encoding="utf-8") as f:
-    writer = csv.writer(f)
+    writer = csv.writer(f, delimiter='$')
     writer.writerow(["Post Title", "Post URL", "Author", "Comment", "Date"])
     writer.writerows(comments)
 
@@ -373,7 +377,7 @@ Voici les étapes pour créer un token personnel GitHub avec l'autorisation pour
 - Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)
 - Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d'environnement dans `Settings > Secrets and variables > Actions` avec le nom `GH_TOKEN` (ou un autre nom significatif) et collez le token.
 
-### Création des discussions
+### Création des discussions GitHub
 
 Voici un script Python qui utilise l'API `graphql` pour créer automatiquement toutes les discussions avec les titres correspondant au `pathname` (pour être raccord avec `mapping: pathname` dans `_quarto.yml`).
 
@@ -381,7 +385,7 @@ Voici un script Python qui utilise l'API `graphql` pour créer automatiquement t
 import os
 import requests
 
-# 🔹 Configuration
+# Configuration
 GITHUB_TOKEN = "ghp_"  # Remplacez par votre token GitHub
 REPO_OWNER = "kevinpolisano"  # Votre nom d'utilisateur GitHub
 REPO_NAME = "blog"  # Nom du dépôt GitHub
@@ -390,7 +394,7 @@ POSTS_DIR = "/posts/"  # Dossier contenant vos articles Quarto
 
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
-# 🔹 Fonction pour envoyer une requête GraphQL
+# Fonction pour envoyer une requête GraphQL
 def send_graphql_query(query, variables=None):
     headers = {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
@@ -401,7 +405,7 @@ def send_graphql_query(query, variables=None):
     response.raise_for_status()
     return response.json()
 
-# 🔹 Vérifie si une discussion existe déjà pour un post
+# Vérifie si une discussion existe déjà pour un post
 def discussion_exists(title):
     query = """
     query($owner: String!, $name: String!) {
@@ -434,7 +438,7 @@ def get_repository_id():
     return result.get("data", {}).get("repository", {}).get("id", None)
 
 
-# 🔹 Crée une discussion pour un post donné
+# Crée une discussion pour un post donné
 def create_discussion(title, repository_id):
     mutation = """
     mutation($title: String!, $body: String!, $categoryId: ID!, $repositoryId: ID!) {
@@ -454,26 +458,26 @@ def create_discussion(title, repository_id):
         "repositoryId": repository_id
     }
     
-    print(f"🔹 Tentative de création de la discussion pour : {title}")
+    print(f"Tentative de création de la discussion pour : {title}")
     
     result = send_graphql_query(mutation, variables)
-    print("🔍 Réponse GitHub :", result)  # Debugging
+    print("Réponse GitHub :", result)  # Debugging
 
     if "errors" in result:
-        print(f"❌ Échec : {result['errors']}")
+        print(f"Échec : {result['errors']}")
     else:
         discussion = result.get("data", {}).get("createDiscussion", {}).get("discussion", {})
         if discussion:
-            print(f"✅ Discussion créée : {discussion['title']} ({discussion['url']})")
+            print(f"Discussion créée : {discussion['title']} ({discussion['url']})")
         else:
-            print(f"❌ Échec de la création pour {title}")
+            print(f"Échec de la création pour {title}")
 
 
-# 🔹 Parcours des fichiers posts/ et création des discussions
+# Parcours des fichiers posts/ et création des discussions
 if __name__ == "__main__":
     repository_id = get_repository_id()
     if not repository_id:
-        print("❌ Impossible de récupérer l'ID du dépôt. Vérifie ton token et le nom du repo.")
+        print("Impossible de récupérer l'ID du dépôt. Vérifie ton token et le nom du repo.")
         exit(1)
 
     for folder in os.listdir(POSTS_DIR):
@@ -481,9 +485,9 @@ if __name__ == "__main__":
         if os.path.isdir(post_path):  # Vérifie que c'est bien un dossier
             title = f"posts/{folder}/"
             if discussion_exists(title):
-                print(f"🔹 Discussion déjà existante pour : {title}")
+                print(f"Discussion déjà existante pour : {title}")
             else:
-                print(f"📌 Création de la discussion pour : {title}")
+                print(f"Création de la discussion pour : {title}")
                 create_discussion(title, repository_id)
 ```
 
@@ -505,6 +509,195 @@ crossorigin="anonymous"
 data-loading="lazy" async="">
 </script> 
 ```
+
+Pour lister l'ensemble des discussions GitHub et afficher leur IDs correspondant j'utilise le script suivant :
+
+```python
+import requests
+
+# Configuration
+GITHUB_TOKEN = "ghp_"  # Remplacez par votre token GitHub
+REPO_OWNER = "kevinpolisano"  # Nom d'utilisateur ou organisation GitHub
+REPO_NAME = "blog"  # Nom du dépôt GitHub
+GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
+
+# Fonction pour envoyer une requête GraphQL
+def send_graphql_query(query, variables=None):
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Content-Type": "application/json",
+    }
+    payload = {"query": query, "variables": variables}
+    response = requests.post(GITHUB_GRAPHQL_URL, json=payload, headers=headers)
+    response.raise_for_status()
+    return response.json()
+
+# Requête pour récupérer les discussions avec categoryId
+def fetch_discussions(repo_owner, repo_name):
+    query = """
+    query($owner: String!, $name: String!) {
+        repository(owner: $owner, name: $name) {
+            discussions(first: 50) {
+                nodes {
+                    id
+                    title
+                    url
+                    category {
+                        id
+                        name
+                    }
+                }
+            }
+        }
+    }
+    """
+    variables = {"owner": repo_owner, "name": repo_name}
+    result = send_graphql_query(query, variables)
+    return result.get("data", {}).get("repository", {}).get("discussions", {}).get("nodes", [])
+
+# Exécuter la requête
+if __name__ == "__main__":
+    discussions = fetch_discussions(REPO_OWNER, REPO_NAME)
+    for discussion in discussions:
+        category_id = discussion["category"]["id"]
+        category_name = discussion["category"]["name"]
+        print(f"Title: {discussion['title']}")
+        print(f"ID: {discussion['id']}")
+        print(f"URL: {discussion['url']}")
+        print(f"Category ID: {category_id} (Name: {category_name})")
+        print("-" * 40)
+```
+
+### Ajouter les commentaires existants
+
+Parmi mes anciens billets, peu possédaient des commentaires, à l'exception de quelques uns qui en affichaient plus d'une centaine. Le script qui suit s'applique donc à un billet donné, mais la procédure est facilement automatisable sur tous les billets si vous avez conservé une correspondance entre le `post_url` de l'extraction de commentaires et le `pathname` du titre de la discussion.
+
+```python
+import csv
+import requests
+import time
+from datetime import datetime
+
+# Configurations
+GITHUB_TOKEN = "ghp_"  # À remplacer par votre TOKEN
+REPO_OWNER = "kevinpolisano"
+REPO_NAME = "blog"
+DISCUSSION_ID = "D_kwDOM9ReCM4AfHpQ"
+POST_TITLE = "Comprendre son bulletin de paie" # À remplacer par le nom du billet (ou le POST_URL)
+CSV_FILE = "comments.csv" # Fichier stockant les commentaires
+GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
+
+# Nombre maximum de tentatives par commentaire
+MAX_RETRIES = 3
+RETRY_DELAY = 5  # secondes
+
+# Fonction pour envoyer une requête GraphQL
+def send_graphql_query(query, variables=None):
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Content-Type": "application/json",
+    }
+    payload = {"query": query, "variables": variables}
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = requests.post(GITHUB_GRAPHQL_URL, json=payload, headers=headers)
+            if response.status_code == 200:
+                return response.json()
+            else:
+                print(f"Erreur {response.status_code} : {response.text} (tentative {attempt}/{MAX_RETRIES})")
+            time.sleep(RETRY_DELAY)  # Attendre avant de réessayer
+        except requests.RequestException as e:
+            print(f"Erreur de connexion : {e} (tentative {attempt}/{MAX_RETRIES})")
+            time.sleep(RETRY_DELAY)
+
+    return None  # Échec après toutes les tentatives
+
+# Fonction pour poster un commentaire
+def post_comment(discussion_id, body):
+    mutation = """
+    mutation($discussionId: ID!, $body: String!) {
+        addDiscussionComment(input: {discussionId: $discussionId, body: $body}) {
+            comment {
+                id
+                body
+            }
+        }
+    }
+    """
+    variables = {"discussionId": discussion_id, "body": body}
+    result = send_graphql_query(mutation, variables)
+    
+    if result:
+        return result.get("data", {}).get("addDiscussionComment", {}).get("comment")
+    return None  # Échec
+
+# Fonction pour convertir la date en toutes lettres (en français)
+def convert_date(date_str):
+    try:
+        date_obj = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+        return date_obj.strftime('%d %B %Y à %Hh%M')
+    except ValueError as e:
+        print(f"Erreur de conversion de la date : {date_str} ({e})")
+        return date_str  # Retourne la date brute si erreur
+
+# Importation des commentaires
+def import_comments(csv_file, post_title, discussion_id):
+    print(f"Début de l'importation des commentaires pour : {post_title}")
+    failed_comments = []  # Stocke les commentaires non importés
+
+    try:
+        with open(csv_file, "r", encoding="utf-8") as file:
+            reader = csv.DictReader(file, delimiter='$')
+            for row in reader:
+                try:
+                    if row.get("Post Title") == post_title:
+                        comment = row.get("Comment")
+                        author = row.get("Author", "Inconnu")
+                        date = row.get("Date", "")
+                        date = convert_date(date)
+
+                        if comment:
+                            formatted_comment = f"{comment}\n\n*Commenté par **{author}**, le {date}.*"
+                            print(f"Importation : {formatted_comment[:50]}...")  # Affiche le début du commentaire
+                            
+                            result = post_comment(discussion_id, formatted_comment)
+                            if result:
+                                print(f"Commentaire importé avec succès (ID {result['id']})")
+                            else:
+                                print("Échec de l'importation, commentaire ajouté à la liste des échecs.")
+                                failed_comments.append(row)
+                        else:
+                            print(" Aucun commentaire trouvé dans cette ligne.")
+                    else:
+                        print(f"Ignoré : {row.get('Post Title')}")
+
+                except Exception as e:
+                    print(f"Erreur sur une ligne : {e}")
+                    failed_comments.append(row)
+
+    except FileNotFoundError:
+        print(f"Fichier introuvable : {csv_file}")
+        return
+    except Exception as e:
+        print(f"Erreur de lecture du CSV : {e}")
+        return
+
+    # Sauvegarde des commentaires non importés
+    if failed_comments:
+        failed_file = "failed_comments.csv"
+        with open(failed_file, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["Post Title", "Post URL", "Author", "Comment", "Date"], delimiter='$')
+            writer.writeheader()
+            writer.writerows(failed_comments)
+        print(f"{len(failed_comments)} commentaires non importés. Sauvegardés dans {failed_file}.")
+
+# Exécution
+if __name__ == "__main__":
+    import_comments(CSV_FILE, POST_TITLE, DISCUSSION_ID)
+```
+
+Parfois il y a un échec d'importation lorsqu'il y a beaucoup de commentaires, certainement du à un quota d'utilisation de l'API, dans ce cas les commentaires qui n'ont pas été importés sont sauvegardés dans un fichier `failed_comments.csv`, et il suffit de relancer le script sur ce fichier (à renseigner dans `CSV_FILE`) autant de fois que nécessaire.
 
 <!-- ## Conclusion -->
 
