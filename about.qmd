@@ -88,6 +88,8 @@ Ce blog est un support d'expérimentation et de partage de mes réflexions sur d
 
 {{< fa brands mastodon >}} [Mastodon](https://mathstodon.xyz/@KevinPolisano)
 
+{{< fa brands bluesky >}} [Bluesky](https://bsky.app/profile/kevinpolisano.bsky.social)
+
 {{< fa brands twitter >}} [Twitter](https://twitter.com/KevinPolisano)
 
 {{< fa brands instagram >}} [Instagram](https://www.instagram.com/kevinpolisano/)
