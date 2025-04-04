@@ -5,8 +5,14 @@ project:
 website:
   title: "Blog de Kévin Polisano"
   navbar:
+    left: 
+      - text: "Musique"
+        href: musique.qmd
+      - text: "Recherche"
+        href: https://polisano.pages.math.cnrs.fr/
     right:
-      - about.qmd
+      - text: "À propos"
+        href: about.qmd
   comments:
     giscus:
       repo: "kevinpolisano/blog"

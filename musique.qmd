@@ -1,0 +1,56 @@
+---
+title: "Musique"
+image: guitare.jpg
+---
+
+Ex-guitariste passionné, j'ai depuis quelques années retrouvé moyen de faire de la musique à l'aide d'un iPad. Ci-dessous quelques exemples de reprises que j'ai enregistrées avec le logiciel Garageband et monté avec Final Cut Pro.
+
+## Stairway to heaven (Led Zeppelin)
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/lHcQq07BBe8?si=7h9ECX2v0Zwoanm2" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+## Mission impossible
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/UzQPT7_uavU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+## Improvisation
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/G2Z4rkJ-Jyc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+## Parisienne Walkways (Gary Moore)
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/ctplKfPqDAs?si=mk2YVTE75NbGfGWb"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+
