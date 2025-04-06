@@ -6,10 +6,10 @@ website:
   title: "Blog de Kévin Polisano"
   navbar:
     left:
-      - text: "Handicap"
-        href: handicap.qmd
       - text: "Musique"
         href: musique.qmd
+      - text: "Handicap"
+        href: handicap.qmd
       - text: "Recherche"
         href: https://polisano.pages.math.cnrs.fr/
     right:
