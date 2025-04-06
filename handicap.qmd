@@ -1,5 +1,10 @@
 ---
 title: "Handicap"
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
 ---
 
 :::: {.columns}
@@ -13,15 +18,23 @@ title: "Handicap"
 :::
 
 ::: {.column width="30%"}
-![](aah-investigation.jpg){fig-align="center" width="200" height="200"}
+![](images/aah-investigation.jpg){fig-align="center" width="200" height="200"}
 :::
 
 ::::
 
 
-![](prixdelamour.png) 
+![](images/prixdelamour.png) 
+
+## Article dans la revue féministe « La Déferlante » 
+
+Le 12 novembre 2021, mon amie **Anne-Cécile Mouget** et moi intervenions dans [un article](https://revueladeferlante.fr/jai-du-renoncer-a-une-vie-de-couple-pour-ne-pas-perdre-mon-allocation/) de la revue « La Déferlante ».
+
+![](images/deferlante.jpg)
 
 ## Intervention au CNCPH sur l'AAH et le niveau de pauvreté
+
+Le 22 septembre 2021, j'intervenais au conseil national consultatif des personnes handicapées ([CNCPH](https://cncph.fr/)) sur le thème "Sommes nous condamnés à vivre sous le seuil de pauvreté ?".
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
 <iframe src="https://www.youtube.com/embed/CcJfXE-Dk_0?si=EjS8DMUyMasT_6bx&amp;start=755" 
@@ -34,7 +47,7 @@ title: "Handicap"
 
 ## Débat sur la déconjugalisation de l'AAH à l'Hôtel de Ville de Grenoble 
 
-Le 11 juin 2021, nous avons organisé un débat politique et une table ronde à la mairie de Grenoble.
+Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.fr/) et moi avons organisé un débat politique et une table ronde à la mairie de Grenoble, avec l'intervention du maire **Éric Piole** et du sénateur **Philippe Mounier**.
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
 <iframe src="https://www.youtube.com/embed/C6Q5ojTQnaI?si=m-GQpCe05oHy0eEI"
@@ -45,11 +58,49 @@ Le 11 juin 2021, nous avons organisé un débat politique et une table ronde à 
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
 
+::: {layout-ncol="4"}
+![](images/debat-1.jpg){group="my-gallery"}
+
+![](images/debat-2.jpg){group="my-gallery"}
+
+![](images/debat-3.jpg){group="my-gallery"}
+
+
+![](images/debat-4.jpg){group="my-gallery"}
+:::
+
 ## Podcast « Derrière les sourires »
+
+Le 27 mai 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé au podcast de **Laetitia Giovanni**.
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/07jbpGRr7GpKUKEknSDpI4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-## Reportage TV « Handicap : Le combat des citoyens oubliés »
+## Grenoble Magazine
+
+Le 19 mai 2021, j'ai livré un témoignage dans le [Gre Mag](https://www.gre-mag.fr/dossiers/mieux-vivre-avec-un-handicap/)
+
+![](images/gremag.jpg)
+
+## Reportage TV « Handicap, l'amour sous condition de ressources sur Public Sénat »
+
+Le 27 avril 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé à une émission de Public Sénat consacrée à la déconjugalisation de l'AAH.
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/QBnh0_6Uwwo?si=Rcnxr1znhvKpTfur&amp;start=1320" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
+
+## Article de presse dans le « Dauphiné Libéré »
+
+Le 19 avril 2021, l'[article du Dauphiné](https://www.ledauphine.com/societe/2021/04/18/isere-ils-se-mobilisent-pour-la-deconjugalisation-de-l-allocation-adultes-handicapes) "Allocation adultes handicapés : mobilisés pour la déconjugalisation" mentionnait l'initiative de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) :
+
+![](images/dauphine.jpg)
+
+## Reportage TV « Handicap : Le combat des citoyens oubliés » sur Planète+ CI
 
 En 2018, ma première intervention publique en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du reportage.
 
