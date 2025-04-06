@@ -5,7 +5,9 @@ project:
 website:
   title: "Blog de Kévin Polisano"
   navbar:
-    left: 
+    left:
+      - text: "Handicap"
+        href: handicap.qmd
       - text: "Musique"
         href: musique.qmd
       - text: "Recherche"

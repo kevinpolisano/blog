@@ -1,0 +1,69 @@
+---
+title: "Handicap"
+image: aah-investigation.jpg
+---
+
+10 ans durant, j'ai milité activement en faveur de la déconjugalisation de l'allocation adulte handicapé (AAH), jusqu'à obtenir gain de cause en 2022. Cette page répertorie certaines de mes interventions publiques, en complément de :
+
+- mes [billets de blogs](https://www.kevinpolisano.fr/#category=handicap) consacrés à ce combat politique
+- ma chaine YouTube secondaire [L'AHH Investigation](https://www.youtube.com/@laahinvestigation303)
+- le site de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/)
+
+## Intervention au CNCPH sur l'AAH et le niveau de pauvreté
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/CcJfXE-Dk_0?si=EjS8DMUyMasT_6bx&amp;start=755" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
+
+## Débat sur la déconjugalisation de l'AAH à l'Hôtel de Ville de Grenoble 
+
+Le 11 juin 2021, nous avons organisé
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/C6Q5ojTQnaI?si=m-GQpCe05oHy0eEI"
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
+
+
+
+## Reportage TV « Handicap : Le combat des citoyens oubliés »
+
+En 2018, ma première intervention publique en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du reportage.
+
+- Reportage : « Handicap : Le combat des citoyens oubliés »
+- Réalisé par : Antoine Guerre
+- Producteur : Luc Hermann et Paul Moreira
+- Montage : Mathieu Goasguen
+- Rédacteur en chef : Ghislaine Buffard
+- Diffusé sur Planète+ CI dans le cadre de la série documentaire SOUS LE RADAR produite par Premières Lignes
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/n4e3RlC8qFo?si=xcpePcDopJuKPppU" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
+
+## Création d'une animation didactive sur le prix de l'amour
+
+En 2017, j'apprends des rudiments de Flash pour concevoir cette animation dont le but était de vulgariser le mode de calcul de l'AAH et l'injustice qu'il engendrait pour les couples.
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/noSmEZq8MVg?si=x_rLEoY3iPmj_9Nc" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
