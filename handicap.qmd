@@ -1,13 +1,25 @@
 ---
 title: "Handicap"
-image: aah-investigation.jpg
 ---
 
+:::: {.columns}
+
+::: {.column width="70%"}
 10 ans durant, j'ai milité activement en faveur de la déconjugalisation de l'allocation adulte handicapé (AAH), jusqu'à obtenir gain de cause en 2022. Cette page répertorie certaines de mes interventions publiques, en complément de :
 
 - mes [billets de blogs](https://www.kevinpolisano.fr/#category=handicap) consacrés à ce combat politique
 - ma chaine YouTube secondaire [L'AHH Investigation](https://www.youtube.com/@laahinvestigation303)
 - le site de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/)
+:::
+
+::: {.column width="30%"}
+![](aah-investigation.jpg){fig-align="center" width="200" height="200"}
+:::
+
+::::
+
+
+![](prixdelamour.png) 
 
 ## Intervention au CNCPH sur l'AAH et le niveau de pauvreté
 
