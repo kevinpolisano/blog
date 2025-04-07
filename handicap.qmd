@@ -29,6 +29,10 @@ lightbox:
 
 ![](images/prixdelamour.png) 
 
+## Contribution au Mémoire de Politiques Publiques d'Océane Lang
+
+Le 13 janvier 2024, j'ai eu un entretien pour le [Mémoire de Politiques Publiques](https://pepite-depot.univ-lille.fr/LIBRE/Mem_Droit/2022/ULIL_DMSP_2022_033.pdf) de **Océane Lang** intitulé : "La déconjugalisation de l’Allocation aux Adultes Handicapés : de la réforme à sa mise en œuvre", sous la direction de **Anne Revillard**.
+
 ## Article dans Libération sur le vote de la déconjugalisation
 
 Le 19 juillet 2022, j'ai été interrogé par la journaliste **Elsa Maudet** pour un [article](https://www.liberation.fr/societe/lallocation-aux-adultes-handicapes-enfin-sur-la-voie-de-la-deconjugalisation-20220719_SXRKS4FIHZGO7IL7LDWOKWYL34/) dans Libération afin de commenter le vote à l'assemblée de la déconjugalisation de l'AAH.
@@ -40,6 +44,11 @@ Le 19 juillet 2022, j'ai été interrogé par la journaliste **Elsa Maudet** pou
 Le 19 juillet 2022, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet  [article](https://informations.handicap.fr/a-deconjugalisation-aah-quels-seraient-les-perdants-33279.php) sur Handicap.fr, dans lequel j'explique quels seraient les éventuels perdants de la déconjugalisation de l'AAH.
 
 ![](images/handicapfr-5.jpg)
+
+## Contribution au Mémoire de Master 1 de Syliane Questel
+
+Le 16 février 2022, j'ai eu un entretien pour le [Mémoire de Master 1](https://pepite-depot.univ-lille.fr/LIBRE/Mem_Droit/2022/ULIL_DMSP_2022_033.pdf) de **Syliane Questel** intitulé : "La mobilisation de la commu handie pour la déconjugalisation de l'allocation aux adultes handicapés", sous la direction de **Aude Lejeune**.
+
 
 ## Article dans la revue féministe « La Déferlante » 
 
@@ -59,6 +68,20 @@ Le 22 septembre 2021, j'intervenais au conseil national consultatif des personne
           allowfullscreen 
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
+
+## Audition en commission parlementaire dans le cadre d'une PPL
+
+Le 21 septembre 2021, **Anne-Cécile Mouget** et moi avons été auditionné en commission parlementaire par les députés **Aurélien Pradier** et **Jeanine Dubié**, dans le cadre d'une proposition de loi de M. Pradier portant sur la déconjugalisation de l'AAH.
+
+## L'APF reprend mon argumentaire pour une déconjugalisation de l'AAH
+
+En septembre 2021, dans [ce document](https://www.apf-francehandicap.org/sites/default/files/documents/aah_et_deconjugalisation_argumentaire.pdf), l'Association des Paralysés de France (APF) fait siens les arguments que j'exposais dans [ce billet](https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/).
+
+## Article dans l'Humanité à propos de la déconjugalisation
+
+Le 16 septembre 2021, je suis intervenu dans un [article](https://www.humanite.fr/societe/handicap/un-long-bras-de-fer-autour-de-lallocation-adulte-handicape-720512) pour l'Humanité :
+
+![](images/humanite.jpg)
 
 ## Participation au rassemblement à Paris pour la déconjugalisation de l'AAH
 
@@ -86,6 +109,12 @@ Le 17 juin 2021, nous rédigeons avec le sociologue **Pierre-Yves Baudot** une [
 
 Le 17 juin 2021, l'appel à témoignages de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/)  est relayé dans cet [article](https://www.lanouvellerepublique.fr/a-la-une/handicap-le-prix-de-l-amour-en-debat-a-l-assemblee) de la Nouvelle Republique.fr.
 
+## Article dans Mediapart au sujet de la déconjugalisation
+
+Le 16 juin 2021, nous avons échangé avec la journaliste de Mediapart **Caroline Boudet** pour la rédaction de [cet article](https://www.mediapart.fr/journal/france/160621/allocation-adulte-handicape-le-gouvernement-s-accroche-pour-ne-pas-la-reformer?xtor=CS3-5) traitant de la déconjugalisation de l'AAH.
+
+![](images/mediapart.jpg)
+
 ## Débat sur la déconjugalisation de l'AAH à l'Hôtel de Ville de Grenoble 
 
 Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.fr/) et moi avons organisé un débat politique et une table ronde à la mairie de Grenoble, avec l'intervention du maire **Éric Piole** et du sénateur **Philippe Mounier**.
@@ -108,6 +137,19 @@ Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.f
 
 
 ![](images/debat-4.jpg){group="my-gallery"}
+:::
+
+## Participation à une émission en ligne de la NUPES
+
+Le 10 juin 2021, j'ai participé à une [émission](https://www.youtube.com/watch?v=z_Q6mKBnRp0&ab_channel=NouvelleUnionPopulaire%C3%89cologiqueetSociale) consacrée à « L'Avenir en commun » et intitulée « AAH : Quelles autonomie pour les personnes en situation de handicap ? » en compagnie de **Pierre-Yves Baudot** (professeur de sociologie), **Anne-Sophie Pelletier** (eurodéputée) et **Hadrien Toucel** (co-responsable du programme).
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/z_Q6mKBnRp0?si=u8f2V7A6ad6EGyyv"
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
 
 ## Article dans Faire-Face et Handicap.fr sur l'anomalie de l'amendement AS7
@@ -140,7 +182,7 @@ Le 4 juin 2021, j'intervenais dans un [article](https://www.faire-face.fr/2021/0
 
 ## Participation à une commission parlementaire
 
-Le 3 juin 2021, mon acolyte **Anne-Cécile Mouget** et moi-même avons échangé avec des députés à propos de la déconjugalisation de l'AAH dans le cadre d'une commission parlementaire, en particulier **Jeanine Dubié**, **Marie-George Buffet**, **Stéphane Peu**, **Véronique Hammerer** et **Alix de Roubin**.
+Le 3 juin 2021, mon acolyte **Anne-Cécile Mouget** et moi-même avons échangé avec des députés à propos de la déconjugalisation de l'AAH dans le cadre d'une commission parlementaire, en particulier **Jeanine Dubié**, **Marie-George Buffet**, **Stéphane Peu** et **Véronique Hammerer**.
 
 ![](images/commission.jpg) 
 
@@ -246,6 +288,10 @@ Le 11 mars 2019, le journaliste **Franck Seuret** reprend dans un [article](http
 
 
 ![](images/faireface-8.jpg)
+
+## Entretien avec Floriane Maisonnasse MCF en droit privé
+
+Le 16 février 2018, je rencontre **Floriane Maisonnasse**, Maître de Conférence en droit privé à Grenoble, pour discuter de ses travaux articulant solidarité familiale et solidarité collective, me permettant de rédiger le [Manifeste pour l’accessibilité de la vie de couple](https://www.kevinpolisano.fr/posts/2019-03-06-manifeste-pour-laccessibilite-de-la-vie-de-couple/#la-question-de-larticulation-entre-les-solidarit%C3%A9-familiale-et-collective).
 
 ## Article dans le magazine Faire-Face sur le reportage Planète+
 
