@@ -1,5 +1,8 @@
 ---
 title: "Handicap"
+toc: true
+toc-title: "Sommaire"
+toc-location: left
 lightbox:
   match: auto
   effect: fade
@@ -26,6 +29,12 @@ lightbox:
 
 ![](images/prixdelamour.png) 
 
+## Article sur Handicap.fr sur les perdants de la déconjugalisation
+
+Le 19 juillet 2022, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet  [article](https://informations.handicap.fr/a-deconjugalisation-aah-quels-seraient-les-perdants-33279.php) sur Handicap.fr dans lequel j'explique quels seraient les perdants de la déconjugalisation de l'AAH.
+
+![](images/handicapfr-5.jpg)
+
 ## Article dans la revue féministe « La Déferlante » 
 
 Le 12 novembre 2021, **Anne-Cécile Mouget** et moi intervenions dans [un article](https://revueladeferlante.fr/jai-du-renoncer-a-une-vie-de-couple-pour-ne-pas-perdre-mon-allocation/) de la revue « La Déferlante ».
@@ -44,6 +53,12 @@ Le 22 septembre 2021, j'intervenais au conseil national consultatif des personne
           allowfullscreen 
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
+
+## Article sur Handicap.fr sur le cumul du salaire et de l'AAH
+
+Le 2 juillet 2021, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet  [article](https://informations.handicap.fr/a-cumuler-aah-et-salaire-oui-possible-31129.php/true) sur Handicap.fr dans lequel j'explique le [mode de calcul de l'AAH](https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/).
+
+![](images/handicapfr-4.jpg)
 
 ## Tribune dans Le Monde avec un collectif d'universitaires
 
@@ -75,17 +90,41 @@ Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.f
 ![](images/debat-4.jpg){group="my-gallery"}
 :::
 
+## Article dans Faire-Face et Handicap.fr sur l'anomalie de l'amendement AS7
+
+Le 9 juin 2021, les journalistes **Franck Seuret** et **Emmanuelle Dal'secco** relaient mon alerte concernant l'anomalie consitutive de l'amendement AS7, respectivement dans un [article](https://www.faire-face.fr/2021/06/09/aah-en-couple-individualisation-eloigne/) publié dans le magazine Faire-Face et l'[autre](https://informations.handicap.fr/a-aah-en-couple-majorite-detricote-son-individualisation-30989.php) dans Handicap.fr.
+
+![](images/faireface-12.jpg) 
+
+## Article dans le magazine Faire-Face sur l'AAH en couple
+
+Le 8 juin 2021, je collabore avec le journaliste **Franck Seuret** en lui fournissant des chiffres pour un [article](https://www.faire-face.fr/2021/06/08/aah-couple-gouvernement-contre-attaque/) dans le magazine Faire-Face.
+
+![](images/faireface-11.jpg)
+
+## Article sur Handicap.fr sur l'amendement du gouvernement
+
+Le 7 juin 2021, la journaliste **Emmanuelle Dal'secco** écrit un [article](https://informations.handicap.fr/a-aah-revenu-du-conjoint-pourquoi-ca-risque-coincer-30969.php) sur Handicap.fr dans lequel je réagis à la mesure proposée par le gouvernement.
+
+![](images/handicapfr-3.jpg)
+
 ## Podcast « Derrière les sourires »
 
 Le 27 mai 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé au [podcast](https://open.spotify.com/episode/07jbpGRr7GpKUKEknSDpI4) de **Laetitia Giovanni**.
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/07jbpGRr7GpKUKEknSDpI4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-## Grenoble Magazine
+## Article dans le Grenoble Magazine
 
 Le 19 mai 2021, j'ai livré un témoignage dans le [Gre Mag](https://www.gre-mag.fr/dossiers/mieux-vivre-avec-un-handicap/)
 
 ![](images/gremag.jpg)
+
+## Article dans le magazine Faire-Face sur le reportage Public Sénat
+
+Le 31 mai 2021, suite au [reportage](https://www.publicsenat.fr/actualites/politique/handicap-l-amour-n-a-pas-de-prix-mais-il-peut-couter-cher-188806) sur Public Sénat, le journaliste **Franck Seuret** publie un [article](https://www.faire-face.fr/2021/05/31/handicap-lamour-sous-condition-de-ressources-un-documentaire-edifiant-sur-public-senat/) dans le magazine Faire-Face.
+
+![](images/faireface-10.jpg)
 
 ## Reportage TV « Handicap, l'amour sous condition de ressources sur Public Sénat »
 
@@ -106,9 +145,28 @@ Le 19 avril 2021, l'[article du Dauphiné](https://www.ledauphine.com/societe/20
 
 ![](images/dauphine.jpg)
 
+## Article sur Handicap.fr sur l'appel à témoignages du prix de l'amour
+
+Le 25 mars 2021, la journaliste **Emmanuelle Dal'secco** écrit un [article](https://informations.handicap.fr/a-aah-revenus-conjoint-15-arguments-pour-comprendre-30517.php) sur Handicap.fr pour médiatiser l'appel à témoignages de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/).
+
+![](images/handicapfr-2.jpg)
+
+## Article sur Handicap.fr sur l'argumentaire opposé à Sophie Cluzel
+
+Le 19 mars 2021, la journaliste **Emmanuelle Dal'secco** reprend dans un [article](https://informations.handicap.fr/a-aah-revenus-conjoint-15-arguments-pour-comprendre-30517.php) des points de mon [argumentaire](https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/) sur Handicap.fr.
+
+![](images/handicapfr.jpg)
+
 ## Émission « L'oeil et la Main | Aah, mon amour ? » sur France 5
 
 Le 8 février 2021, mon amie **Anne-Cécile Mouget** et moi participons à l'[émission](https://www.france.tv/france-5/l-oeil-et-la-main/2399259-aah-mon-amour.html#about-section) l'oeil et la main, qui signera le début de notre aventure avec la création de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/).
+
+## Article dans le magazine Faire-Face sur l'AAH et les enfants
+
+Le 18 décembre 2019, je collabore avec le journaliste **Franck Seuret** en lui fournissant des chiffres pour un [article](https://www.faire-face.fr/2019/12/18/aah-20e-anniversaire-coute-cher/) dans le magazine Faire-Face.
+
+
+![](images/faireface-7.jpg)
 
 ## Chroniques France Inter de Nicole Ferroni
 
@@ -132,7 +190,20 @@ En novembre 2019, je suis contacté par l'humoriste **Nicole Ferroni** pour l'é
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
 
-## Article pour le magazine Faire-Face sur le reportage Planète+
+## Dossier sur l'AAH dans le magazine Faire-Face 
+
+En novembre 2019, je collabore avec le journaliste **Franck Seuret** sur un dossier [l'AAH sous toutes ses faces](https://www.faire-face.fr/wp-content/uploads/woocommerce_uploads/2019/11/Magazine-Faire-Face-novembre-decembre-Dossier-LAAH-sous-toutes-ses-faces-N764.pdf) dans le magazine Faire-Face.
+
+![](images/faireface-9.jpg)
+
+## Article dans le magazine Faire-Face sur l'AAH en couple
+
+Le 11 mars 2019, le journaliste **Franck Seuret** reprend dans un [article](https://www.faire-face.fr/2019/03/11/aah-couple-cinq-raisons-gouvernement-refus/) des points de mon [Manifeste](https://www.kevinpolisano.fr/posts/2019-03-06-manifeste-pour-laccessibilite-de-la-vie-de-couple/) dans le magazine Faire-Face.
+
+
+![](images/faireface-8.jpg)
+
+## Article dans le magazine Faire-Face sur le reportage Planète+
 
 Suite au [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANAL+) diffusé sur Planète+, le journaliste **Franck Seuret** rédige un [article](https://www.faire-face.fr/2017/09/28/handicapes-videos-poing/) dans le magazine Faire-Face.
 
@@ -141,7 +212,7 @@ Suite au [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANA
 
 ## Reportage TV « Handicap : Le combat des citoyens oubliés » sur Planète+ CI
 
-En 2018, ma première intervention publique en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANAL+).
+En 2017, ma première intervention télévisée en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANAL+).
 
 - Reportage : « Handicap : Le combat des citoyens oubliés »
 - Réalisé par : Antoine Guerre
@@ -159,7 +230,14 @@ En 2018, ma première intervention publique en faveur de la déconjugalisation d
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
 
-## Article pour le magazine Faire-Face sur le prix de l'amour
+## Article dans le magazine Faire-Face sur les restes à charge
+
+Le 24 mars 2017, je collabore avec le journaliste **Franck Seuret** pour un [article](https://www.faire-face.fr/2017/03/24/presidentielle-2017-handicap-compensation-reste-a-charge/) dans le magazine Faire-Face, qui met en avant la situation de mon ami **Ricardo Antunes Pedroso**.
+
+
+![](images/faireface-6.jpg)
+
+## Article dans le magazine Faire-Face sur le prix de l'amour
 
 Suite au partage de [mon animation](https://www.kevinpolisano.fr/posts/2017-01-03-laah-investigation-le-prix-de-lamour/) sur les réseaux, le journaliste **Franck Seuret** rédige un [article](https://www.faire-face.fr/2017/01/10/amour-prix-aah/) dans le magazine Faire-Face.
 
@@ -178,13 +256,21 @@ En 2017, j'apprends des rudiments de Flash pour concevoir cette animation dont l
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
 
-## Article pour le magazine Faire-Face sur le fonctionnement de l'impôt
+## Article pour le magazine Faire-Face sur une pétition
 
-En 2015, suite à mon billet de blog ["Impôts 2015 : explication du calcul pour personne valide et handicapée"](https://www.kevinpolisano.fr/posts/2015-04-14-impots-2015-explication-du-calcul-pour-personne-valide-et-handicapee/), le journaliste **Franck Seuret** publie un [article](https://www.faire-face.fr/2015/05/05/impots-2015-personnes-handicapees-abattement/) dans le magazine Faire-Face.
+Le 18 mars 2016, je collabore avec le journaliste **Franck Seuret** en lui fournissant des chiffres pour un [article](https://www.faire-face.fr/2016/03/18/aah-et-couple-petition/) dans le magazine Faire-Face.
+
+![](images/faireface-5.jpg) 
+
+## Articles dans le magazine Faire-Face et Handicap.fr sur le fonctionnement de l'impôt
+
+En 2015, suite à mon billet de blog ["Impôts 2015 : explication du calcul pour personne valide et handicapée"](https://www.kevinpolisano.fr/posts/2015-04-14-impots-2015-explication-du-calcul-pour-personne-valide-et-handicapee/), les journalistes **Franck Seuret** et **Emmannuelle Dal'secco** publient respectivement un [article](https://www.faire-face.fr/2015/05/05/impots-2015-personnes-handicapees-abattement/) dans le magazine Faire-Face et l'[autre](https://informations.handicap.fr/a-calcul-impot-declaration-7645.php/true) sur Handicap.fr.
 
 ![](images/faireface-3.jpg)
 
-## Article pour le magazine Faire-Face sur le fonctionnement de l'AAH
+![](images/handicapfr-1.jpg)
+
+## Article dans le magazine Faire-Face sur le fonctionnement de l'AAH
 
 En 2014, suite à mon premier billet de blog ["L'AAH pour les nuls, comprendre par l'exemple"](https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/), je suis contacté par le journaliste **Franck Seuret** pour un [entretien](https://www.faire-face.fr/2014/09/09/laah-pour-les-nuls-sur-le-blog-de-kevin-polisano-un-doctorant-handicape/) paru dans le magazine Faire.
 
