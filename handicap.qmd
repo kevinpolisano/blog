@@ -28,7 +28,7 @@ lightbox:
 
 ## Article dans la revue féministe « La Déferlante » 
 
-Le 12 novembre 2021, mon amie **Anne-Cécile Mouget** et moi intervenions dans [un article](https://revueladeferlante.fr/jai-du-renoncer-a-une-vie-de-couple-pour-ne-pas-perdre-mon-allocation/) de la revue « La Déferlante ».
+Le 12 novembre 2021, **Anne-Cécile Mouget** et moi intervenions dans [un article](https://revueladeferlante.fr/jai-du-renoncer-a-une-vie-de-couple-pour-ne-pas-perdre-mon-allocation/) de la revue « La Déferlante ».
 
 ![](images/deferlante.jpg)
 
@@ -44,6 +44,12 @@ Le 22 septembre 2021, j'intervenais au conseil national consultatif des personne
           allowfullscreen 
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
+
+## Tribune dans Le Monde avec un collectif d'universitaires
+
+Le 17 juin 2021, nous rédigeons avec le sociologue **Pierre-Yves Baudot** une [tribune dans Le Monde](https://www.lemonde.fr/idees/article/2021/06/17/la-conjugalisation-du-calcul-de-l-allocation-adulte-handicape-produit-des-effets-inverses-a-ceux-souhaites_6084485_3232.html) co-signée avec plusieurs chercheurs et chercheuses de renom des sciences sociales plaidant pour la déconjugalisation de l'AAH.
+
+![](images/lemonde.jpg)
 
 ## Débat sur la déconjugalisation de l'AAH à l'Hôtel de Ville de Grenoble 
 
@@ -71,7 +77,7 @@ Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.f
 
 ## Podcast « Derrière les sourires »
 
-Le 27 mai 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé au podcast de **Laetitia Giovanni**.
+Le 27 mai 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé au [podcast](https://open.spotify.com/episode/07jbpGRr7GpKUKEknSDpI4) de **Laetitia Giovanni**.
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/07jbpGRr7GpKUKEknSDpI4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
@@ -100,9 +106,42 @@ Le 19 avril 2021, l'[article du Dauphiné](https://www.ledauphine.com/societe/20
 
 ![](images/dauphine.jpg)
 
+## Émission « L'oeil et la Main | Aah, mon amour ? » sur France 5
+
+Le 8 février 2021, mon amie **Anne-Cécile Mouget** et moi participons à l'[émission](https://www.france.tv/france-5/l-oeil-et-la-main/2399259-aah-mon-amour.html#about-section) l'oeil et la main, qui signera le début de notre aventure avec la création de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/).
+
+## Chroniques France Inter de Nicole Ferroni
+
+En novembre 2019, je suis contacté par l'humoriste **Nicole Ferroni** pour l'éclairer sur le mode de calcul de l'AAH, afin qu'elle puisse mettre en lumière l'injustice pour les couples dans ses chroniques France Inter :
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/Tr4L3TFGRRo?si=PhSJSwZrkg4lOhNQ" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
+
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
+<iframe src="https://www.youtube.com/embed/JUP88dF8DF4?si=3CWKzpkfPAdI15cu" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+:::
+
+## Article pour le magazine Faire-Face sur le reportage Planète+
+
+Suite au [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANAL+) diffusé sur Planète+, le journaliste **Franck Seuret** rédige un [article](https://www.faire-face.fr/2017/09/28/handicapes-videos-poing/) dans le magazine Faire-Face.
+
+![](images/faireface-4.jpg)
+
+
 ## Reportage TV « Handicap : Le combat des citoyens oubliés » sur Planète+ CI
 
-En 2018, ma première intervention publique en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du reportage.
+En 2018, ma première intervention publique en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANAL+).
 
 - Reportage : « Handicap : Le combat des citoyens oubliés »
 - Réalisé par : Antoine Guerre
@@ -120,6 +159,12 @@ En 2018, ma première intervention publique en faveur de la déconjugalisation d
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
 
+## Article pour le magazine Faire-Face sur le prix de l'amour
+
+Suite au partage de [mon animation](https://www.kevinpolisano.fr/posts/2017-01-03-laah-investigation-le-prix-de-lamour/) sur les réseaux, le journaliste **Franck Seuret** rédige un [article](https://www.faire-face.fr/2017/01/10/amour-prix-aah/) dans le magazine Faire-Face.
+
+![](images/faireface-2.jpg)
+
 ## Création d'une animation didactive sur le prix de l'amour
 
 En 2017, j'apprends des rudiments de Flash pour concevoir cette animation dont le but était de vulgariser le mode de calcul de l'AAH et l'injustice qu'il engendrait pour les couples.
@@ -132,3 +177,15 @@ En 2017, j'apprends des rudiments de Flash pour concevoir cette animation dont l
           allowfullscreen 
           style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
 :::
+
+## Article pour le magazine Faire-Face sur le fonctionnement de l'impôt
+
+En 2015, suite à mon billet de blog ["Impôts 2015 : explication du calcul pour personne valide et handicapée"](https://www.kevinpolisano.fr/posts/2015-04-14-impots-2015-explication-du-calcul-pour-personne-valide-et-handicapee/), le journaliste **Franck Seuret** publie un [article](https://www.faire-face.fr/2015/05/05/impots-2015-personnes-handicapees-abattement/) dans le magazine Faire-Face.
+
+![](images/faireface-3.jpg)
+
+## Article pour le magazine Faire-Face sur le fonctionnement de l'AAH
+
+En 2014, suite à mon premier billet de blog ["L'AAH pour les nuls, comprendre par l'exemple"](https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/), je suis contacté par le journaliste **Franck Seuret** pour un [entretien](https://www.faire-face.fr/2014/09/09/laah-pour-les-nuls-sur-le-blog-de-kevin-polisano-un-doctorant-handicape/) paru dans le magazine Faire.
+
+![](images/faireface.jpg)
