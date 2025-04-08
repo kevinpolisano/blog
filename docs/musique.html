@@ -39,6 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -116,8 +119,22 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Morceaux</h2>
+   
+  <ul>
+  <li><a href="#stairway-to-heaven-led-zeppelin" id="toc-stairway-to-heaven-led-zeppelin" class="nav-link active" data-scroll-target="#stairway-to-heaven-led-zeppelin">Stairway to heaven (Led Zeppelin)</a></li>
+  <li><a href="#mission-impossible" id="toc-mission-impossible" class="nav-link" data-scroll-target="#mission-impossible">Mission impossible</a></li>
+  <li><a href="#improvisation" id="toc-improvisation" class="nav-link" data-scroll-target="#improvisation">Improvisation</a></li>
+  <li><a href="#parisienne-walkways-gary-moore" id="toc-parisienne-walkways-gary-moore" class="nav-link" data-scroll-target="#parisienne-walkways-gary-moore">Parisienne Walkways (Gary Moore)</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -140,7 +157,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Ex-guitariste passionné, j’ai depuis quelques années retrouvé moyen de faire de la musique à l’aide d’un iPad. Ci-dessous quelques exemples de reprises que j’ai enregistrées avec le logiciel Garageband et monté avec Final Cut Pro.</p>
+<p><a href="images/guitare.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/guitare.jpg" class="img-fluid"></a></p>
+<p>Ex-guitariste passionné, j’ai depuis quelques années retrouvé moyen de faire de la musique à l’aide d’un iPad. Ci-dessous quelques exemples de reprises que j’ai enregistrées avec le logiciel Garageband.</p>
 <section id="stairway-to-heaven-led-zeppelin" class="level2">
 <h2 class="anchored" data-anchor-id="stairway-to-heaven-led-zeppelin">Stairway to heaven (Led Zeppelin)</h2>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
@@ -594,6 +612,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <input type="hidden" id="giscus-base-theme" value="light">
 <input type="hidden" id="giscus-alt-theme" value="light">
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"right","openEffect":"fade","selector":".lightbox","closeEffect":"fade","loop":true});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

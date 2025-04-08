@@ -1,9 +1,18 @@
 ---
 title: "Musique"
-image: guitare.jpg
+toc: true
+toc-title: "Morceaux"
+toc-location: left
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
 ---
 
-Ex-guitariste passionné, j'ai depuis quelques années retrouvé moyen de faire de la musique à l'aide d'un iPad. Ci-dessous quelques exemples de reprises que j'ai enregistrées avec le logiciel Garageband et monté avec Final Cut Pro.
+![](images/guitare.jpg) 
+
+Ex-guitariste passionné, j'ai depuis quelques années retrouvé moyen de faire de la musique à l'aide d'un iPad. Ci-dessous quelques exemples de reprises que j'ai enregistrées avec le logiciel Garageband.
 
 ## Stairway to heaven (Led Zeppelin)
 
