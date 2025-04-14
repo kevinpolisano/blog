@@ -1,0 +1,102 @@
+---
+title: "Études"
+toc: true
+toc-depth: 5
+toc-title: "Formations"
+toc-location: left
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
+---
+
+# Ensimag (2010–2013)
+
+## Ensimag 1A
+
+La première année à l'Ensimag était une année de tronc commun avec quelques matières à la carte. Ci-dessous la liste des cours, TP et projets réalisés au cours de l'année pour une vitrine de ce qui se faisait à l'Ensimag.
+
+### Liste des cours suivis
+
+#### Mathématiques appliquées
+
+  * Analyse pour l'ingénieur
+  * Méthodes numériques de base
+  * Probabilités appliquées
+  * Recherche opérationnelle
+  * Théorie des langages
+
+#### Logiciel et matériel de base pour l'informatique
+
+  * Architecture des ordinateurs
+  * Algorithmique et structure de données
+  * Logiciel de base, programmation bas niveau
+  * Projet logiciel en C
+  * Réseaux et télécommunication
+
+#### Options scientifiques
+
+  * Analyse avancée
+  * Probabilités avancées
+  * Interface graphique utilisateur
+
+#### Sciences humaines, économiques, du management et entreprise (SCHEME)
+
+  * Économie générale
+  * Gestion d'entreprise et communication
+  * Projet professionnel personnel
+  * Anglais
+  * Italien
+  * Activités sportives
+
+### Projets
+
+#### Projet C
+
+Réalisation en C d'un encodeur/décodeur JPEG | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Projets/Projet-C.pdf)
+
+#### Interface utilisateur graphique 1
+
+Implémentation en ADA/SDL d'une boite à outils graphiques type _"Paint"_, programmation des primitives bas niveau puis d'une toolglass comme intéracteur | [Sujet](http://brouet.imag.fr/fberard/IUG/ProjetToolkit) 
+
+#### Interface utilisateur graphique 2
+
+Implémentation dans le langage Tcl/Tk d'un navigateur de fichier.
+
+#### Méthodes numériques
+
+Modélisation d'un écoulement de peinture par une équation différentielle et résolution numérique effectuée par différences finies et algorithmes itératifs en Scilab | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Projets/Methodes_Numeriques.pdf)
+
+#### Shell Unix
+
+Réalisation d'un script bash permettant de générer à partir d'images une galerie HTML. 
+
+#### Analyse pour l'ingénieur
+
+Calcul de transformées de Fourier sur Scilab | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Projets/Analyse.pdf)
+
+### Travaux pratiques
+
+#### Algorithmique
+
+  * [TPL1](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Algorithmique/Algo1_TPL1.pdf) : Simulation du Taquin "Embouteillage".
+  * [TPL2](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Algorithmique/Algo1_TPL2.pdf) : Recherche d'une solution optimale au Taquin. 
+  * [TPL3](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Algorithmique/Algo2_TPL1.pdf) : Programmation générique des arbres binaires de recherche AVL et applications. 
+  * [TPL4](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Algorithmique/Algo2_TPL2.pdf) : Files de priorités et arbres de Huffmann.
+
+#### Analyse
+
+  * [TD1](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD1.pdf) : Exercices sur la théorie de la mesure | [Solutions](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD1_corr.pdf)
+  * [TD2](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD2.pdf) : Exercices sur l'intégrale de Lebesgue | [Solutions](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD2_corr.pdf)
+  * [TD3](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD3.pdf) : Exercices sur les intégrales paramétrées | [Solutions](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD3_corr.pdf)
+  * [TD4](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD4.pdf) : Exercices sur la transformée de Fourier. 
+  * [Annexe](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Analyse/Analyse_TD1.pdf) : Exemple d'un ensemble non mesurable.
+
+#### Économie
+
+  * [Cours](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Economie/Economie_cours.pdf) : Introduction à l'économie générale.
+
+
+
+
