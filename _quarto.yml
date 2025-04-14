@@ -6,6 +6,8 @@ website:
   title: "Blog de Kévin Polisano"
   navbar:
     left:
+      - text: "Études"
+        href: etudes.qmd
       - text: "Musique"
         href: musique.qmd
       - text: "Handicap"
