@@ -209,3 +209,59 @@ Reconstruction analytique de régions d'intérêts en imagerie médicale. Travai
   * [TP1](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/SEPC/SEPC_TP1.pdf) : Implémentation en C d'un allocateur de mémoire. 
   * [TP2](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/SEPC/SEPC_TP2.pdf) : Implémentation en C d'un shell. 
   * [TP3](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/SEPC/SEPC_TP3.pdf) : Synchronisation entre _threads_ (processus légers) à l'aide de moniteurs POSIX et de sémaphores. 
+  
+## Master 2 de recherche MSIAM
+
+J'ai effectué ma troisième année en M2 MSIAM qui propose des cours communs avec l'Ensimag.
+
+### Articles de recherches étudiés  
+
+#### Imagerie médicale
+
+Solving the interior problem of computed tomography using a priori knowledge. M. Courdurier et al. (2008) | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Imagerie_medicale/IM_article.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Imagerie_medicale/IM_rapport.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Imagerie_medicale/IM_slides.pdf) 
+
+#### Calcul exact
+
+Quadratic-Time Certificates in Linear Algebra. Erich L. Kaltofen et al. (2009) | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Calcul_exact/CE_article.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Calcul_exact/CE_rapport.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Calcul_exact/CE__slides.pdf) 
+
+#### Modèles géométriques pour l'image
+
+Meaningful scales detection along digital contours for unsupervised local noise estimation. Bertrand Kerautret et Jacques-Olivier Lachaud (2012) | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modeles_geometriques/MG_article.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modeles_geometriques/MG_rapport2.pdf) 
+
+#### Modélisation surfacique
+
+Transfinite surface interpolation over irregular n-sided domains. Tamás Várady (2011) | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modelisation_surfacique/MS_article.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modelisation_surfacique/MS_slides.pdf)
+
+#### Reconstruction géométrique
+
+Object Removal by Exemplar-Based Inpainting. A. Criminisi (2003) | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Reconstruction_geometrique/RG_article.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Reconstruction_geometrique/RG_slides.pdf)
+
+#### Ondelettes
+
+Une introduction aux ondelettes monogéniques à partir d'un article de M. Unser (2009) | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Ondelettes/Ondelettes_article.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Ondelettes/Ondelettes_slides.pdf)
+
+### Projets réalisés  
+
+#### Méthodes inverses
+
+Assimilation de données en Matlab sur l'attracteur de Lorenz utilisé comme modèle météorologique | [Sujet](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Methodes_inverses/MI_sujet.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Methodes_inverses/MI_rapport.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Methodes_inverses/MI_sources.tar.gz)
+
+#### Vision par ordinateur
+
+Implémentation en C++ d'un algorithme du Mean Shift amélioré pour la segmentation d'images | [Article](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Vision_par_ordinateur/VPO_article.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Vision_par_ordinateur/VPO_rapport.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Vision_par_ordinateur/VPO_sources.tar.gz)
+
+#### Modèles géométriques et morphologiques pour l'image  
+
+Implémentation en C++ d'algorithmes classiques en traitement d'image | [Sujet](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modeles_geometriques/MG_sujet.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modeles_geometriques/MG_rapport.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Modeles_geometriques/MG_sources.tar.gz)
+
+#### Visualisation scientifique
+
+Implémentation en Processing (surcouche de Java) d'un programme d'importation de données météorologiques (température, pression, pollution, etc) et exportation sur Google Earth des cartes | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Visualisation_scientifique/VS_rapport.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Visualisation_scientifique/VS_sources.tar.gz)
+
+#### Reconstruction géométrique
+
+Implémentation en C++ avec la libQGLViewer d'un programme de reconstruction de surfaces | [Sujet](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Reconstruction_geometrique/RG_sujet.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Reconstruction_geometrique/RG_rapport.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/Reconstruction_geometrique/RG_sources.tar.gz)
+
+#### Projet de fin d'études   
+
+Du mois de février au mois de juillet, j'ai travaillé au Laboratoire Jean Kuntzmann sur la _"Détection d'anisotropie dans les images via la transformée en ondelettes monogéniques"_ | [Sujet](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_sujet.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_rapport.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_slides.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_matlab.tar.gz)
