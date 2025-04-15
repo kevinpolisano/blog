@@ -367,3 +367,96 @@ Implémentation en C++ avec la libQGLViewer d'un programme de reconstruction de 
 #### Projet de fin d'études   
 
 Du mois de février au mois de juillet, j'ai travaillé au Laboratoire Jean Kuntzmann sur la _"Détection d'anisotropie dans les images via la transformée en ondelettes monogéniques"_ | [Sujet](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_sujet.pdf) | [Rapport](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_rapport.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_slides.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/M2-MSIAM/PFE/PFE_matlab.tar.gz)
+
+## Ambassadeur de promo
+
+Désigné ambassadeur de promotion dans le cadre de la remise des diplômes de l'INP et de l'Ensimag le samedi 29 novembre 2014, j'ai eu l'opportunité de pouvoir représenter ma promotion et faire un [discours](https://kevinpolisano.github.io/pdf-storage/Doctorat/discours_remise_des_diplomes.pdf) sur mon parcours et mes activités de recherches.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/YkGMbwH2qeM?si=REcDmhJSEZHVzGNl"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/Bu2bvjsEatM?si=3z3VsfTbhqr8Q5xu"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+
+# Doctorat (2013–2017)
+
+## Sujet de thèse
+
+J'ai effectué ma thèse au laboratoire Jean Kuntzmann, financée par une bourse du CNRS, sous la direction de **Valérie Perrier**, **Marianne Clausel** et **Laurent Condat**.
+
+- [Sujet de thèse](https://kevinpolisano.github.io/pdf-storage/Doctorat/Sujet-these.pdf) : Modélisation de textures anisotropes par la transformée en ondelettes monogéniques 
+
+## Activités transversales
+
+- [École d'été ESSIM 2013](https://scala.uc3m.es/essim2013/welcome.html) à Madrid.
+  - Projet réalisé : [Modelling the trajectory of a skydiver](https://kevinpolisano.github.io/pdf-storage/Doctorat/ESSIM_report.pdf)
+  
+- Cours particuliers de L2 : un semestre de cours d’analyse dispensé à un étudiant polyhandicapé.
+  
+- Formation [From Chaos to Complexity](https://videos.univ-grenoble-alpes.fr/search/?q=chaos+and+complexity) (janvier 2014)
+
+- Organisation de la journée des doctorants (25 avril 2014)
+
+- Organisation d'un groupe de travail : Préparation à la visite d'**Emmanuel Candès** et remise du prix Jean Kuntzmann. Étude des articles "phares" de l'auteur et présentation d'exposés (tous les jeudi jusqu'au 16 juin 2014)
+  - Ma présentation : [Introduction to Compressive Sampling](https://kevinpolisano.github.io/pdf-storage/Doctorat/intro-compressive-sampling.pdf)
+  - Notre [interview](https://kevinpolisano.github.io/pdf-storage/Doctorat/candes-interview.pdf) d'**Emmanuel Candès**
+  
+- Fête de la science 2015 : organisation d'un stand grand public sur le thème *Comprendre les circulations atmosphériques et océanographiques*, à Minatec.
+
+- École d'été *Big Optim* (juin 2015) : optimisation convexe à grande échelle, algorithmes proximaux et applications, à Gipsa-Lab.
+
+- Tables rondes Forum « Imagine ton avenir » (FITA, janvier 2016) pour témoigner sur la recherche.
+
+- Interviews MAP (février 2016) : entretien avec des étudiants pour leur « Module d’accompagnement professionnel ».
+
+- Math en Jeans (avril 2016) : Exposé devant des élèves des collèges Malraux (Voreppe) et Barnave (St Egrève)
+
+- Visite des étudiants du Cycle Préparatoire Polytechnique (CPP, avril 2017) et présentation de l’école et des projets numériques au cours du cursus de l'Ensimag.
+
+- Encadrement d'un projet filé 2A Ensimag (janvier à mai 2017) : [Comparaison de méthodes paramétriques pour la détection spectrale](https://kevinpolisano.github.io/pdf-storage/Doctoratrapport_polisano_bouton_buthod-garcon_vincent.pdf)
+  
+## Soutenance thèse
+
+Le 12 décembre 2017, j'ai soutenu ma [thèse de doctorat](https://polisano.pages.math.cnrs.fr/uploads/polisano-modelisation-2017.pdf), en donnant cette [présentation](https://polisano.pages.math.cnrs.fr/uploads/polisano-modelisation-2017-slides.pdf) devant le jury composé de :
+
+- **Valérie Perrier**, Professeur, Grenoble INP, Directrice de thèse.
+- **Gabriel Peyré**, Directeur de recherche, CNRS Délégation Paris, Rapporteur.
+- **Frédéric Richard**, Professeur, Université Aix-Marseille, Rapporteur.
+- **Marianne Clausel**, Professeur, Université de Lorraine, Co-encadrante.
+- **Laurent Condat**, Chargé de recherche, CNRS Délégation Alpes, Co-encadrant.
+- **Pierre-Armand Weiss**, Chargé de recherche, CNRS Délégation Midi-Pyrénées, Examinateur.
+- **Anne Estrade**, Professeur, Université Paris 5, Examinateur.
+- **Annick Montanvert**, Professeur, Université Grenoble Alpes, Présidente.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/LhPJNF3PO6U?si=RgV4A0_8OwWadUJZ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+  </iframe>
+</div>
+  
+> Soutenance filmée dans l'auditorium du bâtiment IMAG
+  
+Pour plus de détails sur les activités menées, voir mon [CV académique](https://polisano.pages.math.cnrs.fr/uploads/cv.pdf).
