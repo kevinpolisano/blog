@@ -50,7 +50,7 @@ La première année à l'Ensimag était une année de tronc commun avec quelques
   * Italien
   * Activités sportives
 
-### Projets
+### Projets réalisés
 
 #### Projet C
 
@@ -97,6 +97,115 @@ Calcul de transformées de Fourier sur Scilab | [Sujet](https://kevinpolisano.gi
 
   * [Cours](https://kevinpolisano.github.io/pdf-storage/Ensimag-1A/Economie/Economie_cours.pdf) : Introduction à l'économie générale.
 
+## Ensimag 2A
 
+En deuxième année j'ai choisi la filière MMIS (Modélisation Mathématique, Images et Simulations) option IRVM (Image, Réalité Virtuelle et Multimédia). Ci-dessous la liste des cours, TP et projets réalisés au cours de l'année.
 
+### Liste des cours suivis
 
+#### Tronc commun MMIS
+
+  * Algorithmique et programmation orientée objet
+  * Principes et méthodes statistiques
+  * Principes des systèmes de gestion de base de données
+  * Systèmes d'exploitation et programmation concurrente
+  * Projet base de données
+  * Projet génie logiciel
+  * Projet de spécialité
+
+#### Spécialité Image, Réalité Virtuelle et Multimédia**_
+
+  * Équations aux dérivées partielles et différences finies
+  * Méthodes numériques avancées
+  * Modélisation géométrique
+  * Multimédia
+  * Graphique 3D
+  * Image et morphologie mathématique
+  * Introduction à la recherche en laboratoire
+  * Modèles d'EDP avancés
+  * Modélisation et programmation
+  * Traitement statistique du signal et des images
+  * Traitement d'image
+
+#### Sciences humaines, économiques, du management et des entreprises
+
+  * Pratique de gestion de l'entreprise
+  * Management, délégation
+  * Gestion de projet
+  * Droit des affaires
+  * Projet professionnel personnel
+  * Anglais
+  * Activités physiques et sportives
+
+### Projets réalisés
+
+#### Algorithmique et programmation orientée objet
+
+Implémentation en Java d'un programme permettant la visualisation d'objets 3D et le rebouchage de trous dans un maillage | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/APOO.pdf)
+
+#### Système de gestion de bases de données
+
+Implémentation en Java et SQL d’une base de données pour gérer les réservations dans un groupe de restaurants. | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/BD.pdf)
+
+#### Modélisation géométrique 
+
+Implémentation en Matlab d'une approximation d'un nuage de points par des courbes de Bézier | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Modelisation_geometrique.pdf) 
+
+#### Principes et méthodes statistiques
+
+Analyse des défauts d'une cuve et vérifications expérimentales à base de simulations sur R | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Methodes_statistiques.pdf)
+
+#### Génie logiciel
+
+Réalisation en ADA d'un compilateur objet de type Java | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Genie_Logiciel.tar.gz)
+
+#### Graphique 3D
+
+Implémentation en C++, de l'API OpenGL avec QGLViewer d'une scène animée 3D de ski dans un décor de montagne | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Graphique-3D.pdf)
+
+#### Modélisation et programmation 
+
+Implémentation en C++ d'un programme réalisant un maillage de surface par une triangulation de Delaunay basée sur les complexes simpliciaux | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Modelisation_programmation.pdf)
+
+#### Multimédia
+
+Implémentation en C d'un programme de tatouage d'images, étude de la robustesse lorsque celles-ci sont soumises à des transformations géométriques | [Sujet](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Multimedia.pdf)
+
+#### Introduction à la recherche en laboratoire 
+
+Étude mathématique et simulation numérique sous Matlab de la dynamique neuronale. Recherche au sein de l'équipe BIPOP de l'INRIA d'un nouveau modèle doté d'un seuil de décharge variable, application à la prédiction neuronale | [Rapport](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/IRL_rapport.pdf) | [Slides](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/IRL_slides.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/IRL_sources.tar.gz)
+
+#### Projet de spécialité
+
+Détection du touché sur une surface multitouch 3D munie d'une caméra infrarouge (Cubtile). Travail réalisé au sein de l'équipe IIHM du LIG. Implémentation en C++ et OpenCV | [Sujet](http://brouet.imag.fr/fberard/ProjetImage/CubtileTouch) | [Slides](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Projet-specialite_slides.pdf) | [Sources](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Projet-specialite_sources.tar.gz)
+
+#### Stage 2A 
+
+Reconstruction analytique de régions d'intérêts en imagerie médicale. Travail réalisé au sein de l'équipe GMCAO du laboratoire TIMC. Implémentation sous Matlab d'un algorithme visant à réduire l'exposition des patients aux rayons X |  [Article](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Stage-2A_sujet.pdf) |  [Rapport](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Stage-2A_rapport.pdf) |  [Slides](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Stage-2A_slides.pdf) |  [Appendix](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Stage-2A_appendix.pdf) |  [Sources](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Projets/Stage-2A_sources.tar.gz) 
+
+### Travaux pratiques
+
+#### Méthodes numériques avancées
+
+  * [TP1](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Methodes_numeriques/MNA_TP1.pdf) : Résolution d'équations différentielles ordinaires en C par les méthodes explicites de Runge-Kutta et Adams, et application à un modèle de propagation d’une épidémie dans une population. 
+  * [TP2](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Methodes_numeriques/MNA_TP2.pdf) : Implémentation en C de différentes méthodes de calcul numériques d’intégration, dont une à pas adaptatif.
+  * [TP3](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Methodes_numeriques/MNA_TP3.pdf) : Implémentation en C de méthodes de résolution de systèmes linéaires efficaces afin de résoudre et d'animer l’équation de la chaleur : méthodes de Krylov, stockage creux et schéma implicite utilisés. 
+
+#### Modélisation et programmation
+
+  * [TP1](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Modelisation_programmation/MP_TP1.pdf) : Implémentation en C++ d'une classe Dvector. 
+  * [TP2](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Modelisation_programmation/MP_TP2.pdf) : Améliorations apportées par surcharge d'opérateurs. 
+  * [TP3](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Modelisation_programmation/MP_TP3.pdf) : Extension aux classes Dmatrix pour l'algèbre linéaire. 
+  * [TP4](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Modelisation_programmation/MP_TP4.pdf) : Manipulation des patrons et de la STL sur les maillages. 
+
+#### Traitement d'image
+
+  * [TP1](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Traitement_images/TI_TP1.pdf) : Travail sur l'histogramme d'une image en niveaux de gris, amélioration de contraste, histogramme cumulé, filtrage rétinien.
+  * [TP2](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Traitement_images/TI_TP2.pdf) : Implémentation en C de filtrages linéaires (gaussiens, fft, etc) et non linéaires (médians, adaptatifs, bilatéraux). 
+  * [TP3](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/Traitement_images/TI_TP3.pdf) : Implémentation en C d'algorithmes de détection de contours : par gradient (Canny, seuillage par hystérésis) et par Laplacien.
+
+#### Système d'exploitation et programmation concurrente 
+
+  * [TP1](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/SEPC/SEPC_TP1.pdf) : Implémentation en C d'un allocateur de mémoire. 
+  * [TP2](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/SEPC/SEPC_TP2.pdf) : Implémentation en C d'un shell. 
+  * [TP3](https://kevinpolisano.github.io/pdf-storage/Ensimag-2A/SEPC/SEPC_TP3.pdf) : Synchronisation entre _threads_ (processus légers) à l'aide de moniteurs POSIX et de sémaphores. 
