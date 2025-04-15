@@ -11,7 +11,109 @@ lightbox:
   loop: true
 ---
 
-# Ensimag (2010–2013)
+# Classes préparatoires aux grandes écoles (2007–2010)
+
+## MPSI au lycée Fabert à Metz
+
+### Devoirs maisons
+
+  * [DM1](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM1.pdf) : Trigonométrie et complexes.
+  * [DM2](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM2.pdf) : Trigonométrie et géométrie complexe | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH2.pdf) 
+  * [DM3](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM3.pdf) : Théorème de Morley | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH3.pdf)
+  * [DM4](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM4.pdf) : Équations différentielles | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH4.pdf)
+  * [DM5](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM5.pdf) : Géométrie affine et théorème de Descartes | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH5.pdf)
+  * [DM6](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM6.pdf) : Algorithmique et coniques | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH6.pdf)
+  * [DM7](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM7.pdf) : Sous-groupes additifs des réels | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH7.pdf)
+  * [DM8](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM8.pdf) : Équation fonctionnelle et suite récurrente | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH8.pdf)
+  * [DM9](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM9.pdf) : Taylor-Lagrange, convexité et suite implicite | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH9.pdf)
+  * [DM10](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM10.pdf) : DL et étude des fonctions monotones | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH10.pdf)
+  * [DM11](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM11.pdf) : Théorème de Role, de Bernstein et partitions | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH11.pdf)
+  * [DM12](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM12.pdf) : Dénombrement et inégalité de Höldner | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH12.pdf)
+  * [DM13](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DM13.pdf) : Etude de l'équivalent d'une suite | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH13.pdf)
+  * [DM14](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH14.pdf) : Structures algébriques et automorphismes linéaire | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH14.pdf)
+  * [DM15](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH15.pdf) : Arithmétique et sous-groupes distingués | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH15.pdf)
+  * [DM16](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH16.pdf) : Matrice et inverse dans un groupe | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH16.pdf)
+  * [DM17](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH17.pdf) : Codage RSA et quaternions | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH17.pdf)
+  * [DM18](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH18.pdf) : Matrices, déterminant, polynômes | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH18.pdf)
+  * [DM19](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH19.pdf) : Polynômes, DES et interpolation | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMsup/DH19.pdf)
+  
+## MP* au lycée Fabert à Metz
+
+### Devoir maisons
+
+  * [DM1](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM1.pdf) : Étude de l'opérateur aux différences finies | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH1.pdf)
+  * [DM2](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM2.pdf) : Nombres algébriques et transcendants | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH2.pdf)
+  * [DM3](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM3.pdf) : Étude de bases stables dans une algèbre | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH3.pdf)
+  * [DM4](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM4.pdf) : Étude des matrices sans valeur propre réelle | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH4.pdf)
+  * [DM5](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM5.pdf) : Nombres p-adiques et remontée modulaire | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH5.pdf)
+  * [DM6](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM6.pdf) : Étude autour des suites de Fibonacci | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH6.pdf)
+  * [DM7](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM7.pdf) : Étude d'un certain type de suites récurrentes | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH7.pdf)
+  * [DM8](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM8.pdf) : Convergence de séries de caractères | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH8.pdf)
+  * [DM9](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM9.pdf): Théorème de Weierstrass et Bernstein | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH9.pdf)
+  * [DM10](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM10.pdf) : Courbes elliptiques et théorème de Mordell | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH10.pdf)
+  * [DM11](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM11.pdf) : Étude des hyperplans de l'espace L(E) | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH11.pdf)
+  * [DM12](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM12.pdf) : Rayon spectral et disques de Gershgorin | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH12.pdf)
+  * [DM13](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DM13.pdf) : Problèmes de minimisation en dimension n | [Solutions](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/DH13.pdf)
+  
+### Les colles
+
+  * [Colle 1](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_1.pdf) : Convergence de la fonction zêta de Riemann. 
+  * [Colle 2](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_2.pdf) : Théorème de Wirtinger et inégalité isopérimétrique. 
+  * [Colle 3](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_3.pdf) : Supplémentarité et forme bilinéaire symétrique. 
+  * [Colle 4](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_4.pdf) : Déterminants blocs de matrices orthogonales. 
+  * [Colle 5](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_5.pdf) : Espace euclidien et endomorphisme inversible.
+  * [Colle 6](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_6.pdf) : Topologie sur le groupe spécial orthogonal. 
+  * [Colle 7](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_7.pdf) : Minimum sur le groupe spécial linéaire.
+  * [Colle 8](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_8.pdf) : Planche des mines de l'officiel de la taupe.
+  * [Colle 9](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Colle_9.pdf) : Planche d'ENS issue de la revue de maths spé. 
+  
+### Fiches de révisions
+
+ *  [Fiche 0](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_0.pdf) : Rappels de trigonométrie.
+  * [Fiche 1](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_1.pdf)  : Structures algébriques. 
+  * [Fiche 2](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_2.pdf)  : Espaces vectoriels. 
+  * [Fiche 3](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_3.pdf)  : Calcul matriciel.
+  * [Fiche 4](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_4.pdf)  : Réduction d'endomorphismes. 
+  * [Fiche 5](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_5.pdf)  : Suites numériques. 
+  * [Fiche 6](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_6.pdf)  : Séries numériques.
+  * [Fiche 7](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_7.pdf)  : Séries entières.
+  * [Fiche 8](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_8.pdf)  : Généralisation de la notion d'intégrale.
+  * [Fiche 9](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_9.pdf)  : Suites et séries de fonctions.
+  * [Fiche 10](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_10.pdf)  : Séries trigonométriques. 
+  * [Fiche 11](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_11.pdf)  : Formes bilinéaires et quadratiques.
+  * [Fiche 12](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_12.pdf)  : Espaces préhilbertiens complexes.
+  * [Fiche 13](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_13.pdf)  : Espaces métriques. 
+  * [Fiche 14](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_14.pdf)  : Espaces vectoriels normés. 
+  * [Fiche 15](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_15.pdf)  : Fonctions vectorielles.
+  * [Fiche 16](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_16.pdf)  : Fonctions de plusieurs variables.
+  * [Fiche 17](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_17.pdf)  : Équations différentielles.
+  * [Fiche 18](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiche_18.pdf)  : Intégrales doubles. 
+
+Télécharger toutes les fiches au format [PDF](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiches_MP.pdf)  ou toute [l'archive](https://kevinpolisano.github.io/pdf-storage/Prepa/DMspe/Fiches_MP.tar.gz).
+
+### TIPE
+
+Le [travail d'initiative personnelle encadré](https://fr.wikipedia.org/wiki/Travail_d%27initiative_personnelle_encadr%C3%A9) (TIPE) est une épreuve commune à la plupart des concours d'entrée aux Grandes écoles scientifiques.
+
+#### Année 2008-2009
+
+Le thème des TIPE était _L'information_ et mon sujet portait sur les **codes correcteurs**.
+
+[Télécharger mon TIPE sur les codes correcteurs BCH](https://kevinpolisano.github.io/pdf-storage/Prepa/TIPE/TIPE_Codes_Correcteurs.pdf)
+
+#### Année 2009-2010
+
+Le thème des TIPE était _Surfaces_ et mon sujet portait sur les **cercles de Villarceau**.
+
+[Télécharger mon TIPE sur les cercles de Villarceau](https://kevinpolisano.github.io/pdf-storage/Prepa/TIPE/TIPE_Villarceau.pdf)
+
+J'ai présenté ce TIPE aux Concours Commun Polytechnique, à titre d'exemple je mets à disposition les documents suivants :
+
+  * [La fiche synoptique](https://kevinpolisano.github.io/pdf-storage/Prepa/TIPE/Fiche_Synoptique_Villarceau.pdf)
+  * [Le support de présentation](https://kevinpolisano.github.io/pdf-storage/Prepa/TIPE/TIPE_Villarceau_Presentation.pdf) 
+  * [La soutenance orale](https://kevinpolisano.github.io/pdf-storage/Prepa/TIPE/TIPE_Villarceau_Soutenance.pdf)  
+
+# École d'ingénieur Ensimag (2010–2013)
 
 ## Ensimag 1A
 
