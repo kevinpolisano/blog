@@ -705,7 +705,7 @@ La conversion de mon ancien blog WordPress en un site statique généré avec Qu
 
 - **Performance du site** : pas de base de données à interroger, temps de chargement plus court, moins de dépendances serveur...
 - **Sécurité** : pas de surface d'attaque serveur (thèmes ou plugins WordPress vulnérables)
-- **Contrôle du contenu et portabilité** : fichiers markdown lisibles à vie, indépendants de tout CMS; migration possible vers un autre générateur statique (Hugo, Jekyll...) et publier localement sans dépendance à un service tiers; gestion facile des médias; structure logique des fichiers, qui sont versionnés avec git.
+- **Contrôle du contenu et portabilité** : fichiers markdown lisibles à vie, indépendants de tout CMS; migration possible vers un autre générateur statique (Hugo, Jekyll...) et possibilité de rédiger localement sans dépendance à un service tiers; gestion facile des médias; structure logique des fichiers, qui sont versionnés avec git.
 - **Automatisation et reproductibilité** : intégration fluide avec GitHub Actions et GitHub Pages; insertion de code reproductible (R, Python, Julia, Bash) avec Quarto, parfait pour des billets scientifiques.
 - **Gratuité et perenité** : hébergé gratuitement sur GitHub Pages, seul le nom de domaine nécessite un achat.
 
