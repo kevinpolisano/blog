@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Blog de Kévin Polisano"
+  favicon: "images/logo.jpg"
   navbar:
     left:
       - text: "Études"
