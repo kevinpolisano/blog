@@ -154,16 +154,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../musique.html"> 
-<span class="menu-text">Musique</span></a>
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../handicap.html"> 
 <span class="menu-text">Handicap</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
-<span class="menu-text">Recherche</span></a>
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -184,7 +192,7 @@ window.Quarto = {
     <div class="quarto-title column-body">
       <h1 class="title">Comment installer et utiliser ADiMat pour Matlab ?</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">matlab</div>
+                <div class="quarto-category">informatique</div>
               </div>
                   </div>
   </div>
@@ -248,7 +256,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="installation-de-adimat">Installation de ADiMat</h2>
 <p><span style="color: #333333;"><strong>1)</strong> Télécharger l’archive correspondant à votre système d’exploitation et l’extraire dans votre <code>HOME</code> (<code>~/</code>).</span></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">tar</span> <span class="va">xzvf</span> <span class="va">adimat</span><span class="op">-</span><span class="fl">0.5.7</span><span class="op">-</span><span class="fl">3269</span><span class="op">-</span><span class="va">GNU_Linux</span><span class="op">-</span><span class="va">x86_64</span>.<span class="va">tar</span>.<span class="va">gz</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>2)&nbsp;</strong> Dans votre dossier d’installation Matlab (chez moi <code>~/Matlab/</code>) ouvrez le fichier <code>startup.m</code> et ajoutez ces deux lignes à la fin :</p>
+<p><strong>2)</strong> Dans votre dossier d’installation Matlab (chez moi <code>~/Matlab/</code>) ouvrez le fichier <code>startup.m</code> et ajoutez ces deux lignes à la fin :</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">setenv</span>(<span class="ss">'ADIMAT_HOME'</span><span class="op">,</span> <span class="ss">'~/adimat-0.5.7-3269-GNU_Linux-x86_64'</span>)<span class="op">;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="va">ADiMat_startup</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Ce qui renseignera le chemin vers le dossier d’installation d’ADiMat via la variable d’environnement <code>ADIMAT_HOME</code>. Et la seconde ligne initialisera le programme ADiMat au démarrage de Matlab.</p>
@@ -261,7 +269,7 @@ window.Quarto = {
 </section>
 <section id="utilisation-dadimat" class="level2">
 <h2 class="anchored" data-anchor-id="utilisation-dadimat">Utilisation d’ADiMat</h2>
-<p><span style="color: #333333;">C’est très simple, une fois définie votre fonction <span class="math inline">\(f\)</span> : </span></p>
+<p><span style="color: #333333;">C’est très simple, une fois définie votre fonction <span class="math inline">\(f\)</span> :</span></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="va">sorties</span> <span class="op">=</span> <span class="va">f</span>(<span class="va">entrees</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">% le corps de la fonction</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">% transformant les entrées en sorties</span></span>
@@ -271,7 +279,7 @@ window.Quarto = {
 <p>Matlab vous demande alors si vous l’autorisez à communiquer avec le serveur d’ADiMat, répondez <code>yes.</code> Si tout se passe bien il devrait vous calculer la matrice jacobienne <span class="math inline">\(J\)</span>. Il se peut que vous obteniez à la place des erreurs, par exemple pour ma part je n’avais pas l’interpréteur <code>/bin/zsh</code>d’installé, ni la librairie <code>libssl0.9.8</code></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="va">sudo</span> <span class="va">apt</span><span class="op">-</span><span class="va">get</span> <span class="va">install</span> <span class="va">zsh</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="va">sudo</span> <span class="va">apt</span><span class="op">-</span><span class="va">get</span> <span class="va">install</span> <span class="va">libssl0</span><span class="fl">.9.8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong><span style="color: #339966;">Exemple d’utilisation</span></strong></p>
+<p><span style="color: #339966;"><strong>Exemple d’utilisation</strong></span></p>
 <p>Pour illustrer l’intérêt de la librairie, je vais traiter un exemple qui m’a sauvé la mise dans le cadre d’un <a href="http://fr.wikipedia.org/wiki/Filtre_de_Kalman" target="_blank">filtrage de Kalman</a>.</p>
 <p>On part d’une équation différentielle d’ordre 2 que l’on réduit à l’ordre 1 en considérant 2 variables regroupées dans le vecteur <span class="math inline">\(\mathbf{Y}=\begin{pmatrix}z\\v\end{pmatrix}\)</span>, ainsi l’équation différentielle se réécrit <span class="math display">\[\frac{d\mathbf{Y}}{dt}=f(t,\mathbf{Y})\]</span></p>
 <p>Nous discrétisons ensuite l’équation différentielle suivant un schéma de <a href="http://fr.wikipedia.org/wiki/M%C3%A9thodes_de_Runge-Kutta">Runge-Kutta</a> d’ordre 4 (RK4) : <span class="math display">\[\mathbf{Y}_{n+1}=\mathbf{Y}_n+\frac{h}{6}(k_1+2k_2+2k_3+k_4)\]</span></p>

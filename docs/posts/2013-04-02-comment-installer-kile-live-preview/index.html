@@ -125,16 +125,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../musique.html"> 
-<span class="menu-text">Musique</span></a>
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../handicap.html"> 
 <span class="menu-text">Handicap</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
-<span class="menu-text">Recherche</span></a>
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -155,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title column-body">
       <h1 class="title">Comment installer Kile Live Preview ?</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">latex</div>
+                <div class="quarto-category">informatique</div>
               </div>
                   </div>
   </div>
@@ -219,8 +227,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Le problème</strong> du LaTeX est que, même une fois le langage maîtrisé, on l’a vu, il faut systématiquement recompiler pour visualiser le résultat, et cela constitue une perte de temps non négligeable lorsque l’on rédige des documents longs, comme une thèse de l’ordre de 300 pages !</p>
 <p><strong>La solution</strong> s’appelle <strong>Kile Live Preview</strong> qui permet de réunir au sein de l’éditeur Kile :</p>
 <ul>
-<li><span style="color: #0000ff;">une zone texte <span style="color: #333333;">(à gauche)</span></span></li>
-<li><span style="color: #ff0000;">une zone de visualisation <span style="color: #333333;">(à droite)</span></span></li>
+<li><span style="color: #0000ff;">une zone texte</span><span style="color: #333333;">(à gauche)</span></li>
+<li><span style="color: #ff0000;">une zone de visualisation</span><span style="color: #333333;">(à droite)</span></li>
 </ul>
 <p>Comme un dessin vaut mieux qu’un long discours, voilà une capture d’écran de la fenêtre qui est maintenant coupée en deux.</p>
 <p><img src="images/Kile-livepreview-alpha.png" class="img-fluid"></p>
@@ -237,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><span style="color: #0000ff;">Installation de CMake</span></li>
 </ul>
-<p><span style="color: #333333;">CMake est un outil de génération de Makefile, tout comme l’est QMake dont j’ai déjà décrit l’installation. Pour l’installer il suffit de se rendre sur le </span><a href="http://www.cmake.org/" target="_blank">site officiel</a>, et de télécharger la dernière version disponible, à ce jour <code>cmake-2.8.10.2.tar.gz</code> et de l’extraire dans un dossier :</p>
+<p><span style="color: #333333;">CMake est un outil de génération de Makefile, tout comme l’est QMake dont j’ai déjà décrit l’installation. Pour l’installer il suffit de se rendre sur le</span><a href="http://www.cmake.org/" target="_blank">site officiel</a>, et de télécharger la dernière version disponible, à ce jour <code>cmake-2.8.10.2.tar.gz</code> et de l’extraire dans un dossier :</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> CMAKE</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> CMAKE</span>
@@ -295,14 +303,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install <span class="at">-j</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Remarque : si un bug survient au cmake, voir éventuellement plus bas : bug n°1 et n°2.</p>
 <ul>
-<li><span style="color: #0000ff;"><span style="color: #0000ff;">Installation de Kile<br> </span></span>
+<li><p><span style="color: #0000ff;">Installation de Kile<br></span></p>
 <p></p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> build-kile</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build-kile</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> ../src/kile <span class="at">-DCMAKE_INCLUDE_PATH</span><span class="op">=</span><span class="va">$HOME</span>/kile-livepreview/install/include/ <span class="at">-DCMAKE_INSTALL_PREFIX</span><span class="op">=</span><span class="va">$HOME</span>/kile-livepreview/install <span class="at">-DCMAKE_BUILD_TYPE</span><span class="op">=</span><span class="st">"Debug"</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install <span class="at">-j</span> 2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li>&nbsp;<span style="color: #0000ff;">Script de lancement de l’application Kile Live Preview</span></li>
+<li><p>&nbsp;<span style="color: #0000ff;">Script de lancement de l’application Kile Live Preview</span></p></li>
 </ul>
 <p>Les lignes suivantes doivent être copiées dans le fichier <code>$HOME/kile-livepreview/run.sh</code> :</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
@@ -320,11 +328,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="va">$HOME</span><span class="ex">/kile-livepreview/run.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>… et priez pour que ça marche ! 🙂</p>
 <ul>
-<li><span style="color: #ff0000;"><span style="color: #008000;">Chasse aux bugs !</span><br> </span></li>
+<li><span style="color: #008000;">Chasse aux bugs !</span><br></li>
 </ul>
 <p>Voici la liste des bugs que j’ai obtenu :</p>
 <ul>
-<li><span style="color: #ff0000;">Bug n°1 <span style="color: #333333;">: Lors de l’utilisation du <code>cmake</code> j’obtenais l’erreur suivante :</span></span></li>
+<li><span style="color: #ff0000;">Bug n°1</span><span style="color: #333333;">: Lors de l’utilisation du <code>cmake</code> j’obtenais l’erreur suivante :</span></li>
 </ul>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">CMake</span> Error: ERROR: cmake/modules/FindKDE4Internal.cmake not found</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Un outil intéressant pour savoir à quelle librairie appartient un fichier donné est <code>apt-file</code></p>
@@ -337,12 +345,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install kdelibs5-dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Le bug est corrigé.</p>
 <ul>
-<li><span style="color: #ff0000;">Bug n°2 <span style="color: #333333;">: Toujours au&nbsp;<code>cmake</code> l’erreur suivante est survenue :</span></span></li>
+<li><span style="color: #ff0000;">Bug n°2</span><span style="color: #333333;">: Toujours au&nbsp;<code>cmake</code> l’erreur suivante est survenue :</span></li>
 </ul>
 <div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Could</span> NOT find QImageBlitz <span class="er">(</span><span class="ex">missing:</span> QIMAGEBLITZ_INCLUDES QIMAGEBLITZ_LIBRARIES<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>A partir de la logithèque Ubuntu j’ai installé <code>libqimageblitz4</code> et <code>libqimageblitz-dev</code>, le bug fut alors corrigé.</p>
 <ul>
-<li><span style="color: #ff0000;">Bug n°3 <span style="color: #333333;">: pas des moindres ! Crash de Kile à l’ouverture d’un fichier <code>.tex</code></span></span></li>
+<li><span style="color: #ff0000;">Bug n°3</span><span style="color: #333333;">: pas des moindres ! Crash de Kile à l’ouverture d’un fichier <code>.tex</code></span></li>
 </ul>
 <div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Could</span> not open /home/kevin/kile-livepreview/.kde/share/apps/kile/livepreview/preview-ONaCzE//essai.pdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Le fichier <code>essai.tex</code> était un simple exemple minimaliste :</p>

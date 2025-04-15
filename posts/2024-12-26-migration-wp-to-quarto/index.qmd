@@ -2,7 +2,7 @@
 title: "Migrer son blog Wordpress vers un blog Quarto statique hébergé gratuitement avec Github Pages"
 author: "Kévin Polisano"
 date: "2024-12-26"
-categories: [site, quarto]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -262,13 +262,13 @@ J'ai opté pour [giscus](https://giscus.app/fr), qui est un dispositif relativem
 
 Pour activer les commentaires il faut remplir la [page giscus](https://giscus.app/fr) détaillant la marche à suivre :
 
-- Installer [l'application giscus](https://github.com/apps/giscus)
-- Activer les [discussions Github](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository) dans l'onglet `Settings > Features` du dépôt en cochant la case `Discussions`.
-- Renseigner le dépôt public (dans mon cas `kevinpolisano/blog`) ainsi que les propriétés escomptées.
+-   Installer [l'application giscus](https://github.com/apps/giscus)
+-   Activer les [discussions Github](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository) dans l'onglet `Settings > Features` du dépôt en cochant la case `Discussions`.
+-   Renseigner le dépôt public (dans mon cas `kevinpolisano/blog`) ainsi que les propriétés escomptées.
 
 La balise HTML générée est la suivante dans mon cas :
 
-```html
+``` html
 <script src="https://giscus.app/client.js"
         data-repo="kevinpolisano/blog"
         data-repo-id="R_kgDOM9ReCA"
@@ -289,7 +289,7 @@ La balise HTML générée est la suivante dans mon cas :
 
 Ce qui me permet de remplir les options de commentaires dans le fichier `_quarto.yml` comme suit :
 
-```yaml
+``` yaml
 project:
   type: website
   output-dir: docs
@@ -323,7 +323,7 @@ editor: visual
 
 On commence par extraire les commentaires dans un fichier `comments.csv` à partir de `export.xml` grâce à ce script python qui *parse* les commentaires :
 
-```python
+``` python
 import xml.etree.ElementTree as ET
 import csv
 from datetime import datetime
@@ -361,27 +361,27 @@ with open(output_file, "w", newline="", encoding="utf-8") as f:
 
 print(f"Commentaires exportés dans {output_file}")
 ```
-  
+
 ### Création d'un Token GitHub
 
 Voici les étapes pour créer un token personnel GitHub avec l'autorisation pour gérer les discussions (comme les commentaires pour Giscus) :
 
-- Allez dans `Settings > Developer Settings` (général pas dans un dépôt) puis `Personal access tokens > Tokens (classic)`.
-- Sélectionnez `Generate new token > Generate new token (classic)`.
-- Donnez un nom au token : `Giscus Discussions Token`.
-- Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou No expiration pour un usage prolongé.
-- Sélectionnez les autorisations nécessaires :
-  - `public_repo` : Accéder aux dépôts publics
-  - `read:discussion` : Lire les discussions.
-  - `write:discussion` : Ajouter ou modifier des discussions.
-- Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)
-- Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d'environnement dans `Settings > Secrets and variables > Actions` avec le nom `GH_TOKEN` (ou un autre nom significatif) et collez le token.
+-   Allez dans `Settings > Developer Settings` (général pas dans un dépôt) puis `Personal access tokens > Tokens (classic)`.
+-   Sélectionnez `Generate new token > Generate new token (classic)`.
+-   Donnez un nom au token : `Giscus Discussions Token`.
+-   Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou No expiration pour un usage prolongé.
+-   Sélectionnez les autorisations nécessaires :
+    -   `public_repo` : Accéder aux dépôts publics
+    -   `read:discussion` : Lire les discussions.
+    -   `write:discussion` : Ajouter ou modifier des discussions.
+-   Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)
+-   Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d'environnement dans `Settings > Secrets and variables > Actions` avec le nom `GH_TOKEN` (ou un autre nom significatif) et collez le token.
 
 ### Création des discussions GitHub
 
 Voici un script Python qui utilise l'API `graphql` pour créer automatiquement toutes les discussions avec les titres correspondant au `pathname` (pour être raccord avec `mapping: pathname` dans `_quarto.yml`).
 
-```python
+``` python
 import os
 import requests
 
@@ -493,7 +493,7 @@ if __name__ == "__main__":
 
 À noter que j'ai du déjà faire apparaître en défilant la section commentaire en local (avec `quarto preview`) pour chaque post afin que le fichier `html` contienne la portion de code suivante :
 
-```html
+``` html
 <script src="https://giscus.app/client.js" 
 data-repo="kevinpolisano/blog" 
 data-repo-id="R_kgDOM9ReCA" 
@@ -512,7 +512,7 @@ data-loading="lazy" async="">
 
 Pour lister l'ensemble des discussions GitHub et afficher leur IDs correspondant j'utilise le script suivant :
 
-```python
+``` python
 import requests
 
 # Configuration
@@ -572,7 +572,7 @@ if __name__ == "__main__":
 
 Parmi mes anciens billets, peu possédaient des commentaires, à l'exception de quelques uns qui en affichaient plus d'une centaine. Le script qui suit s'applique donc à un billet donné, mais la procédure est facilement automatisable sur tous les billets si vous avez conservé une correspondance entre le `post_url` de l'extraction de commentaires et le `pathname` du titre de la discussion.
 
-```python
+``` python
 import csv
 import requests
 import time

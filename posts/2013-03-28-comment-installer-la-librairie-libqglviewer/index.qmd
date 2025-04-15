@@ -2,7 +2,7 @@
 title: "Comment installer la librairie libQGLViewer sous Linux ?"
 author: "Kévin Polisano"
 date: "2013-03-28"
-categories: [animation]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -21,43 +21,43 @@ Vous trouverez cette librairie sur <a href="https://github.com/GillesDebunne/lib
 
 ### Avoir qt4-qmake d'installé
 
-<span style="color: #333333;">C'est un outil générateur de Makefile qui nous sera utile pour compiler nos fichiers. Pour savoir si celui-ci est installé tapez simplement la commande suivante dans un terminal :</span>
+[C'est un outil générateur de Makefile qui nous sera utile pour compiler nos fichiers. Pour savoir si celui-ci est installé tapez simplement la commande suivante dans un terminal :]{style="color: #333333;"}
 
-```bash
+``` bash
 qmake-qt4
 ```
 
 Si la sortie est :
 
-```bash
+``` bash
 Usage: qmake-qt4 [mode] [options] [files]
 ```
 
 C'est qu'il est déjà installé. Le cas échéant l'installer :
 
-  * via votre gestionnaire de paquet (en ce qui me concerne la logithèque Ubuntu, ou sinon Synaptic, Aptitude, etc suivant votre OS) 
-  
-  ![](images/qt4-qmake.png)
+-   via votre gestionnaire de paquet (en ce qui me concerne la logithèque Ubuntu, ou sinon Synaptic, Aptitude, etc suivant votre OS)
 
-  * ou manuellement en téléchargeant le fichier `.deb` sur internet.
+![](images/qt4-qmake.png)
+
+-   ou manuellement en téléchargeant le fichier `.deb` sur internet.
 
 Ensuite pour <a href="http://doc.ubuntu-fr.org/tutoriel/comment_installer_un_paquet" target="_blank">installer le .deb</a> il vous suffit de taper la commande suivante à l'endroit où se trouve votre fichier `.deb` :
 
-```bash
+``` bash
 sudo dpkg -i *.deb
 ```
 
 ### Avoir OpenGL d'installé
 
-<span style="color: #333333;">En général il est présent sur tous les ordinateurs récents, pour s'en assurer tapez la commande suivante dans un terminal :</span>
+[En général il est présent sur tous les ordinateurs récents, pour s'en assurer tapez la commande suivante dans un terminal :]{style="color: #333333;"}
 
-```bash
+``` bash
 glxinfo
 ```
 
 Si cela vous affiche plein d'information c'est qu'OpenGL est installé, sinon on vous proposera d'installer le package `mesa-utils`, ce que vous allez faire en tapant :
 
-```bash
+``` bash
 sudo apt-get install mesa-utils
 ```
 
@@ -67,39 +67,39 @@ Et voilà nous allons pouvoir en venir à l'installation de `QGLViewer` propreme
 
 ### Première solution (recommandée) : installation de libqglviewer-qt4
 
-  * <span style="color: #333333;">Utilisez votre gestionnaire de paquet préféré pour installer `libqglviewer-qt4-dev` et `libqglviewer-qt4-2`
+-   <span style="color: #333333;">Utilisez votre gestionnaire de paquet préféré pour installer `libqglviewer-qt4-dev` et `libqglviewer-qt4-2`
 
 ![](images/libqglviewer-dev.png)
 
 ![](images/libqglviewer-qt4-2.png)
 
-  *  ou manuellement en téléchargeant les fichiers `.deb` correspondant sur internet. Par exemple si vous êtes sur Ubuntu téléchargez par exemple les fichiers `libqglviewer-dev-common_2.3.4-4ubuntu1_all.deb` et `libqglviewer-qt4-2_2.3.4-4ubuntu1_i386.deb` et installez les comme tout à l'heure grâce à :
+-    ou manuellement en téléchargeant les fichiers `.deb` correspondant sur internet. Par exemple si vous êtes sur Ubuntu téléchargez par exemple les fichiers `libqglviewer-dev-common_2.3.4-4ubuntu1_all.deb` et `libqglviewer-qt4-2_2.3.4-4ubuntu1_i386.deb` et installez les comme tout à l'heure grâce à :
 
-```bash
+``` bash
 sudo dpkg -i *.deb
 ```
 
 Bien souvent les librairies installées par l'une ou l'autre des méthodes (par gestionnaire de paquets ou manuellement) se situent au mauvais endroit. Il va donc falloir les déplacer, et pour cela il faut avant tout les localiser sur le disque. Pour cela placez vous à la racine :
 
-```bash
+``` bash
 cd /
 ```
 
 Puis on va faire une recherche de tous les fichiers comportant le nom "QGLViewer" :
 
-```bash
+``` bash
 sudo find . -type f -exec grep 'QGLViewer' {} \;
 ```
 
 En sortie identifiez la ligne qui spécifie l'emplacement du fichier `libqglviewer-qt4.so,` pour ma part la ligne correspondante est :
 
-```bash
+``` bash
 Fichier binaire ./x86_64-linux-gnu/libqglviewer-qt4.so concordant
 ```
 
 Enfin pour installer la librairie au bon endroit on va simplement faire un lien symbolique :
 
-```bash
+``` bash
 sudo ln -s libqglviewer-qt4.so /usr/lib/libQGLViewer.so
 ```
 
@@ -111,25 +111,25 @@ Si tout s'est bien déroulé, rendez-vous directement à la section suivante "Te
 
 Télécharger la dernière version du package (à ce jour 2.3.17) et l'extraire où vous voulez
 
-```bash
+``` bash
 tar -xzf libQGLViewer-2.3.17.tar.gz
 ```
 
 Personnellement le dossier se trouve ici :
 
-```bash
+``` bash
 /home/kevin/Téléchargements/libQGLViewer-2.3.17
 ```
 
 Se placer dans le dossier QGLViewer se trouvant à l'intérieur :
 
-```bash
+``` bash
 cd libQGLViewer-2.3.17/QGLViewer
 ```
 
 puis tapez les commandes suivantes :
 
-```bash
+``` bash
 qmake
 sudo make install
 ```
@@ -140,7 +140,7 @@ Remarque : avec cette version vous aurez besoin de glut comme librairie à la co
 
 Pour installer `glut` vous pouvez le faire encore une fois via votre gestionnaire de paquet, soit par ligne de commande :
 
-```bash
+``` bash
 sudo apt-get install freeglut3-dev
 sudo apt-get install libglut3-dev
 ```
@@ -151,14 +151,14 @@ Nous allons tenter de compiler et d'exécuter un exemple minimaliste, <a href="s
 
 Extraire le fichier `.tar.gz` et placez vous dans le dossier simpleViewer :
 
-```bash
+``` bash
 tar -xzf simpleViewer.tar.gz
 cd simpleViewer
 ```
 
 La première chose à faire est d'éditer le fichier `viewer.pro` qui décrit comment va être généré le Makefile. Ouvrez ce fichier avec votre éditeur préféré :
 
-```bash
+``` bash
 emacs viewer.pro &
 ```
 
@@ -168,25 +168,24 @@ Le fichier ressemble à cela :
 
 Les 2 champs qui nous intéressent sont :
 
-  * `INCLUDEPATH` : Ici vous devez remplacer la ligne par le <span style="text-decoration: underline;">chemin exact</span> vers votre dossier `libQGLViewer` !
-  * `LIBS` : Ce champ spécifie les librairies utilisées pour la compilation, si vous avez installer QGLViewer avec la première méthode (recommandée) alors ne touchez rien par défaut c'est `libqglviewer-qt4` qui est utilisé dans ce `.pro`, sinon si vous avez utilisez la deuxième méthode alors il va falloir utiliser `-lQGLViewer` et `glut` (`-lGL -lGLU`), pour cela commenter le premier `LIBS` et décommenter le second, en remplaçant évidemment le chemin par votre chemin vers le dossier 
- ` `!
+-   `INCLUDEPATH` : Ici vous devez remplacer la ligne par le [chemin exact]{style="text-decoration: underline;"} vers votre dossier `libQGLViewer` !
+-   `LIBS` : Ce champ spécifie les librairies utilisées pour la compilation, si vous avez installer QGLViewer avec la première méthode (recommandée) alors ne touchez rien par défaut c'est `libqglviewer-qt4` qui est utilisé dans ce `.pro`, sinon si vous avez utilisez la deuxième méthode alors il va falloir utiliser `-lQGLViewer` et `glut` (`-lGL -lGLU`), pour cela commenter le premier `LIBS` et décommenter le second, en remplaçant évidemment le chemin par votre chemin vers le dossier !
 
 Enregistrez les modifications, puis dans un terminal (toujours dans le dossier simpleViewer où normalement vous vous trouvez) tapez :
 
-```bash
+``` bash
 qmake-qt4
 ```
 
 Cela aura pour effet de vous créer un fichier `Makefile.` Puis pour compiler tapez simplement :
 
-```bash
+``` bash
 make
 ```
 
 Ce qui produira un fichier exécutable `simpleViewer` que vous pouvez exécutez par :
 
-```bash
+``` bash
 ./simpleViewer
 ```
 

@@ -2,7 +2,7 @@
 title: "Quels impôts pour les personnes handicapées ?"
 author: "Kévin Polisano"
 date: "2014-07-15"
-categories: [impôts]
+categories: [politique, handicap]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -15,9 +15,9 @@ Si comme moi vous n'avez rien compris la première fois que vous avez du déclar
 
 L'objet de cet article est :
 
-  1. **de comprendre et résumer le fonctionnement de l'impôt sur le revenu**
-  2. **d'expliquer les spécificités de calcul liées à l'invalidité**
-  3. **de comparer les impôts pour une personne valide et handicapée**
+1.  **de comprendre et résumer le fonctionnement de l'impôt sur le revenu**
+2.  **d'expliquer les spécificités de calcul liées à l'invalidité**
+3.  **de comparer les impôts pour une personne valide et handicapée**
 
 Si vous êtes courageux vous pouvez bien sûr vous référer au <a href="http://www.legifrance.gouv.fr/affichCode.do?cidTexte=LEGITEXT000006069577" target="_blank">code des impôts</a>, mais cela risque de vous prendre un certain temps 😀 Sinon vous pouvez suivre mes modestes explications (qui s'appuient sur le site impotsurlerevenu.org).
 
@@ -26,19 +26,25 @@ Si vous êtes courageux vous pouvez bien sûr vous référer au <a href="http://
 Le site des impôts met à disposition un simulateur bien pratique pour estimer l'impôt sur les revenus 2013 à payer en 2014, sur lequel on se basera pour vérifier nos calculs :
 
 <p style="text-align: center;">
-  <a href="https://simulateur-ir-ifi.impots.gouv.fr/calcul_impot/2014/simplifie/index.htm" target="_blank" class="broken_link">--> Simulateur de l'impôt sur le revenu <--</a></p>
+
+<a href="https://simulateur-ir-ifi.impots.gouv.fr/calcul_impot/2014/simplifie/index.htm" target="_blank" class="broken_link">--\> Simulateur de l'impôt sur le revenu \<--</a>
+
+</p>
 
 <p style="text-align: left;">
-  Dans toute la suite on supposera remplis les champs suivants de la déclaration :</p>
 
-  * Personne célibataire (C)
-  * Vivant en métropole
-  * Année de naissance
-  * Traitements, salaires : "indiquez vos seuls revenus d'activité" (1AJ)
+Dans toute la suite on supposera remplis les champs suivants de la déclaration :
+
+</p>
+
+-   Personne célibataire (C)
+-   Vivant en métropole
+-   Année de naissance
+-   Traitements, salaires : "indiquez vos seuls revenus d'activité" (1AJ)
 
 Autrement dit on suppose dans un premier temps que la personne n'a pas d'autres types de revenus (foncier, etc) que les revenus salariaux. Ce qui, nous allons voir, n'est déjà pas un calcul si simple...
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : En 2013, Pierre gagnait le smic, Paul gagnait 1500 € et Jacques gagnait 2000 € net imposable par mois. Quel impôt sur le revenu devront-ils payer en 2014 ?</span>
+[Exemple]{style="text-decoration: underline;"} : En 2013, Pierre gagnait le smic, Paul gagnait 1500 € et Jacques gagnait 2000 € net imposable par mois. Quel impôt sur le revenu devront-ils payer en 2014 ?
 
 Décrivons étape par étape le calcul des impôt :
 
@@ -48,100 +54,155 @@ Les revenus perçus peuvent provenir de plusieurs catégories de revenus. Ces re
 
 Pour calculer le revenu brut, vous devrez faire l'addition sur l'année des :
 
-  * **Salaires perçus** (salaire net imposable)
-  * **Revenus fonciers** (immobilier locatif. Vous pourrez généralement déduire les charges liées au bien)
-  * **Pensions perçues**
-  * **Bénéfices non commerciaux**
-  * **Bénéfices agricoles**
-  * **Bénéfices commerciaux**
-  * **Plus-values immobilières, sur valeurs mobilières, sur biens meubles, professionnelles**
-  * **Rémunérations des dirigeants de société**
+-   **Salaires perçus** (salaire net imposable)
+-   **Revenus fonciers** (immobilier locatif. Vous pourrez généralement déduire les charges liées au bien)
+-   **Pensions perçues**
+-   **Bénéfices non commerciaux**
+-   **Bénéfices agricoles**
+-   **Bénéfices commerciaux**
+-   **Plus-values immobilières, sur valeurs mobilières, sur biens meubles, professionnelles**
+-   **Rémunérations des dirigeants de société**
 
 Dans notre cas puisque l'on considère uniquement les revenus issus des salaires perçus, le **revenu brut** se réduit aux **salaires imposables**. Le salaire imposable est mentionné sur votre bulletin de paie (cf. [Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)).
 
 ### Que faut-il déclarer aux impôts dans la case 1AJ ?
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Pierre gagne le smic, en <em>net imposable</em> cela représente 1173,38 € par mois d'après mon précédent article [Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)
+<span style="color: #008000;">[Exemple]{style="text-decoration: underline;"} : Pierre gagne le smic, en <em>net imposable</em> cela représente 1173,38 € par mois d'après mon précédent article [Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Revenus que Pierre doit déclarer = 12*1173,38 = 14080 €</strong></span></p>
+
+<span style="color: #008000;"><strong>Revenus que Pierre doit déclarer = 12\*1173,38 = 14080 €</strong></span>
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Revenus que Paul doit déclarer = 12*1500 = 18000 €</strong></span></p>
+
+<span style="color: #008000;"><strong>Revenus que Paul doit déclarer = 12\*1500 = 18000 €</strong></span>
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Revenus que Jacques doit déclarer = 12*2000 = 24000 €</strong></span></p>
 
-<span style="color: #008000;"><em>Remarque : on ignore la virgule en tronquant le résultat.</em></span>
+<span style="color: #008000;"><strong>Revenus que Jacques doit déclarer = 12\*2000 = 24000 €</strong></span>
+
+</p>
+
+[<em>Remarque : on ignore la virgule en tronquant le résultat.</em>]{style="color: #008000;"}
 
 ### Est-ce le montant considéré par les impôts ?
 
-Non. Les salaires imposables du point de vue des impôts est le salaire imposable de votre fiche de paie auquel est appliqué un **abattement de 10%** en raison des frais professionnels[^rf1-484]. Cet abattement fiscal est au minimum de 421 euros et au maximum de 12 000 €.
+Non. Les salaires imposables du point de vue des impôts est le salaire imposable de votre fiche de paie auquel est appliqué un **abattement de 10%** en raison des frais professionnels[^1]. Cet abattement fiscal est au minimum de 421 euros et au maximum de 12 000 €.
 
-[^rf1-484]: Article 182 A bis, alinéa 2 - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006069577&idArticle=LEGIARTI000020043720&dateTexte=&categorieLien=cid" target="_blank">lien</a>
+[^1]: Article 182 A bis, alinéa 2 - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006069577&idArticle=LEGIARTI000020043720&dateTexte=&categorieLien=cid" target="_blank">lien</a>
 
-_<span style="text-decoration: underline;">Remarque</span> : si vous estimez vos frais professionnels (déplacements, etc) plus élevés que la valeur de ces 10% il vous est possible à la place de déclarer vos frais réels._ 
+[*Remarque*]{style="text-decoration: underline;"} *: si vous estimez vos frais professionnels (déplacements, etc) plus élevés que la valeur de ces 10% il vous est possible à la place de déclarer vos frais réels.*
 
 Dans nos exemples on applique les 10% d'abattement, ce qui revient à multiplier par 0.9
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>revenu brut = 0.9 x 12 x salaire net imposable</strong></span></p>
+
+[<strong>revenu brut = 0.9 x 12 x salaire net imposable</strong>]{style="color: #ff6600;"}
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Pierre gagne le smic, en <em>net imposable</em> cela représente 1173,38 € par mois d'après mon précédent article [Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)
+
+<span style="color: #008000;">[Exemple]{style="text-decoration: underline;"} : Pierre gagne le smic, en <em>net imposable</em> cela représente 1173,38 € par mois d'après mon précédent article [Comprendre son bulletin de paie](../2014-07-06-comprendre-son-bulletin-de-paie)
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">revenu brut de Pierre = 0.9 x 12 x 1173,38 = 0.9 x 14080 = 12672 €</span></strong></p>
+
+<strong>[revenu brut de Pierre = 0.9 x 12 x 1173,38 = 0.9 x 14080 = 12672 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;"><em><span style="text-decoration: underline;">Remarque</span> : on ignore la virgule en tronquant le résultat.</em></span></p>
+
+[<em>]{style="color: #008000;"}[Remarque]{style="text-decoration: underline;"} : on ignore la virgule en tronquant le résultat.</em>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;">De même on obtient :</span></p>
+
+[De même on obtient :]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">revenu brut de Paul = 0.9 x 12 x 1500 = 16200 €</span></strong></p>
+
+<strong>[revenu brut de Paul = 0.9 x 12 x 1500 = 16200 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">revenu brut de Jacques = 0.9 x 12 x 2000 = 21600 €</span></strong></p>
+
+<strong>[revenu brut de Jacques = 0.9 x 12 x 2000 = 21600 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #cc99ff;"><strong>Vérification avec le simulateur.</strong></span></p>
+
+[<strong>Vérification avec le simulateur.</strong>]{style="color: #cc99ff;"}
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/revenus-brut-deficit.png)</p>
+
+![](images/revenus-brut-deficit.png)
+
+</p>
 
 <p style="text-align: left;">
-  <em>Remarque : Du Revenu Brut, on déduit les éventuels déficits globaux des années précédentes, pour obtenir le Revenu Brut Global (RBG). On considère ces éventuels déficits nuls dans nos exemples.</em></p>
+
+<em>Remarque : Du Revenu Brut, on déduit les éventuels déficits globaux des années précédentes, pour obtenir le Revenu Brut Global (RBG). On considère ces éventuels déficits nuls dans nos exemples.</em>
+
+</p>
 
 ## Etape n°2 : Calcul du revenu net global imposable (RNGI)
 
 <p style="text-align: left;">
-  Du Revenu Brut (Global), on soustrait les charges déductibles pour obtenir le <strong>Revenu Net Global</strong> (RNG). Ces charges peuvent être les suivantes :</p>
 
-  * Déficit foncier (immobilier locatif)
-  * Pension alimentaire aux ascendants (uniquement si celle-ci est considérée comme vitale pour le bénéficiaire)
-  * Pension alimentaire aux descendants majeurs dans la limite de** **5 698 €** **par enfant.
-  * Perte de capital lié à une création d'entreprise
+Du Revenu Brut (Global), on soustrait les charges déductibles pour obtenir le <strong>Revenu Net Global</strong> (RNG). Ces charges peuvent être les suivantes :
+
+</p>
+
+-   Déficit foncier (immobilier locatif)
+    -   Pension alimentaire aux ascendants (uniquement si celle-ci est considérée comme vitale pour le bénéficiaire)
+    -   Pension alimentaire aux descendants majeurs dans la limite de5 698 €par enfant.
+    -   Perte de capital lié à une création d'entreprise
 
 Enfin pour obtenir le **Revenu Net Global Imposable** on déduit certains abattements (pour enfants à charge ayant fondé un foyer distinct, pour personnes âgées et invalides).
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Pour Pierre, Paul, Jacques aucune charge de ce type n'a lieu, donc :</span>
+[Exemple]{style="text-decoration: underline;"} : Pour Pierre, Paul, Jacques aucune charge de ce type n'a lieu, donc :
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>revenu net global imposable de Pierre = 12672 €</strong></span></p>
+
+[<strong>revenu net global imposable de Pierre = 12672 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>revenu net global imposable de Paul = 16200 €</strong></span></p>
+
+[<strong>revenu net global imposable de Paul = 16200 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>revenu net global imposable de Jacques =  21600 €</strong></span></p>
+
+[<strong>revenu net global imposable de Jacques =  21600 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #cc99ff;"><strong>Vérification avec le simulateur.</strong></span></p>
+
+[<strong>Vérification avec le simulateur.</strong>]{style="color: #cc99ff;"}
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/revenus-net-deficit-1.png)</p>
+
+![](images/revenus-net-deficit-1.png)
+
+</p>
 
 ## Etape n°3 : Calcul du nombre de parts fiscales
 
@@ -151,49 +212,49 @@ Le calcul du nombre de parts fiscales s'effectue en 2 étapes.
 
 **1 part fiscale** si vous êtes :
 
-  * Célibataire
-  * Concubin
-  * Divorcé
-  * Veuf (si pas d'enfant à charge)
+-   Célibataire
+    -   Concubin
+    -   Divorcé
+    -   Veuf (si pas d'enfant à charge)
 
-**2 parts fiscales **si vous êtes :
+**2 parts fiscales** si vous êtes :
 
-  * Marié
-  * Pacsé
-  * Veuf avec enfant(s) à charge
+-   Marié
+    -   Pacsé
+    -   Veuf avec enfant(s) à charge
 
 ### Parts fiscales liées au nombre d'enfants
 
 Les parts fiscales liées aux enfants **s'ajoutent** à la ou les part(s) de la situation familiale.
 
-Fonctionnement :** 0,5 part par enfant pour les 2 premiers puis 1 part par enfant à compter du 3ème**.
+Fonctionnement : **0,5 part par enfant pour les 2 premiers puis 1 part par enfant à compter du 3ème**.
 
 En résumé :
 
-  * 1 enfant : 0.5 part
-  * 2 enfants : 1 part
-  * 3 enfants : 2 parts
-  * 4 enfants : 3 parts
-  * etc.
+-   1 enfant : 0.5 part
+    -   2 enfants : 1 part
+    -   3 enfants : 2 parts
+    -   4 enfants : 3 parts
+    -   etc.
 
-Si par exemple vous êtes **marié avec 2 enfants :** **2** parts (situation familiale) **+ 1** part (2 enfants : 0,5 + 0,5) =** 3 parts fiscales**
+Si par exemple vous êtes **marié avec 2 enfants :** **2** parts (situation familiale) **+ 1** part (2 enfants : 0,5 + 0,5) = **3 parts fiscales**
 
-### Majoration du nombre de parts fiscales 
+### Majoration du nombre de parts fiscales
 
 Certaines situations donnent droit à une demi part supplémentaire (+0,5) :
 
-  * **Parent isolé** : vous vivez et élevez seul votre enfant au 1er janvier de l'année d'imposition ;
-  * **Invalidité **: vous êtes invalide à plus de 80 % et avez la carte d'invalidité ;
-  * **Ancien combattant** ;
-  * **Veuve de guerre** ;
-  * Vous vivez seul au 1er janvier et avez **élevé seul un enfant pendant au moins 5 ans.**
+-   **Parent isolé** : vous vivez et élevez seul votre enfant au 1er janvier de l'année d'imposition ;
+    -   **Invalidité** : vous êtes invalide à plus de 80 % et avez la carte d'invalidité ;
+    -   **Ancien combattant** ;
+    -   **Veuve de guerre** ;
+    -   Vous vivez seul au 1er janvier et avez **élevé seul un enfant pendant au moins 5 ans.**
 
-**Attention** : les demi parts **ne se cumulent pas** entre elles sauf en présence de plusieurs invalides dans le foyer.  
+**Attention** : les demi parts **ne se cumulent pas** entre elles sauf en présence de plusieurs invalides dans le foyer.\
 Par exemple, si vous êtes invalide et ancien combattent à la fois, vous n'obtenez qu'une seule demi part supplémentaire (et non 1 part).
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Pour nos protagonistes Pierre, Paul, Jacques qui sont célibataires, une seule part est comptée.</span>
+[Exemple]{style="text-decoration: underline;"} : Pour nos protagonistes Pierre, Paul, Jacques qui sont célibataires, une seule part est comptée.
 
-<span style="color: #cc99ff;"><strong>Vérification avec le simulateur.</strong></span>
+[<strong>Vérification avec le simulateur.</strong>]{style="color: #cc99ff;"}
 
 ![](images/nombre-de-parts.png)
 
@@ -202,153 +263,264 @@ Par exemple, si vous êtes invalide et ancien combattent à la fois, vous n'obte
 Il suffit simplement de diviser le revenu net global imposable par le nombre de parts :
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>Quotient familial = Revenu net global imposable / nombre de parts</strong></span></p>
+
+[<strong>Quotient familial = Revenu net global imposable / nombre de parts</strong>]{style="color: #ff6600;"}
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;">Exemple : Dans notre cas puisque Pierre, Paul, Jacques n'ont qu'une seule part on a</span></p>
+
+[Exemple : Dans notre cas puisque Pierre, Paul, Jacques n'ont qu'une seule part on a]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Pierre = 12672 €</strong></span></p>
+
+[<strong>Quotient familial de Pierre = 12672 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Paul = 16200 €</strong></span></p>
+
+[<strong>Quotient familial de Paul = 16200 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Jacques =  21600 €</strong></span></p>
+
+[<strong>Quotient familial de Jacques =  21600 €</strong>]{style="color: #008000;"}
+
+</p>
 
 ## Etape n°5 : Connaître sa Tranche Marginale d'Imposition (TMI)
 
 <p style="text-align: left;">
-  C'est avec le<strong> quotient familial </strong>que vous pourrez connaître votre Tranche Marginale d'imposition. Si par exemple votre <strong>quotient familial</strong> est de <strong>10 000 €</strong> alors vous aurez un TMI <strong>de 5.5 %</strong>. Tous vos revenus (ou plutôt quotient familial qui est le revenu réduit par les parts fiscales) seront imposées à 5.5%. Pour 20 000 euros de quotient familial, une partie sera imposée à 5.5 % et l'autre excédant 11 991 € à 14 %.</p>
+
+C'est avec le<strong> quotient familial </strong>que vous pourrez connaître votre Tranche Marginale d'imposition. Si par exemple votre <strong>quotient familial</strong> est de <strong>10 000 €</strong> alors vous aurez un TMI <strong>de 5.5 %</strong>. Tous vos revenus (ou plutôt quotient familial qui est le revenu réduit par les parts fiscales) seront imposées à 5.5%. Pour 20 000 euros de quotient familial, une partie sera imposée à 5.5 % et l'autre excédant 11 991 € à 14 %.
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/tranche-imposition.png)</p>
+
+![](images/tranche-imposition.png)
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Tous les quotients familiaux calculés se situent dans la tranche [11991,26631] </span></p>
+
+[Exemple]{style="text-decoration: underline;"} : Tous les quotients familiaux calculés se situent dans la tranche \[11991,26631\] 
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Pierre = 12672 € --> TMI = 14%</strong></span></p>
+
+[<strong>Quotient familial de Pierre = 12672 € --\> TMI = 14%</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Paul = 16200 € --> TMI = 14%</strong></span></p>
+
+[<strong>Quotient familial de Paul = 16200 € --\> TMI = 14%</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Jacques =  21600 € --> TMI = 14%</strong></span></p>
+
+[<strong>Quotient familial de Jacques =  21600 € --\> TMI = 14%</strong>]{style="color: #008000;"}
+
+</p>
 
 ## Etape n°6 : Calcul de l'impôt brut
 
 <p align="left">
-  Les taux liés aux tranches marginales d'imposition (TMI) servent à découper votre quotient familial (revenu réduit par le nombre de part(s) fiscales) en différentes tranches qui seront chacune imposée à un taux différent (barème de l'impôt). Pour expliquer simplement, on découpe votre revenu en "morceaux" et chacun d'eux est imposé avec un taux différent.</p>
+
+Les taux liés aux tranches marginales d'imposition (TMI) servent à découper votre quotient familial (revenu réduit par le nombre de part(s) fiscales) en différentes tranches qui seront chacune imposée à un taux différent (barème de l'impôt). Pour expliquer simplement, on découpe votre revenu en "morceaux" et chacun d'eux est imposé avec un taux différent.
+
+</p>
 
 <p align="left">
-  <span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Calcul de l'impôt brut de Pierre</span></p>
 
-  1. <span style="color: #008000;">Pour la tranche 1 : de 0 à 6 011 € donc 6 011 * 0 = 0</span>
-  2. <span style="color: #008000;">Pour la tranche 2 : de 6 011 à 11 991 € soit 5 980 € (11 991-6 011) x 0.055 = 329 €</span>
-  3. <span style="color: #008000;">Pour la tranche 3 : de 11 991 à 12 672 € (pas 26 631 € car quotient familial égal à 18 000 €) soit (12 672-11 991) x 0.14 = 95 €</span>
-  4. <span style="color: #008000;">Pour la tranche 4 : le quotient familial de l'exemple ne va pas jusqu'à cette 4ème tranche (12 672 € < 26 631).</span>
+[Exemple]{style="text-decoration: underline;"} : Calcul de l'impôt brut de Pierre
 
-<span style="color: #008000;">Une fois les tranches calculées, il suffit de les additionner et de les multiplier par le nombre de parts soit :</span>
+</p>
 
-<p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt brut de Pierre = (0 + 329 + 95)*1 = 424 €</span></strong></p>
+1.  [Pour la tranche 1 : de 0 à 6 011 € donc 6 011 \* 0 = 0]{style="color: #008000;"}
+2.  [Pour la tranche 2 : de 6 011 à 11 991 € soit 5 980 € (11 991-6 011) x 0.055 = 329 €]{style="color: #008000;"}
+3.  [Pour la tranche 3 : de 11 991 à 12 672 € (pas 26 631 € car quotient familial égal à 18 000 €) soit (12 672-11 991) x 0.14 = 95 €]{style="color: #008000;"}
+4.  [Pour la tranche 4 : le quotient familial de l'exemple ne va pas jusqu'à cette 4ème tranche (12 672 € \< 26 631).]{style="color: #008000;"}
 
-<p style="text-align: left;">
-  <span style="color: #008000;">De même pour les deux autres, Paul dans la tranche 3 = (16200-11991)*0.14 = 589 € et Jacques dans la tranche 3 = (21600-11991)*0.14 = 1345 €, donc :</span></p>
+[Une fois les tranches calculées, il suffit de les additionner et de les multiplier par le nombre de parts soit :]{style="color: #008000;"}
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt brut de Paul = (0 + 329 + 589)*1 = 918 €</span></strong></p>
+
+<strong><span style="color: #008000;">impôt brut de Pierre = (0 + 329 + 95)\*1 = 424 €</span></strong>
+
+</p>
+
+<p style="text-align: left;">
+
+[De même pour les deux autres, Paul dans la tranche 3 = (16200-11991)*0.14 = 589 € et Jacques dans la tranche 3 = (21600-11991)*0.14 = 1345 €, donc :]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt brut de Jacques = (0 + 329 + 1345)*1 = 1674 €</span></strong></p>
+
+<strong><span style="color: #008000;">impôt brut de Paul = (0 + 329 + 589)\*1 = 918 €</span></strong>
+
+</p>
+
+<p style="text-align: center;">
+
+<strong><span style="color: #008000;">impôt brut de Jacques = (0 + 329 + 1345)\*1 = 1674 €</span></strong>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #cc99ff;"><strong>Vérification avec le simulateur.</strong></span></p>
+
+[<strong>Vérification avec le simulateur.</strong>]{style="color: #cc99ff;"}
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/les-droits-simples.png)</p>
+
+![](images/les-droits-simples.png)
+
+</p>
 
 ## Etape n°7 : Calcul de l'impôt net
 
 <p style="text-align: left;">
-  Si l'impôt brut obtenu est inférieur à 1016 €, alors on applique une décote (réduction d'impôt) qui se calcule de la manière suivante :</p>
+
+Si l'impôt brut obtenu est inférieur à 1016 €, alors on applique une décote (réduction d'impôt) qui se calcule de la manière suivante :
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>decote = (1016 - impôt brut)/2</strong></span></p>
+
+[<strong>decote = (1016 - impôt brut)/2</strong>]{style="color: #ff6600;"}
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : On calcule les décotes de Pierre, Paul et Jacques</span></p>
+
+[Exemple]{style="text-decoration: underline;"} : On calcule les décotes de Pierre, Paul et Jacques
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">decote de Pierre = (1016 - 424)/2 = 296 €</span></strong></p>
+
+<strong>[decote de Pierre = (1016 - 424)/2 = 296 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">decote de Paul = (1016 - 918)/2 = 49 €</span></strong></p>
+
+<strong>[decote de Paul = (1016 - 918)/2 = 49 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">Pas de décote pour Jacques car impôt brut = 1647 € > 1016 €</span></strong></p>
+
+<strong>[Pas de décote pour Jacques car impôt brut = 1647 € \> 1016 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #cc99ff;"><strong>Vérification par le simulateur.</strong></span></p>
+
+[<strong>Vérification par le simulateur.</strong>]{style="color: #cc99ff;"}
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/la-decote.png)</p>
+
+![](images/la-decote.png)
+
+</p>
 
 Finalement l'impôt net est donné par :
 
 <p style="text-align: center;">
-  <strong><span style="color: #ff6600;">impôt net = impôt brut - décote</span></strong></p>
+
+<strong>[impôt net = impôt brut - décote]{style="color: #ff6600;"}</strong>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Calcul de l'impôt net de Pierre, Paul et Jacques.</span></p>
+
+[Exemple]{style="text-decoration: underline;"} : Calcul de l'impôt net de Pierre, Paul et Jacques.
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt net de Pierre = 424 - 296 = 128 €</span></strong></p>
+
+<strong>[impôt net de Pierre = 424 - 296 = 128 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt net de Paul = 918 - 49 = 869 €</span></strong></p>
+
+<strong>[impôt net de Paul = 918 - 49 = 869 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt net de Jacques = 1674 €</span></strong></p>
+
+<strong>[impôt net de Jacques = 1674 €]{style="color: #008000;"}</strong>
+
+</p>
 
 <p style="text-align: left;">
-  <span style="color: #cc99ff;"><strong>Vérification par le simulateur.</strong></span></p>
+
+[<strong>Vérification par le simulateur.</strong>]{style="color: #cc99ff;"}
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/impots-avant-imput.png)</p>
-  
+
+![](images/impots-avant-imput.png)
+
+</p>
+
 # Simulations
 
 ## Courbe d'imposition pour une personne célibataire valide
 
 <p style="text-align: left;">
-  Ci-dessous on représente la "fonction d'imposition", c'est-à-dire l'impôt sur le revenu à payer (ramené sur un mois) en fonction du salaire mensuel net imposable perçu.</p>
+
+Ci-dessous on représente la "fonction d'imposition", c'est-à-dire l'impôt sur le revenu à payer (ramené sur un mois) en fonction du salaire mensuel net imposable perçu.
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/variations-impots-valide.png)</p>
+
+![](images/variations-impots-valide.png)
+
+</p>
 
 <p style="text-align: left;">
-  On constate les choses suivantes :</p>
 
-  * **<span style="line-height: 15px;">Jusqu'à un salaire mensuel net imposable <span style="color: #ff00ff;"><</span> <span style="color: #ff00ff;">1116 €  --> pas d'impôt à payer</span></span>**
-  * **De 0 € à 556 € --> <span style="color: #008000;">TMI à 0%</span>**
-  * **De 556 € à 1110 € --> <span style="color: #008000;">TMI à 5,5%</span>**
-  * **De 1110 € à 2465 € --> <span style="color: #008000;">TMI à 14%</span>**
-  * **De 2465 € à 6610 € --> <span style="color: #008000;">TMI à 30%</span>**
-  * **A partir de 1564 € --> <span style="color: #0000ff;">décote nulle</span>**
+On constate les choses suivantes :
 
-_Remarque : Attention le TMI ne signifie pas qu'on impose les revenus à ce taux ! Il définit juste la dernière tranche d'imposition des revenus découpés en morceaux (voir **Etape n°6**)_
+</p>
+
+-   [**Jusqu'à un salaire mensuel net imposable** ]{style="line-height: 15px;"}[**\<**]{style="color: #ff00ff;"} **[1116 €  --\> pas d'impôt à payer]{style="color: #ff00ff;"}**
+    -   **De 0 € à 556 € --\> [TMI à 0%]{style="color: #008000;"}**
+    -   **De 556 € à 1110 € --\> [TMI à 5,5%]{style="color: #008000;"}**
+    -   **De 1110 € à 2465 € --\> [TMI à 14%]{style="color: #008000;"}**
+    -   **De 2465 € à 6610 € --\> [TMI à 30%]{style="color: #008000;"}**
+    -   **A partir de 1564 € --\> [décote nulle]{style="color: #0000ff;"}**
+
+*Remarque : Attention le TMI ne signifie pas qu'on impose les revenus à ce taux ! Il définit juste la dernière tranche d'imposition des revenus découpés en morceaux (voir **Etape n°6**)*
 
 ## Spécificités de calcul liées à l'invalidité, quels effets sur l'impôt à payer ?
 
 On suppose désormais remplis les champs suivants de la déclaration :
 
-  * Personne célibataire (C)
-  * Vivant en métropole
-  * Année de naissance
-  * Traitements, salaires : "indiquez vos seuls revenus d'activité" (1AJ)
-  * <span style="color: #ff0000;">Titulaire d'une carte d'invalidité d'au moins 80% (P)</span>
+-   Personne célibataire (C)
+    -   Vivant en métropole
+    -   Année de naissance
+    -   Traitements, salaires : "indiquez vos seuls revenus d'activité" (1AJ)
+    -   [Titulaire d'une carte d'invalidité d'au moins 80% (P)]{style="color: #ff0000;"}
 
 Nos chers protagonistes Pierre, Paul et Jacques sont maintenant considérés comme invalide à 80%, et ont donc cochés la case (P).
 
@@ -356,183 +528,302 @@ Nos chers protagonistes Pierre, Paul et Jacques sont maintenant considérés com
 
 **Qu'est-ce qui change en ayant coché la case (P) ?**
 
-  * Premièrement un abattement spécial invalidité vient s'appliquer sur le Revenu Net Global pour donner le Revenu Net Global Imposable dont on parlait plus haut à l'**étape n°2** :
+-   Premièrement un abattement spécial invalidité vient s'appliquer sur le Revenu Net Global pour donner le Revenu Net Global Imposable dont on parlait plus haut à l'**étape n°2** :
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>Revenu Net Global Imposable = Revenu Net Global - abattement spécial</strong></span></p>
+
+[<strong>Revenu Net Global Imposable = Revenu Net Global - abattement spécial</strong>]{style="color: #ff6600;"}
+
+</p>
 
 **Quel est cet abattement spécial ?**
 
-D'après l'article 157 bis du code des impôts[^rf2-484], si le **Revenu Net Global est inférieur à 14 630 €** alors on applique un <span style="color: #ff0000;"><strong>abattement de 2332 €</strong></span>, et s'il est **compris entre 14 630 € et 23 580 €** on applique un <span style="color: #ff0000;"><strong>abattement de 1166 €</strong></span>.
+D'après l'article 157 bis du code des impôts[^2], si le **Revenu Net Global est inférieur à 14 630 €** alors on applique un [<strong>abattement de 2332 €</strong>]{style="color: #ff0000;"}, et s'il est **compris entre 14 630 € et 23 580 €** on applique un [<strong>abattement de 1166 €</strong>]{style="color: #ff0000;"}.
 
-[^rf2-484]: Article 157 bis du code des impôts - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=6A53FCC5F825458CF00242DFE7EE6DA0.tpdjo07v_1?cidTexte=LEGITEXT000006069577&idArticle=LEGIARTI000006307950&dateTexte=&categorieLien=cid" target="_blank">lien</a>
+[^2]: Article 157 bis du code des impôts - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=6A53FCC5F825458CF00242DFE7EE6DA0.tpdjo07v_1?cidTexte=LEGITEXT000006069577&idArticle=LEGIARTI000006307950&dateTexte=&categorieLien=cid" target="_blank">lien</a>
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : A l'étape n°2 on rappelle que le Revenu Net Global de Pierre, Paul, Jacques est respectivement 12672 €, 16200€ et 21600€. Pierre a un Revenu Net Global inférieur à 14630 €, il bénéficiera donc d'un abattement spécial du à son invalidité de 2332 €. Tandis que ses compères dont le Revenu Net Global se situe entre 14630 € et 23580€ bénéficieront d'un abattement de 1166 €.</span>
-
-<p style="text-align: center;">
-  <span style="color: #008000;"><strong>revenu net global de Pierre = 12672 - 2332 = 10 340 €</strong></span></p>
+[Exemple]{style="text-decoration: underline;"} : A l'étape n°2 on rappelle que le Revenu Net Global de Pierre, Paul, Jacques est respectivement 12672 €, 16200€ et 21600€. Pierre a un Revenu Net Global inférieur à 14630 €, il bénéficiera donc d'un abattement spécial du à son invalidité de 2332 €. Tandis que ses compères dont le Revenu Net Global se situe entre 14630 € et 23580€ bénéficieront d'un abattement de 1166 €.
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>revenu net global imposable de Paul = 16200 - 1166 = 15 034 €</strong></span></p>
+
+[<strong>revenu net global de Pierre = 12672 - 2332 = 10 340 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>revenu net global imposable de Jacques =  21600 - 1166 = 20 434 €</strong></span></p>
+
+[<strong>revenu net global imposable de Paul = 16200 - 1166 = 15 034 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  ![](images/abattements-spec.png)</p>
+
+[<strong>revenu net global imposable de Jacques =  21600 - 1166 = 20 434 €</strong>]{style="color: #008000;"}
+
+</p>
+
+<p style="text-align: center;">
+
+![](images/abattements-spec.png)
+
+</p>
 
 <li style="text-align: left;">
-  <span style="line-height: 15px;"><span style="line-height: 15px;"><span style="line-height: 15px;"><span style="line-height: 15px;">Deuxièmement, Pierre, Paul et Jacques bénéficient d'une <span style="color: #ff0000;"><strong>demi part supplémentaire</strong></span> [^rf3-484] pour le calcul de leur quotient familial.</span></span></span></span>
+
+[Deuxièmement, Pierre, Paul et Jacques bénéficient d'une ]{style="line-height: 15px;"}[<strong>demi part supplémentaire</strong>]{style="color: #ff0000;"} [^3] pour le calcul de leur quotient familial.
+
+[^3]: Article 195 du code général des impôts - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=8E3EFE998C22EB2F7C587E29E8A650C5.tpdjo07v_1?cidTexte=LEGITEXT000006069577&idArticle=LEGIARTI000006308281&dateTexte=&categorieLien=cid" target="_blank">lien</a>
+
 </li>
 
-[^rf3-484]: Article 195 du code général des impôts - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=8E3EFE998C22EB2F7C587E29E8A650C5.tpdjo07v_1?cidTexte=LEGITEXT000006069577&idArticle=LEGIARTI000006308281&dateTexte=&categorieLien=cid" target="_blank">lien</a>
-
-<span style="color: #008000;">Exemple : Recalcul du quotient familial avec un nombre de parts à 1,5</span>
+[Exemple : Recalcul du quotient familial avec un nombre de parts à 1,5]{style="color: #008000;"}
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong><strong>Quotient familial de Pierre = 10340/1,5 = 6893 €</strong></strong></span></p>
+
+[<strong><strong>Quotient familial de Pierre = 10340/1,5 = 6893 €</strong></strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong><strong><strong>Quotient familial de Paul = 15034/1,5 = 10 022 €</strong></strong> </strong></span></p>
+
+[<strong><strong><strong>Quotient familial de Paul = 15034/1,5 = 10 022 €</strong></strong> </strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>Quotient familial de Jacques = 20434/1,5 = 13 622 €</strong></span></p>
+
+[<strong>Quotient familial de Jacques = 20434/1,5 = 13 622 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  ![](images/nombre-parts.png)</p>
+
+![](images/nombre-parts.png)
+
+</p>
 
 <p style="text-align: left;">
-  Cela a pour effet d'abaisser le quotient familial, et on remarque que celui de Pierre et de Paul a changé de TMI en passant de 14% à 5,5% ! Ces trois diminutions de quotient familial réduit un peu l'impôt brut, voyons un peu la somme des tranches :</p>
+
+Cela a pour effet d'abaisser le quotient familial, et on remarque que celui de Pierre et de Paul a changé de TMI en passant de 14% à 5,5% ! Ces trois diminutions de quotient familial réduit un peu l'impôt brut, voyons un peu la somme des tranches :
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;">Pierre : (6011-0)*0%+(6893-6011)*5,5% = 48 €</span></p>
+
+[Pierre : (6011-0)*0%+(6893-6011)*5,5% = 48 €]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;">Paul : (6011-0)*0%+(10022-6011)*5,5% = 220 €</span></p>
+
+[Paul : (6011-0)*0%+(10022-6011)*5,5% = 220 €]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;">Jacques : (6011-0)*0%+(11991-6011)*5,5%+(13622-11991)*14% = 557 €</span></p>
+
+<span style="color: #008000;">Jacques : (6011-0)*0%+(11991-6011)*5,5%+(13622-11991)\*14% = 557 €</span>
+
+</p>
 
 Ainsi en multipliant par le nombre de part on obtient le nouvel impôt brut :
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt brut de Pierre = 48*1,5 = 73 €</span></strong></p>
+
+<strong><span style="color: #008000;">impôt brut de Pierre = 48\*1,5 = 73 €</span></strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt brut de Paul = 220*1,5 = 331 €</span></strong></p>
+
+<strong><span style="color: #008000;">impôt brut de Paul = 220\*1,5 = 331 €</span></strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">impôt brut de Jacques = 557*1,5 = 836 €</span></strong></p>
+
+<strong><span style="color: #008000;">impôt brut de Jacques = 557\*1,5 = 836 €</span></strong>
+
+</p>
 
 On recalcule également les décotes puisque ces trois impôts bruts sont maintenant tous sous le seuil des 1106 € :
 
 <p style="text-align: center;">
-  <strong><strong><span style="color: #008000;">décote de Pierre = (1016-73)/2 = 471 €</span></strong></strong></p>
+
+<strong><strong>[décote de Pierre = (1016-73)/2 = 471 €]{style="color: #008000;"}</strong></strong>
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>décote de Paul = (1016-331)/2 = 342 €</strong></span></p>
+
+[<strong>décote de Paul = (1016-331)/2 = 342 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <strong><span style="color: #008000;">décote de Jacques = (1016-836)/2 = 90 €</span></strong></p>
+
+<strong>[décote de Jacques = (1016-836)/2 = 90 €]{style="color: #008000;"}</strong>
+
+</p>
 
 On remarque que les décotes de Pierre et Paul sont supérieures à l'impôt brut, ce qui signifie qu'ils ne payeront aucun impôt.
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>impôt net de Pierre = 0 €</strong></span></p>
+
+[<strong>impôt net de Pierre = 0 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>impôt net de Paul = 0 €</strong></span></p>
+
+[<strong>impôt net de Paul = 0 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #008000;"><strong>impôt net de Jacques = 836 - 90 = 746 €</strong></span></p>
+
+[<strong>impôt net de Jacques = 836 - 90 = 746 €</strong>]{style="color: #008000;"}
+
+</p>
 
 <p style="text-align: center;">
-  ![](images/droits-simples-decote.png)</p>
 
-  * <span style="line-height: 15px;">Enfin troisièmement, une chose importante dont on n'a pas encore parlé, est le <strong>plafonnement du quotient familial</strong>[^rf4-484].  </span>
+![](images/droits-simples-decote.png)
 
-[^rf4-484]: Plafonnement des effets du quotient familial sur le site impotgouv - <a href="http://bofip.impots.gouv.fr/bofip/2494-PGP" target="_blank">lien</a>
+</p>
 
-En effet, les deux points précédents : existence d'un abattement spécial + demi part supplémentaire pour une personne invalide, procurent une baisse du quotient familial et donc de l'impôt brut par rapport au calcul effectué sur les mêmes revenus d'une personne valide. Toutefois afin de limiter les effets de ces avantages, la **différence d'impôt** entre ces deux modes de calcul est **<span style="color: #ff0000;">plafonné à 1500 €</span>** :
+-   [Enfin troisièmement, une chose importante dont on n'a pas encore parlé, est le <strong>plafonnement du quotient familial</strong>]{style="line-height: 15px;"}[^4].  
+
+[^4]: [Plafonnement des effets du quotient familial sur le site impotgouv - <a href="http://bofip.impots.gouv.fr/bofip/2494-PGP" target="_blank">lien</a>]{style="line-height: 15px;"}
+
+En effet, les deux points précédents : existence d'un abattement spécial + demi part supplémentaire pour une personne invalide, procurent une baisse du quotient familial et donc de l'impôt brut par rapport au calcul effectué sur les mêmes revenus d'une personne valide. Toutefois afin de limiter les effets de ces avantages, la **différence d'impôt** entre ces deux modes de calcul est [**plafonné à 1500 €**]{style="color: #ff0000;"} :
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>impôt brut d'une personne valide - impôt brut d'une personne invalide < 1500 €</strong></span></p>
+
+[<strong>impôt brut d'une personne valide - impôt brut d'une personne invalide \< 1500 €</strong>]{style="color: #ff6600;"}
+
+</p>
 
 Dit autrement si on désigne pour des revenus identiques les quantités suivantes :
 
 <p style="text-align: center;">
-  <strong>A = impôt brut calculé dans le cas d'invalidité</strong></p>
+
+<strong>A = impôt brut calculé dans le cas d'invalidité</strong>
+
+</p>
 
 <p style="text-align: center;">
-  <strong>B = impôt brut calculé dans le cas valide - 1500 €</strong></p>
 
-Alors la **condition de plafonnement se réécrit : A < B**
+<strong>B = impôt brut calculé dans le cas valide - 1500 €</strong>
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Vérification du plafonnement pour Pierre, Paul, Jacques</span>
+</p>
 
-<span style="color: #008000;">Pierre : impôt brut invalide = 73 €, impôt brut valide = 424 € --> 424-73 < 1500 [OK]</span>  
- <span style="color: #008000;">Paul : impôt brut invalide = 331 €, impôt brut valide = 918 € --> 918-331 < 1500 [OK]</span>  
- <span style="color: #008000;">Jacques : impôt brut invalide = 836 €, impôt brut valide= 1674 € --> 1674-836<1500 [OK]</span>
+Alors la **condition de plafonnement se réécrit : A \< B**
+
+[Exemple]{style="text-decoration: underline;"} : Vérification du plafonnement pour Pierre, Paul, Jacques
+
+[Pierre : impôt brut invalide = 73 €, impôt brut valide = 424 € --\> 424-73 \< 1500 \[OK\]]{style="color: #008000;"}\
+[Paul : impôt brut invalide = 331 €, impôt brut valide = 918 € --\> 918-331 \< 1500 \[OK\]]{style="color: #008000;"}\
+[Jacques : impôt brut invalide = 836 €, impôt brut valide= 1674 € --\> 1674-836\<1500 \[OK\]]{style="color: #008000;"}
 
 Si la condition de plafonnement est vérifiée, on conserve l'avantage du calcul dans le cas d'invalidité :
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>Si A <= B alors impôt brut retenu = A</strong></span></p>
+
+[<strong>Si A \<= B alors impôt brut retenu = A</strong>]{style="color: #ff6600;"}
+
+</p>
 
 Si au contraire la condition n'est pas vérifiée, on retient l'impôt brut dans le cas valide moins le plafond de 1500 € :
 
 <p style="text-align: center;">
-  <span style="color: #ff6600;"><strong>Si A > B alors impôt brut retenu = B</strong></span></p>
+
+[<strong>Si A \> B alors impôt brut retenu = B</strong>]{style="color: #ff6600;"}
+
+</p>
 
 <p style="text-align: left;">
-  <strong>Attention</strong> : ceci est valable plus généralement pour tout calcul avantageux lié à des demi parts supplémentaires, et le plafond correspond à <span style="text-decoration: underline;">1500 € par demi parts supplémentaires</span>. Cependant <strong>dans le cas de l'invalidité,</strong> <strong>ce plafond est réévalué à 1497 € de plus</strong> ! C'est ce qu'on appelle une <strong>réduction d'impôt complémentaire</strong>.[^rf5-484] Plus précisément :</p>
 
-[^rf5-484]: Article 197 du code général des impôts - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1E095BE564E94C2153D9529FB63361BD.tpdjo02v_2?idArticle=LEGIARTI000028416896&cidTexte=LEGITEXT000006069577&categorieLien=id&dateTexte=20140324" target="_blank">lien</a>
+<strong>Attention</strong> : ceci est valable plus généralement pour tout calcul avantageux lié à des demi parts supplémentaires, et le plafond correspond à [1500 € par demi parts supplémentaires]{style="text-decoration: underline;"}. Cependant <strong>dans le cas de l'invalidité,</strong> <strong>ce plafond est réévalué à 1497 € de plus</strong> ! C'est ce qu'on appelle une <strong>réduction d'impôt complémentaire</strong>.[^5] Plus précisément :
+
+[^5]: Article 197 du code général des impôts - <a href="http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=1E095BE564E94C2153D9529FB63361BD.tpdjo02v_2?idArticle=LEGIARTI000028416896&cidTexte=LEGITEXT000006069577&categorieLien=id&dateTexte=20140324" target="_blank">lien</a>
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #ff0000;"><strong>Si B-A > 1497 alors impôt brut retenu = B - 1497 = impôt brut valide - 2997 €</strong></span></p>
+
+[<strong>Si B-A \> 1497 alors impôt brut retenu = B - 1497 = impôt brut valide - 2997 €</strong>]{style="color: #ff0000;"}
+
+</p>
 
 <p style="text-align: left;">
-  <strong>Courbe d'imposition d'une personne célibataire invalide</strong></p>
+
+<strong>Courbe d'imposition d'une personne célibataire invalide</strong>
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/courbe-imposition-invalide.png)</p>
+
+![](images/courbe-imposition-invalide.png)
+
+</p>
 
 <p style="text-align: left;">
-  On peut tracer la courbe pour des salaires plus importants pour la visualiser dans son ensemble :</p>
+
+On peut tracer la courbe pour des salaires plus importants pour la visualiser dans son ensemble :
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/variations-impots-invalide.png)</p>
+
+![](images/variations-impots-invalide.png)
+
+</p>
 
 ## Comparaison des impôts payés par une personne valide et invalide
 
 <p style="text-align: left;">
-  Si on fusionne les deux courbes d'impositions sur un même graphique on obtient :</p>
+
+Si on fusionne les deux courbes d'impositions sur un même graphique on obtient :
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/comparaison-invalide-ou-non-2.png)</p>
+
+![](images/comparaison-invalide-ou-non-2.png)
+
+</p>
 
 <p style="text-align: left;">
-  Enfin si au lieu de représenter l'impôt en euros on l'exprime en pourcentage du salaire net imposable perçu, alors on obtient les courbes ci-après :</p>
+
+Enfin si au lieu de représenter l'impôt en euros on l'exprime en pourcentage du salaire net imposable perçu, alors on obtient les courbes ci-après :
+
+</p>
 
 <p style="text-align: left;">
-  ![](images/comparaison-invalide-ou-non.png)</p>
+
+![](images/comparaison-invalide-ou-non.png)
+
+</p>
 
 # Annexes : codes Matlab implémentant la fonction d'imposition et les graphiques
 
 Fonction `imposition.m`
 
-`salaire_net_imposable` : montant du salaire net imposable sur un mois  
+`salaire_net_imposable` : montant du salaire net imposable sur un mois\
 invalide : 0 si valide, 1 si invalide (par défaut)
 
-_<span style="text-decoration: underline;">Sortie</span> : Renvoie l'impôt mensuel._
+[*Sortie*]{style="text-decoration: underline;"} *: Renvoie l'impôt mensuel.*
 
-<span style="color: #008000;"><span style="text-decoration: underline;">Exemple</span> : Pour le salaire de Jacques invalide qui gagne 2000 € net imposable par mois</span>
+[Exemple]{style="text-decoration: underline;"} : Pour le salaire de Jacques invalide qui gagne 2000 € net imposable par mois
 
 <p style="text-align: left;">
-  ![](images/imposition-matlab.png)</p>
 
-```matlab
+![](images/imposition-matlab.png)
+
+</p>
+
+``` matlab
 function mon_impot = imposition(salaire_net_imposable,invalide)
 
 global plafondC;
@@ -664,9 +955,9 @@ end
 
 Script `calcul_impot.m`
 
-_<span style="text-decoration: underline;">Sortie</span> : Affiche la courbe d'imposition d'une personne valide ou invalide _
+[*Sortie*]{style="text-decoration: underline;"} *: Affiche la courbe d'imposition d'une personne valide ou invalide*
 
-```matlab
+``` matlab
 global plafondC;
 
 %-----------------------------------------------------%
@@ -832,11 +1123,11 @@ else
 end
 ```
 
-Script `compare_impots.m```
+Script \`compare_impots.m\`\`\`
 
-_<span style="text-decoration: underline;">Sortie</span> : Affiche sur le même graphique les courbes d'imposition valide et invalide_
+[*Sortie*]{style="text-decoration: underline;"} *: Affiche sur le même graphique les courbes d'imposition valide et invalide*
 
-```matlab
+``` matlab
 salaires = load('x_salaires.mat');
 salaires = salaires.abs_salaires;
 
@@ -890,13 +1181,5 @@ set(legend1,...
 <hr class="footnotes" />
 
 <ol class="footnotes" style="list-style-type:decimal">
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
 </ol>

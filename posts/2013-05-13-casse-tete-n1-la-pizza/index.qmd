@@ -2,7 +2,7 @@
 title: "Casse-tête n°1 : la pizza"
 author: "Kévin Polisano"
 date: "2013-05-13"
-categories: [enigme]
+categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -16,7 +16,7 @@ citation-location: margin
 
 Lorsque l'on mange pizza entre amis, nous apprécions goûter un petit morceau de la pizza de chacun. C'est pourquoi j'ai l'habitude sur ma part de pizza de rayon $r=OB$ de 16 cm, de découper parallèlement à $[OB]$ une "bande" d'épaisseur $e<r$ de 3 cm. Après avoir donné cette partie à un ami, il me reste donc une sorte de nouveau secteur angulaire $MAC$. J'ai mesuré la différence de longueur entre les côtés $MC$ et $MA$ : $d=MC-MA$ qui est de 2 cm.
 
-**Question : quel est l'angle $\alpha=AOB$ de la part initiale ?**
+**Question : quel est l'angle** $\alpha=AOB$ de la part initiale ?
 
 ![](images/pizza.jpg)
 
@@ -24,12 +24,15 @@ Lorsque l'on mange pizza entre amis, nous apprécions goûter un petit morceau d
 
 Les résultats qui vont suivre peuvent être vérifier "à la main" avec la simulation geogebra ci-dessous :
 
-<p style="text-align: center;">[Télécharger la simulation geogebra](pizza.ggb)</p>
+<p style="text-align: center;">
 
+[Télécharger la simulation geogebra](pizza.ggb)
+
+</p>
 
 On cherche dans un premier temps à exprimer la différence de longueur $\color{orange}{d=MC-MA}$ quand l'angle $\color{green}{\alpha=AOB}$ varie, avec $r$ et $e$ fixés.
 
-**1\. Calcul de la longueur MA**
+**1. Calcul de la longueur MA**
 
 ![](images/calculMA.jpg)
 
@@ -41,7 +44,7 @@ Soit $D$ le projeté orthogonal de $M$ sur la droite $(OB)$. On a par définitio
 
 Soit maintenant $F$ le projeté orthogonal de $O$ sur $(MC)$. On a alors $MC=FC-FM$. Par le théorème de Pythagore $OC^2=OF^2+FC^2$ d'où $FC=\sqrt{r^2-e^2}$. Ensuite $FM=OD=\frac{e}{\tan(\alpha)}$, donc $$MC=\sqrt{r^2-e^2}-\frac{e}{\tan(\alpha)}$$
 
-**3\. Etude de la fonction $d(\alpha)=MC-MA$**
+**3. Etude de la fonction** $d(\alpha)=MC-MA$
 
 La fonction a étudier est la suivante : $$d(\alpha)=\left(\sqrt{r^2-e^2}-\frac{e}{\tan(\alpha)}\right)-\left(r-\frac{e}{\sin(\alpha)}\right)$$
 
@@ -59,7 +62,7 @@ Comme $\cos(\alpha)$ est compris entre $-1$ et $1$ alors $d'(\alpha)>0$ sur l'in
 
 On constate alors, en vertu de la croissance et du fait que $d(\alpha_{min})=0$, que $d(\alpha)$ reste toujours positive sur l'intervalle $[d(\alpha_{min}),d(\alpha_{max})]$ c'est-à-dire que le côté $MC$ est toujours supérieur au côté $MA$. On remarque également que le point $M$, initialement confondu avec $A$, décroît sur l'axe des abscisses jusqu'à la position d'abscisse $r-e$ atteinte pour $\alpha=\frac{\pi}{2}$, puis croît de nouveau pour atteindre le point $A$ lorsque $\alpha=\alpha_{max}$.
 
-**4\. Inversion de l'équation $d(\alpha)=C$**
+**4. Inversion de l'équation** $d(\alpha)=C$
 
 On sait d'après ce qui précède que si $C\in [0,2\sqrt{r^2-e^2}]$ alors l'équation $d(\alpha)$ admet une unique solution $\alpha_C$. Nous allons maintenant expliciter cette solution en reprenant l'expression initiale de $d(\alpha)$.
 
@@ -69,7 +72,6 @@ Par conséquent on a : $$d(\alpha)=C\Leftrightarrow et+\sqrt{r^2-e^2}-r=C\Leftri
 
 Finalement on en conclut que : $$\color{green}{\alpha_C=2\arctan\left[\frac{C+r-\sqrt{r^2-e^2}}{e}\right]}$$
 
-_Applications numériques :_
+*Applications numériques :*
 
 Ma pizza a un rayon $r$ de 16 cm, je coupe une "bande" d'épaisseur $e$ de 3 cm. Je mesure la différence de longueur $C$ entre les côtés $MC$ et $MA$ qui est de 2 cm. On trouve alors un angle initial $\color{green}{\alpha_C\approx 74,56^{\circ}}$. On peut le vérifier sur la simulation geogebra (l'utilisateur faisant varier le point $B$ sur le cercle).
-

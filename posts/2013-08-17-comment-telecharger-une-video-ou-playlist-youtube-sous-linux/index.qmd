@@ -2,7 +2,7 @@
 title: "Comment télécharger une vidéo ou playlist youtube sous linux ?"
 author: "Kévin Polisano"
 date: "2013-08-17"
-categories: [youtube]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -13,7 +13,7 @@ image: images/youtubeplaylist.png
 
 Si vous suivez ce tutoriel, vous serez ensuite capable de télécharger n'importe quelle vidéo provenant des sites suivants :
 
-```bash
+``` bash
 youtube-dl --list-extractors
 youtube:playlist
 youtube:user
@@ -46,13 +46,13 @@ Pas mal, non ? ;)
 
 Commençons par installer le programme principal `youtube-dl` écrit en python.
 
-```bash
+``` bash
 sudo apt-get install youtube-dl
 ```
 
 Ensuite pour télécharger une vidéo de youtube c'est très simple, il suffit de copier l'url dans la commande :
 
-```bash
+``` bash
 youtube-dl "http://www.youtube.com/watch?v=BcL---4xQYA"
 ```
 
@@ -60,31 +60,31 @@ et la vidéo sera téléchargée dans le dossier courant, au format `.flv`
 
 Pour spécifier un autre format il faut utiliser l'option `-f`, la liste des formats disponibles est :
 
-```bash
+``` bash
 youtube-dl -F "http://www.youtube.com/watch?v=BcL---4xQYA"[youtube] Setting language
 [youtube] BcL---4xQYA: Downloading video webpage
 [youtube] BcL---4xQYA: Downloading video info webpage
 [youtube] BcL---4xQYA: Extracting video information
 Available formats:
-35	:	flv	[480x854]
-34	:	flv	[360x640]
-18	:	mp4	[360x640]
-43	:	webm	[360x640]
-5	:	flv	[240x400]
-17	:	mp4	[144x176]
+35  :   flv [480x854]
+34  :   flv [360x640]
+18  :   mp4 [360x640]
+43  :   webm    [360x640]
+5   :   flv [240x400]
+17  :   mp4 [144x176]
 ```
 
 Ainsi si vous souhaitez enregistrer la vidéo au format `mp4` il vous faudra rajouter :
 
-```bash
+``` bash
 youtube-dl -f 17 "http://www.youtube.com/watch?v=BcL---4xQYA"
 ```
 
-Cela marche aussi en théorie avec l'url d'une playlist youtube. Cependant chez moi seule la première vidéo de la playlist était téléchargée. J'ai donc du au préalable _parser_ les flux youtube de la playlist pour appliquer youtube-dl sur chacun d'eux. Cela se fait au moyen du [script umph](http://code.google.com/p/umph/). Téléchargez sur le site les deux archives `umph-version.tar.gz` et `Umph-Prompt-version.tar.gz` et les extraire.
+Cela marche aussi en théorie avec l'url d'une playlist youtube. Cependant chez moi seule la première vidéo de la playlist était téléchargée. J'ai donc du au préalable *parser* les flux youtube de la playlist pour appliquer youtube-dl sur chacun d'eux. Cela se fait au moyen du [script umph](http://code.google.com/p/umph/). Téléchargez sur le site les deux archives `umph-version.tar.gz` et `Umph-Prompt-version.tar.gz` et les extraire.
 
 Assurez vous au préalable que vous avez bien `perl` d'installé :
 
-```bash
+``` bash
 perl -v
 ```
 
@@ -92,15 +92,15 @@ Le cas échéant installez le à partir du site officiel perl.org
 
 Pour installer `umph` et `Umph-Prompt` la procédure est la même :
 
-```bash
+``` bash
 perl Makefile.PL
 make
 make install
 ```
 
-L'installation est terminée. Pour _parser_ le flux de la playlist il suffit alors de taper :
+L'installation est terminée. Pour *parser* le flux de la playlist il suffit alors de taper :
 
-```bash
+``` bash
 umph playlist_ID | youtube-dl -l -a
 ```
 
@@ -110,7 +110,7 @@ où le `playlist_ID` est la chaîne de caractères et numéros étranges qui ide
 
 Plus précisément :
 
-```bash
+``` bash
 umph 46408891B63317A4 | youtube-dl -l -a -
 ```
 
@@ -120,6 +120,6 @@ De cette façon vous récupérez toutes les vidéos de la playlist au format `.f
 
 Pour extraire seulement la piste audio au format `.mp3` (si seule la musique vous intéresse), vous pouvez utiliser le programme `ffmpeg`, et faire une boucle sur chaque fichier `.flv` en appelant la commande :
 
-```bash
+``` bash
 ffmpeg -i fichier.flv fichier.mp3
 ```

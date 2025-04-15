@@ -11,7 +11,7 @@ website:
       - text: "Recherche"
         href: https://polisano.pages.math.cnrs.fr/
       - text: "Enseignement"
-        href: https://polisano.pages.math.cnrs.fr/
+        href: https://polisano.pages.math.cnrs.fr/#teaching
       - text: "Handicap"
         href: handicap.qmd
       - text: "Musique"

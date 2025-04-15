@@ -2,7 +2,7 @@
 title: "Comment piloter R à partir de Matlab et vice versa ?"
 author: "Kévin Polisano"
 date: "2013-06-05"
-categories: [matlab, R]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -17,41 +17,41 @@ Alors bien sûr on pourrait exporter les données de Matlab dans un fichier text
 
 ## Installation de R
 
-<span style="color: #333333;">La procédure est tirée du<a href="http://doc.ubuntu-fr.org/r" target="_blank"> site d'Ubuntu</a>. Si comme moi vous disposez d'Ubuntu, la première étape consiste à savoir quelle est votre version, pour cela tapez :</span>
+[La procédure est tirée du<a href="http://doc.ubuntu-fr.org/r" target="_blank"> site d'Ubuntu</a>. Si comme moi vous disposez d'Ubuntu, la première étape consiste à savoir quelle est votre version, pour cela tapez :]{style="color: #333333;"}
 
-```bash
+``` bash
 lsb_release -d
 ```
 
 J'obtiens pour ma part :
 
-```bash
-Description:	Ubuntu-Secure-Remix 12.04.1 LTS 31.08.2012
+``` bash
+Description:    Ubuntu-Secure-Remix 12.04.1 LTS 31.08.2012
 ```
 
 Ainsi dans le tableau figurant à l'<a href="http://doc.ubuntu-fr.org/versions" target="_blank">adresse suivante</a> j'apprends que le nom de code de ma version est `Precise Pangolin`.
 
 Ouvrez maintenant le fichier suivant :
 
-```bash
+``` bash
 sudo gedit /etc/apt/sources.list
 ```
 
 Editez ce fichier en rajoutant cette ligne :
 
-```bash
+``` bash
 deb votre.miroir.cran.prefere/bin/linux/ubuntu nom_de_code_ubuntu
 ```
 
 Où vous remplacez `votre.miroir.cran.prefere` par un des miroirs de <a href="http://cran.r-project.org/mirrors.html" target="_blank">cette liste</a>, et `nom_de_code_ubuntu` par le nom de votre version. Ce qui permet d'ajouter le dépôt à vos sources de mise à jour. Dans mon cas j'insère donc en fin de fichier la ligne :
 
-```bash
+``` bash
 deb http://mirror.ibcp.fr/pub/CRAN/bin/linux/ubuntu precise/
 ```
 
 L'installation de R s'effectue alors via la commande :
 
-```bash
+``` bash
 sudo apt-get install r-base
 ```
 
@@ -59,84 +59,84 @@ sudo apt-get install r-base
 
 Télécharger et extraire l'archive `RMatlab_0.2-5.tar.gz` disponible sur le <a href="https://cran.r-project.org/web/packages/R.matlab/index.html" target="_blank">site officiel</a>.
 
-```bash
+``` bash
 tar xzvf RMatlab_0.2-5.tar.gz
 ```
 
 Télécharger <a href="http://www.kevinpolisano.com/Divers/RMatlab.patch" target="_blank">ce patch</a> que vous copiez dans un ficher `RMatlab.patch` dans le dossier RMatlab ; puis appliquez le :
 
-```bash
+``` bash
 cd RMatlab
 patch -p1 < RMatlab.patch
 ```
 
 Vous devriez normalement obtenir :
 
-```bash
+``` bash
 patching file src/initializeR.c
 patching file src/Makefile.in
 ```
 
 Ensuite nous avons besoin de savoir où a été installé la librairie R. En général elle se trouve ici :
 
-```bash
+``` bash
 /usr/lib/R/
 ```
 
 Le cas échéant vous pouvez toujours rechercher le fichier principal `libR.so` grâce à l'une des deux commandes suivantes :
 
-```bash
+``` bash
 locate libR.so
 sudo find . -type f -exec grep 'libR.so' {} \;
 ```
 
 De même on a besoin de savoir où se cachent les headers de R, pour cela on recherche de la même manière le fichier `Rinternals.h` , se trouvant généralement ici :
 
-```bash
+``` bash
 /usr/share/R/include
 ```
 
 On va retenir ces deux répertoires en les stockant dans les variables d'environnement ci-après :
 
-```bash
+``` bash
 export R_HOME=/usr/lib/R
 export R_INCLUDE_DIR=/usr/share/R/include
 ```
 
 Maintenant on se replace dans le dossier RMatlab et on lance la configuration :
 
-```bash
+``` bash
 ./configure
 ```
 
 Ensuite on sort du dossier et on installe le package avec R :
 
-```bash
+``` bash
 cd ..
 R CMD INSTALL RMatlab
 ```
 
 Si tout se passe bien l'installation doit se terminer, et vous devriez voir afficher dans la console le dossier où on a été installé RMatlab, chez moi :
 
-```bash
+``` bash
 R/x86_64-pc-linux-gnu-library/2.14/RMatlab/
 ```
 
 Personnellement au cours de l'installation cette erreur était levée :
 
-```bash
+``` bash
 mex:  -argcheck not a valid option.
 ```
 
 Ceci est du au fait que cette option est apparemment supprimer de la version 2010 de Matlab. J'ai donc du l'effacer des fichiers `Makefile` et `Makefile.in` à la ligne correspondante :
 
-```bash
+``` bash
 MEX_ARGS=$(R_MEX_CFLAGS) @DEFINES@
 ```
 
 Une fois l'installation réussie il reste encore à bien indiquer les chemins. Pour instancier ces "path" vous pouvez exécuter le script disponible :
 
-```bash
+``` bash
 cd RMatlab/inst/scripts/
 chmod u+x RMatlab.sh
 ./RMatlab.sh
@@ -144,7 +144,7 @@ chmod u+x RMatlab.sh
 
 Mais je préfère personnellement les remplir à la main :
 
-```bash
+``` bash
 export R_HOME=/usr/lib/R
 export R_SHARE_DIR=/usr/share/R/share
 ```
@@ -153,37 +153,37 @@ export R_SHARE_DIR=/usr/share/R/share
 
 Lancer Matlab en mode console (plus commode pour repérer une éventuelle erreur) :
 
-```bash
+``` bash
 matlab -nojvm -nodisplay
 ```
 
 Ensuite on va signaler à Matlab où se situe les <a href="http://matlab.developpez.com/faq/?page=mex" target="_blank">MEX</a> du package RMatlab, qui a été installé je le rappelle ici :
 
-```bash
+``` bash
 R/x86_64-pc-linux-gnu-library/2.14/RMatlab/
 ```
 
 Dans Matlab on tape donc :
 
-```bash
+``` bash
 addpath('R/x86_64-pc-linux-gnu-library/2.14/RMatlab/mex/')
 ```
 
 On lance ensuite l'interpréteur R dans Matlab :
 
-```bash
+``` bash
 initializeR({'RMatlab','--vanilla','--silent'})
 ```
 
 Et enfin pour tester on appelle une fonction de R, toujours dans Matlab :
 
-```bash
+``` bash
 x=callR('rpois',10,3)
 ```
 
 Qui devrait, normalement, vous renvoyer :
 
-```bash
+``` bash
 x =
 
 5

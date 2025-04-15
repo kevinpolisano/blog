@@ -2,7 +2,7 @@
 title: "Casse-tête n°2 : une piscine originale"
 author: "Kévin Polisano"
 date: "2013-05-20"
-categories: [enigme]
+categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -64,6 +64,6 @@ qui est bien homogène à une distance (en $m$).
 
 De plus on remarque que si le débit de remplissage $D$ augmente (à $e$ et $\alpha$ fixés) la hauteur limite sera plus grande ; et de même si inversement c'est le débit d'évaporation qui augmente alors la hauteur limite sera plus petite, ce qui semble cohérent. Enfin si l'angle du cône $\alpha$ diminue, alors celui-ci sera plus étroit et la surface à l'air libre plus petite, donc une évaporation moindre et une hauteur limite plus grande.
 
-_Application numérique :_
+*Application numérique :*
 
 On a $D=347,9~L.h^{-1}$, $e=\frac{2,54}{24}~L.h^{-1}.m^{-2}$ et $\alpha=\frac{\pi}{200}.73,8~rad$. On obtient ainsi une hauteur limite de $$\color{green}{h(\infty)\approx 14.119~m}$$
