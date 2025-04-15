@@ -24,32 +24,33 @@ Au cours d'une formation de l'école doctorale, j'ai eu l'occasion de suivre un 
 
 Il s'agit d'un jeu dérivé de "[Light as a feather, stiff as a board](http://en.wikipedia.org/wiki/Light_as_a_feather,_stiff_as_a_board)" (léger comme une plume, raide comme une planche) qui consiste pour un groupe, de pouvoir faire léviter sur sa chaise une tierce personne. Historiquement ce jeu remonte au XVIIe siècle à Londres, et l'histoire nous ait rapportée par [Samuel Pepys](http://en.wikipedia.org/wiki/Samuel_Pepys), qui aurait vu des petites filles soulever un garçon (puis un cuisinier bien plus gros) avec une facilité déconcertante en chantant l'incantation suivante :
 
-> Voici un corps mort  
-Raide comme un bâton,  
-Froid comme le marbre 
-Léger comme un esprit,  
-Lève-toi au nom de Jésus-Christ!
-
-
+> Voici un corps mort\
+> Raide comme un bâton,\
+> Froid comme le marbre Léger comme un esprit,\
+> Lève-toi au nom de Jésus-Christ!
 
  **Comment y joue-t-on ?**
 
 C'est très simple (voir [ici pour la description en image](http://www.wikihow.com/Play-Light-as-a-Feather)) :
 
-1. Choisissez 5 volontaires dont 1 (le cobaye) s'assoit sur une chaise (le plus lourd tant qu'à faire). Les 4 autres se placent deux à deux de part et d’autre, un à chaque épaule de la personne assise et un autre à chaque genou de cette même personne.
-2. Demandez aux 4 personnes de placer leurs index joints (comme simulant un pistolet à deux mains) sous les aisselles et les genoux du cobaye, et d'essayer de le soulever. Bien souvent cela échoue (qui pense pouvoir soulever quelqu'un à la seule force des index ?!)
-3. Demandez leur maintenant de placer leurs mains au dessus de la tête du cobaye, en alternant (leurs deux mains ne doivent pas se suivre), et maintenez comme ceci pendant une trentaine de secondes.
-4. Replacez rapidement vos doigts comme à l'étape 2, comptez jusqu'à trois et soulevez de nouveau le cobaye. Incroyable ! Il décolle comme "porté par l'énergie que vous avez créé au dessus de sa tête"
+1.  Choisissez 5 volontaires dont 1 (le cobaye) s'assoit sur une chaise (le plus lourd tant qu'à faire). Les 4 autres se placent deux à deux de part et d’autre, un à chaque épaule de la personne assise et un autre à chaque genou de cette même personne.
+2.  Demandez aux 4 personnes de placer leurs index joints (comme simulant un pistolet à deux mains) sous les aisselles et les genoux du cobaye, et d'essayer de le soulever. Bien souvent cela échoue (qui pense pouvoir soulever quelqu'un à la seule force des index ?!)
+3.  Demandez leur maintenant de placer leurs mains au dessus de la tête du cobaye, en alternant (leurs deux mains ne doivent pas se suivre), et maintenez comme ceci pendant une trentaine de secondes.
+4.  Replacez rapidement vos doigts comme à l'étape 2, comptez jusqu'à trois et soulevez de nouveau le cobaye. Incroyable ! Il décolle comme "porté par l'énergie que vous avez créé au dessus de sa tête"
 
 Une vidéo valant mieux qu'un long discours :
 
-<iframe src="https://www.youtube.com/embed/e59lwhFzdvQ" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="https://www.youtube.com/embed/e59lwhFzdvQ" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen">
 
-<iframe src="https://www.youtube.com/embed/QZ9InzTLNjs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</iframe>
+
+<iframe src="https://www.youtube.com/embed/QZ9InzTLNjs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen">
+
+</iframe>
 
 # Quelques hypothèses scientifiques
 
-Cette expérience est réalisée sans trucage et fonctionne bel et bien (j'ai même testé personnellement en me faisant soulever avec mon fauteuil roulant 😄, pas loin de 100 kg au total). La question est de savoir _**pourquoi**_ après le petit rituel décrit précédemment, la "lévitation" devient bien plus aisée. Est-ce comme la plupart des participants le pensent du à une force psychique résultant de la concentration du groupe? d'une force magnétique? de l'énergie fournie par la chaleur des mains superposées?
+Cette expérience est réalisée sans trucage et fonctionne bel et bien (j'ai même testé personnellement en me faisant soulever avec mon fauteuil roulant 😄, pas loin de 100 kg au total). La question est de savoir ***pourquoi*** après le petit rituel décrit précédemment, la "lévitation" devient bien plus aisée. Est-ce comme la plupart des participants le pensent du à une force psychique résultant de la concentration du groupe? d'une force magnétique? de l'énergie fournie par la chaleur des mains superposées?
 
 Ce qui suit donne une liste de phénomènes physiques et psychologiques qui, combinés, fournit une explication raisonnable à la lévitation en groupe.
 
@@ -73,7 +74,7 @@ On observe exactement le même phénomène de distribution des efforts lorsque v
 
 ![](images/tumblr_lw7ojgidWF1qeygk1o1_500.jpg){group="my-gallery"}
 
-_**"OK mais alors pourquoi échouent-ils la première fois ? Et pourquoi après le rituel ça marche ?"**_
+***"OK mais alors pourquoi échouent-ils la première fois ? Et pourquoi après le rituel ça marche ?"***
 
 On y vient ! Plusieurs raisons peuvent être invoquées :
 
@@ -87,9 +88,9 @@ Et oui ! Parce que la répartition des poids est correctement distribuée **si l
 
 ![](images/prophetie-autorealisatrice.jpg)
 
-Au premier essai, les porteurs "savent" qu'un individu est trop lourd pour être soulevé d'un seul doigt, ainsi, **de manière subconsciente, ils n'exerceront pas suffisamment d'effort au premier essai**, c'est ce qu'on appelle une _rétroaction négative amortissante_. Après le "rituel", les participants sont disposés à croire que le corps va être mis en mouvement, que c'est le rituel lui même qui leur a conféré cette énergie, et par conséquent exerceront l'effort suffisant pour décoller l'individu du sol.[^wik] 
+Au premier essai, les porteurs "savent" qu'un individu est trop lourd pour être soulevé d'un seul doigt, ainsi, **de manière subconsciente, ils n'exerceront pas suffisamment d'effort au premier essai**, c'est ce qu'on appelle une *rétroaction négative amortissante*. Après le "rituel", les participants sont disposés à croire que le corps va être mis en mouvement, que c'est le rituel lui même qui leur a conféré cette énergie, et par conséquent exerceront l'effort suffisant pour décoller l'individu du sol.[^1]
 
-[^wik]: Article Wikipédia sur la prophétie auto réalisatrice - [lien](http://en.wikipedia.org/wiki/Light_as_a_feather,_stiff_as_a_board)
+[^1]: Article Wikipédia sur la prophétie auto réalisatrice - [lien](http://en.wikipedia.org/wiki/Light_as_a_feather,_stiff_as_a_board)
 
 ![](images/12_3_carbonell_f_g1.gif)
 
@@ -117,18 +118,18 @@ Fort de ces 6 arguments, on peut raisonnablement penser que "l'incroyable lévit
 
 Tous **les arguments physiques avancés sont faciles à mettre en évidence** :
 
-- Pour expérimenter quel poids un individu est capable de soulever vous pouvez utiliser un sac comportant un poids donné, relié par une sangle à votre index. Munissez vous d'un dynamomètre et le tour est joué.
-- Vous pouvez alors mettre en évidence l'influence de l'angle de portée et constater que l'on fournit moins d'effort si la force est appliquée exclusivement à la verticale.
-- Faites de même avec une sangle plus ou moins élastique pour sentir que la rigidité est un facteur déterminant.
-- Quant à la synchronisation et aux attitudes anticipées sur les forces exercées, on pourra munir les points d'applications (genoux et aisselles) de capteurs de pressions et forces pour visualiser la différence de comportements au premier et deuxième essai.
+-   Pour expérimenter quel poids un individu est capable de soulever vous pouvez utiliser un sac comportant un poids donné, relié par une sangle à votre index. Munissez vous d'un dynamomètre et le tour est joué.
+-   Vous pouvez alors mettre en évidence l'influence de l'angle de portée et constater que l'on fournit moins d'effort si la force est appliquée exclusivement à la verticale.
+-   Faites de même avec une sangle plus ou moins élastique pour sentir que la rigidité est un facteur déterminant.
+-   Quant à la synchronisation et aux attitudes anticipées sur les forces exercées, on pourra munir les points d'applications (genoux et aisselles) de capteurs de pressions et forces pour visualiser la différence de comportements au premier et deuxième essai.
 
 Enfin je propose un **test psychologique** sur un échantillons de plusieurs groupes afin de mettre en évidence le phénomène de prophétie auto-réalisatrice.
 
 **Le protocole proposé modifie les instructions données aux 5 volontaires de la façon suivante :**
 
-1. Expliquez qu'il est tout à fait aisé de soulever avec l'index un individu même lourd par un groupe de 4 autres personnes se répartissant le poids. Faites leur expérimenter en insistant sur l'importance d'être bien synchro.
-2. Demandez leur maintenant de disposer leur main au dessus de la tête du cobaye pendant une trentaine de secondes, de façon à créer une "résistance énergétique", "un mur magnétique" ou n'importe quoi de sexy qui sonne intelligent et qui les persuadent que l'essai suivant se révèlera être plus rude.
-3. Demandez leur de ré-éssayer en appliquant la même force qu'au premier essai, ni plus ni moins, de façon à sentir cette "incroyable" résistance.
+1.  Expliquez qu'il est tout à fait aisé de soulever avec l'index un individu même lourd par un groupe de 4 autres personnes se répartissant le poids. Faites leur expérimenter en insistant sur l'importance d'être bien synchro.
+2.  Demandez leur maintenant de disposer leur main au dessus de la tête du cobaye pendant une trentaine de secondes, de façon à créer une "résistance énergétique", "un mur magnétique" ou n'importe quoi de sexy qui sonne intelligent et qui les persuadent que l'essai suivant se révèlera être plus rude.
+3.  Demandez leur de ré-éssayer en appliquant la même force qu'au premier essai, ni plus ni moins, de façon à sentir cette "incroyable" résistance.
 
 Les résultats de cette expérience permettront de conclure si la permutation des effets attendus opère sur l'action des participants une inversion entre rétroaction positive et négative. Dit autrement, dans les deux cas, le fait d'énoncer la prédiction et de trouver des gens pour y croire modifie les anticipations et donc les comportements.
 

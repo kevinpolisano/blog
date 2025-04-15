@@ -2,7 +2,7 @@
 title: "Comment installer et utiliser ADiMat pour Matlab ?"
 author: "Kévin Polisano"
 date: "2013-07-24"
-categories: [matlab]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -15,7 +15,7 @@ image: images/matlablogo.jpg
 
 <a href="https://www.informatik.tu-darmstadt.de/sc/res/sw/adimat/general/index.en.jsp" target="_blank" class="broken_link">ADiMat</a> signifie **A**utomatisches **Di**fferenzieren für **Mat**lab, c'est donc un programme tournant sous Matlab qui permet de "différencier" (calculer la différentielle, ou "dériver") n'importe quelle fonction écrite en Matlab, autrement dit une bête <a href="https://fr.wikipedia.org/wiki/Bo%C3%AEte_noire" target="_blank">boite noire</a> :
 
-```matlab
+``` matlab
 function sorties = f(entrees)
     % le corps de la fonction
     % transformant les entrées en sorties
@@ -28,15 +28,15 @@ Parce que parfois la fonction $f$ peut être extrêmement compliquée, et donc l
 
 ## Installation de ADiMat
 
-<span style="color: #333333;"><strong>1)</strong> Télécharger l'archive correspondant à votre système d'exploitation et l'extraire dans votre `HOME` (`~/`).</span>
+[<strong>1)</strong> Télécharger l'archive correspondant à votre système d'exploitation et l'extraire dans votre `HOME` (`~/`).]{style="color: #333333;"}
 
-```matlab
+``` matlab
 tar xzvf adimat-0.5.7-3269-GNU_Linux-x86_64.tar.gz
 ```
 
-**2) ** Dans votre dossier d'installation Matlab (chez moi `~/Matlab/`) ouvrez le fichier `startup.m` et ajoutez ces deux lignes à la fin :
+**2)** Dans votre dossier d'installation Matlab (chez moi `~/Matlab/`) ouvrez le fichier `startup.m` et ajoutez ces deux lignes à la fin :
 
-```matlab
+``` matlab
 setenv('ADIMAT_HOME', '~/adimat-0.5.7-3269-GNU_Linux-x86_64');
 ADiMat_startup
 ```
@@ -45,25 +45,25 @@ Ce qui renseignera le chemin vers le dossier d'installation d'ADiMat via la vari
 
 Parfois le fichier `startup.m` ne se trouve pas à la racine du dossier Matlab mais plus profondément dans l'arborescence, pour le localiser placez vous dans le dossier Matlab et tapez simplement :
 
-```matlab
+``` matlab
 locate startup.m
 ```
 
 **3)** Placez le fichier de démarrage suivant se trouvant dans votre dossier d'installation ADiMat :
 
-```bash
+``` bash
 ~/adimat-0.5.7-3269-GNU_Linux-x86_64/share/adimat/runtime/ADiMat_startup.m
-``` 
+```
 
-dans le <span style="text-decoration: underline;">même</span> dossier Matlab où se trouve `startup.m`
+dans le [même]{style="text-decoration: underline;"} dossier Matlab où se trouve `startup.m`
 
 **4)** Relancez Matlab, et l'installation est terminée.
 
 ## Utilisation d'ADiMat
 
-<span style="color: #333333;">C'est très simple, une fois définie votre fonction $f$ : </span>
+[C'est très simple, une fois définie votre fonction $f$ : ]{style="color: #333333;"}
 
-```matlab
+``` matlab
 function sorties = f(entrees)
     % le corps de la fonction
     % transformant les entrées en sorties
@@ -72,18 +72,18 @@ end
 
 Le calcul de jacobienne évaluée au point `(arg1,...,argN) s`'obtient alors tout simplement par :
 
-```matlab
+``` matlab
 J = admDiffFor(@f, 1, arg1, ..., argN)
 ```
 
 Matlab vous demande alors si vous l'autorisez à communiquer avec le serveur d'ADiMat, répondez `yes.` Si tout se passe bien il devrait vous calculer la matrice jacobienne $J$. Il se peut que vous obteniez à la place des erreurs, par exemple pour ma part je n'avais pas l'interpréteur `/bin/zsh`d'installé, ni la librairie `libssl0.9.8`
 
-```matlab
+``` matlab
 sudo apt-get install zsh
 sudo apt-get install libssl0.9.8
 ```
 
-**<span style="color: #339966;">Exemple d'utilisation</span>**
+[**Exemple d'utilisation**]{style="color: #339966;"}
 
 Pour illustrer l'intérêt de la librairie, je vais traiter un exemple qui m'a sauvé la mise dans le cadre d'un <a href="http://fr.wikipedia.org/wiki/Filtre_de_Kalman" target="_blank">filtrage de Kalman</a>.</span>
 
@@ -97,7 +97,7 @@ Nous avons relié l'état $\mathbf{Y}_n$ à l'état suivant $\mathbf{Y}_{n+1}$ v
 
 Dont l'implémentation est bien sûr :
 
-```matlab
+``` matlab
 function [z1 v1] = RK4(z,v)
 global h cstar
 k1 = model(1,[z,v],cstar);
@@ -116,6 +116,6 @@ vous allez devoir calculer ces dérivées partielles en utilisant plusieurs fois
 
 ADiMat va faire le travail à votre place en utilisant une technique s'appuyant également sur la règle de la chaîne, à savoir la [différentiation automatique](http://en.wikipedia.org/wiki/Automatic_differentiation). Et en une ligne vous obtenez le résultat escompté :
 
-```matlab
+``` matlab
 JRK4(n) = admDiffFor(@RK4, 1, z(n), v(n));
 ```

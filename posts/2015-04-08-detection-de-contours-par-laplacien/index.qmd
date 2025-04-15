@@ -2,7 +2,7 @@
 title: "Détection de contours par Laplacien"
 author: "Kévin Polisano"
 date: "2015-04-08"
-categories: [Laplacien]
+categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -11,10 +11,9 @@ citation-location: margin
 image: images/LoG_2D.jpg
 ---
 
-
 Un billet suite à la question d'une étudiante au sujet du TP de traitement d'image.
 
-Dans la partie _Opérateurs laplacien et FFT_, on demande d'approximer le filtre Laplacien par une couronne dans le domaine fréquentiel. Sa question est la suivante :
+Dans la partie *Opérateurs laplacien et FFT*, on demande d'approximer le filtre Laplacien par une couronne dans le domaine fréquentiel. Sa question est la suivante :
 
 > Je ne comprends plus trop le rapport avec le laplacien \[...\] Autre petit problème, les rayons de la couronne sont très difficiles à trouver et varient suivant les images...
 
@@ -46,7 +45,6 @@ puis $\Delta G_{\sigma}(x,y)$ et $\mathcal{F}(\Delta G_{\sigma})(u,v)$
 
 ![](images/LoG_2D.jpg)
 
-
 On constate effectivement que dans le domaine fréquentiel le LoG est non nul sur une "couronne" (en bleu sur la figure en haut à droite) ! :)
 
 **Comment déterminer les rayons de la couronne ?**
@@ -55,13 +53,13 @@ Essayez à partir de la formule de $\mathcal{F}(\Delta G_{\sigma})(u,v)$ (en rad
 
 Enfin quelques remarques pour terminer :
 
-- Le LoG (en 3D représenté en bas à gauche) est un cas particulier de "Mexican hat" (chapeau mexicain de par sa forme), qui est un filtre passe-bande très utilisé dans la décomposition en ondelettes.
-- Le LoG est la limite d'une DoG (Difference of Gaussian), plus précisément : $$DoG_{\sigma_1,\sigma_2}(x,y)=\frac{1}{2\pi \sigma_1^2} e^{-\frac{(x^2 + y^2)}{2 \sigma_1^2}} - \frac{1}{2\pi \sigma_2^2} e^{-\frac{(x^2 + y^2)}{2 \sigma_2^2}}$$
-- On peut montrer que $DoG_{\sigma_1,\sigma_2}$ est une bonne approximation de $LoG$ lorsque $$\frac{\sigma_2}{\sigma_1}=1,6$$
+-   Le LoG (en 3D représenté en bas à gauche) est un cas particulier de "Mexican hat" (chapeau mexicain de par sa forme), qui est un filtre passe-bande très utilisé dans la décomposition en ondelettes.
+-   Le LoG est la limite d'une DoG (Difference of Gaussian), plus précisément : $$DoG_{\sigma_1,\sigma_2}(x,y)=\frac{1}{2\pi \sigma_1^2} e^{-\frac{(x^2 + y^2)}{2 \sigma_1^2}} - \frac{1}{2\pi \sigma_2^2} e^{-\frac{(x^2 + y^2)}{2 \sigma_2^2}}$$
+-   On peut montrer que $DoG_{\sigma_1,\sigma_2}$ est une bonne approximation de $LoG$ lorsque $$\frac{\sigma_2}{\sigma_1}=1,6$$
 
 **Annexe : code Matlab des figures**
 
-```matlab
+``` matlab
 N = 400;
 sigma = 2;
 

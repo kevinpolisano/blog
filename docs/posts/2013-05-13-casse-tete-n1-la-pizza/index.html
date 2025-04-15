@@ -120,16 +120,24 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../musique.html"> 
-<span class="menu-text">Musique</span></a>
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../handicap.html"> 
 <span class="menu-text">Handicap</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
-<span class="menu-text">Recherche</span></a>
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -150,7 +158,7 @@ window.Quarto = {
     <div class="quarto-title column-body">
       <h1 class="title">Casse-tête n°1 : la pizza</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">enigme</div>
+                <div class="quarto-category">mathématiques</div>
               </div>
                   </div>
   </div>
@@ -207,15 +215,15 @@ window.Quarto = {
 <section id="formulation-du-problème" class="level3">
 <h3 class="anchored" data-anchor-id="formulation-du-problème">Formulation du problème</h3>
 <p>Lorsque l’on mange pizza entre amis, nous apprécions goûter un petit morceau de la pizza de chacun. C’est pourquoi j’ai l’habitude sur ma part de pizza de rayon <span class="math inline">\(r=OB\)</span> de 16 cm, de découper parallèlement à <span class="math inline">\([OB]\)</span> une “bande” d’épaisseur <span class="math inline">\(e&lt;r\)</span> de 3 cm. Après avoir donné cette partie à un ami, il me reste donc une sorte de nouveau secteur angulaire <span class="math inline">\(MAC\)</span>. J’ai mesuré la différence de longueur entre les côtés <span class="math inline">\(MC\)</span> et <span class="math inline">\(MA\)</span> : <span class="math inline">\(d=MC-MA\)</span> qui est de 2 cm.</p>
-<p><strong>Question : quel est l’angle <span class="math inline">\(\alpha=AOB\)</span> de la part initiale ?</strong></p>
+<p><strong>Question : quel est l’angle</strong> <span class="math inline">\(\alpha=AOB\)</span> de la part initiale ?</p>
 <p><img src="images/pizza.jpg" class="img-fluid"></p>
 </section>
 <section id="solution" class="level3">
 <h3 class="anchored" data-anchor-id="solution">Solution</h3>
 <p>Les résultats qui vont suivre peuvent être vérifier “à la main” avec la simulation geogebra ci-dessous :</p>
 <p style="text-align: center;">
-<a href="pizza.ggb">Télécharger la simulation geogebra</a>
-</p>
+</p><p><a href="pizza.ggb">Télécharger la simulation geogebra</a></p>
+<p></p>
 <p>On cherche dans un premier temps à exprimer la différence de longueur <span class="math inline">\(\color{orange}{d=MC-MA}\)</span> quand l’angle <span class="math inline">\(\color{green}{\alpha=AOB}\)</span> varie, avec <span class="math inline">\(r\)</span> et <span class="math inline">\(e\)</span> fixés.</p>
 <p><strong>1. Calcul de la longueur MA</strong></p>
 <p><img src="images/calculMA.jpg" class="img-fluid"></p>
@@ -223,7 +231,7 @@ window.Quarto = {
 <p><strong>2.&nbsp; Calcul de la longueur MC</strong></p>
 <p><img src="images/calculMC.jpg" class="img-fluid"></p>
 <p>Soit maintenant <span class="math inline">\(F\)</span> le projeté orthogonal de <span class="math inline">\(O\)</span> sur <span class="math inline">\((MC)\)</span>. On a alors <span class="math inline">\(MC=FC-FM\)</span>. Par le théorème de Pythagore <span class="math inline">\(OC^2=OF^2+FC^2\)</span> d’où <span class="math inline">\(FC=\sqrt{r^2-e^2}\)</span>. Ensuite <span class="math inline">\(FM=OD=\frac{e}{\tan(\alpha)}\)</span>, donc <span class="math display">\[MC=\sqrt{r^2-e^2}-\frac{e}{\tan(\alpha)}\]</span></p>
-<p><strong>3. Etude de la fonction <span class="math inline">\(d(\alpha)=MC-MA\)</span></strong></p>
+<p><strong>3. Etude de la fonction</strong> <span class="math inline">\(d(\alpha)=MC-MA\)</span></p>
 <p>La fonction a étudier est la suivante : <span class="math display">\[d(\alpha)=\left(\sqrt{r^2-e^2}-\frac{e}{\tan(\alpha)}\right)-\left(r-\frac{e}{\sin(\alpha)}\right)\]</span></p>
 <p>ou écrit autrement : <span class="math display">\[d(\alpha)=e\left(\frac{1-\cos(\alpha)}{\sin(\alpha)}\right)+(\sqrt{r^2-e^2}-r)\]</span></p>
 <p>On remarque que l’étude s’effectue sur l’intervalle <span class="math inline">\([\alpha_{min},\alpha_{max}]\)</span> où : <span class="math display">\[\left\{\begin{array}{l}\alpha_{min}=\arcsin\left(\frac{e}{r}\right)\\\alpha_{max}=\pi-\arcsin\left(\frac{e}{r}\right)\end{array}\right.\]</span></p>
@@ -232,7 +240,7 @@ window.Quarto = {
 <p>On dérive la fonction et on obtient : <span class="math display">\[d'(\alpha)=e\frac{\sin(\alpha)^2-(1-\cos(\alpha))\cos(\alpha)}{\sin(\alpha)^2}=e\frac{1-\cos(\alpha)}{\sin(\alpha)^2}=\frac{e}{1+\cos(\alpha)}\]</span></p>
 <p>Comme <span class="math inline">\(\cos(\alpha)\)</span> est compris entre <span class="math inline">\(-1\)</span> et <span class="math inline">\(1\)</span> alors <span class="math inline">\(d'(\alpha)&gt;0\)</span> sur l’intervalle <span class="math inline">\([\alpha_{min},\alpha_{max}]\)</span> et ainsi la fonction <span class="math inline">\(d\)</span> est continue strictement croissante sur cet intervalle. <span class="math inline">\(d\)</span> est une bijection de <span class="math inline">\([\alpha_{min},\alpha_{max}]\)</span> dans <span class="math inline">\([d(\alpha_{min}),d(\alpha_{max})]=[0,2\sqrt{r^2-e^2}]\)</span>.</p>
 <p>On constate alors, en vertu de la croissance et du fait que <span class="math inline">\(d(\alpha_{min})=0\)</span>, que <span class="math inline">\(d(\alpha)\)</span> reste toujours positive sur l’intervalle <span class="math inline">\([d(\alpha_{min}),d(\alpha_{max})]\)</span> c’est-à-dire que le côté <span class="math inline">\(MC\)</span> est toujours supérieur au côté <span class="math inline">\(MA\)</span>. On remarque également que le point <span class="math inline">\(M\)</span>, initialement confondu avec <span class="math inline">\(A\)</span>, décroît sur l’axe des abscisses jusqu’à la position d’abscisse <span class="math inline">\(r-e\)</span> atteinte pour <span class="math inline">\(\alpha=\frac{\pi}{2}\)</span>, puis croît de nouveau pour atteindre le point <span class="math inline">\(A\)</span> lorsque <span class="math inline">\(\alpha=\alpha_{max}\)</span>.</p>
-<p><strong>4. Inversion de l’équation <span class="math inline">\(d(\alpha)=C\)</span></strong></p>
+<p><strong>4. Inversion de l’équation</strong> <span class="math inline">\(d(\alpha)=C\)</span></p>
 <p>On sait d’après ce qui précède que si <span class="math inline">\(C\in [0,2\sqrt{r^2-e^2}]\)</span> alors l’équation <span class="math inline">\(d(\alpha)\)</span> admet une unique solution <span class="math inline">\(\alpha_C\)</span>. Nous allons maintenant expliciter cette solution en reprenant l’expression initiale de <span class="math inline">\(d(\alpha)\)</span>.</p>
 <p>En posant <span class="math inline">\(t=tan\left(\frac{\alpha}{2}\right)\)</span> on a <span class="math inline">\(\sin(\alpha)=\frac{2t}{1+t^2}\)</span> et <span class="math inline">\(\tan(\alpha)=\frac{2t}{1-t^2}\)</span> d’où : <span class="math display">\[d(\alpha)=\left(\sqrt{r^2-e^2}-\frac{e(1-t^2)}{2t}\right)-\left(r-\frac{e(1+t^2)}{2t}\right)=et+\sqrt{r^2-e^2}-r\]</span></p>
 <p>Par conséquent on a : <span class="math display">\[d(\alpha)=C\Leftrightarrow et+\sqrt{r^2-e^2}-r=C\Leftrightarrow t=\frac{C+r-\sqrt{r^2-e^2}}{e}\]</span></p>

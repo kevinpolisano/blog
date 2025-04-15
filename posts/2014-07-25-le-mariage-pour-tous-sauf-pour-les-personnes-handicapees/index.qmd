@@ -2,7 +2,7 @@
 title: "Le mariage pour tous, sauf pour les personnes handicapées…"
 author: "Kévin Polisano"
 date: "2014-07-25"
-categories: [handicap]
+categories: [handicap, politique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -16,26 +16,35 @@ lightbox:
   loop: true
 ---
 
-Le 17 mai 2013, la loi n° 2013-404 ouvre **le droit au mariage, pour tous. Ou presque ! **
+Le 17 mai 2013, la loi n° 2013-404 ouvre **le droit au mariage, pour tous. Ou presque !**
 
 <p style="text-align: justify;">
-  Aucune loi n'interdit les personnes handicapées de s'unir, mais dans la pratique, la réglementation les en dissuade. Nous verrons dans cet article quelle injustice frappe toutes celles et tous ceux dont l'handicap les empêche de travailler, et qui voudraient pour autant <strong>vivre une vie de couple "normale"</strong>. Ces derniers sont condamnés à voir leurs faibles revenus diminués voir carrément supprimés de part la prise en compte des revenus de leur conjoint dans le calcul de leur AAH (Allocation aux Adultes Handicapés), leur seule source de revenu, provoquant ainsi une situation intolérable de <strong>dépendance financière vis à vis de celui qui souhaite partager leur vie</strong>.[^rf1-750][^rf2-750] Ce <strong>prix ce l'amour</strong>, afflige donc aux personnes présentant déjà une dépendance physique, une double peine. Cette situation, tout le monde à l'unanimité s'entendra pour dire qu'elle est inacceptable, qui trouverait normal que son salaire soit calculé en fonction de celui de son partenaire ? Pourtant la question n'est pas récente, nous montrerons qu'elle a été soulevée auprès des ministres un grand nombre de fois, et que <strong>les réponses données par le gouvernement, sont depuis 2007 toujours les même : de simples rappels à la législation !</strong> Il est grand temps d'analyser le problème plus sérieusement, et d'engager un réel débat pour remédier à cette situation humiliante de dépendances qui contraignent les personnes handicapées à l'isolement ou qui, pour les plus téméraires, conduisent inévitablement à la fraude...</p>
 
-[^rf1-750]: Article de Franck Seuret, un journaliste spécialisé dans le handicap, tiré du magasine Faire-Face - <a href="http://www.faire-face.fr/2013/02/12/le-mariage-pour-tous-sauf-pour-les-beneficiaires-de-lallocation-adulte-handicape/" target="_blank" rel="noopener">lien</a>
+Aucune loi n'interdit les personnes handicapées de s'unir, mais dans la pratique, la réglementation les en dissuade. Nous verrons dans cet article quelle injustice frappe toutes celles et tous ceux dont l'handicap les empêche de travailler, et qui voudraient pour autant <strong>vivre une vie de couple "normale"</strong>. Ces derniers sont condamnés à voir leurs faibles revenus diminués voir carrément supprimés de part la prise en compte des revenus de leur conjoint dans le calcul de leur AAH (Allocation aux Adultes Handicapés), leur seule source de revenu, provoquant ainsi une situation intolérable de <strong>dépendance financière vis à vis de celui qui souhaite partager leur vie</strong>.[^1][^2] Ce <strong>prix ce l'amour</strong>, afflige donc aux personnes présentant déjà une dépendance physique, une double peine. Cette situation, tout le monde à l'unanimité s'entendra pour dire qu'elle est inacceptable, qui trouverait normal que son salaire soit calculé en fonction de celui de son partenaire ? Pourtant la question n'est pas récente, nous montrerons qu'elle a été soulevée auprès des ministres un grand nombre de fois, et que <strong>les réponses données par le gouvernement, sont depuis 2007 toujours les même : de simples rappels à la législation !</strong> Il est grand temps d'analyser le problème plus sérieusement, et d'engager un réel débat pour remédier à cette situation humiliante de dépendances qui contraignent les personnes handicapées à l'isolement ou qui, pour les plus téméraires, conduisent inévitablement à la fraude...
 
-[^rf2-750]: Article du site handicap.fr - <a href="http://informations.handicap.fr/art-mariage-pour-tous-aah-853-5763.php" target="_blank" rel="noopener">lien</a>
+[^1]: Article de Franck Seuret, un journaliste spécialisé dans le handicap, tiré du magasine Faire-Face - <a href="http://www.faire-face.fr/2013/02/12/le-mariage-pour-tous-sauf-pour-les-beneficiaires-de-lallocation-adulte-handicape/" target="_blank" rel="noopener">lien</a>
+
+[^2]: Article du site handicap.fr - <a href="http://informations.handicap.fr/art-mariage-pour-tous-aah-853-5763.php" target="_blank" rel="noopener">lien</a>
+
+</p>
 
 <p style="text-align: justify;">
-  Après avoir pris connaissance de cette réalité de subordination de la personne handicapée au portefeuille de son conjoint, j'ai commencé à mener mon enquête. Première étape : vérifier les faits, je vous présenterai donc rapidement le mode de calcul de l'AAH pour un couple, afin de mettre en lumière le problème de dépendance lié à celui-ci. Deuxième étape : faire une recherche au sein des questions de l'assemblée nationale qui traitent de ce problème, et analyser les réponses des ministres à ce sujet. Enfin troisième étape : répondre aux assertions des ministres en les confrontant à la réalité terrain, et ainsi rééouvrir le débat pour réfléchir à une solution, et ne pas se contenter de citer les lois actuelles.</p>
+
+Après avoir pris connaissance de cette réalité de subordination de la personne handicapée au portefeuille de son conjoint, j'ai commencé à mener mon enquête. Première étape : vérifier les faits, je vous présenterai donc rapidement le mode de calcul de l'AAH pour un couple, afin de mettre en lumière le problème de dépendance lié à celui-ci. Deuxième étape : faire une recherche au sein des questions de l'assemblée nationale qui traitent de ce problème, et analyser les réponses des ministres à ce sujet. Enfin troisième étape : répondre aux assertions des ministres en les confrontant à la réalité terrain, et ainsi rééouvrir le débat pour réfléchir à une solution, et ne pas se contenter de citer les lois actuelles.
+
+</p>
 
 ## Un mode de calcul de l'AAH hostile à la vie de couple
 
 Je vais résumer rapidement le calcul présenté plus en détails dans mon précédent article
 
 <p style="text-align: center;">
-  [L'AAH pour les nuls, comprendre par l'exemple](../2024-04-01-laah-pour-les-nuls-comprendre-par-lexemple)</p>
 
-<span style="text-decoration: underline;">Méthode</span> : L'AAH versée s'obtient en comparant l'assiette du couple à un certain plafond. L'assiette du couple est égale à la somme de l'assiette du bénéficiaire et de l'assiette du conjoint, chacune étant déterminée par des abattements spécifiques sur leurs ressources respectives : celle du bénéficiaire est soumis à l'abattement 80/40, c'est-à-dire la partie des revenus qui est inférieur à 30% de la valeur du smic est abattue de 80% (donc on en garde que 20% pour constituer l'assiette), et la partie supérieure est abattue de 40% ; quant à l'assiette du conjoint elle est obtenue après abattement de 10% puis 20%.
+[L'AAH pour les nuls, comprendre par l'exemple](../2024-04-01-laah-pour-les-nuls-comprendre-par-lexemple)
+
+</p>
+
+[Méthode]{style="text-decoration: underline;"} : L'AAH versée s'obtient en comparant l'assiette du couple à un certain plafond. L'assiette du couple est égale à la somme de l'assiette du bénéficiaire et de l'assiette du conjoint, chacune étant déterminée par des abattements spécifiques sur leurs ressources respectives : celle du bénéficiaire est soumis à l'abattement 80/40, c'est-à-dire la partie des revenus qui est inférieur à 30% de la valeur du smic est abattue de 80% (donc on en garde que 20% pour constituer l'assiette), et la partie supérieure est abattue de 40% ; quant à l'assiette du conjoint elle est obtenue après abattement de 10% puis 20%.
 
 Ce n'est pas si compliqué regardez, je résume tout cela ci-dessous, et des exemples sont disponibles en annexe.
 
@@ -43,61 +52,60 @@ Ce n'est pas si compliqué regardez, je résume tout cela ci-dessous, et des exe
 
 Le contexte de cet article est celui d'une personne **bénéficiaire de l'AAH ne pouvant pas travailler**, c'est-à-dire dont l'AAH est la seule source de revenus. Ainsi dans toute la suite on considèrera l'assiette du bénéficiaire nulle.
 
-_<span style="text-decoration: underline;">Remarque</span> : cet ensemble est loin d'être négligeable car le <span style="color: #ff0000;">pourcentage de personnes handicapées ne travaillant pas</span> (taux d'incapacité tout confondu 50%-79% ou > 80%) est de **<span style="color: #ff0000;">82,8 % !</span>**<span style="color: #ff0000;"> </span><span style="color: #ff0000;"><span style="color: #000000;">Cette hypothèse concernent donc la majorité des titulaires de l'AAH.</span></span>_
+[*Remarque*]{style="text-decoration: underline;"} *: cet ensemble est loin d'être négligeable car le [pourcentage de personnes handicapées ne travaillant pas]{style="color: #ff0000;"} (taux d'incapacité tout confondu 50%-79% ou \> 80%) est de [**82,8 % !**]{style="color: #ff0000;"}[Cette hypothèse concernent donc la majorité des titulaires de l'AAH.]{style="color: #000000;"}*
 
 <p style="text-align: left;">
-  ![](images/kevin-polisano-aah-pourcentage-sans-emploi.png) 
-  
-  Le bénéficiaire ne pouvant pas travailler, son assiette est nulle et donc son AAH est <strong>entièrement déterminée par l'assiette du conjoint</strong>, donc fonction de ses revenus. Ci-dessous la courbe représentant la décroissance de l'AAH versée lorsque les revenus du conjoint augmentent <em>[Edit : les montants sont ceux de 2015 mais la logique comme la courbe reste la même]</em> :</p>
+
+![](images/kevin-polisano-aah-pourcentage-sans-emploi.png) 
+
+Le bénéficiaire ne pouvant pas travailler, son assiette est nulle et donc son AAH est <strong>entièrement déterminée par l'assiette du conjoint</strong>, donc fonction de ses revenus. Ci-dessous la courbe représentant la décroissance de l'AAH versée lorsque les revenus du conjoint augmentent <em>\[Edit : les montants sont ceux de 2015 mais la logique comme la courbe reste la même\]</em> :
+
+</p>
 
 <p style="text-align: center;">
-  ![](images/graphe-aah-conjoint.png)</p>
 
-  * **Si son conjoint gagne moins de 1097 €, l’AAH n’est pas affectée.**
-  * **Si son conjoint gagne entre 1097 € et 2195 €, l’AAH décroît vers 0.**
-  * **Si son conjoint gagne plus de 2195 €, l’AAH est réduit à 0 €**
+![](images/graphe-aah-conjoint.png)
+
+</p>
+
+-   **Si son conjoint gagne moins de 1097 €, l’AAH n’est pas affectée.**
+-   **Si son conjoint gagne entre 1097 € et 2195 €, l’AAH décroît vers 0.**
+-   **Si son conjoint gagne plus de 2195 €, l’AAH est réduit à 0 €**
 
 Maintenant que l'on sait de quoi on parle, et la façon dont est affectée l'allocation du bénéficiaire s'il décide toutefois de vivre en couple, allons voir ce qu'en pense nos députés et ministres ...
 
 ## Un gouvernement qui juge "très favorable" le régime applicable à l'AAH
 
-En voulant savoir si la question de la dépendance vis à vis du conjoint avait déjà été soulevée, j'ai fait quelques recherches sur le site de l'assemblée nationale. <span style="color: #ff0000;">La question a déjà été abordé <strong>des dizaines de fois</strong></span>. Voici une liste non exhaustive des questions émises par certains députés et des réponses fournies par le ministère :
+En voulant savoir si la question de la dépendance vis à vis du conjoint avait déjà été soulevée, j'ai fait quelques recherches sur le site de l'assemblée nationale. [La question a déjà été abordé <strong>des dizaines de fois</strong>]{style="color: #ff0000;"}. Voici une liste non exhaustive des questions émises par certains députés et des réponses fournies par le ministère :
 
-  * <a href="http://questions.assemblee-nationale.fr/q13/13-2490QE.htm" target="_blank" rel="noopener">Question n°2490, 13ème législature, de <b>M. François Vannson, août 2007</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q13/13-23265QE.htm" target="_blank" rel="noopener">Question n°23265, 13ème législature, de <b>M. Jean-Marie Morisset, mai 2008</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q13/13-26409QE.htm" target="_blank" rel="noopener">Question n°26409, 13ème législature, de <b>M. Gilles d'Ettore, juillet 2008</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q13/13-35016QE.htm" target="_blank" rel="noopener">Question n°35016, 13ème législature, de <b>M. André Gerin, novembre 2008</b></a>
-  * <a href="http://www.questions.assemblee-nationale.fr/q13/13-35013QE.htm" target="_blank" rel="noopener" class="broken_link">Question n°35013, 13ème législature, de <b>M. François Brottes, novembre 2008</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q14/14-1503QE.htm" target="_blank" rel="noopener">Question n°1503, 14ème législature, de <b>M. Jean-Pierre Decool, juillet 2012</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q14/14-20766QE.htm" target="_blank" rel="noopener">Question n°20766, 14ème législature, de <b>M. Michel Destot, mars 2013</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q14/14-24139QE.htm" target="_blank" rel="noopener">Question n°24139, 14ème législature, de <b>M. Michel Ménard, avril 2013</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q14/14-25562QE.htm" target="_blank" rel="noopener">Question n°25562, 14ème législature, de <b>M. Bernard Accoyer, avril 2013</b></a>
-  * <a href="http://questions.assemblee-nationale.fr/q14/14-52154QE.htm" target="_blank" rel="noopener">Question n°52154, 14ème législature, de <b>Mme Barbara Pompili, mars 2014</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q13/13-2490QE.htm" target="_blank" rel="noopener">Question n°2490, 13ème législature, de <b>M. François Vannson, août 2007</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q13/13-23265QE.htm" target="_blank" rel="noopener">Question n°23265, 13ème législature, de <b>M. Jean-Marie Morisset, mai 2008</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q13/13-26409QE.htm" target="_blank" rel="noopener">Question n°26409, 13ème législature, de <b>M. Gilles d'Ettore, juillet 2008</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q13/13-35016QE.htm" target="_blank" rel="noopener">Question n°35016, 13ème législature, de <b>M. André Gerin, novembre 2008</b></a>
+-   <a href="http://www.questions.assemblee-nationale.fr/q13/13-35013QE.htm" target="_blank" rel="noopener" class="broken_link">Question n°35013, 13ème législature, de <b>M. François Brottes, novembre 2008</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q14/14-1503QE.htm" target="_blank" rel="noopener">Question n°1503, 14ème législature, de <b>M. Jean-Pierre Decool, juillet 2012</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q14/14-20766QE.htm" target="_blank" rel="noopener">Question n°20766, 14ème législature, de <b>M. Michel Destot, mars 2013</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q14/14-24139QE.htm" target="_blank" rel="noopener">Question n°24139, 14ème législature, de <b>M. Michel Ménard, avril 2013</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q14/14-25562QE.htm" target="_blank" rel="noopener">Question n°25562, 14ème législature, de <b>M. Bernard Accoyer, avril 2013</b></a>
+-   <a href="http://questions.assemblee-nationale.fr/q14/14-52154QE.htm" target="_blank" rel="noopener">Question n°52154, 14ème législature, de <b>Mme Barbara Pompili, mars 2014</b></a>
 
 Je vous invite chaleureusement à lire ces courtes question-réponse. Vous remarquerez que, ce qui est frappant, est la réponse systématique toute faite que donne le ministre. Je trouve même grotesque la façon dont on réduit la réponse à un vulgaire copier coller...
 
 Jugez par vous même sur ces quelques aperçus annotés :
 
-::: {.lightbox-gallery}
-
-![](images/question-assemblee-nationale-35013.png){group="my-gallery"}
-![](images/question-assemblee-nationale-35013.png){group="my-gallery"}
-![](images/question-assemblee-nationale-2490.png){group="my-gallery"}
-![](images/question-assemblee-nationale-2490.png){group="my-gallery"}
-![](images/question-assemblee-nationale-26409.png){group="my-gallery"}
-![](images/question-assemblee-23265.png){group="my-gallery"}
-![](images/question-assemblee-nationale-1503.png){group="my-gallery"}
+::: lightbox-gallery
+![](images/question-assemblee-nationale-35013.png){group="my-gallery"} ![](images/question-assemblee-nationale-35013.png){group="my-gallery"} ![](images/question-assemblee-nationale-2490.png){group="my-gallery"} ![](images/question-assemblee-nationale-2490.png){group="my-gallery"} ![](images/question-assemblee-nationale-26409.png){group="my-gallery"} ![](images/question-assemblee-23265.png){group="my-gallery"} ![](images/question-assemblee-nationale-1503.png){group="my-gallery"}
 :::
 
 Enumérons les arguments avancés pour justifier le refus de la déconjugualisation des ressources du bénéficiaire de l'AAH et de son conjoint :
 
-  * **<span style="line-height: 15px;">L'AAH est un minimum social et non une prestation compensatoire.</span>**
-  * **L'AAH obéit au principe de subsidiarité.**
-  * **Le plafond de l'AAH est doublé pour le couple, ce qui en fait un régime "très favorable"**
-  * **L'AAH a été revalorisée à hauteur de 25% pendant le précédent quinquennat.**
-  * **Les ressources prises en compte pour le calcul de l'AAH sont les revenus net catégoriels après abattements fiscaux et abattements spécifiques aux personnes invalides.**
-  * **La prestation de compensation de l'handicap (PCH) permet de prendre en compte les surcoûts liés à l'handicap, et permet donc de recentrer l'AAH sur sa vocation de revenu d'existence.**
-  * **L'abattement 80/40 et les règles de cumuls sont très favorables et incitateurs à l'emploi.**
+-   [**L'AAH est un minimum social et non une prestation compensatoire.**]{style="line-height: 15px;"}
+-   **L'AAH obéit au principe de subsidiarité.**
+-   **Le plafond de l'AAH est doublé pour le couple, ce qui en fait un régime "très favorable"**
+-   **L'AAH a été revalorisée à hauteur de 25% pendant le précédent quinquennat.**
+-   **Les ressources prises en compte pour le calcul de l'AAH sont les revenus net catégoriels après abattements fiscaux et abattements spécifiques aux personnes invalides.**
+-   **La prestation de compensation de l'handicap (PCH) permet de prendre en compte les surcoûts liés à l'handicap, et permet donc de recentrer l'AAH sur sa vocation de revenu d'existence.**
+-   **L'abattement 80/40 et les règles de cumuls sont très favorables et incitateurs à l'emploi.**
 
 Vous pouvez vérifier, dans toutes les réponses ces 7 points sont presque systématiquement recopiés, mot pour mot, pour justifier le refus. Alors nous allons reprendre ces arguments, point par point, en éclairant le novice en matière d'handicap, sur la réalité terrain...
 
@@ -105,55 +113,65 @@ Vous pouvez vérifier, dans toutes les réponses ces 7 points sont presque syst�
 
 Cette revalorisation était **une bonne chose**, nécessaire. Nuançons toutefois. Le non-initié pourrait interpréter, à tord, qu'il est un quart plus riche qu'il y a 5 ans en arrière, et donc que sa situation est 25% plus appréciable qu'auparavant. En réalité, le montant d'un salaire n'est pas un indicateur économique pertinent. Pourquoi ? Et bien imaginez que vous gagniez hier 1500 € par mois, et que vous achetez avec l'intégralité de  votre salaire des patates, à 15 € la patate (chère la patate, "c'est la crise" !) . Vous pouvez vous payer le luxe d'acheter "100 patates !!!". On vous propose demain une augmentation, vous gagnerez alors 1600 € par mois. Serez vous plus riche ? Ca dépend. Ca dépend car si le prix des patates passe de 15 à 20 €, alors vous ne pourrez plus acheter que 80 patates ! Ce b.a.-ba de l'économie, c'est ce qu'on appelle le **pouvoir d'achat**. Pour le mesurer on doit donc comparer l'augmentation d'un salaire avec la hausse des prix de consommations (ce qu'on appelle **l'inflation**).
 
-Une fois que l'on garde cela à l'esprit, on relativise concernant une augmentation ! Par exemple lorsque l'<span style="color: #ff0000;">AAH a augmenté de 24,8% entre 1995 et 2007, les prix, eux, ont augmenté de 18,7%</span>.[^rf3-750]. De même, lorsqu'au 1er septembre 2013 l'AAH a été revalorisée de 1,75% pour passer de 776,59 € à 790,18 €, les prix eux ont augmenté en moyenne de 1,1 % donc le pouvoir d’achat des allocataires de l’AAH est en réalité de 0,65 %, soit 5,04 €.[^rf4-750] Donc j'insiste, cette revalorisation était une bonne chose, mais qu'il faut nuancée. Notons que <span style="color: #ff0000;">l'AAH</span> (même couplée avec la Majoration pour la vie Autonome ou le complément de ressources) <span style="color: #ff0000;">reste toutefois encore en dessous du <strong>seuil de pauvreté</strong> qui est de 977 € par mois</span>[^rf5-750][^rf6-750][^rf7-750].
+Une fois que l'on garde cela à l'esprit, on relativise concernant une augmentation ! Par exemple lorsque l'[AAH a augmenté de 24,8% entre 1995 et 2007, les prix, eux, ont augmenté de 18,7%]{style="color: #ff0000;"}.[^3]. De même, lorsqu'au 1er septembre 2013 l'AAH a été revalorisée de 1,75% pour passer de 776,59 € à 790,18 €, les prix eux ont augmenté en moyenne de 1,1 % donc le pouvoir d’achat des allocataires de l’AAH est en réalité de 0,65 %, soit 5,04 €.[^4] Donc j'insiste, cette revalorisation était une bonne chose, mais qu'il faut nuancée. Notons que [l'AAH]{style="color: #ff0000;"} (même couplée avec la Majoration pour la vie Autonome ou le complément de ressources) [reste toutefois encore en dessous du <strong>seuil de pauvreté</strong> qui est de 977 € par mois]{style="color: #ff0000;"}[^5][^6][^7].
 
-[^rf3-750]: Revalorisation de l'AAH traitée sur officiel-handicap
+[^3]: Revalorisation de l'AAH traitée sur officiel-handicap
 
-[^rf4-750]: Article du site Faire-face - L'AAH va augmenter d'1,75% le 1er septembre à 790,18€
+[^4]: Article du site Faire-face - L'AAH va augmenter d'1,75% le 1er septembre à 790,18€
 
-[^rf5-750]: Article du site lacroix - <a href="http://www.la-croix.com/Actualite/France/Handicap-comment-vivre-avec-790-par-mois-2013-09-25-1024778" target="_blank" rel="noopener">lien</a>
+[^5]: Article du site lacroix - <a href="http://www.la-croix.com/Actualite/France/Handicap-comment-vivre-avec-790-par-mois-2013-09-25-1024778" target="_blank" rel="noopener">lien</a>
 
-[^rf6-750]: Le seuil de pauvreté est défini de manière relative, par rapport au salaire médian. On considère comme pauvre une personne dont les revenus sont inférieurs à un certain pourcentage de ce revenu médian. Ce <i>revenu médian</i> est celui qui partage la population en deux, autant gagne moins, autant gagne davantage. Le taux le plus souvent considéré est 60% du revenu médian - <a href="http://www.inegalites.fr/spip.php?article343" target="_blank" rel="noopener">lien</a>
+[^6]: Le seuil de pauvreté est défini de manière relative, par rapport au salaire médian. On considère comme pauvre une personne dont les revenus sont inférieurs à un certain pourcentage de ce revenu médian. Ce <i>revenu médian</i> est celui qui partage la population en deux, autant gagne moins, autant gagne davantage. Le taux le plus souvent considéré est 60% du revenu médian - <a href="http://www.inegalites.fr/spip.php?article343" target="_blank" rel="noopener">lien</a>
 
-[^rf7-750]: Evolution du seuil de pauvreté sur l'insee - <a href="https://www.insee.fr/fr/statistiques/2408282" target="_blank" rel="noopener">lien</a>
-
-<p style="text-align: center;">
-  ![](images/2696953765.gif)</p>
-
-<span style="text-decoration: underline;">Remarque</span> : certes l'AAH donc le plafond des ressources a été revalorisé, mais de la même manière les salaires ont augmenté, ce qui réduit l'influence sur la formule :
+[^7]: Evolution du seuil de pauvreté sur l'insee - <a href="https://www.insee.fr/fr/statistiques/2408282" target="_blank" rel="noopener">lien</a>
 
 <p style="text-align: center;">
-  <strong>AAH = (plafond des ressources - assiette du conjoint)/12</strong></p>
+
+![](images/2696953765.gif)
+
+</p>
+
+[Remarque]{style="text-decoration: underline;"} : certes l'AAH donc le plafond des ressources a été revalorisé, mais de la même manière les salaires ont augmenté, ce qui réduit l'influence sur la formule :
+
+<p style="text-align: center;">
+
+<strong>AAH = (plafond des ressources - assiette du conjoint)/12</strong>
+
+</p>
 
 ### Les ressources prises en compte pour le calcul de l'AAH sont les revenus net catégoriels après abattements fiscaux et abattements spécifiques aux personnes invalides.
-
 
 Voilà qui semble confirmer l'analyse que je faisais dans ce précédent article :
 
 <p style="text-align: center;">
-  [Ambigüité sur la nature des ressources à déclarer à la CAF](../2014-07-17-ambiguite-sur-la-nature-des-ressources-a-declarer-a-la-caf-pour-le-calcul-de-laah)
+
+[Ambigüité sur la nature des ressources à déclarer à la CAF](../2014-07-17-ambiguite-sur-la-nature-des-ressources-a-declarer-a-la-caf-pour-le-calcul-de-laah)
+
 </p>
 
-Sachez donc, Madame, Monsieur le ministre, que dans la pratique, <span style="color: #ff0000;">la CAF ne tient absolument pas compte des abattements fiscaux que vous citez</span>... et ne respecte donc pas la législation dictée par le code de la sécurité sociale ! Quant aux abattements spécifiques aux personnes invalides, ils ne sont pas applicables aux revenus d'activité professionnelle perçus par l'allocataire d'après le code de la sécurité sociale[^rf8-750], alors que qu'ils le sont dans l'établissement de l'impôt[^rf9-750] !
+Sachez donc, Madame, Monsieur le ministre, que dans la pratique, [la CAF ne tient absolument pas compte des abattements fiscaux que vous citez]{style="color: #ff0000;"}... et ne respecte donc pas la législation dictée par le code de la sécurité sociale ! Quant aux abattements spécifiques aux personnes invalides, ils ne sont pas applicables aux revenus d'activité professionnelle perçus par l'allocataire d'après le code de la sécurité sociale[^8], alors que qu'ils le sont dans l'établissement de l'impôt[^9] !
 
-[^rf8-750]: Article R821-4 II 3°) du code de la sécurité sociale
+[^8]: Article R821-4 II 3°) du code de la sécurité sociale
 
-[^rf9-750]: Article 157 bis du code des impôts
+[^9]: Article 157 bis du code des impôts
 
 ### L'abattement 80/40 et les règles de cumuls sont très favorables et incitateurs à l'emploi.</strong></span>
 
 Sur l'idée je suis d'accord, la fonction d'abattement en forme de "coude" est un modèle qui ne me semble pas trop mauvais pour motiver l'emploi. En revanche comme le point précédent (prise en compte des ressources après abattements) n'est pas respecté par la CAF, l'abattement 80/40 n'est pas aussi favorable que vous le prétendez.
 
-De nouveau, <span style="color: #ff0000;">l'abattement 80/40 concerne les personnes handicapées pouvant prétendre à l'emploi</span>, il n'est donc pas un argument valable pour la population que je défends dans cet article, qui représente une majorité des bénéficiaires de l'AAH et qui est victime de l'injustice du calcul de son allocation par les revenus du conjoint, qui eux ne sont pas soumis à l'abattement 80/40.
+De nouveau, [l'abattement 80/40 concerne les personnes handicapées pouvant prétendre à l'emploi]{style="color: #ff0000;"}, il n'est donc pas un argument valable pour la population que je défends dans cet article, qui représente une majorité des bénéficiaires de l'AAH et qui est victime de l'injustice du calcul de son allocation par les revenus du conjoint, qui eux ne sont pas soumis à l'abattement 80/40.
 
 ### Le plafond de l'AAH est doublé pour le couple, ce qui en fait un régime "très favorable"
 
 Vraiment ? On ne doit pas voir la même courbe de décroissance... je vous la redonne :
 
 <p style="text-align: center;">
-  ![](images/graphe-aah-conjoint.png)</p>
 
- Comme vous le signalez dans la réponse à la question n°1503, _"l'AAH sera suspendue si le conjoint perçoit une rémunération nette mensuelle de 2200 €"_, et plus précisément elle décroit progressivement vers 0 €, donc même si le conjoint gagne moins de 2200 €, l'AAH du bénéficiaire, qui je rappelle est sa seule source de revenu possible, devient dérisoire et indécente. Je vous pose alors la question :
+![](images/graphe-aah-conjoint.png)
+
+</p>
+
+ Comme vous le signalez dans la réponse à la question n°1503, *"l'AAH sera suspendue si le conjoint perçoit une rémunération nette mensuelle de 2200 €"*, et plus précisément elle décroit progressivement vers 0 €, donc même si le conjoint gagne moins de 2200 €, l'AAH du bénéficiaire, qui je rappelle est sa seule source de revenu possible, devient dérisoire et indécente. Je vous pose alors la question :
 
 **Votre conjoint gagne-t-il plus de 2200 € ? Si oui trouveriez vous normal que votre salaire soit suspendu ? Imagineriez vous devoir lui demander de l'argent de poche pour aller acheter une baguette de pain ?**
 
@@ -161,17 +179,17 @@ Vraiment ? On ne doit pas voir la même courbe de décroissance... je vous la re
 
 Lorsque l'on lit cela, on comprend clairement que la personne qui rédige cette réponse n'a aucune idée de la réalité du monde de l'handicap. Je n'en voudrais aucunement à une personne lambda, qui n'est pas concernée de près ou de loin par l'handicap, d'ignorer cette réalité. En revanche quand il s'agit d'un ou d'une ministre chargé de l'Handicap, un minimum de préoccupation et de lucidité est requis...
 
-Je tiens encore une fois à signaler qu'un certain nombre de mesures positives ont été adoptées pour améliorer le quotidien des personnes handicapées, et la PCH en fait partie. Loin de moi l'idée de cracher dans la soupe donc ! Seulement <span style="color: #ff0000;">la réalité c'est que la PCH est loin de couvrir toutes les dépenses liées à l'handicap</span>. A titre d'expérience personnelle je pourrais vous faire l'inventaire des aménagements et du matériel médical que la PCH a pu seulement couvrir en partie dans le meilleur des cas, soit pas du tout car considérés comme "du luxe". Si par ailleurs vous ne disposez pas d'une bonne mutuelle, les bases de remboursements de la sécurité sociale ne permettent pas non plus de bénéficier de matériel médical pourtant indispensable à la santé des personnes handicapées. Pour ma part j'ai eu la chance d'avoir une association qui s'est créée autour de moi (famille, amis) pendant les premières années pour apporter une aide financière dans ces achats, mais tout le monde n'a pas cette chance. Aujourd'hui l'association n'existe plus, mais je continue inévitablement à faire périodiquement des dépenses importances dans l'achat de matériel médical, et c'est le cas de la plupart des bénéficiaires de l'AAH (médicaments, soins, rééducation, aides techniques, aides à domicile, transport adapté, adaptations du domicile, ...)
+Je tiens encore une fois à signaler qu'un certain nombre de mesures positives ont été adoptées pour améliorer le quotidien des personnes handicapées, et la PCH en fait partie. Loin de moi l'idée de cracher dans la soupe donc ! Seulement [la réalité c'est que la PCH est loin de couvrir toutes les dépenses liées à l'handicap]{style="color: #ff0000;"}. A titre d'expérience personnelle je pourrais vous faire l'inventaire des aménagements et du matériel médical que la PCH a pu seulement couvrir en partie dans le meilleur des cas, soit pas du tout car considérés comme "du luxe". Si par ailleurs vous ne disposez pas d'une bonne mutuelle, les bases de remboursements de la sécurité sociale ne permettent pas non plus de bénéficier de matériel médical pourtant indispensable à la santé des personnes handicapées. Pour ma part j'ai eu la chance d'avoir une association qui s'est créée autour de moi (famille, amis) pendant les premières années pour apporter une aide financière dans ces achats, mais tout le monde n'a pas cette chance. Aujourd'hui l'association n'existe plus, mais je continue inévitablement à faire périodiquement des dépenses importances dans l'achat de matériel médical, et c'est le cas de la plupart des bénéficiaires de l'AAH (médicaments, soins, rééducation, aides techniques, aides à domicile, transport adapté, adaptations du domicile, ...)
 
 Voilà pourquoi il est naïf de penser que la PCH prend en charge les surcoûts liés à l'handicap, et que l'AAH peut être recentrée sur sa vocation de minimum d'existence. La vérité, c'est qu'une partie de l'AAH va a fortiori être consacrée à ces dépenses, et que vous vous imaginez bien qu'avec 790,18 € par mois, c'est-à-dire quand on vie sous le seuil de pauvreté, on est forcément assez limité dans le budget...
 
 ![](images/kevin-polisano-sarkozy-pch-moyens-sante.jpg)
 
-Deux solutions sont envisageables : soit conserver une AAH qui soit un "revenu d'existence" et faire en sorte que la PCH couvre réellement les besoins matériaux et médicaux des personnes handicapées ; soit augmenter significativement l'AAH. Cette seconde alternative est revendiquée par l'APF depuis plusieurs années : garantir un revenu d'existence décent à tous[^rf10-750]. Mais je crains que cette revendication soit pour le moins utopique, quand on pense que le gouvernement a pour objectif de faire 50 milliards d'euros d'économie d'ici 2017[^rf11-750] en adoptant une politique d'austérité... on imagine mal l'AAH bondir de 790,18 € à un smic ! Il est fort à parier que les choses se déroulent comme ça :
+Deux solutions sont envisageables : soit conserver une AAH qui soit un "revenu d'existence" et faire en sorte que la PCH couvre réellement les besoins matériaux et médicaux des personnes handicapées ; soit augmenter significativement l'AAH. Cette seconde alternative est revendiquée par l'APF depuis plusieurs années : garantir un revenu d'existence décent à tous[^10]. Mais je crains que cette revendication soit pour le moins utopique, quand on pense que le gouvernement a pour objectif de faire 50 milliards d'euros d'économie d'ici 2017[^11] en adoptant une politique d'austérité... on imagine mal l'AAH bondir de 790,18 € à un smic ! Il est fort à parier que les choses se déroulent comme ça :
 
-[^rf10-750]: Plaidoyer de l'APF - <a href="http://plaidoyer.blogs.apf.asso.fr/media/01/02/396929078.pdf" target="_blank" rel="noopener">lien</a>
+[^10]: Plaidoyer de l'APF - <a href="http://plaidoyer.blogs.apf.asso.fr/media/01/02/396929078.pdf" target="_blank" rel="noopener">lien</a>
 
-[^rf11-750]: Article sur l'économie de 50 milliards d'euros - <a href="http://tempsreel.nouvelobs.com/politique/election-presidentielle-2012/sources-brutes/20120122.OBS9488/l-integralite-du-discours-de-francois-hollande-au-bourget.html" target="_blank" rel="noopener" class="broken_link">lien</a>
+[^11]: Article sur l'économie de 50 milliards d'euros - <a href="http://tempsreel.nouvelobs.com/politique/election-presidentielle-2012/sources-brutes/20120122.OBS9488/l-integralite-du-discours-de-francois-hollande-au-bourget.html" target="_blank" rel="noopener" class="broken_link">lien</a>
 
 ![](images/kevin-polisano-aah-smic-sinon-rien.gif)
 
@@ -181,7 +199,7 @@ Bref, revenons à nos moutons. Quand on fait l'inventaire, on voit finalement qu
 
 Autrement dit c'est le statut que l'on confère à l'AAH qui ne permet pas de s'en extirper.
 
-Le premier est clair et dit que l'AAH est comme tous les autres minima sociaux : ils visent à assurer un revenu minimal à une personne en situation de précarité. Ce sont des prestations sociales non contributives, c'est-à-dire qu'elles sont versées sans contrepartie de cotisations. L'exemple le plus connu est sans doute celui du RSA. La différence majeure à mon sens entre l'AAH et le RSA, est que les personnes handicapées présentent un taux d'incapacité permanente, et donc pour beaucoup d'entre eux l'accès à l'emploi est tout simplement impossible et durable, la précarité est donc elle aussi permanente ! C'est la raison pour laquelle on devrait <span style="color: #ff0000;">faire perde à l'AAH son statut de minimum social, pour celles et ceux qui ne peuvent pas ou plus travailler</span>, tout simplement.
+Le premier est clair et dit que l'AAH est comme tous les autres minima sociaux : ils visent à assurer un revenu minimal à une personne en situation de précarité. Ce sont des prestations sociales non contributives, c'est-à-dire qu'elles sont versées sans contrepartie de cotisations. L'exemple le plus connu est sans doute celui du RSA. La différence majeure à mon sens entre l'AAH et le RSA, est que les personnes handicapées présentent un taux d'incapacité permanente, et donc pour beaucoup d'entre eux l'accès à l'emploi est tout simplement impossible et durable, la précarité est donc elle aussi permanente ! C'est la raison pour laquelle on devrait [faire perde à l'AAH son statut de minimum social, pour celles et ceux qui ne peuvent pas ou plus travailler]{style="color: #ff0000;"}, tout simplement.
 
 ![](images/kevin-polisano-aah-handicape-poil-dans-la-main.jpg)
 
@@ -194,252 +212,291 @@ Si le fait de suspendre la seule source de revenus d'une personne en la rendant 
 Il y a quelques semaines était encore disponible sur le site de l'assemblée nationale, un document très intéressant qui relatait un long combat menait pas les femmes. L'ayant enregistré juste avant qu'il ne disparaisse, je vous en fais profiter.
 
 <p style="text-align: center;">
-  [Le libre salaire de la femme](libre-salaire-1907.pdf)
+
+[Le libre salaire de la femme](libre-salaire-1907.pdf)
+
 </p>
 
 Il est écrit par **Bernard Accoyer**, oui, la même personne qui a attiré l'attention du gouvernement sur la question n°25562 en avril 2013 (voir plus haut) ;). Le début du Préface est le suivant :
 
 <p style="text-align: center;">
-  ![](images/kevin-polisano-preface-libre-salaire-femme-1907.png)</p>
+
+![](images/kevin-polisano-preface-libre-salaire-femme-1907.png)
+
+</p>
 
 <p style="text-align: left;">
-  Je pense que vous voyez où je veux en venir...</p>
+
+Je pense que vous voyez où je veux en venir...
+
+</p>
 
 <p style="text-align: left;">
-  Ce long combat commença avec un premier dépôt de proposition de loi le <strong>9 juillet 1894</strong>, et le rapport du Sénat fut donné effectivement en 1907, soit <span style="color: #ff0000;">11 ans plus tard !</span> Mais ce n'est pas tout... Il faudra attendre <strong>l'année 1965</strong> (soit <span style="color: #ff0000;">58 ans supplémentaires!</span>) pour que les femmes puissent gérer leurs biens propres (ouvrir un compte bancaire) et exercer une activité professionnelle sans le consentement de leur mari.</p>
+
+Ce long combat commença avec un premier dépôt de proposition de loi le <strong>9 juillet 1894</strong>, et le rapport du Sénat fut donné effectivement en 1907, soit [11 ans plus tard !]{style="color: #ff0000;"} Mais ce n'est pas tout... Il faudra attendre <strong>l'année 1965</strong> (soit [58 ans supplémentaires!]{style="color: #ff0000;"}) pour que les femmes puissent gérer leurs biens propres (ouvrir un compte bancaire) et exercer une activité professionnelle sans le consentement de leur mari.
+
+</p>
 
 <p style="text-align: left;">
-  <strong>Faudra-t-il attendre aussi longtemps pour délivrer les personnes handicapées de leur dépendance financière ?</strong></p>
 
+<strong>Faudra-t-il attendre aussi longtemps pour délivrer les personnes handicapées de leur dépendance financière ?</strong>
 
+</p>
 
 ## Etude statistique des bénéficiaires de l'AAH et conséquences de la prise en compte des revenus du conjoint
 
+<p style="text-align: left;">
+
+En 2006, l'insee recensait que <strong>65,4% des français entre 25 et 64 ans vivent en couple</strong>[^12].
+
+[^12]: Statistiques de l'insee sur la vie en couple - <a href="https://www.insee.fr/fr/statistiques/1281080" target="_blank" rel="noopener">lien</a>
+
+</p>
 
 <p style="text-align: left;">
-  En 2006, l'insee recensait que <strong>65,4% des français entre 25 et 64 ans vivent en couple</strong>[^rf12-750].</p>
 
-[^rf12-750]: Statistiques de l'insee sur la vie en couple - <a href="https://www.insee.fr/fr/statistiques/1281080" target="_blank" rel="noopener">lien</a>
+<strong>Concernant les personnes handicapées</strong>, au 31 décembre 2012, [<strong>moins de 25%</strong> d'entre eux sont en couple !]{style="color: #ff0000;"} Ceci est valable pour les handicaps "lourds" (dont le taux d'incapacité est supérieur à 80%) comme pour les autres handicaps dont le taux d'incapacité se situe entre 50% et 79% ! Par conséquent on ne peut pas justifier de ce faible taux uniquement à travers la dimension "handicap", il est clair que la dimension "financière" a un impact certain sur la possibilité de vivre en couple ou non.[^13]
+
+[^13]: Article de Marcel Nuss sur l'injustice de la prise en compte des revenus du conjoint - <a href="http://blogs.mediapart.fr/blog/marcel-nuss/020414/les-chroniques-dun-autre-monde-injustices-sociales" target="_blank" rel="noopener">lien</a>
+
+</p>
+
+<p style="text-align: center;">
+
+![](images/kevin-polisano-tableau-statistiques-couple-seul.png)
+
+</p>
+
+<p style="text-align: center;">
+
+![](images/kevin-polisano-aah-configuration-familiale-travail.png)
+
+</p>
 
 <p style="text-align: left;">
-  <strong>Concernant les personnes handicapées</strong>, au 31 décembre 2012, <span style="color: #ff0000;"><strong>moins de 25%</strong> d'entre eux sont en couple !</span> Ceci est valable pour les handicaps "lourds" (dont le taux d'incapacité est supérieur à 80%) comme pour les autres handicaps dont le taux d'incapacité se situe entre 50% et 79% ! Par conséquent on ne peut pas justifier de ce faible taux uniquement à travers la dimension "handicap", il est clair que la dimension "financière" a un impact certain sur la possibilité de vivre en couple ou non.[^rf14-750]</p>
 
-[^rf14-750]: Article de Marcel Nuss sur l'injustice de la prise en compte des revenus du conjoint - <a href="http://blogs.mediapart.fr/blog/marcel-nuss/020414/les-chroniques-dun-autre-monde-injustices-sociales" target="_blank" rel="noopener">lien</a>
+À l'heure où l'on parle d'assistance sexuelle, pourquoi ne pas simplement donner le droit d'aimer? Cette situation pousse fatalement les personnes handicapées à l'isolement, ou pour les plus téméraires à dissimuler leur statut conjugal... Anatole France, brillant écrivain de la troisième république, et auteur de nombreuses critiques littéraires et sociales, disait :
 
-<p style="text-align: center;">
-  ![](images/kevin-polisano-tableau-statistiques-couple-seul.png)</p>
+</p>
 
 <p style="text-align: center;">
-  ![](images/kevin-polisano-aah-configuration-familiale-travail.png)</p>
 
-<p style="text-align: left;">
-  À l'heure où l'on parle d'assistance sexuelle, pourquoi ne pas simplement donner le droit d'aimer? Cette situation pousse fatalement les personnes handicapées à l'isolement, ou pour les plus téméraires à dissimuler leur statut conjugal... Anatole France, brillant écrivain de la troisième république, et auteur de nombreuses critiques littéraires et sociales, disait :</p>
+<em>["Quand les lois seront justes, les hommes seront justes" ]{style="color: #008000;"}</em>
 
-<p style="text-align: center;">
-  <em><span style="color: #008000;">"Quand les lois seront justes, les hommes seront justes" </span></em></p>
+</p>
 
 ## Qu'en est-il du "prix de l'amour" dans les autres pays européens ?
 
+Il y a malheureusement assez peu d'études comparatives des politiques du handicap dans les différentes pays européens.[^14][^15] Cela dit il ne faut pas aller chercher bien loin pour trouver un exemple de pays qui prenne réellement la question au sérieux : la[<strong> ]{style="color: #008000;"}[Bel]{style="color: #000000;"}[giq]{style="color: #ffcc00;"}[ue !]{style="color: #ff0000;"}</strong>
 
-Il y a malheureusement assez peu d'études comparatives des politiques du handicap dans les différentes pays européens.[^rf15-750][^rf16-750] Cela dit il ne faut pas aller chercher bien loin pour trouver un exemple de pays qui prenne réellement la question au sérieux : la<span style="color: #008000;"><strong> <span style="color: #000000;">Bel</span><span style="color: #ffcc00;">giq</span><span style="color: #ff0000;">ue !</span></strong></span>
+[^14]: Conseil français des personnes handicapées pour les questions européennes - <a href="https://www.cfhe.org/wp-content/uploads/2021/12/cnsa-quelques-comparatifs-en-europe-2006.pdf" target="_blank" rel="noopener" class="broken_link">lien</a>
 
-[^rf15-750]: Conseil français des personnes handicapées pour les questions européennes - <a href="https://www.cfhe.org/wp-content/uploads/2021/12/cnsa-quelques-comparatifs-en-europe-2006.pdf" target="_blank" rel="noopener" class="broken_link">lien</a>
+[^15]: Etude comparative des politiques du handicap dans plusieurs pays européens - <a href="https://shs.cairn.info/revue-francaise-des-affaires-sociales-2005-2-page-9?lang=fr" target="_blank" rel="noopener" class="broken_link">lien</a>
 
-[^rf16-750]: Etude comparative des politiques du handicap dans plusieurs pays européens - <a href="https://shs.cairn.info/revue-francaise-des-affaires-sociales-2005-2-page-9?lang=fr" target="_blank" rel="noopener" class="broken_link">lien</a>
+L'information a été reléguée sur plusieurs sites[^16]\[\^rf18-750\] en décembre 2013 avec des gros titres alléchants comme les journalistes savent bien le faire :
 
-L'information a été reléguée sur plusieurs sites[^rf17-750][^rf18-750] en décembre 2013 avec des gros titres alléchants comme les journalistes savent bien le faire :
-
-[^rf17-750]: Article sur le prix de l'amour en Belgique sur handicap.fr - <a href="http://informations.handicap.fr/art-allocations-aides-51-6522.php" target="_blank" rel="noopener">lien</a>
+[^16]: Article sur le prix de l'amour en Belgique sur handicap.fr - <a href="http://informations.handicap.fr/art-allocations-aides-51-6522.php" target="_blank" rel="noopener">lien</a>
 
 <p style="text-align: center;">
-  <strong>"Le prix de l'amour aboli pour les personnes handicapées en Belgique !"</strong></p>
+
+<strong>"Le prix de l'amour aboli pour les personnes handicapées en Belgique !"</strong>
+
+</p>
 
 <p style="text-align: left;">
-  Du calme, du calme, pour le moment aucun texte officiel n'a encore vu le jour, mais une belle perspective initiée par <strong>Philippe Courard</strong>, secrétaire d'Etat aux personnes handicapées, suscite l'intérêt et l'espoir. Celui-ci déclarait sur une chaine radio[^rf19-750]</p>
 
-[^rf19-750]: Le prix de l'amour aboli pour les personnes handicapées sur la radio RTL - <a href="https://www.rtl.be/art/info/belgique/politique/le-prix-de-l-amour-aboli-pour-les-handicapes-on-conserve-son-handicap-on-conserve-son-allocation--398678.aspx" target="_blank" rel="noopener" class="broken_link">lien</a>
+Du calme, du calme, pour le moment aucun texte officiel n'a encore vu le jour, mais une belle perspective initiée par <strong>Philippe Courard</strong>, secrétaire d'Etat aux personnes handicapées, suscite l'intérêt et l'espoir. Celui-ci déclarait sur une chaine radio[^17]
+
+[^17]: Le prix de l'amour aboli pour les personnes handicapées sur la radio RTL - <a href="https://www.rtl.be/art/info/belgique/politique/le-prix-de-l-amour-aboli-pour-les-handicapes-on-conserve-son-handicap-on-conserve-son-allocation--398678.aspx" target="_blank" rel="noopener" class="broken_link">lien</a>
+
+</p>
 
 > On conserve son handicap, alors on doit pouvoir conserver son allocation d'intégration
 
 <p style="text-align: left;">
-  Pour reformuler les propos de **Philippe Courard** de manière un tantinet plus percutante <em>je dirais même plus</em> :</p>
+
+Pour reformuler les propos de **Philippe Courard** de manière un tantinet plus percutante <em>je dirais même plus</em> :
+
+</p>
 
 <p style="text-align: center;">
-  <span style="color: #ff0000;">"Si tu prends mon AAH, prend mon handicap !"</span></p>
+
+["Si tu prends mon AAH, prend mon handicap !"]{style="color: #ff0000;"}
+
+</p>
 
 <p style="text-align: left;">
-  Cette volonté de mettre un terme à cette injustice avait déjà germé dans un précédent rapport de **Philippe Courard**[^cour] : 
 
-> On peut relever dans le régime des allocations les obstacles suivants à l’autonomie des personnes handicapées : [...] A côté de la prise en compte des revenus de la personne handicapée s’ajoute également dans le calcul de l’allocation d’intégration celle des revenus de son partenaire.
+Cette volonté de mettre un terme à cette injustice avait déjà germé dans un précédent rapport de **Philippe Courard**[^18] :
 
-[^cour]: Des allocations qui n'handicapent pas, p. 12
+[^18]: Des allocations qui n'handicapent pas, p. 12
 
-Plus récemment celui-ci déclarait dans un communiqué de presse[^rf20-750] :
-    
+> On peut relever dans le régime des allocations les obstacles suivants à l’autonomie des personnes handicapées : \[...\] A côté de la prise en compte des revenus de la personne handicapée s’ajoute également dans le calcul de l’allocation d’intégration celle des revenus de son partenaire.
+
+Plus récemment celui-ci déclarait dans un communiqué de presse[^19] :
+
+[^19]: Communiqué de presse de Philippe Courard datant du 19 décembre 2013
+
 > Introduire le principe de l’allocation d’intégration pour tous, si possible en réduisant, ou en supprimant, la prise en compte des revenus du ménage.
-   
- Dans cette note du même jour[^rf21-750], appartenant au conseil des ministres, la partie "si possible en réduisant, ou en supprimant, la prise en compte des revenus du ménage" a étrangement disparue...
-    <strong>Ces dispositions sont prévues pour 2017</strong>, espérons que d'ici là le gouvernement français aura révisé sa copie et qu'il oeuvrera dans ce sens !
-  
+
+Dans cette note du même jour[^20], appartenant au conseil des ministres, la partie "si possible en réduisant, ou en supprimant, la prise en compte des revenus du ménage" a étrangement disparue... <strong>Ces dispositions sont prévues pour 2017</strong>, espérons que d'ici là le gouvernement français aura révisé sa copie et qu'il oeuvrera dans ce sens !
+
+[^20]: Note d’orientation sur la réforme de la loi relative aux allocations aux personnes handicapées, appartenant au conseil des ministres belge
+
 ## Conclusion et proposition de débat au sein de l'assemblée nationale
-  
-  <p style="text-align: justify;">
-    Cet article avait pour vocation première d'exposer la situation absurde à laquelle sont confrontées les personnes handicapées, devant <strong>choisir entre l'amour et l'autonomie financière</strong>. Il me semble crucial de faire entendre ce message, non pas seulement aux bénéficiaires de l'AAH pour les avertir, mais aussi et surtout aux membres du gouvernement qui sont en mesure de faire bouger les lignes. Comprendre la situation d'autrui, c'est savoir faire preuve d'empathie, et c'est il me semble une étape indispensable pour mener une réflexion qui a trait à l'handicap, au social, et donc à l'humain. Les réponses mécaniques apportées jusque'à aujourd'hui par le ministre chargé de l'handicap, ne sont en ce sens pas recevables. Les arguments avancés, eux aussi, sont discutables, et il me paraissait nécessaire d'apporter un éclairage en les confrontant à la réalité, cette réalité d'inaccessibilité pas seulement matérielle, mais aussi inaccessibilité à l'emploi et l'amour. Cet article ne se voulait pas être un "coup de gueule", mais davantage une piste de réflexion autour de cette injustice, une rampe d'accès mentale. <strong>Cette injustice va quoiqu'il arrive attirer de nouveau l'attention du ministre de l'handicap</strong>, puisque Bernard Accoyer et Barbare Pompili l'ont récemment, une fois de plus, exposée dans les questions n°25562 et n°52154 de l'assemblée nationale. C'est pourquoi il était important de faire le point, pour éviter je l'espère d'obtenir la même réponse préconçue, fournit jusqu'à présent. La deuxième volonté de cet article est donc de <strong>réouvrir le débat</strong>, en se posant la question de savoir comment mettre fin à cette injustice. La proposition de déconjugualisation des ressources mènera forcément à reconsidérer le statut de l'AAH. Actuellement nous avons constaté qu'une majorité des bénéficiaires, quand bien même ceux-ci trouveraient l'amour, vivent seuls. Donc leur allocation est versée quoiqu'il en soit. Leur permettre de vivre en couple en conservant leur AAH ne serait donc qu'une <strong>régularisation de leur situation</strong>. Le coût engendré par une telle réforme concernerait principalement la population "en couple sans enfant" (puisqu'avec un enfant le plafond est relevé) qui représente 12% des bénéficiaires. Dans la mesure où nous demandons de revoir les modalités de calcul de l'allocation aux adultes handicapés, nous devons pour notre part avoir conscience des contraintes budgétaires qui s'imposent à nos dirigeants. De ce fait, il serait indispensable de <strong>réaliser une étude scientifique sérieuse</strong> s'appuyant sur des données statistiques qui 1) estimerait le coût de la réforme, 2) ciblerait les potentiels bénéficiaires lésés, et enfin et j'insiste 3) qui serait totalement transparente au citoyen lambda désireux de comprendre la décision prise par le gouvernement.</p><p>
-    Enfin je terminerais par signaler que François Hollande, lors de son discours de lancement de campagne, a déclaré que <strong>"chaque loi comprendrait son volet handicap"</strong>[^rf22-750]. Alors, le changement, c'est maintenant, ou c'est maintenu? 😉</p><p></p><p>
-    
-    
+
+<p style="text-align: justify;">
+
+Cet article avait pour vocation première d'exposer la situation absurde à laquelle sont confrontées les personnes handicapées, devant <strong>choisir entre l'amour et l'autonomie financière</strong>. Il me semble crucial de faire entendre ce message, non pas seulement aux bénéficiaires de l'AAH pour les avertir, mais aussi et surtout aux membres du gouvernement qui sont en mesure de faire bouger les lignes. Comprendre la situation d'autrui, c'est savoir faire preuve d'empathie, et c'est il me semble une étape indispensable pour mener une réflexion qui a trait à l'handicap, au social, et donc à l'humain. Les réponses mécaniques apportées jusque'à aujourd'hui par le ministre chargé de l'handicap, ne sont en ce sens pas recevables. Les arguments avancés, eux aussi, sont discutables, et il me paraissait nécessaire d'apporter un éclairage en les confrontant à la réalité, cette réalité d'inaccessibilité pas seulement matérielle, mais aussi inaccessibilité à l'emploi et l'amour. Cet article ne se voulait pas être un "coup de gueule", mais davantage une piste de réflexion autour de cette injustice, une rampe d'accès mentale. <strong>Cette injustice va quoiqu'il arrive attirer de nouveau l'attention du ministre de l'handicap</strong>, puisque Bernard Accoyer et Barbare Pompili l'ont récemment, une fois de plus, exposée dans les questions n°25562 et n°52154 de l'assemblée nationale. C'est pourquoi il était important de faire le point, pour éviter je l'espère d'obtenir la même réponse préconçue, fournit jusqu'à présent. La deuxième volonté de cet article est donc de <strong>réouvrir le débat</strong>, en se posant la question de savoir comment mettre fin à cette injustice. La proposition de déconjugualisation des ressources mènera forcément à reconsidérer le statut de l'AAH. Actuellement nous avons constaté qu'une majorité des bénéficiaires, quand bien même ceux-ci trouveraient l'amour, vivent seuls. Donc leur allocation est versée quoiqu'il en soit. Leur permettre de vivre en couple en conservant leur AAH ne serait donc qu'une <strong>régularisation de leur situation</strong>. Le coût engendré par une telle réforme concernerait principalement la population "en couple sans enfant" (puisqu'avec un enfant le plafond est relevé) qui représente 12% des bénéficiaires. Dans la mesure où nous demandons de revoir les modalités de calcul de l'allocation aux adultes handicapés, nous devons pour notre part avoir conscience des contraintes budgétaires qui s'imposent à nos dirigeants. De ce fait, il serait indispensable de <strong>réaliser une étude scientifique sérieuse</strong> s'appuyant sur des données statistiques qui 1) estimerait le coût de la réforme, 2) ciblerait les potentiels bénéficiaires lésés, et enfin et j'insiste 3) qui serait totalement transparente au citoyen lambda désireux de comprendre la décision prise par le gouvernement.
+
+</p>
+
+<p>Enfin je terminerais par signaler que François Hollande, lors de son discours de lancement de campagne, a déclaré que <strong>"chaque loi comprendrait son volet handicap"</strong>[^21]. Alors, le changement, c'est maintenant, ou c'est maintenu? 😉</p>
+
+[^21]: discours du Bourget de François Hollande - <a href="http://tempsreel.nouvelobs.com/politique/election-presidentielle-2012/sources-brutes/20120122.OBS9488/l-integralite-du-discours-de-francois-hollande-au-bourget.html" target="_blank" rel="noopener" class="broken_link">lien</a>
+
+<p>
+
+</p>
+
+<p>
+
 ## Annexes
-    
+
 ### Annexe n°1 : exemples de calculs d'AAH en fonction des revenus du conjoint
 
- <span style="color: #008000;"><span style="text-decoration: underline;">Cas n°1</span> : <strong>Andy ne travaille pas</strong>, touchait jusqu’alors l’AAH à taux plein (790,18 € par mois), et décide de s’installer vivre avec <strong>Pierre qui gagne le smic</strong> (1128,70 € par mois).<em><br /> </em></span></p><p>
-<span style="color: #008000;">Puisque Mademoiselle Andy ne travaille pas (et ne perçoit par ailleurs aucun autre type de revenus), ses ressources, comme son assiette, sont nulles. Calculons l’assiette du conjoint </span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>assiette de Pierre = (1128,70 x 12) x 0,9 x 0,8 = 9751,92 €</strong></span></p><p>
-    <span style="color: #008000;">qui correspond du coup à l’assiette du foyer :</span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>assiette du foyer = assiette d’Andy + assiette de Pierre = 0 + 9751,92 =  9751,92 €</strong></span></p><p>
-    <span style="color: #008000;">On en déduit l’AAH d’Andy : </span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>AAH d’Andy = (plafond couple – assiette du foyer)/12</strong></span></p><p>
-    <span style="color: #008000;">soit :</span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>AAH d’Andy = (18 964,32 - 9751,92)/12 = 768 € par mois</strong></span></p><p>
-    <span style="color: #008000;"><span style="text-decoration: underline;">Cas n°2</span> : <strong>Andy ne travaille pas</strong>, et Paul, le cousin de Pierre, lui trouve un job dans sa boite.  Désormais <strong>Pierre est rémunéré 1500 € par mois</strong>. Calculons l’AAH qui sera versée à Andy :</span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>assiette de Pierre = (1500 x 12) x 0,9 x 0,8 = 12 960 €</strong></span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>AAH d’Andy = (18 964,32 – 12 960)/12 = <span style="color: #ff6600;">500 € par mois</span></strong></span></p><p>
-    <span style="color: #008000;">Du fait que Pierre gagne maintenant 1500 € à la place du smic, ampute (au sens figuré, elle est déjà suffisamment handicapée!) à Mademoiselle Andy près de 300 € sur son AAH.</span></p><p>
-    <span style="color: #008000;"><span style="text-decoration: underline;">Cas n°3</span> : Mademoiselle Andy tombe amoureuse de Jacques, son kiné, elle se sépare alors de Pierre et part vivre chez <strong>Jacques, qui gagne 2200 € par mois</strong>. </span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>assiette de Jacques = (2200 x 12) x 0,9 x 0,8 = 19 008 €</strong></span></p><p>
-    <span style="color: #008000;">Comme l’assiette de Jacques est supérieure au plafond des ressources du couple :</span></p>
-  
-  <p style="text-align: center;">
-    <span style="color: #008000;"><strong>assiette de Jacques > 18 964,32 € ==> <span style="color: #ff0000;">AAH d’Andy = 0 €</span></strong></span></p><p>
-    <span style="color: #008000;"><span style="text-decoration: underline;">Résultat</span> : Mademoiselle Andy, bien qu’éperdument amoureuse de Jacques, se retrouve <span style="color: #ff0000;"><strong>entièrement dépendante financièrement de son conjoint</strong></span>… </span></p><p>
-    
-    
+[Cas n°1]{style="text-decoration: underline;"} : <strong>Andy ne travaille pas</strong>, touchait jusqu’alors l’AAH à taux plein (790,18 € par mois), et décide de s’installer vivre avec <strong>Pierre qui gagne le smic</strong> (1128,70 € par mois).<em><br /> </em>
+
+</p>
+
+<p>[Puisque Mademoiselle Andy ne travaille pas (et ne perçoit par ailleurs aucun autre type de revenus), ses ressources, comme son assiette, sont nulles. Calculons l’assiette du conjoint ]{style="color: #008000;"}</p>
+
+<p style="text-align: center;">
+
+[<strong>assiette de Pierre = (1128,70 x 12) x 0,9 x 0,8 = 9751,92 €</strong>]{style="color: #008000;"}
+
+</p>
+
+<p>[qui correspond du coup à l’assiette du foyer :]{style="color: #008000;"}</p>
+
+<p style="text-align: center;">
+
+[<strong>assiette du foyer = assiette d’Andy + assiette de Pierre = 0 + 9751,92 =  9751,92 €</strong>]{style="color: #008000;"}
+
+</p>
+
+<p>[On en déduit l’AAH d’Andy : ]{style="color: #008000;"}</p>
+
+<p style="text-align: center;">
+
+[<strong>AAH d’Andy = (plafond couple – assiette du foyer)/12</strong>]{style="color: #008000;"}
+
+</p>
+
+<p>[soit :]{style="color: #008000;"}</p>
+
+<p style="text-align: center;">
+
+[<strong>AAH d’Andy = (18 964,32 - 9751,92)/12 = 768 € par mois</strong>]{style="color: #008000;"}
+
+</p>
+
+<p>[Cas n°2]{style="text-decoration: underline;"} : <strong>Andy ne travaille pas</strong>, et Paul, le cousin de Pierre, lui trouve un job dans sa boite.  Désormais <strong>Pierre est rémunéré 1500 € par mois</strong>. Calculons l’AAH qui sera versée à Andy :</p>
+
+<p style="text-align: center;">
+
+[<strong>assiette de Pierre = (1500 x 12) x 0,9 x 0,8 = 12 960 €</strong>]{style="color: #008000;"}
+
+</p>
+
+<p style="text-align: center;">
+
+[<strong>AAH d’Andy = (18 964,32 – 12 960)/12 = ]{style="color: #008000;"}[500 € par mois]{style="color: #ff6600;"}</strong>
+
+</p>
+
+<p>[Du fait que Pierre gagne maintenant 1500 € à la place du smic, ampute (au sens figuré, elle est déjà suffisamment handicapée!) à Mademoiselle Andy près de 300 € sur son AAH.]{style="color: #008000;"}</p>
+
+<p>[Cas n°3]{style="text-decoration: underline;"} : Mademoiselle Andy tombe amoureuse de Jacques, son kiné, elle se sépare alors de Pierre et part vivre chez <strong>Jacques, qui gagne 2200 € par mois</strong>. </p>
+
+<p style="text-align: center;">
+
+[<strong>assiette de Jacques = (2200 x 12) x 0,9 x 0,8 = 19 008 €</strong>]{style="color: #008000;"}
+
+</p>
+
+<p>[Comme l’assiette de Jacques est supérieure au plafond des ressources du couple :]{style="color: #008000;"}</p>
+
+<p style="text-align: center;">
+
+[<strong>assiette de Jacques \> 18 964,32 € ==\> ]{style="color: #008000;"}[AAH d’Andy = 0 €]{style="color: #ff0000;"}</strong>
+
+</p>
+
+<p>[Résultat]{style="text-decoration: underline;"} : Mademoiselle Andy, bien qu’éperdument amoureuse de Jacques, se retrouve [<strong>entièrement dépendante financièrement de son conjoint</strong>]{style="color: #ff0000;"}… </p>
+
+<p>
+
 ### Annexe n°2 : Analyse d'un cas pratique tiré de la question n°1503 de l'assemblée
 
- Dans sa réponse, le ministre avance la chose suivante :
- 
-> la prise en compte des revenus du conjoint n'a pas d'impact défavorable pour les allocataires. Au contraire [...] pour un couple dont l'allocataire exerce une activité contrairement à son conjoint, sa rémunération peut atteindre jusqu'à 1 600 euros nets mensuels et continuer à bénéficier du montant maximum de l'AAH
+Dans sa réponse, le ministre avance la chose suivante :
+
+> la prise en compte des revenus du conjoint n'a pas d'impact défavorable pour les allocataires. Au contraire \[...\] pour un couple dont l'allocataire exerce une activité contrairement à son conjoint, sa rémunération peut atteindre jusqu'à 1 600 euros nets mensuels et continuer à bénéficier du montant maximum de l'AAH
 
 C'est tout à fait exact. Mais le choix de cet exemple est particulièrement vicieux et fait preuve d'une mauvaise foi certaine. En effet cette situation, pour qu'elle ait lieu, doit réunir les conditions suivantes :
-  
-  <ol>
-    <li>
-      <span style="line-height: 15px;">Que l'allocataire soit en mesure d'exercer une activité professionnelle à temps plein.</span>
-    </li>
-    <li>
-      Que l'allocataire ait un salaire d'activité supérieur au smic.
-    </li>
-    <li>
-      Que l'allocataire vive en couple.
-    </li>
-    <li>
-      Que son conjoint quant à lui ne travaille pas.
-    </li>
-  </ol><p>
-    Cela fait comme vous pouvez vous en douter beaucoup de conditions à remplir... mais soyons plus précis, et évaluons la probabilité de chacun de ces événements grâce aux statistiques réalisées par la CNAF[^rf23-750] et la DREES[^rf24-750] :</p>
-  
-  <ol>
-    <li>
-      <span style="line-height: 15px;">La proportion d'allocataires qui travaille est de 17,2% </span>
-    </li>
-    <li>
-      La proportion d'allocataires gagnant plus que le smic est de 11%
-    </li>
-    <li>
-      La proportion d'allocataires vivant en couple est de 22%
-    </li>
-    <li>
-      La proportion de français au chômage est de en mai 2014 de 9,7%
-    </li>
-  </ol><p>
-    Il n'y a pas besoin d'avoir fait polytechnique pour comprendre que l'intersection de ces événements a une probabilité très faible d'avoir lieu... et donc que cet exemple fait preuve de mauvaise foi car il s'agit d'un cas ultra minoritaire de profil de bénéficiaire à qui la prise en compte des revenus du conjoint profite !</p><p>
-  
-  
+
+<ol>
+
+<li>[Que l'allocataire soit en mesure d'exercer une activité professionnelle à temps plein.]{style="line-height: 15px;"}</li>
+
+<li>Que l'allocataire ait un salaire d'activité supérieur au smic.</li>
+
+<li>Que l'allocataire vive en couple.</li>
+
+<li>Que son conjoint quant à lui ne travaille pas.</li>
+
+</ol>
+
+<p>Cela fait comme vous pouvez vous en douter beaucoup de conditions à remplir... mais soyons plus précis, et évaluons la probabilité de chacun de ces événements grâce aux statistiques réalisées par la CNAF[^22] et la DREES[^23] :</p>
+
+[^22]: Caf l'essentiel : les bénéficiaires en emploi de l'AAH - <a href="https://www.caf.fr/sites/default/files/medias/cnaf/Nous_connaitre/Recherche_et_statistiques/Essentiel/125_2012_ESSENTIEL_Beneficiaires_emploi_AAH_CNAF.pdf" target="_blank" rel="noopener" class="broken_link">lien</a>
+
+[^23]: Dossier de solidarité et de santé de la Drees sur l'AAH - <a href="https://drees.solidarites-sante.gouv.fr/sites/default/files/2020-08/dss49.pdf" target="_blank" rel="noopener">lien</a>
+
+<ol>
+
+<li>[La proportion d'allocataires qui travaille est de 17,2% ]{style="line-height: 15px;"}</li>
+
+<li>La proportion d'allocataires gagnant plus que le smic est de 11%</li>
+
+<li>La proportion d'allocataires vivant en couple est de 22%</li>
+
+<li>La proportion de français au chômage est de en mai 2014 de 9,7%</li>
+
+</ol>
+
+<p>Il n'y a pas besoin d'avoir fait polytechnique pour comprendre que l'intersection de ces événements a une probabilité très faible d'avoir lieu... et donc que cet exemple fait preuve de mauvaise foi car il s'agit d'un cas ultra minoritaire de profil de bénéficiaire à qui la prise en compte des revenus du conjoint profite !</p>
+
+<p>
+
 ### Annexe n°3 : Analyse d'un cas pratique issu de la question n°35016 de l'assemblée
 
 Parmi les 10 réponses apportées par les ministres, celle de la secrétaire d'état à la solidarité, qui fait écho à la question n°35016, est la seule qui manifeste une attention particulière à l'égard de la situation, elle dit à ce propos :
 
 > S'agissant du désir de certaines personnes handicapées et d'associations de voir supprimée la prise en compte des ressources du conjoint, concubin ou partenaire de pacte civil de solidarité pour le calcul du montant de l'AAH, le Gouvernement a clairement entendu leur revendication.
 
-  Et elle apporte, une fois n'est pas coutume, une justification cohérente au refus de déconjugualisation, qui fait suite à une étude préliminaire :
+Et elle apporte, une fois n'est pas coutume, une justification cohérente au refus de déconjugualisation, qui fait suite à une étude préliminaire :
 
 > Après avoir sérieusement examiné la proposition de suppression de la prise en compte des ressources du conjoint, le Gouvernement ne souhaite pas lui donner de suite favorable, compte tenu des conséquences financières qu'elle aurait sur bon nombre de foyers. En effet, la non prise en compte de ces revenus aboutirait logiquement à la suppression du doublement du plafond de ressources applicable pour une personne isolée. 60 % des couples avec enfants et 80 % des familles monoparentales verraient alors leurs ressources diminuer fortement (en moyenne 260 EUR par mois).
 
-Il est clairement indispensable, comme je le disais dans la conclusion, de veiller à traiter les cas des potentielles personnes lésées par une nouvelle réforme. En informatique on appellerait ça des "tests de non régression". Et effectivement le cas des couples avec enfants pourrait poser problème, car en présence d'un ou plusieurs enfants, le plafond des ressources du couple est majoré de 4 741,08 euros par enfant à charge, et cette marge permet au bénéficiaire de conserver, à salaire fixé, une AAH différentielle plus élevée . Dommage que cette étude du gouvernement ne soit pas rendue publique... Le nombre de couples avec enfants représente une proportion de 10% de l'ensemble des bénéficiaires de l'AAH. Bien qu'inférieur à la proposition de couples sans enfant (12%) et des personnes seules (72%) qui voudrait se défaire de l'injustice de la considération des ressources du conjoint, il ne faut en aucun cas défavoriser une minorité pour une autre... Voilà pourquoi une réflexion et une étude doivent être conjointement menées afin de proposer une solution optimale pour l'ensemble des configurations familiales en tenant compte des contraintes budgétaires.</p>
+Il est clairement indispensable, comme je le disais dans la conclusion, de veiller à traiter les cas des potentielles personnes lésées par une nouvelle réforme. En informatique on appellerait ça des "tests de non régression". Et effectivement le cas des couples avec enfants pourrait poser problème, car en présence d'un ou plusieurs enfants, le plafond des ressources du couple est majoré de 4 741,08 euros par enfant à charge, et cette marge permet au bénéficiaire de conserver, à salaire fixé, une AAH différentielle plus élevée . Dommage que cette étude du gouvernement ne soit pas rendue publique... Le nombre de couples avec enfants représente une proportion de 10% de l'ensemble des bénéficiaires de l'AAH. Bien qu'inférieur à la proposition de couples sans enfant (12%) et des personnes seules (72%) qui voudrait se défaire de l'injustice de la considération des ressources du conjoint, il ne faut en aucun cas défavoriser une minorité pour une autre... Voilà pourquoi une réflexion et une étude doivent être conjointement menées afin de proposer une solution optimale pour l'ensemble des configurations familiales en tenant compte des contraintes budgétaires.
+
+</p>
+
 </div>
-
-[^rf20-750]: Communiqué de presse de Philippe Courard datant du 19 décembre 2013
-
-[^rf21-750]: Note d’orientation sur la réforme de la loi relative aux allocations aux personnes handicapées, appartenant au conseil des ministres belge
-
-[^rf22-750]: discours du Bourget de François Hollande - <a href="http://tempsreel.nouvelobs.com/politique/election-presidentielle-2012/sources-brutes/20120122.OBS9488/l-integralite-du-discours-de-francois-hollande-au-bourget.html" target="_blank" rel="noopener" class="broken_link">lien</a>
-
-[^rf23-750]: Caf l'essentiel : les bénéficiaires en emploi de l'AAH - <a href="https://www.caf.fr/sites/default/files/medias/cnaf/Nous_connaitre/Recherche_et_statistiques/Essentiel/125_2012_ESSENTIEL_Beneficiaires_emploi_AAH_CNAF.pdf" target="_blank" rel="noopener" class="broken_link">lien</a>
-
-[^rf24-750]: Dossier de solidarité et de santé de la Drees sur l'AAH - <a href="https://drees.solidarites-sante.gouv.fr/sites/default/files/2020-08/dss49.pdf" target="_blank" rel="noopener">lien</a>
 
 <hr class="footnotes" />
 
 <ol class="footnotes" style="list-style-type:decimal">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
 </ol>

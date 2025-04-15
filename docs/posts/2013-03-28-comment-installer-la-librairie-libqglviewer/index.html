@@ -125,16 +125,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../musique.html"> 
-<span class="menu-text">Musique</span></a>
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../handicap.html"> 
 <span class="menu-text">Handicap</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
-<span class="menu-text">Recherche</span></a>
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -155,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title column-body">
       <h1 class="title">Comment installer la librairie libQGLViewer sous Linux ?</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">animation</div>
+                <div class="quarto-category">informatique</div>
               </div>
                   </div>
   </div>
@@ -302,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Les 2 champs qui nous intéressent sont :</p>
 <ul>
 <li><code>INCLUDEPATH</code> : Ici vous devez remplacer la ligne par le <span style="text-decoration: underline;">chemin exact</span> vers votre dossier <code>libQGLViewer</code> !</li>
-<li><code>LIBS</code> : Ce champ spécifie les librairies utilisées pour la compilation, si vous avez installer QGLViewer avec la première méthode (recommandée) alors ne touchez rien par défaut c’est <code>libqglviewer-qt4</code> qui est utilisé dans ce <code>.pro</code>, sinon si vous avez utilisez la deuxième méthode alors il va falloir utiliser <code>-lQGLViewer</code> et <code>glut</code> (<code>-lGL -lGLU</code>), pour cela commenter le premier <code>LIBS</code> et décommenter le second, en remplaçant évidemment le chemin par votre chemin vers le dossier <code></code>!</li>
+<li><code>LIBS</code> : Ce champ spécifie les librairies utilisées pour la compilation, si vous avez installer QGLViewer avec la première méthode (recommandée) alors ne touchez rien par défaut c’est <code>libqglviewer-qt4</code> qui est utilisé dans ce <code>.pro</code>, sinon si vous avez utilisez la deuxième méthode alors il va falloir utiliser <code>-lQGLViewer</code> et <code>glut</code> (<code>-lGL -lGLU</code>), pour cela commenter le premier <code>LIBS</code> et décommenter le second, en remplaçant évidemment le chemin par votre chemin vers le dossier !</li>
 </ul>
 <p>Enregistrez les modifications, puis dans un terminal (toujours dans le dossier simpleViewer où normalement vous vous trouvez) tapez :</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">qmake-qt4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

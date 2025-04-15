@@ -2,7 +2,7 @@
 title: "Backup de Wordpress sur Free"
 author: "Kévin Polisano"
 date: "2016-10-29"
-categories: [site]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -18,8 +18,8 @@ lightbox:
 
 Lorsque vous faites une sauvegarde (un backup) de votre site, il faut en fait deux choses qui communiquent (et donc sont indispensables) et ne se situent pas au même endroit :
 
-1. **L'ensemble de vos fichiers/répertoires WP uploadés sur le serveur qui vous héberge.**
-2. **Une copie de la base de donnée qui elle contient tout le contenu texte/commentaires/etc de votre site.**
+1.  **L'ensemble de vos fichiers/répertoires WP uploadés sur le serveur qui vous héberge.**
+2.  **Une copie de la base de donnée qui elle contient tout le contenu texte/commentaires/etc de votre site.**
 
 ## Comment télécharger les fichiers uploadés sur le serveur Free.fr ?
 
@@ -29,15 +29,15 @@ Clic droit sur le répertoire à la racine / et faites `Télécharger` :
 
 ![](images/backup_wp.png)
 
-##  Pourquoi certains fichiers avec accents indiquent un "transfert échoué" ?
+## Pourquoi certains fichiers avec accents indiquent un "transfert échoué" ?
 
-Typiquement ces fichiers (où le 'é' est transformé en 'Ã©') ne sont pas téléchargés... 
+Typiquement ces fichiers (où le 'é' est transformé en 'Ã©') ne sont pas téléchargés...
 
 ![](images/transfert-echoues-accents.png)
 
 C'est souvent du à un problème d'encodage... pour y remédier il faut se rendre dans :
 
-```bash
+``` bash
 FileZilla > Fichier > "Ajouter la connexion actuelle dans le Gestionnaire de site"
 ```
 
@@ -71,7 +71,7 @@ Maintenant vous avez accès au répertoire depuis votre navigateur :
 
 Munissez vous ensuite d'un plugin Firefox vous permettant de télécharger ce dossier, j'ai utilisé pour ma part [DownThemAll](https://addons.mozilla.org/fr/firefox/addon/downthemall/). Faites ensuite :
 
-`Outils > Outils DownThemAll > DownThemAll` 
+`Outils > Outils DownThemAll > DownThemAll`
 
 ![](images/down-them-all.png)
 
@@ -83,6 +83,6 @@ Le tour est joué !
 
 Il y a bien sûr des plugins qui le font très bien, mais voici la procédure manuelle vous permettant de la récupérer sur Free :
 
-Rendez à l'adresse suivante (anciennement sql.free.fr) : [http://phpmyadmin.free.fr/phpMyAdmin/](http://phpmyadmin.free.fr/phpMyAdmin/) puis cliquez sur l'onglet `Exporter`, ce qui vous permet d'afficher dans le navigateur les instructions SQL, qu'il vous suffit de copier-coller dans un fichier texte.
+Rendez à l'adresse suivante (anciennement sql.free.fr) : <http://phpmyadmin.free.fr/phpMyAdmin/> puis cliquez sur l'onglet `Exporter`, ce qui vous permet d'afficher dans le navigateur les instructions SQL, qu'il vous suffit de copier-coller dans un fichier texte.
 
 Le tour est joué ! 😉

@@ -2,7 +2,7 @@
 title: "Son fonctionnant aléatoirement sous Ubuntu 12.04"
 author: "Kévin Polisano"
 date: "2013-10-21"
-categories: [linux]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -15,7 +15,7 @@ Fréquemment il m'arrive qu'il n'y ait plus de son, sans raison apparente, et se
 
 Après avoir essayer multiples manipulations plus compliquées les unes que les autres (réinstallation des librairies de son, kill des processus pulseaudio, etc) il s'est avéré que le problème était en fin de compte tout bête : parfois certains canaux passent en "Mute" et il est nécessaire de changer cette configuration, via la commande :
 
-```bash
+``` bash
 alsamixer
 ```
 

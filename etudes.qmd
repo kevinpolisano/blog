@@ -432,6 +432,8 @@ J'ai effectué ma thèse au laboratoire Jean Kuntzmann, financée par une bourse
 - Visite des étudiants du Cycle Préparatoire Polytechnique (CPP, avril 2017) et présentation de l’école et des projets numériques au cours du cursus de l'Ensimag.
 
 - Encadrement d'un projet filé 2A Ensimag (janvier à mai 2017) : [Comparaison de méthodes paramétriques pour la détection spectrale](https://kevinpolisano.github.io/pdf-storage/Doctoratrapport_polisano_bouton_buthod-garcon_vincent.pdf)
+
+- Organisation d’un groupe de lecture « Analyse de graphes par ondelettes », avec Nicolas Tremblay (Gipsa), Sophie Achard (LJK) et Aurélien Gourrier (Liphy).
   
 ## Soutenance thèse
 

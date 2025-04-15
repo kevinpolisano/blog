@@ -2,7 +2,7 @@
 title: "Créer une documentation et/ou une Toolbox dans Matlab"
 author: "Kévin Polisano"
 date: "2016-03-03"
-categories: [matlab]
+categories: [informatique]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -36,16 +36,17 @@ Ci-dessous la visualisation de ma fenêtre d'édition, montrant la structuration
 
 ![](images/structure-code-matlab-explications.png)
 
-- **Titre** : décrit en une ligne (appelée ligne H1) la fonction principale de votre fichier, et doit se situer tout en haut, pour apparaître en orange dans le titre du html, précédé obligatoirement de deux pourcents `%%` : 
+-   **Titre** : décrit en une ligne (appelée ligne H1) la fonction principale de votre fichier, et doit se situer tout en haut, pour apparaître en orange dans le titre du html, précédé obligatoirement de deux pourcents `%%` :
 
-```matlab
+``` matlab
 %% Denoising and deblurring an image containing K blurred lines
 ```
- _Note : c'est cette ligne de code qui apparaîtra également dans le fichier Contents.m._
- 
-- **Description** : accolées juste en dessous du titre, ces quelques lignes permettent de préciser un peu plus en détail le rôle joué par votre script/fonction, son fonctionnement, ses entrées/sorties, etc. Elles sont précédées d'un seul `%` : 
 
-```matlab
+*Note : c'est cette ligne de code qui apparaîtra également dans le fichier Contents.m.*
+
+-   **Description** : accolées juste en dessous du titre, ces quelques lignes permettent de préciser un peu plus en détail le rôle joué par votre script/fonction, son fonctionnement, ses entrées/sorties, etc. Elles sont précédées d'un seul `%` :
+
+``` matlab
 %% Denoising and deblurring an image containing K blurred lines 
 % \* Generate $K$ lines with parameters $(\\theta\_k,\\alpha\_k,\\eta\_k)$, 
 % blurred with a spread, in an image of size $W\\times H$ degraded by noise 
@@ -53,20 +54,25 @@ Ci-dessous la visualisation de ma fenêtre d'édition, montrant la structuration
 % \* From the solution $\\hat w\_r^{\\ast}$, estimate the lines by Prony
 ```
 
-_Note : les \* suivi d'un espace dans un commentaire sont interprétés comme des puces, tandis que \*texte\* (sans espace) affichera le texte en gras. Pour plus de détails sur la mise en forme du texte voir [ici](http://fr.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html#btj5hz8-1)._
+*Note : les \* suivi d'un espace dans un commentaire sont interprétés comme des puces, tandis que \*texte\* (sans espace) affichera le texte en gras. Pour plus de détails sur la mise en forme du texte voir [ici](http://fr.mathworks.com/help/matlab/matlab_prog/marking-up-matlab-comments-for-publishing.html#btj5hz8-1).*
 
-- **Titre des sous parties** : permet de diviser le fichier en plusieurs parties et de créer une table des matières 'Contents' comme vous pouvez le voir sur le premier screenshot. Ces noms de parties sont repérées par deux pourcents `%%` : 
-```matlab
+-   **Titre des sous parties** : permet de diviser le fichier en plusieurs parties et de créer une table des matières 'Contents' comme vous pouvez le voir sur le premier screenshot. Ces noms de parties sont repérées par deux pourcents `%%` :
+
+``` matlab
 %% DATA GENERATION
 ```
-- **Texte explicatif** : vous permet d'insérer des explications afin d'articuler et d'éclaircir les encadrés comportant du code, et peut éventuellement comporter des formules $\\LaTeX$, il se présente sous la forme suivante :
-```matlab
+
+-   **Texte explicatif** : vous permet d'insérer des explications afin d'articuler et d'éclaircir les encadrés comportant du code, et peut éventuellement comporter des formules $\\LaTeX$, il se présente sous la forme suivante :
+
+``` matlab
 %%% Add current folder and subfolders to the path
 ```
- _Note : il est également possible d'insérer à cet endroit des liens, des images, etc._
- 
-- **Code** : vous permet d'insérer du code dans un encadré, avec les commentaires associés, les lignes ne sont précédés d'aucun symbole `%` : 
-```matlab
+
+*Note : il est également possible d'insérer à cet endroit des liens, des images, etc.*
+
+-   **Code** : vous permet d'insérer du code dans un encadré, avec les commentaires associés, les lignes ne sont précédés d'aucun symbole `%` :
+
+``` matlab
 tmp=which('main');          % complete path to the main file  index=strfind(tmp,'/');       % index of '/' into the string tmp   p=tmp(1:index(end));        % folder which contains the file 
 addpath(genpath(p));        % add folder and its subfolders to the path 
 clear tmp p index             % clear these temporary variables
@@ -82,13 +88,13 @@ Cliquez sur l'**onglet PUBLISH** en haut de la fenêtre d'édition, puis le bout
 
 Autre méthode : tapez la commande suivante dans la fenêtre de commande Matlab
 
-```matlab
+``` matlab
 publish('filename.m')
 ```
 
 Vous pouvez également spécifier un certain nombre d'options tels que le format de la publication (par défaut html, mais possible en $\\LaTeX$, en .doc ou encore .ppt), son emplacement, etc. Pour plus d'information consulter la doc de [publish](http://fr.mathworks.com/help/matlab/ref/publish.html?refresh=true).
 
-```matlab
+``` matlab
 publish('index.m',struct('format','html','outputDir','doc'));
 ```
 
@@ -98,9 +104,9 @@ Pour résumer cette partie vous pouvez également vous référer à cette [aide 
 
 Une fois générées toutes les pages html au sein d'un même répertoire, il peut être utile de les "regrouper" au sein d'une même page, disons index.html, contenant des liens pointant vers ces pages.
 
-Pour cela, on créé de même un fichier index.m, qui présente la même structure de code décrite précédemment, et que l'on va également convertir en `index.html` via la commande _publish_ :
+Pour cela, on créé de même un fichier index.m, qui présente la même structure de code décrite précédemment, et que l'on va également convertir en `index.html` via la commande *publish* :
 
-```matlab
+``` matlab
 %% Convex Super-Resolution Detection of Lines in Images
 
 %% Main functions
@@ -123,28 +129,28 @@ Pour cela, on créé de même un fichier index.m, qui présente la même structu
 
 Ici la **mise en forme pour un lien** dont le nom est "texte" pointant vers le fichier `filename.html` est la suivante :
 
-**<filename.html texte>**
+**\<filename.html texte\>**
 
 Le résultat est le suivant :
 
 ![](images/example-bibliography-matlab.png)Pour afficher la page html à partir de la fenêtre de commande Matlab, tapez :
 
-```matlab
+``` matlab
  web('chemin_vers_repertoire/index.html','-helpbrowser')
 ```
 
 L'option `'-helpbrower'` permet d'ouvrir l'index et de naviguer entre les pages dans le "Help Browser" de Matlab, ce qui est plus commode. Si on ne spécifie pas cette option c'est votre navigateur web qui s'en chargera.
 
-## Produire une Toolbox accessible dans le _Help Browser_ de Matlab
+## Produire une Toolbox accessible dans le *Help Browser* de Matlab
 
 Maintenant que notre documentation html est complètement générée, on peut vouloir en faire une Toolbox référencée dans Matlab. Cette procédure s'appuie sur deux fichiers que nous allons créer :
 
-- `info.xml` : qui permet de trouver et d'**identifier vos pages** de documentation.
-- `helptoc.xml` : qui permet de **créer une table des matières** de la documentation et permet de l'afficher dans "Contents pane" (à gauche) de votre "Help Browser".
+-   `info.xml` : qui permet de trouver et d'**identifier vos pages** de documentation.
+-   `helptoc.xml` : qui permet de **créer une table des matières** de la documentation et permet de l'afficher dans "Contents pane" (à gauche) de votre "Help Browser".
 
 Le fichier `info.xml` doit se situer dans le même répertoire que vos pages html de documentation, et ressembler à ceci :
 
-```matlab
+``` matlab
 <productinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="optional">
     <?xml-stylesheet type="text/xsl"href="optional"?>
@@ -158,13 +164,13 @@ Le fichier `info.xml` doit se situer dans le même répertoire que vos pages htm
 </productinfo>
 ```
 
-Changer le nom de la Toolbox par le vôtre dans la balise <name>, et la version de matlab dans <matlabrelease> (qui n'a pas d'effet en réalité, juste à titre informatif). La seule chose que **vous devez impérativement renseigner est le chemin vers le répertoire qui contient info.xml** et les pages html dans la balise **<help\_location>**.
+Changer le nom de la Toolbox par le vôtre dans la balise <name>, et la version de matlab dans <matlabrelease> (qui n'a pas d'effet en réalité, juste à titre informatif). La seule chose que **vous devez impérativement renseigner est le chemin vers le répertoire qui contient info.xml** et les pages html dans la balise **\<help_location\>**.
 
 Exemple : dans mon cas, je l'ai mentionné en relatif, en effet mon fichier `info.xml` étant situé dans le répertoire `doc/`, le chemin vers doc, relativement à `info.xml`, est bien `../doc`.
 
-En fait, quand le répertoire `doc/` contenant vos pages html et `info.xml` va être ajouté au path de Matlab, il va identifier le fichier `info.xml`, et renseigner la position de votre Toolbox en consultant la balise <help\_location>.
+En fait, quand le répertoire `doc/` contenant vos pages html et `info.xml` va être ajouté au path de Matlab, il va identifier le fichier `info.xml`, et renseigner la position de votre Toolbox en consultant la balise \<help_location\>.
 
-_Note : pour ajouter un répertoire au path faites un clic droit sur celui-ci et choisissez `Add to Path`, ou bien en ligne de commande `addpath('chemin\_vers\_repertoire')`. Pour ajouter tous les dossiers et sous dossiers de votre répertoire de travail au path, voir le code de l'encadré bleu de l'image plus haut, qui utilise les commandes `which` et `genpath`._
+*Note : pour ajouter un répertoire au path faites un clic droit sur celui-ci et choisissez `Add to Path`, ou bien en ligne de commande `addpath('chemin\_vers\_repertoire')`. Pour ajouter tous les dossiers et sous dossiers de votre répertoire de travail au path, voir le code de l'encadré bleu de l'image plus haut, qui utilise les commandes `which` et `genpath`.*
 
 **Attention** : si vous modifiez le fichier `info.xml` ou `helptoc.xml`, il vous faudra retirer du path le répertoire les contenant, puis la rajouter au path pour prendre en compte les modifications.
 
@@ -172,7 +178,7 @@ _Note : pour ajouter un répertoire au path faites un clic droit sur celui-ci et
 
 Le fichier `helptoc.xml` doit également se situer dans le même répertoire que les pages html de documentation. Il permet de créer une table des matières de votre documentation (comme son nom l'indique toc = table of contents). Il se présente sous cette forme :
 
-```xml
+``` xml
 <?xml version='1.0' encoding="utf-8"?>
 <toc version="2.0">
 
@@ -198,38 +204,35 @@ Le fichier `helptoc.xml` doit également se situer dans le même répertoire que
 
 Après avoir retirer/ajouter du path le répertoire de votre documentation, vous pouvez visualiser le résultat comme suit :
 
-- Cliquer sur `Help>Documentation` dans la barre d'outil
-- Puis tout en bas de la fenêtre qui s'ouvre, cliquez sur `Supplemental Software` (qui contient vos Toolbox).
-- Cela ouvre conjointement le `Help Browser` sur le fichier `index.html` (dans mon cas, voir les tocitem ci-dessus qui le spécifie) ainsi qu'une **table des matières à gauche** qui vous permet de naviguer au sein de la documentation de votre Toolbox ainsi hiérarchisée.
+-   Cliquer sur `Help>Documentation` dans la barre d'outil
+-   Puis tout en bas de la fenêtre qui s'ouvre, cliquez sur `Supplemental Software` (qui contient vos Toolbox).
+-   Cela ouvre conjointement le `Help Browser` sur le fichier `index.html` (dans mon cas, voir les tocitem ci-dessus qui le spécifie) ainsi qu'une **table des matières à gauche** qui vous permet de naviguer au sein de la documentation de votre Toolbox ainsi hiérarchisée.
 
 En images :
 
-::: {layout-ncol=3}
+::: {layout-ncol="3"}
+![](images/matlab-help.png){width="33%" group="my-gallery"}
 
-![](images/matlab-help.png){width=33% group="my-gallery"}
+![](images/matlab-supplemental-software-content.png){width="33%" group="my-gallery"}
 
-
-![](images/matlab-supplemental-software-content.png){width=33% group="my-gallery"}
-
-![](images/supplemental-software-matlab.png){width=33% group="my-gallery"}
-
+![](images/supplemental-software-matlab.png){width="33%" group="my-gallery"}
 :::
 
 Ou plus rapide à partir de la fenêtre de commande, tapez simplement :
 
-```matlab
+``` matlab
 doc -classic
 ```
 
 Enfin vous pouvez créer une entrée dans la base de donnée de Matlab pour effectuer une recherche de vos pages de documentation inhérentes à votre Toolbox en tapant :
 
-```matlab
+``` matlab
 builddocsearchdb('chemin_vers_repertoire')
 ```
 
 La procédure est récapitulée dans cette [aide Matlab](http://fr.mathworks.com/help/matlab/matlab_prog/display-custom-documentation.html).
 
-## Annexe 1 : générer un fichier Contents.m listant tous les _help descriptions_
+## Annexe 1 : générer un fichier Contents.m listant tous les *help descriptions*
 
 En dernière analyse, il me semble intéressant de disposer d'une liste de tous les fichiers `.m` avec leur description associée, et de pouvoir s'y référer rapidement via la commande help.
 
@@ -241,7 +244,7 @@ C'est le rôle du fichier `Contents.m` qui se génère en cliquant sur :
 
 Cela créé le fichier Contents.m contenant la liste des fichiers .m ainsi que leur description. Si vous avez respecté la structure du code suggéré, la description succinte correspond à la première ligne H1 du fichier. Le répertoire qui contient mes fichiers .m se nomme "main functions" comme vous pouvez le voir dans la barre d'adresse. Ainsi en tapant :
 
-```matlab
+``` matlab
 help 'main functions'
 ```
 
@@ -249,15 +252,15 @@ On visualise la description de toutes les fonctions du répertoire :
 
 ![](images/help-documentation.png)
 
-**Améliorons encore un peu les choses**. Imaginons que nos fichiers `.m` sont répartis dans plusieurs répertoires. On peut bien évidemment répéter la même opération dans chaque répertoire, mais cela peut rapidement s'avérer pénible si la Toolbox contient un grand nombre de répertoires. Par conséquent, on aimerait pouvoir effectuer récursivement cette tâche. C'est ce que propose la fonction [update\_contents](http://www.mathworks.com/matlabcentral/fileexchange/53127-recursive-contents-report) (qui requiert la fonction [get\_contents](http://www.mathworks.com/matlabcentral/fileexchange/30835-get-contents)). Ainsi en tapant :
+**Améliorons encore un peu les choses**. Imaginons que nos fichiers `.m` sont répartis dans plusieurs répertoires. On peut bien évidemment répéter la même opération dans chaque répertoire, mais cela peut rapidement s'avérer pénible si la Toolbox contient un grand nombre de répertoires. Par conséquent, on aimerait pouvoir effectuer récursivement cette tâche. C'est ce que propose la fonction [update_contents](http://www.mathworks.com/matlabcentral/fileexchange/53127-recursive-contents-report) (qui requiert la fonction [get_contents](http://www.mathworks.com/matlabcentral/fileexchange/30835-get-contents)). Ainsi en tapant :
 
-```matlab
+``` matlab
 update_contents('chemin_repertoire_principal')
 ```
 
 Cela créé un unique fichier `Contents.m` à la racine qui a cette tête :
 
-```matlab
+``` matlab
 % MATLAB CODE
 % 
 %   Contents file for MATLAB CODE and its subfolders.
@@ -332,51 +335,51 @@ Pour cela cliquez sur `Publish>Edit Publishing Options` puis choisissez `Output 
 
 ![](images/matlab-bouton-publish.png) ou bien en ligne de commande :
 
-```matlab
+``` matlab
 publish('filename.m',struct('format','pdf'));
 ```
 
 Si vous êtes aussi pointilleux que moi, vous estimerez peut-être que **les formules** $\\LaTeX$ **ainsi générées sont trop petites et floutées.** Si tel est le cas alors voici la [procédure](http://stackoverflow.com/questions/21948601/how-to-set-the-font-settings-in-pdf-publish-via-matlab-and-Latex) à suivre pour y remédier :
 
-- Nous allons **modifier la commande _publish_**, pour cela commençons par déterminer son emplacement via la commande _which_.
+-   Nous allons **modifier la commande *publish***, pour cela commençons par déterminer son emplacement via la commande *which*.
 
-```bash
+``` bash
 which('publish')
 ```
 
-- Rendez-vous dans le répertoire la contenant (pour ma part codetools), ouvrez la avec votre éditeur préféré (éventuellement en mode root pour avoir la permission de modifier le fichier). Allez à la ligne 780 (pour les utilisateurs de Matlab R2013a), et **modifier la valeur de** `FontSize`, par exemple prenez 30 au lieu de 22 :
+-   Rendez-vous dans le répertoire la contenant (pour ma part codetools), ouvrez la avec votre éditeur préféré (éventuellement en mode root pour avoir la permission de modifier le fichier). Allez à la ligne 780 (pour les utilisateurs de Matlab R2013a), et **modifier la valeur de** `FontSize`, par exemple prenez 30 au lieu de 22 :
 
-```matlab
+``` matlab
 temptext = text('Parent',tempaxes,'Position',[.5 .5], ...
     'HorizontalAlignment','center','FontSize',22, ...
     'Interpreter','latex');
 ```
 
-- Allez ensuite à la ligne 717, et **remplacer la ligne suivante** :
+-   Allez ensuite à la ligne 717, et **remplacer la ligne suivante** :
 
-```matlab
+``` matlab
 swapTexForImg(dom,equationNode,outputDir,fullFilename,equationText,newSize(2),newSize(1))
 ```
 
 par :
 
-```matlab
+``` matlab
     swapTexForImg(dom,equationNode,outputDir,fullFilename,equationText,newSize(2)/scale,newSize(1)/scale)
 ```
 
 avec `scale` un facteur de votre choix, par exemple 2.
 
-- **Enregistrer les modifications**, et **tapez** successivement dans la fenêtre des commandes :
+-   **Enregistrer les modifications**, et **tapez** successivement dans la fenêtre des commandes :
 
-```matlab
+``` matlab
 rehash toolboxcache
 ```
 
-```matlab
+``` matlab
 clear functions
 ```
 
-- **Relancer la commande publish**, le tour est joué !
+-   **Relancer la commande publish**, le tour est joué !
 
 Les formules apparaissent plus grandes, moins floutées et donc plus lisibles.
 
@@ -386,7 +389,7 @@ Néanmoins elles ne sont toujours pas parfaites, pour la simple et bonne raison 
 
 Pour cela tapez la commande :
 
-```matlab
+``` matlab
 publish('filename.m',struct('format','latex'));
 ```
 
@@ -396,12 +399,12 @@ Le résultat pour les formules est maintenant impeccable!
 
 Malheureusement c'est maintenant au tour du code de ne plus être formaté aussi bien qu'en html ou en pdf, puisqu'il est converti de manière brute **dans un environnement verbatim**. Pour y remédier, vous pouvez :
 
-- Soit **retoucher manuellement** le fichier `.tex` en utilisant par exemple [lstlisting](https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
-- Soit **changer le style** en l'indiquant directement à la commande `publish`
+-   Soit **retoucher manuellement** le fichier `.tex` en utilisant par exemple [lstlisting](https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
+-   Soit **changer le style** en l'indiquant directement à la commande `publish`
 
 Dans ce dernier cas, il vous faut inventer à votre sauce un fichier `matlab2latex\_pretty.xsl` qui spécifie le style que vous désirez donner au code, et taper :
 
-```matlab
+``` matlab
 publish('filename.m',struct('format','latex','stylesheet','matlab2latex_pretty.xsl'));
 ```
 

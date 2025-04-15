@@ -2,7 +2,7 @@
 title: "Casse-tête n°3 : une moyenne bien entourée"
 author: "Kévin Polisano"
 date: "2014-07-16"
-categories: [énigme]
+categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -14,9 +14,7 @@ image: images/suite.jpg
 On m'a récemment suggéré un joli problème tiré des [OIM 2014](https://www.imo-official.org/problems.aspx) qui ont eu lieu le 8 juillet dernier. L'énoncé est le suivant :
 
 ::: callout-note
-
-Soit $a_0<a_1<a_2<...$ une suite infinie d'entiers strictement positifs. Prouver qu'il existe un unique entier $n\ge 1$ tel que $$a_n<\frac{a_0+a_1+...+a_n}{n}\le a_{n+1}$$ 
-
+Soit $a_0<a_1<a_2<...$ une suite infinie d'entiers strictement positifs. Prouver qu'il existe un unique entier $n\ge 1$ tel que $$a_n<\frac{a_0+a_1+...+a_n}{n}\le a_{n+1}$$
 :::
 
 J'ai cherché en vain une jolie solution géométrique en réécrivant le problème comme suit : $$na_n<a_0+a_1+...+a_n\leq na_{n+1}$$
