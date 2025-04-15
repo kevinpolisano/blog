@@ -246,6 +246,7 @@ window.Quarto = {
   <li><a href="#création-des-discussions-github" id="toc-création-des-discussions-github" class="nav-link" data-scroll-target="#création-des-discussions-github">Création des discussions GitHub</a></li>
   <li><a href="#ajouter-les-commentaires-existants" id="toc-ajouter-les-commentaires-existants" class="nav-link" data-scroll-target="#ajouter-les-commentaires-existants">Ajouter les commentaires existants</a></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
 </nav>
@@ -959,11 +960,22 @@ Warning
 <span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
 <span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>    import_comments(CSV_FILE, POST_TITLE, DISCUSSION_ID)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Parfois il y a un échec d’importation lorsqu’il y a beaucoup de commentaires, certainement du à un quota d’utilisation de l’API, dans ce cas les commentaires qui n’ont pas été importés sont sauvegardés dans un fichier <code>failed_comments.csv</code>, et il suffit de relancer le script sur ce fichier (à renseigner dans <code>CSV_FILE</code>) autant de fois que nécessaire.</p>
-<!-- ## Conclusion -->
-<!-- La seule inquiétude que j'ai concerne l'espace de stockage. -->
-
-
 </section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>La conversion de mon ancien blog WordPress en un site statique généré avec Quarto est maintenant terminée. À mes yeux un blog statique possède plusieurs avantages :</p>
+<ul>
+<li><strong>Performance du site</strong> : pas de base de données à interroger, temps de chargement plus court, moins de dépendances serveur…</li>
+<li><strong>Sécurité</strong> : pas de surface d’attaque serveur (thèmes ou plugins WordPress vulnérables)</li>
+<li><strong>Contrôle du contenu et portabilité</strong> : fichiers markdown lisibles à vie, indépendants de tout CMS; migration possible vers un autre générateur statique (Hugo, Jekyll…) et publier localement sans dépendance à un service tiers; gestion facile des médias; structure logique des fichiers, qui sont versionnés avec git.</li>
+<li><strong>Automatisation et reproductibilité</strong> : intégration fluide avec GitHub Actions et GitHub Pages; insertion de code reproductible (R, Python, Julia, Bash) avec Quarto, parfait pour des billets scientifiques.</li>
+<li><strong>Gratuité et perenité</strong> : hébergé gratuitement sur GitHub Pages, seul le nom de domaine nécessite un achat.</li>
+</ul>
+<p>La principale restriction réside dans la limite de stockage offerte par le dépôt Git (5 Go) et surtout le déploiement du site avec GitHub Pages (1 Go). Raison pour laquelle j’utilise deux dépôts GitHub : le <a href="https://github.com/kevinpolisano/blog">premier</a> qui héberge à proprement parlé le blog Quarto contenant les posts et les images; le <a href="https://github.com/kevinpolisano/pdf-storage">second</a> qui stocke des documents PDF annexes, et qui est également déployé avec GitHub Pages pour obtenir des URL plus jolies et des PDF visualisables dans le navigateur.</p>
+<p>L’alternative aurait consisté à conserver mon hébergement chez o2switch et transférer avec GitHub Actions le site généré par Quarto via FTP. Cela a l’avantage d’offrir un espace de stockage bien plus conséquent, de centraliser le blog et les <em>assets</em> au même endroit et donc d’avoir une URL plus consistante avec le même nom de domaine. J’y reviendrai peut-être, mais pour le moment la solution proposée dans ce billet satisfait mes attentes pour un <em>blogging</em> du dimanche…</p>
+
+
 </section>
 
 </main> <!-- /main -->
