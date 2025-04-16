@@ -369,12 +369,12 @@ Voici les étapes pour créer un token personnel GitHub avec l'autorisation pour
 -   Allez dans `Settings > Developer Settings` (général pas dans un dépôt) puis `Personal access tokens > Tokens (classic)`.
 -   Sélectionnez `Generate new token > Generate new token (classic)`.
 -   Donnez un nom au token : `Giscus Discussions Token`.
--   Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou No expiration pour un usage prolongé.
+-   Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou `No expiration` pour un usage prolongé.
 -   Sélectionnez les autorisations nécessaires :
     -   `public_repo` : Accéder aux dépôts publics
     -   `read:discussion` : Lire les discussions.
     -   `write:discussion` : Ajouter ou modifier des discussions.
--   Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)
+-   Générer et sauvegarder le token (par exemple, dans un gestionnaire de mots de passe)
 -   Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d'environnement dans `Settings > Secrets and variables > Actions` avec le nom `GH_TOKEN` (ou un autre nom significatif) et collez le token.
 
 ### Création des discussions GitHub
@@ -491,7 +491,7 @@ if __name__ == "__main__":
                 create_discussion(title, repository_id)
 ```
 
-À noter que j'ai du déjà faire apparaître en défilant la section commentaire en local (avec `quarto preview`) pour chaque post afin que le fichier `html` contienne la portion de code suivante :
+À noter que j'ai du déjà faire apparaître la section commentaire en local (avec `quarto preview`) pour chaque post en défilant, afin que le fichier `html` contienne la portion de code suivante :
 
 ``` html
 <script src="https://giscus.app/client.js" 
@@ -706,7 +706,7 @@ Parfois il y a un échec d'importation lorsqu'il y a beaucoup de commentaires, c
 Dans le fichier `.htaccess` à la racine du serveur où j'hébergeais mon ancien blog (`kevinpolisano.com`), il faut temporairement effectuer des redirections des anciennes URL de mes billets vers les nouvelles, comme ceci par exemple :
 
 ```
-Redirection 301 analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/ https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/
+Redirection 301 /analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/ https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/
 ```
 
 Et pour toutes les autres URL non spécifiées :
@@ -721,7 +721,7 @@ RedirectMatch 301 ^/(.*)$ https://kevinpolisano.fr/
 
 1. Depuis Google Search Console, télécharger le fichier `googleXXXXXXXXXXXX.html`.
 2. Placer ce fichier directement à la racine du dossier Quarto (là où se trouve `index.qmd` ou `_quarto.yml`).
-3.  Ajoute une ligne dans `_quarto.yml` pour inclure le fichier dans le site généré :
+3.  Ajouter une ligne dans `_quarto.yml` pour inclure le fichier dans le site généré :
 
 ```
 resources:
@@ -776,7 +776,7 @@ La conversion de mon ancien blog WordPress en un site statique généré avec Qu
 - **Sécurité** : pas de surface d'attaque serveur (thèmes ou plugins WordPress vulnérables)
 - **Contrôle du contenu et portabilité** : fichiers markdown lisibles à vie, indépendants de tout CMS; migration possible vers un autre générateur statique (Hugo, Jekyll...) et possibilité de rédiger localement sans dépendance à un service tiers; gestion facile des médias; structure logique des fichiers, qui sont versionnés avec git.
 - **Automatisation et reproductibilité** : intégration fluide avec GitHub Actions et GitHub Pages; insertion de code reproductible (R, Python, Julia, Bash) avec Quarto, parfait pour des billets scientifiques.
-- **Gratuité et perenité** : hébergé gratuitement sur GitHub Pages, seul le nom de domaine nécessite un achat.
+- **Gratuité et perenité** : hébergé gratuitement sur GitHub Pages, seul le nom de domaine nécessite un achat si l'on en veut un customisable (`kevinpolisano.fr` plutôt que celui par défaut `kevinpolisano.github.io`).
 
 La principale restriction réside dans la limite de stockage offerte par le dépôt Git (5 Go) et surtout le déploiement du site avec GitHub Pages (1 Go). Raison pour laquelle j'utilise deux dépôts GitHub : le [premier](https://github.com/kevinpolisano/blog) qui héberge à proprement parlé le blog Quarto contenant les posts et les images; le [second](https://github.com/kevinpolisano/pdf-storage) qui stocke des documents PDF annexes, et qui est également déployé avec GitHub Pages pour obtenir des URL plus jolies et des PDF visualisables dans le navigateur. 
 
