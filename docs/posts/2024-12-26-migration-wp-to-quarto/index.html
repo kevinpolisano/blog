@@ -659,14 +659,14 @@ Warning
 <li>Allez dans <code>Settings &gt; Developer Settings</code> (général pas dans un dépôt) puis <code>Personal access tokens &gt; Tokens (classic)</code>.</li>
 <li>Sélectionnez <code>Generate new token &gt; Generate new token (classic)</code>.</li>
 <li>Donnez un nom au token : <code>Giscus Discussions Token</code>.</li>
-<li>Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou No expiration pour un usage prolongé.</li>
+<li>Définissez une durée d’expiration : choisissez une durée (par exemple 30 jours) ou <code>No expiration</code> pour un usage prolongé.</li>
 <li>Sélectionnez les autorisations nécessaires :
 <ul>
 <li><code>public_repo</code> : Accéder aux dépôts publics</li>
 <li><code>read:discussion</code> : Lire les discussions.</li>
 <li><code>write:discussion</code> : Ajouter ou modifier des discussions.</li>
 </ul></li>
-<li>Générer et sauvegarder le token (par exemple, un gestionnaire de mots de passe)</li>
+<li>Générer et sauvegarder le token (par exemple, dans un gestionnaire de mots de passe)</li>
 <li>Dans les paramètres de votre projet où Giscus est configuré, ajoutez le token comme variable d’environnement dans <code>Settings &gt; Secrets and variables &gt; Actions</code> avec le nom <code>GH_TOKEN</code> (ou un autre nom significatif) et collez le token.</li>
 </ul>
 </section>
@@ -780,7 +780,7 @@ Warning
 <span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
 <span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"Création de la discussion pour : </span><span class="sc">{</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>                create_discussion(title, repository_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>À noter que j’ai du déjà faire apparaître en défilant la section commentaire en local (avec <code>quarto preview</code>) pour chaque post afin que le fichier <code>html</code> contienne la portion de code suivante :</p>
+<p>À noter que j’ai du déjà faire apparaître la section commentaire en local (avec <code>quarto preview</code>) pour chaque post en défilant, afin que le fichier <code>html</code> contienne la portion de code suivante :</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://giscus.app/client.js"</span><span class="ot"> </span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ot">data-repo</span><span class="op">=</span><span class="st">"kevinpolisano/blog"</span><span class="ot"> </span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ot">data-repo-id</span><span class="op">=</span><span class="st">"R_kgDOM9ReCA"</span><span class="ot"> </span></span>
@@ -983,7 +983,7 @@ Warning
 <section id="redirection-des-url" class="level3">
 <h3 class="anchored" data-anchor-id="redirection-des-url">Redirection des URL</h3>
 <p>Dans le fichier <code>.htaccess</code> à la racine du serveur où j’hébergeais mon ancien blog (<code>kevinpolisano.com</code>), il faut temporairement effectuer des redirections des anciennes URL de mes billets vers les nouvelles, comme ceci par exemple :</p>
-<pre><code>Redirection 301 analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/ https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/</code></pre>
+<pre><code>Redirection 301 /analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/ https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/</code></pre>
 <p>Et pour toutes les autres URL non spécifiées :</p>
 <pre><code>RedirectMatch 301 ^/(.*)$ https://kevinpolisano.fr/</code></pre>
 </section>
@@ -994,7 +994,7 @@ Warning
 <ol type="1">
 <li>Depuis Google Search Console, télécharger le fichier <code>googleXXXXXXXXXXXX.html</code>.</li>
 <li>Placer ce fichier directement à la racine du dossier Quarto (là où se trouve <code>index.qmd</code> ou <code>_quarto.yml</code>).</li>
-<li>Ajoute une ligne dans <code>_quarto.yml</code> pour inclure le fichier dans le site généré :</li>
+<li>Ajouter une ligne dans <code>_quarto.yml</code> pour inclure le fichier dans le site généré :</li>
 </ol>
 <pre><code>resources:
   - googleXXXXXXXXXXXX.html</code></pre>
@@ -1041,7 +1041,7 @@ Warning
 <li><strong>Sécurité</strong> : pas de surface d’attaque serveur (thèmes ou plugins WordPress vulnérables)</li>
 <li><strong>Contrôle du contenu et portabilité</strong> : fichiers markdown lisibles à vie, indépendants de tout CMS; migration possible vers un autre générateur statique (Hugo, Jekyll…) et possibilité de rédiger localement sans dépendance à un service tiers; gestion facile des médias; structure logique des fichiers, qui sont versionnés avec git.</li>
 <li><strong>Automatisation et reproductibilité</strong> : intégration fluide avec GitHub Actions et GitHub Pages; insertion de code reproductible (R, Python, Julia, Bash) avec Quarto, parfait pour des billets scientifiques.</li>
-<li><strong>Gratuité et perenité</strong> : hébergé gratuitement sur GitHub Pages, seul le nom de domaine nécessite un achat.</li>
+<li><strong>Gratuité et perenité</strong> : hébergé gratuitement sur GitHub Pages, seul le nom de domaine nécessite un achat si l’on en veut un customisable (<code>kevinpolisano.fr</code> plutôt que celui par défaut <code>kevinpolisano.github.io</code>).</li>
 </ul>
 <p>La principale restriction réside dans la limite de stockage offerte par le dépôt Git (5 Go) et surtout le déploiement du site avec GitHub Pages (1 Go). Raison pour laquelle j’utilise deux dépôts GitHub : le <a href="https://github.com/kevinpolisano/blog">premier</a> qui héberge à proprement parlé le blog Quarto contenant les posts et les images; le <a href="https://github.com/kevinpolisano/pdf-storage">second</a> qui stocke des documents PDF annexes, et qui est également déployé avec GitHub Pages pour obtenir des URL plus jolies et des PDF visualisables dans le navigateur.</p>
 <p>L’alternative aurait consisté à conserver mon hébergement chez o2switch et transférer avec GitHub Actions le site généré par Quarto via FTP. Cela a l’avantage d’offrir un espace de stockage bien plus conséquent, de centraliser le blog et les <em>assets</em> au même endroit et donc d’avoir une URL plus consistante avec le même nom de domaine. J’y reviendrai peut-être, mais pour le moment la solution proposée dans ce billet satisfait mes attentes pour un <em>blogging</em> du dimanche…</p>
