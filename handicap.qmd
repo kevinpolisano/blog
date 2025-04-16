@@ -10,45 +10,41 @@ lightbox:
   loop: true
 ---
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="70%"}
 10 ans durant, j'ai milité activement en faveur de la déconjugalisation de l'allocation adulte handicapé (AAH), jusqu'à obtenir gain de cause en 2022. Cette page répertorie certaines de mes interventions publiques, en complément de :
 
-- mes [billets de blogs](https://www.kevinpolisano.fr/#category=handicap) consacrés à ce combat politique
-- ma chaine YouTube secondaire [L'AHH Investigation](https://www.youtube.com/@laahinvestigation303)
-- le site de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/)
+-   mes [billets de blogs](https://www.kevinpolisano.fr/#category=handicap) consacrés à ce combat politique
+-   ma chaine YouTube secondaire [L'AHH Investigation](https://www.youtube.com/@laahinvestigation303)
+-   le site de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/)
 :::
 
 ::: {.column width="30%"}
 ![](images/aah-investigation.jpg){fig-align="center" width="200" height="200"}
 :::
+:::::
 
-::::
-
-
-![](images/prixdelamour.png) 
+![](images/prixdelamour.png)
 
 ## Contribution au Mémoire de Politiques Publiques d'Océane Lang
 
-Le 13 janvier 2024, j'ai eu un entretien pour le [Mémoire de Politiques Publiques](https://pepite-depot.univ-lille.fr/LIBRE/Mem_Droit/2022/ULIL_DMSP_2022_033.pdf) d'**Océane Lang** intitulé : "La déconjugalisation de l’Allocation aux Adultes Handicapés : de la réforme à sa mise en œuvre", sous la direction de **Anne Revillard**.
+Le 13 janvier 2024, j'ai eu un entretien pour le Mémoire de Politiques Publiques d'**Océane Lang** intitulé : "La déconjugalisation de l’Allocation aux Adultes Handicapés : de la réforme à sa mise en œuvre", sous la direction de **Anne Revillard**.
 
 ## Article dans Libération sur le vote de la déconjugalisation
 
 Le 19 juillet 2022, j'ai été interrogé par la journaliste **Elsa Maudet** pour un [article](https://www.liberation.fr/societe/lallocation-aux-adultes-handicapes-enfin-sur-la-voie-de-la-deconjugalisation-20220719_SXRKS4FIHZGO7IL7LDWOKWYL34/) dans Libération afin de commenter le vote à l'assemblée de la déconjugalisation de l'AAH.
 
-![](images/liberation.jpg) 
+![](images/liberation.jpg)
 
 ## Article sur Handicap.fr à propos des éventuels perdants de la déconjugalisation de l'AAH
 
-Le 19 juillet 2022, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet  [article](https://informations.handicap.fr/a-deconjugalisation-aah-quels-seraient-les-perdants-33279.php) sur Handicap.fr, dans lequel j'explique quels seraient les éventuels perdants de la déconjugalisation de l'AAH.
+Le 19 juillet 2022, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet [article](https://informations.handicap.fr/a-deconjugalisation-aah-quels-seraient-les-perdants-33279.php) sur Handicap.fr, dans lequel j'explique quels seraient les éventuels perdants de la déconjugalisation de l'AAH.
 
 ![](images/handicapfr-5.jpg)
 
 ## Contribution au Mémoire de Master 1 de Syliane Questel
 
 Le 16 février 2022, j'ai eu un entretien pour le [Mémoire de Master 1](https://pepite-depot.univ-lille.fr/LIBRE/Mem_Droit/2022/ULIL_DMSP_2022_033.pdf) de **Syliane Questel** intitulé : "La mobilisation de la commu handie pour la déconjugalisation de l'allocation aux adultes handicapés", sous la direction de **Aude Lejeune**.
-
 
 ## Article dans la revue féministe « La Déferlante »
 
@@ -61,12 +57,9 @@ Le 12 novembre 2021, **Anne-Cécile Mouget** et moi intervenions dans [un articl
 Le 22 septembre 2021, j'intervenais au conseil national consultatif des personnes handicapées ([CNCPH](https://cncph.fr/)) sur le thème "Sommes nous condamnés à vivre sous le seuil de pauvreté ?".
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/CcJfXE-Dk_0?si=EjS8DMUyMasT_6bx&amp;start=755" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/CcJfXE-Dk_0?si=EjS8DMUyMasT_6bx&amp;start=755" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ## Audition en commission parlementaire dans le cadre d'une PPL
@@ -89,7 +82,7 @@ Le 16 septembre 2021, notre collectif [Le prix de l'amour](https://leprixdelamou
 
 ## Article sur Handicap.fr sur le cumul du salaire et de l'AAH
 
-Le 2 juillet 2021, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet  [article](https://informations.handicap.fr/a-cumuler-aah-et-salaire-oui-possible-31129.php/true) sur Handicap.fr dans lequel j'explique le [mode de calcul de l'AAH](https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/).
+Le 2 juillet 2021, je collabore avec la journaliste **Emmanuelle Dal'secco** pour la rédaction de cet [article](https://informations.handicap.fr/a-cumuler-aah-et-salaire-oui-possible-31129.php/true) sur Handicap.fr dans lequel j'explique le [mode de calcul de l'AAH](https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/).
 
 ![](images/handicapfr-4.jpg)
 
@@ -97,7 +90,7 @@ Le 2 juillet 2021, je collabore avec la journaliste **Emmanuelle Dal'secco** pou
 
 Le 23 juin 2021, j'ai été interrogé par la journaliste **Marion Perrier** pour un [article](https://www.alternatives-economiques.fr/deconjugaliser-lallocation-adulte-handicape-ca-coince/00099459) dans Alternatives Économiques pour expliquer les tenants et les aboutissants de la déconjugalisation de l'AAH.
 
-![](images/alternatives-economiques.jpg) 
+![](images/alternatives-economiques.jpg)
 
 ## Tribune dans Le Monde avec un collectif d'universitaires
 
@@ -107,7 +100,7 @@ Le 17 juin 2021, nous rédigeons avec le sociologue **Pierre-Yves Baudot** une [
 
 ## Article de Presse dans la Nouvelle Republique.fr
 
-Le 17 juin 2021, l'appel à témoignages de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/)  est relayé dans cet [article](https://www.lanouvellerepublique.fr/a-la-une/handicap-le-prix-de-l-amour-en-debat-a-l-assemblee) de la Nouvelle Republique.fr.
+Le 17 juin 2021, l'appel à témoignages de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) est relayé dans cet [article](https://www.lanouvellerepublique.fr/a-la-une/handicap-le-prix-de-l-amour-en-debat-a-l-assemblee) de la Nouvelle Republique.fr.
 
 ## Article dans Mediapart au sujet de la déconjugalisation
 
@@ -121,17 +114,14 @@ Le 16 juin 2021, la recension des témoignages par notre collectif [Le prix de l
 
 ![](images/jdd.jpg)
 
-## Débat sur la déconjugalisation de l'AAH à l'Hôtel de Ville de Grenoble 
+## Débat sur la déconjugalisation de l'AAH à l'Hôtel de Ville de Grenoble
 
 Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.fr/) et moi avons organisé un débat politique et une table ronde à la mairie de Grenoble, avec l'intervention du maire **Éric Piole** et du sénateur **Philippe Mounier**.
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/C6Q5ojTQnaI?si=m-GQpCe05oHy0eEI"
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/C6Q5ojTQnaI?si=m-GQpCe05oHy0eEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ::: {layout-ncol="4"}
@@ -141,7 +131,6 @@ Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.f
 
 ![](images/debat-3.jpg){group="my-gallery"}
 
-
 ![](images/debat-4.jpg){group="my-gallery"}
 :::
 
@@ -150,19 +139,16 @@ Le 11 juin 2021, mon amie [**Emmanuelle Kristensen**](https://blog-enrouelibre.f
 Le 10 juin 2021, j'ai participé à une [émission](https://www.youtube.com/watch?v=z_Q6mKBnRp0&ab_channel=NouvelleUnionPopulaire%C3%89cologiqueetSociale) consacrée à « L'Avenir en commun » et intitulée « AAH : Quelles autonomie pour les personnes en situation de handicap ? » en compagnie de **Pierre-Yves Baudot** (professeur de sociologie), **Anne-Sophie Pelletier** (eurodéputée) et **Hadrien Toucel** (co-responsable du programme).
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/z_Q6mKBnRp0?si=u8f2V7A6ad6EGyyv"
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/z_Q6mKBnRp0?si=u8f2V7A6ad6EGyyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ## Article dans Faire-Face et Handicap.fr sur l'anomalie de l'amendement AS7
 
 Le 9 juin 2021, les journalistes **Franck Seuret** et **Emmanuelle Dal'secco** relaient [mon alerte](https://x.com/KevinPolisano/status/1402385768509755392) concernant l'anomalie constitutive de l'amendement AS7, respectivement dans un [article](https://www.faire-face.fr/2021/06/09/aah-en-couple-individualisation-eloigne/) publié dans le magazine Faire-Face et l'[autre](https://informations.handicap.fr/a-aah-en-couple-majorite-detricote-son-individualisation-30989.php) dans Handicap.fr.
 
-![](images/faireface-12.jpg) 
+![](images/faireface-12.jpg)
 
 ## Entretien avec la député Camille Galliard Minié de LREM
 
@@ -188,15 +174,17 @@ Le 4 juin 2021, j'intervenais dans un [article](https://www.faire-face.fr/2021/0
 
 ## Participation à une commission parlementaire
 
-Le 3 juin 2021, mon acolyte **Anne-Cécile Mouget** et moi-même avons échangé avec des députés à propos de la déconjugalisation de l'AAH dans le cadre d'une commission parlementaire, en particulier **Jeanine Dubié**, **Marie-George Buffet**, **Stéphane Peu** et **Véronique Hammerer**. 
+Le 3 juin 2021, mon acolyte **Anne-Cécile Mouget** et moi-même avons échangé avec des députés à propos de la déconjugalisation de l'AAH dans le cadre d'une commission parlementaire, en particulier **Jeanine Dubié**, **Marie-George Buffet**, **Stéphane Peu** et **Véronique Hammerer**.
 
-![](images/commission.jpg) 
+![](images/commission.jpg)
 
 ## Podcast « Derrière les sourires »
 
 Le 27 mai 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé au [podcast](https://open.spotify.com/episode/07jbpGRr7GpKUKEknSDpI4) de **Laetitia Giovanni**.
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/07jbpGRr7GpKUKEknSDpI4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/07jbpGRr7GpKUKEknSDpI4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
 
 ## Article dans le Grenoble Magazine
 
@@ -215,12 +203,9 @@ Le 31 mai 2021, suite au [reportage](https://www.publicsenat.fr/actualites/polit
 Le 27 avril 2021, notre collectif [Le prix de l'amour](https://leprixdelamour.fr/) a participé à une émission de Public Sénat consacrée à la déconjugalisation de l'AAH.
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/QBnh0_6Uwwo?si=Rcnxr1znhvKpTfur&amp;start=1320" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/QBnh0_6Uwwo?si=Rcnxr1znhvKpTfur&amp;start=1320" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ## Article de presse dans le « Dauphiné Libéré »
@@ -249,14 +234,13 @@ Le 19 mars 2021, la journaliste **Emmanuelle Dal'secco** reprend dans un [articl
 
 ![](images/handicapfr.jpg)
 
-## Émission « L'œil et la main | Aah, mon amour ? » sur France 5
+## Émission « L'œil et la main \| Aah, mon amour ? » sur France 5
 
 Le 8 février 2021, mon amie **Anne-Cécile Mouget** et moi participons à l'[émission](https://www.france.tv/france-5/l-oeil-et-la-main/2399259-aah-mon-amour.html#about-section) l'œil et la main, qui signera le début de notre aventure avec la création de notre collectif [Le prix de l'amour](https://leprixdelamour.fr/).
 
 ## Article dans le magazine Faire-Face sur l'AAH et les enfants
 
 Le 18 décembre 2019, je collabore avec le journaliste **Franck Seuret** en lui fournissant des chiffres pour un [article](https://www.faire-face.fr/2019/12/18/aah-20e-anniversaire-coute-cher/) dans le magazine Faire-Face.
-
 
 ![](images/faireface-7.jpg)
 
@@ -265,24 +249,18 @@ Le 18 décembre 2019, je collabore avec le journaliste **Franck Seuret** en lui 
 En novembre 2019, je suis contacté par l'humoriste **Nicole Ferroni** pour l'éclairer sur le mode de calcul de l'AAH, afin qu'elle puisse mettre en lumière l'injustice pour les couples dans ses chroniques France Inter :
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/Tr4L3TFGRRo?si=PhSJSwZrkg4lOhNQ" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/Tr4L3TFGRRo?si=PhSJSwZrkg4lOhNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/JUP88dF8DF4?si=3CWKzpkfPAdI15cu" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/JUP88dF8DF4?si=3CWKzpkfPAdI15cu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
-## Dossier sur l'AAH dans le magazine Faire-Face 
+## Dossier sur l'AAH dans le magazine Faire-Face
 
 En novembre 2019, je collabore avec le journaliste **Franck Seuret** sur un dossier [l'AAH sous toutes ses faces](https://www.faire-face.fr/wp-content/uploads/woocommerce_uploads/2019/11/Magazine-Faire-Face-novembre-decembre-Dossier-LAAH-sous-toutes-ses-faces-N764.pdf) dans le magazine Faire-Face.
 
@@ -298,7 +276,6 @@ Le 15 février 2019, **Emmanuelle Kristensen** et moi avons rencontré le déput
 
 Le 11 mars 2019, le journaliste **Franck Seuret** reprend dans un [article](https://www.faire-face.fr/2019/03/11/aah-couple-cinq-raisons-gouvernement-refus/) des points de mon [Manifeste](https://www.kevinpolisano.fr/posts/2019-03-06-manifeste-pour-laccessibilite-de-la-vie-de-couple/) dans le magazine Faire-Face.
 
-
 ![](images/faireface-8.jpg)
 
 ## Entretien avec Floriane Maisonnasse MCF en droit privé
@@ -311,31 +288,26 @@ Suite au [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANA
 
 ![](images/faireface-4.jpg)
 
-
 ## Reportage TV « Handicap : Le combat des citoyens oubliés » sur Planète+ CI
 
 En 2017, ma première intervention télévisée en faveur de la déconjugalisation de l'allocation adulte handicapé. Merci à **Antoine Guerre** pour son professionnel durant le tournage, son implication et sa sympathie. Merci à la chaîne **Planète+ CI** pour l’autorisation de la diffusion de ces 5 min d’extrait du [reportage](https://www.youtube.com/watch?v=jmppdxRbKg0&ab_channel=CANAL+).
 
-- Reportage : « Handicap : Le combat des citoyens oubliés »
-- Réalisé par : Antoine Guerre
-- Producteur : Luc Hermann et Paul Moreira
-- Montage : Mathieu Goasguen
-- Rédacteur en chef : Ghislaine Buffard
-- Diffusé sur Planète+ CI dans le cadre de la série documentaire SOUS LE RADAR produite par Premières Lignes
+-   Reportage : « Handicap : Le combat des citoyens oubliés »
+-   Réalisé par : Antoine Guerre
+-   Producteur : Luc Hermann et Paul Moreira
+-   Montage : Mathieu Goasguen
+-   Rédacteur en chef : Ghislaine Buffard
+-   Diffusé sur Planète+ CI dans le cadre de la série documentaire SOUS LE RADAR produite par Premières Lignes
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/n4e3RlC8qFo?si=xcpePcDopJuKPppU" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/n4e3RlC8qFo?si=xcpePcDopJuKPppU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ## Article dans le magazine Faire-Face sur les restes à charge
 
 Le 24 mars 2017, je collabore avec le journaliste **Franck Seuret** pour un [article](https://www.faire-face.fr/2017/03/24/presidentielle-2017-handicap-compensation-reste-a-charge/) dans le magazine Faire-Face, qui met en avant la situation de mon ami **Ricardo Antunes Pedroso**.
-
 
 ![](images/faireface-6.jpg)
 
@@ -350,19 +322,16 @@ Suite au partage de [mon animation](https://www.kevinpolisano.fr/posts/2017-01-0
 En 2017, j'apprends des rudiments de Flash pour concevoir cette animation dont le but était de vulgariser le mode de calcul de l'AAH et l'injustice qu'il engendrait pour les couples.
 
 ::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; text-align: center;"}
-<iframe src="https://www.youtube.com/embed/noSmEZq8MVg?si=x_rLEoY3iPmj_9Nc" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;"> </iframe>
+<iframe src="https://www.youtube.com/embed/noSmEZq8MVg?si=x_rLEoY3iPmj_9Nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
+
+</iframe>
 :::
 
 ## Article pour le magazine Faire-Face concernant une pétition
 
 Le 18 mars 2016, je collabore avec le journaliste **Franck Seuret** en lui fournissant des chiffres pour un [article](https://www.faire-face.fr/2016/03/18/aah-et-couple-petition/) dans le magazine Faire-Face.
 
-![](images/faireface-5.jpg) 
+![](images/faireface-5.jpg)
 
 ## Articles dans le magazine Faire-Face et Handicap.fr sur le fonctionnement de l'impôt
 
