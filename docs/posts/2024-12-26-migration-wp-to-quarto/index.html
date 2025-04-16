@@ -103,6 +103,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4E0K892EGY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -251,6 +260,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#redirection-des-url" id="toc-redirection-des-url" class="nav-link" data-scroll-target="#redirection-des-url">Redirection des URL</a></li>
   <li><a href="#mise-à-jour-dans-google-search-console" id="toc-mise-à-jour-dans-google-search-console" class="nav-link" data-scroll-target="#mise-à-jour-dans-google-search-console">Mise à jour dans Google Search Console</a></li>
+  <li><a href="#google-analytics" id="toc-google-analytics" class="nav-link" data-scroll-target="#google-analytics">Google Analytics</a></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
@@ -996,8 +1006,31 @@ Warning
 </section>
 <section id="sitemap" class="level4">
 <h4 class="anchored" data-anchor-id="sitemap">Sitemap</h4>
-<p>Sert en continu à indiquer à Google quelles pages existent sur mon site, afin d’améliorer le référencement (SEO).</p>
+<p>Le fichier <code>sitemap.xml</code> sert en continu à indiquer à Google quelles pages existent sur mon site, afin d’améliorer le référencement (SEO). Pour générer ce fichier (ainsi qu’un fichier <code>robots.txt</code>) il faut ajouter dans le fichier <code>_quarto.yml</code> :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">site-url</span><span class="kw">:</span><span class="at"> https://www.kevinpolisano.fr</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-navigation</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>puis recompiler, déployer, et vérifier que <code>https://www.kevinpolisano.fr/sitemap.xml</code> et <code>https://www.kevinpolisano.fr/robots.txt</code> sont accessibles.</p>
+<p>Enfin dans Google Search Console dans le menu <code>Sitemaps</code> à gauche, ajouter <code>sitemap.xml</code>.</p>
 </section>
+</section>
+<section id="google-analytics" class="level3">
+<h3 class="anchored" data-anchor-id="google-analytics">Google Analytics</h3>
+<ol type="1">
+<li>Créer un compte sur Google Analytics</li>
+<li>Créer une propriété</li>
+<li>Donner un nom (ex: “Blog Quarto”)</li>
+<li>Choisir le fuseau horaire et la devise</li>
+<li>Choisir Web comme plateforme.</li>
+<li>Indique l’URL du site : <code>https://www.kevinpolisano.fr</code></li>
+</ol>
+<p>On obtient un ID de mesure du type : <code>G-XXXXXXXXXX</code> que l’on ajoute à <code>_quarto.yml</code> :</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Blog de Kévin Polisano"</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">site-url</span><span class="kw">:</span><span class="at"> https://www.kevinpolisano.fr</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-navigation</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">google-analytics</span><span class="kw">:</span><span class="at"> G-XXXXXXXXXX</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cette méthode ajoute automatiquement le script de tracking dans le <code>&lt;head&gt;</code> du site HTML.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
