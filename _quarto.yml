@@ -6,6 +6,7 @@ website:
   title: "Blog de Kévin Polisano"
   site-url: https://www.kevinpolisano.fr
   page-navigation: true
+  google-analytics: G-4E0K892EGY
   favicon: "images/logo.jpg"
   navbar:
     left:
