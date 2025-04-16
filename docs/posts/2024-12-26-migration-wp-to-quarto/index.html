@@ -247,6 +247,11 @@ window.Quarto = {
   <li><a href="#création-des-discussions-github" id="toc-création-des-discussions-github" class="nav-link" data-scroll-target="#création-des-discussions-github">Création des discussions GitHub</a></li>
   <li><a href="#ajouter-les-commentaires-existants" id="toc-ajouter-les-commentaires-existants" class="nav-link" data-scroll-target="#ajouter-les-commentaires-existants">Ajouter les commentaires existants</a></li>
   </ul></li>
+  <li><a href="#finaliser-la-migration" id="toc-finaliser-la-migration" class="nav-link" data-scroll-target="#finaliser-la-migration">Finaliser la migration</a>
+  <ul class="collapse">
+  <li><a href="#redirection-des-url" id="toc-redirection-des-url" class="nav-link" data-scroll-target="#redirection-des-url">Redirection des URL</a></li>
+  <li><a href="#mise-à-jour-dans-google-search-console" id="toc-mise-à-jour-dans-google-search-console" class="nav-link" data-scroll-target="#mise-à-jour-dans-google-search-console">Mise à jour dans Google Search Console</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -963,6 +968,38 @@ Warning
 <p>Parfois il y a un échec d’importation lorsqu’il y a beaucoup de commentaires, certainement du à un quota d’utilisation de l’API, dans ce cas les commentaires qui n’ont pas été importés sont sauvegardés dans un fichier <code>failed_comments.csv</code>, et il suffit de relancer le script sur ce fichier (à renseigner dans <code>CSV_FILE</code>) autant de fois que nécessaire.</p>
 </section>
 </section>
+<section id="finaliser-la-migration" class="level2">
+<h2 class="anchored" data-anchor-id="finaliser-la-migration">Finaliser la migration</h2>
+<section id="redirection-des-url" class="level3">
+<h3 class="anchored" data-anchor-id="redirection-des-url">Redirection des URL</h3>
+<p>Dans le fichier <code>.htaccess</code> à la racine du serveur où j’hébergeais mon ancien blog (<code>kevinpolisano.com</code>), il faut temporairement effectuer des redirections des anciennes URL de mes billets vers les nouvelles, comme ceci par exemple :</p>
+<pre><code>Redirection 301 analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/ https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/</code></pre>
+<p>Et pour toutes les autres URL non spécifiées :</p>
+<pre><code>RedirectMatch 301 ^/(.*)$ https://kevinpolisano.fr/</code></pre>
+</section>
+<section id="mise-à-jour-dans-google-search-console" class="level3">
+<h3 class="anchored" data-anchor-id="mise-à-jour-dans-google-search-console">Mise à jour dans Google Search Console</h3>
+<section id="vérification-de-propriété" class="level4">
+<h4 class="anchored" data-anchor-id="vérification-de-propriété">Vérification de propriété</h4>
+<ol type="1">
+<li>Depuis Google Search Console, télécharger le fichier <code>googleXXXXXXXXXXXX.html</code>.</li>
+<li>Placer ce fichier directement à la racine du dossier Quarto (là où se trouve <code>index.qmd</code> ou <code>_quarto.yml</code>).</li>
+<li>Ajoute une ligne dans <code>_quarto.yml</code> pour inclure le fichier dans le site généré :</li>
+</ol>
+<pre><code>resources:
+  - googleXXXXXXXXXXXX.html</code></pre>
+<ol start="4" type="1">
+<li>Faire un build avec <code>quarto render</code> puis déployer avec <code>git commit/push</code> et vérifier que la page <code>https://www.kevinpolisano.fr/googleXXXXXXXXXXXX.html</code> est en ligne.</li>
+<li>Valider sur Google Search Console pour terminer la vérification de propriété.</li>
+</ol>
+<p>Cette étape permet de vérifier que je suis bien propriétaire du domaine <code>kevinpolisano.fr</code>.</p>
+</section>
+<section id="sitemap" class="level4">
+<h4 class="anchored" data-anchor-id="sitemap">Sitemap</h4>
+<p>Sert en continu à indiquer à Google quelles pages existent sur mon site, afin d’améliorer le référencement (SEO).</p>
+</section>
+</section>
+</section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>La conversion de mon ancien blog WordPress en un site statique généré avec Quarto est maintenant terminée. À mes yeux un blog statique possède plusieurs avantages :</p>
@@ -1072,7 +1109,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/www\.kevinpolisano\.fr");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

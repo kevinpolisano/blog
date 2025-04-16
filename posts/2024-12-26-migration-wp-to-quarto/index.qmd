@@ -699,6 +699,45 @@ if __name__ == "__main__":
 
 Parfois il y a un échec d'importation lorsqu'il y a beaucoup de commentaires, certainement du à un quota d'utilisation de l'API, dans ce cas les commentaires qui n'ont pas été importés sont sauvegardés dans un fichier `failed_comments.csv`, et il suffit de relancer le script sur ce fichier (à renseigner dans `CSV_FILE`) autant de fois que nécessaire.
 
+## Finaliser la migration 
+
+### Redirection des URL 
+
+Dans le fichier `.htaccess` à la racine du serveur où j'hébergeais mon ancien blog (`kevinpolisano.com`), il faut temporairement effectuer des redirections des anciennes URL de mes billets vers les nouvelles, comme ceci par exemple :
+
+```
+Redirection 301 analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/ https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/
+```
+
+Et pour toutes les autres URL non spécifiées :
+
+```
+RedirectMatch 301 ^/(.*)$ https://kevinpolisano.fr/
+```
+
+### Mise à jour dans Google Search Console
+
+#### Vérification de propriété
+
+1. Depuis Google Search Console, télécharger le fichier `googleXXXXXXXXXXXX.html`.
+2. Placer ce fichier directement à la racine du dossier Quarto (là où se trouve `index.qmd` ou `_quarto.yml`).
+3.  Ajoute une ligne dans `_quarto.yml` pour inclure le fichier dans le site généré :
+
+```
+resources:
+  - googleXXXXXXXXXXXX.html
+```
+
+4. Faire un build avec `quarto render` puis déployer avec `git commit/push` et vérifier que la page  `https://www.kevinpolisano.fr/googleXXXXXXXXXXXX.html` est en ligne.
+5. Valider sur Google Search Console pour terminer la vérification de propriété.
+
+Cette étape permet de vérifier que je suis bien propriétaire du domaine `kevinpolisano.fr`. 
+
+#### Sitemap
+
+Sert en continu à indiquer à Google quelles pages existent sur mon site, afin d’améliorer le référencement (SEO).
+
+
 ## Conclusion
 
 La conversion de mon ancien blog WordPress en un site statique généré avec Quarto est maintenant terminée. À mes yeux un blog statique possède plusieurs avantages :
