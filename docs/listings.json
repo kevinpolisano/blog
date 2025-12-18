@@ -2,6 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-10-27-le-jeu-de-taquin/dummy.html",
+      "/posts/2025-10-27-le-jeu-de-taquin/references.html",
+      "/posts/2025-10-27-le-jeu-de-taquin/references_processed.html",
+      "/posts/2025-10-27-le-jeu-de-taquin/index.html",
+      "/posts/2025-07-07-les-mathematiques-du-rubik-cube/index.html",
       "/posts/2024-12-26-migration-wp-to-quarto/index.html",
       "/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/index.html",
       "/posts/2019-03-06-manifeste-pour-laccessibilite-de-la-vie-de-couple/index.html",

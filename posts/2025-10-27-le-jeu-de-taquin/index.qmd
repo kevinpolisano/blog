@@ -1,0 +1,193 @@
+---
+title: "Le jeu de taquin"
+author: "Kévin Polisano"
+date: "2025-10-27"
+image: 15-puzzle.png
+categories: [mathematiques]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+bibliography: references.bib
+csl: chicago-custom.csl
+fig-align: center
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: true
+---
+
+![Illustration du 14-15 puzzle dans "Cyclopedia of 5000 Puzzles" (1914) par Sam Loyd, p. 235. Version colorée obtenue informatiquement.](15-puzzle.png)
+
+# L'incroyable histoire du jeu de taquin
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0QWGoQTRXho?si=LLh9V9PfaTUU7PQX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+L'histoire qui va suivre est tirée de [@slocum152006]. [Jerry Slocum](https://en.wikipedia.org/wiki/Jerry_Slocum) est un historien, collectionneur et auteur américain spécialisé dans les [casse-têtes mécaniques](https://fr.wikipedia.org/wiki/Casse-t%C3%AAte_m%C3%A9canique), dont sa collection personnelle en compte plus de 40 000. Dans ce livre, **Jerry Slocum** et **Dic Sonneveld** retrace la généalogie d'un des casse-têtes les plus populaires du 19ème siècle : le [*15 puzzle*](https://en.wikipedia.org/wiki/15_puzzle), rebaptisé en France le [*jeu de Taquin*](https://fr.wikipedia.org/wiki/Taquin).
+
+![Couverture du livre de Jerry Slocum et Dic Sonneveld "The 15 Puzzle : How It Drove the World Crazy"](15-puzzle-book.jpg)
+
+Nous voici à Boston en 1879, à la mi-décembre, dans le monde d'avant la radio et la télévision, à une époque où l'électricité commençait à remplacer les bougies et lampes à gaz, et où les premiers téléphones rudimentaires commençaient à être installés. Le cheval et la calèche servaient aux déplacements locaux, mais les chemins de fer assuraient un transport relativement rapide des personnes entre les villes.
+
+![Boston, Massachusetts. Federal Street looking north, \[ca. 1880–1889\], Boston Pictorial Archive.](Banfield-Federal-Street-Boston.jpg)
+
+## Matthias Rice fabrique le jeu à grande échelle
+
+[Matthias Joslin Rice](https://www.findagrave.com/memorial/265951011/matthias-joslin-rice), menuisier à la tête d'entreprise de fabrication, a contracté une maladie de la moelle épinière qui l'empêche de quitter son lit. Un homme vint ainsi travailler aux fenêtres de sa maison. M. Rice lui dit qu'il aimerait trouver un petit objet en bois pouvant être fabriqué à bas coût dans son atelier et qui aurait du succès sur le marché. Quelques jours plus tard, l'homme revint et montra à Matthias un puzzle grossièrement fabriqué par des étudiants sourds à Hartford, et vendu à Boston 75 cents pièce. Mr Rice et ses ouvriers, installés au **19 rue Wareham à Boston**, se mirent à fabriquer à grande échelle les pièces de bois numérotées du puzzle.
+
+Après avoir essuyé plusieurs refus des principaux marchands de jouets de Boston, la société **Banfield, Forristall & Co (27 Federal Street)** accepta finalement de commercialiser son *Gem Puzzle* vendu avec ces instructions simples : *« Placez les blocs dans la boîte de manière irrégulière, puis déplacez-les jusqu'à ce qu'ils soient en ordre »*. Le succès fut immédiat. Rice passa également un accord avec un magasin bon marché de Boston, **Cary, Fulton & Co. (29 Kingston Street)**, pour vendre son *Gem Puzzle*. Une variante, le *Boss Puzzle* (aussi appelé *The New Solitaire*), fut produit par **D. F. Maguire à New York**. Le puzzle se vendait d'abord 50 cents, puis 25 cents, et encore moins ensuite grâce à des améliorations du procédé de fabrication, si bien qu'au 1er mars, il pouvait être acheté pour à peine 5 cents.
+
+![[Carte interactive](https://www.google.com/maps/d/u/0/edit?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&usp=sharing) des points de vente à Boston](Boston-map-15-puzzle.jpg)
+
+## Premières mentions dans la presse
+
+La première publicité, d'après @slocum152006, parue le 6 janvier 1880 dans le [Boston Evening Transcript](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-6-1880-Page-8.jpg). Ni Rice ni Maguire ne purent conserver l'usage exclusif des noms « Gem » et « Boss », car de nombreux autres fabricants produisirent des versions du puzzle sous ces appellations : « Gem Puzzle, Solitaire, Fifteen, Number Puzzle ». Rice, évidemment irrité que d'autres aient copié son Gem Puzzle — qu'il avait lui-même copié d'une version fabriquée par un étudiant sourd de Hartford — vit sa création lui échapper. Les journaux rapportèrent des histoires de personnes qui, l'ayant résolu du premier coup, le trouvaient facile, puis pariaient de grosses sommes qu'elles pourraient le refaire — et perdaient la moitié du temps.
+
+::: {layout-ncol="2"}
+![Boss puzzle ([Boston Evening Transcript, 06/01/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-6-1880-Page-8.jpg))](Boss-puzzle-publicite.jpg){width="100%" group="my-gallery"}
+
+![Gem puzzle ([Evening Gazette, 13/02/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Feb-13-1880.pdf))](Gem-puzzle-publicite.jpg){width="100%" group="my-gallery"}
+
+![Différentes appelations ([Boston Evening Transcript, 10/01/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-10-1880-Page-5.jpg))](Number-puzzle-publicite.jpg){width="100%" group="my-gallery"}
+
+![New puzzle ([Boston Evening Transcript, 17/01/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-17-1880-Page 5.jpg))](New-puzzle-publicite.jpg){width="100%" group="my-gallery"}
+
+:::
+
+En effectuant mes propres recherches sur des sites d'archives de presse, je suis tombé sur une mystérieure publicité pour *The New Solitaire* datant du **8 décembre 1879**, soit un mois plus tôt (avant même que Rice ne produise son *Gem Puzzle*) ! 
+
+::: {layout-ncol="2"}
+
+![New Solitaire ([Salem Register, 08/12/1879](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Salem-Register-Dec-8-1879-Page-3.jpg))](New-solitaire-publicite.jpg){width="100%" group="my-gallery"}
+
+![New Solitaire ([Salem Register, 11/12/1879](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Salem-Register-Dec-11-1879-Page-2.jpg))](New-solitaire-article.jpg){width="100%" group="my-gallery"}
+
+:::
+
+Les vendeurs **G. M. Whipple & A. A. Smith** situés au **243 Essex Street Salem Massachusetts** (en rouge sur la carte) étaient connus pour leur célèbre jeu [Authors](https://en.wikipedia.org/wiki/Authors_(card_game)) commercialisé en 1861. Est-ce que ce "Nouveau Solitaire" correspondait bien au 15 puzzle ? Comment se l'étaient-ils procuré ? Est-ce que l'un des prototypes confectionné par les étudiants sourds de Hartford avait pu se retrouver dans ce commerce ? Je n'ai pas davantage d'informations à ce sujet.
+
+## Le dentiste Pevey et le problème du 14-15
+
+Une configuration particulière attira l'attention du public, le défi consiste à placer tous les numéros dans l'ordre sauf les 14 et 15 inversés (*cf.* image d'en-tête du billet), puis à tenter de tout remettre en ordre numérique. 
+
+![Mention du 14 et 15 inversés ([Boston Evening Transcript, 22/01/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-22-1880-Page-4.jpg))](Gem-puzzle-article.jpg)
+
+Le **Dr C. K. Pevey**, très passionné par [ce problème](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-24-1880.pdf), offrit le 24 janvier 1880 [un soin dentaire à 25 dollars](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-24-1880-ad-1.pdf) à quiconque lui montrerait comment le résoudre. Puis, il ajouta [100 dollars en espèces](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-29-1880-ad-2.pdf) à cette offre. 
+
+
+![Seconde offre du Dr Pevey ([Evening Gazette, 29/01/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-29-1880-ad-2.pdf))](Pevey-publicite-2.jpg){width="60%"}
+
+Le 31 janvier, il fournit des explications dans [cet article d'Evening Gazette](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-31-1880.pdf)
+
+> Le Dr Pevey soutient que la solution du problème est mathématiquement impossible, pour la même raison que deux trains ne peuvent pas se croiser sur la même voie. 
+
+Sa motivation derrière cet appel était de convaincre cette jeune fille.
+
+> La raison pour laquelle je voulais que vous m'aidiez tous à résoudre ce puzzle était de convaincre cette jeune fille. Vous comprenez, elle disait l'avoir résolu ; elle savait qu'elle l'avait fait, et si je disais qu'elle ne l'avait pas fait, je mettais simplement en doute sa véracité […] et il faudrait probablement la population entière de Worcester pour m'aider.
+
+Une touche d'humour fut ajoutée à l'[appel suivant](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Feb-3-1880.pdf) le 3 février : 
+
+> J'ai un chat qui possède un bel ensemble de dents, et je donnerai à quiconque l'ensemble complet et 100 $ (cent dollars) qui saura transposer deux de ses dents puis les remettre à leur place d'origine sans blesser le chat. Les opérateurs prennent tous les risques de se faire mordre. Les dentistes ne sont pas autorisés à concourir. 
+
+Les puzzles précédents, que l'on pouvait soit résoudre soit pas du tout sans en connaître la solution, n'avaient pas préparé le public à la nouvelle propriété déconcertante du Fifteen Puzzle : selon la disposition initiale, il pouvait parfois être résolu, et parfois non, à l'instar du chat de Schrödinger mort ou vivant. Cette propriété inconnue et contre-intuitive du même objet physique le rendit à la fois fascinant et frustrant, et déclencha rapidement la folie mondiale du Fifteen Puzzle.
+
+## La folie du 15 puzzle
+
+Voici un extrait de la presse *L'invention diabolique d'un ennemi du genre humain* (Rochester Democrat and Chronicle, 17/02/1880) en rendant compte : 
+
+
+> Il y a à peine quelques semaines, une innocente annonce est parue dans les journaux, et un public sans méfiance a lu que le nouveau jeu “15” était en vente. C'est tout, mais peu ont réalisé le sens mortel dissimulé sous ces mots apparemment inoffensifs. Un gentleman en vit un dans un magasin, et il lui sembla si simple qu'il en acheta un pour amuser les enfants. Dix minutes après avoir essayé d'expliquer aux petits comment il fallait s'y prendre, il était devenu insensible à tout ce qui l'entourait, et continua, heure après heure, à déplacer frénétiquement les petits blocs de bois avec l'intensité fiévreuse d'un fou. Un voisin entra, vit d'un coup d'œil comment le puzzle devait se résoudre, en acheta un et l'essaya. Il essaie encore. Et ainsi l'infection se répandit. Aujourd'hui, il n'y a guère de foyer agréable dans la ville qui n'ait l'ombre du “15” sur son seuil. Les hommes le réclament, les femmes le supplient, et les enfants pleurent pour l'obtenir. Et une fois qu'il vous tient, il ne vous lâche plus. De temps en temps, quelqu'un parvient à mettre les quinze numéros dans le bon ordre, mais sa joie est de courte durée : il est incapable de dire comment il y est parvenu, et ne peut le refaire. Toutes les théories sont fausses et l'expérience ne sert à rien. C'est pire qu'une fièvre maligne, et nul ne sait quand il en deviendra la victime. Les jeunes hommes portent le jeu dans la poche arrière, comme les Texans leurs revolvers, et son usage est encore plus fatal. Il suffit d'un prétexte pour le sortir, et aussitôt le charme opère. Les hommes jurent et le jettent, mais le reprennent aussitôt et continuent à faire glisser les blocs de bois en haut, en bas, à droite, à gauche. Une dame y travailla de trois heures de l'après-midi à dix heures du soir, et son mari dut finalement le lui arracher des mains de force et l'envoyer se coucher. Il ne dut son propre salut qu'au fait qu'il était aveugle. Ce sont les trois derniers numéros qui troublent l'équilibre mental. Jusque-là, tout va bien. C'est là que commencent les ennuis. Qu'en résultera-t-il ? Nul ne peut le dire. À moins d'un remède rapide, nous deviendrons une nation d'idiots remuant des blocs de bois. Aucun châtiment ne serait trop grand pour l'homme qui a infligé ce fléau à une communauté sans défense. Nous pouvons l'imaginer tentant de faire venir les bons numéros sur une plaque de fer rougie au feu. S'il était trouvé, il n'échapperait pas à la foule hurlante.
+
+Dans cet [autre article](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Feb-24-1880.pdf) (Evening Gazette, 24/02/1880) on peut lire :
+
+> L'augmentation récente du nombre de suicides serait entièrement due au 15 puzzle.
+
+![Jerry Slocum et Dic Sonneveld, The 15 Puzzle : How It Drove the World Crazy, p.127](Craze-suicides.jpg)
+
+La plupart de ces récits sur le caractère « fou » ou « obsessionnel » du casse-tête relevaient davantage de la rhétorique sensationnaliste et de la caricature journalistique typiques de la presse populaire de l'époque. Comme souvent avec des phénomènes de mode, elle amplifiait les effets pour dramatiser et attirer des lecteurs. Mais il est vrai que le puzzle inondait le pays et captivait les esprits, au point que certains postes de travail ou salles de classe étaient perturbés. Au milieu du mois de mars, la folie du Fifteen Puzzle atteignit son apogée, lorsque Puck — principal magazine satirique américain — publia une illustration comparant les difficultés à résoudre le puzzle aux manœuvres pour choisir les candidats à la présidence lors de l'élection de 1880. La revue publia également une planche entière de caricatures intitulée « 15–14–13 », décrivant les effets du puzzle sur la société.
+
+## Sam Loyd et sa campagne de désinformation
+
+[Sam Loyd](https://en.wikipedia.org/wiki/Sam_Loyd), célèbre maître du puzzle, a affirmé dans cette interview [He Invents Puzzles]( https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lima-Daily-News-Jan-13-1891-Page-2.pdf) datant du 13 janvier 1891 – soit plus de dix ans après la fin de la vogue du jeu – qu'il aurait inventé le 15 puzzle. Loyd est, de l'avis même de [Martin Gardner](https://en.wikipedia.org/wiki/Martin_Gardner),  *« le plus grand créateur d'énigmes d'Amérique »*. Formé aux jeux par les échecs et le journalisme, il avait le goût du spectaculaire et un don de la mise en scène (mimes, prestidigitation, ventriloquisme, etc) et de la transformation d'un problème en une véritable énigme. 
+
+![Samuel Loyd](Samuel-Loyd.jpg){fig-align="center"}
+
+Mais il est également connu pour ses mensonges, ses plagiats et son goût pour l'autopromotion, ce qui lui a valu [une réputation](https://en.wikipedia.org/wiki/Sam_Loyd#Reputation) d'escroc, de charlatan, et fut même assimilé au diable. @slocum152006 ont montré à travers des recherches rigoureuses que Loyd a mené une campagne de désinformation pendant plus de deux décennies, faisant passer une simple revendication personnelle pour un fait historique. Le 4 janvier 1896, dans un article de *The Illustrated American* intitulé [The Famous 15 Block Puzzle](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Illustrated-American-4-January-1896-The-Famous-15-Block-Puzzle.pdf), Loyd propose une récompense de 1000 dollars – comparable au défi du Dr Pevey – pour qui saura résoudre le problème du 14 et 15 inversés. Mais Loyd commis une erreur en omettant de spécifier que la solution devait positionner le 1 en haut à gauche (la case vide en bas à droite), et a reçu des solutions avec la case vide en haut à gauche. Il ne donna pas pour autant la récompense...
+Dans ce même article il affirma avoir inventé le jeu en 1872 sans en fournir la moindre preuve. Dans une interview ultérieure, en décembre 1907, intitulée [The Prince of Puzzle-Makers](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-prince-of-puzzle-makers-interview-sam-loyd.pdf) il déclara n'avoir pas obtenu de brevet du fait de l'impossibilité de la remise en ordre du 14 et 15 inversés... L'intéressé avouant avec malice dans le même article :
+
+> Of course my legal rights in all my early devices have lapsed by this time, but copyrights and patents mean very little to me. People don't care for my puzzle unless there can have them with my name on them.
+
+Ce qui en dit long sur sa probité...[^riche]
+
+[^riche]: "L'idée que l'objet ou son problème avait été inventé par Sam Loyd allait de soi et reste encore transmise dans beaucoup de présentions aujourd'hui. Bien sûr Loyd était à juste titre considéré comme le *Puzzle King*, et [on ne prête qu'aux riches](https://fr.wikipedia.org/wiki/Effet_Matthieu)..." par René Guitart dans [@allouche2017travaux]
+
+Mais alors s'il n'est pas l'inventeur du 15 puzzle, qui d'autre ? Un élève sourd de Hartford ? Aucune source de l'école n'a permis d'en tirer cette conclusion[^deaf].
+
+[^deaf]: Je n'ai pas non plus trouvé dans les [archives](https://gallaudet.edu/archives/archives-collections/the-deaf-mutes-journal-collection/the-deaf-mutes-journal-1875-1879/) de *The Deaf-Mutes Journal* des informations à propos du 15 puzzle.  Ni dans le Volume 8 n°10 du 27 février 1879 (dont le bandeau apparait au début du chapitre 5 du 15 puzzle book p.95), ni dans le n°11 du 6 mars 1879. Dans le livre p.96 il est mentionné que l'[article du New York Sun](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Sun-Feb-27-1880.pdf) du 27/02/1880 a été republié dans le journal à la date du 4 mars, mais je ne trouve pas d'archive correspondante à cette date.
+
+## Noyes Chapman réel inventeur du 15 puzzle
+
+Un autre nom circulait dans la presse, celui de [Noyes Palmer Chapman](https://ancestors.familysearch.org/en/LZ6M-52N/noyes-palmer-chapman-1811-1889), responsable des postes à Canastota dans l'État de New York. Par exemple dans le *Syracuse Sunday Courier*, le 29 février 1880 : 
+
+> La revendication d'invention de **Noyes Chapman**, un postier de Canastota, est la mieux établie de toutes. Il présenta pour la première fois la boîte et les cubes à quelques amis dans sa demeure campagnarde, en 1874. L'idée lui fut suggérée par un ancien problème de « carré magique », dont le but était de disposer librement, sans boite, 16 blocs numérotés en quatre rangées de quatre, de sorte que la somme de chaque ligne, colonne ou diagonale soit 34. [...] M. Chapman eut alors l'idée d'utiliser des cubes dans une boîte, jugés plus pratiques. Il découvrit qu'en retirant un bloc, les autres pouvaient être déplacés à volonté, et qu'il existait des combinaisons impossibles à résoudre. 
+
+Mais Chapman déposa seulement une demande de brevet pour son *« Block Solitaire Puzzle »* le 21 février 1880 [@slocum152006, p.101], lorsque le jeu circulait tout azimut. Demande qui fut rejetée car probablement jugée trop proche du [brevet de Ernest Kinsey](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Kinsey-brevet-puzzle-blocks.pdf) accordé plus d'un an auparavant. Le dispositif décrit par [@kinseyImprovement1878] montre une grille de 6 × 6 possédant des blocs coulissants, qui couvre en effet la plupart des caractéristiques essentielles du jeu, à ceci près qu'il précise que les pièces doivent être maintenues dans un cadre avec des rainures, contrairement au puzzle de Chapman où les blocs ne sont pas contraints : on peut les renverser hors de la boîte, puis les remettre au hasard. Cette possibilité a pour conséquence que le puzzle est parfois impossible à résoudre, propriété qui a largement contribué à en faire une véritable mode.
+
+## De Chapman à Rice, un puzzle à résoudre
+
+Une énigme demeure : comment le puzzle inventé par Chapman à New York en 1874 s'est-il retrouvé 5 ans plus tard à la fenêtre de Rice ? Il semble probable que Noyes Chapman ait offert un ou plusieurs exemplaires de son puzzle à son fils **Frank Chapman**, qui les aurait emportés chez lui à Syracuse, à une vingtaine de miles de là. Frank aurait ensuite donné un exemplaire à son associé en affaires, James J. Belden, ancien maire de Syracuse, et à son épouse Anna Belden. Au cours de l'été 1877 ou 1878, Anna emmena le puzzle à Watch Hill (Rhode Island), où elle le donna à une dame handicapée cherchant de quoi se distraire.
+Les recherches indiquent qu'il s'agissait probablement d'Hannah Maria Catlin, la fille unique de Julius et Mary Catlin, atteinte d'une maladie osseuse grave. Les Catlin vivaient à Hartford, dans une grande maison située sur Asylum Avenue, non loin de [l'école américaine pour les sourds](https://en.wikipedia.org/wiki/American_School_for_the_Deaf). 
+
+![[American Asylum for Deaf and Dumb, Hartford, Conn.](https://www.loc.gov/pictures/item/2004670330/)](American-School-for-the-Deaf.jpg)
+
+![[Carte interactive](https://www.google.com/maps/d/u/0/edit?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&usp=sharing) (maison des Catlin et école américaine pour les sourds)](Hartford-map-15-puzzle.jpg)
+
+Cette école enseignait à ses élèves la langue des signes, mais aussi des matières académiques et des compétences manuelles telles que la menuiserie, et c'est dans un de leurs ateliers que des copies artisanales auraient été fabriquées. Toutefois le trajet exact entre Watch Hill et Hartford reste inconnu. Plusieurs hypothèses existent : le puzzle aurait été offert par Hannah à un élève de l'école; ou bien, un exemplaire aurait été donné directement à un élève sourd lors d'une visite à Watch Hill; qui dans un cas comme dans l'autre en aurait vendu un exemplaire à l'homme qui le transmit à son tour à Matthias Rice. 
+
+La boucle est bouclée. L'ordre des évènements est ainsi reconstitué, celui de l'histoire du casse-tête le plus populaire que le monde ait jamais connu. 
+
+![](8-puzzle.gif)
+
+Apparu à New York, transféré à Watch Hill puis produit à Hartford par des étudiants sourds par le truchement d'une jeune femme handicapée, pour enfin être commercialisé à Boston, le 15 puzzle s'est répandu comme une trainée de poudre dans l'Amérique de 1880, avant de s'exporter dans le monde entier.
+
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&amp;ehbc=2E312F" width="100%" height="480">
+</iframe>
+
+## Diffusion du 15 puzzle en France
+
+[@lucasRecreations1882] décrit le jeu du taquin dans son ouvrage [Récréations mathématiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf). À propos de son origine, il écrit :
+
+> Le jeu connu actuellement sous le nom de *Jeu de Taquin* a été imaginé en Amérique, vers la fin de 1878, par un sourd-muet qui se proposa, par hasard, de ranger dans une boîte des numéros qui s'y trouvaient déplacés, sans les en faire sortir. C'est là l'origine qui m'a été indiquée, au congrès de Reims de l'Association française pour l'Avancement des Sciences, par M. Sylvester, correspondant de l'Académie des Sciences de Paris, professeur de l'Université J. Hopkins, à Baltimore.
+
+L'histoire était certes approximative, comme on a pu le voir précédemment, mais nulle mention de Sam Loyd ne se retrouve sous la plume de Lucas, ni même de Loyd Jr qui n'attribue pas la paternité du jeu à son père[^loyd]. Lucas ajoute :
+
+[^loyd]: "It was in the early eighties when I had barely attained my 'teens
+that the world-disturbing "14-15 Puzzle" flashed across the horizon
+and Loyds were amongst its earliest victims. To say that I was
+infatuated with the tantalizing box of blocks is a mild description of
+my enthralment" [@loyd1928sam]
+
+> Peu après[^gaulois], il fut importé en France, et offert en prime, par divers journaux politiques et illustres, sous le nom de double casse-tête gaulois. Son succès en Europe a été encore plus grand qu’en Amérique
+
+[^gaulois]: Slocum et Donneveld mentionne la date du Le 28 mars lorsqu'ils abordent le cas de la France à la page 60, mais en fouillant dans les archives du journal Le Gaulois je me suis aperçu que la première mention du jeu datait du 26 mars 1880 (*cf.* image ci-contre).
+
+![Le double casse-tête Gaulois ([Le Gaulois, 26/03/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Le-Gaulois-Mar-26-1880))](Double-casse-tete-gaulois.jpg){width="60%"}
+
+Des tas de versions différentes du jeu virent le jour, voir par exemple [@storerFifteen] ou [@koliJeux2025] pour des photos de vieux exemplaires.
+
+Le jeu de Taquin a ensuite été traité sur le plan mathématiques dans plusieurs écrits (*cf*. tableau ci-dessous) sur lesquels nous reviendrons au moment d'expliquer sa résolution et les preuves d'impossibilité.
+
+| Titre | Auteur | Date | Référence |
+| --- | --- | --- | --- | --- | 
+| [Les carrés magiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Gaston Tissandier | 10/07/1880 | [@tissandierCarres1880] |
+| [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Jean Piarron de Mondésir | 25/09/1880 | [@piarrondemondesirDernier1880] |
+| La clé du Taquin | Henry Fleury | 1880 | [@fleuryCle1880] |
+| Sur le taquin | Charles Henry | 1880 | [@henryTaquin1880] |
+| [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf) | Édouard Lucas | 1882 | [@lucasRecreations1882] |
+
+
+# Références
+
+{{< include references.md >}}

@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2025-10-27">
+
+<title>Le jeu de taquin – Blog de Kévin Polisano</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4E0K892EGY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog de Kévin Polisano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../handicap.html"> 
+<span class="menu-text">Handicap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Le jeu de taquin</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">mathematiques</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 27, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#lincroyable-histoire-du-jeu-de-taquin" id="toc-lincroyable-histoire-du-jeu-de-taquin" class="nav-link active" data-scroll-target="#lincroyable-histoire-du-jeu-de-taquin">L’incroyable histoire du jeu de taquin</a>
+  <ul class="collapse">
+  <li><a href="#matthias-rice-fabrique-le-jeu-à-grande-échelle" id="toc-matthias-rice-fabrique-le-jeu-à-grande-échelle" class="nav-link" data-scroll-target="#matthias-rice-fabrique-le-jeu-à-grande-échelle">Matthias Rice fabrique le jeu à grande échelle</a></li>
+  <li><a href="#premières-mentions-dans-la-presse" id="toc-premières-mentions-dans-la-presse" class="nav-link" data-scroll-target="#premières-mentions-dans-la-presse">Premières mentions dans la presse</a></li>
+  <li><a href="#le-dentiste-pevey-et-le-problème-du-14-15" id="toc-le-dentiste-pevey-et-le-problème-du-14-15" class="nav-link" data-scroll-target="#le-dentiste-pevey-et-le-problème-du-14-15">Le dentiste Pevey et le problème du 14-15</a></li>
+  <li><a href="#la-folie-du-15-puzzle" id="toc-la-folie-du-15-puzzle" class="nav-link" data-scroll-target="#la-folie-du-15-puzzle">La folie du 15 puzzle</a></li>
+  <li><a href="#sam-loyd-et-sa-campagne-de-désinformation" id="toc-sam-loyd-et-sa-campagne-de-désinformation" class="nav-link" data-scroll-target="#sam-loyd-et-sa-campagne-de-désinformation">Sam Loyd et sa campagne de désinformation</a></li>
+  <li><a href="#noyes-chapman-réel-inventeur-du-15-puzzle" id="toc-noyes-chapman-réel-inventeur-du-15-puzzle" class="nav-link" data-scroll-target="#noyes-chapman-réel-inventeur-du-15-puzzle">Noyes Chapman réel inventeur du 15 puzzle</a></li>
+  <li><a href="#de-chapman-à-rice-un-puzzle-à-résoudre" id="toc-de-chapman-à-rice-un-puzzle-à-résoudre" class="nav-link" data-scroll-target="#de-chapman-à-rice-un-puzzle-à-résoudre">De Chapman à Rice, un puzzle à résoudre</a></li>
+  <li><a href="#diffusion-du-15-puzzle-en-france" id="toc-diffusion-du-15-puzzle-en-france" class="nav-link" data-scroll-target="#diffusion-du-15-puzzle-en-france">Diffusion du 15 puzzle en France</a></li>
+  </ul></li>
+  <li><a href="#références" id="toc-références" class="nav-link" data-scroll-target="#références">Références</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="15-puzzle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Illustration du 14-15 puzzle dans “Cyclopedia of 5000 Puzzles” (1914) par Sam Loyd, p.&nbsp;235. Version colorée obtenue informatiquement."><img src="15-puzzle.png" class="img-fluid figure-img" alt="Illustration du 14-15 puzzle dans “Cyclopedia of 5000 Puzzles” (1914) par Sam Loyd, p.&nbsp;235. Version colorée obtenue informatiquement."></a></p>
+<figcaption>Illustration du 14-15 puzzle dans “Cyclopedia of 5000 Puzzles” (1914) par Sam Loyd, p.&nbsp;235. Version colorée obtenue informatiquement.</figcaption>
+</figure>
+</div>
+<section id="lincroyable-histoire-du-jeu-de-taquin" class="level1 page-columns page-full">
+<h1>L’incroyable histoire du jeu de taquin</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0QWGoQTRXho?si=LLh9V9PfaTUU7PQX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>L’histoire qui va suivre est tirée de <span class="citation" data-cites="slocum152006">(<a href="#ref-slocum152006" role="doc-biblioref">Slocum and Sonneveld, 2006</a>)</span>. <a href="https://en.wikipedia.org/wiki/Jerry_Slocum">Jerry Slocum</a> est un historien, collectionneur et auteur américain spécialisé dans les <a href="https://fr.wikipedia.org/wiki/Casse-t%C3%AAte_m%C3%A9canique">casse-têtes mécaniques</a>, dont sa collection personnelle en compte plus de 40 000. Dans ce livre, <strong>Jerry Slocum</strong> et <strong>Dic Sonneveld</strong> retrace la généalogie d’un des casse-têtes les plus populaires du 19ème siècle : le <a href="https://en.wikipedia.org/wiki/15_puzzle"><em>15 puzzle</em></a>, rebaptisé en France le <a href="https://fr.wikipedia.org/wiki/Taquin"><em>jeu de Taquin</em></a>.</p>
+<div class="no-row-height column-margin column-container"></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="15-puzzle-book.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Couverture du livre de Jerry Slocum et Dic Sonneveld “The 15 Puzzle : How It Drove the World Crazy”"><img src="15-puzzle-book.jpg" class="img-fluid figure-img" alt="Couverture du livre de Jerry Slocum et Dic Sonneveld “The 15 Puzzle : How It Drove the World Crazy”"></a></p>
+<figcaption>Couverture du livre de Jerry Slocum et Dic Sonneveld “The 15 Puzzle : How It Drove the World Crazy”</figcaption>
+</figure>
+</div>
+<p>Nous voici à Boston en 1879, à la mi-décembre, dans le monde d’avant la radio et la télévision, à une époque où l’électricité commençait à remplacer les bougies et lampes à gaz, et où les premiers téléphones rudimentaires commençaient à être installés. Le cheval et la calèche servaient aux déplacements locaux, mais les chemins de fer assuraient un transport relativement rapide des personnes entre les villes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Banfield-Federal-Street-Boston.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Boston, Massachusetts. Federal Street looking north, [ca. 1880–1889], Boston Pictorial Archive."><img src="Banfield-Federal-Street-Boston.jpg" class="img-fluid figure-img" alt="Boston, Massachusetts. Federal Street looking north, [ca. 1880–1889], Boston Pictorial Archive."></a></p>
+<figcaption>Boston, Massachusetts. Federal Street looking north, [ca. 1880–1889], Boston Pictorial Archive.</figcaption>
+</figure>
+</div>
+<section id="matthias-rice-fabrique-le-jeu-à-grande-échelle" class="level2">
+<h2 class="anchored" data-anchor-id="matthias-rice-fabrique-le-jeu-à-grande-échelle">Matthias Rice fabrique le jeu à grande échelle</h2>
+<p><a href="https://www.findagrave.com/memorial/265951011/matthias-joslin-rice">Matthias Joslin Rice</a>, menuisier à la tête d’entreprise de fabrication, a contracté une maladie de la moelle épinière qui l’empêche de quitter son lit. Un homme vint ainsi travailler aux fenêtres de sa maison. M. Rice lui dit qu’il aimerait trouver un petit objet en bois pouvant être fabriqué à bas coût dans son atelier et qui aurait du succès sur le marché. Quelques jours plus tard, l’homme revint et montra à Matthias un puzzle grossièrement fabriqué par des étudiants sourds à Hartford, et vendu à Boston 75 cents pièce. Mr Rice et ses ouvriers, installés au <strong>19 rue Wareham à Boston</strong>, se mirent à fabriquer à grande échelle les pièces de bois numérotées du puzzle.</p>
+<p>Après avoir essuyé plusieurs refus des principaux marchands de jouets de Boston, la société <strong>Banfield, Forristall &amp; Co (27 Federal Street)</strong> accepta finalement de commercialiser son <em>Gem Puzzle</em> vendu avec ces instructions simples : <em>« Placez les blocs dans la boîte de manière irrégulière, puis déplacez-les jusqu’à ce qu’ils soient en ordre&nbsp;»</em>. Le succès fut immédiat. Rice passa également un accord avec un magasin bon marché de Boston, <strong>Cary, Fulton &amp; Co.&nbsp;(29 Kingston Street)</strong>, pour vendre son <em>Gem Puzzle</em>. Une variante, le <em>Boss Puzzle</em> (aussi appelé <em>The New Solitaire</em>), fut produit par <strong>D. F. Maguire à New York</strong>. Le puzzle se vendait d’abord 50 cents, puis 25 cents, et encore moins ensuite grâce à des améliorations du procédé de fabrication, si bien qu’au 1er mars, il pouvait être acheté pour à peine 5 cents.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Boston-map-15-puzzle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Carte interactive des points de vente à Boston"><img src="Boston-map-15-puzzle.jpg" class="img-fluid figure-img" alt="Carte interactive des points de vente à Boston"></a></p>
+<figcaption><a href="https://www.google.com/maps/d/u/0/edit?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&amp;usp=sharing">Carte interactive</a> des points de vente à Boston</figcaption>
+</figure>
+</div>
+</section>
+<section id="premières-mentions-dans-la-presse" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="premières-mentions-dans-la-presse">Premières mentions dans la presse</h2>
+<p>La première publicité, d’après <span class="citation" data-cites="slocum152006">Slocum and Sonneveld (<a href="#ref-slocum152006" role="doc-biblioref">2006</a>)</span>, parue le 6 janvier 1880 dans le <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-6-1880-Page-8.jpg">Boston Evening Transcript</a>. Ni Rice ni Maguire ne purent conserver l’usage exclusif des noms « Gem » et « Boss », car de nombreux autres fabricants produisirent des versions du puzzle sous ces appellations : « Gem Puzzle, Solitaire, Fifteen, Number Puzzle ». Rice, évidemment irrité que d’autres aient copié son Gem Puzzle — qu’il avait lui-même copié d’une version fabriquée par un étudiant sourd de Hartford — vit sa création lui échapper. Les journaux rapportèrent des histoires de personnes qui, l’ayant résolu du premier coup, le trouvaient facile, puis pariaient de grosses sommes qu’elles pourraient le refaire — et perdaient la moitié du temps.</p>
+<div class="no-row-height column-margin column-container"></div><div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Boss-puzzle-publicite.jpg" class="lightbox" data-gallery="my-gallery" title="Boss puzzle (Boston Evening Transcript, 06/01/1880)"><img src="Boss-puzzle-publicite.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Boss puzzle (Boston Evening Transcript, 06/01/1880)"></a></p>
+<figcaption>Boss puzzle (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-6-1880-Page-8.jpg">Boston Evening Transcript, 06/01/1880</a>)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Gem-puzzle-publicite.jpg" class="lightbox" data-gallery="my-gallery" title="Gem puzzle (Evening Gazette, 13/02/1880)"><img src="Gem-puzzle-publicite.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Gem puzzle (Evening Gazette, 13/02/1880)"></a></p>
+<figcaption>Gem puzzle (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Feb-13-1880.pdf">Evening Gazette, 13/02/1880</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Number-puzzle-publicite.jpg" class="lightbox" data-gallery="my-gallery" title="Différentes appelations (Boston Evening Transcript, 10/01/1880)"><img src="Number-puzzle-publicite.jpg" class="img-fluid figure-img" style="width:100.0%" alt="Différentes appelations (Boston Evening Transcript, 10/01/1880)"></a></p>
+<figcaption>Différentes appelations (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-10-1880-Page-5.jpg">Boston Evening Transcript, 10/01/1880</a>)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="New-puzzle-publicite.jpg" class="lightbox" data-gallery="my-gallery" title="New puzzle (Boston Evening Transcript, 17/01/1880)"><img src="New-puzzle-publicite.jpg" class="img-fluid figure-img" style="width:100.0%" alt="New puzzle (Boston Evening Transcript, 17/01/1880)"></a></p>
+<figcaption>New puzzle (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-17-1880-Page%205.jpg">Boston Evening Transcript, 17/01/1880</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>En effectuant mes propres recherches sur des sites d’archives de presse, je suis tombé sur une mystérieure publicité pour <em>The New Solitaire</em> datant du <strong>8 décembre 1879</strong>, soit un mois plus tôt (avant même que Rice ne produise son <em>Gem Puzzle</em>) !</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="New-solitaire-publicite.jpg" class="lightbox" data-gallery="my-gallery" title="New Solitaire (Salem Register, 08/12/1879)"><img src="New-solitaire-publicite.jpg" class="img-fluid figure-img" style="width:100.0%" alt="New Solitaire (Salem Register, 08/12/1879)"></a></p>
+<figcaption>New Solitaire (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Salem-Register-Dec-8-1879-Page-3.jpg">Salem Register, 08/12/1879</a>)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="New-solitaire-article.jpg" class="lightbox" data-gallery="my-gallery" title="New Solitaire (Salem Register, 11/12/1879)"><img src="New-solitaire-article.jpg" class="img-fluid figure-img" style="width:100.0%" alt="New Solitaire (Salem Register, 11/12/1879)"></a></p>
+<figcaption>New Solitaire (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Salem-Register-Dec-11-1879-Page-2.jpg">Salem Register, 11/12/1879</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Les vendeurs <strong>G. M. Whipple &amp; A. A. Smith</strong> situés au <strong>243 Essex Street Salem Massachusetts</strong> (en rouge sur la carte) étaient connus pour leur célèbre jeu <a href="https://en.wikipedia.org/wiki/Authors_(card_game)">Authors</a> commercialisé en 1861. Est-ce que ce “Nouveau Solitaire” correspondait bien au 15 puzzle ? Comment se l’étaient-ils procuré ? Est-ce que l’un des prototypes confectionné par les étudiants sourds de Hartford avait pu se retrouver dans ce commerce ? Je n’ai pas davantage d’informations à ce sujet.</p>
+</section>
+<section id="le-dentiste-pevey-et-le-problème-du-14-15" class="level2">
+<h2 class="anchored" data-anchor-id="le-dentiste-pevey-et-le-problème-du-14-15">Le dentiste Pevey et le problème du 14-15</h2>
+<p>Une configuration particulière attira l’attention du public, le défi consiste à placer tous les numéros dans l’ordre sauf les 14 et 15 inversés (<em>cf.</em> image d’en-tête du billet), puis à tenter de tout remettre en ordre numérique.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Gem-puzzle-article.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Mention du 14 et 15 inversés (Boston Evening Transcript, 22/01/1880)"><img src="Gem-puzzle-article.jpg" class="img-fluid figure-img" alt="Mention du 14 et 15 inversés (Boston Evening Transcript, 22/01/1880)"></a></p>
+<figcaption>Mention du 14 et 15 inversés (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Boston-Transcript-Jan-22-1880-Page-4.jpg">Boston Evening Transcript, 22/01/1880</a>)</figcaption>
+</figure>
+</div>
+<p>Le <strong>Dr C. K. Pevey</strong>, très passionné par <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-24-1880.pdf">ce problème</a>, offrit le 24 janvier 1880 <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-24-1880-ad-1.pdf">un soin dentaire à 25 dollars</a> à quiconque lui montrerait comment le résoudre. Puis, il ajouta <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-29-1880-ad-2.pdf">100 dollars en espèces</a> à cette offre.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Pevey-publicite-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Seconde offre du Dr Pevey (Evening Gazette, 29/01/1880)"><img src="Pevey-publicite-2.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Seconde offre du Dr Pevey (Evening Gazette, 29/01/1880)"></a></p>
+<figcaption>Seconde offre du Dr Pevey (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-29-1880-ad-2.pdf">Evening Gazette, 29/01/1880</a>)</figcaption>
+</figure>
+</div>
+<p>Le 31 janvier, il fournit des explications dans <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Jan-31-1880.pdf">cet article d’Evening Gazette</a></p>
+<blockquote class="blockquote">
+<p>Le Dr Pevey soutient que la solution du problème est mathématiquement impossible, pour la même raison que deux trains ne peuvent pas se croiser sur la même voie.</p>
+</blockquote>
+<p>Sa motivation derrière cet appel était de convaincre cette jeune fille.</p>
+<blockquote class="blockquote">
+<p>La raison pour laquelle je voulais que vous m’aidiez tous à résoudre ce puzzle était de convaincre cette jeune fille. Vous comprenez, elle disait l’avoir résolu ; elle savait qu’elle l’avait fait, et si je disais qu’elle ne l’avait pas fait, je mettais simplement en doute sa véracité […] et il faudrait probablement la population entière de Worcester pour m’aider.</p>
+</blockquote>
+<p>Une touche d’humour fut ajoutée à l’<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Feb-3-1880.pdf">appel suivant</a> le 3 février :</p>
+<blockquote class="blockquote">
+<p>J’ai un chat qui possède un bel ensemble de dents, et je donnerai à quiconque l’ensemble complet et 100 $ (cent dollars) qui saura transposer deux de ses dents puis les remettre à leur place d’origine sans blesser le chat. Les opérateurs prennent tous les risques de se faire mordre. Les dentistes ne sont pas autorisés à concourir.</p>
+</blockquote>
+<p>Les puzzles précédents, que l’on pouvait soit résoudre soit pas du tout sans en connaître la solution, n’avaient pas préparé le public à la nouvelle propriété déconcertante du Fifteen Puzzle : selon la disposition initiale, il pouvait parfois être résolu, et parfois non, à l’instar du chat de Schrödinger mort ou vivant. Cette propriété inconnue et contre-intuitive du même objet physique le rendit à la fois fascinant et frustrant, et déclencha rapidement la folie mondiale du Fifteen Puzzle.</p>
+</section>
+<section id="la-folie-du-15-puzzle" class="level2">
+<h2 class="anchored" data-anchor-id="la-folie-du-15-puzzle">La folie du 15 puzzle</h2>
+<p>Voici un extrait de la presse <em>L’invention diabolique d’un ennemi du genre humain</em> (Rochester Democrat and Chronicle, 17/02/1880) en rendant compte :</p>
+<blockquote class="blockquote">
+<p>Il y a à peine quelques semaines, une innocente annonce est parue dans les journaux, et un public sans méfiance a lu que le nouveau jeu “15” était en vente. C’est tout, mais peu ont réalisé le sens mortel dissimulé sous ces mots apparemment inoffensifs. Un gentleman en vit un dans un magasin, et il lui sembla si simple qu’il en acheta un pour amuser les enfants. Dix minutes après avoir essayé d’expliquer aux petits comment il fallait s’y prendre, il était devenu insensible à tout ce qui l’entourait, et continua, heure après heure, à déplacer frénétiquement les petits blocs de bois avec l’intensité fiévreuse d’un fou. Un voisin entra, vit d’un coup d’œil comment le puzzle devait se résoudre, en acheta un et l’essaya. Il essaie encore. Et ainsi l’infection se répandit. Aujourd’hui, il n’y a guère de foyer agréable dans la ville qui n’ait l’ombre du “15” sur son seuil. Les hommes le réclament, les femmes le supplient, et les enfants pleurent pour l’obtenir. Et une fois qu’il vous tient, il ne vous lâche plus. De temps en temps, quelqu’un parvient à mettre les quinze numéros dans le bon ordre, mais sa joie est de courte durée : il est incapable de dire comment il y est parvenu, et ne peut le refaire. Toutes les théories sont fausses et l’expérience ne sert à rien. C’est pire qu’une fièvre maligne, et nul ne sait quand il en deviendra la victime. Les jeunes hommes portent le jeu dans la poche arrière, comme les Texans leurs revolvers, et son usage est encore plus fatal. Il suffit d’un prétexte pour le sortir, et aussitôt le charme opère. Les hommes jurent et le jettent, mais le reprennent aussitôt et continuent à faire glisser les blocs de bois en haut, en bas, à droite, à gauche. Une dame y travailla de trois heures de l’après-midi à dix heures du soir, et son mari dut finalement le lui arracher des mains de force et l’envoyer se coucher. Il ne dut son propre salut qu’au fait qu’il était aveugle. Ce sont les trois derniers numéros qui troublent l’équilibre mental. Jusque-là, tout va bien. C’est là que commencent les ennuis. Qu’en résultera-t-il ? Nul ne peut le dire. À moins d’un remède rapide, nous deviendrons une nation d’idiots remuant des blocs de bois. Aucun châtiment ne serait trop grand pour l’homme qui a infligé ce fléau à une communauté sans défense. Nous pouvons l’imaginer tentant de faire venir les bons numéros sur une plaque de fer rougie au feu. S’il était trouvé, il n’échapperait pas à la foule hurlante.</p>
+</blockquote>
+<p>Dans cet <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Evening-Gazette-Feb-24-1880.pdf">autre article</a> (Evening Gazette, 24/02/1880) on peut lire :</p>
+<blockquote class="blockquote">
+<p>L’augmentation récente du nombre de suicides serait entièrement due au 15 puzzle.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Craze-suicides.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Jerry Slocum et Dic Sonneveld, The 15 Puzzle : How It Drove the World Crazy, p.127"><img src="Craze-suicides.jpg" class="img-fluid figure-img" alt="Jerry Slocum et Dic Sonneveld, The 15 Puzzle : How It Drove the World Crazy, p.127"></a></p>
+<figcaption>Jerry Slocum et Dic Sonneveld, The 15 Puzzle : How It Drove the World Crazy, p.127</figcaption>
+</figure>
+</div>
+<p>La plupart de ces récits sur le caractère « fou » ou « obsessionnel » du casse-tête relevaient davantage de la rhétorique sensationnaliste et de la caricature journalistique typiques de la presse populaire de l’époque. Comme souvent avec des phénomènes de mode, elle amplifiait les effets pour dramatiser et attirer des lecteurs. Mais il est vrai que le puzzle inondait le pays et captivait les esprits, au point que certains postes de travail ou salles de classe étaient perturbés. Au milieu du mois de mars, la folie du Fifteen Puzzle atteignit son apogée, lorsque Puck — principal magazine satirique américain — publia une illustration comparant les difficultés à résoudre le puzzle aux manœuvres pour choisir les candidats à la présidence lors de l’élection de 1880. La revue publia également une planche entière de caricatures intitulée « 15–14–13 », décrivant les effets du puzzle sur la société.</p>
+</section>
+<section id="sam-loyd-et-sa-campagne-de-désinformation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sam-loyd-et-sa-campagne-de-désinformation">Sam Loyd et sa campagne de désinformation</h2>
+<p><a href="https://en.wikipedia.org/wiki/Sam_Loyd">Sam Loyd</a>, célèbre maître du puzzle, a affirmé dans cette interview <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lima-Daily-News-Jan-13-1891-Page-2.pdf">He Invents Puzzles</a> datant du 13 janvier 1891 – soit plus de dix ans après la fin de la vogue du jeu – qu’il aurait inventé le 15 puzzle. Loyd est, de l’avis même de <a href="https://en.wikipedia.org/wiki/Martin_Gardner">Martin Gardner</a>, &nbsp;<em>«&nbsp;le plus grand créateur d’énigmes d’Amérique&nbsp;»</em>. Formé aux jeux par les échecs et le journalisme, il avait le goût du spectaculaire et un don de la mise en scène (mimes, prestidigitation, ventriloquisme, etc) et de la transformation d’un problème en une véritable énigme.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Samuel-Loyd.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Samuel Loyd"><img src="Samuel-Loyd.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Samuel Loyd"></a></p>
+</figure>
+</div>
+<figcaption>Samuel Loyd</figcaption>
+</figure>
+</div>
+<p>Mais il est également connu pour ses mensonges, ses plagiats et son goût pour l’autopromotion, ce qui lui a valu <a href="https://en.wikipedia.org/wiki/Sam_Loyd#Reputation">une réputation</a> d’escroc, de charlatan, et fut même assimilé au diable. <span class="citation" data-cites="slocum152006">Slocum and Sonneveld (<a href="#ref-slocum152006" role="doc-biblioref">2006</a>)</span> ont montré à travers des recherches rigoureuses que Loyd a mené une campagne de désinformation pendant plus de deux décennies, faisant passer une simple revendication personnelle pour un fait historique. Le 4 janvier 1896, dans un article de <em>The Illustrated American</em> intitulé <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Illustrated-American-4-January-1896-The-Famous-15-Block-Puzzle.pdf">The Famous 15 Block Puzzle</a>, Loyd propose une récompense de 1000 dollars – comparable au défi du Dr Pevey – pour qui saura résoudre le problème du 14 et 15 inversés. Mais Loyd commis une erreur en omettant de spécifier que la solution devait positionner le 1 en haut à gauche (la case vide en bas à droite), et a reçu des solutions avec la case vide en haut à gauche. Il ne donna pas pour autant la récompense… Dans ce même article il affirma avoir inventé le jeu en 1872 sans en fournir la moindre preuve. Dans une interview ultérieure, en décembre 1907, intitulée <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-prince-of-puzzle-makers-interview-sam-loyd.pdf">The Prince of Puzzle-Makers</a> il déclara n’avoir pas obtenu de brevet du fait de l’impossibilité de la remise en ordre du 14 et 15 inversés… L’intéressé avouant avec malice dans le même article :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>Of course my legal rights in all my early devices have lapsed by this time, but copyrights and patents mean very little to me. People don’t care for my puzzle unless there can have them with my name on them.</p>
+</blockquote>
+<p>Ce qui en dit long sur sa probité…<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;“L’idée que l’objet ou son problème avait été inventé par Sam Loyd allait de soi et reste encore transmise dans beaucoup de présentions aujourd’hui. Bien sûr Loyd était à juste titre considéré comme le <em>Puzzle King</em>, et <a href="https://fr.wikipedia.org/wiki/Effet_Matthieu">on ne prête qu’aux riches</a>…” par René Guitart dans <span class="citation" data-cites="allouche2017travaux">(<a href="#ref-allouche2017travaux" role="doc-biblioref">Allouche et al., 2017</a>)</span></p><div id="ref-allouche2017travaux" class="csl-entry" role="listitem">
+Allouche, Jean-Paul, Jean-Michel Autebert, Jérôme Auvinet, Evelyne Barbin, Jenny Boucard, Catherine Goldstein, René Guitart, et al. 2017. <em>Les Travaux Combinatoires En France (1870-1914) Et Leur Actualité</em>. PULIM (Presses universitaires de Limoges).
+</div></div><div id="fn2"><p><sup>2</sup>&nbsp;Je n’ai pas non plus trouvé dans les <a href="https://gallaudet.edu/archives/archives-collections/the-deaf-mutes-journal-collection/the-deaf-mutes-journal-1875-1879/">archives</a> de <em>The Deaf-Mutes Journal</em> des informations à propos du 15 puzzle. Ni dans le Volume 8 n°10 du 27 février 1879 (dont le bandeau apparait au début du chapitre 5 du 15 puzzle book p.95), ni dans le n°11 du 6 mars 1879. Dans le livre p.96 il est mentionné que l’<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/The-Sun-Feb-27-1880.pdf">article du New York Sun</a> du 27/02/1880 a été republié dans le journal à la date du 4 mars, mais je ne trouve pas d’archive correspondante à cette date.</p></div></div><p>Mais alors s’il n’est pas l’inventeur du 15 puzzle, qui d’autre ? Un élève sourd de Hartford ? Aucune source de l’école n’a permis d’en tirer cette conclusion<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+</section>
+<section id="noyes-chapman-réel-inventeur-du-15-puzzle" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="noyes-chapman-réel-inventeur-du-15-puzzle">Noyes Chapman réel inventeur du 15 puzzle</h2>
+<p>Un autre nom circulait dans la presse, celui de <a href="https://ancestors.familysearch.org/en/LZ6M-52N/noyes-palmer-chapman-1811-1889">Noyes Palmer Chapman</a>, responsable des postes à Canastota dans l’État de New York. Par exemple dans le <em>Syracuse Sunday Courier</em>, le 29 février 1880 :</p>
+<blockquote class="blockquote">
+<p>La revendication d’invention de <strong>Noyes Chapman</strong>, un postier de Canastota, est la mieux établie de toutes. Il présenta pour la première fois la boîte et les cubes à quelques amis dans sa demeure campagnarde, en 1874. L’idée lui fut suggérée par un ancien problème de « carré magique », dont le but était de disposer librement, sans boite, 16 blocs numérotés en quatre rangées de quatre, de sorte que la somme de chaque ligne, colonne ou diagonale soit 34. […] M. Chapman eut alors l’idée d’utiliser des cubes dans une boîte, jugés plus pratiques. Il découvrit qu’en retirant un bloc, les autres pouvaient être déplacés à volonté, et qu’il existait des combinaisons impossibles à résoudre.</p>
+</blockquote>
+<p>Mais Chapman déposa seulement une demande de brevet pour son <em>« Block Solitaire Puzzle »</em> le 21 février 1880 <span class="citation" data-cites="slocum152006">(<a href="#ref-slocum152006" role="doc-biblioref">Slocum and Sonneveld, 2006, 101</a>)</span>, lorsque le jeu circulait tout azimut. Demande qui fut rejetée car probablement jugée trop proche du <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Kinsey-brevet-puzzle-blocks.pdf">brevet de Ernest Kinsey</a> accordé plus d’un an auparavant. Le dispositif décrit par <span class="citation" data-cites="kinseyImprovement1878">(<a href="#ref-kinseyImprovement1878" role="doc-biblioref">Kinsey, 1878</a>)</span> montre une grille de 6 × 6 possédant des blocs coulissants, qui couvre en effet la plupart des caractéristiques essentielles du jeu, à ceci près qu’il précise que les pièces doivent être maintenues dans un cadre avec des rainures, contrairement au puzzle de Chapman où les blocs ne sont pas contraints : on peut les renverser hors de la boîte, puis les remettre au hasard. Cette possibilité a pour conséquence que le puzzle est parfois impossible à résoudre, propriété qui a largement contribué à en faire une véritable mode.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-slocum152006" class="csl-entry" role="listitem">
+Slocum, Jerry, and Dic Sonneveld. 2006. <em>The 15 Puzzle : How It Drove the World Crazy : The Puzzle That Started the Craze of 1880 : How Amercia’s Greatest Puzzle Designer, Sam Loyd, Fooled Everyone for 115 Years</em>. Slocum Puzzle Foundation. <a href="https://cir.nii.ac.jp/crid/1970304959833932688">https://cir.nii.ac.jp/crid/1970304959833932688</a>.
+</div><div id="ref-kinseyImprovement1878" class="csl-entry" role="listitem">
+Kinsey, Ernest U. 1878. Improvement in puzzle-blocks. 207124, issued August 1878. <a href="https://www.cs.brandeis.edu/~storer/JimPuzzles/SLIDE/Fifteen/Kinsey207124.pdf">https://www.cs.brandeis.edu/~storer/JimPuzzles/SLIDE/Fifteen/Kinsey207124.pdf</a>.
+</div></div></section>
+<section id="de-chapman-à-rice-un-puzzle-à-résoudre" class="level2">
+<h2 class="anchored" data-anchor-id="de-chapman-à-rice-un-puzzle-à-résoudre">De Chapman à Rice, un puzzle à résoudre</h2>
+<p>Une énigme demeure : comment le puzzle inventé par Chapman à New York en 1874 s’est-il retrouvé 5 ans plus tard à la fenêtre de Rice ? Il semble probable que Noyes Chapman ait offert un ou plusieurs exemplaires de son puzzle à son fils <strong>Frank Chapman</strong>, qui les aurait emportés chez lui à Syracuse, à une vingtaine de miles de là. Frank aurait ensuite donné un exemplaire à son associé en affaires, James J. Belden, ancien maire de Syracuse, et à son épouse Anna Belden. Au cours de l’été 1877 ou 1878, Anna emmena le puzzle à Watch Hill (Rhode Island), où elle le donna à une dame handicapée cherchant de quoi se distraire. Les recherches indiquent qu’il s’agissait probablement d’Hannah Maria Catlin, la fille unique de Julius et Mary Catlin, atteinte d’une maladie osseuse grave. Les Catlin vivaient à Hartford, dans une grande maison située sur Asylum Avenue, non loin de <a href="https://en.wikipedia.org/wiki/American_School_for_the_Deaf">l’école américaine pour les sourds</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="American-School-for-the-Deaf.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="American Asylum for Deaf and Dumb, Hartford, Conn."><img src="American-School-for-the-Deaf.jpg" class="img-fluid figure-img" alt="American Asylum for Deaf and Dumb, Hartford, Conn."></a></p>
+<figcaption><a href="https://www.loc.gov/pictures/item/2004670330/">American Asylum for Deaf and Dumb, Hartford, Conn.</a></figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Hartford-map-15-puzzle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Carte interactive (maison des Catlin et école américaine pour les sourds)"><img src="Hartford-map-15-puzzle.jpg" class="img-fluid figure-img" alt="Carte interactive (maison des Catlin et école américaine pour les sourds)"></a></p>
+<figcaption><a href="https://www.google.com/maps/d/u/0/edit?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&amp;usp=sharing">Carte interactive</a> (maison des Catlin et école américaine pour les sourds)</figcaption>
+</figure>
+</div>
+<p>Cette école enseignait à ses élèves la langue des signes, mais aussi des matières académiques et des compétences manuelles telles que la menuiserie, et c’est dans un de leurs ateliers que des copies artisanales auraient été fabriquées. Toutefois le trajet exact entre Watch Hill et Hartford reste inconnu. Plusieurs hypothèses existent : le puzzle aurait été offert par Hannah à un élève de l’école; ou bien, un exemplaire aurait été donné directement à un élève sourd lors d’une visite à Watch Hill; qui dans un cas comme dans l’autre en aurait vendu un exemplaire à l’homme qui le transmit à son tour à Matthias Rice.</p>
+<p>La boucle est bouclée. L’ordre des évènements est ainsi reconstitué, celui de l’histoire du casse-tête le plus populaire que le monde ait jamais connu.</p>
+<p><a href="8-puzzle.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="8-puzzle.gif" class="img-fluid"></a></p>
+<p>Apparu à New York, transféré à Watch Hill puis produit à Hartford par des étudiants sourds par le truchement d’une jeune femme handicapée, pour enfin être commercialisé à Boston, le 15 puzzle s’est répandu comme une trainée de poudre dans l’Amérique de 1880, avant de s’exporter dans le monde entier.</p>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&amp;ehbc=2E312F" width="100%" height="480">
+</iframe>
+</section>
+<section id="diffusion-du-15-puzzle-en-france" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="diffusion-du-15-puzzle-en-france">Diffusion du 15 puzzle en France</h2>
+<p><span class="citation" data-cites="lucasRecreations1882">(<a href="#ref-lucasRecreations1882" role="doc-biblioref">Lucas, 1882</a>)</span> décrit le jeu du taquin dans son ouvrage <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf">Récréations mathématiques</a>. À propos de son origine, il écrit :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>Le jeu connu actuellement sous le nom de <em>Jeu de Taquin</em> a été imaginé en Amérique, vers la fin de 1878, par un sourd-muet qui se proposa, par hasard, de ranger dans une boîte des numéros qui s’y trouvaient déplacés, sans les en faire sortir. C’est là l’origine qui m’a été indiquée, au congrès de Reims de l’Association française pour l’Avancement des Sciences, par M. Sylvester, correspondant de l’Académie des Sciences de Paris, professeur de l’Université J. Hopkins, à Baltimore.</p>
+</blockquote>
+<p>L’histoire était certes approximative, comme on a pu le voir précédemment, mais nulle mention de Sam Loyd ne se retrouve sous la plume de Lucas, ni même de Loyd Jr qui n’attribue pas la paternité du jeu à son père<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Lucas ajoute :</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;“It was in the early eighties when I had barely attained my ’teens that the world-disturbing”14-15 Puzzle” flashed across the horizon and Loyds were amongst its earliest victims. To say that I was infatuated with the tantalizing box of blocks is a mild description of my enthralment” <span class="citation" data-cites="loyd1928sam">(<a href="#ref-loyd1928sam" role="doc-biblioref">Loyd, 1928</a>)</span></p><div id="ref-loyd1928sam" class="csl-entry" role="listitem">
+Loyd, Sam. 1928. <span>“Sam Loyd and His Puzzles: An Autobiographical Review.”</span> <em>(No Title)</em>.
+</div></div></div><div class="page-columns page-full"><blockquote class="blockquote">
+<p>Peu après<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, il fut importé en France, et offert en prime, par divers journaux politiques et illustres, sous le nom de double casse-tête gaulois.&nbsp;Son succès en Europe a été encore plus grand qu’en Amérique</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Slocum et Donneveld mentionne la date du Le 28 mars lorsqu’ils abordent le cas de la France à la page 60, mais en fouillant dans les archives du journal Le Gaulois je me suis aperçu que la première mention du jeu datait du 26 mars 1880 (<em>cf.</em> image ci-contre).</p></div></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Double-casse-tete-gaulois.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Le double casse-tête Gaulois (Le Gaulois, 26/03/1880)"><img src="Double-casse-tete-gaulois.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Le double casse-tête Gaulois (Le Gaulois, 26/03/1880)"></a></p>
+<figcaption>Le double casse-tête Gaulois (<a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Le-Gaulois-Mar-26-1880">Le Gaulois, 26/03/1880</a>)</figcaption>
+</figure>
+</div>
+<p>Des tas de versions différentes du jeu virent le jour, voir par exemple <span class="citation" data-cites="storerFifteen">(<a href="#ref-storerFifteen" role="doc-biblioref">Storer, n.d.</a>)</span> ou <span class="citation" data-cites="koliJeux2025">(<a href="#ref-koliJeux2025" role="doc-biblioref">Koli, 2025</a>)</span> pour des photos de vieux exemplaires.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-storerFifteen" class="csl-entry" role="listitem">
+Storer, James. n.d. <span>“Fifteen Puzzle (4x4 Squares, 15 Tiles).”</span> Accessed December 18, 2025. <a href="https://www.cs.brandeis.edu/~storer/JimPuzzles/ZPAGES/zzzFifteen.html">https://www.cs.brandeis.edu/~storer/JimPuzzles/ZPAGES/zzzFifteen.html</a>.
+</div><div id="ref-koliJeux2025" class="csl-entry" role="listitem">
+Koli, Alain. 2025. <span>“Les jeux de Taquin.”</span> <em>COLLECTION DE JEUX ANCIENS</em>. <a href="https://www.jeuxanciensdecollection.com/2025/02/le-jeu-de-taquin.html">https://www.jeuxanciensdecollection.com/2025/02/le-jeu-de-taquin.html</a>.
+</div></div><p>Le jeu de Taquin a ensuite été traité sur le plan mathématiques dans plusieurs écrits (<em>cf</em>. tableau ci-dessous) sur lesquels nous reviendrons au moment d’expliquer sa résolution et les preuves d’impossibilité.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Titre</th>
+<th>Auteur</th>
+<th>Date</th>
+<th>Référence</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf">Les carrés magiques</a></td>
+<td>Gaston Tissandier</td>
+<td>10/07/1880</td>
+<td><span class="citation" data-cites="tissandierCarres1880">(<a href="#ref-tissandierCarres1880" role="doc-biblioref">Tissandier, 1880</a>)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf">Le dernier mot du Taquin</a></td>
+<td>Jean Piarron de Mondésir</td>
+<td>25/09/1880</td>
+<td><span class="citation" data-cites="piarrondemondesirDernier1880">(<a href="#ref-piarrondemondesirDernier1880" role="doc-biblioref">Piarron de Mondésir, 1880</a>)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>La clé du Taquin</td>
+<td>Henry Fleury</td>
+<td>1880</td>
+<td><span class="citation" data-cites="fleuryCle1880">(<a href="#ref-fleuryCle1880" role="doc-biblioref">Fleury, 1880</a>)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sur le taquin</td>
+<td>Charles Henry</td>
+<td>1880</td>
+<td><span class="citation" data-cites="henryTaquin1880">(<a href="#ref-henryTaquin1880" role="doc-biblioref">Henry, 1880</a>)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf">Le jeu de Taquin</a></td>
+<td>Édouard Lucas</td>
+<td>1882</td>
+<td><span class="citation" data-cites="lucasRecreations1882">(<a href="#ref-lucasRecreations1882" role="doc-biblioref">Lucas, 1882</a>)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="no-row-height column-margin column-container"><div id="ref-tissandierCarres1880" class="csl-entry" role="listitem">
+Tissandier, Gaston. 1880. <span>“Les Carrés Magiques,”</span> no. 371 (July). <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf">https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf</a>.
+</div><div id="ref-piarrondemondesirDernier1880" class="csl-entry" role="listitem">
+Piarron de Mondésir, Jean. 1880. <span>“Le Dernier Mot Du Taquin,”</span> no. 382 (September).
+</div><div id="ref-fleuryCle1880" class="csl-entry" role="listitem">
+Fleury, Henry. 1880. <span>“La Clé Du Taquin, Ou La Solution Des Quize Et Autres Jeux Du Même Genre.”</span> <em>Marseille</em>.
+</div><div id="ref-henryTaquin1880" class="csl-entry" role="listitem">
+Henry, Charles. 1880. <span>“Sur Le Taquin.”</span>
+</div><div id="ref-lucasRecreations1882" class="csl-entry" role="listitem">
+Lucas, Édouard. 1882. <em>Récréations mathématiques</em>. Gauthier-Villars. <a href="http://edouardlucas.free.fr/oeuvres/recreations_math_01_lucas.pdf">http://edouardlucas.free.fr/oeuvres/recreations_math_01_lucas.pdf</a>.
+</div></div></section>
+</section>
+<section id="références" class="level1">
+<h1>Références</h1>
+<p>Allouche, Jean-Paul, Jean-Michel Autebert, Jérôme Auvinet, Evelyne Barbin, Jenny Boucard, Catherine Goldstein, René Guitart, et al.&nbsp;2017. <em>Les Travaux Combinatoires En France (1870-1914) Et Leur Actualité</em>. PULIM (Presses universitaires de Limoges).</p>
+<p>Fleury, Henry. 1880. “La Clé Du Taquin, Ou La Solution Des Quize Et Autres Jeux Du Même Genre.” <em>Marseille</em>.</p>
+<p>Henry, Charles. 1880. “Sur Le Taquin.”</p>
+<p>Hordern, Edward. 1986. <em>Sliding Piece Puzzles</em>. New York : Oxford University Press.</p>
+<p>Kinsey, Ernest U. 1878. Improvement in puzzle-blocks. 207124, issued August 1878. <a href="https://www.cs.brandeis.edu/~storer/JimPuzzles/SLIDE/Fifteen/Kinsey207124.pdf">🔗</a></p>
+<p>Koli, Alain. 2025. “Les jeux de Taquin.” <em>COLLECTION DE JEUX ANCIENS</em>. <a href="https://www.jeuxanciensdecollection.com/2025/02/le-jeu-de-taquin.html">🔗</a></p>
+<p>Loyd, Sam. 1928. “Sam Loyd and His Puzzles: An Autobiographical Review.” <em>(No Title)</em>.</p>
+<p>Lucas, Édouard. 1882. <em>Récréations mathématiques</em>. Gauthier-Villars. <a href="http://edouardlucas.free.fr/oeuvres/recreations_math_01_lucas.pdf">🔗</a></p>
+<p>MacNeal, David. 2022. “How One Collector Amassed over 35,000 Puzzles.” <em>Art of Play</em>. <a href="https://www.artofplay.com/blogs/stories/how-one-collector-amassed-over-35000-puzzles">🔗</a></p>
+<p>Piarron de Mondésir, Jean. 1880. “Le Dernier Mot Du Taquin,” no. 382 (September).</p>
+<p>Slocum, Jerry, and Dic Sonneveld. 2006. <em>The 15 Puzzle : How It Drove the World Crazy : The Puzzle That Started the Craze of 1880 : How Amercia’s Greatest Puzzle Designer, Sam Loyd, Fooled Everyone for 115 Years</em>. Slocum Puzzle Foundation. <a href="https://cir.nii.ac.jp/crid/1970304959833932688">🔗</a></p>
+<p>Storer, James. n.d. “Fifteen Puzzle (4x4 Squares, 15 Tiles).” Accessed December 18, 2025. <a href="https://www.cs.brandeis.edu/~storer/JimPuzzles/ZPAGES/zzzFifteen.html">🔗</a></p>
+<p>Tissandier, Gaston. 1880. “Les Carrés Magiques,” no. 371 (July). <a href="https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf">🔗</a></p>
+
+
+
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/www\.kevinpolisano\.fr");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "kevinpolisano/blog";
+    script.dataset.repoId = "R_kgDOM9ReCA";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOM9ReCM4CmGgm";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","loop":true,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
