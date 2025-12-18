@@ -188,6 +188,3 @@ Le jeu de Taquin a ensuite été traité sur le plan mathématiques dans plusieu
 | [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf) | Édouard Lucas | 1882 | [@lucasRecreations1882] |
 
 
-# Références
-
-{{< include references.md >}}
