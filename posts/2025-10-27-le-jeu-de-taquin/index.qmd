@@ -153,7 +153,7 @@ Apparu à New York, transféré à Watch Hill puis produit à Hartford par des �
 
 ## Diffusion du 15 puzzle en France
 
-[@lucasRecreations1882] décrit le jeu du taquin dans son ouvrage [Récréations mathématiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf). À propos de son origine, il écrit :
+[@lucasRecreations1882] décrit le jeu du taquin dans son ouvrage [Récréations mathématiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Ŕecreations-mathematiques.pdf). À propos de son origine, il écrit :
 
 > Le jeu connu actuellement sous le nom de *Jeu de Taquin* a été imaginé en Amérique, vers la fin de 1878, par un sourd-muet qui se proposa, par hasard, de ranger dans une boîte des numéros qui s'y trouvaient déplacés, sans les en faire sortir. C'est là l'origine qui m'a été indiquée, au congrès de Reims de l'Association française pour l'Avancement des Sciences, par M. Sylvester, correspondant de l'Académie des Sciences de Paris, professeur de l'Université J. Hopkins, à Baltimore.
 
@@ -177,4 +177,4 @@ Le jeu de Taquin a ensuite été traité sur le plan mathématiques dans plusieu
 | [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Jean Piarron de Mondésir | 25/09/1880 | [@piarrondemondesirDernier1880] |  |
 | La clé du Taquin | Henry Fleury | 1880 | [@fleuryCle1880] |  |
 | Sur le taquin | Charles Henry | 1880 | [@henryTaquin1880] |  |
-| [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Récréations-mathématiques.pdf) | Édouard Lucas | 1882 | [@lucasRecreations1882] |  |
+| [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Ŕecreations-mathematiques.pdf) | Édouard Lucas | 1882 | [@lucasRecreations1882] |  |
