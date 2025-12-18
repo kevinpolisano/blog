@@ -7,3 +7,12 @@
 videos/
 _site/
 _freeze/
+scripts/create_discussions.py
+scripts/discussion-ids.py
+scripts/import-comments-to-discussion.py
+slides/
+discussion-ids.py
+docs/images/guitare2.jpg
+posts/mys.py
+posts/script-wp-to-quarto.py
+posts/uploads/

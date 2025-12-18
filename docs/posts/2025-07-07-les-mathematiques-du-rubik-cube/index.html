@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2025-07-07">
+
+<title>Résoudre le Rubik’s cube – Blog de Kévin Polisano</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4E0K892EGY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog de Kévin Polisano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../handicap.html"> 
+<span class="menu-text">Handicap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Résoudre le Rubik’s cube</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">mathématiques</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 7, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#tutoriel-pour-résoudre-le-rubiks-cube-3x3" id="toc-tutoriel-pour-résoudre-le-rubiks-cube-3x3" class="nav-link active" data-scroll-target="#tutoriel-pour-résoudre-le-rubiks-cube-3x3">Tutoriel pour résoudre le Rubik’s cube 3x3</a>
+  <ul class="collapse">
+  <li><a href="#outils-de-visualisation-du-rubiks-cube" id="toc-outils-de-visualisation-du-rubiks-cube" class="nav-link" data-scroll-target="#outils-de-visualisation-du-rubiks-cube">Outils de visualisation du Rubik’s cube</a>
+  <ul class="collapse">
+  <li><a href="#cubing.js" id="toc-cubing.js" class="nav-link" data-scroll-target="#cubing.js">Cubing.js</a></li>
+  <li><a href="#cubedb" id="toc-cubedb" class="nav-link" data-scroll-target="#cubedb">CubeDB</a></li>
+  <li><a href="#animcubejs" id="toc-animcubejs" class="nav-link" data-scroll-target="#animcubejs">AnimCubeJS</a></li>
+  </ul></li>
+  <li><a href="#la-méthode-pour-débutants" id="toc-la-méthode-pour-débutants" class="nav-link" data-scroll-target="#la-méthode-pour-débutants">La méthode pour débutants</a>
+  <ul class="collapse">
+  <li><a href="#préliminaires-les-mouvements-de-base-et-le-sexy-move" id="toc-préliminaires-les-mouvements-de-base-et-le-sexy-move" class="nav-link" data-scroll-target="#préliminaires-les-mouvements-de-base-et-le-sexy-move">Préliminaires : les mouvements de base et le <em>sexy move</em></a></li>
+  <li><a href="#etape-n0-le-mélange" id="toc-etape-n0-le-mélange" class="nav-link" data-scroll-target="#etape-n0-le-mélange">Etape n°0 : le mélange</a></li>
+  <li><a href="#etape-n1-la-marguerite" id="toc-etape-n1-la-marguerite" class="nav-link" data-scroll-target="#etape-n1-la-marguerite">Etape n°1 : la marguerite</a></li>
+  <li><a href="#etape-n2-la-croix-blanche" id="toc-etape-n2-la-croix-blanche" class="nav-link" data-scroll-target="#etape-n2-la-croix-blanche">Etape n°2 : la croix blanche</a></li>
+  <li><a href="#etape-n3-la-première-couche" id="toc-etape-n3-la-première-couche" class="nav-link" data-scroll-target="#etape-n3-la-première-couche">Etape n°3 : la première couche</a></li>
+  <li><a href="#etape-n4-la-deuxième-couche" id="toc-etape-n4-la-deuxième-couche" class="nav-link" data-scroll-target="#etape-n4-la-deuxième-couche">Etape n°4 : la deuxième couche</a></li>
+  <li><a href="#etape-n5-la-croix-jaune" id="toc-etape-n5-la-croix-jaune" class="nav-link" data-scroll-target="#etape-n5-la-croix-jaune">Etape n°5 : la croix jaune</a></li>
+  <li><a href="#etape-n6-la-face-jaune" id="toc-etape-n6-la-face-jaune" class="nav-link" data-scroll-target="#etape-n6-la-face-jaune">Etape n°6 : la face jaune</a></li>
+  <li><a href="#etape-n7-les-coins-de-la-dernière-couche" id="toc-etape-n7-les-coins-de-la-dernière-couche" class="nav-link" data-scroll-target="#etape-n7-les-coins-de-la-dernière-couche">Etape n°7 : les coins de la dernière couche</a></li>
+  <li><a href="#etape-n8-les-arêtes-de-la-dernière-couche" id="toc-etape-n8-les-arêtes-de-la-dernière-couche" class="nav-link" data-scroll-target="#etape-n8-les-arêtes-de-la-dernière-couche">Etape n°8 : les arêtes de la dernière couche</a></li>
+  <li><a href="#récapitulatif-de-la-résolution-par-la-méthode-débutant-189-mouvements" id="toc-récapitulatif-de-la-résolution-par-la-méthode-débutant-189-mouvements" class="nav-link" data-scroll-target="#récapitulatif-de-la-résolution-par-la-méthode-débutant-189-mouvements">Récapitulatif de la résolution par la méthode débutant (189 mouvements)</a></li>
+  <li><a href="#résolution-par-xuanyi-geng-7-ans-établissant-le-record-du-monde-en-3.05s-33-mouvements" id="toc-résolution-par-xuanyi-geng-7-ans-établissant-le-record-du-monde-en-3.05s-33-mouvements" class="nav-link" data-scroll-target="#résolution-par-xuanyi-geng-7-ans-établissant-le-record-du-monde-en-3.05s-33-mouvements">Résolution par Xuanyi Geng (7 ans) établissant le record du monde en 3.05s (33 mouvements)</a></li>
+  </ul></li>
+  <li><a href="#la-méthode-friedrich-simplifiée" id="toc-la-méthode-friedrich-simplifiée" class="nav-link" data-scroll-target="#la-méthode-friedrich-simplifiée">La méthode Friedrich simplifiée</a>
+  <ul class="collapse">
+  <li><a href="#f2l-first-two-layers" id="toc-f2l-first-two-layers" class="nav-link" data-scroll-target="#f2l-first-two-layers">F2L : First Two Layers</a></li>
+  <li><a href="#résoudre-le-cas-où-le-facette-blanc-du-coin-est-située-au-dessus" id="toc-résoudre-le-cas-où-le-facette-blanc-du-coin-est-située-au-dessus" class="nav-link" data-scroll-target="#résoudre-le-cas-où-le-facette-blanc-du-coin-est-située-au-dessus">Résoudre le cas où le facette blanc du coin est située au dessus</a></li>
+  <li><a href="#résoudre-les-autres-cas-où-la-facette-blanc-du-coin-nest-pas-située-au-dessus" id="toc-résoudre-les-autres-cas-où-la-facette-blanc-du-coin-nest-pas-située-au-dessus" class="nav-link" data-scroll-target="#résoudre-les-autres-cas-où-la-facette-blanc-du-coin-nest-pas-située-au-dessus">Résoudre les autres cas où la facette blanc du coin n’est pas située au dessus</a></li>
+  <li><a href="#si-le-coin-et-larête-sont-adjacents" id="toc-si-le-coin-et-larête-sont-adjacents" class="nav-link" data-scroll-target="#si-le-coin-et-larête-sont-adjacents">Si le coin et l’arête sont adjacents</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Le Rubik’s cube a fêté ses 50 ans !</p>
+<p><img src="Rubik's Cube.svg" class="img-fluid"></p>
+<section id="tutoriel-pour-résoudre-le-rubiks-cube-3x3" class="level1">
+<h1>Tutoriel pour résoudre le Rubik’s cube 3x3</h1>
+<section id="outils-de-visualisation-du-rubiks-cube" class="level2">
+<h2 class="anchored" data-anchor-id="outils-de-visualisation-du-rubiks-cube">Outils de visualisation du Rubik’s cube</h2>
+<section id="cubing.js" class="level3">
+<h3 class="anchored" data-anchor-id="cubing.js">Cubing.js</h3>
+<script src="https://cdn.cubing.net/v0/js/cubing/twisty" type="module"></script>
+<p><twisty-player alg="R U R' U R U2' R'"></twisty-player></p>
+</section>
+<section id="cubedb" class="level3">
+<h3 class="anchored" data-anchor-id="cubedb">CubeDB</h3>
+</section>
+<section id="animcubejs" class="level3">
+<h3 class="anchored" data-anchor-id="animcubejs">AnimCubeJS</h3>
+<p>Télécharger l’archive <code>.zip</code> d’<a href="https://animcubejs.cubing.net/animcubejs.html#download">AnimCubeJS</a>, extraire le fichier <code>AnimCube3.js</code> et le placer dans le répertoire <code>scripts</code> à la racine du blog.</p>
+<p>Pour avoir la correspondance entre <a href="https://animcubejs.cubing.net/animcubejs.html">AnimCubeJS</a> et <a href="https://alpha.twizzle.net/edit/">Twizzle Editor</a> je dois spécifier <code>yz=1</code> pour les axes et <code>colorscheme=wy2301</code> pour que la face centrale soit verte, celle de droite soit rouge et celle du haut soit blanche.</p>
+<p>L’outil <a href="https://animcubejs.cubing.net/sources/codes/enhancement/parameters/config_tool.html">AnimCubeJS Configuration</a> permet de configurer le rendu visuel avec une interface graphique et génère le code HTML :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"/scripts/AnimCube3.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:400px;height:400px;"</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">AnimCube3</span>(<span class="st">"bgcolor=ffffff&amp;troughcolor=ffffff&amp;hint=4&amp;hintborder=1&amp;move=U R U' R'&amp;yz=1&amp;initmove=U2 F' D2 B2 D2 F' L2 B' F2 D B U R D' R2 U2 L2 U B' U B U D L' D' L x y z y'&amp;colorscheme=wy2301"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On peut regrouper certains paramètres partagés par toutes les animations dans un fichier de <a href="https://animcubejs.cubing.net/animcubejs.html#config">config</a> <code>AnimCube3.txt</code> (placé dans le même répertoire que le fichier html de sortie) contenant les lignes suivantes :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bgcolor=ffffff</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>slidercolor=0000ff</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>troughcolor=ffffff</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>hint=4</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>hintborder=1</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>colorscheme=wy2301</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>yz=1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>simplifiant ainsi la syntaxe :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">AnimCube3</span>(<span class="st">"config=AnimCube3.txt&amp;move=U R U' R'&amp;initmove=U2 F' D2 B2 D2 F' L2 B' F2 D B U R D' R2 U2 L2 U B' U B U D L' D' L x y z y'"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="la-méthode-pour-débutants" class="level2">
+<h2 class="anchored" data-anchor-id="la-méthode-pour-débutants">La méthode pour débutants</h2>
+<!-- Charger AnimCubeJS AVANT toute utilisation -->
+<script src="../../scripts/AnimCube3.js"></script>
+<section id="préliminaires-les-mouvements-de-base-et-le-sexy-move" class="level3">
+<h3 class="anchored" data-anchor-id="préliminaires-les-mouvements-de-base-et-le-sexy-move">Préliminaires : les mouvements de base et le <em>sexy move</em></h3>
+<p>Effet de 2 <em>sexy moves</em> (rotation d’un coin) :</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3*********************w********************1********&move=R U R' U' R U R' U'")
+</script>
+</div>
+<p>Effet de 6 <em>sexy moves</em> (identité) :</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U'")
+</script>
+</div>
+<p>En comparaison il faut <strong>105 répétitions</strong> de <code>R U</code> pour obtenir l’identité :</p>
+<div id="cube" style="width:400px;height:400px;margin:2em auto;">
+
+</div>
+<script>
+const seq = Array(105).fill("R U").join(" "); // (R U) x 105
+// utilisez un template literal (backticks) pour interpoler ${seq}
+AnimCube3(`id=cube&config=AnimCube3.txt&move=${seq}&anim=1&speed=1`);
+</script>
+</section>
+<section id="etape-n0-le-mélange" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n0-le-mélange">Etape n°0 : le mélange</h3>
+<p><code>R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2</code></p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2")
+</script>
+</div>
+</section>
+<section id="etape-n1-la-marguerite" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n1-la-marguerite">Etape n°1 : la marguerite</h3>
+<p>On forme une marguerite de centre jaune à 4 pétales blanches.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=R2 U L2 y2 U' F U L'&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2")
+</script>
+</div>
+</section>
+<section id="etape-n2-la-croix-blanche" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n2-la-croix-blanche">Etape n°2 : la croix blanche</h3>
+<p>On aligne l’arête adjacente des pétales avec leur centre de même couleur et on leur met la tête en bas (un demi-tour).</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=R2 y R2 y2 U' R2 U2 F2 x2&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L'")
+</script>
+</div>
+</section>
+<section id="etape-n3-la-première-couche" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n3-la-première-couche">Etape n°3 : la première couche</h3>
+<p>On utilise uniquement le <em>sexy move</em> <code>R U R' U'</code> pour placer les coins.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U'&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2")
+</script>
+</div>
+</section>
+<section id="etape-n4-la-deuxième-couche" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n4-la-deuxième-couche">Etape n°4 : la deuxième couche</h3>
+<p>On utilise une version miroir du <em>sexy move</em> pour placer la base du T sur la deuxième couche :</p>
+<ul>
+<li>à droite : <code>U R U' R'</code> (se placer sur la face de droite) <code>U' L' U L</code></li>
+<li>à gauche : <code>U' L' U L</code> (se placer sur la face de droite) <code>U R U' R'</code></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=y' U' L' U L y' U R U' R' y' U' L' U L y' U R U' R' y' U' U R U' R' y U' L' U L&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2 y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U'")
+</script>
+</div>
+</section>
+<section id="etape-n5-la-croix-jaune" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n5-la-croix-jaune">Etape n°5 : la croix jaune</h3>
+<p>On applique l’algorithme <code>F (R U R' U') F'</code> de 1 à 3 fois de suite selon les cas de figure.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=y' F R U R' U' F' F R U R' U' F'&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2 y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y' U' L' U L y' U R U' R' y' U' L' U L y' U R U' R' y' U' U R U' R' y U' L' U L")
+</script>
+</div>
+</section>
+<section id="etape-n6-la-face-jaune" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n6-la-face-jaune">Etape n°6 : la face jaune</h3>
+<p>On applique l’algorithme <code>R U R' U R U2 R'</code> de 1 à 3 fois de suite selon les cas de figure.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=y R U R' U R U2 R' R U R' U R U2 R'&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2 y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y' U' L' U L y' U R U' R' y' U' L' U L y' U R U' R' y' U' U R U' R' y U' L' U L y' F R U R' U' F' F R U R' U' F'")
+</script>
+</div>
+</section>
+<section id="etape-n7-les-coins-de-la-dernière-couche" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n7-les-coins-de-la-dernière-couche">Etape n°7 : les coins de la dernière couche</h3>
+<p>On applique l’algorithme <code>(R U R' U') (R' F R2 U') (R' U' R U) (R' F')</code></p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=y' U y R U R' U' R' F R2 U' R' U' R U R' F'&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2 y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y' U' L' U L y' U R U' R' y' U' L' U L y' U R U' R' y' U' U R U' R' y U' L' U L y' F R U R' U' F' F R U R' U' F' y R U R' U R U2 R' R U R' U R U2 R'")
+</script>
+</div>
+</section>
+<section id="etape-n8-les-arêtes-de-la-dernière-couche" class="level3">
+<h3 class="anchored" data-anchor-id="etape-n8-les-arêtes-de-la-dernière-couche">Etape n°8 : les arêtes de la dernière couche</h3>
+<p>On applique l’algorithme <code>(R U') (R U) (R U) (R U') (R' U') R2</code></p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=y2 R U' R U R U R U' R' U' R2 R U' R U R U R U' R' U' R2&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2 R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2 y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y' U' L' U L y' U R U' R' y' U' L' U L y' U R U' R' y' U' U R U' R' y U' L' U L y' F R U R' U' F' F R U R' U' F' y R U R' U R U2 R' R U R' U R U2 R' y' U y R U R' U' R' F R2 U' R' U' R U R' F'")
+</script>
+</div>
+</section>
+<section id="récapitulatif-de-la-résolution-par-la-méthode-débutant-189-mouvements" class="level3">
+<h3 class="anchored" data-anchor-id="récapitulatif-de-la-résolution-par-la-méthode-débutant-189-mouvements">Récapitulatif de la résolution par la méthode débutant (189 mouvements)</h3>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=R2 U L2 y2 U' F U L' R2 y R2 y2 U' R2 U2 F2 y U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U' R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y U2 R U R' U' R U R' U' R U R' U' R U R' U' R U R' U' y' U' L' U L y' U R U' R' y' U' L' U L y' U R U' R' y' U' U R U' R' y U' L' U L y' F R U R' U' F' F R U R' U' F' y R U R' U R U2 R' R U R' U R U2 R' y' U y R U R' U' R' F R2 U' R' U' R U R' F' y2 R U' R U R U R U' R' U' R2 R U' R U R U R U' R' U' R2 x2 y'&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2&speed=1")
+</script>
+</div>
+</section>
+<section id="résolution-par-xuanyi-geng-7-ans-établissant-le-record-du-monde-en-3.05s-33-mouvements" class="level3">
+<h3 class="anchored" data-anchor-id="résolution-par-xuanyi-geng-7-ans-établissant-le-record-du-monde-en-3.05s-33-mouvements">Résolution par Xuanyi Geng (7 ans) établissant le record du monde en 3.05s (33 mouvements)</h3>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=l2 F L' U' R U R' U2' R U L U' L' U L' U' L R U2' R' U' R U R' F R' F' r U R U' r' U&initmove=R2 D2 R2 D2 U' F2 D L2 B2 R' D R B2 U2 L R2 D U2 F R2 x2")
+</script>
+</div>
+<div style="text-align: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iz_tKzlhT_E?si=9SpxeDpX8qOMgE_X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+</section>
+</section>
+<section id="la-méthode-friedrich-simplifiée" class="level2">
+<h2 class="anchored" data-anchor-id="la-méthode-friedrich-simplifiée">La méthode Friedrich simplifiée</h2>
+<section id="f2l-first-two-layers" class="level3">
+<h3 class="anchored" data-anchor-id="f2l-first-two-layers">F2L : First Two Layers</h3>
+<section id="les-4-cas-de-base-du-f2l" class="level4">
+<h4 class="anchored" data-anchor-id="les-4-cas-de-base-du-f2l">Les 4 cas de base du F2L</h4>
+<ul>
+<li><strong>Cas n°1 : l’arête est collée au coin, bloc de couleurs identiques à droite</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3**3****************33w********************1**111***&move=U R U' R'")
+</script>
+</div>
+<ul>
+<li><strong>Cas n°2 : cas symétrique à gauche</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=1**1**************w***11************33**3**3**********&move=U' L' U L&position=lldd")
+</script>
+</div>
+<ul>
+<li><strong>Cas n°3 : cas où l’arête est sur la face arrière, couleur du dessus opposée à celle du coin</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**1****3**************333*****1**************w***11***&move=R U R'&hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas n°4 : cas symétrique</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=1******3**********3***33******1*****w***1**1**********&move=L' U' L&position=lldd&hint=4&hintborder=1")
+</script>
+</div>
+<details>
+<summary>
+Exemples de mélanges
+</summary>
+<p>Ces exemples sont extraits de cette <a href="https://www.youtube.com/watch?v=KihGUlW0HA4&amp;t=511s&amp;ab_channel=VictorColin">vidéo</a> pour visualiser et résoudre les cas de base (mélanger avec la face verte en face et la face blanche au-dessus, puis mettre la face blanche vers le bas) :</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KihGUlW0HA4&amp;t=455s"><strong>Cas n°1</strong></a> : <code>U2 F' D2 B2 D2 F' L2 B' F2 D B U R D' R2 U2 L2 U B' U B U D L' D' L</code></li>
+</ul>
+<div style="width:400px;height:400px;margin: auto;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=U R U' R'&initmove=U2 F' D2 B2 D2 F' L2 B' F2 D B U R D' R2 U2 L2 U B' U B U D L' D' L x y z y'")
+</script>
+</div>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KihGUlW0HA4&amp;t=476s"><strong>Cas n°2</strong></a> : <code>F2 D' F2 R2 D2 F2 R2 U B2 D B' R' F' D' L U R' B U' L' F B R F' U' F L' D' L D2</code></li>
+</ul>
+<div style="width:400px;height:400px;margin: auto;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=U' L' U L&initmove=F2 D' F2 R2 D2 F2 R2 U B2 D B' R' F' D' L U R' B U' L' F B R F' U' F L' D' L D2 x y z&position=lldd")
+</script>
+</div>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KihGUlW0HA4&amp;t=576s"><strong>Cas n°3</strong></a> : <code>U' D2 F2 D' B R' F L2 B2 U' L2 U' B2 D2 R2 D F2 U B2 R' D F L' R2 U' B' D' B D</code></li>
+</ul>
+<div style="width:400px;height:400px;margin: auto;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=R U R'&initmove=U' D2 F2 D' B R' F L2 B2 U' L2 U' B2 D2 R2 D F2 U B2 R' D F L' R2 U' B' D' B D x y z y'&hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KihGUlW0HA4&amp;t=536s"><strong>Cas n°4</strong></a> : <code>F2 D2 R2 B2 F2 R2 U R2 F2 D' B' D R' B' D2 B' D' F D U F' L2 F2 L' F' U' L D L D</code></li>
+</ul>
+<div style="width:400px;height:400px;margin: auto;">
+<script>
+AnimCube3("config=AnimCube3.txt&move=L' U' L&initmove=F2 D2 R2 B2 F2 R2 U R2 F2 D' B' D R' B' D2 B' D' F D U F' L2 F2 L' F' U' L D L D x y z y&position=lldd&hint=4&hintborder=1")
+</script>
+</div>
+</details>
+</section>
+</section>
+<section id="résoudre-le-cas-où-le-facette-blanc-du-coin-est-située-au-dessus" class="level3">
+<h3 class="anchored" data-anchor-id="résoudre-le-cas-où-le-facette-blanc-du-coin-est-située-au-dessus">Résoudre le cas où le facette blanc du coin est située au dessus</h3>
+<p>Pour se ramener à ce cas de figure :</p>
+<ul>
+<li>Si le coin (placé à droite) a la facette blanche face à nous, faire <code>RU'R'U2</code></li>
+<li>Si elle est à droite, (on peut faire 2 fois l’étape précédente) ou bien on se place devant la face de droite (le coin est maintenant situé à gauche et sa facette blanche face à nous), puis faire <code>L'ULU2</code></li>
+</ul>
+<section id="si-le-coin-et-larête-sont-éloignés" class="level4">
+<h4 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-éloignés">Si le coin et l’arête sont éloignés</h4>
+<p>On amène l’arête sur son centre, on la pivote sur le côté, on aligne le coin avec l’arête, on les remonte et on retombe sur un des 2 premiers cas de base.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**w****3**************331*****1**************3***11***&move=U R U2 R'&hint=4&hintborder=1")
+</script>
+</div>
+</section>
+<section id="si-le-coin-et-larête-sont-adjacents-horizontalement-et-de-même-couleur-en-face" class="level4">
+<h4 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-adjacents-horizontalement-et-de-même-couleur-en-face">Si le coin et l’arête sont adjacents horizontalement et de même couleur en face</h4>
+<p>On fait deux sexy-moves entrecoupés d’un <code>U'</code> (resp. <code>U</code> à gauche) et on retombe sur un cas de base éloignés.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=*3w******************1331********************3***11***&move=R U R' U' U' R U R' U'&hint=4&hintborder=1")
+</script>
+</div>
+</section>
+<section id="si-le-coin-et-larête-sont-adjacents-horizontalement-et-de-couleur-en-face-distinctes" class="level4">
+<h4 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-adjacents-horizontalement-et-de-couleur-en-face-distinctes">Si le coin et l’arête sont adjacents horizontalement et de couleur en face distinctes</h4>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**w**3****************331********************3**111***&move=R U2 R' U'&hint=4&hintborder=1")
+</script>
+</div>
+</section>
+<section id="si-le-coin-et-larête-sont-adjacents-verticalement-et-de-même-couleur-en-face" class="level4">
+<h4 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-adjacents-verticalement-et-de-même-couleur-en-face">Si le coin et l’arête sont adjacents verticalement et de même couleur en face</h4>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**w*******************3311*******************33**11***&move=R U' R' U2&hint=4&hintborder=1")
+</script>
+</div>
+</section>
+<section id="si-le-coin-et-larête-sont-adjacents-verticalement-et-de-couleur-en-face-distinctes" class="level4">
+<h4 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-adjacents-verticalement-et-de-couleur-en-face-distinctes">Si le coin et l’arête sont adjacents verticalement et de couleur en face distinctes</h4>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**w*******************3313*******************31**11***&move=R U R' U' R U R' U' R U R' U'&hint=4&hintborder=1")
+</script>
+</div>
+</section>
+<section id="si-larête-est-dans-un-autre-slot" class="level4">
+<h4 class="anchored" data-anchor-id="si-larête-est-dans-un-autre-slot">Si l’arête est dans un autre slot</h4>
+<p>On aligne le coin avec l’arête, et on va la sortir en faisant 2 sexy moves.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**w*******************331***1****************3***11*3*&move=y U' R U R' U' R U R' y'&hint=4&hintborder=1")
+</script>
+</div>
+</section>
+</section>
+<section id="résoudre-les-autres-cas-où-la-facette-blanc-du-coin-nest-pas-située-au-dessus" class="level3">
+<h3 class="anchored" data-anchor-id="résoudre-les-autres-cas-où-la-facette-blanc-du-coin-nest-pas-située-au-dessus">Résoudre les autres cas où la facette blanc du coin n’est pas située au dessus</h3>
+<section id="si-le-coin-et-larête-sont-éloignés-1" class="level4">
+<h4 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-éloignés-1">Si le coin et l’arête sont éloignés</h4>
+<p><em>Le coin blanc est placé sur notre droite.</em></p>
+<ul>
+<li><strong>Cas où l’arête est sur la face de gauche, couleur du dessus opposée à celle du coin</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**13******************333************1*******w***11***&move=R' U R &hint=4&hintborder=1")
+</script>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si comme suit le slot derrière le coin (en rouge) est déjà résolu il ne faut pas le défaire, d’où l’étape préliminaire <code>U y'</code> pour se décaler face à un slot non résolu.</p>
+</div>
+</div>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**13******************333************1*******w***11*11&move=U y' R' U R y U'&hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête est sur la face de derrière, couleur du dessus identique à celle du coin</strong></li>
+</ul>
+<p>De même ici on veut téléporter l’arête de derrière sur celle de devant pour se ramener à le cas de base n°2.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**1****1**************333*****3**************w***11*11&move=U y' R' U2 R y U' &hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête est sur la face de gauche, couleur du dessus identique à celle du coin</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**11******************333************3*******w***11*11&move=U y' R' U' R y U'&hint=4&hintborder=1")
+</script>
+</div>
+<p><em>Le coin blanc est placé devant nous donc on le mettra sur notre gauche.</em></p>
+<ul>
+<li><strong>Cas où l’arête est sur la face de derrière, couleur du dessus opposée à celle du coin</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3****1***********33*33w*****3**************1***11*11&move=y U' y L U' L' y' U y' &hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête est sur la face de derrière, couleur du dessus identique à celle du coin</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3****3***********33*33w*****1**************1***11*11&move=y U' y L U L' y' U y' &hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête est sur la face de gauche, couleur du dessus identique à celle du coin</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**33***************33*33w************1*******1***11*11&move=y U' y L U2 L' y' U y' &hint=4&hintborder=1")
+</script>
+</div>
+</section>
+</section>
+<section id="si-le-coin-et-larête-sont-adjacents" class="level3">
+<h3 class="anchored" data-anchor-id="si-le-coin-et-larête-sont-adjacents">Si le coin et l’arête sont adjacents</h3>
+<ul>
+<li><strong>Cas où l’arête est retournée et face blanche du coin à droite</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=*31******************1333********************w***11*11&move=U y' R' U2 R y U'&hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête n’est pas retournée et face blanche du coin en face</strong></li>
+</ul>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=*13****************33333w********************1***11*11&move=U y' R' U R y U' &hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête est retournée et face blanche du coin en face</strong></li>
+</ul>
+<p>Dans ce cas on ne peut pas téléporter l’arête sur la face de droite. Donc on s’y prend autrement pour retomber sur un cas de base.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=*33****************33133w********************1***11*11&move=y L' U L y' U2 &hint=4&hintborder=1")
+</script>
+</div>
+<ul>
+<li><strong>Cas où l’arête est située sous le coin</strong></li>
+</ul>
+<p>On prend face blanche face à nous.</p>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3****************33*33w3*******************11**11*11&move=U' R U' R' U &hint=4&hintborder=1")
+</script>
+</div>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3****************33*33w1*******************13**11*11&move=U' R U R' U &hint=4&hintborder=1")
+</script>
+</div>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**1*******************3333*******************w1**11*11&move=y U L' U L U' y' &hint=4&hintborder=1")
+</script>
+</div>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**1*******************3331*******************w3**11*11&move=y U L' U' L U' y' &hint=4&hintborder=1")
+</script>
+</div>
+<section id="si-larête-est-dans-un-autre-slot-1" class="level4">
+<h4 class="anchored" data-anchor-id="si-larête-est-dans-un-autre-slot-1">Si l’arête est dans un autre slot</h4>
+<div style="width:400px;height:400px;margin: 2em auto; display: block;">
+<script>
+AnimCube3("config=AnimCube3.txt&facelets=**3*******************33w*********1******3***1***11*11&move=U2 y2 U' R U R' y2 U' &hint=4&hintborder=1")
+</script>
+</div>
+<p>C’est tout pour le moment ! On reviendra sur le Rubik’s dans de futurs billets.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/www\.kevinpolisano\.fr");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "kevinpolisano/blog";
+    script.dataset.repoId = "R_kgDOM9ReCA";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOM9ReCM4CmGgm";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

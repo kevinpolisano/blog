@@ -1,0 +1,6 @@
+bgcolor=ffffff
+slidercolor=0000ff
+troughcolor=ffffff
+colorscheme=wy2301
+yz=1
+movetext=1

@@ -3,7 +3,7 @@ title: "Le jeu de taquin"
 author: "Kévin Polisano"
 date: "2025-10-27"
 image: 15-puzzle.png
-categories: [mathematiques]
+categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
@@ -172,7 +172,7 @@ Des tas de versions différentes du jeu virent le jour, voir par exemple [@store
 Le jeu de Taquin a ensuite été traité sur le plan mathématiques dans plusieurs écrits (*cf*. tableau ci-dessous) sur lesquels nous reviendrons au moment d'expliquer sa résolution et les preuves d'impossibilité.
 
 | Titre | Auteur | Date | Référence |   |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | [Les carrés magiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Gaston Tissandier | 10/07/1880 | [@tissandierCarres1880] |  |
 | [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Jean Piarron de Mondésir | 25/09/1880 | [@piarrondemondesirDernier1880] |  |
 | La clé du Taquin | Henry Fleury | 1880 | [@fleuryCle1880] |  |
