@@ -133,13 +133,13 @@ Mais Chapman déposa seulement une demande de brevet pour son *« Block Solitair
 
 ## De Chapman à Rice, un puzzle à résoudre
 
-Une énigme demeure : comment le puzzle inventé par Chapman à New York en 1874 s'est-il retrouvé 5 ans plus tard à la fenêtre de Rice ? Il semble probable que Noyes Chapman ait offert un ou plusieurs exemplaires de son puzzle à son fils **Frank Chapman**, qui les aurait emportés chez lui à Syracuse, à une vingtaine de miles de là. Frank aurait ensuite donné un exemplaire à son associé en affaires, James J. Belden, ancien maire de Syracuse, et à son épouse Anna Belden. Au cours de l'été 1877 ou 1878, Anna emmena le puzzle à Watch Hill (Rhode Island), où elle le donna à une dame handicapée cherchant de quoi se distraire. Les recherches indiquent qu'il s'agissait probablement d'Hannah Maria Catlin, la fille unique de Julius et Mary Catlin, atteinte d'une maladie osseuse grave. Les Catlin vivaient à Hartford, dans une grande maison située sur Asylum Avenue, non loin de [l'école américaine pour les sourds](https://en.wikipedia.org/wiki/American_School_for_the_Deaf).
+Une énigme demeure : comment le puzzle inventé par **Chapman** à New York en 1874 s'est-il retrouvé 5 ans plus tard à la fenêtre de Rice ? Il semble probable que **Noyes Chapman** ait offert un ou plusieurs exemplaires de son puzzle à son fils **Frank Chapman**, qui les aurait emportés chez lui à Syracuse, à une vingtaine de miles de là. **Frank** aurait ensuite donné un exemplaire à son associé en affaires, **James J. Belden**, ancien maire de Syracuse, et à son épouse **Anna Belden**. Au cours de l'été 1877 ou 1878, **Anna** emmena le puzzle à Watch Hill (Rhode Island), où elle le donna à une dame handicapée cherchant de quoi se distraire. Les recherches indiquent qu'il s'agissait probablement d'**Hannah Maria Catlin**, la fille unique de **Julius et Mary Catlin**, atteinte d'une maladie osseuse grave. Les Catlin vivaient à Hartford, dans une grande maison située sur Asylum Avenue, non loin de [l'école américaine pour les sourds](https://en.wikipedia.org/wiki/American_School_for_the_Deaf).
 
 ![[American Asylum for Deaf and Dumb, Hartford, Conn.](https://www.loc.gov/pictures/item/2004670330/)](American-School-for-the-Deaf.jpg)
 
 ![[Carte interactive](https://www.google.com/maps/d/u/0/edit?mid=1uKjjjPkyZTjWkLIVUGeoHmz2DDYQ2wY&usp=sharing) (maison des Catlin et école américaine pour les sourds)](Hartford-map-15-puzzle.jpg)
 
-Cette école enseignait à ses élèves la langue des signes, mais aussi des matières académiques et des compétences manuelles telles que la menuiserie, et c'est dans un de leurs ateliers que des copies artisanales auraient été fabriquées. Toutefois le trajet exact entre Watch Hill et Hartford reste inconnu. Plusieurs hypothèses existent : le puzzle aurait été offert par Hannah à un élève de l'école; ou bien, un exemplaire aurait été donné directement à un élève sourd lors d'une visite à Watch Hill; qui dans un cas comme dans l'autre en aurait vendu un exemplaire à l'homme qui le transmit à son tour à Matthias Rice.
+Cette école enseignait à ses élèves la langue des signes, mais aussi des matières académiques et des compétences manuelles telles que la menuiserie, et c'est dans un de leurs ateliers que des copies artisanales auraient été fabriquées. Toutefois le trajet exact entre Watch Hill et Hartford reste inconnu. Plusieurs hypothèses existent : le puzzle aurait été offert par **Hannah** à un élève de l'école; ou bien, un exemplaire aurait été donné directement à un élève sourd lors d'une visite à Watch Hill; qui dans un cas comme dans l'autre en aurait vendu un exemplaire à l'homme qui le transmit à son tour à **Matthias Rice**.
 
 La boucle est bouclée. L'ordre des évènements est ainsi reconstitué, celui de l'histoire du casse-tête le plus populaire que le monde ait jamais connu.
 
@@ -157,7 +157,7 @@ Apparu à New York, transféré à Watch Hill puis produit à Hartford par des �
 
 > Le jeu connu actuellement sous le nom de *Jeu de Taquin* a été imaginé en Amérique, vers la fin de 1878, par un sourd-muet qui se proposa, par hasard, de ranger dans une boîte des numéros qui s'y trouvaient déplacés, sans les en faire sortir. C'est là l'origine qui m'a été indiquée, au congrès de Reims de l'Association française pour l'Avancement des Sciences, par M. Sylvester, correspondant de l'Académie des Sciences de Paris, professeur de l'Université J. Hopkins, à Baltimore.
 
-L'histoire était certes approximative, comme on a pu le voir précédemment, mais nulle mention de Sam Loyd ne se retrouve sous la plume de Lucas, ni même de Loyd Jr qui n'attribue pas la paternité du jeu à son père[^3]. Lucas ajoute :
+L'histoire était certes approximative, comme on a pu le voir précédemment, mais nulle mention de **Sam Loyd** ne se retrouve sous la plume de **Lucas** ni même de **Loyd Jr** qui n'attribue pas la paternité du jeu à son père[^3]. **Lucas** ajoute :
 
 [^3]: "It was in the early eighties when I had barely attained my 'teens that the world-disturbing "14-15 Puzzle" flashed across the horizon and Loyds were amongst its earliest victims. To say that I was infatuated with the tantalizing box of blocks is a mild description of my enthralment" [@loyd1928sam]
 
@@ -165,16 +165,18 @@ L'histoire était certes approximative, comme on a pu le voir précédemment, ma
 
 [^4]: Slocum et Donneveld mentionne la date du Le 28 mars lorsqu'ils abordent le cas de la France à la page 60, mais en fouillant dans les archives du journal Le Gaulois je me suis aperçu que la première mention du jeu datait du 26 mars 1880 (*cf.* image ci-contre).
 
-![Le double casse-tête Gaulois ([Le Gaulois, 26/03/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Le-Gaulois-Mar-26-1880))](Double-casse-tete-gaulois.jpg){width="60%"}
+![Le double casse-tête Gaulois ([Le Gaulois, 26/03/1880](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Le-Gaulois-Mar-26-1880.pdf))](Double-casse-tete-gaulois.jpg){width="60%"}
 
 Des tas de versions différentes du jeu virent le jour, voir par exemple [@storerFifteen] ou [@koliJeux2025] pour des photos de vieux exemplaires.
 
-Le jeu de Taquin a ensuite été traité sur le plan mathématiques dans plusieurs écrits (*cf*. tableau ci-dessous) sur lesquels nous reviendrons au moment d'expliquer sa résolution et les preuves d'impossibilité.
+Le jeu de Taquin[^taquin] a ensuite été traité sur le plan mathématiques dans plusieurs écrits (*cf*. tableau ci-dessous) sur lesquels nous reviendrons au moment d'expliquer sa résolution et les preuves d'impossibilité.
+
+[^taquin]: « Taquin » signifie « taquineur, qui cherche à agacer » : le mot colle parfaitement à ce casse-tête qui « taquine » le joueur. Les auteurs français ont franciser un jeu d’abord connu comme le « Fifteen Puzzle ». Commercialisé initialement sous d’autres appelations en France (« double casse-tête gaulois »), c’est « jeu du taquin » qui s’est finalement imposé.  
 
 | Titre | Auteur | Date | Référence |   |
 |---------------|---------------|---------------|---------------|---------------|
-| [Les carrés magiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Gaston Tissandier | 10/07/1880 | [@tissandierCarres1880] |  |
-| [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | Jean Piarron de Mondésir | 25/09/1880 | [@piarrondemondesirDernier1880] |  |
-| La clé du Taquin | Henry Fleury | 1880 | [@fleuryCle1880] |  |
-| Sur le taquin | Charles Henry | 1880 | [@henryTaquin1880] |  |
-| [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Recreations-mathematiques.pdf) | Édouard Lucas | 1882 | [@lucasRecreations1882] |  |
+| [Les carrés magiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | **Gaston Tissandier** | 10/07/1880 | [@tissandierCarres1880] |  |
+| [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | **Jean Piarron de Mondésir** | 25/09/1880 | [@piarrondemondesirDernier1880] |  |
+| La clé du Taquin | **Henry Fleury** | 1880 | [@fleuryCle1880] |  |
+| Sur le taquin | **Charles Henry** | 1880 | [@henryTaquin1880] |  |
+| [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Recreations-mathematiques.pdf) | **Édouard Lucas** | 1882 | [@lucasRecreations1882] |  |
