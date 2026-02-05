@@ -180,3 +180,9 @@ Le jeu de Taquin[^taquin] a ensuite été traité sur le plan mathématiques dan
 | La clé du Taquin | **Henry Fleury** | 1880 | [@fleuryCle1880] |  |
 | Sur le taquin | **Charles Henry** | 1880 | [@henryTaquin1880] |  |
 | [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Recreations-mathematiques.pdf) | **Édouard Lucas** | 1882 | [@lucasRecreations1882] |  |
+
+# Résolutions simples du jeu de Taquin
+
+## Résoudre le Taquin 4x4
+
+![[Télécharger au format PDF](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Taquin-4x4-pense-bete.pdf)](Taquin-4x4-pense-bete.jpg)
