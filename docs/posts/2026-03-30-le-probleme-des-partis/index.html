@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2026-03-30">
+
+<title>Le problème des partis – Blog de Kévin Polisano</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4E0K892EGY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog de Kévin Polisano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../handicap.html"> 
+<span class="menu-text">Handicap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Le problème des partis</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">mathématiques</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 30, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#un-championnat-du-monde-des-échecs-interrompu" id="toc-un-championnat-du-monde-des-échecs-interrompu" class="nav-link active" data-scroll-target="#un-championnat-du-monde-des-échecs-interrompu">Un championnat du monde des échecs interrompu</a></li>
+  <li><a href="#le-problème-des-partis" id="toc-le-problème-des-partis" class="nav-link" data-scroll-target="#le-problème-des-partis">Le problème des partis</a></li>
+  <li><a href="#la-correspondance-entre-pascal-et-fermat" id="toc-la-correspondance-entre-pascal-et-fermat" class="nav-link" data-scroll-target="#la-correspondance-entre-pascal-et-fermat">La correspondance entre Pascal et Fermat</a>
+  <ul class="collapse">
+  <li><a href="#illustration-avec-le-jeu-de-pile-ou-face" id="toc-illustration-avec-le-jeu-de-pile-ou-face" class="nav-link" data-scroll-target="#illustration-avec-le-jeu-de-pile-ou-face">Illustration avec le jeu de pile ou face</a></li>
+  <li><a href="#la-solution-de-pascal" id="toc-la-solution-de-pascal" class="nav-link" data-scroll-target="#la-solution-de-pascal">La solution de Pascal</a></li>
+  <li><a href="#la-solution-de-fermat" id="toc-la-solution-de-fermat" class="nav-link" data-scroll-target="#la-solution-de-fermat">La solution de Fermat</a></li>
+  <li><a href="#comparaison-des-deux-approches" id="toc-comparaison-des-deux-approches" class="nav-link" data-scroll-target="#comparaison-des-deux-approches">Comparaison des deux approches</a></li>
+  </ul></li>
+  <li><a href="#retour-au-jeu-de-paume-et-au-championnat-du-monde-des-échecs" id="toc-retour-au-jeu-de-paume-et-au-championnat-du-monde-des-échecs" class="nav-link" data-scroll-target="#retour-au-jeu-de-paume-et-au-championnat-du-monde-des-échecs">Retour au jeu de paume et au championnat du monde des échecs</a>
+  <ul class="collapse">
+  <li><a href="#jeu-de-paume" id="toc-jeu-de-paume" class="nav-link" data-scroll-target="#jeu-de-paume">Jeu de paume</a></li>
+  <li><a href="#match-karpov-vs.-kasparov" id="toc-match-karpov-vs.-kasparov" class="nav-link" data-scroll-target="#match-karpov-vs.-kasparov">Match Karpov vs.&nbsp;Kasparov</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><em>Cet article a été écrit dans le cadre de la <a href="https://www.education.gouv.fr/la-semaine-des-mathematiques-465828">Semaine des mathématiques 2026</a> ﻿ sur le thème <strong>“Égalités”</strong>, et propose d’aborder les principes de <strong>justice</strong> et <strong>d’équité</strong> sous l’angle des mathématiques.</em></p>
+<section id="un-championnat-du-monde-des-échecs-interrompu" class="level1">
+<h1>Un championnat du monde des échecs interrompu</h1>
+<p>En 1984, le monde des échecs assiste à un duel d’anthologie entre Anatoli Karpov, champion en titre, et le jeune prodige Garry Kasparov﻿. Le match est atypique : il ne se joue pas en un nombre fixé de parties, mais jusqu’à ce que l’un des joueurs atteigne six victoires. Les nulles n’étant pas comptabilisées.&nbsp;Karpov mène rapidement 4-0 après seulement 9 parties, puis 5-0 après la&nbsp;27 ème. Il est à un point de la victoire.&nbsp; Kasparov s’accroche, et finit par marquer un point à&nbsp; la&nbsp;32ème&nbsp;partie. S’en suit une longue série de nulles, puis, contre toute attente, Kasparov renverse la vapeur et remporte deux parties consécutives. Après 48 parties﻿ — un record — le score est de 5 victoires à 3 pour Karpov (avec 40 nulles au total !).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="karpov-kasparov.jpg" class="img-fluid figure-img"></p>
+<figcaption>Anatoli Karpov (à gauche) et Garry Kasparov (à droite)</figcaption>
+</figure>
+</div>
+<p>La tension extrême, et après plus de 5 mois d’affrontement, l’épuisement physique se fait ressentir (Karpov a perdu 10 kg depuis le début du championnat). La FIDE décide d’interrompre le match sans déclarer de vainqueur,&nbsp;pour des raisons officiellement liées à la santé des joueurs, mais probablement aussi pour des raisons politiques… La récompense s’élevait à 1,9 million﻿ de francs suisses. Cependant le match n’a pas été mené à terme. Une question naturelle se pose alors : comment répartir les gains d’un match interrompu ? Mathématiquement, cette question est loin d’être anodine : elle renvoie à un problème vieux de plusieurs siècles,&nbsp;connu sous le nom de&nbsp;problème des partis﻿, au sens de la juste répartition, et dont la solution requiert un partage équitable.</p>
+</section>
+<section id="le-problème-des-partis" class="level1">
+<h1>Le problème des partis</h1>
+<p>Luca Pacioli﻿, moine franciscain mathématicien et ami de Léonard de Vinci﻿, exposa en 1494 ce problème dans son ouvrage d’arithmétique﻿ à travers un autre jeu :</p>
+<blockquote class="blockquote">
+<p>Une brigade joue à la paume : il faut 60 pour gagner, chaque coup vaut 10. L’enjeu est de 10 ducats. Un incident survient qui force les soldats à interrompre la partie commencée, alors que le premier camp a gagné 50 et le second 20. On demande quelle part de l’enjeu revient à chaque camp…</p>
+</blockquote>
+<ul>
+<li><p>Un premier critère de départage pourrait simplement consister à verser l’intégralité de l’enjeu (ici 10 ducats) à celui qui a marqué le plus de points, mais on sent bien que cette solution ne serait pas très équitable. En effet, imaginons un cas extrême où pour gagner il faudrait non pas atteindre 60 mais 1000, ainsi remettre la totalité au camp ayant gagné 50 (alors qu’il resterait au moins 95 manches à jouer) ne semble pas très satisfaisant.</p></li>
+<li><p>Pacioli proposa de répartir l’enjeu selon les points déjà gagnés. Ils ont marqué 70 points au total. On répartit les 10 ducats selon les proportions suivantes : 50/70 soit 5/7 pour le premier, et 20/70 soit 2/7 pour le second. Le premier reçoit donc 7,14 ducats et le second 2,86.</p></li>
+</ul>
+<p>Le mathématicien italien&nbsp;Tartaglia﻿ n’était pas de cet avis, il écrivit en 1556 :</p>
+<blockquote class="blockquote">
+<p>Sa règle ne me paraît ni bonne, ni belle, parce que s’il arrive qu’un parti ait 10 et l’autre rien, et qu’on procédât selon sa règle, le premier devrait tirer tout et le second rien; ce serait tout à fait déraisonnable que pour 10, il doive tirer tout.</p>
+</blockquote>
+<p>En effet le total des points étant de 10, les proportions seraient respectivement 10/10=1 et 0/10=0, ce qui revient à appliquer le première critère du tout-ou-rien.</p>
+<ul>
+<li><p>Tartaglia suggéra plutôt que l’écart de gain soit proportionnel à l’écart de points.&nbsp;On calcule l’écart entre les 2 équipes : 50-20 = 30 point, puis on rapporte ce résultat au total de 60 à atteindre : 30/60= 1/2. Cet écart représente 1/2 du total des points nécessaires pour gagner. L’écart de gain entre les 2 joueurs doit donc être égal à 1/2 des 10 ducats mis en jeu soit 5 ducats. Le premier reçoit donc 7,5 ducats et le second 2,5.</p></li>
+<li><p>Forestani﻿ proposa en 1603 de tenir compte de la durée maximale du jeu. Le jeu dure au plus 11 coups (scénario 60 contre 50). Dans le cas présent, 5 en on été gagné par le premier, 2 par le 2ème. Les 4 = 11 – (5+2) jeux restants ne sont pas tranchés. On les répartis donc équitablement en 2 en donnant ( 5+ 2)/11 ièmes de la mise au premier et (2+2)/11 ièmes de la mise au second. Le premier reçoit donc 6,36 ducats et le second 3,64.</p></li>
+<li><p>Cardan﻿ plaida en 1539&nbsp;pour une répartition de l’enjeu selon les points qu’il reste à marquer. Il reste respectivement 1 point au premier et 4 au second pour gagner.&nbsp; Il fit alors intervenir les “progressions arithmétiques” associées 1+2+3+4 = 10 et 1 =1, donnant ainsi 10/11 ièmes au premier et 1/11 ième au second. Le premier reçoit donc 9,1 ducats et le second 0,9.</p></li>
+</ul>
+<p>Tous ces savants italiens et d’autres encore (Calandri, Peverone, Pagani, …) avaient des “opinions diverses” sur le problème des partis. Tartaglia dira à ce propos :</p>
+<blockquote class="blockquote">
+<p>La résolution d’une telle question est davantage d’ordre judiciaire que rationnel et, de quelque manière qu’on veuille la résoudre, on y trouvera sujet à litiges.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tartaglia-pacioli-cardan.jpg" class="img-fluid figure-img"></p>
+<figcaption>De gauche à droite : Tartaglia, Pacioli et son élève, Cardan</figcaption>
+</figure>
+</div>
+</section>
+<section id="la-correspondance-entre-pascal-et-fermat" class="level1">
+<h1>La correspondance entre Pascal et Fermat</h1>
+<p>En 1654,&nbsp;Antoine Gombaud,&nbsp;connu sous le nom de&nbsp;chevalier de Méré, soumit le problème à&nbsp;Blaise Pascal, qui entama alors une correspondance avec&nbsp;Pierre de Fermat. De cette discussion entre ces&nbsp;deux géants des mathématiques naquirent non seulement une solution convaincante et cohérente, mais aussi des concepts qui préfigurèrent la théorie des probabilités.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pascal-fermat.jpg" class="img-fluid figure-img"></p>
+<figcaption>Blaise Pascal (à gauche) et Pierre de Fermat (à droite)</figcaption>
+</figure>
+</div>
+<p>L’intuition initiale de Pascal et Fermat était que le partage des enjeux ne devait pas tant dépendre du déroulement exact de la partie interrompue que des différentes manières dont elle aurait pu se poursuivre sans cette interruption. Il est intuitif qu’un joueur menant 5 à 3 dans une partie en 6 manches gagnantes (Karpov-Kasparov) a les mêmes chances de gagner qu’un joueur menant 25 à 23 (scores comptant les nulles) dans une partie remportée à 26. Autrement dit, ce qui importe n’est pas le nombre de manches déjà gagnées par chaque joueur, mais le nombre de manches qu’il lui reste à gagner pour remporter la victoire finale, comme l’avait déjà compris Cardan. Il ne faut plus regarder vers le passé mais se tourner vers le futur !</p>
+<section id="illustration-avec-le-jeu-de-pile-ou-face" class="level2">
+<h2 class="anchored" data-anchor-id="illustration-avec-le-jeu-de-pile-ou-face">Illustration avec le jeu de pile ou face</h2>
+<p>Pascal et&nbsp;Fermat lancent successivement une pièce : si la pièce tombe sur pile (P), Pascal marque un point, si la pièce tombe sur face (F), c’est Fermat qui marque un point. Le premier à atteindre trois points a gagné. Au début du jeu, les deux adversaires misent une somme égale d’argent, disons 32€, et le vainqueur récupère l’ensemble de l’argent mis en jeu, soit 64€.</p>
+<p>Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, «&nbsp;proportionnellement à ce qu’ils sont en droit d’espérer de la fortune&nbsp;»&nbsp;?</p>
+<p>Notons <span class="math inline">\((p,f)\)</span> le nombre de manches qu’il reste à gagner respectivement à Pascal et Fermat pour remporter la victoire, et <span class="math inline">\(E(p,f)\)</span> le montant que Pascal doit recevoir en cas d’interruption du jeu à ce stade.</p>
+</section>
+<section id="la-solution-de-pascal" class="level2">
+<h2 class="anchored" data-anchor-id="la-solution-de-pascal">La solution de Pascal</h2>
+<p>La méthode de Pascal repose sur un raisonnement étape par étape : à chaque manche possible, il évalue la situation et remonte progressivement le cours de la partie. C’est un raisonnement par récurrence rétrograde, où l’on répète le même calcul en partant de cas terminaux, comme une égalité entre les joueurs, pour revenir vers le présent au moment de l’interruption. Pascal propose ainsi un algorithme simple de résolution du problème des partis :</p>
+<p>Cas terminaux﻿. Si les deux joueurs ont chacun deux points, ils sont tous deux à un point de la victoire, soit dans la situation <span class="math inline">\((1,1)\)</span> qui est évidente : la partie se jouera sur un dernier lancer de pièce équilibrée. Chacun a donc une chance sur deux de gagner, et il est juste que chacun récupère la moitié de la mise, soit 32€. Considérons maintenant le cas où Pascal a deux points et Fermat un point, alors on est dans la situation <span class="math inline">\((1,2)\)</span> car Pascal est à 1 point de la victoire et Fermat à 2 points. À la prochaine manche :</p>
+<ul>
+<li>si Pascal gagne, il remporte toute la mise (64€) ;</li>
+<li>si Fermat gagne, les deux joueurs se retrouvent à égalité, et on se ramène au cas précédent où chacun a alors droit à 32€.</li>
+</ul>
+<p>Ainsi, Pascal est sûr d’obtenir au moins 32€. Pour les 32 restants, il a une chance sur deux de les gagner. Il peut donc en réclamer la moitié, soit 16€. Au total, Pascal doit recevoir ﻿48€, et Fermat 16€.</p>
+<p>Cas intermédiaires. Pascal procède pas à pas. Il imagine que l’on joue une manche de plus, puis que l’on sait déjà comment partager équitablement les gains dans les deux cas possibles (selon qui gagne cette manche). Comme chaque joueur a une chance sur deux de gagner la manche suivante, il suffit de prendre la moyenne de ces deux répartitions : <span class="math display">\[\color{violet} E(p,f)=\frac{E(p−1,f)+E(p,f−1)}{2}\]</span> Autrement dit, la valeur d’une position est la moyenne des valeurs des positions suivantes. Ainsi, en connaissant les cas simples (où le jeu est presque terminé), on peut remonter progressivement pour déterminer la solution dans les situations plus complexes. En résumé l’argument de Pascal consiste à remonter dans le passé depuis les situations hypothétiques où l’un des deux joueurs a remporté le jeu.</p>
+<p><img src="animation-pascal.gif" class="img-fluid"></p>
+<p>Dans le cas où la partie aurait été interrompue après un seul lancer tombé sur pile,&nbsp;où il manque donc deux parties à gagner pour Pascal pour Fermat, on en conclut que Pascal doit recevoir <span class="math inline">\(\color{violet}E(2,&nbsp;3)=44\)</span> euros et Fermat 16€.</p>
+</section>
+<section id="la-solution-de-fermat" class="level2">
+<h2 class="anchored" data-anchor-id="la-solution-de-fermat">La solution de Fermat</h2>
+<p>L’idée de Fermat est complètement différente, elle consiste à transformer le problème en une situation de “hasards égaux”. Pour cela, il imagine que l’on joue un nombre fixe de manches, même si la partie est déjà gagnée avant la fin (les manches en trop sont sans effet). Par exemple, s’il manque <span class="math inline">\(p=2\)</span> points à Pascal et <span class="math inline">\(f=3\)</span> à Fermat, il considère <span class="math inline">\(n=p+f-1=4\)</span> manches au total. On peut alors voir la poursuite du jeu, initialement débuté par un pile (en jaune ci-dessous), comme un lancer de 4 pièces :</p>
+<ul>
+<li>si Pascal obtient au moins 2 piles, il gagne ;</li>
+<li>sinon, c’est Fermat qui gagne.</li>
+</ul>
+<p><img src="animation-lancer-pieces.gif" class="img-fluid"></p>
+<p>Toutes les issues étant équiprobables, il suffit de compter parmi les 16 combinaisons possibles lesquelles sont favorables à Pascal, c’est-à-dire parmi tous ces “chemins” dans le graphe ci-dessous lesquels aboutissent à un noeud bleu symbolisant une victoire de Pascal.</p>
+<p><img src="animation-fermat.gif" class="img-fluid"></p>
+<p>On dénombre ainsi&nbsp;<span style="color:blue;">11 cas favorables</span> à Pascal sur 16,﻿ donc il gagne avec probabilité <span class="math inline">\(\color{blue}\frac{11}{16}\)</span> et empoche <span class="math display">\[\color{violet} E(2,3)=64 \times {\color{blue} \frac{11}{16}} = 44\]</span> euros comme déjà calculé par la méthode de Pascal.</p>
+<p>Plus généralement, s’il manque <span class="math inline">\(p\)</span> points à Pascal et <span class="math inline">\(f\)</span> à Fermat, on considère <span class="math inline">\(n=p+f−1\)</span> manches où :</p>
+<ul>
+<li>Pascal gagne s’il obtient au moins <span class="math inline">\(p\)</span> succès ;</li>
+<li>sinon, c’est Fermat gagne.</li>
+</ul>
+<p>Il suffit alors de compter ces cas : obtenir au moins <span class="math inline">\(p\)</span> piles parmi <span class="math inline">\(n\)</span> lancer revient à faire la somme du nombre de cas <span class="math inline">\(\binom{n}{p}\)</span> où précisément <span class="math inline">\(p\)</span> pièces sont tombées sur pile, puis du nombre de cas <span class="math inline">\(\binom{n}{p+1}\)</span> où <span class="math inline">\(p + 1\)</span> pièces sont tombées sur pile, etc jusqu’à <span class="math inline">\(\binom{n}{n}\)</span> où les <span class="math inline">\(n\)</span> pièces sont tombées sur pile. Finalement, nous voyons que la probabilité de victoire de Pascal est le quotient de cette somme <span class="math display">\[S(p,n) = \binom{n}{p} + \binom{n}{p+1} + \dotsc + \binom{n}{n}\]</span> par le nombre total de possibilités à savoir <span class="math inline">\(2^{p+f−1}\)</span>.</p>
+<p>Les coefficients binomiaux﻿ <span class="math inline">\(\binom{n}{k}\)</span>, appelés aussi combinaisons, représentent le nombre de façons de sélectionner <span class="math inline">\(k\)</span> objets parmi une collection de <span class="math inline">\(n\)</span> objets distincts. Puisque l’on a la relation <span class="math inline">\({n \choose k} + {n \choose k+1} = {n+1 \choose k+1}\)</span> et <span class="math inline">\({n \choose 0}=1\)</span>, les coefficients binomiaux se calculent pas à pas et forment le triangle de Pascal (qui n’est pas sans rappeler la méthode par récurrence exposée précédemment).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="triangle-pascal.gif" class="img-fluid figure-img"></p>
+<figcaption>Triangle de Pascal</figcaption>
+</figure>
+</div>
+<p>Ainsi <span class="math inline">\(S(p,n)\)</span> se lit comme la somme des termes de <span class="math inline">\(p\)</span> à <span class="math inline">\(n\)</span> dans la <span class="math inline">\(n\)</span>-ième ligne du triangle. En l’occurrence pour <span class="math inline">\(p=2\)</span> et <span class="math inline">\(n=4\)</span> on obtient en lisant la dernière ligne du triangle : <span class="math display">\[S(2,4)=6+4+1=11\]</span> et on retrouve ainsi la probabilité <span class="math inline">\(\color{blue}\frac{S(2,4)}{2^4} = \frac{11}{16}\)</span>.</p>
+<p>Ainsi, à l’inverse de Pascal qui suit le déroulement du jeu pas à pas, Fermat adopte une approche globale : il imagine toutes les suites possibles de manches restantes, en les mettant sur un pied d’égalité, sans tenir compte de l’ordre réel du jeu. Il suppose même que l’on continue à jouer après qu’un vainqueur est déjà connu, afin de considérer tous les cas possibles.</p>
+<p>Cette idée a été critiquée par Gilles de Roberval﻿ : en pratique, une fois le jeu gagné, on s’arrête, et les manches supplémentaires n’ont pas lieu d’être. Il peut sembler en effet étrange de continuer à lancer la pièce alors que la partie est déjà terminée. En réalité, on peut se limiter aux 10 issues possibles du jeu répertoriées dans le tableau ci-dessous :</p>
+<p><img src="tableau-fermat.jpg" class="img-fluid"></p>
+<p>6 issues sont favorables à Pascal et 4 issues sont favorables à Fermat. Cependant, ces issues ne sont pas toutes équiprobables : plus une suite est longue, moins elle est probable. Une suite de 2 lancers a une probabilité de 1/4, une suite de 3 lancers 1/8, et une suite de 4 lancers 1/16. En additionnant les probabilités des cas favorables à Pascal, on retrouve qu’il gagne avec une probabilité de 11/16 et son gain associé :</p>
+<p><span class="math display">\[  \color{violet} E(2,3) = 64 \times \left( {\color{blue}\frac{1}{4}}+{\color{blue} \frac{2}{8}}+{\color{blue}\frac{3}{16}} \right) = 64 \times {\color{blue} \frac{11}{16}} = 44 \]</span> On peut visualiser cela avec un arbre de probabilités :</p>
+<p><img src="arbre-fermat.jpg" class="img-fluid"></p>
+<p>à chaque lancer, pile ou face a une probabilité 1/2, et la probabilité d’un chemin s’obtient en multipliant celles des branches. C’est d’ailleurs exactement ainsi qu’un élève de Terminale résoudrait aujourd’hui ce problème.</p>
+</section>
+<section id="comparaison-des-deux-approches" class="level2">
+<h2 class="anchored" data-anchor-id="comparaison-des-deux-approches">Comparaison des deux approches</h2>
+<p>Fermat raisonne donc à partir de situations que l’on peut qualifier de « fictives ». Blaise Pascal en est parfaitement conscient, mais il en défend la pertinence : ces manches feintes n’altèrent en rien le résultat final. Elles permettent simplement de mettre toutes les issues sur un pied d’égalité et de simplifier le calcul. Comme le souligne Pierre de Fermat lui-même : « cette fiction d’étendre le jeu à un certain nombre de parties, ne sert qu’à faciliter la règle, et (suivant mon sentiment) à rendre tous les hasards égaux ». Il précise encore que « l’extension à un certain nombre de parties n’est autre chose que la réduction de diverses fractions à un même dénominateur » et conclut, dans un esprit de conciliation à l’égard de Pascal : « Voilà en peu de mots tout le mystère, qui nous remettra sans doute en bonne intelligence, puisque nous ne cherchons l’un et l’autre que la raison et la vérité ».</p>
+<p>L’un des grands intérêts de ce problème, tel qu’il apparaît dans la correspondance entre Pascal et Fermat, est précisément la différence de leurs approches. Bien qu’elles reposent sur des idées très distinctes, elles conduisent au même résultat, ce qui inspire à Pascal cette formule célèbre : « je vois bien que la vérité est la même à Toulouse et à Paris ». En termes modernes, on dirait que Fermat construit un espace de probabilités adapté, où la question se ramène à un simple problème de dénombrement. De son côté, Pascal envisage le jeu comme une forme de contrat entre les joueurs et cherche à déterminer ce que chacun peut légitimement revendiquer sur la mise. Ce faisant, il introduit, de manière encore implicite, la notion d’espérance mathématique, qui sera ensuite formalisée par Christian Huygens.</p>
+</section>
+</section>
+<section id="retour-au-jeu-de-paume-et-au-championnat-du-monde-des-échecs" class="level1">
+<h1>Retour au jeu de paume et au championnat du monde des échecs</h1>
+<section id="jeu-de-paume" class="level2">
+<h2 class="anchored" data-anchor-id="jeu-de-paume">Jeu de paume</h2>
+<p>Reprenons l’énoncé :</p>
+<blockquote class="blockquote">
+<p>Une brigade joue à la paume : il faut 60 pour gagner, chaque coup vaut 10. L’enjeu est de 10 ducats. Un incident survient qui force les soldats à interrompre la partie commencée, alors que le premier camp a gagné 50 et le second 20. On demande quelle part de l’enjeu revient à chaque camp…</p>
+</blockquote>
+<p>Le premier camp mène donc 5-2 et ne lui manque plus qu’un point, et 4 points pour le second, on est donc dans la situation <span class="math inline">\((1,4)\)</span>. On applique la formule de Fermat avec <span class="math inline">\(p=1\)</span> et <span class="math inline">\(n=4\)</span>, on additionne cette fois tous les nombres de la 4ème ligne du triangle de Pascal <span class="math display">\[S(1,4)=4+6+4+1=15\]</span> qu’on divise par <span class="math inline">\(2^4=16\)</span>. Le premier camp remporte donc : <span class="math display">\[ \color{violet} E(1,4) = 10 \times {\color{blue} \frac{15}{16}}=9,375\]</span></p>
+<p>On récapitule dans le tableau ci-dessous les différentes répartitions des gains à l’interruption :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Méthode</strong></th>
+<th style="text-align: center;"><strong>Premier camp</strong></th>
+<th style="text-align: center;"><strong>Second camp</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Tout-ou-rien</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pacioli</td>
+<td style="text-align: center;">7,14</td>
+<td style="text-align: center;">2,86</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tartaglia</td>
+<td style="text-align: center;">7,5</td>
+<td style="text-align: center;">2,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Forestani</td>
+<td style="text-align: center;">6,36</td>
+<td style="text-align: center;">3,64</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cardan</td>
+<td style="text-align: center;">9,1</td>
+<td style="text-align: center;">0,9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pascal–Fermat</td>
+<td style="text-align: center;">9,375</td>
+<td style="text-align: center;">0,625</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="match-karpov-vs.-kasparov" class="level2">
+<h2 class="anchored" data-anchor-id="match-karpov-vs.-kasparov">Match Karpov vs.&nbsp;Kasparov</h2>
+<p>Le score est de 5-3 pour Karpov, qui est à un point de la victoire, tandis qu’il manque 3 points à Kasparov. On est dans la situation <span class="math inline">\((1,3)\)</span>, on applique la formule de Fermat avec <span class="math inline">\(p=1\)</span> et <span class="math inline">\(n=3\)</span>, on additionne cette fois tous les nombres de la 3ème ligne du triangle de Pascal <span class="math display">\[S(1,3)=3+3+1=7\]</span> qu’on divise par <span class="math inline">\(2^3=8\)</span>. La probabilité de victoire de Karpov est ainsi de <span class="math inline">\(\frac{7}{8}\)</span>, à savoir <strong>87,5% de chance de remporter le match</strong>, avec un gain associé de <span class="math inline">\(\frac{7}{8}\times 1 900 000=\)</span> <strong>1 662 500 francs suisses</strong>, et donc <strong>237 500 francs suisses</strong> pour Kasparov.</p>
+<p><strong>Objection</strong> : Dans ce calcul, comme dans celui du jeu de paume, on part du principe que les manches gagnées ou perdues sont le fruit du hasard, avec une probabilité de <span class="math inline">\(\frac{1}{2}\)</span> de part et d’autre. On ne tient donc pas compte du potentiel écart de niveau entre les adversaires. Les jeux de balle ou d’échecs ne sont pas des jeux de hasard, leurs issues dépend de la compétence des adversaires et d’autres facteurs situationnels, notamment psychologiques. En réalité après les 48 parties réalisées entre les adversaires, Karpov était épuisé, et Kasparov venait d’effectuer une remontée inquiétante pour Karpov (et l’URSS), si bien que la probabilité <span class="math inline">\(q\)</span> de ce dernier de remporter une manche supplémentaire était inférieure à <span class="math inline">\(\frac{1}{2}\)</span>. Disons que cette probabilité n’est plus que de 33% au lieu de 50%. Dans ce cas, en suivant l’arbre des probabilités, les probabilités respectives pour Kasparov et Karpov de remporter le match ne sont plus de <span class="math inline">\(\left(\frac{1}{2}\right)^3=\frac{1}{8}\)</span> et <span class="math inline">\(1-\frac{1}{8}=\frac{7}{8}\)</span> mais de <span class="math inline">\((1-q)^3\)</span> et <span class="math inline">\(1-(1-q)^3\)</span>, à savoir 28,7% et 71,3% de chance de gagner, avec des gains associés de 545 300 francs suisses pour Kasparov et 1 354 700 francs suisses pour Karpov. Kasparov estimera lui-même ses chances de gagner entre 25 et 30%.</p>
+<p>Officiellement le gagnant devait remporter 2/3 de la somme, et le perdant 1/3. C’est cette proportion qui a vraisemblablement été conservée à l’issue de l’interruption avec donc 1 266 667 francs suisses offert Karpov et 633 333 francs suisses pour Kasparov, dont la répartition est proche du modèle que nous venons de considérer.</p>
+<p>Par chance les règles de répartition de la FIDE, malgré l’interruption, ont été conforme au modèle de juste répartition établi par Pascal et Fermat. Comme quoi les mathématiques permettent de régler ses comptes, en 1654 comme en 1984 et aujourd’hui encore !</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/www\.kevinpolisano\.fr");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "kevinpolisano/blog";
+    script.dataset.repoId = "R_kgDOM9ReCA";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOM9ReCM4CmGgm";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,171 @@
+---
+title: "Le problème des partis"
+author: "Kévin Polisano"
+date: "2026-03-30"
+image: pascal-fermat.jpg
+categories: [mathématiques]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+reference-location: margin
+citation-location: margin
+---
+
+_Cet article a été écrit dans le cadre de la [Semaine des mathématiques 2026](https://www.education.gouv.fr/la-semaine-des-mathematiques-465828) ﻿ sur le thème **"Égalités"**, et propose d'aborder les principes de **justice** et **d'équité** sous l'angle des mathématiques._
+
+# Un championnat du monde des échecs interrompu
+
+En 1984, le monde des échecs assiste à un duel d'anthologie entre Anatoli Karpov, champion en titre, et le jeune prodige Garry Kasparov﻿. Le match est atypique : il ne se joue pas en un nombre fixé de parties, mais jusqu’à ce que l’un des joueurs atteigne six victoires. Les nulles n'étant pas comptabilisées. Karpov mène rapidement 4-0 après seulement 9 parties, puis 5-0 après la 27 ème. Il est à un point de la victoire.  Kasparov s'accroche, et finit par marquer un point à  la 32ème partie. S'en suit une longue série de nulles, puis, contre toute attente, Kasparov renverse la vapeur et remporte deux parties consécutives. Après 48 parties﻿  — un record — le score est de 5 victoires à 3 pour Karpov (avec 40 nulles au total !).
+
+![Anatoli Karpov (à gauche) et Garry Kasparov (à droite)](karpov-kasparov.jpg) 
+
+La tension extrême, et après plus de 5 mois d'affrontement, l'épuisement physique se fait ressentir (Karpov a perdu 10 kg depuis le début du championnat). La FIDE décide d’interrompre le match sans déclarer de vainqueur, pour des raisons officiellement liées à la santé des joueurs, mais probablement aussi pour des raisons politiques...
+La récompense s'élevait à 1,9 million﻿ de francs suisses. Cependant le match n'a pas été mené à terme. Une question naturelle se pose alors : comment répartir les gains d’un match interrompu ? Mathématiquement, cette question est loin d’être anodine : elle renvoie à un problème vieux de plusieurs siècles, connu sous le nom de problème des partis﻿, au sens de la juste répartition, et dont la solution requiert un partage équitable.
+
+# Le problème des partis
+
+Luca Pacioli﻿, moine franciscain mathématicien et ami de Léonard de Vinci﻿, exposa en 1494 ce problème dans son ouvrage d'arithmétique﻿ à travers un autre jeu :
+
+> Une brigade joue à la paume : il faut 60 pour gagner, chaque coup vaut 10. L'enjeu est de 10 ducats. Un incident survient qui force les soldats à interrompre la partie commencée, alors que le premier camp a gagné 50 et le second 20. On demande quelle part de l'enjeu revient à chaque camp...
+
+- Un premier critère de départage pourrait simplement consister à verser l'intégralité de l'enjeu (ici 10 ducats) à celui qui a marqué le plus de points, mais on sent bien que cette solution ne serait pas très équitable. En effet, imaginons un cas extrême où pour gagner il faudrait non pas atteindre 60 mais 1000, ainsi remettre la totalité au camp ayant gagné 50 (alors qu'il resterait au moins 95 manches à jouer) ne semble pas très satisfaisant.
+
+- Pacioli proposa de répartir l'enjeu selon les points déjà gagnés. Ils ont marqué 70 points au total. On répartit  les 10 ducats selon les proportions suivantes : 50/70 soit 5/7 pour le premier, et 20/70 soit 2/7 pour le second. Le premier reçoit donc 7,14 ducats et le second 2,86.
+
+Le mathématicien italien Tartaglia﻿ n'était pas de cet avis, il écrivit en 1556 :
+
+> Sa règle ne me paraît ni bonne, ni belle, parce que s'il arrive qu'un parti ait 10 et l'autre rien, et qu'on procédât selon sa règle, le premier devrait tirer tout et le second rien; ce serait tout à fait déraisonnable que pour 10, il doive tirer tout.
+
+En effet le total des points étant de 10, les proportions seraient respectivement 10/10=1 et 0/10=0, ce qui revient à appliquer le première critère du tout-ou-rien.
+
+- Tartaglia suggéra plutôt que l'écart de gain soit proportionnel à l'écart de points. On calcule l’écart entre les 2 équipes : 50-20 = 30 point, puis on rapporte ce résultat au total de 60 à atteindre : 30/60= 1/2. Cet écart représente 1/2 du total des points nécessaires pour gagner. L’écart de gain entre les 2 joueurs doit donc être égal à 1/2 des 10 ducats mis en jeu soit 5 ducats. Le premier reçoit donc 7,5 ducats et le second 2,5.
+
+- Forestani﻿ proposa en 1603 de tenir compte de la durée maximale du jeu. Le jeu dure au plus 11 coups (scénario 60 contre 50). Dans le cas présent, 5 en on été gagné par le premier, 2 par le 2ème. Les 4 = 11 – (5+2) jeux restants ne sont pas tranchés. On les répartis donc équitablement en 2 en donnant ( 5+ 2)/11 ièmes de la mise au premier et (2+2)/11 ièmes de la mise au second. Le premier reçoit donc 6,36 ducats et le second 3,64.
+
+- Cardan﻿  plaida en 1539 pour une répartition de l'enjeu selon les points qu'il reste à marquer. Il reste respectivement 1 point au premier et 4 au second pour gagner.  Il fit alors intervenir les "progressions arithmétiques" associées 1+2+3+4 = 10 et 1 =1, donnant ainsi 10/11 ièmes au premier et 1/11 ième au second. Le premier reçoit donc 9,1 ducats et le second 0,9.
+
+Tous ces savants italiens et d'autres encore (Calandri, Peverone, Pagani, ...) avaient des "opinions diverses" sur le problème des partis. Tartaglia dira à ce propos :
+
+> La résolution d’une telle question est davantage d’ordre judiciaire que rationnel et, de quelque manière qu’on veuille la résoudre, on y trouvera sujet à litiges.
+
+![De gauche à droite : Tartaglia, Pacioli et son élève, Cardan](tartaglia-pacioli-cardan.jpg)
+
+# La correspondance entre Pascal et Fermat
+
+En 1654, Antoine Gombaud, connu sous le nom de chevalier de Méré, soumit le problème à Blaise Pascal, qui entama alors une correspondance avec Pierre de Fermat. De cette discussion entre ces deux géants des mathématiques  naquirent non seulement une solution convaincante et cohérente, mais aussi des concepts qui préfigurèrent la théorie des probabilités.
+
+![Blaise Pascal (à gauche) et Pierre de Fermat (à droite)](pascal-fermat.jpg)
+
+L'intuition initiale de Pascal et Fermat était que le partage des enjeux ne devait pas tant dépendre du déroulement exact de la partie interrompue que des différentes manières dont elle aurait pu se poursuivre sans cette interruption. Il est intuitif qu'un joueur menant 5 à 3 dans une partie en 6 manches gagnantes (Karpov-Kasparov) a les mêmes chances de gagner qu'un joueur menant 25 à 23 (scores comptant les nulles) dans une partie remportée à 26. Autrement dit, ce qui importe n'est pas le nombre de manches déjà gagnées par chaque joueur, mais le nombre de manches qu'il lui reste à gagner pour remporter la victoire finale, comme l'avait déjà compris Cardan. Il ne faut plus regarder vers le passé mais se tourner vers le futur !
+
+## Illustration avec le jeu de pile ou face
+
+Pascal et Fermat lancent successivement une pièce : si la pièce tombe sur pile (P), Pascal marque un point, si la pièce tombe sur face (F), c’est Fermat qui marque un point. Le premier à atteindre trois points a gagné. Au début du jeu, les deux adversaires misent une somme égale d’argent, disons 32€, et le vainqueur récupère l’ensemble de l’argent mis en jeu, soit 64€. 
+
+Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, « proportionnellement à ce qu’ils sont en droit d’espérer de la fortune » ?
+
+Notons $(p,f)$ le nombre de manches qu'il reste à gagner respectivement à Pascal et Fermat pour remporter la victoire, et $E(p,f)$ le montant que Pascal doit recevoir en cas d’interruption du jeu à ce stade.
+
+## La solution de Pascal
+
+La méthode de Pascal repose sur un raisonnement étape par étape : à chaque manche possible, il évalue la situation et remonte progressivement le cours de la partie. C’est un raisonnement par récurrence rétrograde, où l’on répète le même calcul en partant de cas terminaux, comme une égalité entre les joueurs, pour revenir vers le présent au moment de l'interruption. Pascal propose ainsi un algorithme simple de résolution du problème des partis :
+
+Cas terminaux﻿. Si les deux joueurs ont chacun deux points, ils sont tous deux à un point de la victoire, soit dans la situation $(1,1)$ qui est évidente : la partie se jouera sur un dernier lancer de pièce équilibrée. Chacun a donc une chance sur deux de gagner, et il est juste que chacun récupère la moitié de la mise, soit 32€. Considérons maintenant le cas où Pascal a deux points et Fermat  un point, alors on est dans la situation $(1,2)$ car Pascal est à 1 point de la victoire et Fermat à 2 points. À la prochaine manche :
+
+- si Pascal gagne, il remporte toute la mise (64€) ;
+- si Fermat gagne, les deux joueurs se retrouvent à égalité, et on se ramène au cas précédent où chacun a alors droit à 32€.
+
+Ainsi, Pascal est sûr d’obtenir au moins 32€. Pour les 32 restants, il a une chance sur deux de les gagner. Il peut donc en réclamer la moitié, soit 16€. Au total, Pascal doit recevoir ﻿48€, et Fermat 16€.
+
+Cas intermédiaires. Pascal procède pas à pas. Il imagine que l’on joue une manche de plus, puis que l’on sait déjà comment partager équitablement les gains dans les deux cas possibles (selon qui gagne cette manche). Comme chaque joueur a une chance sur deux de gagner la manche suivante, il suffit de prendre la moyenne de ces deux répartitions : $$\color{violet} E(p,f)=\frac{E(p−1,f)+E(p,f−1)}{2}$$ Autrement dit, la valeur d’une position est la moyenne des valeurs des positions suivantes. Ainsi, en connaissant les cas simples (où le jeu est presque terminé), on peut remonter progressivement pour déterminer la solution dans les situations plus complexes. En résumé l’argument de Pascal consiste à remonter dans le passé depuis les situations hypothétiques où l’un des deux joueurs a remporté le jeu.
+
+![](animation-pascal.gif)
+
+Dans le cas où la partie aurait été interrompue après un seul lancer tombé sur pile, où il manque donc deux parties à gagner pour Pascal pour Fermat, on en conclut que Pascal doit recevoir $\color{violet}E(2, 3)=44$ euros et Fermat 16€.
+
+## La solution de Fermat
+
+L’idée de Fermat est complètement différente, elle consiste à transformer le problème en une situation de "hasards égaux". Pour cela, il imagine que l’on joue un nombre fixe de manches, même si la partie est déjà gagnée avant la fin (les manches en trop sont sans effet).
+Par exemple, s’il manque $p=2$ points à Pascal et $f=3$ à Fermat, il considère $n=p+f-1=4$ manches au total. On peut alors voir la poursuite du jeu, initialement débuté par un pile (en jaune ci-dessous), comme un lancer de 4 pièces :
+
+- si Pascal obtient au moins 2 piles, il gagne ;
+- sinon, c’est Fermat qui gagne.
+
+![](animation-lancer-pieces.gif)
+
+Toutes les issues étant équiprobables, il suffit de  compter parmi les 16 combinaisons possibles lesquelles sont favorables à Pascal, c'est-à-dire parmi tous ces "chemins" dans le graphe ci-dessous lesquels aboutissent à un noeud bleu symbolisant une victoire de Pascal. 
+
+![](animation-fermat.gif)
+
+On dénombre ainsi <span style="color:blue;">11 cas favorables</span> à Pascal sur 16,﻿ donc il gagne avec probabilité $\color{blue}\frac{11}{16}$ et empoche $$\color{violet} E(2,3)=64 \times {\color{blue} \frac{11}{16}} = 44$$ euros comme déjà calculé par la méthode de Pascal.
+
+Plus généralement, s’il manque $p$ points à Pascal et $f$ à Fermat, on considère $n=p+f−1$ manches où :
+
+- Pascal gagne s’il obtient au moins $p$ succès ;
+- sinon, c'est Fermat gagne.
+
+Il suffit alors de compter ces cas : obtenir au moins $p$ piles parmi $n$ lancer revient à faire la somme du nombre de cas $\binom{n}{p}$ où  précisément $p$ pièces sont tombées sur pile, puis du nombre de cas $\binom{n}{p+1}$ où $p + 1$ pièces sont tombées sur pile, etc jusqu'à $\binom{n}{n}$ où les $n$ pièces sont tombées sur pile. Finalement, nous voyons que la probabilité de victoire de Pascal est le quotient de cette somme $$S(p,n) = \binom{n}{p} + \binom{n}{p+1} + \dotsc + \binom{n}{n}$$ par le nombre total de possibilités à savoir $2^{p+f−1}$. 
+
+Les coefficients binomiaux﻿ $\binom{n}{k}$, appelés aussi combinaisons, représentent le nombre de façons de sélectionner $k$ objets parmi une collection de $n$ objets distincts. Puisque l'on a la relation ${n \choose k} + {n \choose k+1} = {n+1 \choose k+1}$ et ${n \choose 0}=1$, les coefficients binomiaux se calculent pas à pas et forment le triangle de Pascal (qui n'est pas sans rappeler la méthode par récurrence exposée précédemment). 
+
+![Triangle de Pascal](triangle-pascal.gif)
+
+Ainsi $S(p,n)$ se lit comme la somme des termes de $p$ à $n$ dans la $n$-ième ligne du triangle. En l'occurrence pour $p=2$ et $n=4$ on obtient  en lisant la dernière ligne du triangle : $$S(2,4)=6+4+1=11$$ et on retrouve ainsi la probabilité $\color{blue}\frac{S(2,4)}{2^4} = \frac{11}{16}$.
+
+
+Ainsi, à l’inverse de Pascal qui suit le déroulement du jeu pas à pas, Fermat adopte une approche globale : il imagine toutes les suites possibles de manches restantes, en les mettant sur un pied d’égalité, sans tenir compte de l’ordre réel du jeu. Il suppose même que l’on continue à jouer après qu’un vainqueur est déjà connu, afin de considérer tous les cas possibles.
+
+Cette idée a été critiquée par Gilles de Roberval﻿ : en pratique, une fois le jeu gagné, on s’arrête, et les manches supplémentaires n’ont pas lieu d'être. Il peut sembler en effet étrange de continuer à lancer la pièce alors que la partie est déjà terminée. En réalité, on peut se limiter aux 10 issues possibles du jeu répertoriées dans le tableau ci-dessous : 
+
+![](tableau-fermat.jpg)
+
+6 issues sont favorables à Pascal et 4 issues sont favorables à Fermat.
+Cependant, ces issues ne sont pas toutes équiprobables : plus une suite est longue, moins elle est probable. Une suite de 2 lancers a une probabilité de 1/4, une suite de 3 lancers 1/8, et une suite de 4 lancers 
+1/16. En additionnant les probabilités des cas favorables à Pascal, on retrouve qu’il gagne avec une probabilité de 11/16 et son gain associé :
+
+$$  \color{violet} E(2,3) = 64 \times \left( {\color{blue}\frac{1}{4}}+{\color{blue} \frac{2}{8}}+{\color{blue}\frac{3}{16}} \right) = 64 \times {\color{blue} \frac{11}{16}} = 44 $$
+On peut visualiser cela avec un arbre de probabilités : 
+
+![](arbre-fermat.jpg)
+
+à chaque lancer, pile ou face a une probabilité 1/2, et la probabilité d’un chemin s’obtient en multipliant celles des branches. C’est d’ailleurs exactement ainsi qu’un élève de Terminale résoudrait aujourd’hui ce problème.
+
+## Comparaison des deux approches
+
+Fermat raisonne donc à partir de situations que l’on peut qualifier de « fictives ». Blaise Pascal en est parfaitement conscient, mais il en défend la pertinence : ces manches feintes n’altèrent en rien le résultat final. Elles permettent simplement de mettre toutes les issues sur un pied d’égalité et de simplifier le calcul. Comme le souligne Pierre de Fermat lui-même : « cette fiction d’étendre le jeu à un certain nombre de parties, ne sert qu’à faciliter la règle, et (suivant mon sentiment) à rendre tous les hasards égaux ». Il précise encore que « l’extension à un certain nombre de parties n’est autre chose que la réduction de diverses fractions à un même dénominateur » et conclut, dans un esprit de conciliation à l’égard de Pascal : « Voilà en peu de mots tout le mystère, qui nous remettra sans doute en bonne intelligence, puisque nous ne cherchons l’un et l’autre que la raison et la vérité ».
+
+L’un des grands intérêts de ce problème, tel qu’il apparaît dans la correspondance entre Pascal et Fermat, est précisément la différence de leurs approches. Bien qu’elles reposent sur des idées très distinctes, elles conduisent au même résultat, ce qui inspire à Pascal cette formule célèbre : « je vois bien que la vérité est la même à Toulouse et à Paris ». En termes modernes, on dirait que Fermat construit un espace de probabilités adapté, où la question se ramène à un simple problème de dénombrement. De son côté, Pascal envisage le jeu comme une forme de contrat entre les joueurs et cherche à déterminer ce que chacun peut légitimement revendiquer sur la mise. Ce faisant, il introduit, de manière encore implicite, la notion d’espérance mathématique, qui sera ensuite formalisée par Christian Huygens.
+
+# Retour au jeu de paume et au championnat du monde des échecs
+
+## Jeu de paume
+
+Reprenons l'énoncé :
+
+> Une brigade joue à la paume : il faut 60 pour gagner, chaque coup vaut 10. L’enjeu est de 10 ducats. Un incident survient qui force les soldats à interrompre la partie commencée, alors que le premier camp a gagné 50 et le second 20. On demande quelle part de l’enjeu revient à chaque camp…
+
+Le premier camp mène donc 5-2 et ne lui manque plus qu'un point, et 4 points pour le second, on est donc dans la situation $(1,4)$. On applique la formule de Fermat avec $p=1$ et $n=4$, on additionne cette fois tous les nombres de la 4ème ligne du triangle de Pascal $$S(1,4)=4+6+4+1=15$$ qu'on divise par $2^4=16$. Le premier camp remporte donc :
+$$ \color{violet} E(1,4) = 10 \times {\color{blue} \frac{15}{16}}=9,375$$
+
+On récapitule dans le tableau ci-dessous les différentes répartitions des gains à l'interruption :
+
+| **Méthode** | **Premier camp** | **Second camp** |
+|:-------- |:--------:| :--------:|
+| Tout-ou-rien    | 10   | 0    |
+| Pacioli    | 7,14   | 2,86   |
+| Tartaglia    | 7,5   | 2,5   |
+| Forestani    | 6,36   | 3,64   |
+| Cardan    | 9,1   | 0,9   |
+| Pascal--Fermat    | 9,375   | 0,625   |
+
+## Match Karpov vs. Kasparov
+
+Le score est de 5-3 pour Karpov, qui est à un point de la victoire, tandis qu'il manque 3 points à Kasparov. On est dans la situation $(1,3)$, on applique la formule de Fermat avec $p=1$ et $n=3$, on additionne cette fois tous les nombres de la 3ème ligne du triangle de Pascal $$S(1,3)=3+3+1=7$$ qu'on divise par $2^3=8$. La probabilité de victoire de Karpov est ainsi de $\frac{7}{8}$, à savoir **87,5% de chance de remporter le match**, avec un gain associé de $\frac{7}{8}\times 1 900 000=$ **1 662 500 francs suisses**, et donc **237 500 francs suisses** pour Kasparov.
+
+**Objection** : Dans ce calcul, comme dans celui du jeu de paume, on part du principe que les manches gagnées ou perdues sont le fruit du hasard, avec une probabilité de $\frac{1}{2}$ de part et d'autre. On ne tient donc pas compte du potentiel écart de niveau entre les adversaires. Les jeux de balle ou d'échecs ne sont pas des jeux de hasard, leurs issues dépend de la compétence des adversaires et d'autres facteurs situationnels, notamment psychologiques. En réalité après les 48 parties réalisées entre les adversaires, Karpov était épuisé, et Kasparov venait d'effectuer une remontée inquiétante pour Karpov (et l'URSS), si bien que la probabilité $q$ de ce dernier de remporter une manche supplémentaire était inférieure à $\frac{1}{2}$. Disons que cette probabilité n'est plus que de 33% au lieu de 50%. Dans ce cas, en suivant l'arbre des probabilités, les probabilités respectives pour Kasparov et Karpov de remporter le match ne sont plus de $\left(\frac{1}{2}\right)^3=\frac{1}{8}$ et $1-\frac{1}{8}=\frac{7}{8}$ mais de $(1-q)^3$ et $1-(1-q)^3$, à savoir 28,7% et 71,3% de chance de gagner, avec des gains associés de 545 300 francs suisses pour Kasparov et 1 354 700 francs suisses pour Karpov. Kasparov estimera lui-même ses chances de gagner entre 25 et 30%.
+
+Officiellement le gagnant devait remporter 2/3 de la somme, et le perdant 1/3. C'est cette proportion qui a vraisemblablement été conservée à l'issue de l'interruption avec donc 1 266 667 francs suisses offert Karpov et 633 333 francs suisses pour Kasparov, dont la répartition est proche du modèle que nous venons de considérer.
+
+Par chance les règles de répartition de la FIDE, malgré l'interruption, ont été conforme au modèle de juste répartition établi par Pascal et Fermat. Comme quoi les mathématiques permettent de régler ses comptes, en 1654 comme en 1984 et aujourd'hui encore !
+
+
