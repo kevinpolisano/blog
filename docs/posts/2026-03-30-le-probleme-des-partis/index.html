@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kévin Polisano">
-<meta name="dcterms.date" content="2026-03-30">
+<meta name="dcterms.date" content="2026-03-20">
 
 <title>Quand interrompre un jeu devient un problème mathématique – Blog de Kévin Polisano</title>
 <style>
@@ -207,7 +207,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 30, 2026</p>
+        <p class="date">March 20, 2026</p>
       </div>
     </div>
     
@@ -235,6 +235,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#jeu-de-paume" id="toc-jeu-de-paume" class="nav-link" data-scroll-target="#jeu-de-paume">Jeu de paume</a></li>
   <li><a href="#match-karpov-vs.-kasparov" id="toc-match-karpov-vs.-kasparov" class="nav-link" data-scroll-target="#match-karpov-vs.-kasparov">Match Karpov vs.&nbsp;Kasparov</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -301,7 +302,7 @@ Cardano, Hieronymus. 1539. <em>Practica Arithmetice Et Mensurandi Singularis</em
 </figure>
 </div>
 </section>
-<section id="la-correspondance-entre-pascal-et-fermat" class="level1">
+<section id="la-correspondance-entre-pascal-et-fermat" class="level1 page-columns page-full">
 <h1>La correspondance entre Pascal et Fermat</h1>
 <p>En 1654,&nbsp;<a href="https://en.wikipedia.org/wiki/Antoine_Gombaud">Antoine Gombaud</a>,&nbsp;connu sous le nom de&nbsp;chevalier de Méré, soumit le problème à&nbsp;<a href="https://en.wikipedia.org/wiki/Blaise_Pascal">Blaise Pascal</a>, qui entama alors une correspondance avec&nbsp;<a href="https://en.wikipedia.org/wiki/Pierre_de_Fermat">Pierre de Fermat</a>. De cette discussion entre ces&nbsp;deux géants des mathématiques émergèrent non seulement une solution rigoureuse et satisfaisante, mais aussi les premières idées qui allaient donner naissance à la théorie des probabilités.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -314,10 +315,10 @@ Cardano, Hieronymus. 1539. <em>Practica Arithmetice Et Mensurandi Singularis</em
 <section id="illustration-avec-le-jeu-de-pile-ou-face" class="level2">
 <h2 class="anchored" data-anchor-id="illustration-avec-le-jeu-de-pile-ou-face">Illustration avec le jeu de pile ou face</h2>
 <p>Pascal et&nbsp;Fermat lancent successivement une pièce : si la pièce tombe sur pile (P), Pascal marque un point, si la pièce tombe sur face (F), c’est Fermat qui marque un point. Le premier à atteindre trois points a gagné. Au début du jeu, les deux adversaires <strong>misent une somme égale d’argent</strong>, disons 32€, et le vainqueur récupère l’ensemble de l’argent mis en jeu, soit 64€.</p>
-<p>Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, «&nbsp;proportionnellement à ce qu’ils sont en droit d’espérer de la fortune&nbsp;»&nbsp;?</p>
+<p>Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, <em>«&nbsp;proportionnellement à ce qu’ils sont en droit d’espérer de la fortune&nbsp;»</em>&nbsp;?</p>
 <p>Notons <span class="math inline">\((p,f)\)</span> le nombre de manches qu’il reste à gagner respectivement à Pascal et Fermat pour remporter la victoire, et <span class="math inline">\(E(p,f)\)</span> le montant que Pascal doit recevoir en cas d’interruption du jeu à ce stade.</p>
 </section>
-<section id="la-solution-de-pascal" class="level2">
+<section id="la-solution-de-pascal" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="la-solution-de-pascal">La solution de Pascal</h2>
 <p>La méthode de Pascal repose sur un raisonnement étape par étape : à chaque manche possible, il évalue la situation et remonte progressivement le cours de la partie. C’est un raisonnement par <em>récurrence rétrograde</em>, où l’on répète le même calcul en partant de cas terminaux, comme une égalité entre les joueurs, pour revenir vers le présent au moment de l’interruption. Pascal propose ainsi un algorithme simple de résolution du problème des partis :</p>
 <p><strong>Cas terminaux</strong>. Si les deux joueurs ont chacun deux points, ils sont tous deux à un point de la victoire, soit dans la situation <span class="math inline">\((1,1)\)</span> qui est évidente : la partie se jouera sur un dernier lancer de pièce équilibrée. Chacun a donc une chance sur deux de gagner, et il est juste que chacun récupère la moitié de la mise, soit 32€. Considérons maintenant le cas où Pascal a deux points et Fermat un point, alors on est dans la situation <span class="math inline">\((1,2)\)</span> car Pascal est à 1 point de la victoire et Fermat à 2 points. À la prochaine manche :</p>
@@ -327,7 +328,10 @@ Cardano, Hieronymus. 1539. <em>Practica Arithmetice Et Mensurandi Singularis</em
 </ul>
 <p>Ainsi, Pascal est sûr d’obtenir au moins 32€. Pour les 32 restants, il a une chance sur deux de les gagner. Il peut donc en réclamer la moitié, soit 16€. Au total, Pascal doit recevoir ﻿48€, et Fermat 16€.</p>
 <p><strong>Cas intermédiaires</strong>. Pascal procède pas à pas. Il imagine que l’on joue une manche de plus, puis que l’on sait déjà comment partager équitablement les gains dans les deux cas possibles (selon qui gagne cette manche). Comme chaque joueur a une chance sur deux de gagner la manche suivante, il suffit de prendre la moyenne de ces deux répartitions : <span class="math display">\[\color{violet} E(p,f)=\frac{E(p−1,f)+E(p,f−1)}{2}\]</span> Autrement dit, la valeur d’une position est la moyenne des valeurs des positions suivantes. Ainsi, en connaissant les cas simples (où le jeu est presque terminé), on peut remonter progressivement pour déterminer la solution dans les situations plus complexes. En résumé l’argument de Pascal consiste à <strong>remonter dans le passé</strong> depuis les situations hypothétiques où l’un des deux joueurs a remporté le jeu.</p>
-<p><img src="animation-pascal.gif" class="img-fluid"></p>
+<p>Le schéma animé ci-dessous illustrant le procédé itératif, ainsi que le suivant, est inspiré de l’<a href="https://www.youtube.com/watch?v=IRGQkzm-gyw">exposé</a> donné par <a href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Miermont">Grégory Miermont</a> et adapté de <span class="citation" data-cites="mathieu2023blaise">(<a href="#ref-mathieu2023blaise" role="doc-biblioref">Mathieu and Miermont 2023</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-mathieu2023blaise" class="csl-entry" role="listitem">
+Mathieu, Pierre, and Grégory Miermont. 2023. <span>“Blaise Pascal Et Pierre de Fermat, g<span>é</span>om<span>è</span>tres Du Hasard.”</span> <em>Courrier Blaise Pascal</em>, no. 45: 53–89.
+</div></div><p><img src="animation-pascal.gif" class="img-fluid"></p>
 <p>Dans le cas où la partie aurait été interrompue après un seul lancer tombé sur pile,&nbsp;où il manque donc deux parties à gagner pour Pascal pour Fermat, on en conclut que Pascal doit recevoir <span class="math inline">\(\color{violet}E(2,&nbsp;3)=44\)</span> euros et Fermat 16€.</p>
 </section>
 <section id="la-solution-de-fermat" class="level2">
@@ -432,6 +436,11 @@ Kasparov, Gari Kimovitch, Catherine Ter-Sarkissian, Frank Straschitz, and Pierre
 <p><strong>Et dans la réalité ?</strong></p>
 <p>Officiellement, le vainqueur devait recevoir les deux tiers de la dotation, et le perdant un tiers. Cette répartition a vraisemblablement été conservée après l’interruption, soit environ <strong>1 266 667</strong> francs suisses pour Karpov et <strong>633 333</strong> francs suisses pour Kasparov — une répartition finalement assez proche des estimations issues de ce modèle simplifié.</p>
 <p>Comme quoi, les mathématiques permettent de « régler ses comptes »… en 1654 comme en 1984, et encore aujourd’hui !</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Le problème des partis montre une chose essentielle : la notion de « juste » dépend de la manière dont on modélise la situation. Les mathématiques apportent des outils puissants pour penser l’équité. Elles permettent de dépasser les intuitions parfois trompeuses et de proposer des solutions cohérentes. Mais elles reposent toujours sur des hypothèses.</p>
+<p>Aujourd’hui encore, ces idées sont utilisées dans de nombreux domaines : l’économie, les assurances, les jeux, les décisions publiques. Chaque fois qu’il faut répartir un risque, un gain ou une ressource, on retrouve cette même question : qu’est-ce qu’un partage équitable ? Et comme au temps de Pascal et Fermat, la réponse dépend autant des mathématiques… que de la manière dont on regarde le monde.</p>
 
 
 

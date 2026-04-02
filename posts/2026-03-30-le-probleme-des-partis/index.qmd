@@ -1,7 +1,7 @@
 ---
 title: "Quand interrompre un jeu devient un problème mathématique"
 author: "Kévin Polisano"
-date: "2026-03-30"
+date: "2026-03-20"
 image: karpov-kasparov.jpg
 categories: [mathématiques]
 toc: true
@@ -63,7 +63,7 @@ Leur intuition fondamentale est la suivante : le partage de la mise ne doit pas 
 
 Pascal et Fermat lancent successivement une pièce : si la pièce tombe sur pile (P), Pascal marque un point, si la pièce tombe sur face (F), c’est Fermat qui marque un point. Le premier à atteindre trois points a gagné. Au début du jeu, les deux adversaires **misent une somme égale d’argent**, disons 32€, et le vainqueur récupère l’ensemble de l’argent mis en jeu, soit 64€. 
 
-Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, « proportionnellement à ce qu’ils sont en droit d’espérer de la fortune » ?
+Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, *« proportionnellement à ce qu’ils sont en droit d’espérer de la fortune »* ?
 
 Notons $(p,f)$ le nombre de manches qu'il reste à gagner respectivement à Pascal et Fermat pour remporter la victoire, et $E(p,f)$ le montant que Pascal doit recevoir en cas d’interruption du jeu à ce stade.
 
@@ -79,6 +79,8 @@ La méthode de Pascal repose sur un raisonnement étape par étape : à chaque m
 Ainsi, Pascal est sûr d’obtenir au moins 32€. Pour les 32 restants, il a une chance sur deux de les gagner. Il peut donc en réclamer la moitié, soit 16€. Au total, Pascal doit recevoir ﻿48€, et Fermat 16€.
 
 **Cas intermédiaires**. Pascal procède pas à pas. Il imagine que l’on joue une manche de plus, puis que l’on sait déjà comment partager équitablement les gains dans les deux cas possibles (selon qui gagne cette manche). Comme chaque joueur a une chance sur deux de gagner la manche suivante, il suffit de prendre la moyenne de ces deux répartitions : $$\color{violet} E(p,f)=\frac{E(p−1,f)+E(p,f−1)}{2}$$ Autrement dit, la valeur d’une position est la moyenne des valeurs des positions suivantes. Ainsi, en connaissant les cas simples (où le jeu est presque terminé), on peut remonter progressivement pour déterminer la solution dans les situations plus complexes. En résumé l’argument de Pascal consiste à **remonter dans le passé** depuis les situations hypothétiques où l’un des deux joueurs a remporté le jeu.
+
+Le schéma animé ci-dessous illustrant le procédé itératif, ainsi que le suivant, est inspiré de l'[exposé](https://www.youtube.com/watch?v=IRGQkzm-gyw) donné par [Grégory Miermont](https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Miermont) et adapté de [@mathieu2023blaise].
 
 ![](animation-pascal.gif)
 
@@ -176,4 +178,10 @@ Supposons par exemple que cette probabilité tombe à $q=\frac{1}{3}$. Dans ce c
 Officiellement, le vainqueur devait recevoir les deux tiers de la dotation, et le perdant un tiers. Cette répartition a vraisemblablement été conservée après l’interruption, soit environ **1 266 667** francs suisses pour Karpov et **633 333** francs suisses pour Kasparov — une répartition finalement assez proche des estimations issues de ce modèle simplifié.
 
 Comme quoi, les mathématiques permettent de « régler ses comptes »... en 1654 comme en 1984, et encore aujourd’hui !
+
+## Conclusion
+
+Le problème des partis montre une chose essentielle : la notion de « juste » dépend de la manière dont on modélise la situation. Les mathématiques apportent des outils puissants pour penser l’équité. Elles permettent de dépasser les intuitions parfois trompeuses et de proposer des solutions cohérentes. Mais elles reposent toujours sur des hypothèses.
+
+Aujourd’hui encore, ces idées sont utilisées dans de nombreux domaines : l’économie, les assurances, les jeux, les décisions publiques. Chaque fois qu’il faut répartir un risque, un gain ou une ressource, on retrouve cette même question : qu’est-ce qu’un partage équitable ? Et comme au temps de Pascal et Fermat, la réponse dépend autant des mathématiques… que de la manière dont on regarde le monde.
 
