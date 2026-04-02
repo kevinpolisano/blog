@@ -2,7 +2,7 @@
 title: "Quand interrompre un jeu devient un problème mathématique"
 author: "Kévin Polisano"
 date: "2026-03-30"
-image: pascal-fermat.jpg
+image: karpov-kasparov.jpg
 categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
@@ -11,7 +11,6 @@ bibliography: references.bib
 reference-location: margin
 citation-location: margin
 ---
-
 _Cet article a été écrit dans le cadre de la [Semaine des mathématiques 2026](https://www.education.gouv.fr/la-semaine-des-mathematiques-465828) ﻿ sur le thème **"Égalités"**, et propose d'aborder les principes de **justice** et **d'équité** sous l'angle des mathématiques._
 
 # Un championnat du monde des échecs interrompu
@@ -46,7 +45,7 @@ En effet le total des points étant de 10, les proportions seraient respectiveme
 - En 1539, [Gerolamo Cardano](https://fr.wikipedia.org/wiki/J%C3%A9r%C3%B4me_Cardan) (en français Jérôme Cardan)  plaide  pour une **répartition de l'enjeu selon les points qu'il reste à marquer** [@cardano1539practica]. Le premier n’a plus qu’un point à obtenir, contre quatre pour le second. En utilisant des progressions arithmétiques (1 d’un côté, $1+2+3+4=10$ de l’autre), il propose une répartition en 
 $\frac{10}{11}$ et $\frac{1}{11}$, soit environ 9,1 ducats pour le premier et 0,9 pour le second.
 
-Tous ces savants italiens — parmi lesquels on peut aussi citer Calandri, Peverone ou Pagani — avaient des "opinions diverses" sur le problème des partis. Comme le résume Tartaglia :
+Tous ces savants italiens — parmi lesquels on peut aussi citer Calandri, Peverone ou Pagani — avaient des *"opinions diverses"* sur le problème des partis. Comme le résume Tartaglia :
 
 > La résolution d’une telle question est davantage d’ordre judiciaire que rationnel et, de quelque manière qu’on veuille la résoudre, on y trouvera sujet à litiges.
 
