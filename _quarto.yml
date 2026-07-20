@@ -20,6 +20,8 @@ website:
         href: handicap.qmd
       - text: "Musique"
         href: musique.qmd
+      - text: "Vulgarisation"
+        href: vulgarisation.qmd
     right:
       - text: "À propos"
         href: about.qmd
