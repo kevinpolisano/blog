@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>Quand interrompre un jeu devient un problème mathématique – Blog de Kévin Polisano</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -26,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -59,10 +61,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,7 +103,7 @@ gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -114,7 +116,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -304,7 +306,7 @@ Cardano, Hieronymus. 1539. <em>Practica Arithmetice Et Mensurandi Singularis</em
 </section>
 <section id="la-correspondance-entre-pascal-et-fermat" class="level1 page-columns page-full">
 <h1>La correspondance entre Pascal et Fermat</h1>
-<p>En 1654,&nbsp;<a href="https://en.wikipedia.org/wiki/Antoine_Gombaud">Antoine Gombaud</a>,&nbsp;connu sous le nom de&nbsp;chevalier de Méré, soumit le problème à&nbsp;<a href="https://en.wikipedia.org/wiki/Blaise_Pascal">Blaise Pascal</a>, qui entama alors une correspondance avec&nbsp;<a href="https://en.wikipedia.org/wiki/Pierre_de_Fermat">Pierre de Fermat</a>. De cette discussion entre ces&nbsp;deux géants des mathématiques émergèrent non seulement une solution rigoureuse et satisfaisante, mais aussi les premières idées qui allaient donner naissance à la théorie des probabilités.</p>
+<p>En 1654,&nbsp;<a href="https://en.wikipedia.org/wiki/Antoine_Gombaud">Antoine Gombaud</a>,&nbsp;connu sous le nom de&nbsp;chevalier de Méré, soumit le problème à&nbsp;<a href="https://en.wikipedia.org/wiki/Blaise_Pascal">Blaise Pascal</a>, qui entama alors une <a href="https://gallica.bnf.fr/ark:/12148/bpt6k69975r/f204.image">correspondance</a> avec&nbsp;<a href="https://en.wikipedia.org/wiki/Pierre_de_Fermat">Pierre de Fermat</a>. De cette discussion entre ces&nbsp;deux géants des mathématiques émergèrent non seulement une solution rigoureuse et satisfaisante, mais aussi les premières idées qui allaient donner naissance à la théorie des probabilités.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pascal-fermat.jpg" class="img-fluid figure-img"></p>
@@ -314,8 +316,8 @@ Cardano, Hieronymus. 1539. <em>Practica Arithmetice Et Mensurandi Singularis</em
 <p>Leur intuition fondamentale est la suivante : le partage de la mise ne doit pas dépendre du déroulement passé de la partie, mais des différentes façons dont elle aurait pu se poursuivre. Autrement dit, ce qui compte n’est pas le nombre de manches déjà remportées, mais le nombre de manches qu’il reste à gagner, une idée que Cardan avait déjà pressentie. Il ne faut donc plus regarder vers le passé, mais <strong>se projeter vers le futur</strong>.</p>
 <section id="illustration-avec-le-jeu-de-pile-ou-face" class="level2">
 <h2 class="anchored" data-anchor-id="illustration-avec-le-jeu-de-pile-ou-face">Illustration avec le jeu de pile ou face</h2>
-<p>Pascal et&nbsp;Fermat lancent successivement une pièce : si la pièce tombe sur pile (P), Pascal marque un point, si la pièce tombe sur face (F), c’est Fermat qui marque un point. Le premier à atteindre trois points a gagné. Au début du jeu, les deux adversaires <strong>misent une somme égale d’argent</strong>, disons 32€, et le vainqueur récupère l’ensemble de l’argent mis en jeu, soit 64€.</p>
-<p>Supposons que le jeu s’interrompe avant la fin. Comment les joueurs doivent-ils se répartir les mises de façon juste, c’est-à-dire, suivant les mots de Pascal, <em>«&nbsp;proportionnellement à ce qu’ils sont en droit d’espérer de la fortune&nbsp;»</em>&nbsp;?</p>
+<p>Pascal et&nbsp;Fermat lancent une pièce à tour de rôle : si elle tombe sur pile (P), Pascal remporte la manche, tandis que si elle tombe sur face (F), Fermat la remporte. La victoire est accordée au premier qui remporte trois manches. Pascal et Fermat <strong>misent une somme égale d’argent</strong>, disons 32€, et le vainqueur récupère l’ensemble de l’argent mis en jeu, soit 64€.</p>
+<p>Pour une raison quelconque, le jeu est interrompu sans qu’aucun des joueurs n’ait remporté trois manches. Quelle doit être la juste répartition des mises initiales, se demande Pascal, de sorte que celle-ci soit établie <em>«&nbsp;proportionnellement à ce qu’ils sont en droit d’espérer de la fortune&nbsp;»</em>&nbsp;?</p>
 <p>Notons <span class="math inline">\((p,f)\)</span> le nombre de manches qu’il reste à gagner respectivement à Pascal et Fermat pour remporter la victoire, et <span class="math inline">\(E(p,f)\)</span> le montant que Pascal doit recevoir en cas d’interruption du jeu à ce stade.</p>
 </section>
 <section id="la-solution-de-pascal" class="level2 page-columns page-full">
@@ -329,10 +331,8 @@ Cardano, Hieronymus. 1539. <em>Practica Arithmetice Et Mensurandi Singularis</em
 <p>Ainsi, Pascal est sûr d’obtenir au moins 32€. Pour les 32 restants, il a une chance sur deux de les gagner. Il peut donc en réclamer la moitié, soit 16€. Au total, Pascal doit recevoir ﻿48€, et Fermat 16€.</p>
 <p><strong>Cas intermédiaires</strong>. Pascal procède pas à pas. Il imagine que l’on joue une manche de plus, puis que l’on sait déjà comment partager équitablement les gains dans les deux cas possibles (selon qui gagne cette manche). Comme chaque joueur a une chance sur deux de gagner la manche suivante, il suffit de prendre la moyenne de ces deux répartitions : <span class="math display">\[\color{violet} E(p,f)=\frac{E(p−1,f)+E(p,f−1)}{2}\]</span> Autrement dit, la valeur d’une position est la moyenne des valeurs des positions suivantes. Ainsi, en connaissant les cas simples (où le jeu est presque terminé), on peut remonter progressivement pour déterminer la solution dans les situations plus complexes. En résumé l’argument de Pascal consiste à <strong>remonter dans le passé</strong> depuis les situations hypothétiques où l’un des deux joueurs a remporté le jeu.</p>
 <p>Le schéma animé ci-dessous illustrant le procédé itératif, ainsi que le suivant, est inspiré de l’<a href="https://www.youtube.com/watch?v=IRGQkzm-gyw">exposé</a> donné par <a href="https://fr.wikipedia.org/wiki/Gr%C3%A9gory_Miermont">Grégory Miermont</a> et adapté de <span class="citation" data-cites="mathieu2023blaise">(<a href="#ref-mathieu2023blaise" role="doc-biblioref">Mathieu and Miermont 2023</a>)</span>.</p>
-<div class="no-row-height column-margin column-container"><div id="ref-mathieu2023blaise" class="csl-entry" role="listitem">
-Mathieu, Pierre, and Grégory Miermont. 2023. <span>“Blaise Pascal Et Pierre de Fermat, g<span>é</span>om<span>è</span>tres Du Hasard.”</span> <em>Courrier Blaise Pascal</em>, no. 45: 53–89.
-</div></div><p><img src="animation-pascal.gif" class="img-fluid"></p>
-<p>Dans le cas où la partie aurait été interrompue après un seul lancer tombé sur pile,&nbsp;où il manque donc deux parties à gagner pour Pascal pour Fermat, on en conclut que Pascal doit recevoir <span class="math inline">\(\color{violet}E(2,&nbsp;3)=44\)</span> euros et Fermat 16€.</p>
+<div class="no-row-height column-margin column-container"></div><p><img src="animation-pascal.gif" class="img-fluid"></p>
+<p>Dans le cas où la partie aurait été interrompue après un seul lancer tombé sur pile,&nbsp;où il manque donc deux parties à gagner pour Pascal pour Fermat, on en conclut que Pascal doit recevoir <span class="math inline">\(\color{violet}E(2,&nbsp;3)=44\)</span> euros et Fermat 20€.</p>
 </section>
 <section id="la-solution-de-fermat" class="level2">
 <h2 class="anchored" data-anchor-id="la-solution-de-fermat">La solution de Fermat</h2>
@@ -367,11 +367,19 @@ Mathieu, Pierre, and Grégory Miermont. 2023. <span>“Blaise Pascal Et Pierre d
 <p><img src="arbre-fermat.jpg" class="img-fluid"></p>
 <p>à chaque lancer, pile ou face a une probabilité 1/2, et la probabilité d’un chemin s’obtient en multipliant celles des branches. C’est d’ailleurs exactement ainsi qu’un élève de Terminale résoudrait aujourd’hui ce problème.</p>
 </section>
-<section id="comparaison-des-deux-approches" class="level2">
+<section id="comparaison-des-deux-approches" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="comparaison-des-deux-approches">Comparaison des deux approches</h2>
-<p>Fermat raisonne donc à partir de situations que l’on peut qualifier de <em>« fictives »</em>. Blaise Pascal en est parfaitement conscient, mais il en défend la pertinence : ces manches feintes n’altèrent en rien le résultat final. Elles permettent simplement de mettre toutes les issues sur un pied d’égalité et de simplifier le calcul. Comme le souligne Pierre de Fermat lui-même : <em>« cette fiction d’étendre le jeu à un certain nombre de parties, ne sert qu’à faciliter la règle, et (suivant mon sentiment) à rendre tous les hasards égaux »</em>. Il précise encore que <em>« l’extension à un certain nombre de parties n’est autre chose que la réduction de diverses fractions à un même dénominateur »</em> et conclut, dans un esprit de conciliation à l’égard de Pascal : <em>« Voilà en peu de mots tout le mystère, qui nous remettra sans doute en bonne intelligence, puisque nous ne cherchons l’un et l’autre que la raison et la vérité »</em>.</p>
-<p>L’un des grands intérêts de ce problème, tel qu’il apparaît dans la correspondance entre Pascal et Fermat, est précisément la différence de leurs approches. Bien qu’elles reposent sur des idées très distinctes, elles conduisent au même résultat, ce qui inspire à Pascal cette formule célèbre : <em>« je vois bien que la vérité est la même à Toulouse et à Paris »</em>. En termes modernes, on dirait que Fermat construit un espace de probabilités adapté, où la question se ramène à un simple problème de dénombrement. De son côté, Pascal envisage le jeu comme une forme de contrat entre les joueurs et cherche à déterminer ce que chacun peut légitimement revendiquer sur la mise. Ce faisant, il introduit, de manière encore implicite, la notion d’<a href="https://fr.wikipedia.org/wiki/Esp%C3%A9rance_math%C3%A9matique">espérance mathématique</a>, qui sera ensuite formalisée par <a href="https://fr.wikipedia.org/wiki/Christian_Huygens">Christian Huygens</a>.</p>
-</section>
+<p>Fermat raisonne donc à partir de situations que l’on peut qualifier de <em>« fictives »</em>. Blaise Pascal en est parfaitement conscient, et il en défend la pertinence (du moins pour deux joueurs) : ces manches feintes n’altèrent en rien le résultat final. Elles permettent simplement de mettre toutes les issues sur un pied d’égalité et de simplifier le calcul. Les mathématiques ont l’art d’ajouter des éléments imaginaires pour pouvoir résoudre plus facilement certains problèmes (les nombres complexes, appelés aussi <em>nombres imaginaires</em>, en sont une parfaite illustration). Comme le souligne Pierre de Fermat lui-même : <em>« cette fiction d’étendre le jeu à un certain nombre de parties, ne sert qu’à faciliter la règle, et (suivant mon sentiment) à rendre tous les hasards égaux »</em>. Il précise encore que <em>« l’extension à un certain nombre de parties n’est autre chose que la réduction de diverses fractions à un même dénominateur »</em> et conclut, dans un esprit de conciliation à l’égard de Pascal : <em>« Voilà en peu de mots tout le mystère, qui nous remettra sans doute en bonne intelligence, puisque nous ne cherchons l’un et l’autre que la raison et la vérité »</em>.</p>
+<p>Pour conclure avec <span class="citation" data-cites="mathieu2023blaise">(<a href="#ref-mathieu2023blaise" role="doc-biblioref">Mathieu and Miermont 2023</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-mathieu2023blaise" class="csl-entry" role="listitem">
+Mathieu, Pierre, and Grégory Miermont. 2023. <span>“Blaise Pascal Et Pierre de Fermat, g<span>é</span>om<span>è</span>tres Du Hasard.”</span> <em>Courrier Blaise Pascal</em>, no. 45: 53–89.
+</div></div><blockquote class="blockquote">
+<p>L’un des grands intérêts de la résolution de ce problème dans la correspondance entre Pascal et Fermat est que leurs deux solutions sont très différentes. Elles parviennent pourtant au même résultat, ce qui nous vaudra le joli mot de Pascal : « je vois bien que la vérité est la même à Toulouse et à Paris ». En langage moderne, on dirait que Fermat trouve un bon espace de probabilités dans lequel le problème se ramène à une simple question de dénombrement. De son côté, Pascal voit le jeu comme une sorte de contrat passé entre les joueurs, et s’intéresse toujours à ce que chacun peut revendiquer sur une somme engagée dans le jeu. Ce faisant, il invente la notion d’espérance mathématique.</p>
+</blockquote>
+<p>Cette notion d’<a href="https://fr.wikipedia.org/wiki/Esp%C3%A9rance_math%C3%A9matique">espérance mathématique</a> sera ensuite formalisée par <a href="https://fr.wikipedia.org/wiki/Christian_Huygens">Christian Huygens</a> dans son traité sur le calcul des jeux de hasard <span class="citation" data-cites="huygens1657ratiociniis">(<a href="#ref-huygens1657ratiociniis" role="doc-biblioref">Huygens 1657</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-huygens1657ratiociniis" class="csl-entry" role="listitem">
+Huygens, Christiaan. 1657. <em>De Ratiociniis in Ludo Aleae</em>.
+</div></div></section>
 </section>
 <section id="retour-au-jeu-de-paume-et-au-championnat-du-monde-des-échecs" class="level1 page-columns page-full">
 <h1>Retour au jeu de paume et au championnat du monde des échecs</h1>
@@ -500,13 +508,14 @@ Kasparov, Gari Kimovitch, Catherine Ter-Sarkissian, Frank Straschitz, and Pierre
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

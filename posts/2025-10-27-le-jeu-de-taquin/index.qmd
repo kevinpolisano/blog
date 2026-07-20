@@ -169,14 +169,14 @@ L'histoire était certes approximative, comme on a pu le voir précédemment, ma
 
 Des tas de versions différentes du jeu virent le jour, voir par exemple [@storerFifteen] ou [@koliJeux2025] pour des photos de vieux exemplaires.
 
-Le jeu de Taquin[^taquin] a ensuite été traité sur le plan mathématiques dans plusieurs écrits (*cf*. tableau ci-dessous) sur lesquels nous reviendrons au moment d'expliquer sa résolution et les preuves d'impossibilité.
+Le jeu de Taquin[^5] a ensuite été traité sur le plan mathématiques dans plusieurs écrits (*cf*. tableau ci-dessous) sur lesquels nous reviendrons au moment d'expliquer sa résolution et les preuves d'impossibilité.
 
-[^taquin]: « Taquin » signifie « taquineur, qui cherche à agacer » : le mot colle parfaitement à ce casse-tête qui « taquine » le joueur. Les auteurs français ont franciser un jeu d’abord connu comme le « Fifteen Puzzle ». Commercialisé initialement sous d’autres appelations en France (« double casse-tête gaulois »), c’est « jeu du taquin » qui s’est finalement imposé.  
+[^5]: « Taquin » signifie « taquineur, qui cherche à agacer » : le mot colle parfaitement à ce casse-tête qui « taquine » le joueur. Les auteurs français ont franciser un jeu d’abord connu comme le « Fifteen Puzzle ». Commercialisé initialement sous d’autres appelations en France (« double casse-tête gaulois »), c’est « jeu du taquin » qui s’est finalement imposé.
 
 | Titre | Auteur | Date | Référence |   |
 |---------------|---------------|---------------|---------------|---------------|
 | [Les carrés magiques](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | **Gaston Tissandier** | 10/07/1880 | [@tissandierCarres1880] |  |
-| [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Les-carres-magiques-gaston-tissandier-10-juillet-1880.pdf) | **Jean Piarron de Mondésir** | 25/09/1880 | [@piarrondemondesirDernier1880] |  |
+| [Le dernier mot du Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Le-dernier-mot-du-taquin-jean-piarron-de-mondesir-25-septembre-1880.pdf) | **Jean Piarron de Mondésir** | 25/09/1880 | [@piarrondemondesirDernier1880] |  |
 | La clé du Taquin | **Henry Fleury** | 1880 | [@fleuryCle1880] |  |
 | Sur le taquin | **Charles Henry** | 1880 | [@henryTaquin1880] |  |
 | [Le jeu de Taquin](https://kevinpolisano.github.io/pdf-storage/Posts/Taquin/Lucas-1882-Recreations-mathematiques.pdf) | **Édouard Lucas** | 1882 | [@lucasRecreations1882] |  |

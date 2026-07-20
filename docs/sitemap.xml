@@ -1,55 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kevinpolisano.fr/posts/2024-12-26-migration-wp-to-quarto/index.html</loc>
-    <lastmod>2025-04-16T07:59:47.031Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kevinpolisano.fr/index.html</loc>
-    <lastmod>2024-12-28T19:20:53.584Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kevinpolisano.fr/handicap.html</loc>
-    <lastmod>2025-04-16T08:05:13.994Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.kevinpolisano.fr/musique.html</loc>
-    <lastmod>2026-01-09T09:09:59.385Z</lastmod>
+    <lastmod>2026-01-09T09:09:59.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.kevinpolisano.fr/posts/2025-07-07-les-mathematiques-du-rubik-cube/index.html</loc>
-    <lastmod>2025-12-18T19:48:36.468Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.kevinpolisano.fr/slides/2025-10-05-rubik/rubik.html</loc>
-    <lastmod>2025-10-05T15:30:13.747Z</lastmod>
+    <loc>https://www.kevinpolisano.fr/slides/2024-11-21-intro-ia/intro-ia.html</loc>
+    <lastmod>2024-12-26T16:37:30.000Z</lastmod>
   </url>
   <url>
     <loc>https://www.kevinpolisano.fr/slides/2025-10-05-rubik/rubik2.html</loc>
-    <lastmod>2025-10-05T16:06:54.107Z</lastmod>
+    <lastmod>2025-10-05T16:06:54.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.kevinpolisano.fr/slides/2025-10-05-rubik/rubik3.html</loc>
-    <lastmod>2025-10-05T16:18:13.482Z</lastmod>
+    <loc>https://www.kevinpolisano.fr/slides/2026-05-22-taquin/taquin.html</loc>
+    <lastmod>2026-06-08T13:57:48.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.kevinpolisano.fr/posts/2025-10-27-le-jeu-de-taquin/index.html</loc>
-    <lastmod>2026-02-05T15:14:02.440Z</lastmod>
+    <loc>https://www.kevinpolisano.fr/etudes.html</loc>
+    <lastmod>2025-04-15T14:46:22.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.kevinpolisano.fr/posts/2025-10-27-le-jeu-de-taquin/references.html</loc>
-    <lastmod>2025-12-18T16:34:09.731Z</lastmod>
+    <loc>https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/index.html</loc>
+    <lastmod>2025-04-15T15:10:44.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.kevinpolisano.fr/posts/2025-10-27-le-jeu-de-taquin/dummy.html</loc>
-    <lastmod>2025-10-29T16:16:46.114Z</lastmod>
+    <loc>https://www.kevinpolisano.fr/posts/2013-04-02-comment-installer-kile-live-preview/index.html</loc>
+    <lastmod>2025-04-15T14:50:11.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.kevinpolisano.fr/posts/2025-10-27-le-jeu-de-taquin/references_processed.html</loc>
-    <lastmod>2025-10-30T16:08:39.251Z</lastmod>
+    <loc>https://www.kevinpolisano.fr/posts/2015-04-14-impots-2015-explication-du-calcul-pour-personne-valide-et-handicapee/index.html</loc>
+    <lastmod>2025-04-15T15:03:30.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-08-17-comment-telecharger-une-video-ou-playlist-youtube-sous-linux/index.html</loc>
+    <lastmod>2025-04-15T14:55:27.000Z</lastmod>
   </url>
   <url>
     <loc>https://www.kevinpolisano.fr/posts/2026-03-30-le-probleme-des-partis/index.html</loc>
-    <lastmod>2026-04-02T15:03:21.139Z</lastmod>
+    <lastmod>2026-07-20T12:02:53.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2016-01-31-supprimer-la-bordure-blanche-dune-image-eps-en-modifiant-la-boundingbox/index.html</loc>
+    <lastmod>2025-04-15T15:05:51.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2017-01-03-laah-investigation-le-prix-de-lamour/index.html</loc>
+    <lastmod>2025-04-15T15:08:10.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-05-20-casse-tete-n2-une-piscine-originale/index.html</loc>
+    <lastmod>2025-04-15T14:51:43.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2014-07-06-comprendre-son-bulletin-de-paie/index.html</loc>
+    <lastmod>2025-04-15T14:58:30.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/index.html</loc>
+    <lastmod>2025-04-15T15:11:43.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2015-09-09-et-si-on-rendait-laah-imposable/index.html</loc>
+    <lastmod>2025-04-15T15:04:57.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2019-03-06-manifeste-pour-laccessibilite-de-la-vie-de-couple/index.html</loc>
+    <lastmod>2025-04-15T15:09:48.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-03-28-comment-installer-la-librairie-libqglviewer/index.html</loc>
+    <lastmod>2025-04-15T14:49:21.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2014-07-15-quels-impots-pour-les-personnes-handicapees/index.html</loc>
+    <lastmod>2025-04-15T14:59:34.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2014-07-17-ambiguite-sur-la-nature-des-ressources-a-declarer-a-la-caf-pour-le-calcul-de-laah/index.html</loc>
+    <lastmod>2025-04-15T15:01:08.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/handicap.html</loc>
+    <lastmod>2025-04-16T08:05:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2014-07-25-le-mariage-pour-tous-sauf-pour-les-personnes-handicapees/index.html</loc>
+    <lastmod>2025-04-15T15:01:57.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2018-05-11-rediger-efficacement-sa-these-avec-latex-maitriser-son-editeur-prefere/index.html</loc>
+    <lastmod>2025-04-15T15:08:58.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-06-05-comment-piloter-r-a-partir-de-matlab-et-vice-versa/index.html</loc>
+    <lastmod>2025-04-15T14:52:32.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2024-12-26-migration-wp-to-quarto/index.html</loc>
+    <lastmod>2025-04-16T07:59:47.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2015-04-08-detection-de-contours-par-laplacien/index.html</loc>
+    <lastmod>2025-04-15T15:02:44.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-10-20-google-analytics-pour-wordpress-heberge-sur-free-fr/index.html</loc>
+    <lastmod>2025-04-15T14:56:58.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2014-07-16-casse-tete-n3-une-moyenne-bien-entouree/index.html</loc>
+    <lastmod>2025-04-15T15:00:20.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2016-03-03-creer-une-documentation-etou-une-toolbox-dans-matlab/index.html</loc>
+    <lastmod>2025-04-15T15:06:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-10-21-son-fonctionnant-aleatoirement-sous-ubuntu-12-04/index.html</loc>
+    <lastmod>2025-04-15T14:57:40.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2025-07-07-les-mathematiques-du-rubik-cube/index.html</loc>
+    <lastmod>2025-12-18T19:48:36.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-10-17-carte-memoire-sd-realtek-non-reconnue-sous-linux/index.html</loc>
+    <lastmod>2025-04-15T14:56:16.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-07-24-comment-installer-et-utiliser-adimat-pour-matlab/index.html</loc>
+    <lastmod>2025-04-15T14:54:45.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2016-10-29-backup-de-wordpress-sur-free/index.html</loc>
+    <lastmod>2025-04-15T15:07:26.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2013-05-13-casse-tete-n1-la-pizza/index.html</loc>
+    <lastmod>2025-04-15T14:50:57.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2025-10-27-le-jeu-de-taquin/index.html</loc>
+    <lastmod>2026-04-10T08:35:05.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/posts/2015-06-07-a-deux-doigts-de-la-levitation-light-as-a-feather-stiff-as-a-board/index.html</loc>
+    <lastmod>2025-04-15T15:04:20.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/index.html</loc>
+    <lastmod>2024-12-28T19:20:53.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/slides/2025-10-05-rubik/rubik3.html</loc>
+    <lastmod>2025-10-05T16:18:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/slides/2025-10-05-rubik/rubik.html</loc>
+    <lastmod>2025-10-05T15:30:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kevinpolisano.fr/about.html</loc>
+    <lastmod>2025-04-03T08:21:07.000Z</lastmod>
   </url>
 </urlset>

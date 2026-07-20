@@ -16,3 +16,4 @@ docs/images/guitare2.jpg
 posts/mys.py
 posts/script-wp-to-quarto.py
 posts/uploads/
+**/*.quarto_ipynb
