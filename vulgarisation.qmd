@@ -21,6 +21,7 @@ lightbox:
 ### Dans la presse
 
 - [Quand interrompre un jeu devient un problème mathématique](https://www.echosciences-grenoble.fr/articles/quand-interrompre-un-jeu-devient-un-probleme-mathematiques), *Echosciences Grenoble*, 2 avril 2026.
+- [Entretien avec Emmanuel Candès](https://kevinpolisano.github.io/pdf-storage/Doctorat/candes-interview.pdf), 16 juin 2014.
 
 ## Vidéos
 
