@@ -44,6 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -154,6 +157,11 @@ gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
   </ul></li>
   <li><a href="#vidéos" id="toc-vidéos" class="nav-link" data-scroll-target="#vidéos">Vidéos</a></li>
   <li><a href="#présentations" id="toc-présentations" class="nav-link" data-scroll-target="#présentations">Présentations</a></li>
+  <li><a href="#ateliers" id="toc-ateliers" class="nav-link" data-scroll-target="#ateliers">Ateliers</a>
+  <ul class="collapse">
+  <li><a href="#le-jeu-de-taquin-démontrer-limpossible" id="toc-le-jeu-de-taquin-démontrer-limpossible" class="nav-link" data-scroll-target="#le-jeu-de-taquin-démontrer-limpossible">Le jeu de taquin : démontrer l’impossible !</a></li>
+  <li><a href="#percer-les-mystères-mathématiques-du-rubiks-cube" id="toc-percer-les-mystères-mathématiques-du-rubiks-cube" class="nav-link" data-scroll-target="#percer-les-mystères-mathématiques-du-rubiks-cube">Percer les mystères mathématiques du Rubik’s cube</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -197,7 +205,7 @@ gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="dans-la-presse">Dans la presse</h3>
 <ul>
 <li><a href="https://www.echosciences-grenoble.fr/articles/quand-interrompre-un-jeu-devient-un-probleme-mathematiques">Quand interrompre un jeu devient un problème mathématique</a>, <em>Echosciences Grenoble</em>, 2 avril 2026.</li>
-<li><a href="https://kevinpolisano.github.io/pdf-storage/Doctorat/candes-interview.pdf">Entretien avec Emmanuel Candès</a>, 16 juin 2014.</li>
+<li><a href="https://kevinpolisano.github.io/pdf-storage/Doctorat/candes-interview.pdf">Entretien avec Emmanuel Candès</a>, <em>Remise du prix Jean Kuntzmann</em>, 16 juin 2014.</li>
 </ul>
 </section>
 </section>
@@ -217,8 +225,32 @@ gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
 <iframe src="https://polisano.pages.math.cnrs.fr/slides/2024-11-21-intro-ia/intro-ia.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;">
 </iframe>
 </div>
+</section>
+<section id="ateliers" class="level2">
+<h2 class="anchored" data-anchor-id="ateliers">Ateliers</h2>
+<section id="le-jeu-de-taquin-démontrer-limpossible" class="level3">
+<h3 class="anchored" data-anchor-id="le-jeu-de-taquin-démontrer-limpossible">Le jeu de taquin : démontrer l’impossible !</h3>
+<p><img src="images/atelier-taquin-cover.jpeg" class="img-fluid"> <img src="images/atelier-taquin-description.jpeg" class="img-fluid"></p>
+</section>
+<section id="percer-les-mystères-mathématiques-du-rubiks-cube" class="level3">
+<h3 class="anchored" data-anchor-id="percer-les-mystères-mathématiques-du-rubiks-cube">Percer les mystères mathématiques du Rubik’s cube</h3>
+<p>Atelier durant lequel j’apprends aux jeunes (et aux moins jeunes) à résoudre le Rubik’s cube, puis à découvrir certaines propriétés mathématiques de ce fabuleux cube.</p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="images/atelier-rubiks-1.jpeg" class="lightbox" data-gallery="my-gallery"><img src="images/atelier-rubiks-1.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="images/atelier-rubiks-2.jpeg" class="lightbox" data-gallery="my-gallery"><img src="images/atelier-rubiks-2.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="images/atelier-rubiks-3.jpeg" class="lightbox" data-gallery="my-gallery"><img src="images/atelier-rubiks-3.jpeg" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -652,6 +684,38 @@ gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
   loadGiscus();
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","descPosition":"right","loop":true,"openEffect":"fade","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

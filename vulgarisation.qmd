@@ -21,7 +21,7 @@ lightbox:
 ### Dans la presse
 
 - [Quand interrompre un jeu devient un problème mathématique](https://www.echosciences-grenoble.fr/articles/quand-interrompre-un-jeu-devient-un-probleme-mathematiques), *Echosciences Grenoble*, 2 avril 2026.
-- [Entretien avec Emmanuel Candès](https://kevinpolisano.github.io/pdf-storage/Doctorat/candes-interview.pdf), 16 juin 2014.
+- [Entretien avec Emmanuel Candès](https://kevinpolisano.github.io/pdf-storage/Doctorat/candes-interview.pdf), *Remise du prix Jean Kuntzmann*, 16 juin 2014.
 
 ## Vidéos
 
@@ -41,3 +41,21 @@ lightbox:
 </iframe>
 :::
 
+## Ateliers
+
+### Le jeu de taquin : démontrer l'impossible !
+
+![](images/atelier-taquin-cover.jpeg)
+![](images/atelier-taquin-description.jpeg)
+
+### Percer les mystères mathématiques du Rubik's cube
+
+Atelier durant lequel j'apprends aux jeunes (et aux moins jeunes) à résoudre le Rubik's cube, puis à découvrir certaines propriétés mathématiques de ce fabuleux cube.
+
+::: {layout-ncol="3"}
+![](images/atelier-rubiks-1.jpeg){width="33%" group="my-gallery"}
+
+![](images/atelier-rubiks-2.jpeg){width="33%" group="my-gallery"}
+
+![](images/atelier-rubiks-3.jpeg){width="33%" group="my-gallery"}
+:::
