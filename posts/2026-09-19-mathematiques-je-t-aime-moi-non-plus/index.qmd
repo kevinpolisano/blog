@@ -272,7 +272,7 @@ Dans cette section je passe en revue une liste d'explications non exhaustive du 
 
 <!-- Les résultats TIMSS 2003 ont montré que 37% des élèves américains considèrent les mathématiques comme la matière la plus difficile [@inc_math_2005]. -->
 
-### La peur de l'erreur
+### Le rapport à l'erreur
 
 <!-- Grothendieck -->
 
@@ -285,6 +285,7 @@ Dans cette section je passe en revue une liste d'explications non exhaustive du 
 <!-- > Reformulées dans le contexte de la marche, les paroles de Grothendieck à propos du rôle de l’erreur deviennent lumineuses : Craindre de tomber et craindre de marcher est une seule et même chose. Celui qui craint de se casser la figure est impuissant à apprendre à marcher. C’est quand nous restons assis sur notre cul que notre maladresse initiale se transforme en un handicap psychomoteur. -->
 <!-- ### L'édifice cumulatif -->
 
+### L'anxiété mathématique
 
 ### Les rythmes asynchrones
 
@@ -485,9 +486,11 @@ Trêve de plaisanterie, faisons preuve de charité intellectuelle à l'égard de
 
 **Le règne de l'utile**
 
-Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie un signal où il signifie que tout le contenu mathématiques du secondaire qui est rarement appliqué ne sert donc à rien si ce n'est aux "matheux", contrairement aux autres que cela ennuie [@le_huffpost_epingle_2018]. Ce qui sert *in fine* la soupe à ceux qui clâment haut et fort que *"les maths ça ne sert à rien"*, pour eux, puisqu'il conclut en fin d'interview (au sujet du rapport Villani) par :
+Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie un signal où il signifie que tout le contenu mathématiques du secondaire qui est rarement appliqué ne sert donc à rien si ce n'est aux "matheux", contrairement aux autres que cela ennuie [@le_huffpost_epingle_2018]. Ce qui sert *in fine* la soupe à ceux qui clâment haut et fort que *"les maths ça ne sert à rien"*[^26], pour eux, puisqu'il conclut en fin d'interview (au sujet du rapport Villani) par :
 
 > À mon avis ça ne va pas rendre la bosse des maths à ceux qui ne l'ont pas (*rire*).
+
+[^26]: Il faut aussi savoir lire entre les lignes, ceux qui affirment que *"les maths ça ne sert à rien"* sont bien souvent ceux qui éprouvent des difficultés avec la matière, donc qui sont dans une situation d'incompréhension désagréable. Le rejet d'une matière est dans ce cas de figure un mécanisme de défense émotionnel. Face à la frustration de l'incompréhension et au sentiment d'échec, il est plus facile et moins douloureux pour l'ego de dévaloriser l'utilité des mathématiques plutôt que d'admettre ses propres difficultés.
 
 Ce qui, pour un ancien ministre de l'éducation, n'est pas des plus responsables qu'on se le dise. Comme le souligne cet économiste [@menia_luc_2018] en réponse à ce texte d'un collègue [@alexandre_luc_2018] :
 
@@ -538,6 +541,13 @@ Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, in
 
 [^25]: « Le véritable esprit de joie, d’exaltation, le sentiment d’être plus qu’un homme, qui sont la pierre de touche de l’excellence la plus haute, se trouvent dans les mathématiques comme dans la poésie » – Bertrand Russel.
 
+> L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?
+Jean-Rémi Girard : Chaque chose en son temps. Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
+
+**L'utilité comme motivation ?**
+
+L'utilité des mathématiques a été souvent mentionnée dans les réponses à la grande consultation nationale :
+
 ```{=html}
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
@@ -552,9 +562,6 @@ Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, in
     </div>
      <div class="carousel-item">
       <img src="images/consultation-cnrs-rendre-maths-accessible-1.png" class="d-block w-100">
-    </div>
-     <div class="carousel-item">
-      <img src="images/consultation-cnrs-rendre-maths-accessible-2.png" class="d-block w-100">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -585,12 +592,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-> L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?
-Jean-Rémi Girard : Chaque chose en son temps. Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
+Elles servent bien sûr dans bien des métiers, ainsi que dans des activités comme les jeux de société[^27] ou le bricolage. Il m'est déjà arrivé de devoir expliqué à un ami de mon père comment appliqué le théorème de Pythagore, en réponse à sa question de savoir si l'armoire qu'il construisait pouvait ensuite être redressée sans toucher le plafond :
 
-**L'utilité comme motivation ?**
+[^27]: C'est toujours satisfaisant d'être en mesure d'échaffauder des stratégies gagnantes grâce aux mathématiques, ou de pouvoir par exemple expliquer à mon fils comment marche ce tour de cartes.
 
-[@cosnefroy_sens_2007] bat cette idée en brèche :
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z-5KRaRqE5w?si=j-gJYEOI0JBjd7K1&amp;start=601" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Néanmoins cela n'arrive pas tous les quatre matins. Je ne suis pas certain que ces exemples d'applications utiles suffisent à motiver les troupes. [@cosnefroy_sens_2007] bat cette idée en brèche :
 
 > L’éveil de la curiosité disciplinaire ne passe quasiment jamais par l’utilité, pourtant fréquemment citée comme un ingrédient de l’intérêt. Ce décalage laisse penser que l’argument se développe après-coup, comme le suggèrent les propos de cet élève (12, G, 3, N3) : « l’anglais c’est une langue indispensable de nos jours. Pour travailler, dans n’importe quel pays on parle anglais, on comprend ». À la question de l’origine de son intérêt, il répond : « Depuis tout petit. Quand j’étais petit j’écoutais des chansons et des trucs comme ça, et je comprenais pas [...] Avec l’âge j’ai pensé au travail, mais quand j’étais petit c’était surtout les chansons et mes idoles. » La valorisation de l’utilité de la discipline se construit dans un second temps, une fois l’intérêt déjà établi. De même, si les mathématiques sont à plusieurs reprises associées à l’utilité dans la vie quotidienne, on ne peut que s’étonner du décalage entre les arguments invoqués et la nature des apprentissages effectués en cours. En effet, l’utilité des mathématiques consiste pour l’essentiel à fournir les savoir-faire nécessaires pour gérer l’économie domestique (impôts, comptes). Il est difficile d’imaginer qu’une telle conception de l’utilité, qui renvoie à des apprentissages de base, puisse soutenir durablement l’investissement dans des apprentissages autrement plus complexes à ce niveau de la scolarité.  Symétriquement, on s’interrogera sur la façon dont l’absence d’utilité est convoquée pour expliquer le désintérêt à l’égard d’une discipline. Plusieurs exemples concernent la physique : « la physique non plus on l’utilise pas dans la vie de tous les jours » (7, G, 3, N2). Il est surprenant de voir associé désintérêt et manque d’utilité dans une discipline pourtant porteuse d’applications diverses dans la vie quotidienne. Tout ceci pousse à renverser la causalité entre utilité et intérêt. L’utilité n’est probablement pas une raison déterminante de s’intéresser à la discipline. C’est plutôt en fonction de l’intérêt qu’on lui accorde qu’on définit l’utilité associée à la discipline. Le recours à l’utilité fonctionne alors comme une justification a posteriori, d’autant plus facile à mobiliser que la discipline en question se prête effectivement à des applications diversifiées. C’est la raison pour laquelle elle est si souvent évoquée pour l’anglais.
 
@@ -645,9 +653,70 @@ Pour ma part, si je souscris également à ces joies intellectuelles, je n'irais
 
 ![](images/didier-nordon-2007.png)
 
+Dans la consultation nationale du CNRS, nous avions vu qu'à la question de savoir comment rendre les mathématiques plus accessibles, les personnes interrogées répondaient en premier lieu "démontrer l'utilité des mathématiques" (71%), et beaucoup moins souvent "changer la place et la perception des mathématiques" (11%) : 
+
+![](images/consultation-cnrs-rendre-maths-accessible-2.png)
+
+C'est pourtant ce point décisif que je vais maintenant aborder.
+
+### Changer le regard sur les mathématiques (et les mathématiciens)
+
+**Les mots pour le dire**
+
+![](images/mots-evocation-maths.png)
+
+![](images/nuage-mots-maths.png)
+
+> Les cooccurrences montrent que les mathématiques sont avant tout associées à un univers de la raison et de la rigueur, dominé par le triptyque calcul – logique – raisonnement , davantage qu’une pratique vivante ou créative. En arrière-plan, quelques associations plus rares avec la beauté, le jeu ou l’utilité suggèrent l’existence d’un imaginaire alternatif — plus sensible, plus ouvert— mais encore marginal face à la puissance du modèle rationnel et scolaire.
 
 
-### Un décalage de perception
+> Lorsqu’on évoque le mot « mathématiques », les mots qui viennent spontanément à l’esprit sont majoritairement d’ordre technique. Ainsi, dans la consultation en ligne, les cinq mots les plus fréquents — logique, calcul, rigueur, réflexion, raisonnement — totalisent à eux seuls près de 30 % du corpus. Une part minoritaire exprime un ressenti affectif ou une évaluation. Les personnes peu à l’aise en mathématiques choisissent des mots négatifs (difficulté, complexité, peur, angoisse) et les personnes à l’aise des mots plutôt positifs (plaisir, jeu, beauté, curiosité). Par ailleurs, plus on avance en âge, plus le mot plaisir est récurrent. Enfin, on remarque très peu de termes qui font écho à l’ancrage concret des mathématiques dans la vie quotidienne et le terme « abstraction » revient en 6ème position des occurrences. Cette dimension pragmatique reste ainsi peu présente dans les représentations spontanées. 
+
+Qui plus est ces représentations portent sur un échantillon de participants non représentatif de la population (surreprésentation des personnes diplômées), la synthèse précisant que : "71% des répondantes et répondants déclarent se sentir soit très à l’aise - soit plutôt à l’aise avec les mathématique". On imagine donc sans mal que l'association des maths à une activité sensible et créative soit encore moins répandue dans la population générale. 
+
+```{=html}
+<div id="carouselExample2" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/souvenirs-maths-1.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="images/souvenirs-maths-2.png" class="d-block w-100">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+```
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var carouselEl = document.getElementById('carouselExample2');
+  if (carouselEl && typeof bootstrap !== 'undefined') {
+    // Détruire une instance existante si elle existe (sécurité)
+    var existingInstance = bootstrap.Carousel.getInstance(carouselEl);
+    if (existingInstance) {
+      existingInstance.dispose();
+    }
+    new bootstrap.Carousel(carouselEl, {
+      interval: false,
+      ride: false
+    });
+  }
+});
+</script>
+
+> Plus les personnes sont à l’aise avec les mathématiques, plus elles évoquent des souvenirs positifs à l’école – des souvenirs liés au jeu, à la découverte, à la résolution de problèmes (38% vs. 22% pour les moins à l’aise). Parmi les mots utilisés par les personnes répondantes à l’aise, reviennent : « passionnant », « valorisation », « bons souvenirs », « explorer ». 21% des personnes à l’aise en mathématiques indiquent que celles-ci ont eu un impact positif sur leur parcours (contre 9% des personnes pas à l’aise). À l’inverse, les personnes peu à l’aise associent beaucoup plus leurs souvenirs à des émotions négatives : « stress », « frustration », « peur », « souvenirs » qualifiés de « cauchemardesques », « horribles », « douloureux », une thématique évoquée par 14% d’entre elles contre seulement 4% des personnes à l’aise. 20% des personnes pas à l’aise en mathématiques répondent que celles-ci ont généré des sentiments négatifs (contre 3% des personnes à l’aise)
+
+Dans le livre de [@duminil-copin_autre_2026] :
+
+>  Camille finit par se dire que le souci vient des mathématiques, elles-mêmes : froides, arides, sans émotion ni créativité, trop abstraites. L'adulte en gardera un souvenir douloureux et un profond ressentiment. Dans son esprit, les mathématiques se réduiront à un critère de tri scolaire et social. En guise de protection contre sa frustration, Camille développera une étrange forme de fierté : celle d'appartenir au club des "nuls en maths". 
+
+
 
 <!-- J'ouvre une parenthèse, pour aborder brièvement cette question soulevée pr la journaliste à l'issue de l'interview : -->
 
@@ -661,10 +730,15 @@ Pour ma part, si je souscris également à ces joies intellectuelles, je n'irais
 
 <!-- Parenthèse refermée, il me semble qu'il y a donc une forme de lucidité des élèves et des adultes quant à la perception de l'utilité des mathématiques pour la société et de leur importance dans les choix d'orientation scolaire. En revanche là où le bat blesse, nous allons le voir, c'est que la perception qu'ils ont des mathématiques elles-mêmes, ne correspond pas à la représentation que s'en font les mathématiciens dans leur pratique.  -->
 
+**Un décalage de perception**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YBZHoxpPBuA?si=v21waUzlMsH11AMo&amp;start=389" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Le documentaire français [*Comment j'ai détesté les maths*](https://fr.wikipedia.org/wiki/Comment_j%27ai_d%C3%A9test%C3%A9_les_maths) [@olivier_peyon_comment_2013] sorti en novembre 2013, *"donne la parole à ceux qui ont subi l'enseignement des mathématiques, et l'ont en général détesté, parfois adoré"*. Dès les dix premières minutes, se fait directement ressentir le décalage de perception des mathématiques entre les élèves et les mathématiciens de profession. Voici quelques extraits du point de vue des lycéens :
 
-Cédric Villani :
+> Il n'existe pas de société où la majorité des gens aiment les maths. [...] Même moi qui suis bon je n'aime pas les maths.
+
+> Je peux concevoir que les maths soient fascinantes et créatives pour certains, mais à notre niveau il n'y a rien de vraiment créatif. Pour atteindre ce stade, il faut être un mathématicien de haut vol, alors qu'en littérature vous pouvez être créatif dès le début, raconter votre journée sans intérêt et vous amuser.
+
+Donnons maintenant la parole à un mathématicien de haut vol, Cédric Villani, qui décrivait juste après l'intervention des élèves la dualité des mathématiques :
 
 > Les mathématiques sont rigoureuses ouais mais imaginatives aussi, les mathématiques sont abstraites mais universelles, les mathématiques sont inégalitaires et démocratiques, sont anciennes et en mutation permanente, sont solitaires et sociales à la fois, sont difficiles et simplissimes.
 
@@ -675,11 +749,17 @@ Cédric Villani :
 | inégalitaires | démocratiques  |
 | anciennes  | en mutation   |
 | solitaires   | sociales  |
-| difficiles | simplissimes.  |
+| difficiles | simplissimes  |
 
 : Caractérisation des mathématiques {.striped .hover}
 
-À COMPLÉTER
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBZHoxpPBuA?si=v21waUzlMsH11AMo&amp;start=389" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+De la bouche même de Cédric Villani, la colonne de droite est plus *sexy*. Alors pourquoi les élèves ne perçoivent principalement que la colonne de gauche évoquant des affects "froid" ? Pourquoi l'école ne parvient pas à véhiculer ces autres affects plus "chaleureux" ?
+
+**Perception des collégiens et des élèves d'école primaire**
+
+A COMPLETER
 
 
 <!-- > « Je me souviens très bien de ce que j’ai ressenti la première fois que j’ai vu des gens faire du kitesurf. Je me suis dit que ce que je voyais n’était pas possible. Et dans le même temps c’était visiblement possible. Je suis resté longtemps à regarder.Quelque chose du même ordre m’a intrigué lors de ma rencontre avec les mathématiques. Elles m’ont semblé trop dures, trop abstraites, trop incompréhensibles. Faire des mathématiques, ça n’avait pas l’air possible. Et dans le même temps, ça avait l’air possible.La difficulté des mathématiques, le vertige et la terreur qu’elles nous inspirent, ce n’est que la première partie de l’expérience émotionnelle. La seconde partie, c’est l’incroyable sentiment de puissance et de magie qui se dégage de la compréhension profonde, quand on finit par découvrir que non seulement c’était possible, mais qu’en plus c’était facile.C’était même facile depuis le début et on ne le voyait pas.Chaque apprentissage mathématique reproduit cette double expérience de vertige et de puissance. Si vous n’aimez pas les sensations fortes, les mathématiques ne sont pas faites pour vous. » -->
@@ -688,9 +768,7 @@ Cédric Villani :
 
 <!-- > J'ai un ami artiste qui a parfois des opinions que je ne partage pas vraiment. Il me montre une fleur et dit : « Regarde comme elle est belle ! » et je suis d'accord. Puis il ajoute : « Moi, en tant qu'artiste, je vois bien sa beauté, mais toi, en tant que scientifique, tu la disséques et elle devient ennuyeuse. » Je le trouve un peu farfelu. D'abord, la beauté qu'il perçoit est accessible à tous, et à moi aussi, je crois… Je peux apprécier la beauté d'une fleur. En même temps, j'en perçois bien plus que lui. J'imagine les cellules qui la composent, les mécanismes complexes qui s'y déroulent, lesquels recèlent eux aussi une beauté. Je veux dire, la beauté ne se limite pas à cette échelle, à un centimètre ; elle se manifeste également à des échelles plus petites, dans la structure interne, dans les processus qui la composent. Le fait que les couleurs de la fleur aient évolué pour attirer les insectes pollinisateurs est fascinant ; cela signifie que les insectes sont capables de percevoir les couleurs. Cela soulève une question : ce sens esthétique existe-t-il aussi chez les formes inférieures ? Pourquoi est-ce esthétique ? Autant de questions passionnantes auxquelles la science ne fait qu'ajouter à l'émerveillement, au mystère et à la fascination que suscite une fleur. Elle ne fait qu'enrichir. Je ne vois pas comment elle pourrait en altérer la beauté. -->
 
-### Changer le regard sur les mathématiques (et les mathématiciens)
 
-À COMPLÉTER
 
 <!-- Je n'aime pas cette expression comme "changer le regard sur le handicap" -->
 
