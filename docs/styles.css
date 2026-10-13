@@ -25,3 +25,26 @@ blockquote {
     position: relative; /* Nécessaire pour placer les guillemets */
 }
 
+blockquote strong {
+  font-weight: bold !important;
+  color: #000;
+  font-style: italic; /* le gras est plus visible sans italique concurrent */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Zone cliquable */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+    border-radius: 50%; /* Forme circulaire */
+    padding: 20px;
+    background-size: 50%, 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Plus foncé au survol */
+}

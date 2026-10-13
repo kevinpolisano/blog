@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kévin Polisano">
+<meta name="dcterms.date" content="2026-09-19">
+
+<title>Mathématiques : je t’aime, moi non plus… – Blog de Kévin Polisano</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6033a600180109c3731f6a886c29932c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4E0K892EGY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4E0K892EGY', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed slimcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Blog de Kévin Polisano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../etudes.html"> 
+<span class="menu-text">Études</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/"> 
+<span class="menu-text">Recherche</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://polisano.pages.math.cnrs.fr/#teaching"> 
+<span class="menu-text">Enseignement</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../handicap.html"> 
+<span class="menu-text">Handicap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../musique.html"> 
+<span class="menu-text">Musique</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../vulgarisation.html"> 
+<span class="menu-text">Vulgarisation</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Mathématiques : je t’aime, moi non plus…</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">mathématiques</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Kévin Polisano </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 19, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sommaire</h2>
+   
+  <ul>
+  <li><a href="#les-mathématiques-matière-préférée-des-élèves" id="toc-les-mathématiques-matière-préférée-des-élèves" class="nav-link active" data-scroll-target="#les-mathématiques-matière-préférée-des-élèves">Les mathématiques, matière préférée des élèves ?</a>
+  <ul class="collapse">
+  <li><a href="#élèves-décole-primaire" id="toc-élèves-décole-primaire" class="nav-link" data-scroll-target="#élèves-décole-primaire">Élèves d’école primaire</a></li>
+  <li><a href="#collégiens" id="toc-collégiens" class="nav-link" data-scroll-target="#collégiens">Collégiens</a></li>
+  <li><a href="#lappétence-sétiole-de-la-primaire-au-collège" id="toc-lappétence-sétiole-de-la-primaire-au-collège" class="nav-link" data-scroll-target="#lappétence-sétiole-de-la-primaire-au-collège">L’appétence s’étiole de la primaire au collège</a></li>
+  <li><a href="#lycéens" id="toc-lycéens" class="nav-link" data-scroll-target="#lycéens">Lycéens</a></li>
+  <li><a href="#étude-longitudinale" id="toc-étude-longitudinale" class="nav-link" data-scroll-target="#étude-longitudinale">Étude longitudinale</a></li>
+  <li><a href="#les-adultes" id="toc-les-adultes" class="nav-link" data-scroll-target="#les-adultes">Les adultes</a></li>
+  </ul></li>
+  <li><a href="#les-raisons-du-désamour" id="toc-les-raisons-du-désamour" class="nav-link" data-scroll-target="#les-raisons-du-désamour">Les raisons du désamour</a>
+  <ul class="collapse">
+  <li><a href="#la-sélection-par-les-mathématiques" id="toc-la-sélection-par-les-mathématiques" class="nav-link" data-scroll-target="#la-sélection-par-les-mathématiques">La sélection par les mathématiques</a></li>
+  <li><a href="#la-difficulté-de-la-matière" id="toc-la-difficulté-de-la-matière" class="nav-link" data-scroll-target="#la-difficulté-de-la-matière">La difficulté de la matière</a></li>
+  <li><a href="#la-peur-de-lerreur" id="toc-la-peur-de-lerreur" class="nav-link" data-scroll-target="#la-peur-de-lerreur">La peur de l’erreur</a></li>
+  <li><a href="#les-rythmes-asynchrones" id="toc-les-rythmes-asynchrones" class="nav-link" data-scroll-target="#les-rythmes-asynchrones">Les rythmes asynchrones</a></li>
+  <li><a href="#la-croyance-en-la-bosse-des-maths" id="toc-la-croyance-en-la-bosse-des-maths" class="nav-link" data-scroll-target="#la-croyance-en-la-bosse-des-maths">La croyance en la bosse des maths</a></li>
+  <li><a href="#les-stéréotypes" id="toc-les-stéréotypes" class="nav-link" data-scroll-target="#les-stéréotypes">Les stéréotypes</a></li>
+  <li><a href="#le-climat-scolaire" id="toc-le-climat-scolaire" class="nav-link" data-scroll-target="#le-climat-scolaire">Le climat scolaire</a></li>
+  </ul></li>
+  <li><a href="#perception-des-mathématiques" id="toc-perception-des-mathématiques" class="nav-link" data-scroll-target="#perception-des-mathématiques">Perception des mathématiques</a>
+  <ul class="collapse">
+  <li><a href="#consultation-nationale-aux-maths-citoyennes-citoyens" id="toc-consultation-nationale-aux-maths-citoyennes-citoyens" class="nav-link" data-scroll-target="#consultation-nationale-aux-maths-citoyennes-citoyens">Consultation nationale : “Aux maths citoyennes, citoyens !”</a></li>
+  <li><a href="#les-maths-ça-sert-à-quoi" id="toc-les-maths-ça-sert-à-quoi" class="nav-link" data-scroll-target="#les-maths-ça-sert-à-quoi">Les maths ça sert à quoi ?</a></li>
+  <li><a href="#un-décalage-de-perception" id="toc-un-décalage-de-perception" class="nav-link" data-scroll-target="#un-décalage-de-perception">Un décalage de perception</a></li>
+  <li><a href="#changer-le-regard-sur-les-mathématiques-et-les-mathématiciens" id="toc-changer-le-regard-sur-les-mathématiques-et-les-mathématiciens" class="nav-link" data-scroll-target="#changer-le-regard-sur-les-mathématiques-et-les-mathématiciens">Changer le regard sur les mathématiques (et les mathématiciens)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<p><em>“Tu fais quoi dans la vie ?”</em></p>
+<p>Ma réponse à cette sempiternelle question : <em>“des mathématiques”</em>, provoque généralement une réaction qui ne se fait pas attendre, les uns s’exclamant quelque chose du type : <em>“Ah c’est cool ! J’aimais vraiment les maths à l’école. Tu travailles sur quoi concrètement ?”</em>; les autres manifestant un rejet patent : <em>“Oh moi les maths je détestais ça !”</em> accompagné d’une expression faciale traduisant manifestement une douleur encore palpable. Et entre les deux bien sûr des réactions aussi plus mitigées, mais dont le souvenir de l’enseignement des mathématiques laisse rarement les gens indifférents.</p>
+<div id="player-container" style="position:relative; width:560px; height:315px; cursor:pointer;" onclick="loadVideo()">
+<img src="images/blast-maths-detestee.png" style="width:100%; height:100%;" alt="Lecture vidéo">
+<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:50px; color:white;">
+▶
+</div>
+</div>
+<p style="text-align:center; font-style:italic; margin-top:8px; font-size:14px; color:#555;">
+Cliquez sur l’image pour lancer l’extrait de l’interview de Laure Saint-Raymond
+</p>
+<script>
+function loadVideo() {
+  document.getElementById('player-container').innerHTML = 
+    '<iframe width="560" height="315" src="https://www.youtube.com/embed/sAWcgVmYL3o?start=286&end=320&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+}
+</script>
+<hr>
+<p>Dans ce billet je ne traiterai pas des résultats d’enquêtes évaluant le niveau scolaire, lesquels ont déjà été abondamment commentés<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, mais plutôt du rapport qu’entretiennent les élèves aux mathématiques au cours de leur scolarité. Cet angle d’analyse me parait en effet digne d’intérêt et d’enseignements <span class="citation" data-cites="merle_rapport_2003">(<a href="#ref-merle_rapport_2003" role="doc-biblioref">Merle 2003</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Le lecteur trouvera matière dans les différentes études citées à travers ce billet. Pour une synthèse je renvoie à cette note d’analyse de <span class="citation" data-cites="cusset_niveau_2025">(<a href="#ref-cusset_niveau_2025" role="doc-biblioref">Cusset 2025</a>)</span>.</p><div id="ref-cusset_niveau_2025" class="csl-entry" role="listitem">
+Cusset, Pierre-Yves. 2025. <em>Niveau Scolaire : Faut-Il s’inquiéter ? <span></span> <span>Haut</span>-Commissariat à La Stratégie Et Au Plan</em>. <a href="https://www.strategie-plan.gouv.fr/publications/niveau-scolaire-faut-il-sinquieter">https://www.strategie-plan.gouv.fr/publications/niveau-scolaire-faut-il-sinquieter</a>.
+</div></div></div><blockquote class="blockquote">
+<p>Si la connaissance de l’expérience subjective des élèves a nettement progressé, le rapport des élèves aux différentes disciplines est, à quelques exceptions près, encore peu exploré (Baudelot &amp; Establet, 1992 ; Grisay, 1993, 1997 ; Jeantheau &amp; Mulliez, 2001 ; Jeantheau &amp; Murat, 1998). Or cette connaissance est nécessaire pour trois raisons. D’abord, la connaissance des perceptions collégiennes des différentes disciplines contribue à une meilleure compréhension de ce qui fonde leur choix d’orientation. Ensuite, les professeurs ne peuvent que tirer profit de la façon dont les élèves perçoivent leur discipline et les spécificités de celles-ci. Enfin, comme plusieurs auteurs l’ont montré (Dubet, 1994a, 1994b ; Felouzis, 2000), la connaissance du rapport aux études et des modalités de construction de l’expérience scolaire permet une compréhension au moins aussi éclairante de la faiblesse de la démocratisation de l’enseignement (Duru-Bellat, 2002 ; Merle, 2002a) que les analyses en termes de « déterminants sociaux » même si ces deux types d’analyse ne sont évidemment pas indépendantes l’une de l’autre.</p>
+</blockquote>
+<section id="les-mathématiques-matière-préférée-des-élèves" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="les-mathématiques-matière-préférée-des-élèves">Les mathématiques, matière préférée des élèves ?</h2>
+<p>Durant l’interview France Inter du 9 septembre 2026 <a href="https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-8h20-le-grand-entretien/l-invite-de-8h20-le-grand-entretien-du-mercredi-09-septembre-2026-8637454">Enquête Pisa : “Il faut qu’on change notre regard sur les mathématiques”</a>, <a href="https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin">Hugo Duminil-Copin</a> affirmait ceci :</p>
+<blockquote class="blockquote">
+<p>Les enfants ont une appétence naturelle pour les choses, en particulier pour les mathématiques. On croit que les mathématiques sont mal-aimées, alors qu’au collège c’est la discipline préférée.</p>
+</blockquote>
+<div style="display: flex; justify-content: center;">
+<iframe width="315" height="560" src="https://www.youtube.com/embed/woMqajh8Czs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</div>
+<p>J’ai voulu vérifier cette affirmation en faisant un petit tour d’horizon des études ayant évalué l’attrait des élèves pour les mathématiques.</p>
+<section id="élèves-décole-primaire" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="élèves-décole-primaire">Élèves d’école primaire</h3>
+<p>D’après <span class="citation" data-cites="mullis2020timss">(<a href="#ref-mullis2020timss" role="doc-biblioref">Mullis et al. 2020a</a>)</span>, <strong>49% des élèves de CM1</strong> français déclaraient en 2019 <em>“aimer beaucoup apprendre les mathématiques”</em> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-mullis2020timss" class="csl-entry" role="listitem">
+Mullis, Ina VS, Michael O Martin, Pierre Foy, Dana L Kelly, and Bethany Fishbein. 2020a. <em>TIMSS 2019 International Results in Mathematics and Science</em>. Boston College, TIMSS &amp; PIRLS International Study Center. <a href="https://timss2019.org/reports/classroom-contexts/index.html#classroom-student-attitudes">https://timss2019.org/reports/classroom-contexts/index.html#classroom-student-attitudes</a>.
+</div></div><p><img src="images/timss2019CM1-aimer.png" class="img-fluid"></p>
+<p>avec un léger recul de <strong>46% en 2023</strong> <span class="citation" data-cites="von2024timss">(<a href="#ref-von2024timss" role="doc-biblioref">Von Davier et al. 2024</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"></div><p><img src="images/timss2023CM1-aimer.png" class="img-fluid"></p>
+<p>D’après un sondage Ipsos <span class="citation" data-cites="mercier_enquete_2016">(<a href="#ref-mercier_enquete_2016" role="doc-biblioref">Mercier and Dusseaux 2016</a>)</span>, réalisé sur 502 enfants âgés de 6 à 12 ans :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-mercier_enquete_2016" class="csl-entry" role="listitem">
+Mercier, Etienne, and Vincent Dusseaux. 2016. <em>Enquête <span>Ipsos</span> Pour <span>Squla</span> : <span>Regards</span> Croisés Parents/Enfants Sur Les Apprentissages Scolaires Et Parascolaires</em>. <a href="https://www.ipsos.com/sites/default/files/files-fr-fr/doc_associe/regards_croises_parents_et_enfants.pdf">https://www.ipsos.com/sites/default/files/files-fr-fr/doc_associe/regards_croises_parents_et_enfants.pdf</a>.
+</div></div><blockquote class="blockquote">
+<p>Du côté des enfants, les mathématiques apparaissent comme étant, de loin, leur matière préférée (29 %) suivie par le sport (17 %) et le français (16 %).</p>
+</blockquote>
+<p>Hugo Duminil-Copin a donc raison de souligner que les mathématiques sont une matière que les enfants affectionnent particulièrement en primaire. Voyons maintenant ce qu’il en est au collège.</p>
+</section>
+<section id="collégiens" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="collégiens">Collégiens</h3>
+<p>D”après <span class="citation" data-cites="merle_rapport_2003">(<a href="#ref-merle_rapport_2003" role="doc-biblioref">Merle 2003, sec. 8</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>L’intérêt déclaré à l’égard des mathématiques par les 872 élèves enquêtés est particulièrement élevé : 30 % des élèves déclarent cette discipline « très intéressante » et ils sont plus de 40 % à la trouver « intéressante ». Au total, c’est donc <strong>une très large majorité (plus de 70 %) qui est intéressée par cette matière</strong>. Les élèves « pas du tout » ou « peu intéressés » sont, a contrario, une petite minorité de l’ordre de 10 % des enquêtés.</p>
+</blockquote>
+<p>Sans surprise, <span class="citation" data-cites="merle_rapport_2003">(<a href="#ref-merle_rapport_2003" role="doc-biblioref">Merle 2003, sec. 9</a>)</span> montre également que ceux qui réussissent le mieux en maths sont les plus susceptibles de conserver un fort intérêt pour les mathématiques :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>Les déclarations de ces élèves sont dépendantes d’un certain nombre de variables. La plus influente d’entre elles est le niveau de compétence des élèves : <strong>l’intérêt déclaré pour une discipline est d’autant plus élevé que l’élève a le sentiment d’être bon dans cette discipline</strong> (la variable niveau de compétence est construite à partir d’une autoévaluation des élèves).</p>
+</blockquote>
+<p>Les différentes enquêtes (PISA, TIMSS, etc) ont montrées une baisse objective du niveau en mathématiques, plus marquée en France, alors même que les élèves font davantage de maths qu’ailleurs dans l’OCDE <span class="citation" data-cites="cusset_niveau_2026">(<a href="#ref-cusset_niveau_2026" role="doc-biblioref">Cusset 2026</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-cusset_niveau_2026" class="csl-entry" role="listitem">
+Cusset, Pierre-Yves. 2026. <em>Niveau <span>Scolaire</span>: Éléments <span>De</span> <span>Diagnostic</span> <span>Et</span> <span>Propositions</span> <span></span> <span>Haut</span>-<span>Commissariat</span> à La Stratégie Et Au Plan</em>. <a href="https://www.strategie-plan.gouv.fr/files/files/Publications/2026/2026-08-31%20-%20Rapport%20Niveau%20scolaire/HCSP-2026-RAPPORT-Niveau-scolaire-2septembre12h-FINAL-COUV.pdf">https://www.strategie-plan.gouv.fr/files/files/Publications/2026/2026-08-31%20-%20Rapport%20Niveau%20scolaire/HCSP-2026-RAPPORT-Niveau-scolaire-2septembre12h-FINAL-COUV.pdf</a>.
+</div></div><blockquote class="blockquote">
+<p>L’OCDE a par ailleurs calculé le temps dévolu aux mathématiques de façon cumulée sur l’ensemble de la scolarité entre l’âge de 6 et 14 ans : avec près de 1 450 heures, les élèves français font partie des élèves qui bénéficient du plus gros volume d’heures de mathématiques, la moyenne OCDE se situant à 1 100 heures</p>
+</blockquote>
+<p>Et si le niveau en mathématiques est corrélé à l’intérêt pour la matière, on peut s’attendre à une diminution de celui-ci entre 2019 et 2023 comme en atteste <span class="citation" data-cites="lacroix2024timss">(<a href="#ref-lacroix2024timss" role="doc-biblioref">Lacroix et al. 2024</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-lacroix2024timss" class="csl-entry" role="listitem">
+Lacroix, Aurelie, Charles Philippe, and Franck Salles. 2024. <em>Timss 2023 En Quatri<span>è</span>me Pour Les Math<span>é</span>matiques</em>. <a href="https://www.education.gouv.fr/sites/default/files/document/depp-ni-2024-48-404529.pdf">https://www.education.gouv.fr/sites/default/files/document/depp-ni-2024-48-404529.pdf</a>.
+</div></div><blockquote class="blockquote">
+<p>Concernant le plaisir à apprendre les mathématiques, Timss demande par exemple aux élèves de quatrième s’ils aiment cette discipline. En 2023, en France, <strong>51 % des élèves déclarent aimer les mathématiques</strong> (59 % pour les garçons contre 42 % pour les filles) (voir figure 11 en ligne). Ce taux était <strong>plus élevé en 2019 (60 %)</strong>. Dans les pays de l’OCDE/UE ayant participé aux deux éditions de Timss, 50 % des élèves déclarent aimer les mathématiques en 2023 alors qu’ils étaient 57 % en 2019. Dans l’Union européenne en 2023, ce taux varie de 42 % en Finlande à 59 % en Roumanie. En outre, les élèves en France, comme ceux des pays de l’OCDE/UE, <strong>accordent une moindre valeur aux mathématiques en 2023 qu’en 2019</strong>, concernant leur vie quotidienne, une poursuite d’études ou une insertion professionnelle : ainsi, <strong>82 % déclarent qu’il est important de réussir en mathématiques</strong> (82 % également dans les pays de l’OCDE/UE ayant participé aux deux cycles) (voir figure 12 en ligne).</p>
+</blockquote>
+<p>Les <a href="https://www.education.gouv.fr/depp/timss-2023-en-quatrieme-pour-les-mathematiques-des-resultats-stables-en-france-et-un-accroissement-452619">données TIMSS 2023</a> montrent ici le positionnement par rapport aux autres pays de l’OCDE et la baisse par rapport à 2019<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;À ce stade on pourrait attribuer cette baisse aux conséquences de la pandémie de Covid 19, mais si ses effets ne sont probablement pas nuls nous verrons néanmoins qu’ils ne suffisent pas à expliquer la baisse observée en réalité bien avant la pandémie.</p></div></div><p><img src="images/timss2023-4e-aimer.png" class="img-fluid"></p>
+</section>
+<section id="lappétence-sétiole-de-la-primaire-au-collège" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="lappétence-sétiole-de-la-primaire-au-collège">L’appétence s’étiole de la primaire au collège</h3>
+<p>Une autre baisse notable s’effectue entre le primaire et le collège <span class="citation" data-cites="merle_rapport_2003">(<a href="#ref-merle_rapport_2003" role="doc-biblioref">Merle 2003, sec. 10</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>Cette approche globale cache une différenciation sensible de l’appréciation des élèves selon leur classe : <strong>en sixième, en mathématiques, la proportion d’élèves « intéressés » ou « très intéressés » dépasse les 80 % ; en troisième, elle n’est plus que de 60 %</strong>. Ce mouvement s’explique par une montée sensible du nombre des élèves se déclarant « peu intéressés » et « pas du tout intéressés » : un sur vingt se trouve dans cette situation en classe de sixième (5,4 %) alors qu’ils sont près d’un sur six (14.7 %) en classe de troisième. On en conclura qu’en fin de sixième, les élèves ont un enthousiasme indiscutable pour les mathématiques alors qu’au début de la classe de troisième, l’enthousiasme a sensiblement décru (tableau 1). L’expérience de l’enseignement des mathématiques, de l’entrée à la sortie du collège, peut notamment s’apprécier par ce « refroidissement » considérable de l’intérêt déclaré pour cette discipline.</p>
+</blockquote>
+<p>Bien sûr l’adolescence est parfois une période durant laquelle on assiste à une certaine apathie de façon générale<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, mais nous verrons que c’est particulièrement marqué en ce qui concerne les mathématiques, et que cela touche assez inégalement les élèves français :</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Pierre Merle souligne que : “Ce phénomène de désenchantement n’est pas propre aux mathématiques : il est également présent pour le français. Initialement moins enthousiasmés par le français que les mathématiques en fin de sixième, les élèves n’en connaissent pas moins un effritement sensible de l’intérêt qu’ils déclarent pour cette discipline. La robustesse des réponses des élèves est confortée par leur réponse à une question sur l’évolution de leur intérêt pour les mathématiques et le français. Les élèves déclarent beaucoup plus souvent en troisième qu’en sixième une diminution de leur intérêt pour ces deux disciplines. Les élèves de 3e ont donc parfaitement conscience des effets négatifs en termes d’intérêt pour les mathématiques et le français de leurs années passées sur les bancs du collège alors que l’école primaire a peu freiné les intérêts scientifiques et littéraires des écoliers.”</p></div></div><blockquote class="blockquote">
+<p>Le désenchantement pour les mathématiques atteint peu les « bons » élèves et ce sont les élèves « moyens » ou « faibles » scolarisés en classe de troisième qui sont surtout touchés par une certaine désaffection à l’égard de cette discipline.</p>
+</blockquote>
+<p>Dans le premier tableau mesurant l’appétence pour les mathématiques des élèves de CM1, il y avait en 2019 49% qui aiment beaucoup + 36% qui aiment bien, soit au total <strong>85% des CM1 qui aiment globalement les maths, contre 60% pour les quatrièmes</strong> la même année (2019). Il ne s’agit pas de la même cohorte mais cela donne néanmoins une idée de l’érosion entre la primaire et le collège. Ce constat est établi également dans <span class="citation" data-cites="timssQuatrieme2019">(<a href="#ref-timssQuatrieme2019" role="doc-biblioref">Salles et al. 2020</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-timssQuatrieme2019" class="csl-entry" role="listitem">
+Salles, Franck, Marion Le Cam, and Ministère de l’éducation nationale France. 2020. <em><span>TIMSS</span> 2019 <span>Mathématiques</span> Au Niveau de La Classe de Quatrième : Des Résultats Inquiétants En <span>France</span> / <span>Franck</span> <span>Salles</span>, <span>Marion</span> <span>Le</span> <span>Cam</span></em>. Ministère de l’Education nationale, de la jeunesse et des sports. Paris. <a href="https://archives-statistiques-depp.education.gouv.fr/Default/doc/SYRACUSE/47574/timss-2019-mathematiques-au-niveau-de-la-classe-de-quatrieme-des-resultats-inquietants-en-france-fra">https://archives-statistiques-depp.education.gouv.fr/Default/doc/SYRACUSE/47574/timss-2019-mathematiques-au-niveau-de-la-classe-de-quatrieme-des-resultats-inquietants-en-france-fra</a>.
+</div></div><blockquote class="blockquote">
+<p>Concernant leur plaisir à apprendre des mathématiques, <strong>11 % des élèves de France déclarent beaucoup aimer cette discipline</strong>. Ils sont 14 % en moyenne internationale (OCDE et UE). <strong>Cette motivation s’est fortement érodée depuis 2015 et la scolarité en école primaire</strong>. En France, 50 % des élèves de CM1 déclaraient beaucoup aimer apprendre les mathématiques contre 46 % en moyenne internationale. En outre, en 2019, seulement 27 % des élèves de quatrième accordent une forte valeur aux mathématiques, concernant leur vie quotidienne, une poursuite d’études ou une insertion professionnelle, alors qu’ils sont 32 % en moyenne dans les autres pays (OCDE et UE).</p>
+</blockquote>
+<p><img src="images/timss2019-4e-aimer.png" class="img-fluid"></p>
+<p>Dans <span class="citation" data-cites="von2024timss">(<a href="#ref-von2024timss" role="doc-biblioref">Von Davier et al. 2024</a>)</span> <strong>seulement 10% des quatrièmes aiment beaucoup, 34% aiment bien et 57% n’aiment pas</strong> apprendre les mathématiques.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-von2024timss" class="csl-entry" role="listitem">
+Von Davier, Matthias, Ann Kennedy, Katherine Reynolds, et al. 2024. <span>“TIMSS 2023 International Results in Mathematics and Science.”</span> <em>Boston College, TIMSS &amp; PIRLS International Study Center</em> 4: 12. <a href="https://timss2023.org/results/students-like-math-pdf/">https://timss2023.org/results/students-like-math-pdf/</a>.
+</div></div><p><img src="images/timss2023-grade8-aimer.png" class="img-fluid"></p>
+<p>Cet étiolement semble d’ailleurs partagé par tous les pays de l’OCDE <span class="citation" data-cites="mullis2020timss2">(<a href="#ref-mullis2020timss2" role="doc-biblioref">Mullis et al. 2020b</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-mullis2020timss2" class="csl-entry" role="listitem">
+Mullis, Ina VS, Michael O Martin, Pierre Foy, Dana L Kelly, and Bethany Fishbein. 2020b. <em>TIMSS 2019 International Results in Mathematics and Science</em>. Boston College, TIMSS &amp; PIRLS International Study Center. <a href="https://www.skolporten.se/app/uploads/2020/12/timss-2019-highlights-1.pdf">https://www.skolporten.se/app/uploads/2020/12/timss-2019-highlights-1.pdf</a>.
+</div><div id="ref-timss_resultats_2015" class="csl-entry" role="listitem">
+TIMSS. 2015. <em>Résultats <span>Des</span> Élèves <span>Marocains</span> <span>En</span> <span>Mathématiques</span> <span>Et</span> <span>En</span> <span>Sciences</span> <span>Dans</span> <span>Un</span> <span>Contexte</span> <span>International</span></em>. <a href="https://www.csefrs.ma/wp-content/uploads/2018/06/TIMSS-Version-Fr-26-05-2018.pdf">https://www.csefrs.ma/wp-content/uploads/2018/06/TIMSS-Version-Fr-26-05-2018.pdf</a>.
+</div></div><p><img src="images/timss2019evolution-CM1-4e.png" class="img-fluid"> Au Maroc, malgré des scores relativement bas obtenus en mathématiques au TIMSS 2015 et 2019, j’ai été frappé par le fort intérêt que manifestent les élèves marocains pour les mathématiques au grade 4 et 8 <span class="citation" data-cites="timss_resultats_2015">(<a href="#ref-timss_resultats_2015" role="doc-biblioref">TIMSS 2015</a>)</span> :</p>
+<p><img src="images/timss2015-maroc-grade-4.png" class="img-fluid"> <img src="images/timss2015-maroc-grade-8.png" class="img-fluid"></p>
+<p>Une étude longétudinale <span class="citation" data-cites="von2025timss">(<a href="#ref-von2025timss" role="doc-biblioref">Davier et al. 2025</a>)</span> a également été réalisée sur un sous-groupe des pays enrolés dans l’enquête TIMSS 2023, le constat est identique avec une diminution du plaisir à apprendre les mathématiques entre le CM1 et la quatrième :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-von2025timss" class="csl-entry" role="listitem">
+Davier, M von, AM Kennedy, KA Reynolds, E Gonzalez, and L Khorramdel. 2025. <em>TIMSS 2023 Longitudinal International Results in Mathematics and Science</em>. <a href="https://timss2023.org/longitudinal/results/students-like-math">https://timss2023.org/longitudinal/results/students-like-math</a>.
+</div></div><p><img src="images/timss2023longitudinal-CM1.png" class="img-fluid"></p>
+<p><img src="images/timss2023longitudinal-4e.png" class="img-fluid"> Pour conclure avec <span class="citation" data-cites="merle_rapport_2003">(<a href="#ref-merle_rapport_2003" role="doc-biblioref">Merle 2003</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>Les mathématiques occupent la seconde place dans le hit parade des disciplines les plus aimées : elles sont choisies par 17.8 % des élèves. Un score bien moindre que l’E.P.S. mais cependant largement supérieur à celui obtenu par les autres disciplines. Comme l’E.P.S., les mathématiques bénéficient d’une forte valorisation sociale. À celle-ci s’ajoute une forte reconnaissance scolaire. L’utilité reconnue de cette discipline pour avoir un métier, et donc la valorisation qu’elle est susceptible à terme d’apporter aux élèves expliquent aussi ce jugement globalement positif. Toutefois si cette discipline a ses adeptes, elle a aussi ses détracteurs. Elle focalise le désamour de plus de 10 % des élèves, généralement les élèves les plus faibles qui déclarent par ailleurs, dans une proportion non négligeable, l’expérience de l’humiliation dans cette discipline. Plus inquiétant encore, les mathématiques sont la discipline la moins souvent citée en 6e comme la moins aimée et en 3e, elle devient la discipline la plus souvent citée comme la moins aimée. Autant dire, que cet enseignement de la 6e à la 3e a profondément refroidi les ardeurs des collégiens.</p>
+</blockquote>
+</section>
+<section id="lycéens" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="lycéens">Lycéens</h3>
+<p>L’étude <span class="citation" data-cites="oecd_pisa_2024">(<a href="#ref-oecd_pisa_2024" role="doc-biblioref">PISA 2022</a>)</span> cible exclusivement les <strong>adolescents âgés de 15 ans</strong>, ce qui correspond en France principalement aux élèves en fin de classe de troisième ou au début de seconde (en voie générale, technologique ou professionnelle). L’étude révèle que <strong>plus de 40% d’entre eux déclarent que les mathématiques sont l’une de leurs matières préférées</strong>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-oecd_pisa_2024" class="csl-entry" role="listitem">
+PISA. 2022. <em><span>PISA</span> 2022 <span>Results</span> (<span>Volume</span> <span>V</span>): <span>Learning</span> <span>Strategies</span> and <span>Attitudes</span> for <span>Life</span></em>. <span>PISA</span>. OECD Publishing. <a href="https://doi.org/10.1787/c2e44201-en">https://doi.org/10.1787/c2e44201-en</a>.
+</div></div><p><img src="images/pisa-maths-matiere-preferee.png" class="img-fluid"></p>
+<p>Dans la thèse de <span class="citation" data-cites="ji2011poursuite">(<a href="#ref-ji2011poursuite" role="doc-biblioref">Ji 2011</a>)</span>, on peut y lire le graphique suivant pour les lycéens français :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-ji2011poursuite" class="csl-entry" role="listitem">
+Ji, Lili. 2011. <span>“La Poursuite Des <span class="nocase">é</span>tudes Scientifiques Ou Non Scientifiques Au Lyc<span>é</span>e Et <span class="nocase">à</span> l’universit<span>é</span> En Chine Et En France.”</span> PhD thesis, Paris, Institut d’<span>é</span>tudes politiques.
+</div></div><p><img src="images/these-ji-matiere-preferee-lycee-france.png" class="img-fluid"> et celui-ci pour la Chine :</p>
+<p><img src="images/these-ji-matiere-preferee-lycee-chine.png" class="img-fluid"> Il peut paraître curieux – j’y reviendrai – que les mathématiques se hissent en tête des matières préférées des lycéens, alors que l’appétence pour la matière s’était déjà étiolée entre le passage de la primaire au collège, et qu’elle semblait se poursuivre au lycée comme l’indique les chiffres de <span class="citation" data-cites="mullis_timss_2016">(<a href="#ref-mullis_timss_2016" role="doc-biblioref">Mullis et al. 2016</a>)</span> où seulement <strong>11% des Terminale S disent aimer beaucoup les maths</strong>, dans la filière où ils y sont pourtant les plus disposés, avec même <strong>un tiers des élèves déclarant ne pas aimer</strong> apprendre les maths.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-mullis_timss_2016" class="csl-entry" role="listitem">
+Mullis, Ina VS, Michael O Martin, Pierre Foy, and M Hooper. 2016. <em><span>TIMSS</span> <span>Advanced</span> 2015 <span>International</span> <span>Results</span> in <span>Advanced</span> <span>Mathematics</span> and <span>Physics</span>.</em> Boston College, TIMSS &amp; PIRLS International Study Center. <a href="https://timss2019.org/reports/classroom-contexts/index.html#classroom-student-attitudes">https://timss2019.org/reports/classroom-contexts/index.html#classroom-student-attitudes</a>.
+</div></div><p><img src="images/timss2015advanced.png" class="img-fluid"></p>
+<p>La note d’information de la <span class="citation" data-cites="depp_performances_2016">(<a href="#ref-depp_performances_2016" role="doc-biblioref">DEPP 2016</a>)</span> abonde dans ce sens :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-depp_performances_2016" class="csl-entry" role="listitem">
+DEPP. 2016. <em>Les Performances Des Élèves de Terminale <span>S</span> En Mathématiques : Évolution Sur Vingt Ans</em>. <a href="https://www.education.gouv.fr/sites/default/files/document/T%C3%A9l%C3%A9charger%20la%20note%20d%E2%80%99information%20-%20%5BPDF%5D%C2%A0-246735.pdf#:~:text=Le%20profil%20de.%20ces%20%C3%A9l%C3%A8ves%20a%20chang%C3%A9,n%C2%B0%2035%20%2D%20NOVEMBRE%202016.%20page%204.">https://www.education.gouv.fr/sites/default/files/document/T%C3%A9l%C3%A9charger%20la%20note%20d%E2%80%99information%20-%20%5BPDF%5D%C2%A0-246735.pdf#:~:text=Le%20profil%20de.%20ces%20%C3%A9l%C3%A8ves%20a%20chang%C3%A9,n%C2%B0%2035%20%2D%20NOVEMBRE%202016.%20page%204.</a>
+</div></div><blockquote class="blockquote">
+<p>Le questionnaire de contexte auquel les élèves de terminale S ont répondu en 1995 et en 2015 permet de comparer leurs niveaux de motivation. Le profil de ces élèves a changé : <strong>en 1995, 17,9 % déclaraient s’ennuyer en faisant des mathématiques, ce taux s’élève à 34,4 % en 2015</strong>. Mais si les mathématiques sont moins souvent associées au plaisir intellectuel, les élèves en apprécient davantage l’intérêt pour leur orientation de carrière. En effet, 62 % des élèves (contre 56 % en 1995) déclarent qu’ils aimeraient avoir un métier utilisant les mathématiques. Ainsi le choix de s’orienter en série scientifique se ferait par défaut, <strong>selon une pression sociale forte et un bon niveau scolaire global, plutôt que par réelle appétence pour les mathématiques</strong>.</p>
+</blockquote>
+<p>Les stratégies d’orientation semblent donc primer sur l’intérêt propre pour la matière<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. <a href="https://fr.wikipedia.org/wiki/Charles_Torossian">Charles Torossian</a>, co-auteur avec <a href="https://fr.wikipedia.org/wiki/C%C3%A9dric_Villani">Cédric Villani</a> du rapport « 21 mesures pour l’enseignement des mathématiques », affirmait dans une <a href="https://www.marianne.net/agora/tribunes-libres/mathematiques-au-lycee-mieux-former-mieux-orienter-mieux-accompagner">tribune</a> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Pour avoir été en Terminale S en 2006-2007 (ouch il y a 20 ans !), il y avait en effet une partie non négligeable de la classe qui subissait les maths, et n’avait d’ailleurs pas pour ambition de poursuivre nécessairement une formation scientifique après le bac, ils avaient choisi la filière S car elle était réputée être la “voie royale” pour ouvrir les portes de toutes les formations, fussent-elles Hypokagne ou Science Po.</p></div></div><blockquote class="blockquote">
+<p>La Terminale S (TS) aurait [soit disant] été un terreau fertile pour la poursuite d’études scientifiques ! C’est oublier la réalité : en 2014, on comptait 44 % de poursuites vers des formations scientifiques, 24 % dans la santé et 32 % des formations non scientifiques. En vérité la série S était majoritairement choisie pour d’autres motifs que sa dimension scientifique.</p>
+</blockquote>
+<p>Si on observe une scission au sein même de la filière scientifique, il doit à plus forte raison en être de même dans les autres filières non scientifiques. C’est ce que nous allons voir maintenant.</p>
+</section>
+<section id="étude-longitudinale" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="étude-longitudinale">Étude longitudinale</h3>
+<p>L’étude de <span class="citation" data-cites="ingels2011high">(<a href="#ref-ingels2011high" role="doc-biblioref">Ingels et al. 2011</a>)</span> suit une cohorte d’élèves représentative à l’échelle des États-Unis, débutant en neuvième année d’étude (autour de 14-15 ans), et suit leur parcours tout au long du lycée ainsi que leur transition vers l’enseignement supérieur et/ou le marché du travail. Un focus est mis sur les facteurs qui amènent les élèves à choisir et à poursuivre des études et des carrières dans les domaines des sciences, des technologies, de l’ingénierie et des mathématiques (STIM). L’enquête initiale de 2009 a porté sur un échantillon de 944 lycées publics et privés. <strong>Plus de 21 000 élèves ont répondu à l’enquête</strong> et des informations complémentaires ont également été recueillies auprès de leurs parents, des administrateurs scolaires, des conseillers d’orientation et des enseignants. La cohorte a fait l’objet de nouveaux entretiens en 2011, 2012, 2013 et 2016. L’année de référence 2009 est notée S1 9th (~ élèves de troisième), et le premier suivi en 2012 est noté S2 Teenager (~ élèves de Terminale).</p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;cf.&nbsp;variable <code>S1 E03</code> du <a href="https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution">DATALAB</a></p></div></div><p>En 2009 ils déclaraient <strong>à 14% que les mathématiques étaient leur matière préférée</strong><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> juste derrière le sport (18%).</p>
+<p><img src="images/HSLS09-S1-favorite.png" class="img-fluid"></p>
+<p>Ce que confirme par ailleurs <a href="https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin">Hugo Duminil-Copin</a> pour la France dans une <a href="https://dailyscience.be/10/03/2023/comment-faire-aimer-les-maths/">interview</a> :</p>
+<blockquote class="blockquote">
+<p>Je ne suis pas certain que les jeunes n’aiment pas les mathématiques. Une étude récente en France montrait que les maths étaient la deuxième matière préférée des jeunes de 10 à 15 ans après le sport.</p>
+</blockquote>
+<p>Cependant, et c’est là où ça devient intéressant, les élèves de la cohorte déclaraient aussi <strong>à 24% que les mathématiques était la matière qu’ils aimaient le moins</strong><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, suivie par l’anglais (17%).</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;cf.&nbsp;variable <code>S1 E04</code> du <a href="https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution">DATALAB</a>.</p></div></div><p><img src="images/HSLS09-S1-least-favorite.png" class="img-fluid"></p>
+<p>Autrement dit il faut tempérer l’enthousiasme manifeste d’<a href="https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin">Hugo Duminil-Copin</a> à l’antenne de France Inter<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, et faire le constat lucide que les mathématiques sont en réalité particulièrement <strong>clivantes</strong>, comme il le reconnait d’ailleurs dans son dernier livre <span class="citation" data-cites="duminil-copin_autre_2026">(<a href="#ref-duminil-copin_autre_2026" role="doc-biblioref">Duminil-Copin and Sandier 2026, 18</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Je suppose que son intention était de prendre le contrepied de l’image peu reluisante des mathématiques généralement véhiculée dans les médias ou chez les leaders d’opinions qui se glorifient parfois “d’être nuls en maths” (cf.&nbsp;<a href="https://www.lexpress.fr/sciences-sante/sciences/alain-aspect-jentends-trop-de-leaders-dopinion-se-glorifier-detre-nuls-en-maths-DDLHQERUPRANROL7PTA5GS24ZY/">interview</a> d’<a href="https://fr.wikipedia.org/wiki/Alain_Aspect">Alain Aspect</a>).</p></div><div id="ref-duminil-copin_autre_2026" class="csl-entry" role="listitem">
+Duminil-Copin, Hugo, and Emmanuel Sandier. 2026. <em>De l’autre Côté Du Tableau Noir : Les Mathématiques à Visage Humain</em>. Seuil.
+</div></div><blockquote class="blockquote">
+<p>Les maths divisent. L’une des caractéristiques principales du rapport aux mathématiques est sa <strong>forte polarisation</strong> : on les adore ou on les déteste. Plusieurs enquêtes révèlent que les mathématiques figurent parmi les matières préférées des élèves du secondaire : près d’un quart d’entre eux les placent même en tête de leur classement. Aussi surprenant que cela puisse paraître à certains, elles sont donc loin d’être universellement redoutées. En revanche, lorsque les mathématiques provoquent effectivement du rejet, celui-ci peut être radical voire viscéral. Certaines personnes évoquent même une véritable phobie.</p>
+</blockquote>
+<p><a href="https://davidbessis.substack.com/about">David Bessis</a> fait un constat similaire dans son <a href="https://youtu.be/_cRu1Pl0s1E?t=468">exposé</a> à l’Institut Henri-Poincaré <em>“Les mathématiques, une science humaine ?”</em> :</p>
+<blockquote class="blockquote">
+<p>Le deuxième problème, il est bien connu : cet enseignement ne se passe pas bien […] il y a des gens qui aiment vraiment et il y a des gens qui détestent vraiment […] les maths sont <strong>anormalement polarisantes</strong>.</p>
+</blockquote>
+<p>en s’appuyant sur l’étude <span class="citation" data-cites="ingels2011high">(<a href="#ref-ingels2011high" role="doc-biblioref">Ingels et al. 2011</a>)</span> et en utilisant le graphique<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> de ce post Tumblr <a href="https://www.tumblr.com/mathhombre/177411872579/is-math-the-most-hated-subject?redirect_to=%2Fmathhombre%2F177411872579%2Fis-math-the-most-hated-subject&amp;source=blog_view_login_wall">Is Math the Most Hated Subject?</a> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-ingels2011high" class="csl-entry" role="listitem">
+Ingels, Steven J, Daniel J Pratt, Deborah R Herget, et al. 2011. <span>“High School Longitudinal Study of 2009 (HSLS: 09): Base-Year Data File Documentation. NCES 2011-328.”</span> <em>National Center for Education Statistics</em>.
+</div><div id="fn8"><p><sup>8</sup>&nbsp;Graphique qui représente les données des variables <a href="https://www.icpsr.umich.edu/web/NADAC/studies/36423/datasets/2/variables/S1FAVSUBJ">S1 E03</a> et <a href="https://www.icpsr.umich.edu/web/NADAC/studies/36423/datasets/2/variables/S1LEASTSUBJ">S1 E04</a> qui diffèrent légèrement de celles fournies par <a href="https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution">DATALAB</a>, mais dont les ordres de grandeurs sont comparables.</p></div></div><p><img src="images/maths-polarisante.jpg" class="img-fluid"> Dans son livre <span class="citation" data-cites="bessis2022mathematica">(<a href="#ref-bessis2022mathematica" role="doc-biblioref">Bessis 2022</a>)</span> précise :</p>
+<blockquote class="blockquote">
+<p>Quand on demande aux adolescents américains quelle est la matière la plus difficile, les mathématiques arrivent en tête, avec 37% des réponses. C’est également, de très loin, la matière qu’ils détestent le plus. Mais quand on leur demande leur matière préférée, les mathématiques arrivent encore en tête, avec 23%. Pour certains, c’est même la matière la plus facile. Nous connaissons tous ce phénomène étrange. Il fait partie du décor et nous avons appris à le trouver normal. Nous trouvons normal qu’il y ait des gens qui aiment les maths et trouvent ça facile, et d’autres qui détestent les maths et trouvent ça incompréhensible, et nous trouvons normal qu’il n’y ait quasiment personne entre les deux.</p>
+</blockquote>
+<p>Dans le suivi de 2012 les mathématiques sont toujours déclarées <strong>à 16% comme étant la matière “préférée”</strong><a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;cf.&nbsp;variable <code>S2 D01</code> du <a href="https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution">DATALAB</a>.</p></div></div><p><img src="images/HSLS09-S2-favorite.png" class="img-fluid"> Je place maintenant des guillemets car ce que mesure cette enquête (comme celle de PISA) est un classement relatif entre matières (“quelle est ta matière préférée ?”), tandis que TIMSS mesure plutôt un niveau d’accord absolu avec des affirmations du type <em>“j’aime beaucoup les mathématiques”</em>.</p>
+<p>De même, une <a href="https://www.cambridgeinternational.org/Images/514611-global-education-census-survey-report.pdf">étude</a> de 2018 du <a href="https://www.cambridgeassessment.org.uk/our-research/data-bytes/students-favourite-subjects-around-the-world/">Cambridge International Global Education Census</a>, menée sur 9 397 étudiants âgés entre 12 et 19 ans, conclut que <strong>les mathématiques sont la matière la plus populaire</strong> :</p>
+<p><img src="images/cambridge2018-matiere-preferee.png" class="img-fluid"></p>
+<p>Au <a href="https://censusatschool.ca/fr/donnees-et-resultats/2020-2021/">Canada</a>, 6,220 élèves des niveaux primaire et secondaire ont répondu à une enquête au cours de l’année scolaire 2020-2021. La catégorie primaire comprend les élèves de la 4e à la 8e année (CM1 à la 4ème) et la catégorie secondaire inclut les élèves de la 9e à la 12e année (3ème à la Terminale). L’enquête révèle que les élèves déclarent aussi que les mathématiques sont leur <a href="https://censusatschool.ca/fr/donnees-et-resultats/2020-2021/matiere-preferee/">matière préférée</a> :</p>
+<p><img src="images/censusatschool.png" class="img-fluid"></p>
+<p>Idem pour les <a href="https://www.lapresse.ca/actualites/200809/19/01-669204-les-maths-la-matiere-preferee-des-jeunes.php">élèves québéquois</a> ou les <a href="https://news.gallup.com/poll/12007/Math-Teens-Favorite-School-Subject.aspx">élèves américains</a>. Les mêmes schémas se répètent donc dans et hors de l’OCDE. Mais on comprend maintenant qu’un élève peut classer les maths en première position parmi ses matières préférées (parce que les autres lui plaisent peut-être encore moins)<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> sans pour autant <em>“aimer beaucoup”</em> les maths en valeur absolue. Ces enquêtes ne mesurent donc pas rigoureusement la même chose. Par <em>“préférer les mathématiques”</em> on peut distinguer plusieurs choses, on peut par exemple aimer apprendre des mathématiques sans pour autant réussir, ou inversement avoir de bons résultats en mathématiques sans particulièrement aimer en faire, ou encore reconnaître leur utilité et les préférer comme choix d’orientation par rapport à ses projets professionnels (vote utile), sans qu’il n’y ait d’attrait pour les mathématiques en elles-mêmes. La préférence pour une matière est fonction de l’intérêt qu’on lui porte, intérêt qui revêt des significations multiples <span class="citation" data-cites="cosnefroy_sens_2007">(<a href="#ref-cosnefroy_sens_2007" role="doc-biblioref">Cosnefroy 2007</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;On pourrait risquer une analogie avec la politique : un candidat peut faire seulement 18% parmi les inscrits au premier tour puis remporter l’élection présidentielle avec 58% des voix (avoir donc été “préféré” par les français), sans pour autant susciter une forte adhésion. Un autre candidat peut par ailleurs susciter une forte adhésion au sein d’une partie de l’électorat, accéder potentiellement au second tour aidé par le vote utile, et être donné largement perdant dans les sondages face à son adversaire politique du fait du rejet qu’il suscite par ailleurs. Toute ressemblance avec des personnages existants serait purement fortuite :-)</p></div></div><p>Nous avons ainsi vu avec toutes ces études que ce clivage autour des mathématiques s’installe au collège, et qu’il se poursuit au lycée – où un certain nombre d’élèves du collège en difficulté en maths n’y sont pourtant pas allés – allant même jusqu’à gagner la Terminale S. Il ne serait donc pas étonnant de retrouver ce clivage dans la population générale, ce qui est l’objet de la section suivante.</p>
+</section>
+<section id="les-adultes" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="les-adultes">Les adultes</h3>
+<p>Selon un <a href="https://www.rtl.fr/actu/debats-societe/65-des-francais-jugent-l-enseignement-des-maths-inadapte-selon-notre-sondage-7790579608">sondage CSA Research</a> réalisé en 2017 pour Le Point et RTL :</p>
+<blockquote class="blockquote">
+<p><strong>61% des Français ont bien aimé les mathématiques à l’école</strong>. Les maths étaient donc la <strong>deuxième matière préférée des sondés à l’école (33%)</strong>, derrière le Français (37%) et devant l’Histoire-géographie (31%). […] Mais les mathématiques, une matière considérée par certains comme stressante, décourageante, voire ennuyeuse, ne sont pas sans détracteurs. Parmi les sondés qui crient leur <strong>désamour pour les cours de maths (39%)</strong>, la majorité (61%) se justifie par les difficultés rencontrée en classe. L’aspect trop théorique des cours a quant à lui dissuadé près de 40% des personnes réfractaires aux chiffres.</p>
+</blockquote>
+<p>Selon un autre sondage en ligne <span class="citation" data-cites="ipsos_education_2025">(<a href="#ref-ipsos_education_2025" role="doc-biblioref">Ipsos 2025</a>)</span> portant sur 23700 adultes de moins de 75 ans à travers 30 pays, les mathématiques occupent la deuxième place des matières favorites (30%) déclarées par ces adultes lorsqu’ils étaient à l’école, juste derrière l’histoire (32%). <strong>Pour la France, deuxième place également pour les mathématiques (29%) derrière l’histoire (37%)</strong>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-ipsos_education_2025" class="csl-entry" role="listitem">
+Ipsos. 2025. <em>Education <span>Monitor</span> 2025</em>. <a href="https://resources.ipsos.com/rs/297-CXJ-795/images/Education_Monitor_2025.pdf">https://resources.ipsos.com/rs/297-CXJ-795/images/Education_Monitor_2025.pdf</a>.
+</div></div><p><img src="images/Ipsos2025-favorite-countries.png" class="img-fluid"> Mais lorsqu’on leur demande quelle était <strong>la matière qu’ils aimaient le moins, les mathématiques arrivent aussi en pole position (37%), avec une quasi unanimité !</strong> La France ne faisant pas exception avec une proportion de 38% :</p>
+<p><img src="images/Ipsos2025-less-favorite-countries.png" class="img-fluid"> Il n’est donc pas étonnant que les réactions en bien ou en mal auxquelles j’ai l’habitude d’être confrontées soient aussi divisées et exacerbées lorsque j’évoque les mathématiques. Il me parait ainsi souhaitable d’essayer de comprendre comment et pourquoi cette polarisation s’installe.</p>
+</section>
+</section>
+<section id="les-raisons-du-désamour" class="level2">
+<h2 class="anchored" data-anchor-id="les-raisons-du-désamour">Les raisons du désamour</h2>
+<p>Dans la section précédente j’ai tâché de compiler un certain nombre d’analyses illustrant le rapport aux mathématiques qu’entretiennent les jeunes et les moins jeunes. Selon qu’ils s’agissaient de sondages ou d’études (transversales ou longitudinales), les données et méthodologies étaient bien sûr de qualité inégalité. Néanmoins ces analyses semblaient se recouper et aboutir à une forme de consensus quant au caractère particulièrement clivant des mathématiques qui se dessine dans le parcours scolaire.</p>
+<p>Dans cette section je passe en revue une liste d’explications non exhaustive du désamour progressif pour les mathématiques que l’on observe chez les élèves après leur entrée au collège. Chacune de ces causes mériterait de longs développements, d’être resitués dans une littérature scientifique dense, et d’en mesurer la part respective d’explicabilité. Mais alors ça ne serait plus un billet de blog mais une thèse 😉.</p>
+<p>À COMPLÉTER</p>
+<section id="la-sélection-par-les-mathématiques" class="level3">
+<h3 class="anchored" data-anchor-id="la-sélection-par-les-mathématiques">La sélection par les mathématiques</h3>
+<!-- Comme le dit [Hugo Duminil-Copin](https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin) dans une [interview](https://dailyscience.be/10/03/2023/comment-faire-aimer-les-maths/) : -->
+<!-- > Je ne suis pas certain que les jeunes n’aiment pas les mathématiques. Une étude récente en France montrait que les maths étaient la deuxième matière préférée des jeunes de 10 à 15 ans après le sport. Par contre, les mathématiques servent trop souvent d’étalon pour fixer l’accès à diverses formations. Y compris des formations supérieures où elles ne sont pas nécessairement centrales. Je pense à la médecine ou à des matières scientifiques qui ne seraient pas grandes consommatrices de mathématiques, comme la biologie. Les mathématiques se retrouvent donc cantonnées à un rôle d’outil de sélection. C’est une erreur. On perd ainsi le côté plaisant de faire des mathématiques. Si les enfants n’ont pas accès à ces aspects ludiques, ils se retrouvent à détester les maths. Et cela, c’est dommageable. Il faut arriver à faire sortir les mathématiques de ce rôle d’évaluation.  -->
+<!-- Même son de cloche chez [Sébastien Planchenault](https://shs.cairn.info/publications-de-sebastien-planchenault--796141?lang=fr), président de l’[APMEP](https://www.apmep.fr/)[^7] : -->
+<!-- [^7]: Association des Professeurs de Mathématiques de l’Enseignement Public -->
+<!-- > Au lieu de faire de la filière « C » (puis « S ») la voie logique de formation des futurs scientifiques, on en a fait un outil de sélection de l’élite. La filière scientifique est devenue la voie unique d’excellence. Ce qui a été une grosse erreur. Ça a contribué à faire des maths une matière à part, avec ce poids et cet enjeu de la sélection, contre laquelle des générations d’élèves moins doués ont nourri un fort ressentiment.  -->
+<!-- La raison d'une plus grande désaffection du français au collège par rapport aux mathématiques sont multiples [@merle_rapport_2003, §13]  -->
+<!-- Sélection plus aisée par les maths car vrai/faux moins de sensibilité à la notation et moins sujette au capital culturel -->
+</section>
+<section id="la-difficulté-de-la-matière" class="level3">
+<h3 class="anchored" data-anchor-id="la-difficulté-de-la-matière">La difficulté de la matière</h3>
+<!-- [@merle_rapport_2003, §15] -->
+<!-- Les résultats TIMSS 2003 ont montré que 37% des élèves américains considèrent les mathématiques comme la matière la plus difficile [@inc_math_2005]. -->
+</section>
+<section id="la-peur-de-lerreur" class="level3">
+<h3 class="anchored" data-anchor-id="la-peur-de-lerreur">La peur de l’erreur</h3>
+<!-- Grothendieck -->
+<!-- > Craindre l’erreur et craindre la vérité est une seule et même chose. Celui qui craint de se tromper est impuissant à découvrir. C’est quand nous craignons de nous tromper que l’erreur qui est en nous se fait immuable comme un roc. -->
+<!-- Bessis : -->
+<!-- > En sortant de l’enfance, nous apprenons à craindre d’avoir l’air bêtes. Nous apprenons à avoir honte de nos erreurs. Nous apprenons à dissimuler, y compris à nos propres yeux, le fait que nous ne comprenons presque rien. Pour progresser en mathématiques, c’est ce réflexe de dissimulation qu’il faut apprendre à désactiver. Et c’est très difficile. À l’âge où nous étions encore libres de poser des questions stupides, y compris de poser cent fois de suite la même question stupide, il n’y avait pas de nuls en maths. Les grands mathématiciens inventent et mettent en œuvre des techniques spéciales pour retrouver cette innocence enfantine. Ils déclarent tous que c’est indispensable. -->
+<!-- > Reformulées dans le contexte de la marche, les paroles de Grothendieck à propos du rôle de l’erreur deviennent lumineuses : Craindre de tomber et craindre de marcher est une seule et même chose. Celui qui craint de se casser la figure est impuissant à apprendre à marcher. C’est quand nous restons assis sur notre cul que notre maladresse initiale se transforme en un handicap psychomoteur. -->
+<!-- ### L'édifice cumulatif -->
+</section>
+<section id="les-rythmes-asynchrones" class="level3">
+<h3 class="anchored" data-anchor-id="les-rythmes-asynchrones">Les rythmes asynchrones</h3>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/RF0-8p55q1o?si=u98wlxYQ1iHpYnrZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+<!-- Vérifier la pertinence -->
+</section>
+<section id="la-croyance-en-la-bosse-des-maths" class="level3">
+<h3 class="anchored" data-anchor-id="la-croyance-en-la-bosse-des-maths">La croyance en la bosse des maths</h3>
+<!-- Dans l'extrait introductif, Hugo Duminil-Copin bât en brèche le stéréotype qui consiste à : -->
+<!-- > Croire qu'on est pourvu ou dépourvu en mathématiques, qu'il y a ceux qui peuvent et ceux qui ne peuvent pas. -->
+<!-- Dans quelle mesure les élèves adhèrent à cette croyance ?  -->
+<!-- Dans l'étude longitudinale [@ingels2011high] : -->
+<!-- ![](images/nes-bons-en-maths.png) -->
+<!-- ![](images/croyance-bons-en-maths.png) -->
+<!-- Ils semblent ne pas croire à cette fable, ni au *fixed mindset*, et au contraire mettre en avant le travail -->
+</section>
+<section id="les-stéréotypes" class="level3">
+<h3 class="anchored" data-anchor-id="les-stéréotypes">Les stéréotypes</h3>
+<!-- [@bessis2022mathematica] -->
+<!-- > Les attitudes possibles vis-à-vis des mathématiques font partie de nos stéréotypes culturels : le geek qui adore ça (forcément boutonneux), la jeune fille cool qui s’intéresse à la mode (forcément nulle en maths), cette autre jeune fille capable de résoudre tous les problèmes sans avoir à réfléchir (forcément autiste), le cancre rebelle (forcément nul en maths). Ces stéréotypes sont absurdes et insultants. Je connais des cancres rebelles qui sont devenus de grands mathématiciens. Une lycéenne a le droit d’être jolie et d’avoir plein d’amis et de savoir résoudre tous les problèmes de maths sans avoir à réfléchir. Elle a aussi le droit de devenir une grande mathématicienne. [...] Est-ce qu’on trouverait normal que des adolescents jugent cool de ne pas savoir lire ? Qu’ils supposent que ceux qui savent lire de façon fluide, sans avoir à déchiffrer chaque lettre séparément, ont forcément des problèmes relationnels ? -->
+<!-- > « Ted Kaczynski est né en 1942 à Chicago. Ses facilités exceptionnelles en mathématiques sont vite repérées par le système scolaire. Après un test où son QI est mesuré à 167, on lui fait sauter une classe. Quelques années plus tard, il saute une autre classe. Il entre à Harvard en 1958, à l’âge de seize ans.Il soutient sa thèse de mathématiques en 1967 et devient le plus jeune professeur assistant de l’université de Berkeley.À côté de ces succès, la vie de Ted est triste et solitaire. Ceux qui l’ont connu dans sa jeunesse le décrivent comme taciturne, extrêmement en retard dans son développement affectif, incapable de communiquer et de nouer de vraies relations.À Harvard, les étudiants qui logeaient dans la même résidence universitaire se souviennent de ces deux détails : son habitude de jouer du trombone au milieu de la nuit et l’odeur de nourriture en décomposition qui se dégageait de sa chambre.Quand Ted avait quinze ans, il éprouvait de telles difficultés à socialiser avec les autres adolescents qu’il préférait jouer avec les amis de son petit frère David, alors âgé de huit ans.David Kaczynski se souvient de cette époque, de son admiration pour l’intelligence de ce grand frère qu’il[…] aimait tant, mais aussi de son étonnement devant ses comportements étranges. Qu’est-ce qui empêchait Ted de se faire des amis ?Un jour, quand David avait huit ou neuf ans, il est allé voir sa mère et lui a demandé :« Maman, c’est quoi le problème de Teddy ? »» -->
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+<!-- > « Depuis le début de ce livre, j’ai affirmé qu’il fallait dépasser les stéréotypes sur les mathématiques et les mathématiciens. Je n’ai pas changé d’avis. Ça n’empêche pas que ces stéréotypes existent et qu’ils ne sortent pas de nulle part.Ce n’est un secret pour personne. Quand on découvre la communauté mathématique, ce qui frappe immédiatement est l’abondance de gens « bizarres ». Le mot « bizarre » est une manière polie de dire les choses. Il existe des degrés dans la bizarrerie. Certains mathématiciens sont un peu bizarres. D’autres sont franchement bizarres. D’autres sont spectaculairement bizarres. Dans certains cas, la bizarrerie n’est plus le bon concept. Un seul mot paraît alors adapté : celui de folie.C’est d’ailleurs l’un des grands sujets de conversation entre mathématiciens. Chacun a des dizaines d’anecdotes à raconter, comiques et absurdes, tellement caricaturales qu’on a parfois du mal à y croire. » -->
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+<!-- > « Dépasser les stéréotypes, c’est garder en tête que la majorité des mathématiciens n’est pas comme ça. Il est parfaitement possible de faire des mathématiques au plus haut niveau et d’être « normal ». On peut même être charismatique, socialement épanoui, chaleureux et tourné vers les autres.Plus encore que la bizarrerie, l’humour est une caractéristique généralement très développée chez les mathématiciens.Ça n’empêche que la bizarrerie extrême y est représentée de façon spectaculaire, notamment parmi les mathématiciens qui ont le plus marqué l’histoire. Au chapitre 7, nous avons raconté les choix de vie d’Alexander Grothendieck, sa solitude extrême et son ascétisme.Un autre exemple frappant est celui de Grisha Perelman » -->
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+<!-- > « Nous avons le sentiment que ce n’est pas « normal », que si Perelman refuse de se couper les ongles et continue, à cinquante ans passés, à vivre seul avec sa mère dans un petit appartement de Saint-Pétersbourg, c’est parce qu’il y a quelque chose qui ne tourne pas rond.C’est possible. Mais dans le fond, nous n’en savons rien. Perelman est l’un des plus brillants esprits sur cette Terre. Il ne fait de mal à personne et il a le droit de vivre comme il l’entend. Nous n’avons aucune légitimité pour le juger.Est-ce que ce sont les mathématiques qui rendent les gens « bizarres » ? Je ne crois pas. Je dirais plutôt qu’elles savent accueillir des gens dont la bizarrerie préexistait.Elles sont l’un des rares domaines où il est possible d’accomplir de grandes choses en dépit d’immenses difficultés relationnelles. Pour des personnes initialement un peu « bizarres », « différentes », pas trop à l’aise en société, elles peuvent être un chemin de socialisation et d’épanouissement. (J’aurais tendance à me ranger dans cette catégorie.)Je ne pense donc pas que les mathématiques soient véritablement « dangereuses ».Elles sont cependant contre-indiquées dans un contexte bien particulier, où elles semblent avoir le potentiel d’induire des effets secondaires[…] » -->
+<!-- Un peu comme en politique mettre la focale sur les escrocs alors que le plus grand nombre est normal -->
+<!-- ### Solfège  -->
+</section>
+<section id="le-climat-scolaire" class="level3">
+<h3 class="anchored" data-anchor-id="le-climat-scolaire">Le climat scolaire</h3>
+<!-- Ressenti -->
+<!-- Évolution entre 2019 et 2023 TIMSS : -->
+<!-- ![](images/desordre-cours.png) -->
+<!-- Dans [@ipsos_education_2025] -->
+<!-- ![](images/safety-France.png) -->
+<!-- ![](images/harcelement.png) -->
+<!-- [@bessis2022mathematica] -->
+<!-- > Nous restons pétrifiés devant le panneau « réservé aux génies » qui nous barre l’entrée, en oubliant que nous avons nous-mêmes planté ce panneau, le jour où nous nous sommes raconté que c’était trop dur pour nous. -->
+<!-- ### Peur de passer pour un con -->
+</section>
+</section>
+<section id="perception-des-mathématiques" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="perception-des-mathématiques">Perception des mathématiques</h2>
+<p>Pour jauger l’intérêt des mathématiques nous avions suivi le fil chronologique du cursus scolaire (de l’école primaire aux études supérieures en passant par le secondaire), enregistrant une baisse d’appétence progressive pour la matière. Pour rendre compte de la perception des mathématiques et de son évolution, nous allons maintenant adopter la démarche opposée en partant des représentations des adultes une fois constituées, puis remonter le fil jusqu’à la petite école.</p>
+<section id="consultation-nationale-aux-maths-citoyennes-citoyens" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="consultation-nationale-aux-maths-citoyennes-citoyens">Consultation nationale : “Aux maths citoyennes, citoyens !”</h3>
+<p>Organisé par l’<a href="https://www.insmi.cnrs.fr/fr">Insmi</a><a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> du 10 mars au 30 avril 2025, le <a href="https://www.insmi.cnrs.fr/fr/cnrsinfo/le-questionnaire-en-ligne">questionnaire en ligne</a> <em>« Aux maths citoyennes, citoyens ! Grande consultation nationale »</em> a recueilli plus d’1,1 million de contributions par plus de <strong>33 000 participantes et participants !</strong> L’objectif était de récolter les perceptions, les représentations, les émotions et envies des citoyennes et citoyens au sujet des mathématiques.</p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;Institut national des sciences mathématiques et de leurs interactions.</p></div></div><p><img src="images/cnrs-consultation-aux-maths-citoyennes-citoyens.jpg" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>À noter : les personnes ayant répondu à cette consultation en ligne ne sont pas strictement représentatives de l’ensemble de la population française […] forte participation des cadres et des professions intellectuelles supérieures (57% des répondantes et répondants à la consultation vs 22% de la population en emploi en France). Par ailleurs, 71% des répondantes et répondants déclarent se sentir soit très à l’aise soit plutôt à l’aise avec les mathématiques.</p>
+</blockquote>
+</section>
+<section id="les-maths-ça-sert-à-quoi" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="les-maths-ça-sert-à-quoi">Les maths ça sert à quoi ?</h3>
+<p><a href="https://www.math.univ-toulouse.fr/~cbesse/">Christophe Besse</a>, directeur de l’<a href="https://www.insmi.cnrs.fr/fr">Insmi</a>, fut invité sur France Inter dans le but de parler de la consultation citoyenne dont l’un des objectifs était de <em>“comprendre pourquoi on entend souvent ‘j’ai détesté les maths’”</em></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J4mzZwPE4R8?si=FREnc-h0HqxNabeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>À la question de la journaliste <em>“Ça suscite des émotions les maths ?”</em>, Christophe Besse partage tout d’abord la même expérience que je relatais en introduction<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;voir également l’<a href="https://www.youtube.com/watch?v=sAWcgVmYL3o&amp;t=287s">interview</a> de Laure Saint-Raymond mise en exergue dans l’introduction.</p></div></div><blockquote class="blockquote">
+<p>Oui quand on est comme moi chercheur en mathématiques, quand on est interrogés sur notre métier, <strong>c’est soit de la passion, soit une espèce de réticence</strong> ; “j’étais nul en maths”, “c’est pas pour moi”. En tout cas ça ne laisse pas les gens indifférents, et on essaye de comprendre pourquoi. Et aussi <strong>pourquoi on entend si souvent “j’ai détesté les maths”</strong>, c’est fort comme mots ! Et on ne le dit pour aucune autre matière…</p>
+</blockquote>
+<p>puis il ajoute :</p>
+<blockquote class="blockquote">
+<p>… alors qu’en fait les maths on les vit tous les jours dans notre quotidien, on en a <strong>tous les jours besoin</strong>. Par exemple pour les sondages, pour l’intelligence artificielle, pour la radio numérique, tout cela c’est des maths <strong>sans que l’on s’en rende compte</strong>. Quand on va payer avec sa carte bancaire c’est des maths il y a de la cryptographie <strong>derrière</strong>.</p>
+</blockquote>
+<p><strong>Malentendu sur la notion d’utilité</strong></p>
+<p>Les passages que j’ai souligné en gras me semblent révélateur de la confusion entretenue entre ces deux questions :</p>
+<ul>
+<li>Les maths ça sert à quoi ? (pour la société)</li>
+<li>Les maths ça <em>me</em> sert à quoi ? (à titre individuel)</li>
+</ul>
+<p>Ce dont le citoyen a <em>tous les jours besoin</em>, ce sont principalement de tous les outils techniques qui reposent <em>derrière</em> sur des mathématiques, <em>sans que l’on s’en rende compte</em>. Ces mathématiques là, comme la cryptographie, le citoyen n’en a la plupart du temps pas <em>directement</em> besoin dans son quotidien, il ne les manipule pas lui-même. Ce sont avant tout les concepteurs, les chercheurs et les ingénieurs, qui ont besoin de ce savoir-faire mathématique afin de concevoir ces outils utiles à la population. Ce sont bien souvent ces applications qui occupent la majeure parties des exemples cités pour convaincre de <a href="https://www.insmi.cnrs.fr/fr/cnrsinfo/la-place-des-mathematiques-dans-nos-vies">la place des mathématiques dans nos vies</a> par leur omniprésence.</p>
+<p>Dans la notion d’utilité il y a toujours l’adéquation entre une fin et des moyens. Autrement dit une chose est utile en fonction d’un besoin. Par exemple une bouée est utile au maître-nageur, mais ne sera d’aucune utilité pour l’alpiniste. Les mathématiques, elles, sont utiles au physicien pour modéliser les phénomènes physiques, et sont même <em>nécessaires</em><a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> à l’élaboration des théories. Elles le sont probablement moins pour la plupart des gens au quotidien. Il y a donc divers degrés d’utilité. Les mathématiques sont parfois utiles au quotidien mais absolument nécessaires au fonctionnement de notre société moderne et des sciences. Alors certes, on peut se convaincre que les mathématiques nous sont ainsi <em>indirectement</em> utiles, mais cela tout le monde ou presque en conviendra. La voiture est utile à de nombreuses personnes pour se déplacer, mais il ne leur est pas nécessaire d’en comprendre la physique de la thermodynamique qui fait tourner leur moteur. La journaliste objectant à raison sur l’exemple de la cryptographie :</p>
+<div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;Se souvenir que les deux notions d’utile et de nécessaire ne sont pas équivalentes, à toute fin… utile.</p></div></div><blockquote class="blockquote">
+<p>On n’a pas besoin de faire de maths ou de connaître les maths pour utiliser une carte bleue.</p>
+</blockquote>
+<p>Ce à quoi Christophe Besse répondra que pour savoir si les soldes sont intéressantes on a besoin d’effectuer une conversion dans notre tête, preuve que nous manipulons des maths tous les jours. Certes, mais ces calculs requièrent rarement plus de connaissances mathématiques que n’en possède un élève en début de collège voire de l’école primaire. Or on l’a vu précédemment, jusqu’à ce stade les mathématiques sont appréciées par les élèves. C’est après que cela se corse.</p>
+<p>La question que se posent les non-scientifiques est celle de savoir à quoi leur servent <em>dans leur quotidien</em> des mathématiques plus élaborées introduites progressivement au collège, comme la démonstration géométrique ou la résolution d’équation. Force est de reconnaître que peu de personnes mettent en application ces mathématiques au quotidien. On peut fort heureusement vivre convenablement et mener une existence heureuse sans avoir à résoudre d’équations.</p>
+<p><strong>Division du travail et adaptation</strong></p>
+<p>L’environnement technologique dans lequel nous évoluons, développé par les scientifiques et techniciens, via la division du travail, exempte la majeure partie de la population d’avoir à maitriser les sciences qui rendent possibles ce confort. Il en va de même pour la médecine dont on délègue aux soignants la responsabilité de s’occuper de notre santé, et on fait l’impasse sur la chimie (qui ne sert pas non dans la vie quotidienne) qui permet de fabriquer les médicaments dont on a besoin. Plus difficile serait de se passer d’apprendre à lire ou à compter, dans un environnement qui est saturé de mots et de nombres. Il reste plus handicapant<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> de ne pas savoir lire dans une société où une myriade de choses et d’actions sont dépendantes des écrits et symboles qui nous entourent. L’utilité de savoir lire est ainsi liée au contexte. Dans <span class="citation" data-cites="bessis2022mathematica">(<a href="#ref-bessis2022mathematica" role="doc-biblioref">Bessis 2022</a>)</span> on peut y lire :</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;Piqûre de rappel quant au fait que la situation de handicap naît de l’interaction entre les caractéristiques propres d’une personne et les obstacles ou facilitateurs de son environnement. Dans une société telle que la nôtre où il n’est pas seulement utile mais nécessaire de savoir lire, l’absence de lunettes engendrerait beaucoup de handicap chez ceux qui ne peuvent lire sans. Or ce sont des mathématiques qui sous-tendent la création de lentilles façonnés par des calculs d’optiques. Pas de mathématiques, pas de lunettes; pas de lunettes, pas de lecture; pas de lecture… pas de lecture.</p></div><div id="ref-bessis2022mathematica" class="csl-entry" role="listitem">
+Bessis, David. 2022. <em>Mathematica: Une Aventure Au Coeur de Nous-m<span>ê</span>mes</em>. Seuil.
+</div></div><blockquote class="blockquote">
+<p>Depuis cent cinquante ans environ, une nouvelle décision fondamentale a été prise : celle d’enseigner la lecture et l’écriture à tout le monde. Cette décision est tellement structurante qu’il est devenu difficile d’imaginer à quoi notre monde pourrait bien ressembler si elle n’avait pas été prise. Si, comme c’était le cas jusqu’alors, seule une petite minorité de la population avait accès à la lecture. Au temps des hiéroglyphes et de l’Égypte ancienne, l’art d’écrire s’apparentait à un pouvoir magique. Les scribes formaient une caste héréditaire, et ils se transmettaient leurs secrets de génération en génération. Dans l’Europe médiévale, écrire était une vocation. Des jeunes hommes se faisaient moines, ils se retiraient du monde et consacraient leur existence à copier des manuscrits. Qu’est-ce que les paysans illettrés du Moyen Âge pensaient de tout cela ? S’imaginaient-ils qu’apprendre à lire et à écrire exigeait un don spécial, une forme particulière d’intelligence qui leur faisait défaut ? Trouvaient-ils injuste et frustrant d’en être exclus ? Ou, plus simplement, se disaient-ils qu’ils n’avaient pas le temps, pas l’argent, pas l’envie, et que de toute façon ils n’avaient rien à lire ? Aujourd’hui, plus personne ne pense que lire et écrire suppose un don spécial. <strong>Plus personne ne pense que ça ne sert à rien</strong>. À de rares exceptions près, tous les régimes, quelles que soient leurs croyances et leurs idéologies, font de l’enseignement primaire une priorité absolue.Le projet radical d’alphabétiser la Terre entière est un prodigieux succès. L’illettrisme n’a pas disparu, bien sûr, mais il est devenu minoritaire. En quelques générations, l’humanité a su accomplir un programme global de transformation cognitive sans équivalent dans l’histoire. Dans le même temps où était lancé ce grand chantier d’alphabétisation planétaire, une autre décision radicale était prise : on allait enseigner les bases des mathématiques à tout le monde. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus d’un milliard de filles et de garçons étudient les mathématiques. Et c’est un véritable désastre. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus de cinq cents millions de filles et de garçons souffrent en silence. Ils ont l’impression de ne rien comprendre et sont ballottés entre le désengagement (ils ne voient absolument pas l’intérêt de cette matière) et la sensation humiliante de ne pas être assez intelligents.»</p>
+</blockquote>
+<p>En plus des raisons structurelles du désamour des mathématiques déjà évoquées dans la section précédente, les élèves justifient leur désengagement par le rendement décroissant de l’utilité pratique des mathématiques au cours du collège puis au lycée <span class="citation" data-cites="merle_rapport_2003">(<a href="#ref-merle_rapport_2003" role="doc-biblioref">Merle 2003, sec. 44</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-merle_rapport_2003" class="csl-entry" role="listitem">
+Merle, Pierre. 2003. <span>“Le Rapport Des Collégiens Aux Mathématiques Et Au Français.”</span> <em>L’orientation Scolaire Et Professionnelle</em>, no. 32/4 (December): 641–68. <a href="https://doi.org/10.4000/osp.2632">https://doi.org/10.4000/osp.2632</a>.
+</div></div><blockquote class="blockquote">
+<p>L’utilité des mathématiques et du français pour les élèves a été saisie à partir de questions relatives à leur usage dans la vie de tous les jours et pour obtenir un métier. Mathématiques et français sont considérés comme « utiles » ou « très utiles » dans « la vie de tous les jours » par une très forte majorité d’élèves (près de huit sur dix). Ce sentiment collégien est moins présent en classe de troisième que de sixième : la proportion d’élèves à considérer que les mathématiques et le français sont « très utiles » chutent en effet de moitié. Cette évolution tient probablement au fait que les connaissances apprises en classe de sixième semblent plus indispensables aux élèves que celles acquises en classe de troisième. Les déclarations des élèves relatives à la moindre utilité de ces deux disciplines en fin de troisième sont en rapport aussi avec le moindre intérêt qu’elles suscitent par ailleurs sans qu’il soit possible d’établir le sens d’une éventuelle causalité entre utilité et intérêt.</p>
+</blockquote>
+<p>Et quand ça n’est pas seulement les élèves mais aussi un ancien ministre de l’éducation qui n’y voit pas l’intérêt, cela ne facilite pas la tâche.</p>
+<p><strong>La polémique de Luc Ferry</strong></p>
+<p>Le 15 février 2018 sur LCI, <a href="https://fr.wikipedia.org/wiki/Luc_Ferry">Luc Ferry</a>, ancien ministre de l’éducation déclarait :</p>
+<blockquote class="blockquote">
+<p>Comme 99 % des Français, je n’ai jamais utilisé, même pas trente secondes, ce que j’ai appris en maths tout au long de ma scolarité jusqu’en deuxième année de fac. Je n’ai jamais utilisé les identités remarquables, les cas d’égalité des triangles, ça ne m’a jamais servi à rien.</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NZEgo5qGsnY?si=Ni_7xngIE7lKS_3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>Affirmer ne jamais utiliser les maths, en utilisant une statistique, est pour le moins savoureux, mais passons. Cela m’inspire cette petite plaisanterie auto-référentielle :</p>
+<p>99% des énoncés de la forme (99% des <span class="math inline">\(X\)</span> sont <span class="math inline">\(Y\)</span>) sont faux.</p>
+<details>
+<summary>
+Est-ce que cette affirmation est vraie ? (clique pour voir la réponse)
+</summary>
+<p>Soit <span class="math inline">\(e\)</span> cet énoncé, et <span class="math inline">\(E\)</span> l’ensemble de tous les énoncés de la forme “99% des <span class="math inline">\(X\)</span> sont <span class="math inline">\(Y\)</span>”. Alors clairement <span class="math inline">\(e\)</span> appartient à <span class="math inline">\(E\)</span>, puisqu’il est de cette forme avec <span class="math inline">\(X=\)</span>“énoncés de la forme (99% des <span class="math inline">\(X\)</span> sont <span class="math inline">\(Y\)</span>)” et <span class="math inline">\(Y\)</span>=“faux”. L’énoncé <span class="math inline">\(e\)</span> est donc auto-référentiel, il est de la même forme que les énoncés qu’il décrit. Mais contrairement au <a href="https://fr.wikipedia.org/wiki/Paradoxe_du_menteur">paradoxe du menteur</a>, il n’y a aucune contradiction ici, en effet :</p>
+<ul>
+<li><p>Si <span class="math inline">\(e\)</span> est vrai, alors 99% des éléments de l’ensemble <span class="math inline">\(E\)</span> sont faux, et donc <span class="math inline">\(e\)</span> qui est à la fois vrai et dans <span class="math inline">\(E\)</span>, appartient simplement aux 1% restants.</p></li>
+<li><p>Si <span class="math inline">\(e\)</span> est faux, alors il devient simplement faux que “99% des éléments de <span class="math inline">\(E\)</span> sont faux”, ce qui n’est pas incompatible avec le fait que <span class="math inline">\(e\)</span> soit lui-même faux.</p>
+<p>Donc il n’y a pas de paradoxe logique. Toutefois cela ne nous dit toujours pas si l’affirmation est vraie ou fausse.</p>
+<p>Notons <span class="math inline">\(N\)</span> le nombre d’énoncés que contient <span class="math inline">\(E\)</span>. Pour que <span class="math inline">\(e\)</span> soit vrai, il faudrait que le nombre d’énoncés faux soit exactement de <span class="math inline">\(0,99N\)</span> (donc nécessairement que <span class="math inline">\(N\)</span> soit un multiple de 100 pour que cette quantité soit entière). Sur un grand nombre <span class="math inline">\(N\)</span> d’énoncés (par exemple 1 million), la probabilité que le nombre d’énoncés faux soit <strong>exactement</strong> de <span class="math inline">\(0,99N\)</span> (dans notre exemple 990 000) est relativement faible !</p>
+<p>En revanche si on relâche l’hypothèse en prenant pour énoncé <span class="math inline">\(e\)</span> qu’au moins 99% des énoncés de <span class="math inline">\(E\)</span> sont faux, alors <span class="math inline">\(e\)</span> est probablement vrai, car l’écrasante majorité des affirmations du type “99% des <span class="math inline">\(X\)</span> sont <span class="math inline">\(Y\)</span>” servent en réalité à souligner que l’écrasante majorité (bis) des <span class="math inline">\(X\)</span> sont <span class="math inline">\(Y\)</span>, et non pas à quantifier exactement une proportion de 99%.</p></li>
+</ul>
+<p>En tapant “99% des …” dans mon moteur de recherche voici les premiers résultats retournés :</p>
+<ul>
+<li><p>“99% des manifestations se passent dans la joie”</p>
+<ul>
+<li><p>“99% des gens ne comprennent pas ça”</p></li>
+<li><p>“99% des gens se trompent sur cette énigme !”</p></li>
+<li><p>“99% des gens ne comprennent rien aux échecs”</p></li>
+<li><p>“99% des auxiliaires de vie sont fiers de leur métier”</p></li>
+</ul></li>
+</ul>
+<p>Bon les résultats sont ici corrélés à mon historique de recherche, mais au delà de ce biais d’échantillonnage, je pense que ça ne modifie pas la manière d’employer cette tournure de phrase visant à insister sur <em>le plus grand nombre</em>, sans chercher à en déterminer la véritable proportion. Je suppose ironiquement que plus de 99% des phrases de ce type ne renseignent pas une statistique correcte, sans avoir moi-même fait l’examen minitieux et exhaustifs de toutes ces phrases. L’hypothèse me semble néanmoins raisonnable du fait d’une part de l’usage courant de l’expression et d’autre part du point précédent soutenant que la probabilité de tomber pile sur une proportion de 0,99 est très faible compte tenu des incertitudes.</p>
+<p>Ainsi l’énoncé <span class="math inline">\(e\)</span> = “Plus de 99% des énoncés de <span class="math inline">\(E\)</span> sont faux” est certes une affirmation plus forte que de n’avoir “que” 99%, mais je disais que cela permettait de “relâcher” l’hypothèse car c’est en réalité la proportion exacte de 99% qui est la plus contraignante pour la véracité de <span class="math inline">\(e\)</span>, qui est <strong>probablement fausse</strong> sous cette formulation (mais que je trouvais plus amusante par son caractère auto-référentiel). Tandis que sous cette hypothèse plus forte “Plus de 99%” l’énoncé <span class="math inline">\(e\)</span> est désormais <strong>très probablement vrai</strong>. Ce qui conclut (presque) le problème.</p>
+<p><strong>Remarque</strong> : J’ai jusqu’à maintenant considéré pour <span class="math inline">\(E\)</span> l’ensemble de tous les énoncés formulés effectivement par des humains. Cependant on pourrait considérer tous les énoncés <strong>possibles</strong> de la forme “99% des <span class="math inline">\(X\)</span> sont <span class="math inline">\(Y\)</span>”, incluant des absurdités (“99% des mathématiciens sont des langoustes”) ou des tautologies (“99% des langoustes sont des langoustes”), dont on peut en générer une <em>infinité</em>. Mais alors la notion même de proportion ne fait plus sens (99% d’une infinité d’énoncés), il faudrait plutôt parler de densité. Mais cela soulève des difficultés. Pour s’en rendre compte construisons cette famille d’énoncés : <span class="math inline">\(e_k\)</span>=“99% des entiers de 1 à <span class="math inline">\(k\)</span> sont inférieurs à <span class="math inline">\(0,99k\)</span>”. Si <span class="math inline">\(k\)</span> est un multiple de 100 alors <span class="math inline">\(e_k\)</span> est vrai, sinon <span class="math inline">\(e_k\)</span> est faux. Par conséquent, parmi les <span class="math inline">\(n\)</span> premiers énoncés <span class="math inline">\(e_1,\dotsc,e_n\)</span>, le nombre d’énoncés vrais est <span class="math inline">\(\lfloor \frac{n}{100} \rfloor\)</span>, et la densité de vrais est donc : <span class="math display">\[ \lim_{n\to +\infty} \frac{\lfloor \frac{n}{100} \rfloor}{n}=\frac{1}{100}\]</span> Ainsi la densité de faux est de 0,99 et donc l’énoncé <span class="math inline">\(e\)</span> portant sur cette famille peut être considéré vrai au sens de cette densité naturelle. Toutefois ce résultat dépend de l’énumération, car ici nous avons ordonné les énoncés de telle sorte que nous ayons un énoncé vrai tous les 100 énoncés, la construction est périodique; mais si on rééordonnait les énoncés typiquement en plaçant tout d’abord les vrais puis en intercalant des faux, on pourrait faire tendre la densité de faux vers n’importe quelle valeur de <span class="math inline">\([0,1]\)</span> voire même ne pas la faire converger du tout (c’est la magie des séries infinies). Donc l’énoncé <span class="math inline">\(e\)</span> sans précisions sur le choix de l’énumération est mal défini.</p>
+</details>
+<p>Trêve de plaisanterie, faisons preuve de charité intellectuelle à l’égard de Luc Ferry, et admettons qu’il fasse une distinction (discutable nous y reviendrons dans la dernière partie) entre mathématiques pratiques dans l’usage quotidien (calculs, pourcentages) et mathématiques dites “spéculatives” <span class="citation" data-cites="apmep_editorial_2004">(<a href="#ref-apmep_editorial_2004" role="doc-biblioref">APMEP 2004</a>)</span>. Ce qu’il veut signifier, c’est qu’un certain nombre de notions mathématiques qu’il range dans cette seconde catégorie (les identités remarquables, les cas d’égalité des triangles, la démonstration géométrique, la résolution d’équations, etc) sont rarement mobilisées dans la vie quotidienne de la plupart des citoyens. Et sur ce point je pense qu’on peut lui donner raison.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-apmep_editorial_2004" class="csl-entry" role="listitem">
+APMEP. 2004. <span>“Editorial Du <span>Bulletin</span> 451.”</span> In <em>APMEP</em>. <a href="https://www.apmep.fr/Editorial-du-Bulletin-451">https://www.apmep.fr/Editorial-du-Bulletin-451</a>.
+</div></div><p><strong>Le règne de l’utile</strong></p>
+<p>Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie un signal où il signifie que tout le contenu mathématiques du secondaire qui est rarement appliqué ne sert donc à rien si ce n’est aux “matheux”, contrairement aux autres que cela ennuie <span class="citation" data-cites="le_huffpost_epingle_2018">(<a href="#ref-le_huffpost_epingle_2018" role="doc-biblioref">HuffPost 2018</a>)</span>. Ce qui sert <em>in fine</em> la soupe à ceux qui clâment haut et fort que <em>“les maths ça ne sert à rien”</em>, pour eux, puisqu’il conclut en fin d’interview (au sujet du rapport Villani) par :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-le_huffpost_epingle_2018" class="csl-entry" role="listitem">
+HuffPost, Le. 2018. <em>Épinglé Pour Avoir Affirmé Que "Les Maths Ne Servent à Rien", <span>Luc</span> <span>Ferry</span> s’explique</em>. <a href="https://www.huffingtonpost.fr/life/article/luc-ferry-epingle-pour-avoir-dit-que-les-maths-ne-servent-a-rien-s-explique_117778.html">https://www.huffingtonpost.fr/life/article/luc-ferry-epingle-pour-avoir-dit-que-les-maths-ne-servent-a-rien-s-explique_117778.html</a>.
+</div></div><blockquote class="blockquote">
+<p>À mon avis ça ne va pas rendre la bosse des maths à ceux qui ne l’ont pas (<em>rire</em>).</p>
+</blockquote>
+<p>Ce qui, pour un ancien ministre de l’éducation, n’est pas des plus responsables qu’on se le dise. Comme le souligne cet économiste <span class="citation" data-cites="menia_luc_2018">(<a href="#ref-menia_luc_2018" role="doc-biblioref">Ménia 2018</a>)</span> en réponse à ce texte d’un collègue <span class="citation" data-cites="alexandre_luc_2018">(<a href="#ref-alexandre_luc_2018" role="doc-biblioref">Delaigue 2018</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>On ne peut pas se contenter de considérer que le quidam n’a pas une idée consistante de ce à quoi sert l’école et que les arguments des uns et des autres sont finalement assez faibles pour ou contre Ferry. On doit persister à dire ce que doit être l’école, dans une approche normative, face à quelqu’un qui le dit aussi, assez lamentablement. Le texte laisse, à mon goût, trop penser que les propos de Ferry ont une valeur réelle. N’oublions pas que quand un ancien ministre de l’Éducation nationale parle dans un grand média, il dit ce qui doit être. Se contenter de dire que, si on s’en tient à la perception du problème par les gens, il a raison – ou plutôt pas tort -, c’est déjà trop. Il faut lui répondre que notre objectif est de faire, du mieux possible, une école du capital humain et du développement des compétences diverses, grâce notamment aux maths, pas qu’il faut renoncer aux maths parce qu’elles sont mal comprises ou mal utilisées.</p>
+</blockquote>
+<p><a href="https://fr.wikipedia.org/wiki/Pierre_Colmez">Pierre Colmez</a> fait remarquer que ce constat sur l’utilité des maths s’applique en fin de compte à la plupart des matières <span class="citation" data-cites="colmez_reponse_2012">(<a href="#ref-colmez_reponse_2012" role="doc-biblioref">Colmez 2012</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-colmez_reponse_2012" class="csl-entry" role="listitem">
+Colmez, Pierre. 2012. <span>“La Réponse à l’éternelle Question <span>‘Ça Sert à Quoi Les Maths ?’</span>”</span> In <em>Atlantico</em>. <a href="https://atlantico.fr/article/decryptage/reponse-eternelle-question-quoi-ca-sert-les-mathematiques-pourquoi-ne-faut-pas-les-supprimer-ecole-pierre-colmez">https://atlantico.fr/article/decryptage/reponse-eternelle-question-quoi-ca-sert-les-mathematiques-pourquoi-ne-faut-pas-les-supprimer-ecole-pierre-colmez</a>.
+</div></div><blockquote class="blockquote">
+<p>Ce genre de discours refait surface régulièrement, et à chaque fois je me fais la réflexion qu’en poussant le raisonnement jusqu’au bout, on aboutit à la suppression pure et simple de l’enseignement : en ce qui me concerne, je serais bien en peine de citer beaucoup de choses apprises à l’école et dont j’ai eu à me servir en dehors (à part l’orthographe car j’écris tous les jours, et les mathématiques car je suis mathématicien). J’ai suivi de longues études de physique et la seule application que j’en ai trouvée a été la vidange du bain de ma fille à l’aide d’un tuyau (vive le principe d’Archimède !), technique que j’ai apprise en CM2 pour la vidange de l’aquarium de la classe. De même, la seule connaissance de chimie que j’utilise consciemment est le fait que le manque d’oxygène pour la combustion produit du CO, qui est un poison, au lieu du CO2, qui est un gaz parfaitement inoffensif (à dose raisonnable). Je fais donc attention à ma chaudière à gaz. Le but de l’éducation n’est certainement pas de préparer les élèves directement à leur futur métier (c’est parfaitement impossible ; il faudrait enseigner beaucoup trop de choses vue la diversité des métiers potentiels), mais de <strong>leur donner des bases, aussi étendues que possible, pour leur permettre d’apprendre efficacement ce dont ils auront besoin une fois leur métier choisi</strong>, et aussi pour comprendre les informations nécessaires pour prendre les décisions de la vie de tous les jours, sans oublier la constitution d’une base de repères (culturels et autres) pour les relations sociales.</p>
+</blockquote>
+<p>L’économiste <span class="citation" data-cites="menia_luc_2018">(<a href="#ref-menia_luc_2018" role="doc-biblioref">Ménia 2018</a>)</span> rejoint le mathématicien :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-menia_luc_2018" class="csl-entry" role="listitem">
+Ménia, Stéphane. 2018. <span>“Luc <span>Ferry</span> Et La Philosophie Du Capital Humain.”</span> In <em>Éconoclaste</em>. <a href="https://econoclaste.eu/econoclaste/luc-ferry-et-la-philosophie-du-capital-humain/">https://econoclaste.eu/econoclaste/luc-ferry-et-la-philosophie-du-capital-humain/</a>.
+</div></div><blockquote class="blockquote">
+<p>Les matières enseignées ne sont pas vraiment utiles en elles-mêmes, mais le temps passé à l’école apporte des qualités aux élèves. Ils apprennent à l’école des qualités comme le travail, la rigueur de raisonnement, etc.</p>
+</blockquote>
+<p>Gage de son efficacité (“apprendre à apprendre”), la sélection par les mathématiques n’est cependant pas totalement étrangère à la logique du signal avancée par <span class="citation" data-cites="alexandre_luc_2018">(<a href="#ref-alexandre_luc_2018" role="doc-biblioref">Delaigue 2018</a>)</span>. Nous en avions parlé dans la première partie, bon nombre d’élèves choisissaient de suivre une Terminale S non pas pour le contenu scientifiques mais davantage pour le signal que ça renvoyait (<em>“J’ai obtenu un bac S donc c’est un gage de sérieux, de travail et de rigueur qui m’ouvre toutes les portes”</em>).</p>
+<div class="no-row-height column-margin column-container"><div id="ref-alexandre_luc_2018" class="csl-entry" role="listitem">
+Delaigue, Alexandre. 2018. <em>Luc <span>Ferry</span> Et Le Signal Des Mathématiques - <span>Classe</span> Éco</em>. <a href="https://blog.franceinfo.fr/classe-eco/2018/02/18/luc-ferry-et-le-signal-des-mathematiques.html">https://blog.franceinfo.fr/classe-eco/2018/02/18/luc-ferry-et-le-signal-des-mathematiques.html</a>.
+</div><div id="ref-oconnor_euclid_1999" class="csl-entry" role="listitem">
+O’Connor, J. J., and E. F. Roberston. 1999. <span>“Euclid <span>Biography</span>.”</span> In <em>Maths History</em>. <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/">https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/</a>.
+</div></div><p>L’anecdote de <a href="https://fr.wikipedia.org/wiki/Jean_Stob%C3%A9e">Jean Stobée</a> est amusante, elle rapporte l’histoire suivante <span class="citation" data-cites="oconnor_euclid_1999">(<a href="#ref-oconnor_euclid_1999" role="doc-biblioref">O’Connor and Roberston 1999</a>)</span>. Un élève qui venait de commencer l’étude de la géométrie avec <a href="https://fr.wikipedia.org/wiki/Euclide">Euclide</a> lui demanda : <em>“Mais quel profit vais-je tirer de l’apprentissage de ces choses ?”</em>. Euclide appela alors son esclave et lui dit : <em>“Donne-lui trois pièces de monnaie, puisqu’il lui faut absolument tirer un profit de ce qu’il apprend”</em>. Cette histoire illustre la vision qu’avaient les mathématiciens grecs de leur discipline, où primait la recherche du savoir pur. Pour Euclide la géométrie possède une valeur intellectuelle et philosophique intrinsèque. Elle n’a pas besoin d’avoir une application ou un gain financier immédiat pour mériter d’être apprise.</p>
+<p><strong>L’autonomie du sujet</strong></p>
+<p>Faudrait-il arrêter d’enseigner au collège la démonstration géométrique ou la résolution d’équation, ou seulement exclusivement à ceux qui se destinent à des études scientifiques, au seul motif qu’elles sont moins utiles pour le citoyen lambda dans la plupart de ses activités quotidiennes ? Non, car on peut y trouver d’autres intérêts qui ne sont pas purement <em>utilitaires</em> mais relèvent en définitive de la formation de l’esprit, de l’exercice de la rigueur de la démonstration, du développement de l’esprit critique, de la montée en abstraction ou encore de l’appropriation d’une culture scientifique.</p>
+<p>Exercer son intellect en faisant des mathématiques développe ces capacités logiques et intuitives, peu importe le support de réflexion (géométrie, arithmétique, probabilités, …) cela reste du “sport cérébral” avec des modes de raisonnement propres. De même à l’école on fait du sport pour sa santé physique, de l’athlétisme par exemple qui se décline en plusieurs sous-disciplines, et personne ne se plaint de ne pas réutiliser le saut en hauteur dans sa vie quotidienne.</p>
+<p>Être agile, aussi bien physiquement qu’intellectuellement, est libérateur. L’école n’a de mon point de vue pas vocation à s’aligner sur la seule utilité <span class="citation" data-cites="girard_pourquoi_2013">(<a href="#ref-girard_pourquoi_2013" role="doc-biblioref">Girard and Demailly 2013</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"></div><blockquote class="blockquote">
+<p>Nicholson Baker affirme par ailleurs que la plupart des personnes n’ont besoin que d’arithmétique pour survivre dans le monde moderne. Faut-il pour autant se contenter de n’enseigner que les mathématiques de base aux profils non scientifiques ? Jean-Rémi Girard : J’ose espérer que les finalités de l’école ne se limitent pas à la capacité à “survivre dans le monde moderne”. C’est une conception de la scolarité absolument terrifiante ! Notre école possède une visée humaniste, héritée du XVIème siècle et des Lumières, et les mathématiques participent de cette visée. Rappelons que beaucoup de nos philosophes étaient également mathématiciens. Limiter l’enseignement des mathématiques de manière drastique, cela reviendrait à amputer la formation de l’esprit critique des générations futures. Les mathématiques participent de l’acquisition de la citoyenneté.</p>
+</blockquote>
+<p><span class="citation" data-cites="pascal_pensees_1670">(<a href="#ref-pascal_pensees_1670" role="doc-biblioref">Pascal 1670</a>)</span> résume cette visée humaniste et universelle :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-pascal_pensees_1670" class="csl-entry" role="listitem">
+Pascal, Blaise. 1670. <em>Les <span>Pensées</span></em>. <a href="https://www.penseesdepascal.fr/General/Honnete.php">https://www.penseesdepascal.fr/General/Honnete.php</a>.
+</div></div><blockquote class="blockquote">
+<p>Honnête homme. Il faut qu’on n’en puisse dire ni il est mathématicien, ni prédicateur, ni éloquent mais il est honnête homme, cette qualité universelle me plaît seule. / Puisqu’on ne peut être universel en sachant tout ce qui se peut savoir sur tout, il faut savoir peu de tout, car il est bien plus beau de savoir quelque chose de tout que de savoir tout d’une chose. Cette universalité est la plus belle. Si on pouvait avoir les deux encore mieux, mais s’il faut choisir il faut choisir celle-là. Et le monde le sent et le fait, car le monde est un bon juge souvent.</p>
+</blockquote>
+<p>En revanche sur le plan économique, la division du travail règne sans partage, induisant une forte spécialisation des individus et signe le déclin de l’idéal humaniste selon <span class="citation" data-cites="durkheim_division_1893">(<a href="#ref-durkheim_division_1893" role="doc-biblioref">Durkheim 1893</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-durkheim_division_1893" class="csl-entry" role="listitem">
+Durkheim, Émile. 1893. <span>“De La Division Du Travail Social.”</span> Text. In <em>Texte</em>. <a href="https://classiques.uqam.ca/classiques/Durkheim_emile/division_du_travail/division_travail_intro.html">https://classiques.uqam.ca/classiques/Durkheim_emile/division_du_travail/division_travail_intro.html</a>.
+</div></div><blockquote class="blockquote">
+<p>Notre devoir est-il de chercher à devenir un être achevé et complet, un tout qui se suffit à soi-même, ou bien au contraire de n’être que la partie d’un tout, l’organe d’un organisme ? En un mot, la division du travail, en même temps qu’elle est une loi de la nature, est-elle aussi une règle morale de la conduite humaine, et si elle a ce caractère, pour quelles causes et dans quelle mesure ? […] Nous avons passé le temps où l’homme parfait nous paraissait être celui qui, sachant s’intéresser à tout sans s’attacher exclusivement à rien, capable de tout goûter et de tout comprendre, trouvait moyen de réunir et de condenser en lui ce qu’il y avait de plus exquis dans la civilisation. Aujourd’hui, cette culture générale, tant vantée jadis, ne nous fait plus l’effet que d’une discipline molle et relâchée. […] L’honnête homme d’autrefois n’est plus pour nous qu’un dilettante, et nous refusons au dilettantisme toute valeur morale ; nous voyons bien plutôt la perfection dans l’homme compétent qui cherche, non à être complet, mais à produire, qui a une tâche délimitée et qui s’y consacre, qui fait son service, trace son sillon.</p>
+</blockquote>
+<p>Si la division du travail est une nécessité économique qui tend à fragmenter l’individu, la démocratie requiert quant à elle des citoyens qui cultivent l’esprit de l’honnête homme : une posture d’ouverture, d’esprit critique et d’intérêt pour le bien commun. La démocratie moderne ne demande pas à chacun d’être un expert en économie<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>, en virologie ou en géopolitique. Elle exige en revanche une forme d’honnêteté intellectuelle et de culture générale permettant de comprendre les grands enjeux et de démasquer les discours démagogiques. C’est l’idéal du citoyen éclairé auquel l’école contribue.</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;Durant ma formation scientifique au lycée, j’ai regretté et j’ai été très frustré de n’avoir pas bénéficier de cours d’économie comme mes camarades d’ES. À l’âge où l’on est sur le point de pouvoir voter, n’avoir aucune base économique est un handicap pour apprécier les programmes politiques.</p></div></div><p>À titre personnel, être à l’aise en mathématique m’a notamment permis de comprendre un <a href="https://www.kevinpolisano.fr/posts/2014-07-06-comprendre-son-bulletin-de-paie/">bulletin de paie</a>, les <a href="https://www.kevinpolisano.fr/posts/2014-07-15-quels-impots-pour-les-personnes-handicapees/">calculs d’imposition</a> ou encore le <a href="https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/">fonctionnement de l’AAH</a>, billet dans lequel j’écrivais ceci : <em>“Gardez à l’esprit que comprendre, ce n’est pas subir…”</em>. S’en est suivi un combat politique sur l’injustice de la conjugalisation des ressources, où la logique était un rampart à la mauvaise foi politique et une aide précieuse pour <a href="https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/">analyser les arguments adverses</a>.</p>
+<p>Donc ce n’est pas parce que les activités courantes de la vie quotidienne ne requièrent que du calcul niveau CM2 comme le dit Luc Ferry, que les mathématiques ne sont pas utiles à d’autres fins (y compris citoyennes).</p>
+<p>Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, indépendemment de toutes ces retombées positives. Après tout, on apprécie la poésie non pour son utilité mais parce qu’on la trouve belle<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>. Personne d’ailleurs ne cherche à justifier l’utilité des vers en alexandrins dans la vie de tous les jours, nous pouvons donc aussi être honnêtes et dire qu’il y a en effet peu de situations de la vie courante où les gens seront amené à effectuer un raisonnement par récurrence. Cela ne disqualifie pas pour autant son enseignement comme on l’a vu. Toutefois pour ce qui concerne le lycée, où les élèves préparent leur orientation professionnelle, la dose de mathématiques doit selon moi être modulée selon les appétences et projets des élèves <span class="citation" data-cites="girard_pourquoi_2013">(<a href="#ref-girard_pourquoi_2013" role="doc-biblioref">Girard and Demailly 2013</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;« Le véritable esprit de joie, d’exaltation, le sentiment d’être plus qu’un homme, qui sont la pierre de touche de l’excellence la plus haute, se trouvent dans les mathématiques comme dans la poésie » – Bertrand Russel.</p></div><div id="ref-girard_pourquoi_2013" class="csl-entry" role="listitem">
+Girard, Jean-Rémi, and Jean-Pierre Demailly. 2013. <span>“Pourquoi Il Faut Revoir l’enseignement Des Mathématiques.”</span> In <em>Atlantico</em>. <a href="https://atlantico.fr/article/decryptage/programmes-scolaires--avons-nous-besoin-des-memes-mathematiques-qu-avant-jean-pierre-demailly-jean-remi-girard">https://atlantico.fr/article/decryptage/programmes-scolaires--avons-nous-besoin-des-memes-mathematiques-qu-avant-jean-pierre-demailly-jean-remi-girard</a>.
+</div></div><div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/consultation-cnrs-impact-maths-verbatim.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="images/consultation-cnrs-maths-utile-quotidien-niveau.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="images/consultation-cnrs-maths-utile-quotidien.png" class="d-block w-100">
+    </div>
+     <div class="carousel-item">
+      <img src="images/consultation-cnrs-rendre-maths-accessible-1.png" class="d-block w-100">
+    </div>
+     <div class="carousel-item">
+      <img src="images/consultation-cnrs-rendre-maths-accessible-2.png" class="d-block w-100">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var carouselEl = document.getElementById('carouselExample');
+  if (carouselEl && typeof bootstrap !== 'undefined') {
+    // Détruire une instance existante si elle existe (sécurité)
+    var existingInstance = bootstrap.Carousel.getInstance(carouselEl);
+    if (existingInstance) {
+      existingInstance.dispose();
+    }
+    new bootstrap.Carousel(carouselEl, {
+      interval: false,
+      ride: false
+    });
+  }
+});
+</script>
+<blockquote class="blockquote">
+<p>L’idée française du “tronc commun”, qui veut que chaque élève sorte de ces années d’études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d’une spécialisation des programmes ? Jean-Rémi Girard : Chaque chose en son temps. Il y a un temps pour poser les fondations de l’esprit, qui est l’école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l’on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n’importe quoi sous prétexte d’adaptation. Par exemple, les mathématiques que l’on peut suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu’il ne faut pas l’abandonner entièrement. Mais il faut se rendre compte que tous les élèves ne progressent pas à la même vitesse, et qu’il faut le prendre en compte dans la structuration de notre système scolaire, ce qui n’est pas le cas aujourd’hui avec notre collège uniforme. C’est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu’il faut changer : c’est le cadre dans lequel on les enseigne.</p>
+</blockquote>
+<p><strong>L’utilité comme motivation ?</strong></p>
+<p><span class="citation" data-cites="cosnefroy_sens_2007">(<a href="#ref-cosnefroy_sens_2007" role="doc-biblioref">Cosnefroy 2007</a>)</span> bat cette idée en brèche :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-cosnefroy_sens_2007" class="csl-entry" role="listitem">
+Cosnefroy, Laurent. 2007. <span>“Les Sens Multiples de l’intérêt Pour Une Discipline.”</span> <em>Revue Française de Pédagogie. Recherches En Éducation</em>, no. 159 (April): 93–102. <a href="https://doi.org/10.4000/rfp.1080">https://doi.org/10.4000/rfp.1080</a>.
+</div></div><blockquote class="blockquote">
+<p>L’éveil de la curiosité disciplinaire ne passe quasiment jamais par l’utilité, pourtant fréquemment citée comme un ingrédient de l’intérêt. Ce décalage laisse penser que l’argument se développe après-coup, comme le suggèrent les propos de cet élève (12, G, 3, N3) : « l’anglais c’est une langue indispensable de nos jours. Pour travailler, dans n’importe quel pays on parle anglais, on comprend ». À la question de l’origine de son intérêt, il répond : « Depuis tout petit. Quand j’étais petit j’écoutais des chansons et des trucs comme ça, et je comprenais pas […] Avec l’âge j’ai pensé au travail, mais quand j’étais petit c’était surtout les chansons et mes idoles. » La valorisation de l’utilité de la discipline se construit dans un second temps, une fois l’intérêt déjà établi. De même, si les mathématiques sont à plusieurs reprises associées à l’utilité dans la vie quotidienne, on ne peut que s’étonner du décalage entre les arguments invoqués et la nature des apprentissages effectués en cours. En effet, l’utilité des mathématiques consiste pour l’essentiel à fournir les savoir-faire nécessaires pour gérer l’économie domestique (impôts, comptes). Il est difficile d’imaginer qu’une telle conception de l’utilité, qui renvoie à des apprentissages de base, puisse soutenir durablement l’investissement dans des apprentissages autrement plus complexes à ce niveau de la scolarité. Symétriquement, on s’interrogera sur la façon dont l’absence d’utilité est convoquée pour expliquer le désintérêt à l’égard d’une discipline. Plusieurs exemples concernent la physique : « la physique non plus on l’utilise pas dans la vie de tous les jours » (7, G, 3, N2). Il est surprenant de voir associé désintérêt et manque d’utilité dans une discipline pourtant porteuse d’applications diverses dans la vie quotidienne. Tout ceci pousse à renverser la causalité entre utilité et intérêt. L’utilité n’est probablement pas une raison déterminante de s’intéresser à la discipline. C’est plutôt en fonction de l’intérêt qu’on lui accorde qu’on définit l’utilité associée à la discipline. Le recours à l’utilité fonctionne alors comme une justification a posteriori, d’autant plus facile à mobiliser que la discipline en question se prête effectivement à des applications diversifiées. C’est la raison pour laquelle elle est si souvent évoquée pour l’anglais.</p>
+</blockquote>
+<p>Nous avons donc souvent tendance, nous autres mathématiciens, à vouloir convaincre les néophytes de l’intérêt des mathématiques en insistant sur leur utilité, tournée vers l’extérieur donc, car on présuppose que c’est ce qui est susceptible de pouvoir les intéresser et de les motiver; alors même que notre propre intérêt et motivation sont en premier lieu intrinsèques à la discipline, les applications constituant autant de cerises sur le gâteau.</p>
+<p><strong>La motivation intrinsèque des maths</strong></p>
+<p>Entendons nous bien, je suis moi-même le premier à motiver mes cours de maths par des exemples d’applications, avec ce souci de montrer que les maths ne sont pas déconnectées du réel et faire part de leur déraisonnable efficacité <span class="citation" data-cites="wigner1990unreasonable">(<a href="#ref-wigner1990unreasonable" role="doc-biblioref"><span class="nocase">Wigner et al.</span> 1990</a>)</span>. Mais est-ce suffisant de désigner des buts applicatifs pour donner le goût de <em>faire des mathématiques</em> et de maintenir une motivation durable ? Je ne le pense pas. Il faut bien qu’à un moment la motivation devienne intrinsèque à la discipline et non pas seulement extrinsèque. C’est comme vouloir apprendre la guitare pour draguer, ça peut motiver un temps pour apprendre à gratter quelques accords, mais ça n’amènera jamais personne au niveau d’un musicien confirmé – prêt à consentir à faire des gammes et à répéter pendant des heures pour s’améliorer – si le plaisir pour la musique elle-même n’est pas le maître-mot.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-wigner1990unreasonable" class="csl-entry" role="listitem">
+<span class="nocase">Wigner, Eugene P et al.</span> 1990. <span>“The Unreasonable Effectiveness of Mathematics in the Natural Sciences.”</span> <em>Mathematics and Science</em> 13: 1–14.
+</div><div id="ref-broue_jean-pierre_2006" class="csl-entry" role="listitem">
+Broué, Michel. 2006. <em>Jean-<span>Pierre</span> <span>Serre</span> Et Le Métier de Mathématicien</em>. <a href="https://evermat.matcuer.unam.mx/spip.php?article108">https://evermat.matcuer.unam.mx/spip.php?article108</a>.
+</div></div><p>Voyons ce qu’en dit <span class="citation" data-cites="broue_jean-pierre_2006">(<a href="#ref-broue_jean-pierre_2006" role="doc-biblioref">Broué 2006</a>)</span> à propos de <a href="https://fr.wikipedia.org/wiki/Jean-Pierre_Serre">Jean-Pierre Serre</a>, monument des mathématiques françaises qui a soufflé cette année ses 100 bougies :</p>
+<blockquote class="blockquote">
+<p>L’utilité des mathématiques ? Certes plus personne ne songe à la remettre en cause aujourd’hui, puisqu’on sait bien qu’elles sont partout, de la gestion du trafic aérien à la forme des verres de lunettes en passant par l’imagerie médicale, internet et les télécommunications, de la description des particules élémentaires à la maîtrise de l’information génomique. Cependant, l’utilité de ses mathématiques n’a jamais été, pour Serre, un critère de ses choix de travail. Il se plaît à dire que les mathématiciens se contentent de mettre leur production à la disposition de tous, comme sur des étagères où l’on peut venir se servir. Noter, cependant, que ce service-là est gratuit. Et que le mathématicien ne fabrique et ne dépose sur l’étagère que ce qui lui plaît. Ce qui le motive, c’est le plaisir, pas l’appât du gain. Serre dit souvent qu’il s’est étonné toute sa vie qu’on l’ait payé, si longtemps, pour une activité qu’il aimait tant. C’est bien la jouissance et la curiosité qui ont été, sans aucun doute, les moteurs du travail de Serre.</p>
+</blockquote>
+<p><a href="https://fr.wikipedia.org/wiki/Charles_Gustave_Jacob_Jacobi">Jacobi</a> était de cet avis, et a inspiré le titre du livre de <span class="citation" data-cites="dieudonne1987pour">(<a href="#ref-dieudonne1987pour" role="doc-biblioref">Dieudonné 1987</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-dieudonne1987pour" class="csl-entry" role="listitem">
+Dieudonné, Jean. 1987. <em>Pour l’honneur de l’esprit Humain</em>. Hachette Paris.
+</div></div><blockquote class="blockquote">
+<p>M. Fourier avait l’opinion que le but principal des mathématiques était l’utilité publique et l’explication des phénomènes naturels ; mais un philosophe comme lui aurait dû savoir que le but unique de la science, c’est <strong>l’honneur de l’esprit humain</strong>, et que sous ce titre, une question de nombres vaut autant qu’une question du système du monde.</p>
+</blockquote>
+<p><strong>Les maths servent à tout et rien</strong></p>
+<p>D’un côté donc des mathématiciens qui s’évertuent à vouloir montrer que les maths <em>servent dans tout et partout</em> (puisque s’immisçant jusque dans nos téléphones, cartes bancaires, etc); de l’autre des mathématiciens qui à la question <em>“les maths à quoi ça sert ?”</em> répondent simplement <em>“à rien”</em>, assumant d’ignorer cette injonction appelant à justifier du caractère utile des maths au sens pratique du terme. En guise de réponse, <a href="https://fr.wikipedia.org/wiki/Laurent_Schwartz_(math%C3%A9maticien)">Laurent Schwartz</a> répondait quant à lui à cette question par cette cocasse plaisanterie :</p>
+<p><img src="images/laurent-schwartz-maths-langouste.jpg" class="img-fluid"></p>
+<p>Au delà du comique de la circularité<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a>, sa réponse concilie à la fois le caractère utilitaire et utilitariste<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a> des mathématiques, puisqu’elle maximise à la fois le bonheur désintéressé des mathématiciens comme celui des consommateurs <span class="citation" data-cites="galderisi_langoustes_2016">(<a href="#ref-galderisi_langoustes_2016" role="doc-biblioref">Galderisi 2016</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;qui rappelle cette <a href="https://loptimisme.com/pecheur-mexicain/">parabole</a> du pêcheur mexicain et du business man.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;Doctrine philosophique de l’utilitarisme de John Stuart Mill.</p></div><div id="ref-galderisi_langoustes_2016" class="csl-entry" role="listitem">
+Galderisi, Claudio. 2016. <span>“Les Langoustes Des Mathématiciens Et Le « Frigidaire » Des Philologues.”</span> In <em>The Conversation</em>. <a href="https://doi.org/10.64628/AAK.cg7xuwecg">https://doi.org/10.64628/AAK.cg7xuwecg</a>.
+</div></div><blockquote class="blockquote">
+<p>Les points de suspension et le nombre croissant de mathématiciens à travers le monde pourraient faire craindre l’extinction du délicieux crustacé. Ces points miment en réalité le cercle herméneutique que la réponse esquisse malicieusement. Les sciences mathématiques n’ont pour objet et seule justification qu’elles-mêmes. La fin ultime de la science est la science, aussi gratuite et non profitable puisse-t-elle paraître aux non-savants dans l’immédiat ou même dans l’absolu. L’intérêt collectif de la recherche semble ici réduit au bon plaisir d’une catégorie de chercheurs qui trouvent dans les retombées de leurs recherches leur bonheur gastronomique et leur alibi (dé)ontologique. Mais la revendication de l’absolu de la recherche scientifique et le rejet ironique de toute forme d’application utilitaire s’appuient en réalité dans l’exemple cité sur une invention, le frigidaire, dont chacun peut comprendre qu’il ne sert pas seulement à garder au frais les décapodes que les sectateurs d’Uranie, nos collègues mathématiciens, aiment tant. Le non-chercheur, exclu ostensiblement du cercle herméneutique, y est en réalité réadmis par le biais d’une application scientifique, d’un produit technologique qui fait aussi son confort depuis un siècle. Le non-spécialiste est ainsi incité à comprendre les exigences de ces mathématiciens qui en cherchant à satisfaire leur plaisir font en réalité l’intérêt de tout le monde. Mais, dira-t-on, celui de Laurent Schwartz est moins une pratique mathématique qu’un discours second sur sa science, un aphorisme qui ne remet pas en cause les présupposés téléologiques et les exigences de la recherche, la nécessité d’une gratuité absolue. C’est une évidence. Et cependant, comment ne pas remarquer que le mathématicien reconnaît la légitimité de la question, qu’il se sent contraint de donner une réponse qui n’a d’humoristique que le ton, et qu’il concède que le trait d’union avec le monde, qu’opèrent ici les physiciens (c’est-à-dire d’autres chercheurs) à travers la création du réfrigérateur, est une condition et une conséquence des mathématiques. En somme, que les mathématiciens ont aussi besoin de pouvoir profiter de leurs recherches, que la gratuité épistémique n’est pas nécessairement improductive.</p>
+</blockquote>
+<p>Ce qui anime le scientifique, nous dit <span class="citation" data-cites="poincare_valeur_2005">(<a href="#ref-poincare_valeur_2005" role="doc-biblioref">Poincaré 1908a</a>)</span> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-poincare_valeur_2005" class="csl-entry" role="listitem">
+Poincaré, Henri. 1908a. <em>La Valeur de La Science</em>. <a href="https://classiques.uqam.ca/classiques/poincare_henri/valeur_de_la_science/valeur_de_la_science_intro.html">https://classiques.uqam.ca/classiques/poincare_henri/valeur_de_la_science/valeur_de_la_science_intro.html</a>.
+</div></div><blockquote class="blockquote">
+<p>La recherche de la vérité doit être le but de notre activité ; c’est la seule fin qui soit digne d’elle. Sans doute nous devons d’abord nous efforcer de soulager les souffrances humaines, mais pourquoi ? Ne pas souffrir, c’est un idéal négatif et qui serait plus sûrement atteint par l’anéantissement du monde. Si nous voulons de plus en plus affranchir l’homme des soucis matériels, c’est pour qu’il puisse employer sa liberté reconquise à l’étude et à la contemplation de la vérité.</p>
+</blockquote>
+<p>faisant écho aux langoustes de Schwartz qui créént de <em>bonnes disposition pour faire des mathématiques</em>.</p>
+<p><span class="citation" data-cites="poincare_science_1908">(<a href="#ref-poincare_science_1908" role="doc-biblioref">Poincaré 1908b</a>)</span> poursuit :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-poincare_science_1908" class="csl-entry" role="listitem">
+Poincaré, Henri. 1908b. <em>Science Et Méthode</em>. Bibliothèque de Philosophie Scientifique. <a href="https://classiques.uqam.ca/classiques/poincare_henri/Science_et_methode/Science_et_methode.pdf">https://classiques.uqam.ca/classiques/poincare_henri/Science_et_methode/Science_et_methode.pdf</a>.
+</div></div><blockquote class="blockquote">
+<p>Tolstoï explique quelque part pourquoi « la Science pour la Science » est à ses yeux une conception absurde. Nous ne pouvons connaître tous les faits, puisque leur nombre est pratiquement infini. Il faut choisir ; dès lors, pouvons-nous régler ce choix sur le simple caprice de notre curiosité ; ne vaut-il pas mieux nous laisser guider par l’utilité, par nos besoins pratiques et surtout moraux ? […] Pour moi, ai-je besoin de le dire, je ne saurais me contenter ni de l’un, ni de l’autre idéal ; je ne voudrais ni de cette ploutocratie avide et bornée, ni de cette démocratie vertueuse et médiocre, uniquement occupée à tendre la joue gauche, et où vivraient des sages sans curiosité qui, évitant les excès, ne mourraient pas de maladie, mais à coup sûr mourraient d’ennui. […] Le savant n’étudie pas la nature parce que cela est utile ; il l’étudie parce qu’il y prend plaisir et il y prend plaisir parce qu’elle est belle. Si la nature n’était pas belle, elle ne vaudrait pas la peine d’être connue, la vie ne vaudrait pas la peine d’être vécue. Je ne parle pas ici, bien entendu, de cette beauté qui frappe les sens, de la beauté des qualités et des apparences ; non que j’en fasse fi, loin de là, mais elle n’a rien à faire avec la science ; je veux parler de cette beauté plus intime qui vient de l’ordre harmonieux des parties, et qu’une intelligence pure peut saisir. C’est elle qui donne un corps, un squelette pour ainsi dire aux chatoyantes apparences qui flattent nos sens, et sans ce support, la beauté de ces rêves fugitifs ne serait qu’imparfaite parce qu’elle serait indécise et toujours fuyante. Au contraire, la beauté intellectuelle se suffit à elle-même et c’est pour elle, plus peut-être que pour le bien futur de l’humanité, que le savant se condamne à de longs et pénibles travaux.</p>
+</blockquote>
+<p>Il y a une <a href="https://books.openedition.org/enseditions/24353?lang=fr">Libido sciendi</a>, à laquelle Cédric Villani – en réponse à Luc Ferry <span class="citation" data-cites="noauthor_cedric_2018">(<a href="#ref-noauthor_cedric_2018" role="doc-biblioref">Villani 2018</a>)</span> – souscrit en paraphrasant <a href="https://fr.wikipedia.org/wiki/Andr%C3%A9_Weil">André Weil</a> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-noauthor_cedric_2018" class="csl-entry" role="listitem">
+Villani, Cédric. 2018. <span>“Cédric <span>Villani</span> Répond à <span>Luc</span> <span>Ferry</span> Pour Qui "Les Maths Ne Servent à Rien".”</span> In <em>Le HuffPost</em>. <a href="https://www.huffingtonpost.fr/politique/article/cedric-villani-repond-a-luc-ferry-pour-qui-les-maths-ne-servent-a-rien_118026.html">https://www.huffingtonpost.fr/politique/article/cedric-villani-repond-a-luc-ferry-pour-qui-les-maths-ne-servent-a-rien_118026.html</a>.
+</div></div><blockquote class="blockquote">
+<p>Le plaisir de la découverte des maths dure plus longtemps que le plaisir sexuel. C’est quelque chose qu’on peut expérimenter très tôt, le fait que comprendre vient avec un éblouissement et le plaisir de voir tous les arguments qui s’enchaînent.</p>
+</blockquote>
+<p>Pour ma part, si je souscris également à ces joies intellectuelles, je n’irais tout de même pas jusque là :-) Mais pour rester dans le thème et terminer sur l’utilité je citerais Richard P. Feynman :</p>
+<blockquote class="blockquote">
+<p>Science is like sex: sometimes something useful comes out, but that is not the reason we are doing it.</p>
+</blockquote>
+<p><span class="citation" data-cites="nordon_bloc-notes_2007">(<a href="#ref-nordon_bloc-notes_2007" role="doc-biblioref">Nordon 2007</a>)</span> nous fournira quant à lui une conclusion à la Wittgenstein <em>“Ce dont on ne peut parler, il faut le taire”</em> :</p>
+<div class="no-row-height column-margin column-container"><div id="ref-nordon_bloc-notes_2007" class="csl-entry" role="listitem">
+Nordon, Didier. 2007. <span>“Numéro 357 Juillet.”</span> In <em>Pour La Science</em>. <a href="https://www.pourlascience.fr/sr/bloc-notes/https:https://www.pourlascience.fr/sr/bloc-notes/bloc-notes-3103.php">https://www.pourlascience.fr/sr/bloc-notes/https:https://www.pourlascience.fr/sr/bloc-notes/bloc-notes-3103.php</a>.
+</div></div><p><img src="images/didier-nordon-2007.png" class="img-fluid"></p>
+</section>
+<section id="un-décalage-de-perception" class="level3">
+<h3 class="anchored" data-anchor-id="un-décalage-de-perception">Un décalage de perception</h3>
+<!-- J'ouvre une parenthèse, pour aborder brièvement cette question soulevée pr la journaliste à l'issue de l'interview : -->
+<!-- > Comment vous expliquez ce paradoxe qui est très français : il y a plein de gens qui détestent les maths [...] j'avais des gens dans ma classe quand j'étais petite qui, quand ils arrivaient en cours de maths, avaient même peur quoi. C'était vraiment de l'ordre de l'émotion pour en revenir à ce que l'on disait tout à l'heure. Et dans le même temps, la France reste une référence en matière de recherche très pointue en mathématiques, comment ça se fait ? -->
+<!-- Ce à quoi Christophe Besse répondit : -->
+<!-- > Alors ça, c'est la colle. C'est très difficile de comprendre pourquoi on a cette difficulté. C'est vrai que la recherche mathématique française est une des toutes meilleures au monde [la journaliste : encore aujourd'hui même si on dit que le niveau baisse d'années après années cela reste quand même de qualité ?]. Cela reste d'une très très bonne qualité tout à fait. Pourquoi on a ce paradoxe c'est difficile à comprendre. Peut-être que l'on insiste trop sur le fait qu'on y arrive pas, c'est un constat d'échec. J'aime bien prendre l'analogie quand on est petit on apprend à marcher, si on tombe et que nos parents nous disent mais jamais tu arriveras à marcher et bien on avancera jamais, et bien pour les mathématiques c'est pareil c'est pas grave de se tromper. Dans la vie d'une chercheuse ou d'un chercheur c'est notre quotidien, si on ne se trompe pas on avance pas. C'est pas grave, c'est de l'entrainement, il faut encourager les gens. -->
+<!-- Si je le rejoins sur notre rapport particulier à l'échec en France expliquant une part de l'anxiété mathématiques, en revanche il ne m'apparait pas si difficile de comprendre cet apparent "paradoxe" d'une population fâchée avec la discipline combinée à une élite mathématique. Nous n'avons aucune difficulté à comprendre que l'on peut simultanément avoir une société composée de populations pauvres et de personnes très riches. Il en va de même ici, il n'y a aucun paradoxe, seulement un système à deux vitesses qui d'un côté est très performant pour repérer, sélectionner et propulser au plus haut niveau une minorité d'élèves très bons en mathématiques dans des filières d'excellence (classes préparatoires, grandes écoles, ENS, CNRS); et de l'autre qui n'assure pas des bases solides et un niveau moyen satisfaisant à l'ensemble de la population, en laissant beaucoup d'élèves sur le bord du chemin, comme en témoignent les enquêtes TIMSS et PISA où la France s'illustre par de fortes inégalités éducatives (cf. Appendice). -->
+<!-- Parenthèse refermée, il me semble qu'il y a donc une forme de lucidité des élèves et des adultes quant à la perception de l'utilité des mathématiques pour la société et de leur importance dans les choix d'orientation scolaire. En revanche là où le bat blesse, nous allons le voir, c'est que la perception qu'ils ont des mathématiques elles-mêmes, ne correspond pas à la représentation que s'en font les mathématiciens dans leur pratique.  -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBZHoxpPBuA?si=v21waUzlMsH11AMo&amp;start=389" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>Cédric Villani :</p>
+<blockquote class="blockquote">
+<p>Les mathématiques sont rigoureuses ouais mais imaginatives aussi, les mathématiques sont abstraites mais universelles, les mathématiques sont inégalitaires et démocratiques, sont anciennes et en mutation permanente, sont solitaires et sociales à la fois, sont difficiles et simplissimes.</p>
+</blockquote>
+<table class="table-striped table-hover caption-top table">
+<caption>Caractérisation des mathématiques</caption>
+<thead>
+<tr class="header">
+<th>Froides</th>
+<th>Chaudes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>rigoureuses</td>
+<td>imaginatives</td>
+</tr>
+<tr class="even">
+<td>abstraites</td>
+<td>universelles</td>
+</tr>
+<tr class="odd">
+<td>inégalitaires</td>
+<td>démocratiques</td>
+</tr>
+<tr class="even">
+<td>anciennes</td>
+<td>en mutation</td>
+</tr>
+<tr class="odd">
+<td>solitaires</td>
+<td>sociales</td>
+</tr>
+<tr class="even">
+<td>difficiles</td>
+<td>simplissimes.</td>
+</tr>
+</tbody>
+</table>
+<p>À COMPLÉTER</p>
+<!-- > « Je me souviens très bien de ce que j’ai ressenti la première fois que j’ai vu des gens faire du kitesurf. Je me suis dit que ce que je voyais n’était pas possible. Et dans le même temps c’était visiblement possible. Je suis resté longtemps à regarder.Quelque chose du même ordre m’a intrigué lors de ma rencontre avec les mathématiques. Elles m’ont semblé trop dures, trop abstraites, trop incompréhensibles. Faire des mathématiques, ça n’avait pas l’air possible. Et dans le même temps, ça avait l’air possible.La difficulté des mathématiques, le vertige et la terreur qu’elles nous inspirent, ce n’est que la première partie de l’expérience émotionnelle. La seconde partie, c’est l’incroyable sentiment de puissance et de magie qui se dégage de la compréhension profonde, quand on finit par découvrir que non seulement c’était possible, mais qu’en plus c’était facile.C’était même facile depuis le début et on ne le voyait pas.Chaque apprentissage mathématique reproduit cette double expérience de vertige et de puissance. Si vous n’aimez pas les sensations fortes, les mathématiques ne sont pas faites pour vous. » -->
+<!-- À propos de la beauté,  -->
+<!-- > J'ai un ami artiste qui a parfois des opinions que je ne partage pas vraiment. Il me montre une fleur et dit : « Regarde comme elle est belle ! » et je suis d'accord. Puis il ajoute : « Moi, en tant qu'artiste, je vois bien sa beauté, mais toi, en tant que scientifique, tu la disséques et elle devient ennuyeuse. » Je le trouve un peu farfelu. D'abord, la beauté qu'il perçoit est accessible à tous, et à moi aussi, je crois… Je peux apprécier la beauté d'une fleur. En même temps, j'en perçois bien plus que lui. J'imagine les cellules qui la composent, les mécanismes complexes qui s'y déroulent, lesquels recèlent eux aussi une beauté. Je veux dire, la beauté ne se limite pas à cette échelle, à un centimètre ; elle se manifeste également à des échelles plus petites, dans la structure interne, dans les processus qui la composent. Le fait que les couleurs de la fleur aient évolué pour attirer les insectes pollinisateurs est fascinant ; cela signifie que les insectes sont capables de percevoir les couleurs. Cela soulève une question : ce sens esthétique existe-t-il aussi chez les formes inférieures ? Pourquoi est-ce esthétique ? Autant de questions passionnantes auxquelles la science ne fait qu'ajouter à l'émerveillement, au mystère et à la fascination que suscite une fleur. Elle ne fait qu'enrichir. Je ne vois pas comment elle pourrait en altérer la beauté. -->
+</section>
+<section id="changer-le-regard-sur-les-mathématiques-et-les-mathématiciens" class="level3">
+<h3 class="anchored" data-anchor-id="changer-le-regard-sur-les-mathématiques-et-les-mathématiciens">Changer le regard sur les mathématiques (et les mathématiciens)</h3>
+<p>À COMPLÉTER</p>
+<!-- Je n'aime pas cette expression comme "changer le regard sur le handicap" -->
+<!-- 7:27 "Education échec et maths" : Euclide formalisme vs créativité geste audacieux -->
+<!-- créative citation Hilbert -->
+<!-- liberté l'essence des maths selon Cantor -->
+<!-- > « Quand on est mathématicien, on tombe régulièrement sur des gens qui s’adressent à vous en disant « toi qui es rationnel » ou « toi qui aimes la logique », le pire étant, bien entendu, « toi qui es bon en calcul ».C’est toujours mauvais signe car derrière cela il y a toujours un sous-entendu du genre « toi qui es psychorigide », « toi qui ne comprends rien aux enjeux humains » ou «  toi sur qui je vais déverser toute la frustration que j’ai accumulée pendant ma scolarité ».La rationalité a presque aussi mauvaise réputation que les mathématiques. Comme ces dernières, elle existe en deux versions. La face visible de la rationalité, ce sont les discours construits et structurés, le savoir établi, la science et la technique. L’école nous enseigne cette version officielle avec un succès mitigé.La face cachée de la rationalité, sa dimension secrète et intime, reste largement méconnue, comme si nous avions fait le choix délibéré de l’occulter.Au chapitre 11, j’ai présenté la rationalité comme un synonyme du Système 2 (la pensée mécanique qui suit les règles de la logique). C’est un raccourci commode parce que beaucoup de gens l’entendent ainsi. Mais il pose de très gros problèmes. En opposant la rationalité au Système 1 (la pensée intuitive instantanée), nous l’opposons en fait à la compréhension humaine. Sans surprise, cette version de la rationalité est jugée aride et antipathique, et ne séduit pas grand monde.Ça n’empêche pas certains de vouloir nous la vendre. Le plus souvent, ils adoptent une posture de supériorité et de mépris. « Sois rationnel », c’est une manière pour eux de nous dire « mange ta soupe », « apprends tes leçons[…]  « , « refoule tes désirs », « respecte l’autorité », « sois de mon avis ». Ils nous ordonnent d’être rationnels mais sont bien incapables de nous expliquer en quoi cela consiste exactement. Ils se réclament de Descartes sans mesurer l’énormité de leur contresens. Ils ne posent même pas cette question bête et évidente : avec des idées aussi rabougries, comment Descartes aurait-il pu fasciner ses contemporains « comme un éléphant ou une panthère » ?Si vous abordez le Discours de la méthode en y cherchant une apologie du Système 2, vous tomberez de haut. La grande innovation de Descartes est de placer l’intuition et la subjectivité au cœur de la démarche de connaissance. Il se méfie du savoir établi et de ce qui est écrit dans les livres. Il n’accorde aucun crédit aux paroles d’autorité. Il préfère tout reconstruire par lui-même, dans sa tête. Sa méthode ressemble étrangement à celle d’Einstein, de Thurston et de Grothendieck. Il s’agit bien entendu du Système 3, le lent dialogue entre l’intuition et la logique dans le but de faire progresser l’intuition.« Descartes ne s’en cache pas : sa méthode, c’est celle des mathématiciens. Il la décrit sans jamais parler de rationalité ni de rationalisme. Ces mots n’existent pas encore. Ils seront inventés par la suite pour caractériser sa démarche. Quant à savoir si Descartes passerait aujourd’hui pour « quelqu’un de rationnel », je vous laisse juge. » -->
+<!-- Stéréotype du génie vanité : -->
+<!-- > « Les philosophes de la Grèce antique accordaient une place toute particulière aux mathématiques. Ils en faisaient le prérequis de toute philosophie et de toute science. La légende veut que cette phrase ait été gravée à l’entrée de l’Académie de Platon : « Que nul n’entre ici s’il n’est géomètre. »Pour Descartes, il ne pouvait pas s’agir d’une référence aux mathématiques officielles, celles que l’école nous enseigne et qui nous semblent si « puériles et vaines » :« J’ai soupçonné qu’ils connaissaient une certaine science mathématique différente de celle de notre âge. »Pour lui, les savants de l’Antiquité avaient forcément accès aux « mathématiques véritables ». Son hypothèse est qu’ils « en ont, par une ruse coupable, supprimé la connaissance ; semblables à quelques artisans qui cachent leur secret, ils ont craint peut-être que la facilité et la simplicité de leur méthode, en les popularisant, n’en diminuent l’importance, et ils ont préféré se faire admirer en nous laissant, comme produit de leur art, quelques vérités stériles subtilement déduites, que de nous enseigner cet art lui-même, dont la connaissance eût fait cesser toute notre admiration ». » -->
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+<!-- Par contre ce qui est vrai est que l'on perd de vue le fait que même ces fondamentaux acquis par le plus grand nombre aujourd'hui, sont des mathématiques d'une incroyable inventivité. Si bien qu'à y regarder de plus près, il y a un pseudo-différence entre mathématiques spéculatives et mathématiques utiles, ces dernières étant juste devenues plus familières. Processus qui fait passer des concepts transgressifs presques scandaleux à une banalité routinière. Les maths spéculatives peuvent devenir pratiques et vice versa (les distributions). -->
+<!-- "Le concret, c'est de l'abstrait rendu familier par l'usage." de Paul Langevin -->
+<!-- ## Appendices -->
+<!-- ### Des inégalités sociales et de genre dans l'attrait pour les mathématiques -->
+<!-- Selon un [sondage CSA Research](https://www.rtl.fr/actu/debats-societe/65-des-francais-jugent-l-enseignement-des-maths-inadapte-selon-notre-sondage-7790579608) réalisé pour Le Point avec RTL : -->
+<!-- > La matière est particulièrement appréciée par les catégories socio-professionnelles les plus aisées. Les CSP + la hissent en effet sur la première marche du podium (31%) ex æquo avec le Français, devant les langues étrangères (29%). -->
+<!-- J'ai beaucoup commenté sur les réseaux les inégalités de niveau en maths entre filles et garçons, il faudra que j'y consacre un billet à part entière, mais ici je ne renseignerai que les différences d'appétences pour les maths (qui sont bien sûr corrélées à celles de niveau) : -->
+<!-- PISA 2022 -->
+<!-- Les garçons sont, en moyenne, 11 points de pourcentage plus nombreux que les filles à citer les mathématiques parmi leurs matières préférées. -->
+<!-- Les élèves favorisés socialement sont, en moyenne, 13 points plus nombreux que les élèves défavorisés à les préférer. -->
+<!-- En TS moins marquées [@mullis_timss_2016] -->
+<!-- ![](images/timss2015advanced-filles-garcons.png) -->
+<!-- Dans [@ipsos_education_2025] moyenné sur plusieurs pays : -->
+<!-- ![](images/favorite-boys-girls.png) -->
+<!-- ![](images/least-favorite-boys-girls.png) -->
+<!-- avec un écart qui semble globalement se réduire : -->
+<!-- ![](images/evolution-favorite-boys-girls.png) -->
+<!-- Alors qu'en France l'écart reste particulièrement marqué : -->
+<!-- ![](images/france-ecart-filles-garcons.png) -->
+
+
+
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/www\.kevinpolisano\.fr");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "kevinpolisano/blog";
+    script.dataset.repoId = "R_kgDOM9ReCA";
+    script.dataset.category = "Announcements";
+    script.dataset.categoryId = "DIC_kwDOM9ReCM4CmGgm";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "bottom";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,749 @@
+---
+title: "Mathématiques : je t'aime, moi non plus..."
+author: "Kévin Polisano"
+date: "2026-09-19"
+image: mathematiques-je-t-aime-moi-non-plus.png
+categories: [mathématiques]
+toc: true
+toc-title: "Sommaire"
+toc-location: left
+bibliography: refs.bib
+reference-location: margin
+citation-location: margin
+---
+
+*"Tu fais quoi dans la vie ?"*
+
+Ma réponse à cette sempiternelle question : *"des mathématiques"*, provoque généralement une réaction qui ne se fait pas attendre, les uns s'exclamant quelque chose du type : *"Ah c'est cool ! J'aimais vraiment les maths à l'école. Tu travailles sur quoi concrètement ?"*; les autres manifestant un rejet patent : *"Oh moi les maths je détestais ça !"* accompagné d'une expression faciale traduisant manifestement une douleur encore palpable. Et entre les deux bien sûr des réactions aussi plus mitigées, mais dont le souvenir de l'enseignement des mathématiques laisse rarement les gens indifférents. 
+
+<div id="player-container" style="position:relative; width:560px; height:315px; cursor:pointer;" onclick="loadVideo()">
+  <img src="images/blast-maths-detestee.png" style="width:100%; height:100%;" alt="Lecture vidéo">
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:50px; color:white;">▶</div>
+</div>
+
+<p style="text-align:center; font-style:italic; margin-top:8px; font-size:14px; color:#555;">
+    Cliquez sur l'image pour lancer l'extrait de l'interview de Laure Saint-Raymond
+  </p>
+
+<script>
+function loadVideo() {
+  document.getElementById('player-container').innerHTML = 
+    '<iframe width="560" height="315" src="https://www.youtube.com/embed/sAWcgVmYL3o?start=286&end=320&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+}
+</script>
+
+***
+
+Dans ce billet je ne traiterai pas des résultats d'enquêtes évaluant le niveau scolaire, lesquels ont déjà été abondamment commentés[^0], mais plutôt du rapport qu'entretiennent les élèves aux mathématiques au cours de leur scolarité. Cet angle d'analyse me parait en effet digne d'intérêt et d'enseignements [@merle_rapport_2003] :
+
+[^0]: Le lecteur trouvera matière dans les différentes études citées à travers ce billet. Pour une synthèse je renvoie à cette note d'analyse de [@cusset_niveau_2025].
+
+> Si la connaissance de l’expérience subjective des élèves a nettement progressé, le rapport des élèves aux différentes disciplines est, à quelques exceptions près, encore peu exploré (Baudelot & Establet, 1992 ; Grisay, 1993, 1997 ; Jeantheau & Mulliez, 2001 ; Jeantheau & Murat, 1998). Or cette connaissance est nécessaire pour trois raisons. D’abord, la connaissance des perceptions collégiennes des différentes disciplines contribue à une meilleure compréhension de ce qui fonde leur choix d’orientation. Ensuite, les professeurs ne peuvent que tirer profit de la façon dont les élèves perçoivent leur discipline et les spécificités de celles-ci. Enfin, comme plusieurs auteurs l’ont montré (Dubet, 1994a, 1994b ; Felouzis, 2000), la connaissance du rapport aux études et des modalités de construction de l’expérience scolaire permet une compréhension au moins aussi éclairante de la faiblesse de la démocratisation de l’enseignement (Duru-Bellat, 2002 ; Merle, 2002a) que les analyses en termes de « déterminants sociaux » même si ces deux types d’analyse ne sont évidemment pas indépendantes l’une de l’autre.
+
+## Les mathématiques, matière préférée des élèves ?
+
+Durant l'interview France Inter du 9 septembre 2026 [Enquête Pisa : "Il faut qu'on change notre regard sur les mathématiques"](https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-8h20-le-grand-entretien/l-invite-de-8h20-le-grand-entretien-du-mercredi-09-septembre-2026-8637454), [Hugo Duminil-Copin](https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin) affirmait ceci :
+
+> Les enfants ont une appétence naturelle pour les choses, en particulier pour les mathématiques. On croit que les mathématiques sont mal-aimées, alors qu'au collège c'est la discipline préférée.
+
+<div style="display: flex; justify-content: center;">
+<iframe width="315" height="560"
+src="https://www.youtube.com/embed/woMqajh8Czs"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+</div>
+
+J'ai voulu vérifier cette affirmation en faisant un petit tour d'horizon des études ayant évalué l'attrait des élèves pour les mathématiques.
+
+### Élèves d'école primaire
+
+D'après [@mullis2020timss], **49% des élèves de CM1** français déclaraient en 2019 *"aimer beaucoup apprendre les mathématiques"* :
+
+![](images/timss2019CM1-aimer.png)
+
+avec un léger recul de **46% en 2023** [@von2024timss] :
+
+![](images/timss2023CM1-aimer.png)
+
+D'après un sondage Ipsos [@mercier_enquete_2016], réalisé sur 502 enfants âgés de 6 à 12 ans :
+
+> Du côté des enfants, les mathématiques apparaissent comme étant, de loin, leur matière préférée (29 %) suivie par le sport (17 %) et le français (16 %).
+
+Hugo Duminil-Copin a donc raison de souligner que les mathématiques sont une matière que les enfants affectionnent particulièrement en primaire. Voyons maintenant ce qu'il en est au collège.
+
+### Collégiens
+
+D"après [@merle_rapport_2003, §8] :
+
+> L’intérêt déclaré à l’égard des mathématiques par les 872 élèves enquêtés est particulièrement élevé : 30 % des élèves déclarent cette discipline « très intéressante » et ils sont plus de 40 % à la trouver « intéressante ». Au total, c’est donc **une très large majorité (plus de 70 %) qui est intéressée par cette matière**. Les élèves « pas du tout » ou « peu intéressés » sont, a contrario, une petite minorité de l’ordre de 10 % des enquêtés.
+
+Sans surprise, [@merle_rapport_2003, §9] montre également que ceux qui réussissent le mieux en maths sont les plus susceptibles de conserver un fort intérêt pour les mathématiques :
+
+> Les déclarations de ces élèves sont dépendantes d’un certain nombre de variables. La plus influente d’entre elles est le niveau de compétence des élèves : **l’intérêt déclaré pour une discipline est d’autant plus élevé que l’élève a le sentiment d’être bon dans cette discipline** (la variable niveau de compétence est construite à partir d’une autoévaluation des élèves).
+
+Les différentes enquêtes (PISA, TIMSS, etc) ont montrées une baisse objective du niveau en mathématiques, plus marquée en France, alors même que les élèves font davantage de maths qu'ailleurs dans l'OCDE [@cusset_niveau_2026] :
+
+> L’OCDE a par ailleurs calculé le temps dévolu aux mathématiques de façon cumulée sur l’ensemble de la scolarité entre l’âge de 6 et 14 ans : avec près de 1 450 heures, les élèves français font partie des élèves qui bénéficient du plus gros volume d’heures de mathématiques, la moyenne OCDE se situant à 1 100 heures
+
+Et si le niveau en mathématiques est corrélé à l'intérêt pour la matière, on peut s'attendre à une diminution de celui-ci entre 2019 et 2023 comme en atteste [@lacroix2024timss] :
+
+> Concernant le plaisir à apprendre les mathématiques, Timss demande par exemple aux élèves de quatrième s’ils aiment cette discipline. En 2023, en France, **51 % des élèves déclarent aimer les mathématiques** (59 % pour les garçons contre 42 % pour les filles) (voir figure 11 en ligne). Ce taux était **plus élevé en 2019 (60 %)**. Dans les pays de l’OCDE/UE ayant participé aux deux éditions de Timss, 50 % des élèves déclarent aimer les mathématiques en 2023 alors qu’ils étaient 57 % en 2019. Dans l’Union européenne en 2023, ce taux varie de 42 % en Finlande à 59 % en Roumanie. En outre, les élèves en France, comme ceux des pays de l’OCDE/UE, **accordent une moindre valeur aux mathématiques en 2023 qu’en 2019**, concernant leur vie quotidienne, une poursuite d’études ou une insertion professionnelle : ainsi, **82 % déclarent qu’il est important de réussir en mathématiques** (82 % également dans les pays de l’OCDE/UE ayant participé aux deux cycles) (voir figure 12 en ligne).
+
+Les [données TIMSS 2023](https://www.education.gouv.fr/depp/timss-2023-en-quatrieme-pour-les-mathematiques-des-resultats-stables-en-france-et-un-accroissement-452619) montrent ici le positionnement par rapport aux autres pays de l'OCDE et la baisse par rapport à 2019[^12] :
+
+[^12]: À ce stade on pourrait attribuer cette baisse aux conséquences de la pandémie de Covid 19, mais si ses effets ne sont probablement pas nuls nous verrons néanmoins qu'ils ne suffisent pas à expliquer la baisse observée en réalité bien avant la pandémie.
+
+![](images/timss2023-4e-aimer.png)
+
+
+### L'appétence s'étiole de la primaire au collège
+
+Une autre baisse notable s'effectue entre le primaire et le collège [@merle_rapport_2003, §10] :
+
+> Cette approche globale cache une différenciation sensible de l’appréciation des élèves selon leur classe : **en sixième, en mathématiques, la proportion d’élèves « intéressés » ou « très intéressés » dépasse les 80 % ; en troisième, elle n’est plus que de 60 %**. Ce mouvement s’explique par une montée sensible du nombre des élèves se déclarant « peu intéressés » et « pas du tout intéressés » : un sur vingt se trouve dans cette situation en classe de sixième (5,4 %) alors qu’ils sont près d’un sur six (14.7 %) en classe de troisième. On en conclura qu’en fin de sixième, les élèves ont un enthousiasme indiscutable pour les mathématiques alors qu’au début de la classe de troisième, l’enthousiasme a sensiblement décru (tableau 1). L’expérience de l’enseignement des mathématiques, de l’entrée à la sortie du collège, peut notamment s’apprécier par ce « refroidissement » considérable de l’intérêt déclaré pour cette discipline. 
+
+Bien sûr l'adolescence est parfois une période durant laquelle on assiste à une certaine apathie de façon générale[^10], mais nous verrons que c'est particulièrement marqué en ce qui concerne les mathématiques, et que cela touche assez inégalement les élèves français :
+
+[^10]: Pierre Merle souligne que : "Ce phénomène de désenchantement n’est pas propre aux mathématiques : il est également présent pour le français. Initialement moins enthousiasmés par le français que les mathématiques en fin de sixième, les élèves n’en connaissent pas moins un effritement sensible de l’intérêt qu’ils déclarent pour cette discipline. La robustesse des réponses des élèves est confortée par leur réponse à une question sur l’évolution de leur intérêt pour les mathématiques et le français. Les élèves déclarent beaucoup plus souvent en troisième qu’en sixième une diminution de leur intérêt pour ces deux disciplines. Les élèves de 3e ont donc parfaitement conscience des effets négatifs en termes d’intérêt pour les mathématiques et le français de leurs années passées sur les bancs du collège alors que l’école primaire a peu freiné les intérêts scientifiques et littéraires des écoliers."
+
+> Le désenchantement pour les mathématiques atteint peu les « bons » élèves et ce sont les élèves « moyens » ou « faibles » scolarisés en classe de troisième qui sont surtout touchés par une certaine désaffection à l’égard de cette discipline.
+
+Dans le premier tableau mesurant l'appétence pour les mathématiques des élèves de CM1, il y avait en 2019 49% qui aiment beaucoup + 36% qui aiment bien, soit au total **85% des CM1 qui aiment globalement les maths, contre 60% pour les quatrièmes** la même année (2019). Il ne s'agit pas de la même cohorte mais cela donne néanmoins une idée de l'érosion entre la primaire et le collège. Ce constat est établi également dans [@timssQuatrieme2019] :
+
+> Concernant leur plaisir à apprendre des mathématiques, **11 % des élèves de France déclarent beaucoup aimer cette discipline**. Ils sont 14 % en moyenne internationale (OCDE et UE). **Cette motivation s’est fortement érodée depuis 2015 et la scolarité en école primaire**. En France, 50 % des élèves de CM1 déclaraient beaucoup aimer apprendre les mathématiques contre 46 % en moyenne internationale. En outre,
+en 2019, seulement 27 % des élèves de quatrième accordent une forte valeur aux mathématiques, concernant leur vie quotidienne, une poursuite d’études ou une insertion professionnelle, alors qu’ils sont 32 % en moyenne dans les autres pays (OCDE et UE).
+
+![](images/timss2019-4e-aimer.png)
+
+Dans [@von2024timss] **seulement 10% des quatrièmes aiment beaucoup, 34% aiment bien et 57% n'aiment pas** apprendre les mathématiques.
+
+![](images/timss2023-grade8-aimer.png)
+
+Cet étiolement semble d'ailleurs partagé par tous les pays de l'OCDE [@mullis2020timss2] :
+
+![](images/timss2019evolution-CM1-4e.png)
+Au Maroc, malgré des scores relativement bas obtenus en mathématiques au TIMSS 2015 et 2019, j'ai été frappé par le fort intérêt que manifestent les élèves marocains pour les mathématiques au grade 4 et 8 [@timss_resultats_2015] :
+
+![](images/timss2015-maroc-grade-4.png)
+![](images/timss2015-maroc-grade-8.png)
+
+
+Une étude longétudinale [@von2025timss] a également été réalisée sur un sous-groupe des pays enrolés dans l'enquête TIMSS 2023, le constat est identique avec une diminution du plaisir à apprendre les mathématiques entre le CM1 et la quatrième : 
+
+![](images/timss2023longitudinal-CM1.png)
+
+![](images/timss2023longitudinal-4e.png)
+Pour conclure avec [@merle_rapport_2003] :
+
+> Les mathématiques occupent la seconde place dans le hit parade des disciplines les plus aimées : elles sont choisies par 17.8 % des élèves. Un score bien moindre que l’E.P.S. mais cependant largement supérieur à celui obtenu par les autres disciplines. Comme l’E.P.S., les mathématiques bénéficient d’une forte valorisation sociale. À celle-ci s’ajoute une forte reconnaissance scolaire. L’utilité reconnue de cette discipline pour avoir un métier, et donc la valorisation qu’elle est susceptible à terme d’apporter aux élèves expliquent aussi ce jugement globalement positif. Toutefois si cette discipline a ses adeptes, elle a aussi ses détracteurs. Elle focalise le désamour de plus de 10 % des élèves, généralement les élèves les plus faibles qui déclarent par ailleurs, dans une proportion non négligeable, l’expérience de l’humiliation dans cette discipline. Plus inquiétant encore, les mathématiques sont la discipline la moins souvent citée en 6e comme la moins aimée et en 3e, elle devient la discipline la plus souvent citée comme la moins aimée. Autant dire, que cet enseignement de la 6e à la 3e a profondément refroidi les ardeurs des collégiens.
+
+### Lycéens
+
+L'étude [@oecd_pisa_2024] cible exclusivement les **adolescents âgés de 15 ans**, ce qui correspond en France principalement aux élèves en fin de classe de troisième ou au début de seconde (en voie générale, technologique ou professionnelle). L'étude révèle que **plus de 40% d'entre eux déclarent que les mathématiques sont l'une de leurs matières préférées**.
+
+![](images/pisa-maths-matiere-preferee.png)
+
+Dans la thèse de [@ji2011poursuite], on peut y lire le graphique suivant pour les lycéens français :
+
+![](images/these-ji-matiere-preferee-lycee-france.png)
+et celui-ci pour la Chine :
+
+![](images/these-ji-matiere-preferee-lycee-chine.png)
+Il peut paraître curieux – j'y reviendrai – que les mathématiques se hissent en tête des matières préférées des lycéens, alors que l'appétence pour la matière s'était déjà étiolée entre le passage de la primaire au collège, et qu'elle semblait se poursuivre au lycée comme l'indique les chiffres de [@mullis_timss_2016] où seulement **11% des Terminale S disent aimer beaucoup les maths**, dans la filière où ils y sont pourtant les plus disposés, avec même **un tiers des élèves déclarant ne pas aimer** apprendre les maths.
+
+![](images/timss2015advanced.png)
+
+La note d'information de la [@depp_performances_2016] abonde dans ce sens :
+
+> Le questionnaire de contexte auquel les élèves de terminale  S ont répondu en 1995 et en 2015 permet de comparer leurs niveaux de motivation. Le profil de ces élèves a changé  : **en 1995, 17,9  % déclaraient s’ennuyer en faisant des mathématiques, ce taux s’élève à 34,4 % en 2015**. Mais si les mathématiques sont moins souvent associées au plaisir intellectuel, les élèves en apprécient davantage l’intérêt pour leur orientation de carrière. En effet, 62 % des élèves (contre 56 % en 1995) déclarent qu’ils aimeraient avoir un métier utilisant les mathématiques. Ainsi le choix de s’orienter en série scientifique se ferait par défaut, **selon une pression sociale forte et un bon niveau scolaire global, plutôt que par réelle appétence pour les mathématiques**.
+
+Les stratégies d'orientation semblent donc primer sur l'intérêt propre pour la matière[^13]. [Charles Torossian](https://fr.wikipedia.org/wiki/Charles_Torossian), co-auteur avec [Cédric Villani](https://fr.wikipedia.org/wiki/C%C3%A9dric_Villani) du rapport « 21 mesures pour l’enseignement des mathématiques », affirmait dans une [tribune](https://www.marianne.net/agora/tribunes-libres/mathematiques-au-lycee-mieux-former-mieux-orienter-mieux-accompagner) :
+
+[^13]: Pour avoir été en Terminale S en 2006-2007 (ouch il y a 20 ans !), il y avait en effet une partie non négligeable de la classe qui subissait les maths, et n'avait d'ailleurs pas pour ambition de poursuivre nécessairement une formation scientifique après le bac, ils avaient choisi la filière S car elle était réputée être la "voie royale" pour ouvrir les portes de toutes les formations, fussent-elles Hypokagne ou Science Po. 
+
+> La Terminale S (TS) aurait [soit disant] été un terreau fertile pour la poursuite d’études scientifiques ! C’est oublier la réalité : en 2014, on comptait 44 % de poursuites vers des formations scientifiques, 24 % dans la santé et 32 % des formations non scientifiques. En vérité la série S était majoritairement choisie pour d’autres motifs que sa dimension scientifique. 
+
+Si on observe une scission au sein même de la filière scientifique, il doit à plus forte raison en être de même dans les autres filières non scientifiques. C'est ce que nous allons voir maintenant.
+
+### Étude longitudinale
+
+L'étude de [@ingels2011high] suit une cohorte d'élèves représentative à l'échelle des États-Unis, débutant en neuvième année d'étude (autour de 14-15 ans), et suit leur parcours tout au long du lycée ainsi que leur transition vers l'enseignement supérieur et/ou le marché du travail. Un focus est mis sur les facteurs qui amènent les élèves à choisir et à poursuivre des études et des carrières dans les domaines des sciences, des technologies, de l'ingénierie et des mathématiques (STIM). L'enquête initiale de 2009 a porté sur un échantillon de 944 lycées publics et privés. **Plus de 21 000 élèves ont répondu à l'enquête** et des informations complémentaires ont également été recueillies auprès de leurs parents, des administrateurs scolaires, des conseillers d'orientation et des enseignants. La cohorte a fait l'objet de nouveaux entretiens en 2011, 2012, 2013 et 2016. L'année de référence 2009 est notée S1 9th (~ élèves de troisième), et le premier suivi en 2012 est noté S2 Teenager (~ élèves de Terminale). 
+
+En 2009 ils déclaraient **à 14% que les mathématiques étaient leur matière préférée**[^4] juste derrière le sport (18%). 
+
+[^4]: cf. variable `S1 E03` du [DATALAB](https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution)
+
+![](images/HSLS09-S1-favorite.png)
+
+Ce que confirme par ailleurs [Hugo Duminil-Copin](https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin) pour la France dans une [interview](https://dailyscience.be/10/03/2023/comment-faire-aimer-les-maths/) :
+
+> Je ne suis pas certain que les jeunes n’aiment pas les mathématiques. Une étude récente en France montrait que les maths étaient la deuxième matière préférée des jeunes de 10 à 15 ans après le sport.
+
+Cependant, et c'est là où ça devient intéressant, les élèves de la cohorte déclaraient aussi **à 24% que les mathématiques était la matière qu'ils aimaient le moins**[^5], suivie par l'anglais (17%).
+
+
+[^5]: cf. variable `S1 E04` du [DATALAB](https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution).
+
+![](images/HSLS09-S1-least-favorite.png)
+
+Autrement dit il faut tempérer l'enthousiasme manifeste d'[Hugo Duminil-Copin](https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin) à l'antenne de France Inter[^8], et faire le constat lucide que les mathématiques sont en réalité particulièrement **clivantes**, comme il le reconnait d'ailleurs dans son dernier livre [@duminil-copin_autre_2026,p.18] :
+
+[^8]: Je suppose que son intention était de prendre le contrepied de l'image peu reluisante des mathématiques généralement véhiculée dans les médias ou chez les leaders d'opinions qui se glorifient parfois "d'être nuls en maths" (cf. [interview](https://www.lexpress.fr/sciences-sante/sciences/alain-aspect-jentends-trop-de-leaders-dopinion-se-glorifier-detre-nuls-en-maths-DDLHQERUPRANROL7PTA5GS24ZY/) d'[Alain Aspect](https://fr.wikipedia.org/wiki/Alain_Aspect)).
+
+> Les maths divisent. L'une des caractéristiques principales du rapport aux mathématiques est sa **forte polarisation** : on les adore ou on les déteste. Plusieurs enquêtes révèlent que les mathématiques figurent parmi les matières préférées des élèves du secondaire : près d'un quart d'entre eux les placent même en tête de leur classement. Aussi surprenant que cela puisse paraître à certains, elles sont donc loin d'être universellement redoutées. En revanche, lorsque les mathématiques provoquent effectivement du rejet, celui-ci peut être radical voire viscéral. Certaines personnes évoquent même une véritable phobie.
+
+[David Bessis](https://davidbessis.substack.com/about) fait un constat similaire dans son [exposé](https://youtu.be/_cRu1Pl0s1E?t=468) à l'Institut Henri-Poincaré *"Les mathématiques, une science humaine ?"* :
+
+> Le deuxième problème, il est bien connu : cet enseignement ne se passe pas bien [...] il y a des gens qui aiment vraiment et il y a des gens qui détestent vraiment [...] les maths sont **anormalement polarisantes**.  
+
+en s'appuyant sur l'étude [@ingels2011high] et en utilisant le graphique[^1] de ce post Tumblr [Is Math the Most Hated Subject?](https://www.tumblr.com/mathhombre/177411872579/is-math-the-most-hated-subject?redirect_to=%2Fmathhombre%2F177411872579%2Fis-math-the-most-hated-subject&source=blog_view_login_wall) :
+
+[^1]: Graphique qui représente les données des variables [S1 E03](https://www.icpsr.umich.edu/web/NADAC/studies/36423/datasets/2/variables/S1FAVSUBJ) et [S1 E04](https://www.icpsr.umich.edu/web/NADAC/studies/36423/datasets/2/variables/S1LEASTSUBJ) qui diffèrent légèrement de celles fournies par [DATALAB](https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution), mais dont les ordres de grandeurs sont comparables.
+
+![](images/maths-polarisante.jpg)
+Dans son livre [@bessis2022mathematica] précise :
+
+> Quand on demande aux adolescents américains quelle est la matière la plus difficile, les mathématiques arrivent en tête, avec 37% des réponses. C’est également, de très loin, la matière qu’ils détestent le plus. Mais quand on leur demande leur matière préférée, les mathématiques arrivent encore en tête, avec 23%. Pour certains, c’est même la matière la plus facile. Nous connaissons tous ce phénomène étrange. Il fait partie du décor et nous avons appris à le trouver normal. Nous trouvons normal qu’il y ait des gens qui aiment les maths et trouvent ça facile, et d’autres qui détestent les maths et trouvent ça incompréhensible, et nous trouvons normal qu’il n’y ait quasiment personne entre les deux.
+
+Dans le suivi de 2012 les mathématiques sont toujours déclarées **à 16% comme étant la matière "préférée"**[^3] 
+
+[^3]: cf. variable `S2 D01` du [DATALAB](https://nces.ed.gov/datalab/powerstats/72-high-school-longitudinal-study-of-2009/percentage-distribution).
+
+![](images/HSLS09-S2-favorite.png)
+Je place maintenant des guillemets car ce que mesure cette enquête (comme celle de PISA) est un classement relatif entre matières ("quelle est ta matière préférée ?"), tandis que TIMSS mesure plutôt un niveau d'accord absolu avec des affirmations du type *"j'aime beaucoup les mathématiques"*.  
+
+De même, une [étude](https://www.cambridgeinternational.org/Images/514611-global-education-census-survey-report.pdf) de 2018 du [Cambridge International Global Education Census](https://www.cambridgeassessment.org.uk/our-research/data-bytes/students-favourite-subjects-around-the-world/), menée sur 9 397 étudiants âgés entre 12 et 19 ans, conclut que **les mathématiques sont la matière la plus populaire** :
+
+![](images/cambridge2018-matiere-preferee.png)
+
+Au [Canada](https://censusatschool.ca/fr/donnees-et-resultats/2020-2021/), 6,220 élèves des niveaux primaire et secondaire ont répondu à une enquête au cours de l’année scolaire 2020-2021. La catégorie primaire comprend les élèves de la 4e à la 8e année (CM1 à la 4ème) et la catégorie secondaire inclut les élèves de la 9e à la 12e année (3ème à la Terminale). L'enquête révèle que les élèves déclarent aussi que les mathématiques sont leur [matière préférée](https://censusatschool.ca/fr/donnees-et-resultats/2020-2021/matiere-preferee/) :
+
+![](images/censusatschool.png)
+
+Idem pour les [élèves québéquois](https://www.lapresse.ca/actualites/200809/19/01-669204-les-maths-la-matiere-preferee-des-jeunes.php) ou les [élèves américains](https://news.gallup.com/poll/12007/Math-Teens-Favorite-School-Subject.aspx). Les mêmes schémas se répètent donc dans et hors de l'OCDE. Mais on comprend maintenant qu'un élève peut classer les maths en première position parmi ses matières préférées (parce que les autres lui plaisent peut-être encore moins)[^6] sans pour autant *"aimer beaucoup"* les maths en valeur absolue. Ces enquêtes ne mesurent donc pas rigoureusement la même chose. Par *"préférer les mathématiques"* on peut distinguer plusieurs choses, on peut par exemple aimer apprendre des mathématiques sans pour autant réussir, ou inversement avoir de bons résultats en mathématiques sans particulièrement aimer en faire, ou encore reconnaître leur utilité et les préférer comme choix d'orientation par rapport à ses projets professionnels (vote utile), sans qu'il n'y ait d'attrait pour les mathématiques en elles-mêmes. La préférence pour une matière est fonction de l'intérêt qu'on lui porte, intérêt qui revêt des significations multiples [@cosnefroy_sens_2007].
+
+[^6]: On pourrait risquer une analogie avec la politique : un candidat peut faire seulement 18% parmi les inscrits au premier tour puis remporter l'élection présidentielle avec 58% des voix (avoir donc été "préféré" par les français), sans pour autant susciter une forte adhésion. Un autre candidat peut par ailleurs susciter une forte adhésion au sein d'une partie de l'électorat, accéder potentiellement au second tour aidé par le vote utile, et être donné largement perdant dans les sondages face à son adversaire politique du fait du rejet qu'il suscite par ailleurs. Toute ressemblance avec des personnages existants serait purement fortuite :-)
+
+Nous avons ainsi vu avec toutes ces études que ce clivage autour des mathématiques s'installe au collège, et qu'il se poursuit au lycée – où un certain nombre d'élèves du collège en difficulté en maths n'y sont pourtant pas allés – allant même jusqu'à gagner la Terminale S. Il ne serait donc pas étonnant de retrouver ce clivage dans la population générale, ce qui est l'objet de la section suivante.
+
+### Les adultes
+
+Selon un [sondage CSA Research](https://www.rtl.fr/actu/debats-societe/65-des-francais-jugent-l-enseignement-des-maths-inadapte-selon-notre-sondage-7790579608) réalisé en 2017 pour Le Point et RTL :
+
+> **61% des Français ont bien aimé les mathématiques à l'école**. Les maths étaient donc la **deuxième matière préférée des sondés à l'école (33%)**, derrière le Français (37%) et devant l'Histoire-géographie (31%). [...] Mais les mathématiques, une matière considérée par certains comme stressante, décourageante, voire ennuyeuse, ne sont pas sans détracteurs. Parmi les sondés qui crient leur **désamour pour les cours de maths (39%)**, la majorité (61%) se justifie par les difficultés rencontrée en classe. L'aspect trop théorique des cours a quant à lui dissuadé près de 40% des personnes réfractaires aux chiffres.
+
+Selon un autre sondage en ligne [@ipsos_education_2025] portant sur 23700 adultes de moins de 75 ans à travers 30 pays, les mathématiques occupent la deuxième place des matières favorites (30%) déclarées par ces adultes lorsqu'ils étaient à l'école, juste derrière l'histoire (32%). **Pour la France, deuxième place également pour les mathématiques (29%) derrière l'histoire (37%)**.
+
+![](images/Ipsos2025-favorite-countries.png)
+Mais lorsqu'on leur demande quelle était **la matière qu'ils aimaient le moins, les mathématiques arrivent aussi en pole position (37%), avec une quasi unanimité !** La France ne faisant pas exception avec une proportion de 38% :
+
+![](images/Ipsos2025-less-favorite-countries.png)
+Il n'est donc pas étonnant que les réactions en bien ou en mal auxquelles j'ai l'habitude d'être confrontées soient aussi divisées et exacerbées lorsque j'évoque les mathématiques. Il me parait ainsi souhaitable d'essayer de comprendre comment et pourquoi cette polarisation s'installe.
+
+## Les raisons du désamour
+
+Dans la section précédente j'ai tâché de compiler un certain nombre d'analyses illustrant le rapport aux mathématiques qu'entretiennent les jeunes et les moins jeunes. Selon qu'ils s'agissaient de sondages ou d'études (transversales ou longitudinales), les données et méthodologies étaient bien sûr de qualité inégalité. Néanmoins ces analyses semblaient se recouper et aboutir à une forme de consensus quant au caractère particulièrement clivant des mathématiques qui se dessine dans le parcours scolaire. 
+
+Dans cette section je passe en revue une liste d'explications non exhaustive du désamour progressif pour les mathématiques que l'on observe chez les élèves après leur entrée au collège. Chacune de ces causes mériterait de longs développements, d'être resitués dans une littérature scientifique dense, et d'en mesurer la part respective d'explicabilité. Mais alors ça ne serait plus un billet de blog mais une thèse 😉.
+
+À COMPLÉTER
+
+### La sélection par les mathématiques
+
+<!-- Comme le dit [Hugo Duminil-Copin](https://fr.wikipedia.org/wiki/Hugo_Duminil-Copin) dans une [interview](https://dailyscience.be/10/03/2023/comment-faire-aimer-les-maths/) : -->
+
+<!-- > Je ne suis pas certain que les jeunes n’aiment pas les mathématiques. Une étude récente en France montrait que les maths étaient la deuxième matière préférée des jeunes de 10 à 15 ans après le sport. Par contre, les mathématiques servent trop souvent d’étalon pour fixer l’accès à diverses formations. Y compris des formations supérieures où elles ne sont pas nécessairement centrales. Je pense à la médecine ou à des matières scientifiques qui ne seraient pas grandes consommatrices de mathématiques, comme la biologie. Les mathématiques se retrouvent donc cantonnées à un rôle d’outil de sélection. C’est une erreur. On perd ainsi le côté plaisant de faire des mathématiques. Si les enfants n’ont pas accès à ces aspects ludiques, ils se retrouvent à détester les maths. Et cela, c’est dommageable. Il faut arriver à faire sortir les mathématiques de ce rôle d’évaluation.  -->
+
+<!-- Même son de cloche chez [Sébastien Planchenault](https://shs.cairn.info/publications-de-sebastien-planchenault--796141?lang=fr), président de l’[APMEP](https://www.apmep.fr/)[^7] : -->
+
+<!-- [^7]: Association des Professeurs de Mathématiques de l’Enseignement Public -->
+
+<!-- > Au lieu de faire de la filière « C » (puis « S ») la voie logique de formation des futurs scientifiques, on en a fait un outil de sélection de l’élite. La filière scientifique est devenue la voie unique d’excellence. Ce qui a été une grosse erreur. Ça a contribué à faire des maths une matière à part, avec ce poids et cet enjeu de la sélection, contre laquelle des générations d’élèves moins doués ont nourri un fort ressentiment.  -->
+
+<!-- La raison d'une plus grande désaffection du français au collège par rapport aux mathématiques sont multiples [@merle_rapport_2003, §13]  -->
+
+<!-- Sélection plus aisée par les maths car vrai/faux moins de sensibilité à la notation et moins sujette au capital culturel -->
+
+### La difficulté de la matière
+
+<!-- [@merle_rapport_2003, §15] -->
+
+<!-- Les résultats TIMSS 2003 ont montré que 37% des élèves américains considèrent les mathématiques comme la matière la plus difficile [@inc_math_2005]. -->
+
+### La peur de l'erreur
+
+<!-- Grothendieck -->
+
+<!-- > Craindre l’erreur et craindre la vérité est une seule et même chose. Celui qui craint de se tromper est impuissant à découvrir. C’est quand nous craignons de nous tromper que l’erreur qui est en nous se fait immuable comme un roc. -->
+
+<!-- Bessis : -->
+
+<!-- > En sortant de l’enfance, nous apprenons à craindre d’avoir l’air bêtes. Nous apprenons à avoir honte de nos erreurs. Nous apprenons à dissimuler, y compris à nos propres yeux, le fait que nous ne comprenons presque rien. Pour progresser en mathématiques, c’est ce réflexe de dissimulation qu’il faut apprendre à désactiver. Et c’est très difficile. À l’âge où nous étions encore libres de poser des questions stupides, y compris de poser cent fois de suite la même question stupide, il n’y avait pas de nuls en maths. Les grands mathématiciens inventent et mettent en œuvre des techniques spéciales pour retrouver cette innocence enfantine. Ils déclarent tous que c’est indispensable. -->
+
+<!-- > Reformulées dans le contexte de la marche, les paroles de Grothendieck à propos du rôle de l’erreur deviennent lumineuses : Craindre de tomber et craindre de marcher est une seule et même chose. Celui qui craint de se casser la figure est impuissant à apprendre à marcher. C’est quand nous restons assis sur notre cul que notre maladresse initiale se transforme en un handicap psychomoteur. -->
+<!-- ### L'édifice cumulatif -->
+
+
+### Les rythmes asynchrones
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/RF0-8p55q1o?si=u98wlxYQ1iHpYnrZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+<!-- Vérifier la pertinence -->
+
+### La croyance en la bosse des maths
+
+
+<!-- Dans l'extrait introductif, Hugo Duminil-Copin bât en brèche le stéréotype qui consiste à : -->
+
+<!-- > Croire qu'on est pourvu ou dépourvu en mathématiques, qu'il y a ceux qui peuvent et ceux qui ne peuvent pas. -->
+
+<!-- Dans quelle mesure les élèves adhèrent à cette croyance ?  -->
+
+<!-- Dans l'étude longitudinale [@ingels2011high] : -->
+
+<!-- ![](images/nes-bons-en-maths.png) -->
+
+<!-- ![](images/croyance-bons-en-maths.png) -->
+
+<!-- Ils semblent ne pas croire à cette fable, ni au *fixed mindset*, et au contraire mettre en avant le travail -->
+
+
+### Les stéréotypes
+
+<!-- [@bessis2022mathematica] -->
+
+<!-- > Les attitudes possibles vis-à-vis des mathématiques font partie de nos stéréotypes culturels : le geek qui adore ça (forcément boutonneux), la jeune fille cool qui s’intéresse à la mode (forcément nulle en maths), cette autre jeune fille capable de résoudre tous les problèmes sans avoir à réfléchir (forcément autiste), le cancre rebelle (forcément nul en maths). Ces stéréotypes sont absurdes et insultants. Je connais des cancres rebelles qui sont devenus de grands mathématiciens. Une lycéenne a le droit d’être jolie et d’avoir plein d’amis et de savoir résoudre tous les problèmes de maths sans avoir à réfléchir. Elle a aussi le droit de devenir une grande mathématicienne. [...] Est-ce qu’on trouverait normal que des adolescents jugent cool de ne pas savoir lire ? Qu’ils supposent que ceux qui savent lire de façon fluide, sans avoir à déchiffrer chaque lettre séparément, ont forcément des problèmes relationnels ? -->
+
+<!-- > « Ted Kaczynski est né en 1942 à Chicago. Ses facilités exceptionnelles en mathématiques sont vite repérées par le système scolaire. Après un test où son QI est mesuré à 167, on lui fait sauter une classe. Quelques années plus tard, il saute une autre classe. Il entre à Harvard en 1958, à l’âge de seize ans.Il soutient sa thèse de mathématiques en 1967 et devient le plus jeune professeur assistant de l’université de Berkeley.À côté de ces succès, la vie de Ted est triste et solitaire. Ceux qui l’ont connu dans sa jeunesse le décrivent comme taciturne, extrêmement en retard dans son développement affectif, incapable de communiquer et de nouer de vraies relations.À Harvard, les étudiants qui logeaient dans la même résidence universitaire se souviennent de ces deux détails : son habitude de jouer du trombone au milieu de la nuit et l’odeur de nourriture en décomposition qui se dégageait de sa chambre.Quand Ted avait quinze ans, il éprouvait de telles difficultés à socialiser avec les autres adolescents qu’il préférait jouer avec les amis de son petit frère David, alors âgé de huit ans.David Kaczynski se souvient de cette époque, de son admiration pour l’intelligence de ce grand frère qu’il[…] aimait tant, mais aussi de son étonnement devant ses comportements étranges. Qu’est-ce qui empêchait Ted de se faire des amis ?Un jour, quand David avait huit ou neuf ans, il est allé voir sa mère et lui a demandé :« Maman, c’est quoi le problème de Teddy ? »» -->
+
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+
+<!-- > « Depuis le début de ce livre, j’ai affirmé qu’il fallait dépasser les stéréotypes sur les mathématiques et les mathématiciens. Je n’ai pas changé d’avis. Ça n’empêche pas que ces stéréotypes existent et qu’ils ne sortent pas de nulle part.Ce n’est un secret pour personne. Quand on découvre la communauté mathématique, ce qui frappe immédiatement est l’abondance de gens « bizarres ». Le mot « bizarre » est une manière polie de dire les choses. Il existe des degrés dans la bizarrerie. Certains mathématiciens sont un peu bizarres. D’autres sont franchement bizarres. D’autres sont spectaculairement bizarres. Dans certains cas, la bizarrerie n’est plus le bon concept. Un seul mot paraît alors adapté : celui de folie.C’est d’ailleurs l’un des grands sujets de conversation entre mathématiciens. Chacun a des dizaines d’anecdotes à raconter, comiques et absurdes, tellement caricaturales qu’on a parfois du mal à y croire. » -->
+
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+
+<!-- > « Dépasser les stéréotypes, c’est garder en tête que la majorité des mathématiciens n’est pas comme ça. Il est parfaitement possible de faire des mathématiques au plus haut niveau et d’être « normal ». On peut même être charismatique, socialement épanoui, chaleureux et tourné vers les autres.Plus encore que la bizarrerie, l’humour est une caractéristique généralement très développée chez les mathématiciens.Ça n’empêche que la bizarrerie extrême y est représentée de façon spectaculaire, notamment parmi les mathématiciens qui ont le plus marqué l’histoire. Au chapitre 7, nous avons raconté les choix de vie d’Alexander Grothendieck, sa solitude extrême et son ascétisme.Un autre exemple frappant est celui de Grisha Perelman » -->
+
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+
+<!-- > « Nous avons le sentiment que ce n’est pas « normal », que si Perelman refuse de se couper les ongles et continue, à cinquante ans passés, à vivre seul avec sa mère dans un petit appartement de Saint-Pétersbourg, c’est parce qu’il y a quelque chose qui ne tourne pas rond.C’est possible. Mais dans le fond, nous n’en savons rien. Perelman est l’un des plus brillants esprits sur cette Terre. Il ne fait de mal à personne et il a le droit de vivre comme il l’entend. Nous n’avons aucune légitimité pour le juger.Est-ce que ce sont les mathématiques qui rendent les gens « bizarres » ? Je ne crois pas. Je dirais plutôt qu’elles savent accueillir des gens dont la bizarrerie préexistait.Elles sont l’un des rares domaines où il est possible d’accomplir de grandes choses en dépit d’immenses difficultés relationnelles. Pour des personnes initialement un peu « bizarres », « différentes », pas trop à l’aise en société, elles peuvent être un chemin de socialisation et d’épanouissement. (J’aurais tendance à me ranger dans cette catégorie.)Je ne pense donc pas que les mathématiques soient véritablement « dangereuses ».Elles sont cependant contre-indiquées dans un contexte bien particulier, où elles semblent avoir le potentiel d’induire des effets secondaires[…] » -->
+
+<!-- Un peu comme en politique mettre la focale sur les escrocs alors que le plus grand nombre est normal -->
+
+
+<!-- ### Solfège  -->
+
+### Le climat scolaire
+
+<!-- Ressenti -->
+
+<!-- Évolution entre 2019 et 2023 TIMSS : -->
+
+<!-- ![](images/desordre-cours.png) -->
+
+<!-- Dans [@ipsos_education_2025] -->
+
+<!-- ![](images/safety-France.png) -->
+
+<!-- ![](images/harcelement.png) -->
+
+
+<!-- [@bessis2022mathematica] -->
+
+
+<!-- > Nous restons pétrifiés devant le panneau « réservé aux génies » qui nous barre l’entrée, en oubliant que nous avons nous-mêmes planté ce panneau, le jour où nous nous sommes raconté que c’était trop dur pour nous. -->
+
+
+<!-- ### Peur de passer pour un con -->
+
+
+## Perception des mathématiques
+
+Pour jauger l'intérêt des mathématiques nous avions suivi le fil chronologique du cursus scolaire (de l'école primaire aux études supérieures en passant par le secondaire), enregistrant une baisse d'appétence progressive pour la matière. Pour rendre compte de la perception des mathématiques et de son évolution, nous allons maintenant adopter la démarche opposée en partant des représentations des adultes une fois constituées, puis remonter le fil jusqu'à la petite école.
+
+### Consultation nationale : "Aux maths citoyennes, citoyens !"
+
+Organisé par l’[Insmi](https://www.insmi.cnrs.fr/fr)[^14] du 10 mars au 30 avril 2025, le [questionnaire en ligne](https://www.insmi.cnrs.fr/fr/cnrsinfo/le-questionnaire-en-ligne) *« Aux maths citoyennes, citoyens ! Grande consultation nationale »* a recueilli plus d’1,1 million de contributions par plus de **33 000 participantes et participants !** L’objectif était de récolter les perceptions, les représentations, les émotions et envies des citoyennes et citoyens au sujet des mathématiques. 
+
+[^14]: Institut national des sciences mathématiques et de leurs interactions.
+
+![](images/cnrs-consultation-aux-maths-citoyennes-citoyens.jpg)
+
+> À noter : les personnes ayant répondu à cette consultation en ligne ne sont pas strictement représentatives de l’ensemble de la population française [...] forte participation des cadres et des professions intellectuelles supérieures (57% des répondantes et répondants à la consultation vs 22% de la population en emploi en France). Par ailleurs, 71% des répondantes et répondants déclarent se sentir soit très à l’aise soit plutôt à l’aise avec les mathématiques.
+
+### Les maths ça sert à quoi ?
+
+[Christophe Besse](https://www.math.univ-toulouse.fr/~cbesse/), directeur de l’[Insmi](https://www.insmi.cnrs.fr/fr), fut invité sur France Inter dans le but de parler de la consultation citoyenne dont l'un des objectifs était de *"comprendre pourquoi on entend souvent 'j'ai détesté les maths'"*
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J4mzZwPE4R8?si=FREnc-h0HqxNabeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+À la question de la journaliste *"Ça suscite des émotions les maths ?"*, Christophe Besse partage tout d'abord la même expérience que je relatais en introduction[^15] :
+
+[^15]: voir également l'[interview](https://www.youtube.com/watch?v=sAWcgVmYL3o&t=287s) de Laure Saint-Raymond mise en exergue dans l'introduction.
+
+> Oui quand on est comme moi chercheur en mathématiques, quand on est interrogés sur notre métier, **c'est soit de la passion, soit une espèce de réticence** ; "j'étais nul en maths", "c'est pas pour moi". En tout cas ça ne laisse pas les gens indifférents, et on essaye de comprendre pourquoi. Et aussi **pourquoi on entend si souvent "j'ai détesté les maths"**, c'est fort comme mots ! Et on ne le dit pour aucune autre matière...
+
+puis il ajoute :
+
+> ... alors qu'en fait les maths on les vit tous les jours dans notre quotidien, on en a **tous les jours besoin**. Par exemple pour les sondages, pour l'intelligence artificielle, pour la radio numérique, tout cela c'est des maths **sans que l'on s'en rende compte**. Quand on va payer avec sa carte bancaire c'est des maths il y a de la cryptographie **derrière**.
+
+**Malentendu sur la notion d'utilité** 
+
+Les passages que j'ai souligné en gras me semblent révélateur de la confusion entretenue entre ces deux questions : 
+
+- Les maths ça sert à quoi ? (pour la société)
+- Les maths ça *me* sert à quoi ? (à titre individuel)
+
+Ce dont le citoyen a *tous les jours besoin*, ce sont principalement de tous les outils techniques qui reposent *derrière* sur des mathématiques, *sans que l'on s'en rende compte*. Ces mathématiques là, comme la cryptographie, le citoyen n'en a la plupart du temps pas *directement* besoin dans son quotidien, il ne les manipule pas lui-même. Ce sont avant tout les concepteurs, les chercheurs et les ingénieurs, qui ont besoin de ce savoir-faire mathématique afin de concevoir ces outils utiles à la population. Ce sont bien souvent ces applications qui occupent la majeure parties des exemples cités pour convaincre de [la place des mathématiques dans nos vies](https://www.insmi.cnrs.fr/fr/cnrsinfo/la-place-des-mathematiques-dans-nos-vies) par leur omniprésence.
+
+Dans la notion d'utilité il y a toujours l'adéquation entre une fin et des moyens. Autrement dit une chose est utile en fonction d’un besoin. Par exemple une bouée est utile au maître-nageur, mais ne sera d’aucune utilité pour l’alpiniste. Les mathématiques, elles, sont utiles au physicien pour modéliser les phénomènes physiques, et sont même *nécessaires*[^22] à l'élaboration des théories. Elles le sont probablement moins pour la plupart des gens au quotidien. Il y a donc divers degrés d'utilité. Les mathématiques sont parfois utiles au quotidien mais absolument nécessaires au fonctionnement de notre société moderne et des sciences. Alors certes, on peut se convaincre que les mathématiques nous sont ainsi *indirectement* utiles, mais cela tout le monde ou presque en conviendra. La voiture est utile à de nombreuses personnes pour se déplacer, mais il ne leur est pas nécessaire d'en comprendre la physique de la thermodynamique qui fait tourner leur moteur. La journaliste objectant à raison sur l'exemple de la cryptographie :
+
+[^22]: Se souvenir que les deux notions d'utile et de nécessaire ne sont pas équivalentes, à toute fin... utile. 
+
+> On n'a pas besoin de faire de maths ou de connaître les maths pour utiliser une carte bleue.
+
+Ce à quoi Christophe Besse répondra que pour savoir si les soldes sont intéressantes on a besoin d'effectuer une conversion dans notre tête, preuve que nous manipulons des maths tous les jours. Certes, mais ces calculs requièrent rarement plus de connaissances mathématiques que n'en possède un élève en début de collège voire de l'école primaire. Or on l'a vu précédemment, jusqu'à ce stade les mathématiques sont appréciées par les élèves. C'est après que cela se corse. 
+
+La question que se posent les non-scientifiques est celle de savoir à quoi leur servent *dans leur quotidien* des mathématiques plus élaborées introduites progressivement au collège, comme la démonstration géométrique ou la résolution d'équation. Force est de reconnaître que peu de personnes mettent en application ces mathématiques au quotidien. On peut fort heureusement vivre convenablement et mener une existence heureuse sans avoir à résoudre d'équations. 
+
+**Division du travail et adaptation**
+
+L'environnement technologique dans lequel nous évoluons, développé par les scientifiques et techniciens, via la division du travail, exempte la majeure partie de la population d'avoir à maitriser les sciences qui rendent possibles ce confort. Il en va de même pour la médecine dont on délègue aux soignants la responsabilité de s'occuper de notre santé, et on fait l'impasse sur la chimie (qui ne sert pas non dans la vie quotidienne) qui permet de fabriquer les médicaments dont on a besoin. Plus difficile serait de se passer d'apprendre à lire ou à compter, dans un environnement qui est saturé de mots et de nombres. Il reste plus handicapant[^18] de ne pas savoir lire dans une société où une myriade de choses et d'actions sont dépendantes des écrits et symboles qui nous entourent. L'utilité de savoir lire est ainsi liée au contexte. Dans [@bessis2022mathematica] on peut y lire :
+
+[^18]: Piqûre de rappel quant au fait que la situation de handicap naît de l'interaction entre les caractéristiques propres d'une personne et les obstacles ou facilitateurs de son environnement. Dans une société telle que la nôtre où il n'est pas seulement utile mais nécessaire de savoir lire, l'absence de lunettes engendrerait beaucoup de handicap chez ceux qui ne peuvent lire sans. Or ce sont des mathématiques qui sous-tendent la création de lentilles façonnés par des calculs d'optiques. Pas de mathématiques, pas de lunettes; pas de lunettes, pas de lecture; pas de lecture... pas de lecture.
+
+> Depuis cent cinquante ans environ, une nouvelle décision fondamentale a été prise : celle d’enseigner la lecture et l’écriture à tout le monde. Cette décision est tellement structurante qu’il est devenu difficile d’imaginer à quoi notre monde pourrait bien ressembler si elle n’avait pas été prise. Si, comme c’était le cas jusqu’alors, seule une petite minorité de la population avait accès à la lecture. 
+ Au temps des hiéroglyphes et de l’Égypte ancienne, l’art d’écrire s’apparentait à un pouvoir magique. Les scribes formaient une caste héréditaire, et ils se transmettaient leurs secrets de génération en génération. Dans l’Europe médiévale, écrire était une vocation. Des jeunes hommes se faisaient moines, ils se retiraient du monde et consacraient leur existence à copier des manuscrits. Qu’est-ce que les paysans illettrés du Moyen Âge pensaient de tout cela ? S’imaginaient-ils qu’apprendre à lire et à écrire exigeait un don spécial, une forme particulière d’intelligence qui leur faisait défaut ? Trouvaient-ils injuste et frustrant d’en être exclus ? Ou, plus simplement, se disaient-ils qu’ils n’avaient pas le temps, pas l’argent, pas l’envie, et que de toute façon ils n’avaient rien à lire ? Aujourd’hui, plus personne ne pense que lire et écrire suppose un don spécial. **Plus personne ne pense que ça ne sert à rien**. À de rares exceptions près, tous les régimes, quelles que soient leurs croyances et leurs idéologies, font de l’enseignement primaire une priorité absolue.Le projet radical d’alphabétiser la Terre entière est un prodigieux succès. L’illettrisme n’a pas disparu, bien sûr, mais il est devenu minoritaire. En quelques générations, l’humanité a su accomplir un programme global de transformation cognitive sans équivalent dans l’histoire. Dans le même temps où était lancé ce grand chantier d’alphabétisation planétaire, une autre décision radicale était prise : on allait enseigner les bases des mathématiques à tout le monde. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus d’un milliard de filles et de garçons étudient les mathématiques. Et c’est un véritable désastre. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus de cinq cents millions de filles et de garçons souffrent en silence. Ils ont l’impression de ne rien comprendre et sont ballottés entre le désengagement (ils ne voient absolument pas l’intérêt de cette matière) et la sensation humiliante de ne pas être assez intelligents.»
+
+En plus des raisons structurelles du désamour des mathématiques déjà évoquées dans la section précédente, les élèves justifient leur désengagement par le rendement décroissant de l'utilité pratique des mathématiques au cours du collège puis au lycée [@merle_rapport_2003, §44] :
+
+> L’utilité des mathématiques et du français pour les élèves a été saisie à partir de questions relatives à leur usage dans la vie de tous les jours et pour obtenir un métier. Mathématiques et français sont considérés comme « utiles » ou « très utiles » dans « la vie de tous les jours » par une très forte majorité d’élèves (près de huit sur dix). Ce sentiment collégien est moins présent en classe de troisième que de sixième : la proportion d’élèves à considérer que les mathématiques et le français sont « très utiles » chutent en effet de moitié. Cette évolution tient probablement au fait que les connaissances apprises en classe de sixième semblent plus indispensables aux élèves que celles acquises en classe de troisième. Les déclarations des élèves relatives à la moindre utilité de ces deux disciplines en fin de troisième sont en rapport aussi avec le moindre intérêt qu’elles suscitent par ailleurs sans qu’il soit possible d’établir le sens d’une éventuelle causalité entre utilité et intérêt.
+
+
+Et quand ça n'est pas seulement les élèves mais aussi un ancien ministre de l'éducation qui n'y voit pas l'intérêt, cela ne facilite pas la tâche.
+
+**La polémique de Luc Ferry**
+
+Le 15 février 2018 sur LCI, [Luc Ferry](https://fr.wikipedia.org/wiki/Luc_Ferry), ancien ministre de l'éducation déclarait :
+
+> Comme 99 % des Français, je n'ai jamais utilisé, même pas trente secondes, ce que j'ai appris en maths tout au long de ma scolarité jusqu'en deuxième année de fac. Je n'ai jamais utilisé les identités remarquables, les cas d'égalité des triangles, ça ne m'a jamais servi à rien.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NZEgo5qGsnY?si=Ni_7xngIE7lKS_3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Affirmer ne jamais utiliser les maths, en utilisant une statistique, est pour le moins savoureux, mais passons. Cela m'inspire cette petite plaisanterie auto-référentielle :
+
+99% des énoncés de la forme (99% des $X$ sont $Y$) sont faux.
+
+<details>
+  <summary>Est-ce que cette affirmation est vraie ? (clique pour voir la réponse)</summary>
+
+  Soit $e$ cet énoncé, et $E$ l'ensemble de tous les énoncés de la forme "99% des $X$ sont $Y$". Alors clairement $e$ appartient à $E$, puisqu'il est de cette forme avec $X=$"énoncés de la forme (99% des $X$ sont $Y$)" et $Y$="faux". L'énoncé $e$ est donc auto-référentiel, il est de la même forme que les énoncés qu'il décrit. Mais contrairement au [paradoxe du menteur](https://fr.wikipedia.org/wiki/Paradoxe_du_menteur), il n'y a aucune contradiction ici, en effet :
+  
+  - Si $e$ est vrai, alors 99% des éléments de l'ensemble $E$ sont faux, et donc $e$ qui est à la fois vrai et dans $E$, appartient simplement aux 1% restants. 
+ 
+- Si $e$ est faux, alors il devient simplement faux que "99% des éléments de $E$ sont faux", ce qui n'est pas incompatible avec le fait que $e$ soit lui-même faux.
+  
+  Donc il n'y a pas de paradoxe logique. Toutefois cela ne nous dit toujours pas si l'affirmation est vraie ou fausse.
+  
+  Notons $N$ le nombre d'énoncés que contient $E$. Pour que $e$ soit vrai, il faudrait que le nombre d'énoncés faux soit exactement de $0,99N$ (donc nécessairement que $N$ soit un multiple de 100 pour que cette quantité soit entière). Sur un grand nombre $N$ d'énoncés (par exemple 1 million), la probabilité que le nombre d'énoncés faux soit **exactement** de $0,99N$ (dans notre exemple 990 000) est relativement faible ! 
+  
+  En revanche si on relâche l'hypothèse en prenant pour énoncé $e$ qu'au moins 99% des énoncés de $E$ sont faux, alors $e$ est probablement vrai, car l'écrasante majorité des affirmations du type "99% des $X$ sont $Y$" servent en réalité à souligner que l'écrasante majorité (bis) des $X$ sont $Y$, et non pas à quantifier exactement une proportion de 99%. 
+  
+En tapant "99% des ..." dans mon moteur de recherche voici les premiers résultats retournés :
+  
+  - "99% des manifestations se passent dans la joie" 
+  
+  - "99% des gens ne comprennent pas ça"
+  
+  - "99% des gens se trompent sur cette énigme !"
+  
+  - "99% des gens ne comprennent rien aux échecs"
+  
+  - "99% des auxiliaires de vie sont fiers de leur métier"
+  
+Bon les résultats sont ici corrélés à mon historique de recherche, mais au delà de ce biais d'échantillonnage, je pense que ça ne modifie pas la manière d'employer cette tournure de phrase visant à insister sur *le plus grand nombre*, sans chercher à en déterminer la véritable proportion. Je suppose ironiquement que plus de 99% des phrases de ce type ne renseignent pas une statistique correcte, sans avoir moi-même fait l'examen minitieux et exhaustifs de toutes ces phrases. L'hypothèse me semble néanmoins raisonnable du fait d'une part de l'usage courant de l'expression et d'autre part du point précédent soutenant que la probabilité de tomber pile sur une proportion de 0,99 est très faible compte tenu des incertitudes. 
+
+Ainsi l'énoncé $e$ = "Plus de 99% des énoncés de $E$ sont faux" est certes une affirmation plus forte que de n'avoir "que" 99%, mais je disais que cela permettait de "relâcher" l'hypothèse car c'est en réalité la proportion exacte de 99% qui est la plus contraignante pour la véracité de $e$, qui est **probablement fausse** sous cette formulation (mais que je trouvais plus amusante par son caractère auto-référentiel). Tandis que sous cette hypothèse plus forte "Plus de 99%" l'énoncé $e$ est désormais **très probablement vrai**. Ce qui conclut (presque) le problème.
+
+**Remarque** : J'ai jusqu'à maintenant considéré pour $E$ l'ensemble de tous les énoncés formulés effectivement par des humains. Cependant on pourrait considérer tous les énoncés **possibles** de la forme "99% des $X$ sont $Y$", incluant des absurdités ("99% des mathématiciens sont des langoustes") ou des tautologies ("99% des langoustes sont des langoustes"), dont on peut en générer une *infinité*. Mais alors la notion même de proportion ne fait plus sens (99% d'une infinité d'énoncés), il faudrait plutôt parler de densité. Mais cela soulève des difficultés. Pour s'en rendre compte construisons cette famille d'énoncés : $e_k$="99% des entiers de 1 à $k$ sont inférieurs à $0,99k$". Si $k$ est un multiple de 100 alors $e_k$ est vrai, sinon $e_k$ est faux. Par conséquent, parmi les $n$ premiers énoncés $e_1,\dotsc,e_n$, le nombre d'énoncés vrais est $\lfloor \frac{n}{100} \rfloor$, et la densité de vrais est donc : $$ \lim_{n\to +\infty} \frac{\lfloor \frac{n}{100} \rfloor}{n}=\frac{1}{100}$$
+Ainsi la densité de faux est de 0,99 et donc l'énoncé $e$ portant sur cette famille peut être considéré vrai au sens de cette densité naturelle. Toutefois ce résultat dépend de l'énumération, car ici nous avons ordonné les énoncés de telle sorte que nous ayons un énoncé vrai tous les 100 énoncés, la construction est périodique; mais si on rééordonnait les énoncés typiquement en plaçant tout d'abord les vrais puis en intercalant des faux, on pourrait faire tendre la densité de faux vers n'importe quelle valeur de $[0,1]$ voire même ne pas la faire converger du tout (c'est la magie des séries infinies). Donc l'énoncé $e$ sans précisions sur le choix de l'énumération est mal défini. 
+
+</details>
+
+Trêve de plaisanterie, faisons preuve de charité intellectuelle à l'égard de Luc Ferry, et admettons qu'il fasse une distinction (discutable nous y reviendrons dans la dernière partie) entre mathématiques pratiques dans l'usage quotidien (calculs, pourcentages) et mathématiques dites "spéculatives" [@apmep_editorial_2004]. Ce qu'il veut signifier, c'est qu'un certain nombre de notions mathématiques qu'il range dans cette seconde catégorie (les identités remarquables, les cas d'égalité des triangles, la démonstration géométrique, la résolution d'équations, etc) sont rarement mobilisées dans la vie quotidienne de la plupart des citoyens. Et sur ce point je pense qu'on peut lui donner raison. 
+
+**Le règne de l'utile**
+
+Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie un signal où il signifie que tout le contenu mathématiques du secondaire qui est rarement appliqué ne sert donc à rien si ce n'est aux "matheux", contrairement aux autres que cela ennuie [@le_huffpost_epingle_2018]. Ce qui sert *in fine* la soupe à ceux qui clâment haut et fort que *"les maths ça ne sert à rien"*, pour eux, puisqu'il conclut en fin d'interview (au sujet du rapport Villani) par :
+
+> À mon avis ça ne va pas rendre la bosse des maths à ceux qui ne l'ont pas (*rire*).
+
+Ce qui, pour un ancien ministre de l'éducation, n'est pas des plus responsables qu'on se le dise. Comme le souligne cet économiste [@menia_luc_2018] en réponse à ce texte d'un collègue [@alexandre_luc_2018] :
+
+> On ne peut pas se contenter de considérer que le quidam n’a pas une idée consistante de ce à quoi sert l’école et que les arguments des uns et des autres sont finalement assez faibles pour ou contre Ferry. On doit persister à dire ce que doit être l’école, dans une approche normative, face à quelqu’un qui le dit aussi, assez lamentablement. Le texte laisse, à mon goût, trop penser que les propos de Ferry ont une valeur réelle. N’oublions pas que quand un ancien ministre de l’Éducation nationale parle dans un grand média, il dit ce qui doit être. Se contenter de dire que, si on s’en tient à la perception du problème par les gens, il a raison – ou plutôt pas tort -, c’est déjà trop.
+Il faut lui répondre que notre objectif est de faire, du mieux possible, une école du capital humain et du développement des compétences diverses, grâce notamment aux maths, pas qu’il faut renoncer aux maths parce qu’elles sont mal comprises ou mal utilisées.
+
+[Pierre Colmez](https://fr.wikipedia.org/wiki/Pierre_Colmez) fait remarquer que ce constat sur l'utilité des maths s'applique en fin de compte à la plupart des matières [@colmez_reponse_2012] :
+
+> Ce genre de discours refait surface régulièrement, et à chaque fois je me fais la réflexion qu'en poussant le raisonnement jusqu'au bout, on aboutit à la suppression pure et simple de l'enseignement : en ce qui me concerne, je serais bien en peine de citer beaucoup de choses apprises à l'école et dont j'ai eu à me servir en dehors (à part l'orthographe car j'écris tous les jours, et les mathématiques car je suis mathématicien). J'ai suivi de longues études de physique et la seule application que j'en ai trouvée a été la vidange du bain de ma fille à l'aide d'un tuyau (vive le principe d'Archimède !), technique que j'ai apprise en CM2 pour la vidange de l'aquarium de la classe. De même, la seule connaissance de chimie que j'utilise consciemment est le fait que le manque d'oxygène pour la combustion produit du CO, qui est un poison, au lieu du CO2, qui est un gaz parfaitement inoffensif (à dose raisonnable). Je fais donc attention à ma chaudière à gaz. Le but de l'éducation n'est certainement pas de préparer les élèves directement à leur futur métier (c'est parfaitement impossible ; il faudrait enseigner beaucoup trop de choses vue la diversité des métiers potentiels), mais de **leur donner des bases, aussi étendues que possible, pour leur permettre d'apprendre efficacement ce dont ils auront besoin une fois leur métier choisi**, et aussi pour comprendre les informations nécessaires pour prendre les décisions de la vie de tous les jours, sans oublier la constitution d'une base de repères (culturels et autres) pour les relations sociales.
+
+L'économiste [@menia_luc_2018] rejoint le mathématicien :
+
+> Les matières enseignées ne sont pas vraiment utiles en elles-mêmes, mais le temps passé à l’école apporte des qualités aux élèves. Ils apprennent à l’école des qualités comme le travail, la rigueur de raisonnement, etc.
+
+Gage de son efficacité ("apprendre à apprendre"), la sélection par les mathématiques n'est cependant pas totalement étrangère à la logique du signal avancée par [@alexandre_luc_2018]. Nous en avions parlé dans la première partie, bon nombre d'élèves choisissaient de suivre une Terminale S non pas pour le contenu scientifiques mais davantage pour le signal que ça renvoyait (*"J'ai obtenu un bac S donc c'est un gage de sérieux, de travail et de rigueur qui m'ouvre toutes les portes"*).
+
+L'anecdote de [Jean Stobée](https://fr.wikipedia.org/wiki/Jean_Stob%C3%A9e) est amusante, elle rapporte l'histoire suivante [@oconnor_euclid_1999]. Un élève qui venait de commencer l'étude de la géométrie avec [Euclide](https://fr.wikipedia.org/wiki/Euclide) lui demanda : *"Mais quel profit vais-je tirer de l'apprentissage de ces choses ?"*. Euclide appela alors son esclave et lui dit :
+*"Donne-lui trois pièces de monnaie, puisqu'il lui faut absolument tirer un profit de ce qu'il apprend"*. Cette histoire illustre la vision qu'avaient les mathématiciens grecs de leur discipline, où primait la recherche du savoir pur. Pour Euclide la géométrie possède une valeur intellectuelle et philosophique intrinsèque. Elle n'a pas besoin d'avoir une application ou un gain financier immédiat pour mériter d'être apprise.
+
+**L'autonomie du sujet**
+
+Faudrait-il arrêter d'enseigner au collège la démonstration géométrique ou la résolution d'équation, ou seulement exclusivement à ceux qui se destinent à des études scientifiques, au seul motif qu'elles sont moins utiles pour le citoyen lambda dans la plupart de ses activités quotidiennes ? Non, car on peut y trouver d'autres intérêts qui ne sont pas purement *utilitaires* mais relèvent en définitive de la formation de l'esprit, de l'exercice de la rigueur de la démonstration, du développement de l'esprit critique, de la montée en abstraction ou encore de l'appropriation d'une culture scientifique. 
+
+Exercer son intellect en faisant des mathématiques développe ces capacités logiques et intuitives, peu importe le support de réflexion (géométrie, arithmétique, probabilités, ...) cela reste du "sport cérébral" avec des modes de raisonnement propres. De même à l'école on fait du sport pour sa santé physique, de l'athlétisme par exemple qui se décline en plusieurs sous-disciplines, et personne ne se plaint de ne pas réutiliser le saut en hauteur dans sa vie quotidienne.
+
+Être agile, aussi bien physiquement qu'intellectuellement, est libérateur. L'école n'a de mon point de vue pas vocation à s'aligner sur la seule utilité [@girard_pourquoi_2013] :
+
+> Nicholson Baker affirme par ailleurs que la plupart des personnes n'ont besoin que d'arithmétique pour survivre dans le monde moderne. Faut-il pour autant se contenter de n'enseigner que les mathématiques de base aux profils non scientifiques ?
+Jean-Rémi Girard : J'ose espérer que les finalités de l'école ne se limitent pas à la capacité à "survivre dans le monde moderne". C'est une conception de la scolarité absolument terrifiante ! Notre école possède une visée humaniste, héritée du XVIème siècle et des Lumières, et les mathématiques participent de cette visée. Rappelons que beaucoup de nos philosophes étaient également mathématiciens. Limiter l'enseignement des mathématiques de manière drastique, cela reviendrait à amputer la formation de l'esprit critique des générations futures. Les mathématiques participent de l'acquisition de la citoyenneté.
+
+[@pascal_pensees_1670] résume cette visée humaniste et universelle :
+
+> Honnête homme. Il faut qu’on n’en puisse dire ni il est mathématicien, ni prédicateur, ni éloquent mais il est honnête homme, cette qualité universelle me plaît seule. / Puisqu’on ne peut être universel en sachant tout ce qui se peut savoir sur tout, il faut savoir peu de tout, car il est bien plus beau de savoir quelque chose de tout que de savoir tout d’une chose. Cette universalité est la plus belle. Si on pouvait avoir les deux encore mieux, mais s’il faut choisir il faut choisir celle-là. Et le monde le sent et le fait, car le monde est un bon juge souvent.
+
+En revanche sur le plan économique, la division du travail règne sans partage, induisant une forte spécialisation des individus et signe le déclin de l'idéal humaniste selon [@durkheim_division_1893] :
+
+> Notre devoir est-il de chercher à devenir un être achevé et complet, un tout qui se suffit à soi-même, ou bien au contraire de n'être que la partie d'un tout, l'organe d'un organisme ? En un mot, la division du travail, en même temps qu'elle est une loi de la nature, est-elle aussi une règle morale de la conduite humaine, et si elle a ce caractère, pour quelles causes et dans quelle mesure ? [...] Nous avons passé le temps où l'homme parfait nous paraissait être celui qui, sachant s'intéresser à tout sans s'attacher exclusivement à rien, capable de tout goûter et de tout comprendre, trouvait moyen de réunir et de condenser en lui ce qu'il y avait de plus exquis dans la civilisation. Aujourd'hui, cette culture générale, tant vantée jadis, ne nous fait plus l'effet que d'une discipline molle et relâchée. [...] L'honnête homme d'autrefois n'est plus pour nous qu'un dilettante, et nous refusons au dilettantisme toute valeur morale ; nous voyons bien plutôt la perfection dans l'homme compétent qui cherche, non à être complet, mais à produire, qui a une tâche délimitée et qui s'y consacre, qui fait son service, trace son sillon.
+
+Si la division du travail est une nécessité économique qui tend à fragmenter l'individu, la démocratie requiert quant à elle des citoyens qui cultivent l'esprit de l'honnête homme : une posture d'ouverture, d'esprit critique et d'intérêt pour le bien commun. La démocratie moderne ne demande pas à chacun d'être un expert en économie[^23], en virologie ou en géopolitique. Elle exige en revanche une forme d'honnêteté intellectuelle et de culture générale permettant de comprendre les grands enjeux et de démasquer les discours démagogiques. C'est l'idéal du citoyen éclairé auquel l'école contribue. 
+
+[^23]: Durant ma formation scientifique au lycée, j'ai regretté et j'ai été très frustré de n'avoir pas bénéficier de cours d'économie comme mes camarades d'ES. À l'âge où l'on est sur le point de pouvoir voter, n'avoir aucune base économique est un handicap pour apprécier les programmes politiques.  
+
+À titre personnel, être à l'aise en mathématique m'a notamment permis de comprendre un [bulletin de paie](https://www.kevinpolisano.fr/posts/2014-07-06-comprendre-son-bulletin-de-paie/), les [calculs d'imposition](https://www.kevinpolisano.fr/posts/2014-07-15-quels-impots-pour-les-personnes-handicapees/) ou encore le [fonctionnement de l'AAH](https://www.kevinpolisano.fr/posts/2014-07-21-laah-pour-les-nuls-comprendre-par-lexemple/), billet dans lequel j'écrivais ceci : *"Gardez à l’esprit que comprendre, ce n’est pas subir…"*. S'en est suivi un combat politique sur l'injustice de la conjugalisation des ressources, où la logique était un rampart à la mauvaise foi politique et une aide précieuse pour [analyser les arguments adverses](https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/).
+
+Donc ce n'est pas parce que les activités courantes de la vie quotidienne ne requièrent que du calcul niveau CM2 comme le dit Luc Ferry, que les mathématiques ne sont pas utiles à d'autres fins (y compris citoyennes). 
+
+Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, indépendemment de toutes ces retombées positives. Après tout, on apprécie la poésie non pour son utilité mais parce qu'on la trouve belle[^25]. Personne d'ailleurs ne cherche à justifier l'utilité des vers en alexandrins dans la vie de tous les jours, nous pouvons donc aussi être honnêtes et dire qu'il y a en effet peu de situations de la vie courante où les gens seront amené à effectuer un raisonnement par récurrence. Cela ne disqualifie pas pour autant son enseignement comme on l'a vu. Toutefois pour ce qui concerne le lycée, où les élèves préparent leur orientation professionnelle, la dose de mathématiques doit selon moi être modulée selon les appétences et projets des élèves [@girard_pourquoi_2013] :
+
+[^25]: « Le véritable esprit de joie, d’exaltation, le sentiment d’être plus qu’un homme, qui sont la pierre de touche de l’excellence la plus haute, se trouvent dans les mathématiques comme dans la poésie » – Bertrand Russel.
+
+```{=html}
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/consultation-cnrs-impact-maths-verbatim.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="images/consultation-cnrs-maths-utile-quotidien-niveau.png" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="images/consultation-cnrs-maths-utile-quotidien.png" class="d-block w-100">
+    </div>
+     <div class="carousel-item">
+      <img src="images/consultation-cnrs-rendre-maths-accessible-1.png" class="d-block w-100">
+    </div>
+     <div class="carousel-item">
+      <img src="images/consultation-cnrs-rendre-maths-accessible-2.png" class="d-block w-100">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+```
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var carouselEl = document.getElementById('carouselExample');
+  if (carouselEl && typeof bootstrap !== 'undefined') {
+    // Détruire une instance existante si elle existe (sécurité)
+    var existingInstance = bootstrap.Carousel.getInstance(carouselEl);
+    if (existingInstance) {
+      existingInstance.dispose();
+    }
+    new bootstrap.Carousel(carouselEl, {
+      interval: false,
+      ride: false
+    });
+  }
+});
+</script>
+
+
+
+> L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?
+Jean-Rémi Girard : Chaque chose en son temps. Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
+
+**L'utilité comme motivation ?**
+
+[@cosnefroy_sens_2007] bat cette idée en brèche :
+
+> L’éveil de la curiosité disciplinaire ne passe quasiment jamais par l’utilité, pourtant fréquemment citée comme un ingrédient de l’intérêt. Ce décalage laisse penser que l’argument se développe après-coup, comme le suggèrent les propos de cet élève (12, G, 3, N3) : « l’anglais c’est une langue indispensable de nos jours. Pour travailler, dans n’importe quel pays on parle anglais, on comprend ». À la question de l’origine de son intérêt, il répond : « Depuis tout petit. Quand j’étais petit j’écoutais des chansons et des trucs comme ça, et je comprenais pas [...] Avec l’âge j’ai pensé au travail, mais quand j’étais petit c’était surtout les chansons et mes idoles. » La valorisation de l’utilité de la discipline se construit dans un second temps, une fois l’intérêt déjà établi. De même, si les mathématiques sont à plusieurs reprises associées à l’utilité dans la vie quotidienne, on ne peut que s’étonner du décalage entre les arguments invoqués et la nature des apprentissages effectués en cours. En effet, l’utilité des mathématiques consiste pour l’essentiel à fournir les savoir-faire nécessaires pour gérer l’économie domestique (impôts, comptes). Il est difficile d’imaginer qu’une telle conception de l’utilité, qui renvoie à des apprentissages de base, puisse soutenir durablement l’investissement dans des apprentissages autrement plus complexes à ce niveau de la scolarité.  Symétriquement, on s’interrogera sur la façon dont l’absence d’utilité est convoquée pour expliquer le désintérêt à l’égard d’une discipline. Plusieurs exemples concernent la physique : « la physique non plus on l’utilise pas dans la vie de tous les jours » (7, G, 3, N2). Il est surprenant de voir associé désintérêt et manque d’utilité dans une discipline pourtant porteuse d’applications diverses dans la vie quotidienne. Tout ceci pousse à renverser la causalité entre utilité et intérêt. L’utilité n’est probablement pas une raison déterminante de s’intéresser à la discipline. C’est plutôt en fonction de l’intérêt qu’on lui accorde qu’on définit l’utilité associée à la discipline. Le recours à l’utilité fonctionne alors comme une justification a posteriori, d’autant plus facile à mobiliser que la discipline en question se prête effectivement à des applications diversifiées. C’est la raison pour laquelle elle est si souvent évoquée pour l’anglais.
+
+Nous avons donc souvent tendance, nous autres mathématiciens, à vouloir convaincre les néophytes de l'intérêt des mathématiques en insistant sur leur utilité, tournée vers l'extérieur donc, car on présuppose que c'est ce qui est susceptible de pouvoir les intéresser et de les motiver; alors même que notre propre intérêt et motivation sont en premier lieu intrinsèques à la discipline, les applications constituant autant de cerises sur le gâteau. 
+
+**La motivation intrinsèque des maths**
+
+Entendons nous bien, je suis moi-même le premier à motiver mes cours de maths par des exemples d'applications, avec ce souci de montrer que les maths ne sont pas déconnectées du réel et faire part de leur déraisonnable efficacité [@wigner1990unreasonable]. Mais est-ce suffisant de désigner des buts applicatifs pour donner le goût de *faire des mathématiques* et de maintenir une motivation durable ? Je ne le pense pas. Il faut bien qu'à un moment la motivation devienne intrinsèque à la discipline et non pas seulement extrinsèque. C'est comme vouloir apprendre la guitare pour draguer, ça peut motiver un temps pour apprendre à gratter quelques accords, mais ça n'amènera jamais personne au niveau d'un musicien confirmé -- prêt à consentir à faire des gammes et à répéter pendant des heures pour s'améliorer -- si le plaisir pour la musique elle-même n'est pas le maître-mot. 
+
+Voyons ce qu'en dit [@broue_jean-pierre_2006] à propos de [Jean-Pierre Serre](https://fr.wikipedia.org/wiki/Jean-Pierre_Serre), monument des mathématiques françaises qui a soufflé cette année ses 100 bougies :
+
+> L’utilité des mathématiques ? Certes plus personne ne songe à la remettre en cause aujourd’hui, puisqu’on sait bien qu’elles sont partout, de la gestion du trafic aérien à la forme des verres de lunettes en passant par l’imagerie médicale, internet et les télécommunications, de la description des particules élémentaires à la maîtrise de l’information génomique. Cependant, l’utilité de ses mathématiques n’a jamais été, pour Serre, un critère de ses choix de travail. Il se plaît à dire que les mathématiciens se contentent de mettre leur production à la disposition de tous, comme sur des étagères où l’on peut venir se servir. Noter, cependant, que ce service-là est gratuit. Et que le mathématicien ne fabrique et ne dépose sur l’étagère que ce qui lui plaît. Ce qui le motive, c’est le plaisir, pas l’appât du gain. Serre dit souvent qu’il s’est étonné toute sa vie qu’on l’ait payé, si longtemps, pour une activité qu’il aimait tant. C’est bien la jouissance et la curiosité qui ont été, sans aucun doute, les moteurs du travail de Serre.
+
+[Jacobi](https://fr.wikipedia.org/wiki/Charles_Gustave_Jacob_Jacobi) était de cet avis, et a inspiré le titre du livre de [@dieudonne1987pour] :
+
+> M. Fourier avait l'opinion que le but principal des mathématiques était l'utilité publique et l'explication des phénomènes naturels ; mais un philosophe comme lui aurait dû savoir que le but unique de la science, c'est **l'honneur de l'esprit humain**, et que sous ce titre, une question de nombres vaut autant qu'une question du système du monde. 
+
+**Les maths servent à tout et rien**
+
+D'un côté donc des mathématiciens qui s'évertuent à vouloir montrer que les maths *servent dans tout et partout* (puisque s'immisçant jusque dans nos téléphones, cartes bancaires, etc); de l'autre des mathématiciens qui à la question *"les maths à quoi ça sert ?"* répondent simplement *"à rien"*, assumant d'ignorer cette injonction appelant à justifier du caractère utile des maths au sens pratique du terme. En guise de réponse, [Laurent Schwartz](https://fr.wikipedia.org/wiki/Laurent_Schwartz_(math%C3%A9maticien)) répondait quant à lui à cette question par cette cocasse plaisanterie :
+
+![](images/laurent-schwartz-maths-langouste.jpg)
+
+Au delà du comique de la circularité[^17], sa réponse concilie à la fois le caractère utilitaire et utilitariste[^20] des mathématiques, puisqu'elle maximise à la fois le bonheur désintéressé des mathématiciens comme celui des consommateurs [@galderisi_langoustes_2016] : 
+
+[^17]: qui rappelle cette [parabole](https://loptimisme.com/pecheur-mexicain/) du pêcheur mexicain et du business man.
+
+[^20]: Doctrine philosophique de l'utilitarisme de John Stuart Mill.
+
+> Les points de suspension et le nombre croissant de mathématiciens à travers le monde pourraient faire craindre l’extinction du délicieux crustacé. Ces points miment en réalité le cercle herméneutique que la réponse esquisse malicieusement. Les sciences mathématiques n’ont pour objet et seule justification qu’elles-mêmes. La fin ultime de la science est la science, aussi gratuite et non profitable puisse-t-elle paraître aux non-savants dans l’immédiat ou même dans l’absolu. L’intérêt collectif de la recherche semble ici réduit au bon plaisir d’une catégorie de chercheurs qui trouvent dans les retombées de leurs recherches leur bonheur gastronomique et leur alibi (dé)ontologique. Mais la revendication de l’absolu de la recherche scientifique et le rejet ironique de toute forme d’application utilitaire s’appuient en réalité dans l’exemple cité sur une invention, le frigidaire, dont chacun peut comprendre qu’il ne sert pas seulement à garder au frais les décapodes que les sectateurs d’Uranie, nos collègues mathématiciens, aiment tant. Le non-chercheur, exclu ostensiblement du cercle herméneutique, y est en réalité réadmis par le biais d’une application scientifique, d’un produit technologique qui fait aussi son confort depuis un siècle. Le non-spécialiste est ainsi incité à comprendre les exigences de ces mathématiciens qui en cherchant à satisfaire leur plaisir font en réalité l’intérêt de tout le monde.
+Mais, dira-t-on, celui de Laurent Schwartz est moins une pratique mathématique qu’un discours second sur sa science, un aphorisme qui ne remet pas en cause les présupposés téléologiques et les exigences de la recherche, la nécessité d’une gratuité absolue. C’est une évidence. Et cependant, comment ne pas remarquer que le mathématicien reconnaît la légitimité de la question, qu’il se sent contraint de donner une réponse qui n’a d’humoristique que le ton, et qu’il concède que le trait d’union avec le monde, qu’opèrent ici les physiciens (c’est-à-dire d’autres chercheurs) à travers la création du réfrigérateur, est une condition et une conséquence des mathématiques. En somme, que les mathématiciens ont aussi besoin de pouvoir profiter de leurs recherches, que la gratuité épistémique n’est pas nécessairement improductive.
+
+Ce qui anime le scientifique, nous dit [@poincare_valeur_2005]  :
+
+> La recherche de la vérité doit être le but de notre activité ; c’est la seule fin qui soit digne d’elle. Sans doute nous devons d’abord nous efforcer de soulager les souffrances humaines, mais pourquoi ? Ne pas souffrir, c’est un idéal négatif et qui serait plus sûrement atteint par l’anéantissement du monde. Si nous voulons de plus en plus affranchir l’homme des soucis matériels, c’est pour qu’il puisse employer sa liberté reconquise à l’étude et à la contemplation de la vérité.
+
+faisant écho aux langoustes de Schwartz qui créént de *bonnes disposition pour faire des mathématiques*.
+
+[@poincare_science_1908] poursuit :
+
+> Tolstoï explique quelque part pourquoi « la Science pour la Science » est à ses yeux une conception absurde. Nous ne pouvons connaître tous les faits, puisque leur nombre est pratiquement infini. Il faut choisir ; dès lors, pouvons-nous régler ce choix sur le simple caprice de notre curiosité ; ne vaut-il pas mieux nous laisser guider par l’utilité, par nos besoins pratiques et surtout moraux ? [...] Pour moi, ai-je besoin de le dire, je ne saurais me contenter ni de l’un, ni de l’autre idéal ; je ne voudrais ni de cette ploutocratie avide et bornée, ni de cette démocratie vertueuse et médiocre, uniquement occupée à tendre la joue gauche, et où vivraient des sages sans curiosité qui, évitant les excès, ne mourraient pas de maladie, mais à coup sûr mourraient d’ennui. [...] Le savant n’étudie pas la nature parce que cela est utile ; il l’étudie parce qu’il y prend plaisir et il y prend plaisir parce qu’elle est belle. Si la nature n’était pas belle, elle ne vaudrait pas la peine d’être connue, la vie ne vaudrait pas la peine d’être vécue. Je ne parle pas ici, bien entendu, de cette beauté qui frappe les sens, de la beauté des qualités et des apparences ; non que j’en fasse fi, loin de là, mais elle n’a rien à faire avec la science ; je veux parler de cette beauté plus intime qui vient de l’ordre harmonieux des parties, et qu’une intelligence pure peut saisir. C’est elle qui donne un corps, un squelette pour ainsi dire aux chatoyantes apparences qui flattent nos sens, et sans ce support, la beauté de ces rêves fugitifs ne serait qu’imparfaite parce qu’elle serait indécise et toujours fuyante. Au contraire, la beauté intellectuelle se suffit à elle-même et c’est pour elle, plus peut-être que pour le bien futur de l’humanité, que le savant se condamne à de longs et pénibles travaux.
+
+Il y a une [Libido sciendi](https://books.openedition.org/enseditions/24353?lang=fr), à laquelle Cédric Villani – en réponse à Luc Ferry [@noauthor_cedric_2018] – souscrit en paraphrasant [André Weil](https://fr.wikipedia.org/wiki/Andr%C3%A9_Weil) :
+
+> Le plaisir de la découverte des maths dure plus longtemps que le plaisir sexuel. C'est quelque chose qu'on peut expérimenter très tôt, le fait que comprendre vient avec un éblouissement et le plaisir de voir tous les arguments qui s'enchaînent.
+
+Pour ma part, si je souscris également à ces joies intellectuelles, je n'irais tout de même pas jusque là :-) Mais pour rester dans le thème et terminer sur l'utilité je citerais Richard P. Feynman :
+
+> Science is like sex: sometimes something useful comes out, but that is not the reason we are doing it. 
+
+[@nordon_bloc-notes_2007] nous fournira quant à lui une conclusion à la Wittgenstein *"Ce dont on ne peut parler, il faut le taire"* :
+
+![](images/didier-nordon-2007.png)
+
+
+
+### Un décalage de perception
+
+<!-- J'ouvre une parenthèse, pour aborder brièvement cette question soulevée pr la journaliste à l'issue de l'interview : -->
+
+<!-- > Comment vous expliquez ce paradoxe qui est très français : il y a plein de gens qui détestent les maths [...] j'avais des gens dans ma classe quand j'étais petite qui, quand ils arrivaient en cours de maths, avaient même peur quoi. C'était vraiment de l'ordre de l'émotion pour en revenir à ce que l'on disait tout à l'heure. Et dans le même temps, la France reste une référence en matière de recherche très pointue en mathématiques, comment ça se fait ? -->
+
+<!-- Ce à quoi Christophe Besse répondit : -->
+
+<!-- > Alors ça, c'est la colle. C'est très difficile de comprendre pourquoi on a cette difficulté. C'est vrai que la recherche mathématique française est une des toutes meilleures au monde [la journaliste : encore aujourd'hui même si on dit que le niveau baisse d'années après années cela reste quand même de qualité ?]. Cela reste d'une très très bonne qualité tout à fait. Pourquoi on a ce paradoxe c'est difficile à comprendre. Peut-être que l'on insiste trop sur le fait qu'on y arrive pas, c'est un constat d'échec. J'aime bien prendre l'analogie quand on est petit on apprend à marcher, si on tombe et que nos parents nous disent mais jamais tu arriveras à marcher et bien on avancera jamais, et bien pour les mathématiques c'est pareil c'est pas grave de se tromper. Dans la vie d'une chercheuse ou d'un chercheur c'est notre quotidien, si on ne se trompe pas on avance pas. C'est pas grave, c'est de l'entrainement, il faut encourager les gens. -->
+
+<!-- Si je le rejoins sur notre rapport particulier à l'échec en France expliquant une part de l'anxiété mathématiques, en revanche il ne m'apparait pas si difficile de comprendre cet apparent "paradoxe" d'une population fâchée avec la discipline combinée à une élite mathématique. Nous n'avons aucune difficulté à comprendre que l'on peut simultanément avoir une société composée de populations pauvres et de personnes très riches. Il en va de même ici, il n'y a aucun paradoxe, seulement un système à deux vitesses qui d'un côté est très performant pour repérer, sélectionner et propulser au plus haut niveau une minorité d'élèves très bons en mathématiques dans des filières d'excellence (classes préparatoires, grandes écoles, ENS, CNRS); et de l'autre qui n'assure pas des bases solides et un niveau moyen satisfaisant à l'ensemble de la population, en laissant beaucoup d'élèves sur le bord du chemin, comme en témoignent les enquêtes TIMSS et PISA où la France s'illustre par de fortes inégalités éducatives (cf. Appendice). -->
+
+<!-- Parenthèse refermée, il me semble qu'il y a donc une forme de lucidité des élèves et des adultes quant à la perception de l'utilité des mathématiques pour la société et de leur importance dans les choix d'orientation scolaire. En revanche là où le bat blesse, nous allons le voir, c'est que la perception qu'ils ont des mathématiques elles-mêmes, ne correspond pas à la représentation que s'en font les mathématiciens dans leur pratique.  -->
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBZHoxpPBuA?si=v21waUzlMsH11AMo&amp;start=389" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Cédric Villani :
+
+> Les mathématiques sont rigoureuses ouais mais imaginatives aussi, les mathématiques sont abstraites mais universelles, les mathématiques sont inégalitaires et démocratiques, sont anciennes et en mutation permanente, sont solitaires et sociales à la fois, sont difficiles et simplissimes.
+
+| Froides  | Chaudes  |
+|--------|--------|
+| rigoureuses  | imaginatives   |
+| abstraites   | universelles  |
+| inégalitaires | démocratiques  |
+| anciennes  | en mutation   |
+| solitaires   | sociales  |
+| difficiles | simplissimes.  |
+
+: Caractérisation des mathématiques {.striped .hover}
+
+À COMPLÉTER
+
+
+<!-- > « Je me souviens très bien de ce que j’ai ressenti la première fois que j’ai vu des gens faire du kitesurf. Je me suis dit que ce que je voyais n’était pas possible. Et dans le même temps c’était visiblement possible. Je suis resté longtemps à regarder.Quelque chose du même ordre m’a intrigué lors de ma rencontre avec les mathématiques. Elles m’ont semblé trop dures, trop abstraites, trop incompréhensibles. Faire des mathématiques, ça n’avait pas l’air possible. Et dans le même temps, ça avait l’air possible.La difficulté des mathématiques, le vertige et la terreur qu’elles nous inspirent, ce n’est que la première partie de l’expérience émotionnelle. La seconde partie, c’est l’incroyable sentiment de puissance et de magie qui se dégage de la compréhension profonde, quand on finit par découvrir que non seulement c’était possible, mais qu’en plus c’était facile.C’était même facile depuis le début et on ne le voyait pas.Chaque apprentissage mathématique reproduit cette double expérience de vertige et de puissance. Si vous n’aimez pas les sensations fortes, les mathématiques ne sont pas faites pour vous. » -->
+
+<!-- À propos de la beauté,  -->
+
+<!-- > J'ai un ami artiste qui a parfois des opinions que je ne partage pas vraiment. Il me montre une fleur et dit : « Regarde comme elle est belle ! » et je suis d'accord. Puis il ajoute : « Moi, en tant qu'artiste, je vois bien sa beauté, mais toi, en tant que scientifique, tu la disséques et elle devient ennuyeuse. » Je le trouve un peu farfelu. D'abord, la beauté qu'il perçoit est accessible à tous, et à moi aussi, je crois… Je peux apprécier la beauté d'une fleur. En même temps, j'en perçois bien plus que lui. J'imagine les cellules qui la composent, les mécanismes complexes qui s'y déroulent, lesquels recèlent eux aussi une beauté. Je veux dire, la beauté ne se limite pas à cette échelle, à un centimètre ; elle se manifeste également à des échelles plus petites, dans la structure interne, dans les processus qui la composent. Le fait que les couleurs de la fleur aient évolué pour attirer les insectes pollinisateurs est fascinant ; cela signifie que les insectes sont capables de percevoir les couleurs. Cela soulève une question : ce sens esthétique existe-t-il aussi chez les formes inférieures ? Pourquoi est-ce esthétique ? Autant de questions passionnantes auxquelles la science ne fait qu'ajouter à l'émerveillement, au mystère et à la fascination que suscite une fleur. Elle ne fait qu'enrichir. Je ne vois pas comment elle pourrait en altérer la beauté. -->
+
+### Changer le regard sur les mathématiques (et les mathématiciens)
+
+À COMPLÉTER
+
+<!-- Je n'aime pas cette expression comme "changer le regard sur le handicap" -->
+
+
+
+<!-- 7:27 "Education échec et maths" : Euclide formalisme vs créativité geste audacieux -->
+
+<!-- créative citation Hilbert -->
+
+<!-- liberté l'essence des maths selon Cantor -->
+
+<!-- > « Quand on est mathématicien, on tombe régulièrement sur des gens qui s’adressent à vous en disant « toi qui es rationnel » ou « toi qui aimes la logique », le pire étant, bien entendu, « toi qui es bon en calcul ».C’est toujours mauvais signe car derrière cela il y a toujours un sous-entendu du genre « toi qui es psychorigide », « toi qui ne comprends rien aux enjeux humains » ou «  toi sur qui je vais déverser toute la frustration que j’ai accumulée pendant ma scolarité ».La rationalité a presque aussi mauvaise réputation que les mathématiques. Comme ces dernières, elle existe en deux versions. La face visible de la rationalité, ce sont les discours construits et structurés, le savoir établi, la science et la technique. L’école nous enseigne cette version officielle avec un succès mitigé.La face cachée de la rationalité, sa dimension secrète et intime, reste largement méconnue, comme si nous avions fait le choix délibéré de l’occulter.Au chapitre 11, j’ai présenté la rationalité comme un synonyme du Système 2 (la pensée mécanique qui suit les règles de la logique). C’est un raccourci commode parce que beaucoup de gens l’entendent ainsi. Mais il pose de très gros problèmes. En opposant la rationalité au Système 1 (la pensée intuitive instantanée), nous l’opposons en fait à la compréhension humaine. Sans surprise, cette version de la rationalité est jugée aride et antipathique, et ne séduit pas grand monde.Ça n’empêche pas certains de vouloir nous la vendre. Le plus souvent, ils adoptent une posture de supériorité et de mépris. « Sois rationnel », c’est une manière pour eux de nous dire « mange ta soupe », « apprends tes leçons[…]  « , « refoule tes désirs », « respecte l’autorité », « sois de mon avis ». Ils nous ordonnent d’être rationnels mais sont bien incapables de nous expliquer en quoi cela consiste exactement. Ils se réclament de Descartes sans mesurer l’énormité de leur contresens. Ils ne posent même pas cette question bête et évidente : avec des idées aussi rabougries, comment Descartes aurait-il pu fasciner ses contemporains « comme un éléphant ou une panthère » ?Si vous abordez le Discours de la méthode en y cherchant une apologie du Système 2, vous tomberez de haut. La grande innovation de Descartes est de placer l’intuition et la subjectivité au cœur de la démarche de connaissance. Il se méfie du savoir établi et de ce qui est écrit dans les livres. Il n’accorde aucun crédit aux paroles d’autorité. Il préfère tout reconstruire par lui-même, dans sa tête. Sa méthode ressemble étrangement à celle d’Einstein, de Thurston et de Grothendieck. Il s’agit bien entendu du Système 3, le lent dialogue entre l’intuition et la logique dans le but de faire progresser l’intuition.« Descartes ne s’en cache pas : sa méthode, c’est celle des mathématiciens. Il la décrit sans jamais parler de rationalité ni de rationalisme. Ces mots n’existent pas encore. Ils seront inventés par la suite pour caractériser sa démarche. Quant à savoir si Descartes passerait aujourd’hui pour « quelqu’un de rationnel », je vous laisse juge. » -->
+
+<!-- Stéréotype du génie vanité : -->
+
+<!-- > « Les philosophes de la Grèce antique accordaient une place toute particulière aux mathématiques. Ils en faisaient le prérequis de toute philosophie et de toute science. La légende veut que cette phrase ait été gravée à l’entrée de l’Académie de Platon : « Que nul n’entre ici s’il n’est géomètre. »Pour Descartes, il ne pouvait pas s’agir d’une référence aux mathématiques officielles, celles que l’école nous enseigne et qui nous semblent si « puériles et vaines » :« J’ai soupçonné qu’ils connaissaient une certaine science mathématique différente de celle de notre âge. »Pour lui, les savants de l’Antiquité avaient forcément accès aux « mathématiques véritables ». Son hypothèse est qu’ils « en ont, par une ruse coupable, supprimé la connaissance ; semblables à quelques artisans qui cachent leur secret, ils ont craint peut-être que la facilité et la simplicité de leur méthode, en les popularisant, n’en diminuent l’importance, et ils ont préféré se faire admirer en nous laissant, comme produit de leur art, quelques vérités stériles subtilement déduites, que de nous enseigner cet art lui-même, dont la connaissance eût fait cesser toute notre admiration ». » -->
+
+<!-- Extrait de  -->
+<!-- Mathematica -->
+<!-- David Bessis -->
+<!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
+
+<!-- Par contre ce qui est vrai est que l'on perd de vue le fait que même ces fondamentaux acquis par le plus grand nombre aujourd'hui, sont des mathématiques d'une incroyable inventivité. Si bien qu'à y regarder de plus près, il y a un pseudo-différence entre mathématiques spéculatives et mathématiques utiles, ces dernières étant juste devenues plus familières. Processus qui fait passer des concepts transgressifs presques scandaleux à une banalité routinière. Les maths spéculatives peuvent devenir pratiques et vice versa (les distributions). -->
+
+<!-- "Le concret, c'est de l'abstrait rendu familier par l'usage." de Paul Langevin -->
+
+<!-- ## Appendices -->
+
+<!-- ### Des inégalités sociales et de genre dans l'attrait pour les mathématiques -->
+
+<!-- Selon un [sondage CSA Research](https://www.rtl.fr/actu/debats-societe/65-des-francais-jugent-l-enseignement-des-maths-inadapte-selon-notre-sondage-7790579608) réalisé pour Le Point avec RTL : -->
+
+<!-- > La matière est particulièrement appréciée par les catégories socio-professionnelles les plus aisées. Les CSP + la hissent en effet sur la première marche du podium (31%) ex æquo avec le Français, devant les langues étrangères (29%). -->
+
+<!-- J'ai beaucoup commenté sur les réseaux les inégalités de niveau en maths entre filles et garçons, il faudra que j'y consacre un billet à part entière, mais ici je ne renseignerai que les différences d'appétences pour les maths (qui sont bien sûr corrélées à celles de niveau) : -->
+
+<!-- PISA 2022 -->
+<!-- Les garçons sont, en moyenne, 11 points de pourcentage plus nombreux que les filles à citer les mathématiques parmi leurs matières préférées. -->
+<!-- Les élèves favorisés socialement sont, en moyenne, 13 points plus nombreux que les élèves défavorisés à les préférer. -->
+
+<!-- En TS moins marquées [@mullis_timss_2016] -->
+
+<!-- ![](images/timss2015advanced-filles-garcons.png) -->
+<!-- Dans [@ipsos_education_2025] moyenné sur plusieurs pays : -->
+
+<!-- ![](images/favorite-boys-girls.png) -->
+<!-- ![](images/least-favorite-boys-girls.png) -->
+
+<!-- avec un écart qui semble globalement se réduire : -->
+
+<!-- ![](images/evolution-favorite-boys-girls.png) -->
+
+
+<!-- Alors qu'en France l'écart reste particulièrement marqué : -->
+
+<!-- ![](images/france-ecart-filles-garcons.png) -->
