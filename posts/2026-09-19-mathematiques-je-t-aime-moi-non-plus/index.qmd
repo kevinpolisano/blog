@@ -881,6 +881,11 @@ Au collège, une vision plus *mécaniste* des mathématiques (appliquer les bonn
 
 Ce clivage provient de la *transposition didactique* : l'institution scolaire présente souvent la cathédrale achevée (le théorème démontré) en occultant le chantier (le bricolage intellectuel, les fausses pistes et la beauté de la résolution). 
 
+> En devenant rigoureuse, la Science mathématique prend un caractère artificiel qui frappera tout le monde ; elle oublie ses origines historiques ; on voit comment les questions peuvent se résoudre, on ne voit plus comment et pourquoi elles se posent. [@poincare_valeur_2005]
+
+> Or, pour comprendre une théorie, il ne suffit pas de constater que le chemin que l’on a suivi n’est pas coupé par un obstacle, il faut se rendre compte des raisons qui l’ont fait choisir. Pourra-t-on donc jamais dire qu’on comprend une théorie si on veut lui donner d’emblée sa forme définitive, celle que la logique impeccable lui impose, sans qu’il reste aucune trace des tâtonnements qui y ont conduit
+? Non, on ne la comprendra pas réellement, on ne pourra même la retenir, ou on ne la retiendra qu’à force de l’apprendre par coeur. [@poincare_logique_1889]
+
 Et s'il fallait réintroduire ces éléments dans l'enseignement des mathématiques pour en donner le goût aux élèves ? Par exemple en faisant des maths en étant décomplexés, décontractés, en jeans quoi !
 
 
@@ -923,9 +928,217 @@ La pratique par le jeu [@harroche_pratique_2018] est également une formidable p
 
 Je ne sais pas dans quelle mesure ces dispositifs alternatifs peuvent être intégrés dans les programmes scolaire, mais si l'on veut modifier la perception des mathématiques, nous devons d'une manière ou d'une autre *faire des mathématiques* non pas autrement mais *comme* des mathématiciens en herbe.
 
-[@duminil-copin_autre_2026] :
+>  Les mathématiques ne sont pas condamner à diviser la population entre initiés et exclus. Dépasser le clivage entre "vaincus" et "convaincus" demande de repenser en profondeur la perception de ce que signifie "faire des mathématiques", et de plonger au coeur même des mécanismes de la pensée. [@duminil-copin_autre_2026] 
 
->  Les mathématiques ne sont pas condamner à diviser la population entre initiés et exclus. Dépasser le clivage entre "vaincus" et "convaincus" demande de repenser en profondeur la perception de ce que signifie "faire des mathématiques", et de plonger au coeur même des mécanismes de la pensée. 
+Considérons deux examples pour illustrer ces mécanismes.
+
+**Vous ne manquez pas d'aire !**
+
+Les passages qui suivent sont extraits de [@lockhart2009mathematician].
+
+> S’il existe un principe esthétique unificateur en mathématiques, c’est bien celui-ci : **ce qui est simple est beau**. Les mathématiciens aiment réfléchir aux choses les plus simples possibles, et ces choses sont, par nature, imaginaires. Par exemple, si j’ai envie de réfléchir à des formes — ce qui m’arrive souvent —, je peux imaginer un triangle à l’intérieur d’un rectangle : 
+
+![](images/lamentation-mathematicien-triangle.png){width=50% fig-align="center"}
+
+> Je me demande **quelle proportion du rectangle est occupée par le triangle** — les deux tiers, peut-être ? Il est important de comprendre que je ne parle pas ici de ce dessin représentant un triangle dans un rectangle. Je ne parle pas non plus d’un triangle métallique qui ferait partie de la structure d’un pont. Il n’y a aucun objectif pratique caché. Je ne fais que jouer. **C’est cela, les mathématiques : s’interroger, jouer, se divertir en faisant appel à son imagination.** [...] Nous pouvons donc jouer, imaginer tout ce qui nous plaît, créer des structures et nous poser des questions à leur sujet. Mais comment répondre à ces questions ? Cela n’a rien à voir avec les sciences. Il n’existe aucune expérience — avec des éprouvettes, du matériel ou autre — qui puisse me révéler la vérité sur un pur produit de mon imagination. La seule façon d’accéder à la vérité au sein de notre imaginaire est de faire appel à cet imaginaire lui-même, ce qui demande un travail ardu. Dans le cas du triangle inscrit dans son rectangle, j’aperçois quelque chose de simple et d’élégant : 
+
+![](images/lamentation-mathematicien-triangle-ligne.png){width=50% fig-align="center"}
+
+> Si je divise le rectangle en deux parties, comme ceci, je constate que chaque partie est coupée en deux, en diagonale, par les côtés du triangle. Il y a donc autant d’espace à l’intérieur du triangle qu’à l’extérieur. Cela signifie que **le triangle occupe exactement la moitié du rectangle** ! Voilà à quoi ressemblent les mathématiques, voilà ce qu’elles font ressentir. Ce petit raisonnement illustre l’art du mathématicien : poser des questions simples et élégantes sur nos créations imaginaires, puis élaborer des explications aussi satisfaisantes que belles. Il n’existe rien de comparable à ce domaine des idées pures ; C’est fascinant, c’est amusant, et c’est gratuit !
+D’où m’est venue cette idée, au juste ? Comment ai-je su qu’il fallait tracer ce trait ? Comment un peintre sait-il où poser son pinceau ? L’inspiration, l’expérience, les tâtonnements, un heureux hasard… C’est là que réside tout l’art : créer ces magnifiques petits poèmes de la pensée, ces sonnets de pure raison. Il y a, dans cette forme d’art, quelque chose qui possède un pouvoir de transformation merveilleux. **La relation entre le triangle et le rectangle était un mystère, et voilà qu’un simple trait a tout rendu évident**. Je ne voyais rien, et soudain, tout est devenu clair. D’une certaine manière, j’ai réussi à faire naître une beauté profonde et simple à partir de rien, et, ce faisant, à me transformer moi-même. N’est-ce pas là l’essence même de l’art ?
+
+<div style="display: flex; justify-content: center;">
+<iframe width="315" height="560"
+src="https://www.youtube.com/embed/d8ZZJTBayvU"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+</div>
+
+<details>
+  <summary>Un exemple d'application</summary>
+  
+Lyna possède un terrain rectangulaire de 12 m de long et 8 m de large, entouré d'un grillage. Elle qui aime jardiner, elle décide d'installer un potager en fixant une corde sur toute la longueur du terrain côté route (c'est la base du triangle de 12 m), puis elle plante un piquet quelque part sur le côté opposé du terrain, qui sera le sommet du potager d'où elle tend deux cordes entre le sommet et les extrémités de la base. Le potager est donc de forme triangulaire et le reste du terrain est de la pelouse. 
+
+Elle a besoin de la surface exacte du potager pour savoir combien de sacs de terreau commander. Mais comment mesurer l'aire d'un triangle ? Lyna sait calculer l'aire d'un rectangle, mais pas celle d'un triangle penché. Elle tend alors une quatrième corde du piquet jusqu'à la base, perpendiculairement à celle-ci. Cette corde coupe le terrain en deux rectangles et chacun est lui-même coupé en deux par une des cordes du potager. Le potager occupe ainsi la moitié du terrain entier, soit 48 m².
+
+Où Lyna doit-elle planter son piquet pour que le potager ait la plus grande surface possible ? 
+
+Réponse : n'importe où sur le côté opposé ! L'aire ne change pas, car la hauteur reste la même. Et cela surprend souvent les élèves !
+  
+</details>
+
+> C’est pourquoi il est si déchirant de voir ce que l’on fait subir aux mathématiques à l’école. **Cette aventure riche et fascinante de l’imagination a été réduite à un ensemble stérile de faits à mémoriser et de procédures à appliquer**. Au lieu d’une interrogation simple et naturelle sur les formes — un processus créatif et gratifiant d’invention et de découverte —, on propose aux élèves ceci : $A=\frac{1}{2}b h$ « L’aire d’un triangle est égale à la moitié de sa base multipliée par sa hauteur. » On demande aux élèves de mémoriser cette formule, puis de l’« appliquer » encore et encore dans des « exercices ». L’enthousiasme, la joie, et même la souffrance ou la frustration propres à l’acte créatif ont disparu. Il n’y a même plus de problème. La question est posée et résolue simultanément : il ne reste plus rien à faire pour l’élève. Soyons clairs sur ce que je conteste. Il ne s’agit pas de rejeter les formules ou la mémorisation de faits intéressants. Cela a sa place, tout comme l’apprentissage du vocabulaire : cela permet de créer des œuvres plus riches et plus nuancées. Mais ce qui importe, ce n’est pas le fait qu’un triangle occupe la moitié de son rectangle. Ce qui compte, c’est la belle idée de le diviser par une ligne, et la façon dont cette idée peut en susciter d’autres, ouvrant la voie à des avancées créatives face à d’autres problèmes — ce qu’un simple énoncé de fait ne pourra jamais offrir.
+**En supprimant le processus créatif pour ne conserver que ses résultats, on garantit pratiquement qu’aucun véritable engagement envers le sujet ne pourra naître**. C’est comme si l’on me disait que Michel-Ange a réalisé une magnifique sculpture, sans pour autant me laisser la voir. Comment pourrais-je en tirer la moindre inspiration ? (Et, bien sûr, la situation est en réalité bien pire : ici, on occulte l’existence même de l’art de la sculpture, m’empêchant ainsi de l’apprécier).
+En se concentrant uniquement sur le « quoi » et en délaissant le « pourquoi », les mathématiques sont réduites à une coquille vide. L’art ne réside pas dans la « vérité » en soi, mais dans l’explication, dans le raisonnement. C’est le raisonnement qui donne à la vérité son contexte et qui définit ce qui est réellement exprimé et signifié. **Les mathématiques sont l’art de l’explication**. Si l’on prive les élèves de la possibilité de s’investir dans cette démarche — poser leurs propres problèmes, formuler leurs propres conjectures et découvertes, se tromper, éprouver cette frustration créatrice, connaître un éclair d’inspiration, et élaborer leurs propres conjectures et découvertes, se tromper, éprouver cette frustration créatrice, connaître un éclair d’inspiration, et enfin assembler leurs propres explications et démonstrations —, alors on les prive des mathématiques elles-mêmes. Non, je ne conteste pas la présence de faits et de formules dans nos cours de mathématiques ; **je dénonce l’absence de mathématiques dans nos cours de mathématiques**.
+
+
+
+**Vous êtes sommé de ne pas vous gausser**
+
+> En sortant de l’enfance, nous apprenons à craindre d’avoir l’air bêtes. Nous apprenons à avoir honte de nos erreurs. Nous apprenons à dissimuler, y compris à nos propres yeux, le fait que nous ne comprenons presque rien. Pour progresser en mathématiques, c’est ce réflexe de dissimulation qu’il faut apprendre à désactiver. Et c’est très difficile. À l’âge où nous étions encore libres de poser des questions stupides, y compris de poser cent fois de suite la même question stupide, il n’y avait pas de nuls en maths. Les grands mathématiciens inventent et mettent en œuvre des techniques spéciales pour retrouver cette innocence enfantine. Ils déclarent tous que c’est indispensable. [@bessis2022mathematica]
+
+Nous n'allons pas poser cent fois de suite la même question stupide mais une question impliquant 100 fois l'addition stupide d'entiers consécutifs. Et voir ce qui, de cette application bête et méchante, ressort d'intéressant et de beau. Vous avez très certainement déjà entendu cette célèbre anecdote au sujet du "prince des mathématiques". Voici comment est généralement présentée cette histoire. 
+
+Dans les années 1780, un instituteur donna à ses élèves la tâche fastidieuse de calculer la somme des 100 premiers entiers. Celui-ci pensait ainsi avoir la paix pendant un moment, mais un jeune élève donna presque aussitôt la réponse : $$1 + 2 + 3 + ... + 98 + 99 + 100 = {\color{red}5 050}.$$ Ce petit malin n'était autre que [Carl Friedrich Gauss](https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss), qui allait devenir l'un des plus grands mathématiciens de tous les temps. Gauss n'était pas un génie du calcul mental. Il avait une intuition plus profonde. L'idée est d'écrire la suite deux fois, une fois dans l'ordre et une fois à l'envers : $$S=1 + 2 + 3 + ... + 98 + 99 + 100$$ $$S = 100 + 99 + 98 + ... + 3 + 2 + 1$$  puis d'additionner les éléments correspondants. Par ce groupement, on obtient 100 paquets de 101, soit un total de $100\times 101=10 100$. Et puisque la suite originale a été dupliquée, il faut diviser le total par 2, ce qui donne le résultat de 5050. 
+
+La formule pour la somme des nombres de 1 à $n$ est $\color{red}\frac{n (n + 1)}{2}$.
+
+<div style="display: flex; justify-content: center;">
+<iframe width="315" height="560"
+src="https://www.youtube.com/embed/NhCv8SCvHNI"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+</div>
+
+La première fois que j'ai pris connaissance de cette anecdote, au cours de mon année de seconde, j'ai été subjugué par l'ingéniosité du petit Gauss, car ayant plus de deux fois son âge à cette époque j'aurais été incapable de trouver une pareille astuce. Cela me paraissait hors de portée à deviner à 15 ans, donc a fortiori à 7 ans ! C'était bien le signe avant-coureur de son génie mathématique. 
+
+> Mais je crains que la répétition constante de ce genre d'histoires ne donne l'impression que les mathématiques sont un jeu réservé à ceux qui, tout au long de leur vie, font preuve d'une intelligence fulgurante. [@hayes_gausss_2006]
+
+Et pourtant nous allons voir que l'inspiration du petit Gauss n'est peut-être en réalité pas moins accessible que ne l'était celle qui découpait mentalement par une ligne le rectangle en deux parties dans l'exemple précédent. L'anecdote est au contraire racontée de manière à nous impressionner. Cette histoire trouve sa source dans un essai commémoratif publié en 1856 par [@sartotrius_von_waltershausen_gauss_1856], collègue et ami de Gauss, un an après sa mort :
+
+<details>
+  <summary>Extrait original en allemand</summary>
+Gauss besuchte zuerst 1784, nachdem er sein siebentes Lebensjahr zurückgelegt, die Catharinen-Volksschule, in welcher der erste Elementar-Unterricht ertheilt wurde und die damals unter der Leitung eines gewissen Büttner gestanden hat. Es war eine dumpfe, niedrige Schulstube mit einem unebenen ausgelaufenen Fussboden, von der man nach der einen Seite gegen die beiden schlanken gothi-schen Thürme der Catharinen-Kirche, nach der andern gegen Ställe und armselige Hintergebäude hinaus blickte. Hier ging Büttner zwischen etwa hundert Schülern auf und ab, mit der Karwatsche in der Hand, welche damals als ultima ratio seiner Erziehungs-methode von Gross und von Klein anerkannt wurde und von der er nach Laune und Bedürfniss einen schonungslosen Gebrauch zu machen sich berechtigt fühlte. In dieser Schule, die noch sehr den Zuschnitt des Mittelalters gehabt zu haben scheint, blieb der junge Gauss zwei Jahre lang ohne durch etwas Ausserordentliches aufzu-fallen. Erst nach jener Zeit brachte es der Gang des Unterrichts mit sich, dass auch er in die Rechenklasse eintrat, in welcher die Meisten bis zu ihrer Confirmation, bis etwa zu ihrem 15t Jahre blieben. Es ereignete sich hier ein Umstand, den wir nicht ganz unbeachtet lassen dürfen, da er auf Gauss' späteres Leben von einigem Einfluss gewesen ist und den er uns in seinem hohen Alter mit grosser Freude und Lebhaftigkeit öfter erzählt hat. Das Herkommen brachte es nämlich mit sich, dass der Schüler, welcher zuerst sein Rechenexempel beendigt hatte, die Tafel in die Mitte eines grossen Tisches legte; über diese legte der zweite seine Tafel u. s. w. Der junge Gauss war kaum in die Rechenclasse eingetreten, als Büttner die Summation einer arithmetischen Reihe aufgab. Die Aufgabe war indess kaum ausgesprochen als Gauss die Tafel mit den im niedern Braunschweiger Dialekt gesprochenen Worten auf den Tisch wirft :
+»Ligget se'« (Da liegt sie.) Während die andern Schüler emsig weiter rechnen, multipliciren und addiren, geht Büttner sich seiner Würde bewusst auf und ab, indem er nur von Zeit zu Zeit einen mitleidigen und sarcastischen Blick auf den kleinsten der Schüler wirft, der längst seine Aufgabe beendigt hatte. Dieser sass dagegen ruhig. schon eben so sehr von dem festen unerschütterlichen Bewusstsein durchdrungen, welches ihn bis zum Ende seiner Tage bei jeder vollendeten Arbeit erfüllte, dass seine Aufgabe richtig gelöst sei, und dass das Resultat kein anderes sein könne. Am Ende der Stunde wurden darauf die Rechentafeln umgekehrt; die von Gauss mit einer einzigen Zahl lag oben und als Büttner das Exempel prüfte, wurde das seinige zum Staunen aller Anwesenden als richtig befunden, während viele der übrigen falsch waren und alsbald mit der Karwatsche rectificirt wurden. Büttner glaubte nun ein gutes Werk zu thun eigens aus Hamburg ein neues Rechenbuch zu verschreiben, um damit den jungen bahnbrechenden Geist nach Kräften zu unter-stützen, er soll aber einsichtsvoll genug gewesen sein bald zu erklä-ren, dass Gauss in seiner Schule nichts mehr lernen könne.
+
+</details>
+
+<details>
+  <summary>Traduction en français</summary>
+  En 1784, après avoir franchi le cap de sa septième année, Gauss fréquenta pour la première fois l'école primaire Sainte-Catherine, où était dispensé l'enseignement élémentaire de base et qui était alors dirigée par un certain Büttner. Il s'agissait d'une salle de classe sombre et basse, au sol inégal et usé ; d'un côté, la vue donnait sur les deux fines tours gothiques de l'église Sainte-Catherine, tandis que de l'autre, elle s'ouvrait sur des écuries et des bâtiments annexes misérables. C'est là que Büttner arpentait la salle, au milieu d'une centaine d'élèves, un fouet à la main — instrument reconnu, à l'époque, par tous, petits et grands, comme l'ultime recours de sa méthode éducative, et dont il s'estimait en droit de faire un usage impitoyable, au gré de ses humeurs et de ses besoins. Dans cette école, qui semble avoir conservé une structure très médiévale, le jeune Gauss passa deux années sans se distinguer par quoi que ce soit d'extraordinaire. Ce n'est qu'au terme de cette période que, suivant le cours normal de la scolarité, il intégra la classe de calcul, où la plupart des élèves restaient jusqu'à leur confirmation, soit vers l'âge de quinze ans. Il s'y produisit un événement que nous ne saurions passer sous silence, car il eut une certaine influence sur la vie ultérieure de Gauss ; un épisode qu'il a d'ailleurs souvent raconté, dans un âge très avancé, avec une grande joie et beaucoup de vivacité. La coutume voulait en effet que l'élève qui terminait son exercice de calcul en premier déposât son ardoise au centre d'une grande table ; ...sur lesquelles le second posa sa ardoise, et ainsi de suite. Le jeune Gauss venait à peine d'entrer dans la classe de calcul que Büttner donna à faire la somme d'une progression arithmétique. L'énoncé était à peine terminé que Gauss jeta son ardoise sur la table en prononçant, dans le dialecte populaire de Brunswick, ces mots :
+« La voilà. » Tandis que les autres élèves continuaient avec zèle à calculer, multipliant et additionnant, Büttner, conscient de sa dignité, faisait les cent pas, ne jetant que de temps à autre un regard empreint de compassion et sarcastique sur le plus petit des élèves, qui avait terminé son exercice depuis longtemps. Celui-ci, en revanche, restait assis, calme ; il était déjà profondément imprégné de cette conviction inébranlable — qui l'accompagnera jusqu'à la fin de ses jours, à chaque fois qu'il achèvera un travail — que son exercice était correctement résolu et que le résultat ne pouvait être autre. À la fin de la leçon, on retourna les ardoises ; celle de Gauss, qui ne portait qu'un seul nombre, se retrouva sur le dessus. Lorsque Büttner vérifia le calcul, il s'avéra — à la stupéfaction de tous les présents — qu'il était exact, alors que beaucoup d'autres étaient faux et furent aussitôt « rectifiés » à coups de fouet. Croyant bien faire, Büttner fit venir tout exprès de Hambourg un nouveau manuel d'arithmétique afin de soutenir, autant qu'il le pouvait, ce jeune esprit pionnier ; toutefois, faisant preuve de discernement, il déclara bientôt que Gauss n'avait plus rien à apprendre dans son école.
+
+</details>
+
+On remarque que plusieurs éléments du récit usuel sont absents de cette source d'origine. En effet il n'est fait mention ni des nombres de 1 à 100, ni d'aucune autre suite arithmétique particulière. De même, il ne donne aucune indication sur l'astuce ou la technique inventée par Gauss pour résoudre le problème, ainsi l'idée de combiner les nombres deux à deux n'est pas abordée, pas plus que la formule permettant de calculer la somme d'une série. Ces détails (et bien d’autres) ont été complétés par des auteurs ultérieurs. Pour paraphraser Luc Ferry, on peut affirmer que 99% des versions de cette anecdote qu'on trouve sur internet ne sont pas conformes à la version originale. Pour une analyse historique des différentes versions de cette histoire voir [@hayes_mathematical_2007].
+
+Est-ce que Gauss s'y est réellement pris comme cela pour calculer cette somme ? On est maintenant en droit d'en douter. N'y a-t-il pas une manière plus naturelle d'aborder le problème et de mieux comprendre par quel bout l'esprit du petit Gauss aurait attrapé le problème ?
+
+> La découverte est le privilège de l’enfant. C’est du petit enfant que je veux parler, l’enfant qui n’a pas peur encore de se tromper, d’avoir l’air idiot, de ne pas faire sérieux, de ne pas faire comme tout le monde. Il n’a pas peur non plus que les choses qu’il regarde aient le mauvais goût d’être différentes de ce qu’il attend d’elles, de ce qu’elles devraient être. [...]  Quand je suis curieux d’une chose, mathématique ou autre, je l’interroge. Je l’interroge, sans me soucier si ma question est peut-être stupide ou si elle va paraître telle, sans qu’elle soit à tout prix mûrement pesée. [@grothendieck2021recoltes]
+
+[@bessis2022mathematica] questionne :
+
+> Mais interroger les choses, en quoi ça consiste exactement ? Si je veux interroger les choses, comment dois-je m’y prendre ? À y regarder de près, l’expression est mystérieuse, presque autant que l’expression miroir utilisée également par Grothendieck : être à l’écoute de la voix des choses. Et tant qu’on y est : qu’est-ce qu’une « chose mathématique » ? À quel endroit peut-on rencontrer ces choses, et comment faire pour entrer en communication avec elles ? [...] Les mathématiciens, eux, aiment appeler cela des objets mathématiques, parce que imaginer ces choses comme des objets concrets que l’on pourrait toucher facilite la compréhension. « Interroger les choses », « écouter la voix des choses », ça veut dire essayer de les imaginer, examiner l’image mentale qu’on s’en fait, essayer de la solidifier, de la préciser, d’en dévoiler davantage de détails, comme quand on essaie de se souvenir d’un rêve.
+
+Quelle *image mentale* a bien pu se forger le petit Gauss pour résoudre instantanément ce problème ? 
+Pour y répondre nous allons nous intéresser à une histoire similaire d'un autre petit prodige, [William Thurston](https://fr.wikipedia.org/wiki/William_Thurston), surnommé Bill, plus jeune encore que Gauss quand il trouva la solution [@gabai_william_2015] :
+
+> Pour faire cesser les chamailleries entre ses enfants, Paul leur posait des questions de mathématiques. Alors qu’ils étaient en voiture, Paul demanda à Bill (qui avait alors cinq ans) : « Combien font 1 + 2 + · · · + 100 ? » Bill répondit : « 5 000. » Paul dit : « Presque. » Bill ajouta : « Oh, j’ai rempli une case pour le 1, deux cases pour le 2, et ainsi de suite jusqu’à 100 ; cela représente donc la moitié de 100 × 100, soit 10 000. Mais j’avais oublié que les cases du milieu sont coupées en deux… ça fait donc 5 050 ! »
+
+Son erreur est informative. Contrairement à Gauss pour lequel nous ne disposions d'aucun indice sur ce qui avait traversé son esprit pour fournir la bonne réponse, ici Bill nous livre des clefs de compréhension quant à sa manière d'*imaginer concrètement* le problème dans sa tête. De quelles cases parle-t-il au juste ? Lorsque l'on lit la consigne on n'y voit seulement des nombres ! Oui mais ça nous dit Grothendieck, c'est parce que nous n'avons pas suffisamment *"interrogé les choses"*, et en l'occurrence nous abordons les choses sous un rapoort exclusivement symbolique. [@bessis2022mathematica] nous invite à oser regarder les choses sous un autre angle, plus sensible :
+
+> Ce rapport intime avec les nombres, vous l’avez perdu. En sortant de la petite enfance, vous êtes tombé dans ce que j’appelle le piège du langage, et c’est ce qui vous empêche aujourd’hui de «voir» la somme des entiers de 1 à 100 de la même manière que Gauss et Thurston. **Le piège du langage, c’est la croyance que nommer les choses suffit à les faire exister et nous dispense de l’effort de véritablement les imaginer.** [...] On nous raconte que c’est avec les mots que nous pensons et que ça ne sert à rien de vouloir dépasser les mots. Ce raccourci est très problématique, à la limite du mensonge. Nommer les choses permet certes de les évoquer mais pas de les rendre présentes à l’esprit avec l’intensité et la clarté qui permettent de penser et de créer. [...] Au lieu de vous laisser bercer par les mots, forcez-vous à penser que la somme est physiquement présente devant vous. **Forcez-vous à imaginer les entiers de 1 à 100 en chair et en os**, incarnés dans le monde réel, sagement alignés devant vous. Si vous arrivez à les voir et si vous prenez le temps de bien observer la scène, vous trouverez un moyen de calculer leur somme.
+
+À 22'28 David Bessis en fait faire l'expérience à Adèle Van Reeth dans les Chemins de la Philosophie :
+
+<iframe src="https://embed.radiofrance.fr/franceculture/diffusion/7facdcb3-83b8-43a8-a381-03d9b9584945" width="100%" height="144" frameborder="0" allowfullscreen></iframe>
+
+Simplifions déjà le problème en considérant la somme des 10 premiers entiers consécutifs (dont on peut rapidement se convaincre de tête qu'elle vaut 55). Mais tâchons comme il nous y invite d'essayer de "voir" cette somme, où l'unité est matérialisée par un cube. Alignons comme le ferait un enfant des piles de cubes de hauteurs respectives 1, 2, 3, etc jusqu'à 10. L'image mentale qui vient à l'esprit ressemble maintenant à ceci :
+
+![](images/gauss-legos.png)
+
+Ce n'est plus seulement une égalité : $$ 1+2+3+4+5+6+7+8+9+10={\color{red}55}$$
+
+Elle prend corps dans mon esprit de manière structurée à travers cette construction légos en escalier, et la question revient à compter le nombre de cubes qui la compose. 
+
+**Première stratégie**. Si vous demandez à un enfant quelle forme géométrique ça lui évoque, il y a de fortes chances qu'il vous réponde *"un triangle"*, un peu dentelé certes mais un triangle tout de même, dont la base fait 10 de longueur et la hauteur 10 également. Comme chaque cube vaut une unité, la quantité de cubes à l'intérieur de ce triangle correspond à son aire, qui se calcule en multipliant la base par la hauteur, divisé par 2, soit $\frac{10\times 10}{2}=50$. Le compte n'est pas bon, il en manque 5 ! Nous avons commis la même erreur que Bill (*"Mais j’avais oublié que les cases du milieu sont coupées en deux"*) en nous cassant les dents (en rouge saignant) :
+
+![](images/gauss-legos-triangle.png)
+En ajoutant 10 fois un demi-cube on obtient les 5 cubes restants. Le raisonnement est identique pour 100 cubes, et valable quelque soit le nombre $n$ de cubes. L'escalier est plus grand mais est toujours composé d'un triangle de base $n$ et de hauteur $n$, donc d'aire $\frac{n^2}{2}$ à laquelle il faut ajouter $n$ demi-cubes, d'où un total de $\frac{n^2}{2}+\frac{n}{2}=\frac{n(n+1)}{2}$.
+
+> « Les mathématiciens ont tendance à considérer qu’une démonstration est terminée dès lors qu’ils sentent que la bonne image s’est formée dans leur tête, comme les joueurs d’échecs arrêtent les parties sans aller jusqu’au mat, parce qu’ils reconnaissent qu’une position est gagnante. [@bessis2022mathematica]
+
+<details>
+  <summary>Démonstration par récurrence</summary>
+
+Soit $\mathcal{P}(n)$ la propriété : 
+\og $\displaystyle \sum_{k=1}^{n} k = \frac{n(n+1)}{2}$ \fg.
+
+**Initialisation**. Pour $n = 1$ :
+$$
+  \sum_{k=1}^{1} k = 1
+  \qquad\text{et}\qquad
+  \frac{1 \times (1+1)}{2} = \frac{2}{2} = 1.
+$$
+Donc $\mathcal{P}(1)$ est vraie.
+
+**Hérédité**. Soit $n \in \mathbb{N}^*$ fixé. 
+Supposons que $\mathcal{P}(n)$ soit vraie (hypothèse de récurrence), 
+c'est-à-dire $\displaystyle \sum_{k=1}^{n} k = \frac{n(n+1)}{2}$. 
+Montrons que $\mathcal{P}(n+1)$ est vraie. 
+
+On a :
+\begin{align*}
+  \sum_{k=1}^{n+1} k 
+  &= \sum_{k=1}^{n} k + (n+1) \\
+  &= \frac{n(n+1)}{2} + (n+1) 
+     && \text{(hypothèse de récurrence)} \\
+  &= \frac{n(n+1) + 2(n+1)}{2} \\
+  &= \frac{(n+1)(n+2)}{2} \\
+  &= \frac{(n+1)\bigl((n+1)+1\bigr)}{2}.
+\end{align*}
+Ainsi $\mathcal{P}(n+1)$ est vraie. 
+On en conclut que $\mathcal{P}(n)$ est vraie pour tout $n \in \mathbb{N}^*$.
+
+Le raisonnement par récurrence lui-même peut donner lieu à une image mentale, via l'analogie d'une suite de dominos. Si la propriété est vraie au rang $n_0$ (le premier domino de numéro 0 tombe) et si sa véracité au rang $n$ implique celle au rang $n + 1$ (la chute du domino numéro $n$ fait tomber le domino numéro $n + 1$) alors la propriété est vraie pour tout entier (tous les dominos tombent en cascade).
+
+![Crédits : https://www.excellence-maths.fr/ressource/raisonnement-par-recurrence/](images/recurrence-dominos.png)
+</details>
+
+<details>
+  <summary>Un exemple d'application</summary>
+  
+  Le club de tennis de table de la MJC organise un tournoi de fin d'année impliquant 11 joueurs. Le format est un [tournoi toutes rondes](https://fr.wikipedia.org/wiki/Tournoi_toutes_rondes) où chaque joueur affronte chacun des autres une seule fois. Léo, le responsable de la MJC, ne dispose que de 2 tables et chaque match dure environ 20 minutes. Il se demande combien de matchs auront lieu et combien de temps faut-il prévoir ?
+  
+  Léo compte les matchs :
+  
+  - le joueur 1 affronte les 10 autres : 10 matchs 
+- le joueur 2 a déjà joué contre le joueur 1, il lui reste 9 adversaires : 9 matchs
+- le joueur 3 : 8 matchs
+- ...
+- le joueur 9 : 2 match
+- le joueur 10 : 1 match (contre le joueur 11).
+  
+Le nombre de match au total est donc de  $$ 1+2+3+4+5+6+7+8+9+10={\color{red}55}$$
+  
+  (C'est aussi le nombre de poignées de main dans l'ordre où elles se font en faisant arriver les joueurs un par un dans la salle)
+  
+  À raison de 20 minutes par match cela fait $55\times 20=1100$ minutes de jeu, soit plus de 18 heures. Réparties sur 2 tables cela fait entre 9 et 10 heures d'intervalle. Léo réserve donc la salle de 8h à 18h, puis dessine un tableau 11 × 11 avec les joueurs en lignes et en colonnes. Chaque case représente un match possible : 
+  
+- la diagonale (un joueur contre lui-même) est à exclure : 11 cases ;
+- chaque match apparaît deux fois (A contre B et B contre A) ;
+
+Il reste donc (121 − 11)/2 = 55 matchs comme calculé. En ne gardant que les cases au-dessus de la diagonale, on retrouve l'escalier de 1, 2, 3, ... , 10 cases correspondant au triangle de la somme, avec l'idée du rectangle coupé en deux par sa diagonale.
+
+Léo est appelé par son $n+1$ qui l'informe qu'il ne dispose que 4 heures de salle. Combien de joueurs au maximum peuvent jouer sur 2 tables avec des matchs de 20 minutes ? Au maximum peuvent avoir lieu 24 matchs possibles en 4 heures. Si $n$ est le nombre de joueurs, on a vu que le nombre total de match est de $\frac{n(n-1)}{2}$, ce qui impose donc : $$\frac{n(n-1)}{2} \leq 24 \Rightarrow n\leq 7$$ Pas plus de 7 joueurs peuvent s'affronter, et donc 21 matchs auront lieu.
+</details>
+
+**Seconde stratégie**. Une autre manière très intuitive de résoudre le problème consiste à dupliquer le triangle bleu en un triangle orange et à les emboiter comme des légos pour former un rectangle de largeur $n$ et de hauteur $n+1$, contenant donc $n(n+1)$ cubes (qui est un nombre toujours pair). On en déduit que le triangle bleu contient $\color{red}\frac{n (n + 1)}{2}$ cubes.
+
+![](images/gauss-rectangle.png)
+Cette image mentale est en réalité celle associée à "l'astuce" des sommes écrites dans un sens et dans l'autre puis additionnées :
+
+$$\color{blue} S=1 + 2 + 3 + ... + 98 + 99 + 100$$ 
+$$\color{orange} S = 100 + 99 + 98 + ... + 3 + 2 + 1$$
+
+<div style="display: flex; justify-content: center;">
+<iframe width="315" height="560"
+src="https://www.youtube.com/embed/-aJDFdUJLR8"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+</div>
+
+On comprend mieux ce qui a pu se passer dans la tête de Gauss ou de Thurston. On peut malgré tout continuer à trouver remarquable qu'un enfant de 5 ou 7 ans trouve de lui-même comment aborder ce problème géométriquement, mais on conviendra qu'avec la bonne représentation mentale la résolution devient intuitive voire évidente, et cela démystifie l'origine de "l'astuce" sortie du chapeau d'un génie.
+
+> Mon professeur de terminale était un excellent enseignant, que j’appréciais et qui m’a énormément appris. Mais en nous parlant d’« astuce », il nous a ce jour-là transmis le mauvais message.Il n’y a jamais d’astuce. Il n’y en a jamais eu et il n’y en aura jamais. Croire en l’existence d’astuces est aussi toxique que de croire en l’existence de vérités par nature contre-intuitives. [@bessis2022mathematica]
+
+En d'autres termes, même sous les formules les plus absconces que vous pourriez rencontrer, il y a des idées intuitives qui ont guidé les mathématiciens. Ces images mentales, formées dans leur tête, ne nous sont pas accessibles directement. Toute la difficulté est, à partir des formules que nous lisons, de nous forger nos propres représentations, jusqu'à ce que cela nous paraisse être une "évidence".
 
 A COMPLETER
 
@@ -941,24 +1154,29 @@ A COMPLETER
 
 <!-- > La pratique des mathématiques est une activité physique. Pour comprendre ce qu’on ne comprend pas, il faut effectuer dans sa tête les gestes silencieux, invisibles mais indispensables, qui permettront d’enrichir son intuition et de développer de nouvelles représentations mentales, plus profondes et plus puissantes. C’est une activité qui nous renforce et nous épanouit. Apprendre à faire des mathématiques, c’est apprendre à se servir de son corps. C’est comme apprendre à marcher, nager, danser ou faire du vélo.  -->
 
-<!-- > Personne ne leur a dit que les mathématiques étaient une activité physique. Personne ne leur a dit que, en mathématiques, il n’y avait pas des choses à apprendre mais des choses à faire.Ils ne prennent pas la cuillère du bon côté, parce que personne ne leur a expliqué comment faire, et parce qu’ils n’ont jamais vu personne la prendre du bon côté.Les phrases qui sont prononcées pendant un cours de maths ne sont pas des informations qu’il faut retenir. Ce sont des consignes et des indications pour des gestes invisibles que chacun doit accomplir secrètement dans sa tête.Suivre un cours de maths comme on suit un cours d’histoire ou de biologie, c’est aussi absurde que de prendre des notes pendant un cours de yoga, soigneusement, pour être sûr de ne rien oublier. Si vous ne faites jamais le moindre exercice de respiration, ça ne sert strictement à rien. -->
+<!-- > Personne ne leur a dit que les mathématiques étaient une activité physique. Personne ne leur a dit que, en mathématiques, il n’y avait pas des choses à apprendre mais des choses à faire.Ils ne prennent pas la cuillère du bon côté, parce que personne ne leur a expliqué comment faire, et parce qu’ils n’ont jamais vu personne la prendre du bon côté.Les phrases qui sont prononcées pendant un cours de maths ne sont pas des informations qu’il faut retenir. Ce sont des consignes et des indications pour des gestes invisibles que chacun doit accomplir secrètement dans sa tête.Suivre un cours de maths comme on suit un cours d’histoire ou de biologie, c’est aussi absurde que de prendre des notes pendant un cours de yoga, soigneusement, pour être sûr de ne rien oublier. Si vous ne faites jamais le moindre exercice de respiration, ça ne sert strictement à rien. -->
 
 <!-- Reprenons la métaphore du saut en hauteur : -->
 
-<!-- > Mais plutôt que par calcul, c’est par introspection, en portant une grande attention à l’écoute de son corps et en se concentrant sur les gestes qui lui permettaient de plus facilement franchir la barre, qu’il a graduellement découvert sa méthode. L’approche de Fosbury était à la fois volontariste et méditative. [...] Ses premières interviews montrent qu’il ne mesurait pas encore la portée de sa découverte : « J’imagine que pas mal de gamins vont maintenant essayer de sauter à ma façon. Je ne garantis pas les résultats, et je ne recommande mon style à personne. »Mais tout le monde l’a imité. Dès les Jeux olympiques suivants, en 1972, sa technique est devenue la norme. Depuis plus de quarante ans, chaque fois que le record du monde de saut en hauteur a été battu, il l’a été grâce à la technique de Fosbury. [...] Pour comprendre cette difficulté, imaginez une version invisible du saut en hauteur qui se pratiquerait sans témoins ni caméras, dans une salle vide, et dont les compétitions seraient jugées par des appareils électroniques qui vérifient que la barre est franchie sans rien enregistrer de la technique du sauteur.Comment Fosbury aurait-il pu raconter son histoire ?Tout le monde aurait été convaincu qu’il était génétiquement programmé pour sauter plus haut que tout le monde. [...] Pour quelqu’un qui n’a jamais vu personne le faire, apprendre à sauter comme Fosbury est presque aussi dur que de l’inventer soi-même. Même avec des indications détaillées, ça pose d’énormes difficultés. « Jetez-vous en l’air sur le dos, la tête la première. » Vraiment ? Et pourquoi toutes ces pages de préliminaires sur la trajectoire de la course d’élan et le basculement de l’axe du corps à l’approche de la barre ? Pourquoi ce langage technique ? Est-ce vraiment nécessaire ? Apprendre un geste, c’est le comprendre au-delà des mots. C’est le sentir dans son propre corps. C’est le trouver naturel et intuitif. -->
+<!-- > Mais plutôt que par calcul, c’est par introspection, en portant une grande attention à l’écoute de son corps et en se concentrant sur les gestes qui lui permettaient de plus facilement franchir la barre, qu’il a graduellement découvert sa méthode. L’approche de Fosbury était à la fois volontariste et méditative. [...] Ses premières interviews montrent qu’il ne mesurait pas encore la portée de sa découverte : « J’imagine que pas mal de gamins vont maintenant essayer de sauter à ma façon. Je ne garantis pas les résultats, et je ne recommande mon style à personne. »Mais tout le monde l’a imité. Dès les Jeux olympiques suivants, en 1972, sa technique est devenue la norme. Depuis plus de quarante ans, chaque fois que le record du monde de saut en hauteur a été battu, il l’a été grâce à la technique de Fosbury. [...] Pour comprendre cette difficulté, imaginez une version invisible du saut en hauteur qui se pratiquerait sans témoins ni caméras, dans une salle vide, et dont les compétitions seraient jugées par des appareils électroniques qui vérifient que la barre est franchie sans rien enregistrer de la technique du sauteur.Comment Fosbury aurait-il pu raconter son histoire ?Tout le monde aurait été convaincu qu’il était génétiquement programmé pour sauter plus haut que tout le monde. [...] Pour quelqu’un qui n’a jamais vu personne le faire, apprendre à sauter comme Fosbury est presque aussi dur que de l’inventer soi-même. Même avec des indications détaillées, ça pose d’énormes difficultés. « Jetez-vous en l’air sur le dos, la tête la première. » Vraiment ? Et pourquoi toutes ces pages de préliminaires sur la trajectoire de la course d’élan et le basculement de l’axe du corps à l’approche de la barre ? Pourquoi ce langage technique ? Est-ce vraiment nécessaire ? Apprendre un geste, c’est le comprendre au-delà des mots. C’est le sentir dans son propre corps. C’est le trouver naturel et intuitif. -->
 
 <!-- **Représentations mentales** -->
 
 <!-- Grothendieck : -->
 
-<!-- « Ce qui mène et domine dans mon travail, ce qui en est l’âme et la raison d’être, ce sont les images mentales qui se forment au cours du travail pour appréhender la réalité des choses mathématiques. »« Toute ma vie j’ai été incapable de lire un texte mathématique, si anodin ou simpliste soit-il, lorsque je n’arrive pas à donner à ce texte un “sens” en termes de mon expérience des choses mathématiques, c’est-à-dire lorsque ce texte ne suscite pas en moi des images mentales, des intuitions qui lui donneraient vie. » -->
+<!-- « Ce qui mène et domine dans mon travail, ce qui en est l’âme et la raison d’être, ce sont les images mentales qui se forment au cours du travail pour appréhender la réalité des choses mathématiques. »« Toute ma vie j’ai été incapable de lire un texte mathématique, si anodin ou simpliste soit-il, lorsque je n’arrive pas à donner à ce texte un “sens” en termes de mon expérience des choses mathématiques, c’est-à-dire lorsque ce texte ne suscite pas en moi des images mentales, des intuitions qui lui donneraient vie. » -->
 
-<!-- > Plus d’une fois, je me suis arrêté dans la lecture en me disant : « Il a raison. C’est exactement ça. C’est vraiment ça, le secret. C’est vraiment comme ça que ça se passe dans la tête. C’est véritablement en faisant ces gestes mentaux très simples, ces gestes qui ont l’air innocents mais que personne ne songe à faire, que l’on devient très fort en mathématiques. Je n’ai jamais rien lu d’aussi important. Ce que raconte Grothendieck, il faudrait arriver à l’expliquer à tout le monde. » -->
+<!-- > Plus d’une fois, je me suis arrêté dans la lecture en me disant : « Il a raison. C’est exactement ça. C’est vraiment ça, le secret. C’est vraiment comme ça que ça se passe dans la tête. C’est véritablement en faisant ces gestes mentaux très simples, ces gestes qui ont l’air innocents mais que personne ne songe à faire, que l’on devient très fort en mathématiques. Je n’ai jamais rien lu d’aussi important. Ce que raconte Grothendieck, il faudrait arriver à l’expliquer à tout le monde. » -->
 
-<!-- > Ouvrir un livre de maths sur un sujet auquel vous ne comprenez rien, c’est un peu comme se retrouver assis au poste de pilotage d’un avion de ligne ou d’une centrale nucléaire. La réaction normale, c’est de rester sagement assis et surtout de ne toucher à rien. Avant de toucher, vous devez étudier et réfléchir.Mais si vous mettez un enfant de deux ans dans un poste de pilotage, il réagira autrement. Il appuiera sur tous les boutons, en commençant par les rouges et par ceux qui clignotent.La recommandation de Grothendieck est de faire comme l’enfant de deux ans. Quand il veut comprendre quelque chose, il tente sa chance directement, sans complexe, comme le ferait un petit enfant. Il n’attend pas d’avoir compris pour se lancer. Grothendieck fait autrement. Il sait que ça ne sert à rien d’accumuler des informations sur des choses qu’on n’arrive pas à voir. Au lieu de cela, il s’autorise à imaginer les choses tout de suite, sans attendre, y compris quand il sait pertinemment qu’il n’y arrivera pas et que sa façon de les imaginer sera grotesquement fausse.Il n’a aucune peur de se tromper. Il a même la certitude qu’il va se tromper et c’est exactement ce qu’il recherche.Grothendieck recherche activement l’erreur, comme le petit enfant recherche activement les bêtises à faire. Dans sa découverte du monde mathématique, chaque fois qu’il sent quelque chose de bizarre ou d’intrigant, de pas clair ou de pas satisfaisant, d’incohérent ou de désagréable, il creuse dans cette direction. « Craindre l’erreur et craindre la vérité est une seule et même chose. Celui qui craint de se tromper est impuissant à découvrir. C’est quand nous craignons de nous tromper que l’erreur qui est en nous se fait immuable comme un roc. » -->
+<!-- > Ouvrir un livre de maths sur un sujet auquel vous ne comprenez rien, c’est un peu comme se retrouver assis au poste de pilotage d’un avion de ligne ou d’une centrale nucléaire. La réaction normale, c’est de rester sagement assis et surtout de ne toucher à rien. Avant de toucher, vous devez étudier et réfléchir.Mais si vous mettez un enfant de deux ans dans un poste de pilotage, il réagira autrement. Il appuiera sur tous les boutons, en commençant par les rouges et par ceux qui clignotent.La recommandation de Grothendieck est de faire comme l’enfant de deux ans. Quand il veut comprendre quelque chose, il tente sa chance directement, sans complexe, comme le ferait un petit enfant. Il n’attend pas d’avoir compris pour se lancer. Grothendieck fait autrement. Il sait que ça ne sert à rien d’accumuler des informations sur des choses qu’on n’arrive pas à voir. Au lieu de cela, il s’autorise à imaginer les choses tout de suite, sans attendre, y compris quand il sait pertinemment qu’il n’y arrivera pas et que sa façon de les imaginer sera grotesquement fausse.Il n’a aucune peur de se tromper. Il a même la certitude qu’il va se tromper et c’est exactement ce qu’il recherche.Grothendieck recherche activement l’erreur, comme le petit enfant recherche activement les bêtises à faire. Dans sa découverte du monde mathématique, chaque fois qu’il sent quelque chose de bizarre ou d’intrigant, de pas clair ou de pas satisfaisant, d’incohérent ou de désagréable, il creuse dans cette direction. « Craindre l’erreur et craindre la vérité est une seule et même chose. Celui qui craint de se tromper est impuissant à découvrir. C’est quand nous craignons de nous tromper que l’erreur qui est en nous se fait immuable comme un roc. » -->
 
 
 <!-- **Formalisme vs. intuition** -->
+
+<!-- [@poincare_valeur_2005] -->
+
+<!-- > Cela nous montre que la logique ne suffit pas ; que la Science de la démonstration n’est pas la Science tout entière et que l’intuition doit conserver son rôle comme complément, j’allais dire comme contrepoids ou comme contrepoison de la logique. J’ai déjà eu l’occasion d’insister sur la place que doit garder l’intuition dans l’enseignement des Sciences mathématiques. Sans elle, les jeunes esprits ne sauraient s’initier à l’intelligence des Mathématiques ; ils n’apprendraient pas à les aimer et n’y verraient qu’une vaine logomachie ; sans elle surtout, ils ne deviendraient jamais capables de les appliquer. [...]
+ Ainsi, la logique et l’intuition ont chacune leur rôle nécessaire. Toutes deux sont indispensables. La logique qui peut seule donner la certitude est l’instrument de la démonstration : l’intuition est l’instrument de l’invention. -->
 
 <!-- **Beauté et mathématiques** -->
 
