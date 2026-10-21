@@ -7,6 +7,7 @@ categories: [mathématiques]
 toc: true
 toc-title: "Sommaire"
 toc-location: left
+toc-depth: 4
 bibliography: refs.bib
 reference-location: margin
 citation-location: margin
@@ -403,7 +404,7 @@ puis il ajoute :
 
 > ... alors qu'en fait les maths on les vit tous les jours dans notre quotidien, on en a **tous les jours besoin**. Par exemple pour les sondages, pour l'intelligence artificielle, pour la radio numérique, tout cela c'est des maths **sans que l'on s'en rende compte**. Quand on va payer avec sa carte bancaire c'est des maths il y a de la cryptographie **derrière**.
 
-**Malentendu sur la notion d'utilité** 
+#### Malentendu sur la notion d'utilité 
 
 Les passages que j'ai souligné en gras me semblent révélateur de la confusion entretenue entre ces deux questions : 
 
@@ -422,23 +423,23 @@ Ce à quoi Christophe Besse répondra que pour savoir si les soldes sont intére
 
 La question que se posent les non-scientifiques est celle de savoir à quoi leur servent *dans leur quotidien* des mathématiques plus élaborées introduites progressivement au collège, comme la démonstration géométrique ou la résolution d'équation. Force est de reconnaître que peu de personnes mettent en application ces mathématiques au quotidien. On peut fort heureusement vivre convenablement et mener une existence heureuse sans avoir à résoudre d'équations. 
 
-**Division du travail et adaptation**
+#### Division du travail et adaptation
 
 L'environnement technologique dans lequel nous évoluons, développé par les scientifiques et techniciens, via la division du travail, exempte la majeure partie de la population d'avoir à maitriser les sciences qui rendent possibles ce confort. Il en va de même pour la médecine dont on délègue aux soignants la responsabilité de s'occuper de notre santé, et on fait l'impasse sur la chimie (qui ne sert pas non dans la vie quotidienne) qui permet de fabriquer les médicaments dont on a besoin. Plus difficile serait de se passer d'apprendre à lire ou à compter, dans un environnement qui est saturé de mots et de nombres. Il reste plus handicapant[^18] de ne pas savoir lire dans une société où une myriade de choses et d'actions sont dépendantes des écrits et symboles qui nous entourent. L'utilité de savoir lire est ainsi liée au contexte. Dans [@bessis2022mathematica] on peut y lire :
 
 [^18]: Piqûre de rappel quant au fait que la situation de handicap naît de l'interaction entre les caractéristiques propres d'une personne et les obstacles ou facilitateurs de son environnement. Dans une société telle que la nôtre où il n'est pas seulement utile mais nécessaire de savoir lire, l'absence de lunettes engendrerait beaucoup de handicap chez ceux qui ne peuvent lire sans. Or ce sont des mathématiques qui sous-tendent la création de lentilles façonnés par des calculs d'optiques. Pas de mathématiques, pas de lunettes; pas de lunettes, pas de lecture; pas de lecture... pas de lecture.
 
 > Depuis cent cinquante ans environ, une nouvelle décision fondamentale a été prise : celle d’enseigner la lecture et l’écriture à tout le monde. Cette décision est tellement structurante qu’il est devenu difficile d’imaginer à quoi notre monde pourrait bien ressembler si elle n’avait pas été prise. Si, comme c’était le cas jusqu’alors, seule une petite minorité de la population avait accès à la lecture. 
- Au temps des hiéroglyphes et de l’Égypte ancienne, l’art d’écrire s’apparentait à un pouvoir magique. Les scribes formaient une caste héréditaire, et ils se transmettaient leurs secrets de génération en génération. Dans l’Europe médiévale, écrire était une vocation. Des jeunes hommes se faisaient moines, ils se retiraient du monde et consacraient leur existence à copier des manuscrits. Qu’est-ce que les paysans illettrés du Moyen Âge pensaient de tout cela ? S’imaginaient-ils qu’apprendre à lire et à écrire exigeait un don spécial, une forme particulière d’intelligence qui leur faisait défaut ? Trouvaient-ils injuste et frustrant d’en être exclus ? Ou, plus simplement, se disaient-ils qu’ils n’avaient pas le temps, pas l’argent, pas l’envie, et que de toute façon ils n’avaient rien à lire ? Aujourd’hui, plus personne ne pense que lire et écrire suppose un don spécial. **Plus personne ne pense que ça ne sert à rien**. À de rares exceptions près, tous les régimes, quelles que soient leurs croyances et leurs idéologies, font de l’enseignement primaire une priorité absolue.Le projet radical d’alphabétiser la Terre entière est un prodigieux succès. L’illettrisme n’a pas disparu, bien sûr, mais il est devenu minoritaire. En quelques générations, l’humanité a su accomplir un programme global de transformation cognitive sans équivalent dans l’histoire. Dans le même temps où était lancé ce grand chantier d’alphabétisation planétaire, une autre décision radicale était prise : on allait enseigner les bases des mathématiques à tout le monde. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus d’un milliard de filles et de garçons étudient les mathématiques. Et c’est un véritable désastre. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus de cinq cents millions de filles et de garçons souffrent en silence. Ils ont l’impression de ne rien comprendre et sont ballottés entre le désengagement (ils ne voient absolument pas l’intérêt de cette matière) et la sensation humiliante de ne pas être assez intelligents.»
+ Au temps des hiéroglyphes et de l’Égypte ancienne, l’art d’écrire s’apparentait à un pouvoir magique. Les scribes formaient une caste héréditaire, et ils se transmettaient leurs secrets de génération en génération. Dans l’Europe médiévale, écrire était une vocation. Des jeunes hommes se faisaient moines, ils se retiraient du monde et consacraient leur existence à copier des manuscrits. Qu’est-ce que les paysans illettrés du Moyen Âge pensaient de tout cela ? S’imaginaient-ils qu’apprendre à lire et à écrire exigeait un don spécial, une forme particulière d’intelligence qui leur faisait défaut ? Trouvaient-ils injuste et frustrant d’en être exclus ? Ou, plus simplement, se disaient-ils qu’ils n’avaient pas le temps, pas l’argent, pas l’envie, et que de toute façon ils n’avaient rien à lire ? Aujourd’hui, plus personne ne pense que lire et écrire suppose un don spécial. **Plus personne ne pense que ça ne sert à rien**. À de rares exceptions près, tous les régimes, quelles que soient leurs croyances et leurs idéologies, font de l’enseignement primaire une priorité absolue.Le projet radical d’alphabétiser la Terre entière est un prodigieux succès. L’illettrisme n’a pas disparu, bien sûr, mais il est devenu minoritaire. En quelques générations, l’humanité a su accomplir un programme global de transformation cognitive sans équivalent dans l’histoire. Dans le même temps où était lancé ce grand chantier d’alphabétisation planétaire, une autre décision radicale était prise : on allait enseigner les bases des mathématiques à tout le monde. **Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus d’un milliard de filles et de garçons étudient les mathématiques. Et c’est un véritable désastre**. Aujourd’hui, dans les écoles, collèges et lycées du monde entier, plus de cinq cents millions de filles et de garçons souffrent en silence. Ils ont l’impression de ne rien comprendre et sont ballottés entre le désengagement (ils ne voient absolument pas l’intérêt de cette matière) et la sensation humiliante de ne pas être assez intelligents.
 
 En plus des raisons structurelles du désamour des mathématiques déjà évoquées dans la section précédente, les élèves justifient leur désengagement par le rendement décroissant de l'utilité pratique des mathématiques au cours du collège puis au lycée [@merle_rapport_2003, §44] :
 
-> L’utilité des mathématiques et du français pour les élèves a été saisie à partir de questions relatives à leur usage dans la vie de tous les jours et pour obtenir un métier. Mathématiques et français sont considérés comme « utiles » ou « très utiles » dans « la vie de tous les jours » par une très forte majorité d’élèves (près de huit sur dix). Ce sentiment collégien est moins présent en classe de troisième que de sixième : la proportion d’élèves à considérer que les mathématiques et le français sont « très utiles » chutent en effet de moitié. Cette évolution tient probablement au fait que les connaissances apprises en classe de sixième semblent plus indispensables aux élèves que celles acquises en classe de troisième. Les déclarations des élèves relatives à la moindre utilité de ces deux disciplines en fin de troisième sont en rapport aussi avec le moindre intérêt qu’elles suscitent par ailleurs sans qu’il soit possible d’établir le sens d’une éventuelle causalité entre utilité et intérêt.
+> L’utilité des mathématiques et du français pour les élèves a été saisie à partir de questions relatives à leur usage dans la vie de tous les jours et pour obtenir un métier. Mathématiques et français sont considérés comme « utiles » ou « très utiles » dans « la vie de tous les jours » par une très forte majorité d’élèves (près de huit sur dix). Ce sentiment collégien est moins présent en classe de troisième que de sixième : la proportion d’élèves à considérer que les mathématiques et le français sont « très utiles » chutent en effet de moitié. Cette évolution tient probablement au fait que **les connaissances apprises en classe de sixième semblent plus indispensables aux élèves que celles acquises en classe de troisième**. Les déclarations des élèves relatives à la moindre utilité de ces deux disciplines en fin de troisième sont en rapport aussi avec le moindre intérêt qu’elles suscitent par ailleurs sans qu’il soit possible d’établir le sens d’une éventuelle causalité entre utilité et intérêt.
 
 
 Et quand ça n'est pas seulement les élèves mais aussi un ancien ministre de l'éducation qui n'y voit pas l'intérêt, cela ne facilite pas la tâche.
 
-**La polémique de Luc Ferry**
+#### La polémique de Luc Ferry
 
 Le 15 février 2018 sur LCI, [Luc Ferry](https://fr.wikipedia.org/wiki/Luc_Ferry), ancien ministre de l'éducation déclarait :
 
@@ -488,7 +489,7 @@ Ainsi la densité de faux est de 0,99 et donc l'énoncé $e$ portant sur cette f
 
 Trêve de plaisanterie, faisons preuve de charité intellectuelle à l'égard de Luc Ferry, et admettons qu'il fasse une distinction (discutable nous y reviendrons dans la dernière partie) entre mathématiques pratiques dans l'usage quotidien (calculs, pourcentages) et mathématiques dites "spéculatives" [@apmep_editorial_2004]. Ce qu'il veut signifier, c'est qu'un certain nombre de notions mathématiques qu'il range dans cette seconde catégorie (les identités remarquables, les cas d'égalité des triangles, la démonstration géométrique, la résolution d'équations, etc) sont rarement mobilisées dans la vie quotidienne de la plupart des citoyens. Et sur ce point je pense qu'on peut lui donner raison. 
 
-**Le règne de l'utile**
+#### Le règne de l'utile
 
 Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie un signal où il signifie que tout le contenu mathématiques du secondaire qui est rarement appliqué ne sert donc à rien si ce n'est aux "matheux", contrairement aux autres que cela ennuie [@le_huffpost_epingle_2018]. Ce qui sert *in fine* la soupe à ceux qui clâment haut et fort que *"les maths ça ne sert à rien"*[^26], pour eux, puisqu'il conclut en fin d'interview (au sujet du rapport Villani) par :
 
@@ -514,7 +515,7 @@ Gage de son efficacité ("apprendre à apprendre"), la sélection par les mathé
 L'anecdote de [Jean Stobée](https://fr.wikipedia.org/wiki/Jean_Stob%C3%A9e) est amusante, elle rapporte l'histoire suivante [@oconnor_euclid_1999]. Un élève qui venait de commencer l'étude de la géométrie avec [Euclide](https://fr.wikipedia.org/wiki/Euclide) lui demanda : *"Mais quel profit vais-je tirer de l'apprentissage de ces choses ?"*. Euclide appela alors son esclave et lui dit :
 *"Donne-lui trois pièces de monnaie, puisqu'il lui faut absolument tirer un profit de ce qu'il apprend"*. Cette histoire illustre la vision qu'avaient les mathématiciens grecs de leur discipline, où primait la recherche du savoir pur. Pour Euclide la géométrie possède une valeur intellectuelle et philosophique intrinsèque. Elle n'a pas besoin d'avoir une application ou un gain financier immédiat pour mériter d'être apprise.
 
-**L'autonomie du sujet**
+#### L'autonomie du sujet
 
 Faudrait-il arrêter d'enseigner au collège la démonstration géométrique ou la résolution d'équation, ou seulement exclusivement à ceux qui se destinent à des études scientifiques, au seul motif qu'elles sont moins utiles pour le citoyen lambda dans la plupart de ses activités quotidiennes ? Non, car on peut y trouver d'autres intérêts qui ne sont pas purement *utilitaires* mais relèvent en définitive de la formation de l'esprit, de l'exercice de la rigueur de la démonstration, du développement de l'esprit critique, de la montée en abstraction ou encore de l'appropriation d'une culture scientifique. 
 
@@ -523,15 +524,16 @@ Exercer son intellect en faisant des mathématiques développe ces capacités lo
 Être agile, aussi bien physiquement qu'intellectuellement, est libérateur. L'école n'a de mon point de vue pas vocation à s'aligner sur la seule utilité [@girard_pourquoi_2013] :
 
 > Nicholson Baker affirme par ailleurs que la plupart des personnes n'ont besoin que d'arithmétique pour survivre dans le monde moderne. Faut-il pour autant se contenter de n'enseigner que les mathématiques de base aux profils non scientifiques ?
-Jean-Rémi Girard : J'ose espérer que les finalités de l'école ne se limitent pas à la capacité à "survivre dans le monde moderne". C'est une conception de la scolarité absolument terrifiante ! Notre école possède une visée humaniste, héritée du XVIème siècle et des Lumières, et les mathématiques participent de cette visée. Rappelons que beaucoup de nos philosophes étaient également mathématiciens. Limiter l'enseignement des mathématiques de manière drastique, cela reviendrait à amputer la formation de l'esprit critique des générations futures. Les mathématiques participent de l'acquisition de la citoyenneté.
+Jean-Rémi Girard : J'ose espérer que les finalités de l'école ne se limitent pas à la capacité à "survivre dans le monde moderne". C'est une conception de la scolarité absolument terrifiante ! **Notre école possède une visée humaniste, héritée du XVIème siècle et des Lumières, et les mathématiques participent de cette visée**. Rappelons que beaucoup de nos philosophes étaient également mathématiciens. Limiter l'enseignement des mathématiques de manière drastique, cela reviendrait à amputer la formation de l'esprit critique des générations futures. Les mathématiques participent de l'acquisition de la citoyenneté.
 
 [@pascal_pensees_1670] résume cette visée humaniste et universelle :
 
-> Honnête homme. Il faut qu’on n’en puisse dire ni il est mathématicien, ni prédicateur, ni éloquent mais il est honnête homme, cette qualité universelle me plaît seule. / Puisqu’on ne peut être universel en sachant tout ce qui se peut savoir sur tout, il faut savoir peu de tout, car il est bien plus beau de savoir quelque chose de tout que de savoir tout d’une chose. Cette universalité est la plus belle. Si on pouvait avoir les deux encore mieux, mais s’il faut choisir il faut choisir celle-là. Et le monde le sent et le fait, car le monde est un bon juge souvent.
+> **Honnête homme**. Il faut qu’on n’en puisse dire ni il est mathématicien, ni prédicateur, ni éloquent mais il est honnête homme, cette qualité universelle me plaît seule. / Puisqu’on ne peut être universel en sachant tout ce qui se peut savoir sur tout, il faut savoir peu de tout, car il est bien plus beau de savoir quelque chose de tout que de savoir tout d’une chose. Cette universalité est la plus belle. Si on pouvait avoir les deux encore mieux, mais s’il faut choisir il faut choisir celle-là. Et le monde le sent et le fait, car le monde est un bon juge souvent.
 
 En revanche sur le plan économique, la division du travail règne sans partage, induisant une forte spécialisation des individus et signe le déclin de l'idéal humaniste selon [@durkheim_division_1893] :
 
-> Notre devoir est-il de chercher à devenir un être achevé et complet, un tout qui se suffit à soi-même, ou bien au contraire de n'être que la partie d'un tout, l'organe d'un organisme ? En un mot, la division du travail, en même temps qu'elle est une loi de la nature, est-elle aussi une règle morale de la conduite humaine, et si elle a ce caractère, pour quelles causes et dans quelle mesure ? [...] Nous avons passé le temps où l'homme parfait nous paraissait être celui qui, sachant s'intéresser à tout sans s'attacher exclusivement à rien, capable de tout goûter et de tout comprendre, trouvait moyen de réunir et de condenser en lui ce qu'il y avait de plus exquis dans la civilisation. Aujourd'hui, cette culture générale, tant vantée jadis, ne nous fait plus l'effet que d'une discipline molle et relâchée. [...] L'honnête homme d'autrefois n'est plus pour nous qu'un dilettante, et nous refusons au dilettantisme toute valeur morale ; nous voyons bien plutôt la perfection dans l'homme compétent qui cherche, non à être complet, mais à produire, qui a une tâche délimitée et qui s'y consacre, qui fait son service, trace son sillon.
+> Notre devoir est-il de chercher à devenir un être achevé et complet, un tout qui se suffit à soi-même, ou bien au contraire de n'être que la partie d'un tout, l'organe d'un organisme ? En un mot, la division du travail, en même temps qu'elle est une loi de la nature, est-elle aussi une règle morale de la conduite humaine, et si elle a ce caractère, pour quelles causes et dans quelle mesure ? [...] Nous avons passé le temps où l'homme parfait nous paraissait être celui qui, sachant s'intéresser à tout sans s'attacher exclusivement à rien, capable de tout goûter et de tout comprendre, trouvait moyen de réunir et de condenser en lui ce qu'il y avait de plus exquis dans la civilisation. 
+**Aujourd'hui, cette culture générale, tant vantée jadis, ne nous fait plus l'effet que d'une discipline molle et relâchée. [...] L'honnête homme d'autrefois n'est plus pour nous qu'un dilettante**, et nous refusons au dilettantisme toute valeur morale ; nous voyons bien plutôt la perfection dans l'homme compétent qui cherche, non à être complet, mais à produire, qui a une tâche délimitée et qui s'y consacre, qui fait son service, trace son sillon.
 
 Si la division du travail est une nécessité économique qui tend à fragmenter l'individu, la démocratie requiert quant à elle des citoyens qui cultivent l'esprit de l'honnête homme : une posture d'ouverture, d'esprit critique et d'intérêt pour le bien commun. La démocratie moderne ne demande pas à chacun d'être un expert en économie[^23], en virologie ou en géopolitique. Elle exige en revanche une forme d'honnêteté intellectuelle et de culture générale permettant de comprendre les grands enjeux et de démasquer les discours démagogiques. C'est l'idéal du citoyen éclairé auquel l'école contribue. 
 
@@ -545,10 +547,10 @@ Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, in
 
 [^25]: « Le véritable esprit de joie, d’exaltation, le sentiment d’être plus qu’un homme, qui sont la pierre de touche de l’excellence la plus haute, se trouvent dans les mathématiques comme dans la poésie » – Bertrand Russel.
 
-> L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?
-Jean-Rémi Girard : Chaque chose en son temps. Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
+> L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?  
+> Jean-Rémi Girard : Chaque chose en son temps. **Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée**. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que **tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire**, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
 
-**L'utilité comme motivation ?**
+#### L'utilité comme motivation ?
 
 L'utilité des mathématiques a été souvent mentionnée dans les réponses à la grande consultation nationale :
 
@@ -604,23 +606,25 @@ Elles servent bien sûr dans bien des métiers, ainsi que dans des activités co
 
 Néanmoins cela n'arrive pas tous les quatre matins. Je ne suis pas certain que ces exemples d'applications utiles suffisent à motiver les troupes. [@cosnefroy_sens_2007] bat cette idée en brèche :
 
-> L’éveil de la curiosité disciplinaire ne passe quasiment jamais par l’utilité, pourtant fréquemment citée comme un ingrédient de l’intérêt. Ce décalage laisse penser que l’argument se développe après-coup, comme le suggèrent les propos de cet élève (12, G, 3, N3) : « l’anglais c’est une langue indispensable de nos jours. Pour travailler, dans n’importe quel pays on parle anglais, on comprend ». À la question de l’origine de son intérêt, il répond : « Depuis tout petit. Quand j’étais petit j’écoutais des chansons et des trucs comme ça, et je comprenais pas [...] Avec l’âge j’ai pensé au travail, mais quand j’étais petit c’était surtout les chansons et mes idoles. » La valorisation de l’utilité de la discipline se construit dans un second temps, une fois l’intérêt déjà établi. De même, si les mathématiques sont à plusieurs reprises associées à l’utilité dans la vie quotidienne, on ne peut que s’étonner du décalage entre les arguments invoqués et la nature des apprentissages effectués en cours. En effet, l’utilité des mathématiques consiste pour l’essentiel à fournir les savoir-faire nécessaires pour gérer l’économie domestique (impôts, comptes). Il est difficile d’imaginer qu’une telle conception de l’utilité, qui renvoie à des apprentissages de base, puisse soutenir durablement l’investissement dans des apprentissages autrement plus complexes à ce niveau de la scolarité.  Symétriquement, on s’interrogera sur la façon dont l’absence d’utilité est convoquée pour expliquer le désintérêt à l’égard d’une discipline. Plusieurs exemples concernent la physique : « la physique non plus on l’utilise pas dans la vie de tous les jours » (7, G, 3, N2). Il est surprenant de voir associé désintérêt et manque d’utilité dans une discipline pourtant porteuse d’applications diverses dans la vie quotidienne. Tout ceci pousse à renverser la causalité entre utilité et intérêt. L’utilité n’est probablement pas une raison déterminante de s’intéresser à la discipline. C’est plutôt en fonction de l’intérêt qu’on lui accorde qu’on définit l’utilité associée à la discipline. Le recours à l’utilité fonctionne alors comme une justification a posteriori, d’autant plus facile à mobiliser que la discipline en question se prête effectivement à des applications diversifiées. C’est la raison pour laquelle elle est si souvent évoquée pour l’anglais.
+> **L’éveil de la curiosité disciplinaire ne passe quasiment jamais par l’utilité, pourtant fréquemment citée comme un ingrédient de l’intérêt**. Ce décalage laisse penser que l’argument se développe après-coup, comme le suggèrent les propos de cet élève (12, G, 3, N3) : « l’anglais c’est une langue indispensable de nos jours. Pour travailler, dans n’importe quel pays on parle anglais, on comprend ». À la question de l’origine de son intérêt, il répond : « Depuis tout petit. Quand j’étais petit j’écoutais des chansons et des trucs comme ça, et je comprenais pas [...] Avec l’âge j’ai pensé au travail, mais quand j’étais petit c’était surtout les chansons et mes idoles. » La valorisation de l’utilité de la discipline se construit dans un second temps, une fois l’intérêt déjà établi. De même, si les mathématiques sont à plusieurs reprises associées à l’utilité dans la vie quotidienne, on ne peut que s’étonner du décalage entre les arguments invoqués et la nature des apprentissages effectués en cours. En effet, **l’utilité des mathématiques consiste pour l’essentiel à fournir les savoir-faire nécessaires pour gérer l’économie domestique (impôts, comptes). Il est difficile d’imaginer qu’une telle conception de l’utilité, qui renvoie à des apprentissages de base, puisse soutenir durablement l’investissement dans des apprentissages autrement plus complexes à ce niveau de la scolarité.**  Symétriquement, on s’interrogera sur la façon dont l’absence d’utilité est convoquée pour expliquer le désintérêt à l’égard d’une discipline. Plusieurs exemples concernent la physique : « la physique non plus on l’utilise pas dans la vie de tous les jours » (7, G, 3, N2). Il est surprenant de voir associé désintérêt et manque d’utilité dans une discipline pourtant porteuse d’applications diverses dans la vie quotidienne. Tout ceci pousse à renverser la causalité entre utilité et intérêt. L’utilité n’est probablement pas une raison déterminante de s’intéresser à la discipline. C’est plutôt en fonction de l’intérêt qu’on lui accorde qu’on définit l’utilité associée à la discipline. **Le recours à l’utilité fonctionne alors comme une justification a posteriori**, d’autant plus facile à mobiliser que la discipline en question se prête effectivement à des applications diversifiées. C’est la raison pour laquelle elle est si souvent évoquée pour l’anglais.
 
-Nous avons donc souvent tendance, nous autres mathématiciens, à vouloir convaincre les néophytes de l'intérêt des mathématiques en insistant sur leur utilité, tournée vers l'extérieur donc, car on présuppose que c'est ce qui est susceptible de pouvoir les intéresser et de les motiver; alors même que notre propre intérêt et motivation sont en premier lieu intrinsèques à la discipline, les applications constituant autant de cerises sur le gâteau. 
+Nous avons donc souvent tendance, nous autres mathématiciens, à vouloir convaincre les néophytes de l'intérêt des mathématiques en insistant sur leur utilité, tournée vers l'extérieur donc, car on présuppose que c'est ce qui est susceptible de pouvoir les intéresser et de les motiver; alors même que **notre propre intérêt et motivation sont en premier lieu intrinsèques à la discipline**, les applications constituant autant de cerises sur le gâteau. 
 
-**La motivation intrinsèque des maths**
+#### La motivation intrinsèque des maths
 
 Entendons nous bien, je suis moi-même le premier à motiver mes cours de maths par des exemples d'applications, avec ce souci de montrer que les maths ne sont pas déconnectées du réel et faire part de leur déraisonnable efficacité [@wigner1990unreasonable]. Mais est-ce suffisant de désigner des buts applicatifs pour donner le goût de *faire des mathématiques* et de maintenir une motivation durable ? Je ne le pense pas. Il faut bien qu'à un moment la motivation devienne intrinsèque à la discipline et non pas seulement extrinsèque. C'est comme vouloir apprendre la guitare pour draguer, ça peut motiver un temps pour apprendre à gratter quelques accords, mais ça n'amènera jamais personne au niveau d'un musicien confirmé -- prêt à consentir à faire des gammes et à répéter pendant des heures pour s'améliorer -- si le plaisir pour la musique elle-même n'est pas le maître-mot. 
 
 Voyons ce qu'en dit [@broue_jean-pierre_2006] à propos de [Jean-Pierre Serre](https://fr.wikipedia.org/wiki/Jean-Pierre_Serre), monument des mathématiques françaises qui a soufflé cette année ses 100 bougies :
 
-> L’utilité des mathématiques ? Certes plus personne ne songe à la remettre en cause aujourd’hui, puisqu’on sait bien qu’elles sont partout, de la gestion du trafic aérien à la forme des verres de lunettes en passant par l’imagerie médicale, internet et les télécommunications, de la description des particules élémentaires à la maîtrise de l’information génomique. Cependant, l’utilité de ses mathématiques n’a jamais été, pour Serre, un critère de ses choix de travail. Il se plaît à dire que les mathématiciens se contentent de mettre leur production à la disposition de tous, comme sur des étagères où l’on peut venir se servir. Noter, cependant, que ce service-là est gratuit. Et que le mathématicien ne fabrique et ne dépose sur l’étagère que ce qui lui plaît. Ce qui le motive, c’est le plaisir, pas l’appât du gain. Serre dit souvent qu’il s’est étonné toute sa vie qu’on l’ait payé, si longtemps, pour une activité qu’il aimait tant. C’est bien la jouissance et la curiosité qui ont été, sans aucun doute, les moteurs du travail de Serre.
+> L’utilité des mathématiques ? Certes plus personne ne songe à la remettre en cause aujourd’hui, puisqu’on sait bien qu’elles sont partout, de la gestion du trafic aérien à la forme des verres de lunettes en passant par l’imagerie médicale, internet et les télécommunications, de la description des particules élémentaires à la maîtrise de l’information génomique. Cependant, **l’utilité de ses mathématiques n’a jamais été, pour Serre, un critère de ses choix de travail**. Il se plaît à dire que les mathématiciens se contentent de mettre leur production à la disposition de tous, comme sur des étagères où l’on peut venir se servir. Noter, cependant, que ce service-là est gratuit. Et que le mathématicien ne fabrique et ne dépose sur l’étagère que ce qui lui plaît. **Ce qui le motive, c’est le plaisir, pas l’appât du gain**. Serre dit souvent qu’il s’est étonné toute sa vie qu’on l’ait payé, si longtemps, pour une activité qu’il aimait tant. C’est bien la jouissance et la curiosité qui ont été, sans aucun doute, les moteurs du travail de Serre.
 
 [Jacobi](https://fr.wikipedia.org/wiki/Charles_Gustave_Jacob_Jacobi) était de cet avis, et a inspiré le titre du livre de [@dieudonne1987pour] :
 
 > M. Fourier avait l'opinion que le but principal des mathématiques était l'utilité publique et l'explication des phénomènes naturels ; mais un philosophe comme lui aurait dû savoir que le but unique de la science, c'est **l'honneur de l'esprit humain**, et que sous ce titre, une question de nombres vaut autant qu'une question du système du monde. 
 
-**Les maths servent à tout et rien**
+
+
+#### Les maths servent à tout et rien
 
 D'un côté donc des mathématiciens qui s'évertuent à vouloir montrer que les maths *servent dans tout et partout* (puisque s'immisçant jusque dans nos téléphones, cartes bancaires, etc); de l'autre des mathématiciens qui à la question *"les maths à quoi ça sert ?"* répondent simplement *"à rien"*, assumant d'ignorer cette injonction appelant à justifier du caractère utile des maths au sens pratique du terme. En guise de réponse, [Laurent Schwartz](https://fr.wikipedia.org/wiki/Laurent_Schwartz_(math%C3%A9maticien)) répondait quant à lui à cette question par cette cocasse plaisanterie :
 
@@ -632,7 +636,7 @@ Au delà du comique de la circularité[^17], sa réponse concilie à la fois le 
 
 [^20]: Doctrine philosophique de l'utilitarisme de John Stuart Mill.
 
-> Les points de suspension et le nombre croissant de mathématiciens à travers le monde pourraient faire craindre l’extinction du délicieux crustacé. Ces points miment en réalité le cercle herméneutique que la réponse esquisse malicieusement. Les sciences mathématiques n’ont pour objet et seule justification qu’elles-mêmes. La fin ultime de la science est la science, aussi gratuite et non profitable puisse-t-elle paraître aux non-savants dans l’immédiat ou même dans l’absolu. L’intérêt collectif de la recherche semble ici réduit au bon plaisir d’une catégorie de chercheurs qui trouvent dans les retombées de leurs recherches leur bonheur gastronomique et leur alibi (dé)ontologique. Mais la revendication de l’absolu de la recherche scientifique et le rejet ironique de toute forme d’application utilitaire s’appuient en réalité dans l’exemple cité sur une invention, le frigidaire, dont chacun peut comprendre qu’il ne sert pas seulement à garder au frais les décapodes que les sectateurs d’Uranie, nos collègues mathématiciens, aiment tant. Le non-chercheur, exclu ostensiblement du cercle herméneutique, y est en réalité réadmis par le biais d’une application scientifique, d’un produit technologique qui fait aussi son confort depuis un siècle. Le non-spécialiste est ainsi incité à comprendre les exigences de ces mathématiciens qui en cherchant à satisfaire leur plaisir font en réalité l’intérêt de tout le monde.
+> Les points de suspension et le nombre croissant de mathématiciens à travers le monde pourraient faire craindre l’extinction du délicieux crustacé. Ces points miment en réalité le cercle herméneutique que la réponse esquisse malicieusement. Les sciences mathématiques n’ont pour objet et seule justification qu’elles-mêmes. La fin ultime de la science est la science, aussi gratuite et non profitable puisse-t-elle paraître aux non-savants dans l’immédiat ou même dans l’absolu. **L’intérêt collectif de la recherche semble ici réduit au bon plaisir d’une catégorie de chercheurs qui trouvent dans les retombées de leurs recherches leur bonheur gastronomique et leur alibi (dé)ontologique**. Mais la revendication de l’absolu de la recherche scientifique et le rejet ironique de toute forme d’application utilitaire s’appuient en réalité dans l’exemple cité sur une invention, le frigidaire, dont chacun peut comprendre qu’il ne sert pas seulement à garder au frais les décapodes que les sectateurs d’Uranie, nos collègues mathématiciens, aiment tant. **Le non-chercheur, exclu ostensiblement du cercle herméneutique, y est en réalité réadmis par le biais d’une application scientifique, d’un produit technologique qui fait aussi son confort depuis un siècle**. Le non-spécialiste est ainsi incité à comprendre les exigences de ces mathématiciens qui en cherchant à satisfaire leur plaisir font en réalité l’intérêt de tout le monde.
 Mais, dira-t-on, celui de Laurent Schwartz est moins une pratique mathématique qu’un discours second sur sa science, un aphorisme qui ne remet pas en cause les présupposés téléologiques et les exigences de la recherche, la nécessité d’une gratuité absolue. C’est une évidence. Et cependant, comment ne pas remarquer que le mathématicien reconnaît la légitimité de la question, qu’il se sent contraint de donner une réponse qui n’a d’humoristique que le ton, et qu’il concède que le trait d’union avec le monde, qu’opèrent ici les physiciens (c’est-à-dire d’autres chercheurs) à travers la création du réfrigérateur, est une condition et une conséquence des mathématiques. En somme, que les mathématiciens ont aussi besoin de pouvoir profiter de leurs recherches, que la gratuité épistémique n’est pas nécessairement improductive.
 
 Ce qui anime le scientifique, nous dit [@poincare_valeur_2005]  :
@@ -649,15 +653,15 @@ Il y a une [Libido sciendi](https://books.openedition.org/enseditions/24353?lang
 
 > Le plaisir de la découverte des maths dure plus longtemps que le plaisir sexuel. C'est quelque chose qu'on peut expérimenter très tôt, le fait que comprendre vient avec un éblouissement et le plaisir de voir tous les arguments qui s'enchaînent.
 
-Pour ma part, si je souscris également à ces joies intellectuelles, je n'irais tout de même pas jusque là :-) Mais pour rester dans le thème et terminer sur l'utilité je citerais Richard P. Feynman :
+Pour ma part, si je souscris également à ces joies intellectuelles, je n'irais tout de même pas jusque là :-) Mais pour rester dans le thème et terminer sur l'utilité je citerais [Richard Feynman](https://fr.wikipedia.org/wiki/Richard_Feynman) :
 
 > Science is like sex: sometimes something useful comes out, but that is not the reason we are doing it. 
 
-[@nordon_bloc-notes_2007] nous fournira quant à lui une conclusion à la Wittgenstein *"Ce dont on ne peut parler, il faut le taire"* :
+[@nordon_bloc-notes_2007] nous fournira quant à lui une conclusion à la [Wittgenstein](https://fr.wikipedia.org/wiki/Ludwig_Wittgenstein) (*"Ce dont on ne peut parler, il faut le taire"*) :
 
 ![](images/didier-nordon-2007.png)
 
-Dans la consultation nationale du CNRS, nous avions vu qu'à la question de savoir comment rendre les mathématiques plus accessibles, les personnes interrogées répondaient en premier lieu "démontrer l'utilité des mathématiques" (71%), et beaucoup moins souvent "changer la place et la perception des mathématiques" (11%) : 
+Dans la consultation nationale du CNRS, nous avions vu qu'à la question de savoir comment rendre les mathématiques plus accessibles, les personnes interrogées répondaient en premier lieu *"démontrer l'utilité des mathématiques"* (71%), et beaucoup moins souvent *"changer la place et la perception des mathématiques"* (11%) : 
 
 ![](images/consultation-cnrs-rendre-maths-accessible-2.png)
 
@@ -665,7 +669,7 @@ C'est pourtant ce point à mon sens décisif que je vais maintenant aborder.
 
 ### Changer le regard sur les mathématiques
 
-**Avant-propos**
+#### Avant-propos
 
 Je dois dire avant toute chose que je ne suis pas très fan de ce type de formules creuses, telles que : *"Changer le regard sur le handicap"*. Elles me font l'effet d'une sorte d'incantation, de vœu pieux qui donne bonne conscience mais fait l'économie de penser les conditions de possibilités d'un tel changement et sa mise en œuvre par des actions politiques. Il ne suffit pas de décréter le changement de regard, encore faut-il se donner les moyens pour créer les conditions à partir desquelles les préjugés reculeront subséquemment [@rojas__2019] :
 
@@ -679,7 +683,7 @@ Je dois dire avant toute chose que je ne suis pas très fan de ce type de formul
 Si comme nous le verrons nous essayerons de montrer que les mathématiques sont une science vivante et profondément humaine, emplies d'émotions, que l'on peut faire des mathématiques *avec les tripes*, alors il s'agit de prendre ces tripes comme point de départ. Commençons par osculter la population, ses souvenirs et ses émotions.
 
 
-**Les mots pour le dire**
+#### Les mots pour le dire
 
 ![](images/mots-evocation-maths.png)
 
@@ -786,7 +790,7 @@ Si je le rejoins sur notre rapport particulier à l'échec en France expliquant 
 
 Pour ma part, ce qui m'interroge davantage, c'est la différence de perception des mathématiques entre d'un côté les mathématiciens tels qu'ils les pratiquent au quotidien, et de l'autre le reste de la population pour qui elles leur évoquent tout autre chose.
 
-**Un décalage de perception**
+#### Un décalage de perception
 
 Le documentaire français [*Comment j'ai détesté les maths*](https://fr.wikipedia.org/wiki/Comment_j%27ai_d%C3%A9test%C3%A9_les_maths) [@olivier_peyon_comment_2013] sorti en novembre 2013, *"donne la parole à ceux qui ont subi l'enseignement des mathématiques, et l'ont en général détesté, parfois adoré"*. Dès les dix premières minutes, se fait directement ressentir le décalage de perception des mathématiques entre les élèves et les mathématiciens de profession. Voici quelques extraits du point de vue des lycéens :
 
@@ -817,7 +821,7 @@ De la bouche même de Cédric Villani, la colonne de droite est plus *sexy*. Alo
 
 Rembobinons un peu le fil de ces représentations.
 
-**Perception des collégiens et des élèves d'école primaire**
+#### Perception des collégiens et des élèves d'école primaire
 
 [@coppe_perception_2024] ont conçu un questionnaire visant à documenter la perception des mathématiques et de la résolution de problèmes par les élèves de la fin du primaire à la fin du collège à Genève.
 
@@ -889,7 +893,7 @@ Ce clivage provient de la *transposition didactique* : l'institution scolaire pr
 Et s'il fallait réintroduire ces éléments dans l'enseignement des mathématiques pour en donner le goût aux élèves ? Par exemple en faisant des maths en étant décomplexés, décontractés, en jeans quoi !
 
 
-**Maths en jeans**
+#### Maths en jeans
 
 Dans cette émission France culture [Éducation : échec et maths ?
 ](https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/education-echec-et-maths-3258879), à partir de 40min20s, une immersion au coeur du dispositif [MATh.en.JEANS](https://www.mathenjeans.fr/)[^24] :
@@ -932,7 +936,7 @@ Je ne sais pas dans quelle mesure ces dispositifs alternatifs peuvent être int�
 
 Considérons deux examples pour illustrer ces mécanismes.
 
-**Vous ne manquez pas d'aire !**
+#### Vous ne manquez pas d'aire !
 
 Les passages qui suivent sont extraits de [@lockhart2009mathematician].
 
@@ -973,13 +977,11 @@ Réponse : n'importe où sur le côté opposé ! L'aire ne change pas, car la ha
 **En supprimant le processus créatif pour ne conserver que ses résultats, on garantit pratiquement qu’aucun véritable engagement envers le sujet ne pourra naître**. C’est comme si l’on me disait que Michel-Ange a réalisé une magnifique sculpture, sans pour autant me laisser la voir. Comment pourrais-je en tirer la moindre inspiration ? (Et, bien sûr, la situation est en réalité bien pire : ici, on occulte l’existence même de l’art de la sculpture, m’empêchant ainsi de l’apprécier).
 En se concentrant uniquement sur le « quoi » et en délaissant le « pourquoi », les mathématiques sont réduites à une coquille vide. L’art ne réside pas dans la « vérité » en soi, mais dans l’explication, dans le raisonnement. C’est le raisonnement qui donne à la vérité son contexte et qui définit ce qui est réellement exprimé et signifié. **Les mathématiques sont l’art de l’explication**. Si l’on prive les élèves de la possibilité de s’investir dans cette démarche — poser leurs propres problèmes, formuler leurs propres conjectures et découvertes, se tromper, éprouver cette frustration créatrice, connaître un éclair d’inspiration, et élaborer leurs propres conjectures et découvertes, se tromper, éprouver cette frustration créatrice, connaître un éclair d’inspiration, et enfin assembler leurs propres explications et démonstrations —, alors on les prive des mathématiques elles-mêmes. Non, je ne conteste pas la présence de faits et de formules dans nos cours de mathématiques ; **je dénonce l’absence de mathématiques dans nos cours de mathématiques**.
 
-
-
-**Vous êtes sommé de ne pas vous gausser**
+#### Vous êtes sommé de ne pas vous gausser
 
 > En sortant de l’enfance, nous apprenons à craindre d’avoir l’air bêtes. Nous apprenons à avoir honte de nos erreurs. Nous apprenons à dissimuler, y compris à nos propres yeux, le fait que nous ne comprenons presque rien. Pour progresser en mathématiques, c’est ce réflexe de dissimulation qu’il faut apprendre à désactiver. Et c’est très difficile. À l’âge où nous étions encore libres de poser des questions stupides, y compris de poser cent fois de suite la même question stupide, il n’y avait pas de nuls en maths. Les grands mathématiciens inventent et mettent en œuvre des techniques spéciales pour retrouver cette innocence enfantine. Ils déclarent tous que c’est indispensable. [@bessis2022mathematica]
 
-Nous n'allons pas poser cent fois de suite la même question stupide mais une question impliquant 100 fois l'addition stupide d'entiers consécutifs. Et voir ce qui, de cette application bête et méchante, ressort d'intéressant et de beau. Vous avez très certainement déjà entendu cette célèbre anecdote au sujet du "prince des mathématiques". Voici comment est généralement présentée cette histoire. 
+Nous n'allons pas poser cent fois de suite la même question stupide mais une question impliquant 100 fois l'addition stupide d'entiers consécutifs. Et voir ce qui, de cette application bête et méchante, ressort d'intéressant et de beau. Vous avez très certainement déjà entendu cette célèbre anecdote au sujet du *"prince des mathématiques"*. Voici comment est généralement présentée cette histoire. 
 
 Dans les années 1780, un instituteur donna à ses élèves la tâche fastidieuse de calculer la somme des 100 premiers entiers. Celui-ci pensait ainsi avoir la paix pendant un moment, mais un jeune élève donna presque aussitôt la réponse : $$1 + 2 + 3 + ... + 98 + 99 + 100 = {\color{red}5 050}.$$ Ce petit malin n'était autre que [Carl Friedrich Gauss](https://fr.wikipedia.org/wiki/Carl_Friedrich_Gauss), qui allait devenir l'un des plus grands mathématiciens de tous les temps. Gauss n'était pas un génie du calcul mental. Il avait une intuition plus profonde. L'idée est d'écrire la suite deux fois, une fois dans l'ordre et une fois à l'envers : $$S=1 + 2 + 3 + ... + 98 + 99 + 100$$ $$S = 100 + 99 + 98 + ... + 3 + 2 + 1$$  puis d'additionner les éléments correspondants. Par ce groupement, on obtient 100 paquets de 101, soit un total de $100\times 101=10 100$. Et puisque la suite originale a été dupliquée, il faut diviser le total par 2, ce qui donne le résultat de 5050. 
 
@@ -1039,7 +1041,7 @@ Son erreur est informative. Contrairement à Gauss pour lequel nous ne disposion
 
 Simplifions déjà le problème en considérant la somme des 10 premiers entiers consécutifs (dont on peut rapidement se convaincre de tête qu'elle vaut 55). Mais tâchons comme il nous y invite d'essayer de "voir" cette somme, où l'unité est matérialisée par un cube. Alignons comme le ferait un enfant des piles de cubes de hauteurs respectives 1, 2, 3, etc jusqu'à 10. L'image mentale qui vient à l'esprit ressemble maintenant à ceci :
 
-![](images/gauss-legos.png)
+![](images/gauss-legos.png){width=70% fig-align="center"}
 
 Ce n'est plus seulement une égalité : $$ 1+2+3+4+5+6+7+8+9+10={\color{red}55}$$
 
@@ -1047,7 +1049,7 @@ Elle prend corps dans mon esprit de manière structurée à travers cette constr
 
 **Première stratégie**. Si vous demandez à un enfant quelle forme géométrique ça lui évoque, il y a de fortes chances qu'il vous réponde *"un triangle"*, un peu dentelé certes mais un triangle tout de même, dont la base fait 10 de longueur et la hauteur 10 également. Comme chaque cube vaut une unité, la quantité de cubes à l'intérieur de ce triangle correspond à son aire, qui se calcule en multipliant la base par la hauteur, divisé par 2, soit $\frac{10\times 10}{2}=50$. Le compte n'est pas bon, il en manque 5 ! Nous avons commis la même erreur que Bill (*"Mais j’avais oublié que les cases du milieu sont coupées en deux"*) en nous cassant les dents (en rouge saignant) :
 
-![](images/gauss-legos-triangle.png)
+![](images/gauss-legos-triangle.png){width=70% fig-align="center"}
 En ajoutant 10 fois un demi-cube on obtient les 5 cubes restants. Le raisonnement est identique pour 100 cubes, et valable quelque soit le nombre $n$ de cubes. L'escalier est plus grand mais est toujours composé d'un triangle de base $n$ et de hauteur $n$, donc d'aire $\frac{n^2}{2}$ à laquelle il faut ajouter $n$ demi-cubes, d'où un total de $\frac{n^2}{2}+\frac{n}{2}=\frac{n(n+1)}{2}$.
 
 > « Les mathématiciens ont tendance à considérer qu’une démonstration est terminée dès lors qu’ils sentent que la bonne image s’est formée dans leur tête, comme les joueurs d’échecs arrêtent les parties sans aller jusqu’au mat, parce qu’ils reconnaissent qu’une position est gagnante. [@bessis2022mathematica]
@@ -1119,7 +1121,8 @@ Léo est appelé par son $n+1$ qui l'informe qu'il ne dispose que 4 heures de sa
 
 **Seconde stratégie**. Une autre manière très intuitive de résoudre le problème consiste à dupliquer le triangle bleu en un triangle orange et à les emboiter comme des légos pour former un rectangle de largeur $n$ et de hauteur $n+1$, contenant donc $n(n+1)$ cubes (qui est un nombre toujours pair). On en déduit que le triangle bleu contient $\color{red}\frac{n (n + 1)}{2}$ cubes.
 
-![](images/gauss-rectangle.png)
+![](images/gauss-rectangle.png){width=70% fig-align="center"}
+
 Cette image mentale est en réalité celle associée à "l'astuce" des sommes écrites dans un sens et dans l'autre puis additionnées :
 
 $$\color{blue} S=1 + 2 + 3 + ... + 98 + 99 + 100$$ 
