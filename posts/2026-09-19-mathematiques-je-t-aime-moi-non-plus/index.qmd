@@ -374,23 +374,11 @@ Dans cette section je passe en revue une liste d'explications non exhaustive du 
 <!-- ### Peur de passer pour un con -->
 
 
-## Perception des mathématiques
 
-Pour jauger l'intérêt des mathématiques nous avions suivi le fil chronologique du cursus scolaire (de l'école primaire aux études supérieures en passant par le secondaire), enregistrant une baisse d'appétence progressive pour la matière. Pour rendre compte de la perception des mathématiques et de son évolution, nous allons maintenant adopter la démarche opposée en partant des représentations des adultes une fois constituées, puis remonter le fil jusqu'à la petite école.
 
-### Consultation nationale : "Aux maths citoyennes, citoyens !"
+## Les maths, à quoi  ça sert ?
 
-Organisé par l’[Insmi](https://www.insmi.cnrs.fr/fr)[^14] du 10 mars au 30 avril 2025, le [questionnaire en ligne](https://www.insmi.cnrs.fr/fr/cnrsinfo/le-questionnaire-en-ligne) *« Aux maths citoyennes, citoyens ! Grande consultation nationale »* a recueilli plus d’1,1 million de contributions par plus de **33 000 participantes et participants !** L’objectif était de récolter les perceptions, les représentations, les émotions et envies des citoyennes et citoyens au sujet des mathématiques. 
-
-[^14]: Institut national des sciences mathématiques et de leurs interactions.
-
-![](images/cnrs-consultation-aux-maths-citoyennes-citoyens.jpg)
-
-> À noter : les personnes ayant répondu à cette consultation en ligne ne sont pas strictement représentatives de l’ensemble de la population française [...] forte participation des cadres et des professions intellectuelles supérieures (57% des répondantes et répondants à la consultation vs 22% de la population en emploi en France). Par ailleurs, 71% des répondantes et répondants déclarent se sentir soit très à l’aise soit plutôt à l’aise avec les mathématiques.
-
-### Les maths ça sert à quoi ?
-
-[Christophe Besse](https://www.math.univ-toulouse.fr/~cbesse/), directeur de l’[Insmi](https://www.insmi.cnrs.fr/fr), fut invité sur France Inter dans le but de parler de la consultation citoyenne dont l'un des objectifs était de *"comprendre pourquoi on entend souvent 'j'ai détesté les maths'"*
+[Christophe Besse](https://www.math.univ-toulouse.fr/~cbesse/), directeur de l’[Insmi](https://www.insmi.cnrs.fr/fr), fut invité sur France Inter dans le but de parler d'une [consultation citoyenne](#consultation-citoyenne) dont l'un des objectifs était de *"comprendre pourquoi on entend souvent 'j'ai détesté les maths'"*
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J4mzZwPE4R8?si=FREnc-h0HqxNabeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -404,7 +392,7 @@ puis il ajoute :
 
 > ... alors qu'en fait les maths on les vit tous les jours dans notre quotidien, on en a **tous les jours besoin**. Par exemple pour les sondages, pour l'intelligence artificielle, pour la radio numérique, tout cela c'est des maths **sans que l'on s'en rende compte**. Quand on va payer avec sa carte bancaire c'est des maths il y a de la cryptographie **derrière**.
 
-#### Malentendu sur la notion d'utilité 
+### Malentendu sur la notion d'utilité 
 
 Les passages que j'ai souligné en gras me semblent révélateur de la confusion entretenue entre ces deux questions : 
 
@@ -423,7 +411,7 @@ Ce à quoi Christophe Besse répondra que pour savoir si les soldes sont intére
 
 La question que se posent les non-scientifiques est celle de savoir à quoi leur servent *dans leur quotidien* des mathématiques plus élaborées introduites progressivement au collège, comme la démonstration géométrique ou la résolution d'équation. Force est de reconnaître que peu de personnes mettent en application ces mathématiques au quotidien. On peut fort heureusement vivre convenablement et mener une existence heureuse sans avoir à résoudre d'équations. 
 
-#### Division du travail et adaptation
+### Division du travail et adaptation
 
 L'environnement technologique dans lequel nous évoluons, développé par les scientifiques et techniciens, via la division du travail, exempte la majeure partie de la population d'avoir à maitriser les sciences qui rendent possibles ce confort. Il en va de même pour la médecine dont on délègue aux soignants la responsabilité de s'occuper de notre santé, et on fait l'impasse sur la chimie (qui ne sert pas non dans la vie quotidienne) qui permet de fabriquer les médicaments dont on a besoin. Plus difficile serait de se passer d'apprendre à lire ou à compter, dans un environnement qui est saturé de mots et de nombres. Il reste plus handicapant[^18] de ne pas savoir lire dans une société où une myriade de choses et d'actions sont dépendantes des écrits et symboles qui nous entourent. L'utilité de savoir lire est ainsi liée au contexte. Dans [@bessis2022mathematica] on peut y lire :
 
@@ -439,7 +427,7 @@ En plus des raisons structurelles du désamour des mathématiques déjà évoqu�
 
 Et quand ça n'est pas seulement les élèves mais aussi un ancien ministre de l'éducation qui n'y voit pas l'intérêt, cela ne facilite pas la tâche.
 
-#### La polémique de Luc Ferry
+### La polémique de Luc Ferry
 
 Le 15 février 2018 sur LCI, [Luc Ferry](https://fr.wikipedia.org/wiki/Luc_Ferry), ancien ministre de l'éducation déclarait :
 
@@ -489,7 +477,7 @@ Ainsi la densité de faux est de 0,99 et donc l'énoncé $e$ portant sur cette f
 
 Trêve de plaisanterie, faisons preuve de charité intellectuelle à l'égard de Luc Ferry, et admettons qu'il fasse une distinction (discutable nous y reviendrons dans la dernière partie) entre mathématiques pratiques dans l'usage quotidien (calculs, pourcentages) et mathématiques dites "spéculatives" [@apmep_editorial_2004]. Ce qu'il veut signifier, c'est qu'un certain nombre de notions mathématiques qu'il range dans cette seconde catégorie (les identités remarquables, les cas d'égalité des triangles, la démonstration géométrique, la résolution d'équations, etc) sont rarement mobilisées dans la vie quotidienne de la plupart des citoyens. Et sur ce point je pense qu'on peut lui donner raison. 
 
-#### Le règne de l'utile
+### Le règne de l'utile
 
 Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie un signal où il signifie que tout le contenu mathématiques du secondaire qui est rarement appliqué ne sert donc à rien si ce n'est aux "matheux", contrairement aux autres que cela ennuie [@le_huffpost_epingle_2018]. Ce qui sert *in fine* la soupe à ceux qui clâment haut et fort que *"les maths ça ne sert à rien"*[^26], pour eux, puisqu'il conclut en fin d'interview (au sujet du rapport Villani) par :
 
@@ -515,7 +503,7 @@ Gage de son efficacité ("apprendre à apprendre"), la sélection par les mathé
 L'anecdote de [Jean Stobée](https://fr.wikipedia.org/wiki/Jean_Stob%C3%A9e) est amusante, elle rapporte l'histoire suivante [@oconnor_euclid_1999]. Un élève qui venait de commencer l'étude de la géométrie avec [Euclide](https://fr.wikipedia.org/wiki/Euclide) lui demanda : *"Mais quel profit vais-je tirer de l'apprentissage de ces choses ?"*. Euclide appela alors son esclave et lui dit :
 *"Donne-lui trois pièces de monnaie, puisqu'il lui faut absolument tirer un profit de ce qu'il apprend"*. Cette histoire illustre la vision qu'avaient les mathématiciens grecs de leur discipline, où primait la recherche du savoir pur. Pour Euclide la géométrie possède une valeur intellectuelle et philosophique intrinsèque. Elle n'a pas besoin d'avoir une application ou un gain financier immédiat pour mériter d'être apprise.
 
-#### L'autonomie du sujet
+### L'autonomie du sujet
 
 Faudrait-il arrêter d'enseigner au collège la démonstration géométrique ou la résolution d'équation, ou seulement exclusivement à ceux qui se destinent à des études scientifiques, au seul motif qu'elles sont moins utiles pour le citoyen lambda dans la plupart de ses activités quotidiennes ? Non, car on peut y trouver d'autres intérêts qui ne sont pas purement *utilitaires* mais relèvent en définitive de la formation de l'esprit, de l'exercice de la rigueur de la démonstration, du développement de l'esprit critique, de la montée en abstraction ou encore de l'appropriation d'une culture scientifique. 
 
@@ -550,9 +538,9 @@ Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, in
 > L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?  
 > Jean-Rémi Girard : Chaque chose en son temps. **Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée**. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que **tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire**, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
 
-#### L'utilité comme motivation ?
+### L'utilité comme motivation ?
 
-L'utilité des mathématiques a été souvent mentionnée dans les réponses à la grande consultation nationale :
+L'utilité des mathématiques a été souvent mentionnée dans les réponses à la [grande consultation nationale](#consultation-citoyenne) :
 
 ```{=html}
 <div id="carouselExample" class="carousel slide">
@@ -610,7 +598,7 @@ Néanmoins cela n'arrive pas tous les quatre matins. Je ne suis pas certain que 
 
 Nous avons donc souvent tendance, nous autres mathématiciens, à vouloir convaincre les néophytes de l'intérêt des mathématiques en insistant sur leur utilité, tournée vers l'extérieur donc, car on présuppose que c'est ce qui est susceptible de pouvoir les intéresser et de les motiver; alors même que **notre propre intérêt et motivation sont en premier lieu intrinsèques à la discipline**, les applications constituant autant de cerises sur le gâteau. 
 
-#### La motivation intrinsèque des maths
+### La motivation intrinsèque des maths
 
 Entendons nous bien, je suis moi-même le premier à motiver mes cours de maths par des exemples d'applications, avec ce souci de montrer que les maths ne sont pas déconnectées du réel et faire part de leur déraisonnable efficacité [@wigner1990unreasonable]. Mais est-ce suffisant de désigner des buts applicatifs pour donner le goût de *faire des mathématiques* et de maintenir une motivation durable ? Je ne le pense pas. Il faut bien qu'à un moment la motivation devienne intrinsèque à la discipline et non pas seulement extrinsèque. C'est comme vouloir apprendre la guitare pour draguer, ça peut motiver un temps pour apprendre à gratter quelques accords, mais ça n'amènera jamais personne au niveau d'un musicien confirmé -- prêt à consentir à faire des gammes et à répéter pendant des heures pour s'améliorer -- si le plaisir pour la musique elle-même n'est pas le maître-mot. 
 
@@ -624,7 +612,7 @@ Voyons ce qu'en dit [@broue_jean-pierre_2006] à propos de [Jean-Pierre Serre](h
 
 
 
-#### Les maths servent à tout et rien
+### Les maths servent à tout et rien
 
 D'un côté donc des mathématiciens qui s'évertuent à vouloir montrer que les maths *servent dans tout et partout* (puisque s'immisçant jusque dans nos téléphones, cartes bancaires, etc); de l'autre des mathématiciens qui à la question *"les maths à quoi ça sert ?"* répondent simplement *"à rien"*, assumant d'ignorer cette injonction appelant à justifier du caractère utile des maths au sens pratique du terme. En guise de réponse, [Laurent Schwartz](https://fr.wikipedia.org/wiki/Laurent_Schwartz_(math%C3%A9maticien)) répondait quant à lui à cette question par cette cocasse plaisanterie :
 
@@ -661,29 +649,24 @@ Pour ma part, si je souscris également à ces joies intellectuelles, je n'irais
 
 ![](images/didier-nordon-2007.png)
 
-Dans la consultation nationale du CNRS, nous avions vu qu'à la question de savoir comment rendre les mathématiques plus accessibles, les personnes interrogées répondaient en premier lieu *"démontrer l'utilité des mathématiques"* (71%), et beaucoup moins souvent *"changer la place et la perception des mathématiques"* (11%) : 
+## Perception des mathématiques
 
-![](images/consultation-cnrs-rendre-maths-accessible-2.png)
+Pour jauger l'intérêt des mathématiques nous avions dans un premier temps suivi le fil chronologique du cursus scolaire (de l'école primaire aux études supérieures en passant par le secondaire), enregistrant une baisse d'appétence progressive pour la matière. Nous avons ensuite énuméré différentes raisons de ce désamour qui détournent les élèves des mathématiques, créant ainsi deux groupes : ceux qui aiment les maths et y trouvent *de* l'intérêt, et ceux qui n'aiment pas/plus et y cherchent *un* intérêt. Pour rendre compte de la différence de perception des mathématiques et de son évolution, nous allons maintenant adopter la démarche opposée en partant des représentations des adultes une fois constituées, puis remonter le fil jusqu'à la petite école. Examiner les préjugés permettra de diagnostiquer ce qui dans les conditions actuelles les (re)produit. Nous tâcherons de montrer que les mathématiques sont une science vivante et profondément humaine, emplies d'émotions, que l'on peut faire des mathématiques *avec les tripes*. Il s'agit donc de prendre ces tripes comme point de départ. Commençons par osculter la population, ses souvenirs et ses émotions.
 
-C'est pourtant ce point à mon sens décisif que je vais maintenant aborder.
+### Consultation nationale : "Aux maths citoyennes, citoyens !" {#consultation-citoyenne}
 
-### Changer le regard sur les mathématiques
+Organisé par l’[Insmi](https://www.insmi.cnrs.fr/fr)[^14] du 10 mars au 30 avril 2025, le [questionnaire en ligne](https://www.insmi.cnrs.fr/fr/cnrsinfo/le-questionnaire-en-ligne) *« Aux maths citoyennes, citoyens ! Grande consultation nationale »* a recueilli plus d’1,1 million de contributions par plus de **33 000 participantes et participants !** L’objectif était de récolter les perceptions, les représentations, les émotions et envies des citoyennes et citoyens au sujet des mathématiques. 
 
-#### Avant-propos
+[^14]: Institut national des sciences mathématiques et de leurs interactions.
 
-Je dois dire avant toute chose que je ne suis pas très fan de ce type de formules creuses, telles que : *"Changer le regard sur le handicap"*. Elles me font l'effet d'une sorte d'incantation, de vœu pieux qui donne bonne conscience mais fait l'économie de penser les conditions de possibilités d'un tel changement et sa mise en œuvre par des actions politiques. Il ne suffit pas de décréter le changement de regard, encore faut-il se donner les moyens pour créer les conditions à partir desquelles les préjugés reculeront subséquemment [@rojas__2019] :
+![](images/cnrs-consultation-aux-maths-citoyennes-citoyens.jpg)
 
-> Il m’apparait que cette expression **confond de surcroît les causes et les conséquences** de l’exclusion et des discriminations que subissent les personnes handicapées. Les préjugés s’ils existent (et ils existent) ne sont pas la cause mais plutôt la conséquence, et souvent même la justification après-coup, d’une organisation excluante. **Ce n’est donc pas le regard qu’il faut changer mais préalablement l’organisation sociale**, qui pour le moment est pensée par des personnes valides pour des personnes valides sans tenir compte de notre existence. Si ce changement d’organisation nous permettait de devenir vos voisins de pallier ou de bus, vos camarades de classes, vos collègues, vos potes, vos partenaires de karaoké ou de yoga, vos partenaires tout court, vos conjoints etc. il y a des chances que vous finissiez par nous « regarder » ou nous appréhender différemment. Il y a des chances que vous vous aperceviez que nous vous ressemblons plus que vous ne l’imaginiez, que vous compreniez un peu mieux nos difficultés, que vous réalisiez que ce vous pensiez savoir sur le handicap n’est pas vrai et que vous changiez certains de vos réflexes ou de vos habitudes à notre égard. Du moins, c’est l’espoir délirant que certains d’entre nous nourrissent, tout en ayant conscience que ce sera long, ni magique, ni automatique. Enfin, « changer le regard » sur le handicap ne veut strictement rien dire politiquement. **Cette expression ne correspond à aucune action ou mesure sérieuse**. Elle n’est pas et ne peut pas être **un objectif politique**.
-
-*"Changer le regard sur les mathématiques"* sera donc une conséquence souhaitée, mais pour se faire il nous faut préalablement : 
-
-1. Examiner les préjugés, afin de diagnostiquer ce qui dans les conditions actuelles les (re)produit;  
-2. Agir sur ces conditions, en particulier sur la manière dont les élèves abordent les mathématiques et surtout les pratiquent.
-
-Si comme nous le verrons nous essayerons de montrer que les mathématiques sont une science vivante et profondément humaine, emplies d'émotions, que l'on peut faire des mathématiques *avec les tripes*, alors il s'agit de prendre ces tripes comme point de départ. Commençons par osculter la population, ses souvenirs et ses émotions.
+> À noter : les personnes ayant répondu à cette consultation en ligne ne sont pas strictement représentatives de l’ensemble de la population française [...] forte participation des cadres et des professions intellectuelles supérieures (57% des répondantes et répondants à la consultation vs 22% de la population en emploi en France). Par ailleurs, 71% des répondantes et répondants déclarent se sentir soit très à l’aise soit plutôt à l’aise avec les mathématiques.
 
 
-#### Les mots pour le dire
+
+
+### Les mots pour le dire
 
 ![](images/mots-evocation-maths.png)
 
@@ -790,7 +773,7 @@ Si je le rejoins sur notre rapport particulier à l'échec en France expliquant 
 
 Pour ma part, ce qui m'interroge davantage, c'est la différence de perception des mathématiques entre d'un côté les mathématiciens tels qu'ils les pratiquent au quotidien, et de l'autre le reste de la population pour qui elles leur évoquent tout autre chose.
 
-#### Un décalage de perception
+### Un décalage de perception
 
 Le documentaire français [*Comment j'ai détesté les maths*](https://fr.wikipedia.org/wiki/Comment_j%27ai_d%C3%A9test%C3%A9_les_maths) [@olivier_peyon_comment_2013] sorti en novembre 2013, *"donne la parole à ceux qui ont subi l'enseignement des mathématiques, et l'ont en général détesté, parfois adoré"*. Dès les dix premières minutes, se fait directement ressentir le décalage de perception des mathématiques entre les élèves et les mathématiciens de profession. Voici quelques extraits du point de vue des lycéens :
 
@@ -821,7 +804,7 @@ De la bouche même de Cédric Villani, la colonne de droite est plus *sexy*. Alo
 
 Rembobinons un peu le fil de ces représentations.
 
-#### Perception des collégiens et des élèves d'école primaire
+### Perception des collégiens et des élèves d'école primaire
 
 [@coppe_perception_2024] ont conçu un questionnaire visant à documenter la perception des mathématiques et de la résolution de problèmes par les élèves de la fin du primaire à la fin du collège à Genève.
 
@@ -890,10 +873,23 @@ Ce clivage provient de la *transposition didactique* : l'institution scolaire pr
 > Or, pour comprendre une théorie, il ne suffit pas de constater que le chemin que l’on a suivi n’est pas coupé par un obstacle, il faut se rendre compte des raisons qui l’ont fait choisir. Pourra-t-on donc jamais dire qu’on comprend une théorie si on veut lui donner d’emblée sa forme définitive, celle que la logique impeccable lui impose, sans qu’il reste aucune trace des tâtonnements qui y ont conduit
 ? Non, on ne la comprendra pas réellement, on ne pourra même la retenir, ou on ne la retiendra qu’à force de l’apprendre par coeur. [@poincare_logique_1889]
 
-Et s'il fallait réintroduire ces éléments dans l'enseignement des mathématiques pour en donner le goût aux élèves ? Par exemple en faisant des maths en étant décomplexés, décontractés, en jeans quoi !
+Et s'il fallait réintroduire ces éléments dans l'enseignement des mathématiques pour en donner le goût aux élèves ? 
 
+Dans la consultation nationale du CNRS, nous avions vu qu'à la question de savoir comment rendre les mathématiques plus accessibles, les personnes interrogées répondaient en premier lieu *"démontrer l'utilité des mathématiques"* (71%), et beaucoup moins souvent *"changer la place et la perception des mathématiques"* (11%) : 
 
-#### Maths en jeans
+![](images/consultation-cnrs-rendre-maths-accessible-2.png)
+
+## Changer le regard sur les mathématiques
+
+### Avant-propos
+
+Je dois dire avant toute chose que je ne suis pas très fan de ce type de formules creuses, telles que : *"Changer le regard sur le handicap"*. Elles me font l'effet d'une sorte d'incantation, de vœu pieux qui donne bonne conscience mais fait l'économie de penser les conditions de possibilités d'un tel changement et sa mise en œuvre par des actions politiques. Il ne suffit pas de décréter le changement de regard, encore faut-il se donner les moyens pour créer les conditions à partir desquelles les préjugés reculeront subséquemment [@rojas__2019] :
+
+> Il m’apparait que cette expression **confond de surcroît les causes et les conséquences** de l’exclusion et des discriminations que subissent les personnes handicapées. Les préjugés s’ils existent (et ils existent) ne sont pas la cause mais plutôt la conséquence, et souvent même la justification après-coup, d’une organisation excluante. **Ce n’est donc pas le regard qu’il faut changer mais préalablement l’organisation sociale**, qui pour le moment est pensée par des personnes valides pour des personnes valides sans tenir compte de notre existence. Si ce changement d’organisation nous permettait de devenir vos voisins de pallier ou de bus, vos camarades de classes, vos collègues, vos potes, vos partenaires de karaoké ou de yoga, vos partenaires tout court, vos conjoints etc. il y a des chances que vous finissiez par nous « regarder » ou nous appréhender différemment. Il y a des chances que vous vous aperceviez que nous vous ressemblons plus que vous ne l’imaginiez, que vous compreniez un peu mieux nos difficultés, que vous réalisiez que ce vous pensiez savoir sur le handicap n’est pas vrai et que vous changiez certains de vos réflexes ou de vos habitudes à notre égard. Du moins, c’est l’espoir délirant que certains d’entre nous nourrissent, tout en ayant conscience que ce sera long, ni magique, ni automatique. Enfin, « changer le regard » sur le handicap ne veut strictement rien dire politiquement. **Cette expression ne correspond à aucune action ou mesure sérieuse**. Elle n’est pas et ne peut pas être **un objectif politique**.
+
+*"Changer le regard sur les mathématiques"* sera donc une conséquence souhaitée, mais ce n'est qu'à travers une certaine *praxis* que pourra s'opérer ce changement. Par exemple en faisant des maths de manière décomplexée, décontractée, en jeans quoi !
+
+### Maths en jeans
 
 Dans cette émission France culture [Éducation : échec et maths ?
 ](https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/education-echec-et-maths-3258879), à partir de 40min20s, une immersion au coeur du dispositif [MATh.en.JEANS](https://www.mathenjeans.fr/)[^24] :
@@ -934,7 +930,9 @@ Je ne sais pas dans quelle mesure ces dispositifs alternatifs peuvent être int�
 
 >  Les mathématiques ne sont pas condamner à diviser la population entre initiés et exclus. Dépasser le clivage entre "vaincus" et "convaincus" demande de repenser en profondeur la perception de ce que signifie "faire des mathématiques", et de plonger au coeur même des mécanismes de la pensée. [@duminil-copin_autre_2026] 
 
-Considérons deux examples pour illustrer ces mécanismes.
+Considérons deux examples pour illustrer ces mécanismes et entrevoir les mathématiques comme *"science de l'imagination"*.
+
+### Deux exemples convoquant l'imagination
 
 #### Vous ne manquez pas d'aire !
 
@@ -1144,6 +1142,8 @@ On comprend mieux ce qui a pu se passer dans la tête de Gauss ou de Thurston. O
 
 En d'autres termes, même sous les formules les plus absconces que vous pourriez rencontrer, il y a des idées intuitives qui ont guidé les mathématiciens. Ces images mentales, formées dans leur tête, ne nous sont pas accessibles directement. Toute la difficulté est, à partir des formules que nous lisons, de nous forger nos propres représentations, jusqu'à ce que cela nous paraisse être une "évidence".
 
+> Pour s’en rendre compte [...] Combien de temps mettez-vous à visualiser ce que vous faites quand vous faites vos lacets ? Deux secondes ? Trois ? Maintenant prenez un papier et un crayon et essayez de décrire exactement en quoi consiste le mouvement, d’une façon telle qu’un débutant complet pourra suivre vos instructions et arriver au même résultat. La version la plus difficile de l’exercice consiste à n’utiliser que des mots. Mais la version facile, en s’autorisant les dessins, est déjà très difficile. Prendre la mesure de cette difficulté, c’est comprendre quelque chose de fondamental et de profondément réconfortant : un texte mathématique peut avoir l’air horriblement compliqué et pourtant n’exprimer que des idées très simples. [@bessis2022mathematica]
+
 A COMPLETER
 
 <!-- **Nos cerveaux sont des boites noires** -->
@@ -1153,16 +1153,6 @@ A COMPLETER
 <!-- > Pour transcrire leurs idées, les mathématiciens ont dû inventer ce langage hermétique et ces symboles indéchiffrables, tout comme les musiciens ont dû inventer cette notation musicale hermétique pour transcrire leurs compositions. Sauf que les musiciens disposent d’un énorme avantage pratique : il leur suffit de jouer leur musique pour que tout le monde comprenne immédiatement de quoi il s’agit, sans avoir besoin de déchiffrer la partition. Le gros problème des mathématiciens, c’est qu’ils n’ont pas cette option. Dans leur tête, les idées sont lumineuses, simples et puissantes. Sur le papier, elles deviennent tristes et rabougries. Leur malédiction, c’est de ne pouvoir jouer les mathématiques que dans leur tête. -->
 
 <!-- > Si on initiait les enfants à la musique en leur donnant à déchiffrer des partitions de Mozart ou de Michael Jackson sans jamais rien leur faire écouter, la musique serait aussi universellement haïe que le sont les mathématiques. -->
-
-<!-- **Gestes invisibles dans nos têtes** -->
-
-<!-- > La pratique des mathématiques est une activité physique. Pour comprendre ce qu’on ne comprend pas, il faut effectuer dans sa tête les gestes silencieux, invisibles mais indispensables, qui permettront d’enrichir son intuition et de développer de nouvelles représentations mentales, plus profondes et plus puissantes. C’est une activité qui nous renforce et nous épanouit. Apprendre à faire des mathématiques, c’est apprendre à se servir de son corps. C’est comme apprendre à marcher, nager, danser ou faire du vélo.  -->
-
-<!-- > Personne ne leur a dit que les mathématiques étaient une activité physique. Personne ne leur a dit que, en mathématiques, il n’y avait pas des choses à apprendre mais des choses à faire.Ils ne prennent pas la cuillère du bon côté, parce que personne ne leur a expliqué comment faire, et parce qu’ils n’ont jamais vu personne la prendre du bon côté.Les phrases qui sont prononcées pendant un cours de maths ne sont pas des informations qu’il faut retenir. Ce sont des consignes et des indications pour des gestes invisibles que chacun doit accomplir secrètement dans sa tête.Suivre un cours de maths comme on suit un cours d’histoire ou de biologie, c’est aussi absurde que de prendre des notes pendant un cours de yoga, soigneusement, pour être sûr de ne rien oublier. Si vous ne faites jamais le moindre exercice de respiration, ça ne sert strictement à rien. -->
-
-<!-- Reprenons la métaphore du saut en hauteur : -->
-
-<!-- > Mais plutôt que par calcul, c’est par introspection, en portant une grande attention à l’écoute de son corps et en se concentrant sur les gestes qui lui permettaient de plus facilement franchir la barre, qu’il a graduellement découvert sa méthode. L’approche de Fosbury était à la fois volontariste et méditative. [...] Ses premières interviews montrent qu’il ne mesurait pas encore la portée de sa découverte : « J’imagine que pas mal de gamins vont maintenant essayer de sauter à ma façon. Je ne garantis pas les résultats, et je ne recommande mon style à personne. »Mais tout le monde l’a imité. Dès les Jeux olympiques suivants, en 1972, sa technique est devenue la norme. Depuis plus de quarante ans, chaque fois que le record du monde de saut en hauteur a été battu, il l’a été grâce à la technique de Fosbury. [...] Pour comprendre cette difficulté, imaginez une version invisible du saut en hauteur qui se pratiquerait sans témoins ni caméras, dans une salle vide, et dont les compétitions seraient jugées par des appareils électroniques qui vérifient que la barre est franchie sans rien enregistrer de la technique du sauteur.Comment Fosbury aurait-il pu raconter son histoire ?Tout le monde aurait été convaincu qu’il était génétiquement programmé pour sauter plus haut que tout le monde. [...] Pour quelqu’un qui n’a jamais vu personne le faire, apprendre à sauter comme Fosbury est presque aussi dur que de l’inventer soi-même. Même avec des indications détaillées, ça pose d’énormes difficultés. « Jetez-vous en l’air sur le dos, la tête la première. » Vraiment ? Et pourquoi toutes ces pages de préliminaires sur la trajectoire de la course d’élan et le basculement de l’axe du corps à l’approche de la barre ? Pourquoi ce langage technique ? Est-ce vraiment nécessaire ? Apprendre un geste, c’est le comprendre au-delà des mots. C’est le sentir dans son propre corps. C’est le trouver naturel et intuitif. -->
 
 <!-- **Représentations mentales** -->
 
@@ -1175,12 +1165,43 @@ A COMPLETER
 <!-- > Ouvrir un livre de maths sur un sujet auquel vous ne comprenez rien, c’est un peu comme se retrouver assis au poste de pilotage d’un avion de ligne ou d’une centrale nucléaire. La réaction normale, c’est de rester sagement assis et surtout de ne toucher à rien. Avant de toucher, vous devez étudier et réfléchir.Mais si vous mettez un enfant de deux ans dans un poste de pilotage, il réagira autrement. Il appuiera sur tous les boutons, en commençant par les rouges et par ceux qui clignotent.La recommandation de Grothendieck est de faire comme l’enfant de deux ans. Quand il veut comprendre quelque chose, il tente sa chance directement, sans complexe, comme le ferait un petit enfant. Il n’attend pas d’avoir compris pour se lancer. Grothendieck fait autrement. Il sait que ça ne sert à rien d’accumuler des informations sur des choses qu’on n’arrive pas à voir. Au lieu de cela, il s’autorise à imaginer les choses tout de suite, sans attendre, y compris quand il sait pertinemment qu’il n’y arrivera pas et que sa façon de les imaginer sera grotesquement fausse.Il n’a aucune peur de se tromper. Il a même la certitude qu’il va se tromper et c’est exactement ce qu’il recherche.Grothendieck recherche activement l’erreur, comme le petit enfant recherche activement les bêtises à faire. Dans sa découverte du monde mathématique, chaque fois qu’il sent quelque chose de bizarre ou d’intrigant, de pas clair ou de pas satisfaisant, d’incohérent ou de désagréable, il creuse dans cette direction. « Craindre l’erreur et craindre la vérité est une seule et même chose. Celui qui craint de se tromper est impuissant à découvrir. C’est quand nous craignons de nous tromper que l’erreur qui est en nous se fait immuable comme un roc. » -->
 
 
+<!-- **Gestes invisibles dans nos têtes** -->
+
+<!-- > La pratique des mathématiques est une activité physique. Pour comprendre ce qu’on ne comprend pas, il faut effectuer dans sa tête les gestes silencieux, invisibles mais indispensables, qui permettront d’enrichir son intuition et de développer de nouvelles représentations mentales, plus profondes et plus puissantes. C’est une activité qui nous renforce et nous épanouit. Apprendre à faire des mathématiques, c’est apprendre à se servir de son corps. C’est comme apprendre à marcher, nager, danser ou faire du vélo.  -->
+
+<!-- > Personne ne leur a dit que les mathématiques étaient une activité physique. Personne ne leur a dit que, en mathématiques, il n’y avait pas des choses à apprendre mais des choses à faire.Ils ne prennent pas la cuillère du bon côté, parce que personne ne leur a expliqué comment faire, et parce qu’ils n’ont jamais vu personne la prendre du bon côté.Les phrases qui sont prononcées pendant un cours de maths ne sont pas des informations qu’il faut retenir. Ce sont des consignes et des indications pour des gestes invisibles que chacun doit accomplir secrètement dans sa tête.Suivre un cours de maths comme on suit un cours d’histoire ou de biologie, c’est aussi absurde que de prendre des notes pendant un cours de yoga, soigneusement, pour être sûr de ne rien oublier. Si vous ne faites jamais le moindre exercice de respiration, ça ne sert strictement à rien. -->
+
+<!-- Reprenons la métaphore du saut en hauteur : -->
+
+<!-- > Mais plutôt que par calcul, c’est par introspection, en portant une grande attention à l’écoute de son corps et en se concentrant sur les gestes qui lui permettaient de plus facilement franchir la barre, qu’il a graduellement découvert sa méthode. L’approche de Fosbury était à la fois volontariste et méditative. [...] Ses premières interviews montrent qu’il ne mesurait pas encore la portée de sa découverte : « J’imagine que pas mal de gamins vont maintenant essayer de sauter à ma façon. Je ne garantis pas les résultats, et je ne recommande mon style à personne. »Mais tout le monde l’a imité. Dès les Jeux olympiques suivants, en 1972, sa technique est devenue la norme. Depuis plus de quarante ans, chaque fois que le record du monde de saut en hauteur a été battu, il l’a été grâce à la technique de Fosbury. [...] Pour comprendre cette difficulté, imaginez une version invisible du saut en hauteur qui se pratiquerait sans témoins ni caméras, dans une salle vide, et dont les compétitions seraient jugées par des appareils électroniques qui vérifient que la barre est franchie sans rien enregistrer de la technique du sauteur.Comment Fosbury aurait-il pu raconter son histoire ?Tout le monde aurait été convaincu qu’il était génétiquement programmé pour sauter plus haut que tout le monde. [...] Pour quelqu’un qui n’a jamais vu personne le faire, apprendre à sauter comme Fosbury est presque aussi dur que de l’inventer soi-même. Même avec des indications détaillées, ça pose d’énormes difficultés. « Jetez-vous en l’air sur le dos, la tête la première. » Vraiment ? Et pourquoi toutes ces pages de préliminaires sur la trajectoire de la course d’élan et le basculement de l’axe du corps à l’approche de la barre ? Pourquoi ce langage technique ? Est-ce vraiment nécessaire ? Apprendre un geste, c’est le comprendre au-delà des mots. C’est le sentir dans son propre corps. C’est le trouver naturel et intuitif. -->
+
+
+
 <!-- **Formalisme vs. intuition** -->
+
+<!-- symbolisme carré -->
+
+
+
+<!-- 7:27 "Education échec et maths" : Euclide formalisme vs créativité geste audacieux -->
+
+<!-- La logique ne sert pas à penser. Elle sert à découvrir à quel endroit on pense faux.Quand Grothendieck lance des « coups de sonde » pour interroger les objets qu’il veut appréhender, c’est l’écriture qui lui donne la réponse.« Souvent, il suffisait de l’écrire pour que ça saute aux yeux que c’est faux, alors qu’avant de l’écrire il y avait un flou, comme un malaise, au lieu de cette évidence. »« Ça permet maintenant de revenir à la charge avec cette ignorance en moins, avec une question-affirmation peut-être un peu moins “à côté de la plaque”.  -->
+
+<!-- Le rôle de l’écriture n’est pas de consigner les résultats d’une recherche, mais bien le processus même de la recherche. »« Je n’ai jamais lésiné pour arriver à cerner de façon aussi méticuleuse que possible, au moyen du langage mathématique, ces images et l’appréhension qu’elles donnent. »« C’est dans cet effort continuel de formuler l’informulé, de préciser ce qui encore est vague, que se trouve peut-être la dynamique particulière au travail mathématique (et peut-être aussi, à tout travail intellectuel créateur). -->
+
+<!-- La création mathématique est un constant va-et-vient entre un effort d’imagination (arriver à voir les choses) et un effort de verbalisation (arriver à mettre des mots sur ce que l’on voit). -->
+
+<!-- Ce processus modifie à la fois notre intuition et notre langage. Nous apprenons à voir en même temps que nous apprenons à parler. Nous apprenons à voir des choses nouvelles et nous inventons le langage qui permet de les nommer, ce nouveau langage que, pour Grothendieck, « il s’agit alors de faire se condenser hors d’un apparent néant de brumes impalpables ». -->
+
 
 <!-- [@poincare_valeur_2005] -->
 
 <!-- > Cela nous montre que la logique ne suffit pas ; que la Science de la démonstration n’est pas la Science tout entière et que l’intuition doit conserver son rôle comme complément, j’allais dire comme contrepoids ou comme contrepoison de la logique. J’ai déjà eu l’occasion d’insister sur la place que doit garder l’intuition dans l’enseignement des Sciences mathématiques. Sans elle, les jeunes esprits ne sauraient s’initier à l’intelligence des Mathématiques ; ils n’apprendraient pas à les aimer et n’y verraient qu’une vaine logomachie ; sans elle surtout, ils ne deviendraient jamais capables de les appliquer. [...]
  Ainsi, la logique et l’intuition ont chacune leur rôle nécessaire. Toutes deux sont indispensables. La logique qui peut seule donner la certitude est l’instrument de la démonstration : l’intuition est l’instrument de l’invention. -->
+ 
+ 
+ <!-- #### Maths spéculatives vs pratiques / Algèbre spécieuse -->
+
 
 <!-- **Beauté et mathématiques** -->
 
@@ -1191,12 +1212,6 @@ A COMPLETER
 
 <!-- > J'ai un ami artiste qui a parfois des opinions que je ne partage pas vraiment. Il me montre une fleur et dit : « Regarde comme elle est belle ! » et je suis d'accord. Puis il ajoute : « Moi, en tant qu'artiste, je vois bien sa beauté, mais toi, en tant que scientifique, tu la disséques et elle devient ennuyeuse. » Je le trouve un peu farfelu. D'abord, la beauté qu'il perçoit est accessible à tous, et à moi aussi, je crois… Je peux apprécier la beauté d'une fleur. En même temps, j'en perçois bien plus que lui. J'imagine les cellules qui la composent, les mécanismes complexes qui s'y déroulent, lesquels recèlent eux aussi une beauté. Je veux dire, la beauté ne se limite pas à cette échelle, à un centimètre ; elle se manifeste également à des échelles plus petites, dans la structure interne, dans les processus qui la composent. Le fait que les couleurs de la fleur aient évolué pour attirer les insectes pollinisateurs est fascinant ; cela signifie que les insectes sont capables de percevoir les couleurs. Cela soulève une question : ce sens esthétique existe-t-il aussi chez les formes inférieures ? Pourquoi est-ce esthétique ? Autant de questions passionnantes auxquelles la science ne fait qu'ajouter à l'émerveillement, au mystère et à la fascination que suscite une fleur. Elle ne fait qu'enrichir. Je ne vois pas comment elle pourrait en altérer la beauté. -->
 
-
-
-
-
-
-<!-- 7:27 "Education échec et maths" : Euclide formalisme vs créativité geste audacieux -->
 
 <!-- créative citation Hilbert -->
 
@@ -1213,12 +1228,13 @@ A COMPLETER
 <!-- David Bessis -->
 <!-- Ce contenu est peut-être protégé par des droits d’auteur. -->
 
-<!-- Par contre ce qui est vrai est que l'on perd de vue le fait que même ces fondamentaux acquis par le plus grand nombre aujourd'hui, sont des mathématiques d'une incroyable inventivité. Si bien qu'à y regarder de plus près, il y a un pseudo-différence entre mathématiques spéculatives et mathématiques utiles, ces dernières étant juste devenues plus familières. Processus qui fait passer des concepts transgressifs presques scandaleux à une banalité routinière. Les maths spéculatives peuvent devenir pratiques et vice versa (les distributions). -->
 
 <!-- Excentricité -->
 
 <!-- Echecs cool -->
 
+
+<!-- Par contre ce qui est vrai est que l'on perd de vue le fait que même ces fondamentaux acquis par le plus grand nombre aujourd'hui, sont des mathématiques d'une incroyable inventivité. Si bien qu'à y regarder de plus près, il y a un pseudo-différence entre mathématiques spéculatives et mathématiques utiles, ces dernières étant juste devenues plus familières. Processus qui fait passer des concepts transgressifs presques scandaleux à une banalité routinière. Les maths spéculatives peuvent devenir pratiques et vice versa (les distributions). -->
 
 
 <!-- "Le concret, c'est de l'abstrait rendu familier par l'usage." de Paul Langevin -->
