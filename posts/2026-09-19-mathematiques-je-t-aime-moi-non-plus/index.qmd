@@ -379,7 +379,9 @@ Dans cette section je passe en revue une liste d'explications non exhaustive du 
 
 [Christophe Besse](https://www.math.univ-toulouse.fr/~cbesse/), directeur de l’[Insmi](https://www.insmi.cnrs.fr/fr), fut invité sur France Inter dans le but de parler d'une [consultation citoyenne](#consultation-citoyenne) dont l'un des objectifs était de *"comprendre pourquoi on entend souvent 'j'ai détesté les maths'"*
 
+<div style="display: flex; justify-content: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J4mzZwPE4R8?si=FREnc-h0HqxNabeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 À la question de la journaliste *"Ça suscite des émotions les maths ?"*, Christophe Besse partage tout d'abord la même expérience que je relatais en introduction[^15] :
 
@@ -432,7 +434,9 @@ Le 15 février 2018 sur LCI, [Luc Ferry](https://fr.wikipedia.org/wiki/Luc_Ferry
 
 > Comme 99 % des Français, je n'ai jamais utilisé, même pas trente secondes, ce que j'ai appris en maths tout au long de ma scolarité jusqu'en deuxième année de fac. Je n'ai jamais utilisé les identités remarquables, les cas d'égalité des triangles, ça ne m'a jamais servi à rien.
 
+<div style="display: flex; justify-content: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NZEgo5qGsnY?si=Ni_7xngIE7lKS_3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Affirmer ne jamais utiliser les maths, en utilisant une statistique, est pour le moins savoureux, mais passons. Cela m'inspire cette petite plaisanterie auto-référentielle :
 
@@ -589,7 +593,9 @@ Elles servent bien sûr dans bien des métiers, ainsi que dans des activités co
 
 [^27]: C'est toujours satisfaisant d'être en mesure d'échafauder des stratégies gagnantes grâce aux mathématiques, ou de pouvoir par exemple expliquer à mon fils comment marche ce tour de cartes.
 
+<div style="display: flex; justify-content: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-5KRaRqE5w?si=j-gJYEOI0JBjd7K1&amp;start=601" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Néanmoins cela n'arrive pas tous les quatre matins. Je ne suis pas certain que ces exemples d'applications utiles suffisent à motiver les troupes. [@cosnefroy_sens_2007] bat cette idée en brèche :
 
@@ -799,7 +805,9 @@ Donnons maintenant la parole à un mathématicien de haut vol, Cédric Villani, 
 
 : Caractérisation des mathématiques {.striped .hover}
 
+<div style="display: flex; justify-content: center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YBZHoxpPBuA?si=v21waUzlMsH11AMo&amp;start=389" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 De la bouche même de Cédric Villani, la colonne de droite est plus *sexy*. Alors pourquoi les élèves ne perçoivent principalement que la colonne de gauche évoquant des affects "froids" ? Pourquoi l'école ne parvient pas à véhiculer ces autres affects plus "chaleureux" ? C'est de ces "saveurs savantes"[^28], qui ne sont pas perçues comme telles, que j'aimerais discuter.
 
@@ -1198,11 +1206,14 @@ Ces acteurs (les objets mathématiques), se coordonnent pour former des [théor�
 
 > La comparaison que j’ai toujours envie de prendre, c’est que supposez par exemple que vous soyez dans le métro, et que vous voyiez un passager du métro ou une passagère du métro qui est en train de lire une partition de musique. Quand on n’est pas musicien, cette partition de musique ne nous dit rien, rien du tout. Quand on n’est pas mathématicien et qu’on voit un passager en train de lire des formules de maths, on a l’impression qu’on est complètement exclu et qu’on n’a aucune chance de comprendre. Et en fait, la raison, c’est justement cette fabrication d’images mentales et cette fabrication d’images mentales, elle implique de manière absolument essentielle cette capacité d’imaginer. [@connesLimagination]
 
-Cela fait écho à ce que Luc Ferry déclarait :
+
+Lorsqu'un musicien lit une partition, il est en mesure (si je puis dire) de ressentir le rythme, de fredonner (même intérieurement) la mélodie, d'estimer la difficulté technique, etc. De même lorsqu'un mathématicien lit des équations qui sont familières, il en saisit le sens à travers des images mentales qu'il combine et qui lui parlent[^35]. Ce parallèle fait écho à ce que Luc Ferry déclarait :
+
+[^35]: "Sauf que les musiciens disposent d’un énorme avantage pratique : il leur suffit de jouer leur musique pour que tout le monde comprenne immédiatement de quoi il s’agit, sans avoir besoin de déchiffrer la partition. Le gros problème des mathématiciens, c’est qu’ils n’ont pas cette option. Dans leur tête, les idées sont lumineuses, simples et puissantes. Sur le papier, elles deviennent tristes et rabougries. Leur malédiction, c’est de ne pouvoir jouer les mathématiques que dans leur tête." [@bessis2022mathematica] Selon le mot d'Édouard Herriot : "La musique est une mathématique sonore, la mathématique une musique silencieuse".
 
 > Les vrais matheux sont des gens qui ne comprennent pas qu'on ne comprenne pas. Ça les énerve (...) Quand ils voient une équation, c'est comme un musicien qui lit une partition, ça lui chante dans la tête. [@FerryLepoint]
 
-Mais là où il a tort, c'est que d'une part il n'y a pas d'un côté les "vrais matheux" qui comprennent et les autres qui définitivement ne comprennent pas (cela se travaille, comme l'oreille musicale et la pratique d'un instrument); et d'autre part les "vrais matheux" comprennent mieux que personne ces situations désagréables d'incompréhension [@bessis2022mathematica] :
+Mais là où il a tort, c'est que d'une part il n'y a pas d'un côté les "vrais matheux" qui ont "la bosse des maths" et comprennent; et les autres qui définitivement ne comprennent pas (cela se travaille, comme l'oreille musicale et la pratique d'un instrument). Et d'autre part les "vrais matheux" comprennent mieux que personne ces situations désagréables d'incompréhension [@bessis2022mathematica] :
 
 > Vous êtes supposé être un jeune chercheur brillant. Vous venez d’obtenir un poste prestigieux et vous êtes orateur invité à une conférence internationale. Au dîner, vous vous retrouvez assis à côté d’une jeune doctorante qui vous explique son sujet de thèse. Vous ne comprenez pas ce qu’elle vous raconte. Vous lui posez une question. Vous ne comprenez pas sa réponse. Comme vous êtes tenace, vous osez lui dire franchement que vous n’avez pas compris. Elle vous répond que ce n’est pas grave, qu’elle va vous réexpliquer de manière plus simple et que vous allez tout de suite comprendre. Mais vous ne comprenez toujours rien à ce qu’elle vous raconte. Vous savez qu’il faudrait tout reprendre depuis le début, depuis ces bases que vous êtes censé connaître depuis des années et qui vous échappent. Vous arrivez aux limites de ce qui est socialement acceptable. Votre crédibilité est en jeu. Si vous avouez à quel point vous êtes largué, vous passerez pour un idiot. La norme sociale, c’est de ne pas insister. Cette situation est l’archétype de toutes les conversations mathématiques ratées, celles qui ne nous apprennent rien et renforcent notre certitude d’être le pire des nuls. **Quel que soit votre niveau en maths, vous savez forcément de quoi je parle**. L’immense majorité des conversations mathématiques se terminent sur cette impression de malaise. Elles sont ratées pour cette raison simple : vous n’osez pas dire à quel point vous êtes largué, vous en avez honte, vous vous trouvez ridicule. Cette idée vous parasite l’esprit et vous n’écoutez même plus. **Vous ne pensez plus qu’à votre propre nullité. C’est ce qui vous empêche d’imaginer et c’est ce qui vous empêche d’apprendre**. Vous ressortez de ces conversations avec un sentiment d’humiliation.
 
@@ -1221,6 +1232,58 @@ Et puis, une fois l'aventure d'explorateur terminée, lorsque l'on a frayé un c
 C'est de ces gestes que nous allons maintenant parler.
 
 ### Les représentations mentales des mathématiciens
+
+#### Les gestes invisibles de l'esprit
+
+David Bessis est selon moi celui qui a le mieux décrit au grand public l'expérience vécue des mathématiciens en acte. Il nous livre un récit introspectif sur la manière dont il a découvert *comment* faire des maths efficacement en s'appuyant sur des images mentales et en faisant la part belle au corps et à l'intuition. 
+
+![](images/mathematica-bessis.png){width=60% fig-align="center"}
+
+> La pratique des mathématiques est une activité physique. Pour comprendre ce qu’on ne comprend pas, il faut **effectuer dans sa tête les gestes silencieux, invisibles mais indispensables**, qui permettront d’enrichir son intuition et de développer de nouvelles représentations mentales, plus profondes et plus puissantes. C’est une activité qui nous renforce et nous épanouit. Apprendre à faire des mathématiques, c’est apprendre à se servir de son corps. C’est comme apprendre à marcher, nager, danser ou faire du vélo.  [@bessis2022mathematica] 
+
+C'est aussi quelque chose que l'on retrouve sous la plûme d'Hugo Duminil-Copin, qui était passionné de sport (d'une mère danseuse et d'un père professeur d'EPS) jouant un rôle dans sa vision incarnée des mathématiques [@duminil-copin_autre_2026]. 
+À ces élèves dont l'appétence pour cette discipline s'amenuise ou chute au cours de la scolarité, n'apercevant pas sa dimension créative, David Bessis fait ce constat amer :
+
+> **Personne ne leur a dit que les mathématiques étaient une activité physique**. Personne ne leur a dit que, en mathématiques, il n’y avait pas des choses à apprendre mais des choses à faire.Ils ne prennent pas la cuillère du bon côté, parce que personne ne leur a expliqué comment faire, et parce qu’ils n’ont jamais vu personne la prendre du bon côté. Les phrases qui sont prononcées pendant un cours de maths ne sont pas des informations qu’il faut retenir. Ce sont des consignes et des indications pour **des gestes invisibles que chacun doit accomplir secrètement dans sa tête**. Suivre un cours de maths comme on suit un cours d’histoire ou de biologie, c’est aussi absurde que de prendre des notes pendant un cours de yoga, soigneusement, pour être sûr de ne rien oublier. Si vous ne faites jamais le moindre exercice de respiration, ça ne sert strictement à rien.  [@bessis2022mathematica] 
+
+Il faut donc se mettre en mouvement, tenter des choses, les interroger pour reprendre Grothendieck, ne pas attendre de savoir pour tâcher de comprendre, comme à vélo il faut s'élancer, pédaler et trouver progressivement de l'équilibre. Chuter, se remettre en selle, jusqu'à acquérir le bon geste qui permet d'aller plus loin, plus vite, et confiant. Jusqu'au prochain obstacle : un trottoir à passer, une pente à gravir ou une crevasse à sauter, qui demandent de reconfigurer le geste appris, savoir changer son centre de gravité pour se mettre en [*wheeling*](https://fr.wikipedia.org/wiki/Wheeling_(stunt)) et franchir le trottoir, savoir se mettre en *danseuse* sur les pédales pour gagner en force et gravir la montée, savoir sauter un obstacle par la technique du [*Bunny Hop*](https://fr.wikipedia.org/wiki/Bunny_hop_(v%C3%A9lo)) en levant séparément la roue avant puis arrière. Est-ce utile dans la vie quotidienne ? Pourquoi apprendre à se mettre en danseuse pour gravir une pente raide si on dispose d'un vélo électrique, ou d'une voiture[^36] ? C'est encore plus frappant avec le *wheeling* ou le *Bunny Hop*, il y a peu de situations de la vie courante où nous avons *besoin* de ce type de techniques ! Les enfants n'apprennent pas à faire du vélo parce que c'est *utile* pour aller d'un point A à un point B ou pour préserver sa santé, non ils aiment faire du vélo avant tout parce que c'est amusant, ça développe l'équilibre, la coordination et donc leur donne une plus grande liberté de mouvement, une plus grande confiance en eux, etc. Maîtriser ce geste procure de la joie tout simplement. Tout comme la danse ou la musique, qu'on ne pratique pas pour leur utilité.
+
+[^36]: Pourquoi apprendre le calcul si on dispose d'une calculatrice ? À résoudre une équation si l'IA peut le faire à notre place ?
+
+Je disais précédemment qu'aucun élève ne se plaignait de faire du saut en hauteur en EPS sous prétexte que ça ne sert strictement à rien dans la vie quotidienne. Les enfants aiment sauter parce que c'est amusant, cela procure une sensation de lévitation et un défi face à la gravité. Franchir une barre placée parfois plus haut que soi donne l'impression fugitive de flotter dans les airs. Le plaisir du jeu technique aussi : coordonner sa course d'élan en courbe, placer un appel puissant puis enrouler son corps autour de la barre ressemble à la résolution d'un puzzle. Chaque centimètre gagné représente une victoire personnelle concrète qui stimule la motivation. Cela n'est possible qu'en se prêtant au jeu et en effectuant encore et encore les gestes quasi acrobatiques facilitant le franchissement de la barre. Le saut en hauteur est l'une des épreuves les plus esthétiques de l'athlétisme, qui a connu plusieurs [révolutions techniques](https://fr.wikipedia.org/wiki/Saut_en_hauteur#Technique_de_saut_en_hauteur) passant de la technique du ciseau, au rouleau costal puis ventral, pour enfin faire l'unanimité avec le rouleau dorsal rebaptisé le [Fosbury-flop](https://fr.wikipedia.org/wiki/Fosbury-flop) du nom [Dick Fosbury](https://fr.wikipedia.org/wiki/Dick_Fosbury) qui l'a popularisé : 
+
+> La technique du ciseau étant limitée par la nécessité d’un centre de gravité élevé, ses entraîneurs lui enseignent le rouleau ventral, mais il n'arrive pas à l’assimiler correctement et plafonne à 1,80 m pendant deux ans. À 16 ans, Dick Fosbury ne se décourage pas, continuant à s'entraîner. Peu à peu, son saut évolue. Il a en effet remarqué que s'il se présente dos à la corde ou à la barre à franchir, et qu'il projette ses épaules vers l'arrière, **son bassin peut monter plus haut que lorsqu’il utilise les méthodes traditionnelles** : il passe ainsi la barre plus facilement. [...]  Son entraîneur commence à le voir plus comme triple sauteur que sauteur en hauteur, ne croyant plus en ses chances de réussir dans la discipline. Dick s'essaie même aux courses de haies, son entraîneur étant un spécialiste de cette discipline, mais sans succès. Son entraîneur change toutefois d’opinion lorsqu'au cours d'un entraînement il voit Fosbury utiliser sa méthode personnelle de rouleau dorsal et passer une barre d'1,98 m avec une marge très importante, ce qui laisse présager une bonne progression. [...] Comme ce type de saut est encore inédit, il ne dispose que de peu de moyens pour le former et essaie donc de **faire évoluer Dick en le filmant pendant ses entraînements**, pour voir avec lui comment gagner de la hauteur. En 1967, Dick se propulse à 2,10 m lors du championnat universitaire des États-Unis, finissant 5e. Il est alors le junior le plus régulier de la saison, dépassant toujours les 2 mètres. [...] Pour la première fois Fosbury quitte sa région natale pour se rendre aux Jeux olympiques de Mexico en 1968. Sa façon de sauter (création du saut fosbury portant son nom) enthousiasme le public présent. À chacun de ses sauts la foule scande « Olé » devant sa **technique atypique et spectaculaire**. Il passe les cinq barres proposées dès son premier essai : 2,03 m, 2,09 m, 2,14 m, 2,18 m et atteint 2,20 m. Le Soviétique Valentin Gavrilov, un des favoris, échoue à 2,22 m. Passant la barre, Dick reste donc en compétition avec son compatriote Ed Caruthers. À son troisième essai, il réussit là où Caruthers échoue : **il franchit les 2,24 m et devient champion olympique le 20 octobre 1968**. Il signe par la même occasion un nouveau record olympique et national.
+
+<div style="display: flex; justify-content: center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XI22eqLDGYI?si=LQUqZfoa_8PDKxTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+[@bessis2022mathematica] reprend cette métaphore du saut en hauteur et l'histoire de Dick Fosbury, pour imager le fait que faire des mathématiques, c'est inventer des gestes mentaux comme Fosbury a inventé le sien. On (re)crée ces gestes parce que les méthodes connues échouent, en s'écoutant soi-même. Refaire un raisonnement mobilise les mêmes gestes intérieurs que de l'inventer. L'introspection reste donc essentielle pour apprendre, il faut réinventer le geste en soi et pour soi. Mais ces gestes sont invisibles[^37], on ne voit que la barre franchie, jamais la technique, d'où l'impression d'un don génétique vu de l'extérieur[^38]. Et quand bien même on décrirait la physique sous-jacente dans les moindres détails, ce manuel technique ne suffirait pas à reproduire ce geste sans l'expérimenter et s'exercer pour affiner le geste. Apprendre, c'est donc réinventer ce geste en soi jusqu'à le trouver naturel.
+
+[^37]: À la différence du saut en hauteur où l'imitation du geste reste un vecteur d'apprentissage, en mathématiques il est plus difficile de sonder les gestes mentaux d'autrui pour s'en inspirer. 
+
+[^38]: "Le bon sens est la chose du monde la mieux partagée [...] Pour moi, je n'ai jamais présumé que mon esprit fût en rien plus parfait que ceux du commun;
+même j'ai souvent souhaité d'avoir la pensée ou la prompte, ou l'imagination aussi-nette et
+distincte, ou la mémoire aussi ample, ou aussi présente, que quelques autres. Et je ne sache point
+de qualités que celles-ci, qui servent à la perfection de l'esprit : car pour la raison, ou le sens,
+d'autant qu'elle est la seule chose qui nous rend hommes, et nous distingue des bêtes, je veux
+croire qu'elle est tout entière en un chacun, et suivre en ceci l'opinion commune des philosophes,
+qui disent qu'il n'y a du plus et du moins qu'entre les accidents, et non point entre les formes, ou
+natures, des individus d'une même espèce.
+Mais je ne craindrai pas de dire que je pense avoir eu beaucoup d'heur, de m'être rencontré dès
+ma jeunesse en certains chemins, qui m'ont conduit à des considérations et des maximes, dont j'ai
+formé une méthode, par laquelle il me semble que j'ai moyen d'augmenter par degrés ma
+connaissance, et de l'élever peu à peu au plus haut point, auquel la médiocrité de mon esprit et la
+courte durée de ma vie lui pourront permettre d'atteindre." [@descartes_discours_1637]
+
+
+En mathématiques, l'obstacle est épistémologique et le saut est conceptuel. L'élève doit dépasser ses intuitions initiales ou ses connaissances antérieures pour comprendre une notion entièrement nouvelle. Rappelez-vous lorsque vous avez pour la première fois au collège été confronté à l'[inconnue](https://fr.wikipedia.org/wiki/Inconnue_(math%C3%A9matiques)) $x$ ! Passé de l'arithmétique à l'algèbre, c'était métaphoriquement passer d'une barre d'1m80 à une barre de 2m, une montée en abstraction qui vous a certainement demandé de reconfigurer votre intuition et d'élaborer de nouveaux gestes pour appréhender cette nouvelle notion. Le signe égal (=) acquiert en algèbre une nouvelle signification, il ne s'interprète plus seulement comme en arithmétique par "donne le résultat" (inscrit dans le membre de droite, $2+2 = 4$), mais comme "est équivalent à" c'est-à-dire vu comme une "balance" qui équilibre le membre de droite et le membre de gauche ($2x+1=3x+5$). L'élève passe d'un calcul à effectuer à des relations à manipuler (avec des gestes à maîtriser – et faire sens – comme passer un terme d'un côté ou de l'autre du signe égal, associé à un déplacement virtuel des symboles dans sa tête). L'évaluation n'est plus immédiate, on suspend la quantité qu'on troque pour le symbole, et on manipule une entité abstraite en tant que telle (l'inconnue $x$ que l'on cherche à isoler). Jouer avec ces gestes algébriques jusqu'à les trouver naturels, familiers et puissants. 
+
+> Carpenter et al. (1993), Carpenter et Franke (2001), Radford (2011) et Squalli (2015) prônent le renforcement d’une arithmétique signifiante se concentrant sur les concepts, les relations et les structures numériques. Certaines notions mathématiques y prennent un nouveau statut, en particulier l’égalité qui doit être conçue comme une relation d’équivalence (Theis, 2005; Osana et al., 2012). Cette arithmétique repose sur **une vision des nombres et des opérations qui est plus structurale que calculatoire** (Squalli, 2015). Dans cette optique, Carpenter et al. (2003) proposent des pistes pour développer chez les jeunes enfants ce qu’ils appellent une «pensée relationnelle», basée sur les propriétés fondamentales des opérations et les propriétés basiques de l’égalité, pour analyser un problème et avancer vers une solution. Ces auteurs préconisent en premier lieu un travail sur le signe égal, destiné à amener les élèves à le percevoir comme représentant une égalité de part et d’autre plutôt que comme une injonction à effectuer un calcul et écrire une réponse. [...] Radford (2014) parle à ce propos d’une **«domestication des yeux» qui s’accompagne d’une «domestication des gestes» et du «discours»**. Pour lui, la pensée algébrique se développe à travers une activité cognitive ancrée dans les sens (sensuous cognition). **La perception, le discours, les gestes et l’imagination interagissent pour concourir à la mise au jour de nouvelles relations systémiques** structurantes entre les composantes matérielles et spirituelles de la pensée. [@venant_developper_2019]
+
+
+
+
 
 #### Nos cerveaux sont des boîtes noires
 
@@ -1254,9 +1317,7 @@ Cette expérience montre que la réalisation de deux tâches simultanées[^32] e
 
 [^32]: Vous avez déjà probablement joué à ce jeu où il s'agit de dire à voix haute la couleur des mots sans être induit en erreur par la signification des mots désignant une autre couleur, par exemple : <span style="color: green;">rouge</span>, <span style="color: blue;">vert</span>, <span style="color: red;">jaune</span> ou <span style="color: black;">blanc</span>. L'esprit humain est conditionné pour lire automatiquement. Lire le mot "rouge" demande beaucoup moins d'efforts cognitif que de nommer la couleur de l'encre. L'information textuelle ("rouge", phonologique que la voix intérieure prononce) arrive donc plus vite à votre conscience que l'information visuelle ("vert", traitée par le calepin visuel). Pour réussir l'exercice (dire "vert" pour <span style="color: green;">rouge</span>), votre administrateur central doit intervenir comme un régulateur de trafic en inhibant activement la réponse automatique et dominante poussée par la boucle phonologique (dire "rouge"), et rediriger l'attention et les ressources cognitives vers le calepin visuospatial pour isoler la couleur de l'encre. Cet effort mental augmente le temps de réaction (*effet Stroop*). Si l'anecdote de Feynman montre les limites de stockage et d'indépendance de la boucle phonologique et du calepin visuospatial, l'effet Stroop montre les limites de l'administrateur central qui fatigue lors d'un conflit d'informations à gérer.
 
-<!-- > Pour transcrire leurs idées, les mathématiciens ont dû inventer ce langage hermétique et ces symboles indéchiffrables, tout comme les musiciens ont dû inventer cette notation musicale hermétique pour transcrire leurs compositions. Sauf que les musiciens disposent d’un énorme avantage pratique : il leur suffit de jouer leur musique pour que tout le monde comprenne immédiatement de quoi il s’agit, sans avoir besoin de déchiffrer la partition. Le gros problème des mathématiciens, c’est qu’ils n’ont pas cette option. Dans leur tête, les idées sont lumineuses, simples et puissantes. Sur le papier, elles deviennent tristes et rabougries. Leur malédiction, c’est de ne pouvoir jouer les mathématiques que dans leur tête. -->
 
-<!-- > Si on initiait les enfants à la musique en leur donnant à déchiffrer des partitions de Mozart ou de Michael Jackson sans jamais rien leur faire écouter, la musique serait aussi universellement haïe que le sont les mathématiques. -->
 
 <!-- **Représentations mentales** -->
 
@@ -1270,23 +1331,48 @@ Cette expérience montre que la réalisation de deux tâches simultanées[^32] e
 
 <!-- Paradoxes et analogies -->
 
-<!-- **Gestes invisibles dans nos têtes** -->
-
-<!-- > La pratique des mathématiques est une activité physique. Pour comprendre ce qu’on ne comprend pas, il faut effectuer dans sa tête les gestes silencieux, invisibles mais indispensables, qui permettront d’enrichir son intuition et de développer de nouvelles représentations mentales, plus profondes et plus puissantes. C’est une activité qui nous renforce et nous épanouit. Apprendre à faire des mathématiques, c’est apprendre à se servir de son corps. C’est comme apprendre à marcher, nager, danser ou faire du vélo.  -->
-
-<!-- > Personne ne leur a dit que les mathématiques étaient une activité physique. Personne ne leur a dit que, en mathématiques, il n’y avait pas des choses à apprendre mais des choses à faire.Ils ne prennent pas la cuillère du bon côté, parce que personne ne leur a expliqué comment faire, et parce qu’ils n’ont jamais vu personne la prendre du bon côté.Les phrases qui sont prononcées pendant un cours de maths ne sont pas des informations qu’il faut retenir. Ce sont des consignes et des indications pour des gestes invisibles que chacun doit accomplir secrètement dans sa tête.Suivre un cours de maths comme on suit un cours d’histoire ou de biologie, c’est aussi absurde que de prendre des notes pendant un cours de yoga, soigneusement, pour être sûr de ne rien oublier. Si vous ne faites jamais le moindre exercice de respiration, ça ne sert strictement à rien. -->
-
-<!-- Reprenons la métaphore du saut en hauteur : handicap parfois source d'inventivité --> 
-
-<!-- > Mais plutôt que par calcul, c’est par introspection, en portant une grande attention à l’écoute de son corps et en se concentrant sur les gestes qui lui permettaient de plus facilement franchir la barre, qu’il a graduellement découvert sa méthode. L’approche de Fosbury était à la fois volontariste et méditative. [...] Ses premières interviews montrent qu’il ne mesurait pas encore la portée de sa découverte : « J’imagine que pas mal de gamins vont maintenant essayer de sauter à ma façon. Je ne garantis pas les résultats, et je ne recommande mon style à personne. »Mais tout le monde l’a imité. Dès les Jeux olympiques suivants, en 1972, sa technique est devenue la norme. Depuis plus de quarante ans, chaque fois que le record du monde de saut en hauteur a été battu, il l’a été grâce à la technique de Fosbury. [...] Pour comprendre cette difficulté, imaginez une version invisible du saut en hauteur qui se pratiquerait sans témoins ni caméras, dans une salle vide, et dont les compétitions seraient jugées par des appareils électroniques qui vérifient que la barre est franchie sans rien enregistrer de la technique du sauteur.Comment Fosbury aurait-il pu raconter son histoire ?Tout le monde aurait été convaincu qu’il était génétiquement programmé pour sauter plus haut que tout le monde. [...] Pour quelqu’un qui n’a jamais vu personne le faire, apprendre à sauter comme Fosbury est presque aussi dur que de l’inventer soi-même. Même avec des indications détaillées, ça pose d’énormes difficultés. « Jetez-vous en l’air sur le dos, la tête la première. » Vraiment ? Et pourquoi toutes ces pages de préliminaires sur la trajectoire de la course d’élan et le basculement de l’axe du corps à l’approche de la barre ? Pourquoi ce langage technique ? Est-ce vraiment nécessaire ? Apprendre un geste, c’est le comprendre au-delà des mots. C’est le sentir dans son propre corps. C’est le trouver naturel et intuitif. -->
 
 
+
+
+ 
+ <!-- #### Maths spéculatives vs pratiques / Algèbre spécieuse -->
 
 <!-- **Formalisme vs. intuition** -->
 
-<!-- symbolisme carré -->
+<!-- symbolisme carré + noms aux choses --> 
 
+>  S’il y a une chose qui m’a fasciné dans les mathématiques depuis mon enfance, c’est
+justement cette puissance à cerner par des mots, et à exprimer de façon parfaite, l’essence de
+telles choses mathématiques qui au premier abord se présentent sous une forme si élusive, ou
+si mystérieuse, qu’elles paraissent au-delà des mots...
 
+> Le nom “topos” a été choisi (en association avec celui de “topologie”, ou “topologique”) pour suggérer
+qu’il s’agit de “l’objet par excellence” auquel s’applique l’intuition topologique. Par le riche nuage d’images
+mentales que ce nom suscite, il faut le considérer comme étant plus ou moins l’équivalent du terme “espace” (topologique), avec simplement une insistance plus grande sur la spécifité “topologique” de la notion. (Ainsi, il
+y a des “espaces vectoriels”, mais pas de “topos vectoriels” jusqu’à nouvel ordre !) Il s’impose de garder les deux
+expressions conjointement, chacune avec sa spécifité propre.
+
+> Quant à exprimer une grande idée, “la dire” donc, c’est là, le plus souvent, une chose
+presque aussi délicate que sa conception même et sa lente gestation dans celui qui l’a conçue
+— ou pour mieux dire, ce laborieux travail de gestation et de formation n’est autre justement
+que celui qui “exprime” l’idée : le travail qui consiste à la dégager patiemment, jour après
+jour, des voiles de brumes qui l’entourent à sa naissance, pour arriver peu à peu à lui donner
+forme tangible, en un tableau qui s’enrichit, s’affermit et s’affine au fil des semaines, des mois
+et des années. Nommer simplement l’idée, par quelque formule frappante, ou par des motsclef plus ou moins techniques, peut être affaire de quelques lignes, voire de quelques pages
+— mais rares seront ceux qui, sans déjà bien la connaître, sauront entendre ce “nom” et y
+reconnaître un visage. Et quand l’idée est arrivée en pleine maturité, cent pages peut-être
+suffiront à l’exprimer, à la pleine satisfaction de l’ouvrier en qui elle était née — comme il se
+peut aussi que dix mille pages, longuement travaillées et pesées, n’y suffiront pas (*)
+
+> Traditionnellement, on distingue trois types de “qualités” ou d’“aspects” des choses de
+l’Univers, qui soient objet de la réflexion mathématique : ce sont le nombre (**), la grandeur,
+et la forme. On peut aussi les appeler l’aspect “arithmétique”, l’aspect “métrique” (ou “analytique”), et l’aspect “géométrique” des choses. Dans la plupart des situations étudiées dans
+là mathématique, ces trois aspects sont présents simultanément et en interaction étroite.
+Cependant, le plus souvent, il y a une prédominance bien marquée de l’un des trois. Il me
+semble que chez la plupart des mathématiciens, il est assez clair (pour ceux qui les connaissent, ou qui sont au courant de leur oeuvre) quel est leur tempérament de base, s’ils sont
+“arithméticiens”, “analystes”, ou “géomètres” — et ceci, alors même qu’ils auraient beaucoup de cordes à leur violon, et qu’ils auraient travaillé dans tous les registres et diapasons
+imaginables
 
 <!-- 7:27 "Education échec et maths" : Euclide formalisme vs créativité geste audacieux -->
 
@@ -1304,8 +1390,75 @@ Cette expérience montre que la réalisation de deux tâches simultanées[^32] e
 <!-- > Cela nous montre que la logique ne suffit pas ; que la Science de la démonstration n’est pas la Science tout entière et que l’intuition doit conserver son rôle comme complément, j’allais dire comme contrepoids ou comme contrepoison de la logique. J’ai déjà eu l’occasion d’insister sur la place que doit garder l’intuition dans l’enseignement des Sciences mathématiques. Sans elle, les jeunes esprits ne sauraient s’initier à l’intelligence des Mathématiques ; ils n’apprendraient pas à les aimer et n’y verraient qu’une vaine logomachie ; sans elle surtout, ils ne deviendraient jamais capables de les appliquer. [...]
  Ainsi, la logique et l’intuition ont chacune leur rôle nécessaire. Toutes deux sont indispensables. La logique qui peut seule donner la certitude est l’instrument de la démonstration : l’intuition est l’instrument de l’invention. -->
  
- 
- <!-- #### Maths spéculatives vs pratiques / Algèbre spécieuse -->
+ > Beaucoup de lycéens et d’étudiants des universités, sinon tous, doivent ressentir la rigueur
+en mathématique, qui leur a été serinée par des maîtres maussades, comme une sorte d’à priori
+entièrement extérieur à leur humble personne, incompréhensible et arbitraire, dicté par un
+Dieu péremptoire et impitoyable à un Euclide promu Grand Censeur en Chef, avec mission
+de faire pâlir à la tâche d’innombrables générations d’écoliers, ingurgitant tant bien que mal la
+Culture avec un C majuscule. J’ai dû être un des rares à ne pas avoir passé par ce stade-là dans
+ma relation à la mathématique scolaire — à avoir senti d’instinct, dès la première rencontre et
+dans le cadre étriqué d’un livre de maths de classe de sixième, la fonction et le sens originels de
+la rigueur: que c’était là un instrument souple et d’une étonnante efficacité, au service d’une
+compréhension des chose dites “mathématiques” — des choses que la raison à elle seule peut
+entièrement connaître. Cette “rigueur” est aussi comme l’âme et le nerf de ce que j’ai appelé,
+dans la réflexion d’avant-hier, “les règles du jeu mathématique”, et ce que tantôt j’appelais “la
+méthode”. De les avoir seulement entrevues, c’était comme si je les avais toujours connues
+— comme si c’était mon propre désir qui les avait façonnées délicatement, amoureusement, telle une clef qui avait pouvoir de faire s’ouvrir pour moi un monde inconnu, mystérieux,.
+dont la richesse pressentie allait se révéler inépuisable... 
+
+> dans certains travaux c’est la structure logique de la théorie développée qui
+est mise en avant, dans d’autres ce seront les aspects intuitifs. Il y a un déséquilibre, se manifestant chez le lecteur ou l’auditeur par un sentiment de malaise bien familier ( et parfois chez
+l’auteur aussi), quand l’un de ses aspects indispensables est grossièrement négligé, au “profit”
+de l’autre. (Quand les deux sont grossièrement négligés, on jette le livre à la poubelle, ou on
+quitte la salle en claquant la porte !) Quand chacun des deux aspects est fortement présent,
+que ce soit explicitement ou entre les lignes, cela se manifeste par un sentiment bien familier également d’harmonie, de beauté, d’équilibre, dé satisfaction. Il en est ainsi, indépendamment du “ton de base” qui domine l’approche suivie, que ce ton soit dans la direction
+“logique”, ou “intuition” (ou aussi “structure”, ou “substance”). Inutile sans doute de développer cet exemple instructif, pour décrire par exemple où le bât blesse (c’est à dire, cerner le
+“malaise” rappelé tantôt), quand l’un ou l’autre des deux aspects se trouve négligé ; le lecteur
+le fait bien déjà par sa propre expérience !
+
+> dans le couple intuition-logique, je constate à première vue que les deux aspects
+684
+sont fortement présents dans mon travail mathématique. C’est là donc le signe d’un équilibre, d’une harmonie, parmi d’autres signes qui vont dans le même sens. Comme il se doit
+pour un couple yin-yang, pour moi (dans mon travail j’entends), les deux conjoints sont
+vraiment inséparables — la structure logique d’une théorie se développe pas à pas et conjointement à l’approfondissement d’une compréhension des choses dont elle traite, c’est à dire
+aussi, conjointement au développement d’une intuition de plus en plus fine et complète de
+celle-ci. Peut-être que dans mes œuvres publiées, conformément aux canons du métier de
+mathématicien, c’est l’aspect yang, l’aspect “structure” ou “logique” ou “méthode”, qui est
+le plus apparent, le plus évident pour le lecteur. Pourtant, je sais bien que ce qui mène et
+domine dans mon travail, ce qui en est l’âme et la raison d’être, ce sont les Images mentales
+qui se forment au cours du travail pour appréhender la réalité des choses mathématiques. Certes, je n’ai jamais lésiné pour arriver à cerner de façon aussi méticuleuse que possible,
+au moyen du langage mathématique, ces images et l’appréhension qu’elles donnent. C’est
+dans cet effort continuel de formuler l’informulé, de préciser ce qui encore est vague, que se
+trouve peut-être la dynamique particulière au travail mathématique (et peut-être aussi, à tout
+travail intellectuel créateur) — dans une dialectique continuelle entre l’image plus ou moins
+informe, et le langage qui lui donne une forme et chemin faisant suscite de nouvelles images
+plus ou moins floues qui approfondissent la précédente, et qui elles aussi appellent une formulation pour leur donner forme à leur tour... C’est d’ailleurs ce perpétuel travail de cerner
+par le langage, de façon aussi précise, aussi parfaite que possible, ce qui se présente d’abord
+comme un “pressenti” indéfinissable et informe, comme un “sentiment” informulé, comme
+une image noyée de brumes... c’est ce travail-là qui depuis mon enfance et aujourd’hui encore
+est ce qui me fascine le plus dans le travail de découverte mathématique. Mais si “l’effort” ici
+semble toujours se porter du côté “langage”, donc du côté formulation, structure, logique,
+qui forment les ingréd-ientsclef de la méthode mathématique ; et si (par la force des choses)
+c’est l à surtout que se trouve aussi l’aspect visible d’un texte mathématique censé restituer
+un travail mathématique (ou du moins ses fruits), tout cela n’empêche pas que (chez moi du
+moins) ce n’est pas dans cet aspect-là que se trouve l’âme d’une compréhension des choses
+mathématiques, ni la force vive ou la motivation en œuvre dans le travail mathématique. Je
+crois que parmi mes travaux, très rares doivent être ceux où cette relation aurait été renversée,
+où j’aurais développé un “formalisme” en me laissant guider uniquement, ou avant tout, par
+sa seule logique interne, par des desiderata de cohérence, ou d’autres aspects du formalisme lui-même, plutôt que par un contenu, par une substance, se manifestant par des images, des
+intuitions de nature “géométrique”. En tous cas, toute ma vie j’ai été incapable de lire un
+texte mathématique, si anodin ou simpliste soit-il, lorsque je n’arrive — pas à donner à ce
+texte un “sens” en termes de mon expérience des choses mathématiques, c’est-à-dire lorsque
+ce texte ne suscite pas en moi des images mentales, des intuitions qui lui donneraient la vie,
+comme une chair vivante de muscles et d’organes donne vie à un corps, qui sans elle se réduirait à un squelette. Cette incapacité me distingue d’ailleurs de la plupart de mes collègues
+mathématiciens, et (comme j’ai eu l’occasion de l’évoquer) c’est elle qui m’a souvent rendu
+difficile de m’insérer dans le travail collectif au sein du groupe Bourbaki, pendant les lectures
+en commun notamment, où il m’arrivait souvent d’être largué à longueur d’heures alors que
+tous les autres suivaient à l’aise.
+
+> Je viens de suivre quelques associations d’idées sur mon travail mathématique, liées au
+couple “intuition-logique”, et è quelques couples voisins qui se sont introduits d’eux même
+dans la foulée de celui-là : l’informe — le formé, l’indéfini — le défini, l’informulé — le formulé, le vague — le précis, inspiration — méthode, vision — cohérence... 
 
 
 <!-- **Beauté et mathématiques** -->
