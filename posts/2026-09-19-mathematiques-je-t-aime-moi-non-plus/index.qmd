@@ -1387,7 +1387,7 @@ Cette expérience montre que la réalisation de deux tâches simultanées[^32] e
 
 <!-- [@poincare_valeur_2005] --> 
 
-!-- > Cela nous montre que la logique ne suffit pas ; que la Science de la démonstration n’est pas la Science tout entière et que l’intuition doit conserver son rôle comme complément, j’allais dire comme contrepoids ou comme contrepoison de la logique. J’ai déjà eu l’occasion d’insister sur la place que doit garder l’intuition dans l’enseignement des Sciences mathématiques. Sans elle, les jeunes esprits ne sauraient s’initier à l’intelligence des Mathématiques ; ils n’apprendraient pas à les aimer et n’y verraient qu’une vaine logomachie ; sans elle surtout, ils ne deviendraient jamais capables de les appliquer. [...] -->
+<!-- > Cela nous montre que la logique ne suffit pas ; que la Science de la démonstration n’est pas la Science tout entière et que l’intuition doit conserver son rôle comme complément, j’allais dire comme contrepoids ou comme contrepoison de la logique. J’ai déjà eu l’occasion d’insister sur la place que doit garder l’intuition dans l’enseignement des Sciences mathématiques. Sans elle, les jeunes esprits ne sauraient s’initier à l’intelligence des Mathématiques ; ils n’apprendraient pas à les aimer et n’y verraient qu’une vaine logomachie ; sans elle surtout, ils ne deviendraient jamais capables de les appliquer. [...] -->
 <!--  Ainsi, la logique et l’intuition ont chacune leur rôle nécessaire. Toutes deux sont indispensables. La logique qui peut seule donner la certitude est l’instrument de la démonstration : l’intuition est l’instrument de l’invention. -->
 
 <!--  > Beaucoup de lycéens et d’étudiants des universités, sinon tous, doivent ressentir la rigueur -->
