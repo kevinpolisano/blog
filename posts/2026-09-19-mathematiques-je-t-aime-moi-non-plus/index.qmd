@@ -295,6 +295,17 @@ Dans cette section je passe en revue une liste d'explications non exhaustive du 
 
 <!-- Vérifier la pertinence -->
 
+
+<!-- Toutefois pour ce qui concerne le lycée, où les élèves préparent leur orientation professionnelle, la dose de mathématiques doit selon moi être modulée selon les appétences et projets des élèves [@girard_pourquoi_2013] : -->
+
+
+
+<!-- > L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?   -->
+<!-- > Jean-Rémi Girard : Chaque chose en son temps. **Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée**. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que **tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire**, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne. -->
+
+<!-- Tout d'abord, il est parfaitement clair que 90% des élèves de ce niveau n'auront aucun besoin dans leur vie adulte de mathématiques au-delà de l'arithmétique élémentaire. Ainsi, on peut très bien concevoir qu'on n'enseignera plus les mathématiques après l'âge de quinze ans, excepté pour les élèves qui ont l'intention de faire une carrière technique ou scientifique. Cependant, comme il est très difficile de discerner des capacités scientifiques futures avant cet âge-là chez les enfants, ils devraient être certainement mis en présence d'une certaine quantité de faits scientifiques bien adaptés à leur immaturité. (DIeudonné ; http://michel.delord.free.fr/dieudonne-1974.html)-->
+
+
 ### La croyance en la bosse des maths
 
 
@@ -486,7 +497,7 @@ Cependant Luc Ferry ne contente pas de faire ce constat, non, en creux il envoie
 
 > À mon avis ça ne va pas rendre la bosse des maths à ceux qui ne l'ont pas (*rire*).
 
-[^26]: Il faut aussi savoir lire entre les lignes, ceux qui affirment que *"les maths ça ne sert à rien"* sont bien souvent ceux qui éprouvent des difficultés avec la matière, donc qui sont dans une situation d'incompréhension désagréable. Le rejet d'une matière est dans ce cas de figure un mécanisme de défense émotionnel. Face à la frustration de l'incompréhension et au sentiment d'échec, il est plus facile et moins douloureux pour l'ego de dévaloriser l'utilité des mathématiques plutôt que d'admettre ses propres difficultés.
+[^26]: Il faut aussi savoir lire entre les lignes, ceux qui affirment que *"les maths ça ne sert à rien"* sont bien souvent ceux qui éprouvent des difficultés avec la matière, donc qui sont dans une situation d'incompréhension désagréable. Le rejet d'une matière est dans ce cas de figure un mécanisme de défense émotionnel. Face à la frustration de l'incompréhension et au sentiment d'échec, il est plus facile et moins douloureux pour l'ego de dévaloriser l'utilité des mathématiques plutôt que d'admettre ses propres difficultés. Comme le disait déjà [@fontenelle_utilite_1699] en son temps : "On traite volontiers d'inutile ce qu'on ne sait point, c'est une espèce de vengeance, et comme les mathématiques et la physique sont assez généralement inconnnues, elles passent assez généralement pour inutiles. La source de leur malheur est manisfeste, elles sont épineuses, sauvages et d'un accès difficile."
 
 Ce qui, pour un ancien ministre de l'éducation, n'est pas des plus responsables qu'on se le dise. Comme le souligne cet économiste [@menia_luc_2018] en réponse à ce texte d'un collègue [@alexandre_luc_2018] :
 
@@ -534,12 +545,28 @@ Si la division du travail est une nécessité économique qui tend à fragmenter
 
 Donc ce n'est pas parce que les activités courantes de la vie quotidienne ne requièrent que du calcul niveau CM2 comme le dit Luc Ferry, que les mathématiques ne sont pas utiles à d'autres fins (y compris citoyennes). 
 
-Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, indépendamment de toutes ces retombées positives. Après tout, on apprécie la poésie non pour son utilité mais parce qu'on la trouve belle[^25]. Personne d'ailleurs ne cherche à justifier l'utilité des vers en alexandrins dans la vie de tous les jours, nous pouvons donc aussi être honnêtes et dire qu'il y a en effet peu de situations de la vie courante où les gens seront amenés à effectuer un raisonnement par récurrence. Cela ne disqualifie pas pour autant son enseignement comme on l'a vu. Toutefois pour ce qui concerne le lycée, où les élèves préparent leur orientation professionnelle, la dose de mathématiques doit selon moi être modulée selon les appétences et projets des élèves [@girard_pourquoi_2013] :
+Le même Luc Ferry ajoutait :
 
-[^25]: « Le véritable esprit de joie, d’exaltation, le sentiment d’être plus qu’un homme, qui sont la pierre de touche de l’excellence la plus haute, se trouvent dans les mathématiques comme dans la poésie » – Bertrand Russel.
+> Dans la vie quotidienne le type de raisonnement qu'on utilise n'est jamais mathématiques en vérité, on utilise l'argumentation. En mathématiques on démontre on n'argumente pas, ce n'est pas du tout le même type de raisonnement.
 
-> L'idée française du "tronc commun", qui veut que chaque élève sorte de ces années d'études avec un minimum de connaissances dans chaque matière, doit-elle être revisitée au profit d'une spécialisation des programmes ?  
-> Jean-Rémi Girard : Chaque chose en son temps. **Il y a un temps pour poser les fondations de l'esprit, qui est l'école primaire ; un temps pour approfondir, qui est le collège ; et un temps pour se spécialiser, qui est le lycée**. Les mathématiques ont leur place au primaire, où elles sont absolument nécessaires à tous. Elles ont leur place au collège, où l'on pourrait commencer à concevoir des méthodes de différenciation. Et elles ont leur place au lycée, mais là de manière beaucoup plus différenciée. Attention néanmoins à ne pas faire n'importe quoi sous prétexte d'adaptation. Par exemple, les mathématiques que l'on peut  suivre en série littéraire relèvent de la fumisterie. On peut aimer les lettres et vouloir recevoir un enseignement en mathématiques de qualité. Pour ce qui est du corpus unique, je pense qu'il ne faut pas l'abandonner entièrement. Mais il faut se rendre compte que **tous les élèves ne progressent pas à la même vitesse, et qu'il faut le prendre en compte dans la structuration de notre système scolaire**, ce qui n'est pas le cas aujourd'hui avec notre collège uniforme. C'est pour cela que mon syndicat, le Snalc, propose une organisation modulaire du collège, qui permet que les élèves ayant des difficultés en mathématiques disposent de davantage de temps pour atteindre les objectifs fixés par les programmes, le tout dans des groupes à effectifs réduits. Ce ne sont pas les mathématiques qu'il faut changer : c'est le cadre dans lequel on les enseigne.
+Je suis plutôt d'accord[^48] sur ce point, l'approche déductive n'épuise pas toutes les autres loin s'en faut. [@perelman1971traite] ont notamment insisté sur le type de raisonnements non formels avec lesquels les citoyens délibèrent, argumentent et prennent des décisions en matière de valeurs, de morale ou de politique. Dans le domaine de la décision ou de l'éthique on ne "calcule" pas, on ne démontre pas de manière *rationnelle* qu'une solution est "vraie" ou "fausse"[^49], on doit peser le pour et le contre, faire des choix de valeurs, et décider de ce qui est le plus *raisonnable*.
+
+Est-ce à dire que la structure déductive est complètement étrangère au débat argumentatif ? L'*esprit de géomètre* cher à Pascal n'a-t-il aucune vertu pour le citoyen ? Faut-il jeter la démonstration géométrique à la poubelle ? 
+
+[^48]: Même si en mathématique on peut aussi discuter des axiomes.
+
+[^49]: Même si en mathématique la notion même de vrai et de faux peut être nuancée [@connes_topo_2017].
+
+> Du point de vue civique et moral, développer l’exercice de la démonstration déductive impacte la qualité d’un débat, même alignée très imparfaitement à l’idéal d’un raisonnement où toutes les implications sont explicitées. Les démonstrations à la manière d’Euclide, à la fois historiques et circonscrites à des formes particulières de la démonstration, permettent de donner à voir qu’en science on avance prudemment, qu’il faut se méfier des évidences, que chaque pas de raisonnement est important : c’est en cela un excellent modèle de rigueur pour les élèves, futurs citoyens qui seront amenés à prendre de la hauteur, à nuancer leur certitude. La certitude n’étant pas le vrai, cette exigence cruciale de la discipline est à rebours de la spontanéité et de l’impulsivité qui peuvent donner l’illusion du vrai. **Cet horizon régulateur de la démonstration** permet de donner à voir dans un débat citoyen par exemple, que soucieux du « poids » qu’exige une démonstration, le citoyen tempère ses convictions et écoute plus facilement celle de son contradicteur. Cette prudence pas à pas, a pour horizon une recherche d’objectivation, apprendre à penser pour soi-même, par soi-même et contre soi-même. En effet, après avoir émis une opinion, il ne s’agit pas nécessairement de la confirmer, mais de trouver les attributs propres aux objets discutés qui permettent d’articuler et (in)-valider différentes propositions. En somme, faire vivre de la contradiction, penser contre l’opinion émise par soi ou par l’autre pour appréhender l’objet débattu, sans jamais se donner le dernier mot. Enfin, l’exercice de la démonstration reposant sur des objets a priori moins complexes que d’autres objets de la culture humaine, est de ce fait un excellent terrain pour se « faire la main » aux raisonnements déductifs.[^51] [@villas_boas_a_2022]
+
+[^51]: "Il est toujours utile de penser juste, même sur des sujets inutiles. Quand les nombres et les lignes ne conduiraient à absolument à rien, ce seraient toujours les seules connaissances certaines qui aient été accordées à nos lumières naturelles, et elles serviraient à donner plus sûrement à notre raison la première habitude et le premier pli du vrai. Elles nous apprendraient à opérer sur les vérités, à en prendre le fil, souvent très délié et presque imperceptible, à le suivre aussi loin qu'il peut s'étendre ; enfin, elles nous rendraient le vrai si familier, que nous pourrions en d'autres rencontres le reconnaître au premier coup d'oeil et presque par instinct." [@fontenelle_utilite_1699]
+
+[^52]: "L'esprit géométrique n'est pas si attaché à la géométrie qu'il n'en puisse être tiré et transporté à d'autres connaissances. Un ouvrage de morale, de politique, de critique, peut-être même d'éloquence, en sera plus beau, toutes choses d'ailleurs égales, s'il est fait de main de géomètre. L'ordre, la netteté, la précision, l'exactitude qui régnent dans les bons livres depuis un certain temps, pourraient avoir leur première source dans cet esprit géométrique, qui se répand plus que jamais, et qui en quelque façon se communique de proche en proche à ceux même qui ne connaissaient pas la géométrie." [@fontenelle_utilite_1699] 
+
+L'approche déductive est une colonne vertébrale pour que le débat argumentatif ne verse pas dans le pur sophisme. Les points de départ (les valeurs, les axiomes du débat) sont discutables, mais le cheminement qui les relie à la conclusion s'appuie sur du déductif. On ne peut pas affirmer une chose et son contraire dans la même foulée, sauf à être adepte du trumpisme, il y a une exigence de non-contradiction dans l'argumentation. Expliciter ses prémisses, comme le géomètre pose ses définitions, est aussi la marque d'un bon débat. Enfin le citoyen qui sait démontrer repérera immédiatement si son interlocuteur utilise une prémisse fausse ou s'il commet un saut logique dans son argumentaire. C'est ce que je m'évertuais à faire dans mon [analyse des arguments adverses](https://www.kevinpolisano.fr/posts/2021-03-07-analyse-des-arguments-de-sophie-cluzel-opposee-a-la-deconjugualisation-de-laah/) dans le débat autour de l'AAH. Et je crois avoir mené cette critique avec la même probité intellectuelle que celle qui prévaut dans l'éthique de la démonstration : le souci de la preuve, la méfiance envers les évidences, la capacité à penser contre soi-même et à accorder du crédit aux contre-exemples (et donc aux arguments de ses contradicteurs), une humilité face au vrai, le refus de l'impulsivité, etc. L'exercice mathématique n'est pas le calque du débat quotidien, il en est le gymnase mental. Cette gymnastique d'esprit et cette posture sont transférables[^52] des mathématiques au débat citoyen, en important dans l'argumentation la même honnêteté logique qu'on appris en démontrant que *deux triangles sont semblables*[^50].
+
+[^50]: Le cas d'égalité des triangles qu'évoque Luc Ferry. 
+
 
 ### L'utilité comme motivation ?
 
@@ -960,7 +987,9 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 </div>
 
-La première fois que j'ai pris connaissance de cette anecdote, au cours de mon année de seconde, j'ai été subjugué par l'ingéniosité du petit Gauss, car ayant plus de deux fois son âge à cette époque j'aurais été incapable de trouver une pareille astuce. Cela me paraissait hors de portée à deviner à 15 ans, donc a fortiori à 7 ans ! C'était bien le signe avant-coureur de son génie mathématique. 
+La première fois que j'ai pris connaissance de cette anecdote, au cours de mon année de seconde, j'ai été subjugué par l'ingéniosité du petit Gauss[^45], car ayant plus de deux fois son âge à cette époque j'aurais été incapable de trouver une pareille astuce. Cela me paraissait hors de portée à deviner à 15 ans, donc a fortiori à 7 ans ! C'était bien le signe avant-coureur de son génie mathématique. 
+
+[^45]: J'ai d'ailleurs cru à ce moment là que Gauss fut le premier à découvrir ce résultat, qu'on désigne d'ailleurs bien souvent par "formule de sommation de Gauss", alors que ce résultat était connu depuis des siècles. En lisant le traité du triangle arithmétique de Pascal je suis retombé sur cette formule, triangle arithmétique qui n'a d'ailleurs pas attendu Pascal non plus pour être découvert, en vertu de la loi de Stiegler affirmant qu'«une découverte scientifique ne porte jamais le nom de son auteur» (ironiquement Stigler lui-même précise que cette loi n’est pas de lui, mais du sociologue Robert K. Merton, illustrant ainsi sa propre loi). Évidemment *jamais* est un tantinet exagéré, Luc Ferry dirait 99% des découvertes ! Non même pas :-)
 
 > Mais je crains que la répétition constante de ce genre d'histoires ne donne l'impression que les mathématiques sont un jeu réservé à ceux qui, tout au long de leur vie, font preuve d'une intelligence fulgurante. [@hayes_gausss_2006]
 
@@ -1244,8 +1273,66 @@ En mathématiques, l'obstacle est épistémologique et le saut est conceptuel. L
 
 > Carpenter et al. (1993), Carpenter et Franke (2001), Radford (2011) et Squalli (2015) prônent le renforcement d’une arithmétique signifiante se concentrant sur les concepts, les relations et les structures numériques. Certaines notions mathématiques y prennent un nouveau statut, en particulier l’égalité qui doit être conçue comme une relation d’équivalence (Theis, 2005; Osana et al., 2012). Cette arithmétique repose sur **une vision des nombres et des opérations qui est plus structurale que calculatoire** (Squalli, 2015). Dans cette optique, Carpenter et al. (2003) proposent des pistes pour développer chez les jeunes enfants ce qu’ils appellent une «pensée relationnelle», basée sur les propriétés fondamentales des opérations et les propriétés basiques de l’égalité, pour analyser un problème et avancer vers une solution. Ces auteurs préconisent en premier lieu un travail sur le signe égal, destiné à amener les élèves à le percevoir comme représentant une égalité de part et d’autre plutôt que comme une injonction à effectuer un calcul et écrire une réponse. [...] Radford (2014) parle à ce propos d’une **«domestication des yeux» qui s’accompagne d’une «domestication des gestes» et du «discours»**. Pour lui, la pensée algébrique se développe à travers une activité cognitive ancrée dans les sens (sensuous cognition). **La perception, le discours, les gestes et l’imagination interagissent pour concourir à la mise au jour de nouvelles relations systémiques** structurantes entre les composantes matérielles et spirituelles de la pensée. [@venant_developper_2019]
 
-<!-- #### Le rôle des symboles, du langage-image et des analogies  -->
+#### Le rôle des symboles, du langage-image et des analogies
 
+<!-- > L’algèbre requiert l’industrie imaginative. Et pour cela, elle -->
+<!-- rend l’esprit subtil et le garde de s’apesantir et de devenir -->
+<!-- las. Et par cet exercice, les choses qui des fois semblent être -->
+<!-- difficiles, et quasi impossibles à vider, se trouvent évidemment -->
+<!-- aisées. –  Jacques Peletier du Mans -->
+
+<!-- puisé à deux sources : le Triparty en la science des nombres -->
+<!-- de Nicolas Chuquet, et la Summa arithmetica de Pacioli. Il -->
+<!-- en fait une sorte de synthèse. Comme vous le voyez, il appelle -->
+<!-- « chose » ou « premier », l’inconnue. La notation 12 puissance un, deux ou trois pour 12x, 12x -->
+<!-- 2 -->
+<!-- , 12x -->
+<!-- 3 -->
+<!-- , a été inventée -->
+<!-- par Chuquet. A posteriori, nous y voyons un net progrès par -->
+<!-- rapport à 12p, pour « premier » 12ce pour « census » qui désigne le carré et 12 suivi d’un petit carré qui représente le -->
+<!-- cube. -->
+
+<!--  Jean Buteo avec Logistica, ou Borel, en 1559. La racine est -->
+<!-- notée par un ρ, le carré par un losange, et le cube, justement -->
+<!-- par un petit cube en perspective, ce qui est tout de même -->
+<!-- plus cohérent que le carré chez de la Roche. -->
+
+
+> Grothendieck avait le don de choisir des noms marquants et évocateurs pour les nouveaux concepts ; il considérait d’ailleurs l’acte de nommer des objets mathématiques comme faisant partie intégrante de leur découverte, un moyen de les appréhender avant même qu’ils ne soient pleinement compris. L’un de ces termes est « étale » — un mot qui, en français, qualifie l’état de la mer à l’étale, c’est-à-dire au moment où la marée ne monte ni ne descend. À cet instant, la surface de la mer est parfaitement lisse, ce qui évoque la notion d’« espace de revêtement ». Comme Grothendieck l’explique dans *Récoltes et Semailles*, il a choisi le terme « topos » — qui signifie « lieu » en grec — pour suggérer l’idée de « l’objet par excellence » auquel s’applique l’intuition topologique. En parfaite adéquation avec le concept, le mot « topos » renvoie à la notion d’espace la plus fondamentale, la plus primordiale. Quant au terme « motif », il a été choisi pour évoquer les deux sens du mot : un thème récurrent, d’une part, et ce qui suscite une action, d’autre part.
+Le soin que Grothendieck apportait au choix des noms l’amenait à rejeter toute terminologie qu’il jugeait inappropriée : dans *Récoltes et Semailles*, il confie avoir ressenti un « recul intérieur » en entendant pour la première fois l’expression « faisceau pervers ». « Quelle idée de donner un tel nom à un objet mathématique ! » écrit-il. « Ou à toute autre chose ou être vivant, si ce n’est pour qualifier la sévérité d’une personne — car il est évident que, parmi toutes les « choses » de l’univers, nous, les humains, sommes les seuls à qui ce terme puisse jamais s’appliquer ». [@jackson_as_2004]
+
+Avis également partagé par [@cartier_pays_2014] :
+
+> Car le Maître bâtisseur a également le goût et le talent pour nommer les choses, ce dont il use en guise de stratégie intellectuelle majeure. D’ailleurs, mon titre « Un pays dont on ne connaîtrait que le nom », témoigne bien là de sa manière de procéder. Grothendieck a un talent particulier pour nommer les choses avant même de se les approprier et de les conquérir, et beaucoup de ses choix terminologiques sont remarquables. Quand il cherchait des images mentales pour illustrer ses idées scientifiques, il y avait : la « belle demeure parfaite », le « beau château dont on a hérité » ; et lui-même se décrivait comme un « bâtisseur ». Il jonglait avec toutes ces allégories via un registre de langue fantastique. Et cela est d’autant plus étonnant et frappant que sa *Muttersprache* était l’allemand, langue dans laquelle il n’a cessé de communiquer avec sa mère jusqu’à sa mort. Mais s’il a longtemps pensé en allemand, il a néanmoins acquis, par la suite, un sens aigu du français, son bilinguisme lui permettant alors de jouer des germanismes à bon escient. 
+
+Écoutons donc le Maître bâtisseur :
+
+> Pour les “épousailles” attendues, “du nombre et de la grandeur”, c’était comme un lit décidément étriqué, où l’un seulement des futurs conjoints (à savoir, l’épousée) pouvait à la rigueur trouver à se nicher tant bien que mal, mais jamais des deux à la fois ! Le “principe nouveau” qui restait à trouver, pour consommer les épousailles promises par des fées propices, ce n’était autre aussi que ce “lit” spacieux qui manquait aux futurs époux, sans que personne jusque là s’en soit seulement aperçu...
+Ce “lit à deux places” est apparu (comme par un coup de baguette magique...) avec l’idée du topos. Cette idée englobe, dans une intuition topologique commune, aussi bien les traditionnels espaces (topologiques), incarnant le monde de la grandeur continue, que les (soi-disant) “espaces” (ou “variétés”) des géomètres algébristes abstraits impénitents, ainsi que d’innombrables autres types de structures, qui jusque là avaient semblé rivées irrémédiablement au “monde arithmétique” des agrégats “discontinus” ou “discrets”. C’est le point de vue des faisceaux qui a été le guide silencieux et sûr, la clef efficace (et nullement secrète), ne menant sans atermoiements ni détours vers la chambre nuptiale au vaste lit conjugal. Un lit si vaste en effet (telle une vaste et paisible rivière très profonde...) que “tous les chevaux du roi y pourraient boire ensemble...” — comme nous le dit un vieil air que sûrement tu as dû chanter toi aussi, ou au moins l’entendre chanter. Et celui qui a été le premier à le chanter a mieux senti la beauté secrète et la force paisible du topos, qu’aucun de mes savants élèves et amis d’antan... [...] Si le thème des schémas est comme le cœur de la géométrie nouvelle, le thème du topos en est l’enveloppe, ou la demeure. Il est ce que j’ai conçu de plus vaste, pour saisir avec finesse, par un même langage riche an résonances géométriques, une “essence” commune à des situations des plus éloignées les unes des autres, provenant de telle région ou de telle autre du vaste univers des choses mathématiques.
+
+> Le nom “topos” a été choisi (en association avec celui de “topologie”, ou “topologique”) pour suggérer qu’il s’agit de “l’objet par excellence” auquel s’applique l’intuition topologique. Par le riche nuage d’images mentales que ce nom suscite, il faut le considérer comme étant plus ou moins l’équivalent du terme “espace” (topologique), avec simplement une insistance plus grande sur la spécifité “topologique” de la notion. (Ainsi, il y a des “espaces vectoriels”, mais pas de “topos vectoriels” jusqu’à nouvel ordre !) Il s’impose de garder les deux expressions conjointement, chacune avec sa spécifité propre.
+
+> Cette vision n’a commencé à émerger des brumes, à faire apparaître des contours reconnaissables, que vers les années 1957, 58 — des années de gestation intense. Chose étrange peut-être, cette vision était pour moi si proche, si “évidente”, que jusqu’à il y a un an encore, je n’avais songé à lui donner un nom. (Moi dont une des passions pourtant a été de constamment nommer les choses qui se découvrent à moi, comme un premier moyen de les appréhender...)
+
+>  S’il y a une chose qui m’a fasciné dans les mathématiques depuis mon enfance, c’est
+justement cette puissance à cerner par des mots, et à exprimer de façon parfaite, l’essence de
+telles choses mathématiques qui au premier abord se présentent sous une forme si élusive, ou
+si mystérieuse, qu’elles paraissent au-delà des mots...
+
+> Le soin extrême que j’accorde aux noms donnés aux choses découle naturellement du respect que j’ai pour ces choses, dont le nom est censé exprimer l’essence, ou du moins quelque aspect essentiel. Par les échos qui me parviennent, j’ai été choqué plus d’une fois par l’affectation de dédain qui aujourd’hui semble de mise vis-à-vis de cette attitude de respect, dédain qui s’exprime parfois par l’usage de noms abracadabrants pour des notions importantes.
+
+> Quant à exprimer une grande idée, “la dire” donc, c’est là, le plus souvent, une chose
+presque aussi délicate que sa conception même et sa lente gestation dans celui qui l’a conçue
+— ou pour mieux dire, ce laborieux travail de gestation et de formation n’est autre justement
+que celui qui “exprime” l’idée : le travail qui consiste à la dégager patiemment, jour après
+jour, des voiles de brumes qui l’entourent à sa naissance, pour arriver peu à peu à lui donner
+forme tangible, en un tableau qui s’enrichit, s’affermit et s’affine au fil des semaines, des mois
+et des années. Nommer simplement l’idée, par quelque formule frappante, ou par des mots clef plus ou moins techniques, peut être affaire de quelques lignes, voire de quelques pages
+— mais rares seront ceux qui, sans déjà bien la connaître, sauront entendre ce “nom” et y
+reconnaître un visage. Et quand l’idée est arrivée en pleine maturité, cent pages peut-être
+suffiront à l’exprimer, à la pleine satisfaction de l’ouvrier en qui elle était née — comme il se
+peut aussi que dix mille pages, longuement travaillées et pesées, n’y suffiront pas.
 
 
 
@@ -1283,7 +1370,103 @@ Cette expérience montre que la réalisation de deux tâches simultanées[^32] e
 
 <!-- #### Psychologie de l'invention dans le domaine mathématique -->
 
+<!-- > Traditionnellement, on distingue trois types de “qualités” ou d’“aspects” des choses de -->
+<!-- l’Univers, qui soient objet de la réflexion mathématique : ce sont le nombre (**), la grandeur, -->
+<!-- et la forme. On peut aussi les appeler l’aspect “arithmétique”, l’aspect “métrique” (ou “analytique”), et l’aspect “géométrique” des choses. Dans la plupart des situations étudiées dans -->
+<!-- là mathématique, ces trois aspects sont présents simultanément et en interaction étroite. -->
+<!-- Cependant, le plus souvent, il y a une prédominance bien marquée de l’un des trois. Il me -->
+<!-- semble que chez la plupart des mathématiciens, il est assez clair (pour ceux qui les connaissent, ou qui sont au courant de leur oeuvre) quel est leur tempérament de base, s’ils sont -->
+<!-- “arithméticiens”, “analystes”, ou “géomètres” — et ceci, alors même qu’ils auraient beaucoup de cordes à leur violon, et qu’ils auraient travaillé dans tous les registres et diapasons -->
+<!-- imaginables -->
+
+
+<!-- Reprenons l'analogie architecturale  -->
+
+<!-- > La plupart des mathématiciens, je l’ai dit tantôt, sont portés à se cantonner dans un cadre -->
+<!-- conceptuel, dans un “Univers” fixé une bonne fois pour toutes — celui, essentiellement, qu’ils -->
+<!-- ont trouvé “tout fait” au moment où ils ont fait leurs études. Ils sont comme les héritiers -->
+<!-- d’une grande et belle maison toute installée, avec ses salles de séjour et ses cuisines et ses -->
+<!-- ateliers, et sa batterie de cuisine et un outillage à tout venant, avec lequel il y a, ma foi, -->
+<!-- de quoi cuisiner et bricoler. Comment cette maison s’est construite progressivement, au -->
+<!-- cours des générations, et comment et pourquoi ont été conçus et façonnés tels outils (et pas -->
+<!-- d’autres...), pourquoi les pièces sont agencées et aménagées de telle façon ici, et de telle autre là — voilà autant de questions que ces héritiers ne songeraient pas à se demander jamais. C’est -->
+<!-- ça “l’Univers”, le “donné” dans lequel il faut vivre, un point c’est tout ! Quelque chose qui -->
+<!-- paraît grand (et on est loin, le plus souvent, d’avoir fait le tour de toutes ses pièces), mais familier en même temps, et surtout : immuable. Quand ils s’affairent, c’est pour entretenir et -->
+<!-- embellir un patrimoine : réparer un meuble bancal, crépir une façade, affûter un outil, voire -->
+<!-- même parfois, pour les plus entreprenants, fabriquer à l’atelier, de toutes pièces, un meuble -->
+<!-- nouveau. Et il arrive, quand ils s’y mettent tout entier, que le meuble soit de toute beauté, et -->
+<!-- que la maison toute entière en paraisse embellie. [...] Dans la plupart des pièces de la maison, les fenêtres et les volets sont soigneusement clos -->
+<!-- — de peur sans doute que ne s’y engouffre un vent qui viendrait d’ailleurs. Et quand les -->
+<!-- beaux meubles nouveaux, l’un ici et l’autre là, sans compter la progéniture, commencent à -->
+<!-- encombrer des pièces devenues étroites et à envahir jusqu’aux couloirs, aucun de ces héritierslà ne voudra se rendre compte que son Univers familier et douillet commence à se faire un -->
+<!-- peu étroit aux entournures. Plutôt que de se résoudre à un tel constat, les uns et les autres -->
+<!-- préféreront se faufiler et se coincer tant bien que mal, qui entre un buffet Louis XV et un -->
+<!-- fauteuil à bascule en rotin, qui entre un marmot morveux et un sarcophage égyptien, et tel -->
+<!-- autre enfin, en désespoir de cause, escaladera de son mieux un monceau hétéroclite et croulant -->
+<!-- de chaises et de bancs... [...] Il se trouve seulement qu’au niveau relativement limité d’une -->
+<!-- activité créatrice intellectuelle, j’ai été assez peu touché par ce conditionnement-là, qu’on  -->
+<!-- pourrait appeler la “cécité culturelle” — l’incapacité de voir (et de se mouvoir) en dehors de -->
+<!-- l’“Univers” fixé par la culture environnante. Je me sens faire partie, quant à moi, de la lignée des mathématiciens dont la vocation spontanée et la joie est de construire sans cesse des maisons nouvelles. Chemin faisant, ils ne -->
+<!-- peuvent s’empêcher d’inventer aussi et de façonner au fur et à mesure tous les outils, ustensiles, meubles et instruments requis, tant pour construire la maison depuis les fondations -->
+<!-- jusqu’au faîte, que pour pourvoir en abondance les futures cuisines et les futurs ateliers, et -->
+<!-- installer la maison pour y vivre et y être à l’aise. Pourtant, une fois tout posé jusqu’au dernier -->
+<!-- chêneau et au dernier tabouret, c’est rare que l’ouvrier s’attarde longuement dans ces lieux, -->
+<!-- où chaque pierre et chaque chevron porte la trace de la main qui l’a travaillé et posé. Sa place -->
+<!-- n’est pas dans la quiétude des univers tout faits, si accueillants et si harmonieux soient-ils — -->
+<!-- qu’ils aient été agencés par ses propres mains, ou par ceux de ses devanciers. D’autres tâches -->
+<!-- déjà l’appellent sur de nouveaux chantiers, sous la poussée impérieuse de besoins qu’il est -->
+<!-- peut-être le seul a sentir clairement, ou (plus souvent encore) en devançant des besoins qu’il -->
+<!-- est le seul à pressentir. Sa place est au grand air. Il est l’ami du vent et ne craint point d’être -->
+<!-- seul à la tâche, pendant des mois et des années et, s’il le faut, pendant une vie entière, s’il ne -->
+<!-- vient à la rescousse une relève bienvenue. Il n’a que deux mains comme tout le monde, c’est -->
+<!-- sur — mais deux mains qui à chaque moment devinent ce qu’elles ont à faire, qui ne répugnent ni aux plus grosses besognes, ni aux plus délicates, et qui jamais ne se lassent de faire et de -->
+<!-- refaire connaissance de ces choses innombrables qui les appellent sans cesse à les connaître. -->
+<!-- Deux mains c’est peu, peut-être, car le Monde est infini. Jamais elles ne l’épuiseront ! Et -->
+<!-- pourtant, deux mains, c’est beaucoup... [...] Je viens là d’esquisser à grands traits deux portraits : celui du mathématicien “casanier” -->
+<!-- qui se contente d’entretenir et d’embellir un héritage, et celui du bâtisseur-pionnier, qui -->
+<!-- ne peut s’empêcher de franchir sans cesse ces “cercles invisibles et impérieux” qui délimitent -->
+<!-- un Univers. On peut les appeler aussi, par des noms un peu à l’emporte-pièce mais -->
+<!-- suggestifs, les “conservateurs” et les “novateurs”. L’un et l’autre ont leur raison d’être et leur -->
+<!-- rôle à jouer, dans une même aventure collective se poursuivant au cours des générations, des -->
+<!-- siècles et des millénaires. Dans une période d’épanouissement d’une science ou d’un art, il -->
+<!-- n’y a entre ces deux tempéraments opposition ni antagonisme. Ils sont différents et ils -->
+<!-- se complètent mutuellement comme se complètent la pâte et le levain. -->
+<!-- Entre ces deux types extrêmes (mais nullement opposés par nature), on trouve bien sûr -->
+<!-- tout un éventail de tempéraments intermédiaires. Tel “casanier” qui ne songerait à quitter -->
+<!-- une demeure familière, et encore moins à aller se coltiner le travail d’aller en construire une -->
+<!-- autre Dieu sait où, n’hésitera pas pourtant, lorsque décidément ça commence à se faire étroit, -->
+<!-- à mettre la main à la truelle pour aménager une cave ou un grenier, surélever un étage, voire -->
+<!-- même, au besoin, adjoindre aux murs quelque nouvelle dépendance aux modestes proportions. Sans être bâtisseur dans l’âme, souvent pourtant il regarde avec un œil de sympathie, ou tout au moins sans inquiétude ni réprobation secrètes, tel autre qui avait partagé -->
+<!-- avec lui le même logis, et que voilà trimer à rassembler poutres et pierres dans quelque cambrousse impossible, avec les airs d’un qui y verrait déjà un palais... -->
+
+<!-- <div style="display: flex; justify-content: center;"> -->
+<!-- <iframe width="560" height="315" -->
+<!-- src="https://www.youtube.com/embed/asHiYmdk9W0?si=t9fcDvlRFoeQx0Tl&amp;start=249" -->
+<!-- title="YouTube video player" -->
+<!-- frameborder="0" -->
+<!-- allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
+<!-- allowfullscreen></iframe> -->
+<!-- </div> -->
+
+
+<!-- Pour l'élève (dans son apprentissage) -->
+
+<!-- • Exploiter : L'élève applique une méthode qu'il maîtrise déjà, révise ses acquis pour obtenir une bonne note, ou utilise une stratégie de résolution sécurisante. Cela garantit un succès à court terme. -->
+<!-- • Explorer : L'élève essaie une nouvelle façon de résoudre un problème, s'intéresse à une matière ou à un concept hors-programme, ou accepte de se tromper pour comprendre autrement. Cela favorise la créativité et la plasticité cérébrale, mais comporte le risque de l'échec ou de la perte de temps. -->
+<!-- • L'équilibre : Un élève qui n'exploite que des recettes toutes faites stagne ; un élève qui ne fait qu'explorer sans jamais consolider ses acquis ne structure rien. -->
+
+<!-- 2. Pour l'enseignant (dans sa pédagogie) -->
+
+<!-- • Exploiter : Reproduire un cours rodé, des exercices types et une progression pédagogique qui ont fait leurs preuves par le passé pour assurer la réussite aux examens. -->
+<!-- • Explorer : Tester une nouvelle approche didactique (pédagogie active, numérique, projets ouverts), au risque que la séance soit moins maîtrisée ou déroute la classe. -->
+
+<!-- Skyjo / échecs -->
+
+
+
 ### Le formalisme versus l'intuition
+
+#### L'équilibre des forces rationnelles et imaginatives
 
 L'[intuition](https://fr.wikipedia.org/wiki/Intuition), du latin *intuitio* (vue, regard) dérivé de *intueri* (regarder attentivement), est selon Descartes une connaissance immédiate et certaine de la vérité d'une idée par sa nécessité intrinsèque, comme on le saisit dans les mathématiques : *Il n'y a pas d'autres voies qui s'offrent aux hommes, pour arriver à une connaissance certaine de la vérité, que l'intuition évidente et la déduction nécessaire* [@descartes_discours_1637, Règles pour la direction de l'esprit, XIIe règle].
 
@@ -1340,6 +1523,186 @@ de l’autre. (Quand les deux sont grossièrement négligés, on jette le livre 
 quitte la salle en claquant la porte !) Quand chacun des deux aspects est fortement présent,
 que ce soit explicitement ou entre les lignes, cela se manifeste par un sentiment bien familier également d’harmonie, de beauté, d’équilibre, dé satisfaction.
 
+Dans leur livre, [@duminil-copin_autre_2026] nous montrent trois instances des travaux de Galois, la première étant le manuscrit original écrit de la main de Galois, la seconde un cours contemporain présentant ces résultats, et la troisième un programme `Lean` (un assistant de preuve) vérifiant informatiquement la démonstration. Ce qui saute aux yeux, c'est que ces régimes de preuves distincs ont différents degré de formalisation. Le manuscrit de Galois fait la part belle au mouvement des idées, mais serait considéré avec nos standards actuels comme insuffisamment rigoureux pour être publiés en l'état dans une revue. Le cours ménage à la fois un contenu plus formel et des explications en langage naturel, tandis que le code `Lean` est parfaitement rigoureux mais difficile à lire pour un humain. Un bon article de recherche devrait idéalement fournir un code `Lean` pour assurer l'exactitude de la preuve et par ailleurs décrire dans un langage semi-formel (mêlant symbolisme mathématique et langage naturel) les idées et intuitions derrière les formules afin de viser une compréhension profonde des résultats. 
+
+En lisant encore trop souvent des articles dont la lourdeur du formalisme et des aspects techniques éclipsent les idées maîtresses et intuitions ayant guidées ces travaux, j'en viens parfois à regretter le style littéraire de mathématiciens comme Blaise Pascal. Ce qui est paradoxal, car François Viète et René Descartes[^46], en systématisant l'écriture symbolique, avaient précisément pour ambition de libérer l'esprit du carcan de la langue naturelle[^47] et de créer une sorte de "caractéristique universelle" ayant l'avantage 1) d'éviter les barrières linguistiques, 2) de soulager la mémoire de travail et 3) d'automatiser le calcul. Ces outils créés pour simplifier et universaliser ont fini par représenter, pour beaucoup, le sommet de l'abstraction et de l'exclusion. Au lieu de voir l'algèbre comme une sténographie de la pensée, les élèves la perçoivent souvent comme un dialecte abscon, qui coupe le cordon avec le récit et l'intuition verbale.
+
+[^46]: Qui écrivit le discours de la méthode directement en français (appelé à l’époque la "langue vulgaire"), et non en latin (la langue vernaculaire des savants) afin de rendre la vérité accessible au plus grand nombre, et pas seulement à ceux qui maitrisaient le latin.
+
+[^47]: Induisant de longs paragraphes descriptifs du type : "Le cube de la chose, plus quatre fois le carré de ladite chose, est égal à..."
+
+Ainsi le souci d'équilibrer entre formalisme et intuition, valable pour les textes mathématiques, l'est aussi pour l'institution scolaire. 
+
+#### Jean Dieudonné et René Thom face aux maths modernes
+
+Prenons un exemple paradigmatique. Dans son édition du 2 décembre 1970, [Le Canard enchaîné](https://archives.lecanardenchaine.fr/annees/1970/liseuse-2614-dced1aae3dbee660) a critiqué avec humour les nouvelles méthodes des [mathématiques modernes](https://fr.wikipedia.org/wiki/Math%C3%A9matiques_modernes) introduites dans les programmes scolaires, jugées beaucoup trop abstraites et absconses pour des élèves. Le journal s'est notamment moqué de définitions formalistes imposées dès la classe de quatrième, telles que celle définissant une droite :
+
+![Le Canard Enchaîné (2 décembre 1970)](images/canard-enchaine-2-decembre-1970-droite-affine.png)
+Certes l'exemple (bien que réel) est un brin caricatural (nous reparlerons de caricature plus bas), mais il n'en reste pas moins vrai qu'à cette période *la géométrie était détachée de la notion de dessin et de construction, pour endosser une structure axiomatique plus algébrique* ([Wikipédia](https://fr.wikipedia.org/wiki/Math%C3%A9matiques_modernes#En_France)). 
+
+Cela contraste avec la définition géométrique et intuitive qu'en donnait par exemple [@hadamard1925leccons] quarante ans plus tôt :
+
+![](images/hadamard-ligne.png)
+
+Dans le contexte de la guerre froide et de la course scientifique (marquée notamment par le lancement du Spoutnik en 1957), l'OECE souhaitait réformer les programmes scolaires pour former des ingénieurs et scientifiques adaptés aux besoins du monde moderne. Jean Dieudonné, membre fondateur du célèbre collectif de mathématiciens *Nicolas Bourbaki*, souhaitait introduire dans les écoles la rigueur, l'abstraction et les structures unifiées (théorie des ensembles, algèbre linéaire) qui structuraient déjà la recherche contemporaine. Lors du séminaire de Royaumont [@oece_seminaire_1959], qui s'est tenu du 23 novembre au 5 décembre 1959, Jean Dieudonné lança son célèbre cri de guerre *"À bas Euclide !"* comme coup d'envoi du mouvement des "mathématiques modernes" dans l'enseignement secondaire. Par cette formule provocatrice, Dieudonné ne s'attaquait pas au génie d'Euclide lui-même, mais à la place disproportionnée qu'occupait la géométrie euclidienne traditionnelle dans le système scolaire, qui manquait de rigueur et était éloignée des préoccupations contemporaines des mathématiciens de profession.
+
+L'omniprésence de la géométrie traditionnelle comme outil de sélection était avérée avant les année 60 : les élèves passaient beaucoup de temps à étudier des propriétés spécifiques des figures (relations métriques dans le triangle, droites remarquables Euler, Simson, etc, constructions à la règle et au compas, propriétés des cercles et des coniques), et cette prépondérance n'ouvrait pas les élèves aux autres formes de raisonnement mathématique. Pendant qu'ils étudiaient le "cercle des neufs points" le paysage scientifique avait grandement changé et mobilisait des compétences en algèbre, analyse et probabilité que ne dispensait pas l'enseignement de l'époque. 
+
+> Tout le reste, qui remplit aujourd’hui des volumes de « géométrie élémentaire » — j’entends par là, par exemple, tout ce qui concerne les triangles (il est tout à fait possible, et même souhaitable, d’exposer la théorie complète sans même définir ce qu’est un triangle !), ainsi qu’une grande partie de ce qui a trait à l’inversion, aux systèmes de cercles, aux coniques, etc. — présente, pour les mathématiciens (qu’ils soient théoriciens ou appliqués) d’aujourd’hui, un intérêt tout aussi limité que celui des carrés magiques ou des problèmes d’échecs ! [@oece_new_1961]
+
+<details>
+  <summary>Citation d'origine </summary>
+
+Everything else which now fills volumes of "elementary
+geometry "-and by that I mean, for instance, everything
+about triangles (it is perfectly feasible and desirable to des-
+cribe the whole theory without even defining a triangle!),
+almost everything about inversion, systems of circles, conics, etc.—has just as much relevance to what mathematicians
+(pure and applied) are doing today as magic squares or chess
+problems!
+
+</details>
+
+Il est vrai que plus aucun mathématicien professionnel ne cherchait de nouvelles propriétés du triangle euclidien, et donc comparer cela aux échecs ou aux carrés magiques (des puzzles récréatifs) est juste concernant la recherche de pointe. Les réformateurs ont aibsi voulu corriger ce déséquilibre en introduisant dès le plus jeune âge la théorie des ensembles et les structures algébriques, jugés également plus rigoureux que l'axiomatique d'Euclide.
+
+[@thom_mathematiques_1970] dit à cet égard :
+
+> Venons-en maintenant à la seconde objection contre la géométrie euclidienne, celle qui arguë du caractère imparfait, non rigoureux, de l’axiomatique des Éléments. On rétorquera d’abord qu’il y a longtemps que l’enseignement de la géométrie a abandonné la rhétorique lourde et indigeste d’Euclide [voir [@legrand_elementaire_2019]].
+
+> Si l’on compte en nombre d’éditions et non en nombre d’exemplaires, il est à peu près sûr, en revanche, qu’aucun autre ouvrage, hors la Bible, n’a connu un aussi interminable succès : des manuscrits en quantité, puis des centaines (on a parlé de plus d’un millier) d’éditions imprimées. [@legrand_elementaire_2019]
+
+> Les considérations précédentes nous livrent la clé du succès historique des
+Éléments d’Euclide. La géométrie euclidienne fut le premier exemple d’une
+transcription d’un processus spatial bi-ou tridimensionnel dans le langage
+unidimensionnel de l’écriture. [@thom_mathematiques_1970]
+
+Bien que [@dieudonne_devons-nous_1974] se soit défendu de vouloir éliminer la géométrie euclienne et de proposer une fusion avec l'algèbre l'abstraite conservant sa "traduction géométrique", en pratique on a sacrifié l'intuition géométrique sur l'autel de l'abstraction et du formalisme comme le concède Dieudonné lui-même :
+
+> Lorsque je réfléchis à la curieuse répugnance de Thom et de nombre de ses collègues de l'enseignement supérieur à abandonner l'enseignement traditionnel des mathématiques dans les écoles secondaires, même s'ils se rendent compte qu'il manque à la fois de rigueur et d'utilité, je pense qu'elle provient d'un sentiment instinctif que si les mathématiques "modernes" sont mal enseignées, on aurait des résultats encore plus mauvais. Malheureusement, il y a de nombreux exemples montrant que leurs craintes ne sont pas sans fondement. Si déjà de nombreux enseignants à l'université ont une déplorable tendance à développer l'abstraction aux dépens de l'intuition, on ne doit pas être extrêmement surpris par le fait que les enseignants du second degré, qui n'ont pas la possibilité de saisir la motivation profonde de l'introduction des nouveaux concepts en mathématiques, s'attachent à la lettre des nouveaux programmes plutôt qu'à leur esprit. Tout comme leurs collègues de l'université, ils ont également découvert qu'il est beaucoup plus facile d'enseigner à manipuler des concepts abstraits, même à de jeunes enfants, plutôt que de leur faire saisir les réalités que cachent ces abstractions. D'où leur engouement pour la logique en particulier - et l'importance anormale qu'ils ont tendance à lui accorder dans leur enseignement.
+
+L'histoire donnera en grande partie raison aux critiques de Thom puisque les programmes suivants réhabiliteront une approche plus géométrique, concrète et progressive. [@legrand_elementaire_2019] suggéra que le style bourbakiste et euclidien étaient les deux faces d'une même pièce :
+
+> Les premières pages des Éléments : ceux-ci débutent en fanfare par l’accumulation de trente-cinq définitions. En outre, Euclide ne dit jamais où il va ni pourquoi il procède comme il le fait. 
+Paradoxalement, la réforme des « mathématiques modernes » qu’il appelait de ses vœux fut un retour aux ambitions et aux méthodes d’Euclide : construire la géométrie sur des bases irréprochables, quitte à sacrifier l’intelligibilité immédiate et même l’intelligibilité tout court (définition de la droite comme un ensemble muni d’un lot de bijections ad hoc, définition d’un vecteur comme classe d’équivalence de bipoints, définition d’un angle comme classe d’équivalence de couples de demi-droites, etc.). N’oublions pas en outre que Dieudonné était l’un des membres les plus actifs du groupe Bourbaki, dont l’œuvre majeure porte le titre d’Éléments de mathématique et adopte le même type de plan qu’Euclide : pour chaque livre du traité une liste de définitions suivie d’un chapelet de théorème.
+
+Ce style déductiviste fut notamment critiqué par [@lakatos1984preuves] :
+
+> La méthodologie euclidienne a développé un certain style de présentation
+obligatoire auquel je ferai référence par l'expression 'style déductiviste'. Dans ce
+style on commence par une liste précautionneuse d'axiomes, de lemmes ou de
+définitions. Les axiomes et les définitions paraissent fréquemment artificiels et
+d'une complication déroutante. On ne dit jamais comment ces complications sont
+nées. La liste d'axiomes et de définitions est suivie de théorèmes soigneusement
+mis en mots, encombrés de conditions pesantes; il semble impossible que
+quiconque ait jamais pu les inventer. Le théorème est suivi de la preuve.
+L'étudiant en mathématiques est obligé, dans le rituel euclidien, de suivre
+ce tour de prestidigitation sans poser de questions sur le contexte ni sur la façon
+dont est réalisé l'escamotage. S'il découvre par hasard que certaines des
+définitions incongrues ont été forgées dans les preuves, s'il s'étonne simplement
+que ces définitions, lemmes et théorèmes puissent vraiment précéder la preuve,
+l'illusioniste le bannira pour cette démonstration d'immaturité mathématique l .
+Dans le style déductiviste toute proposition est vraie, toute inférence
+valide. Les mathématiques sont présentées comme un ensemble toujours .plus
+vaste de vérités éternelles et immuables. Contre-exemples, réfutations, critiques
+ne peuvent y pénétrer. L'exposé se donne des airs de certitude en commençant
+par des définitions déguisées, issues des preuves e à l'épreuve des monstres, et
+par le théorème dans sa forme définitive, faisant disparaître la conjecture
+primitive, les réfutations et la critique de la preuve. Le style déductiviste cache la lutte, dissimule l'aventure. L'histoire toute entière disparaît. Les tentatives
+successives de formulation du théorème au cours de la procédure de preuve sont
+vouées à l'oubli cependant que le résultat final est exalté, élevé à une infaillibilité
+sacrée.
+
+Nous reviendrons dans un instant sur "L'échaufaudage conceptuel gommé". Avant cela reprenons le réquisitoire de [@thom_mathematiques_1970] accusant la réforme d'être psychologiquement nuisible pour l'enfant, qui a besoin de manipuler le concret et le spatial avant d'aborder le symbolique. Introduire les ensembles ou la logique formelle trop tôt est un contresens : la rigueur formelle n'est pas source de découverte, elle n'est là que pour valider ce que l'intuition a deviné.
+
+> Ce serait en tout cas une erreur considérable que de croire
+faciliter l’acquisition des mathématiques en remplaçant la géométrie par des
+structures algébriques inculquées massivement et prématurément faute d’une
+motivation convenable. De ce point de vue, l’introduction du corps des complexes dans le programme de terminale ne paraissait pas s’imposer. [...] Sous l’influence
+de traditions axiomatiques et livresques, on a vu dans le discontinu l’être
+premier des mathématiques. « Dieu créa les nombres entiers, et le reste est
+l’œuvre de l’homme. » Cette maxime de l’algébriste Kronecker témoigne plus
+de son passé de banquier enrichi dans les manipulations monétaires que de
+sa clairvoyance philosophique. Il ne fait guère de doute que d’un point de
+vue psychologique (et pour moi, ontologique), le continu géométrique est
+l’être premier. Car avoir conscience, c’est avoir conscience du temps et de
+l’espace ; le continu géométrique est en quelque sorte adhérent à toute pensée
+consciente. 
+
+Les Éléments d'Euclide est le plus ancien ouvrage traitant la géométrie de manière axiomatique[^55], si bien que nous n'avons principalement retenu de ce moment fondateur que ce formalisme nouveau, alors qu'Euclide fut aussi à l'origine d'une révolution conceptuelle qui s'enracine dans le continu géométrique d'un geste transgressif dont nous allons maintenant parler.
+
+[^55]: Bien entendu la critique qui précède est avant tout épistémologique et didactique, cela n'enlève rien à l'influence incroyable que Les Éléments ont exercé sur le développement des mathématiques et à l'effacité indéniable de l'axiomatisation et de la déduction. 
+
+#### La ligne et le point
+
+Dans son livre, [@longo2023cauchemar] fait le récit de ce qui selon lui représente le véritable "Big Bang" des mathématiques occidentales, bien plus que la méthode axiomatique dont on a fait d'Euclide l'inventeur et un "précurseur d'Hilbert". Cette révolution conceptuelle, c'est l'invention de la ligne sans épaisseur. Quand on y réfléchit, cette conception a quelque chose de scandaleux ! Qui a déjà vu une ligne sans épaisseur ? Saint Augustin déjà remarquait que le plus fin des fils d'araignée possède une épaisseur. L'idée géniale d'Euclide ne provient donc pas de l'expérience sensible, mais de la pure imagination, comme l'image que l'on se figure d'un cercle parfait qui n'existe nul part dans la nature. Cette idéalité de la droite sans épaisseur devient malgré tout un *objet mathématique* que l'on va manipuler par la pensée, brique de base du système axiomatique d'Euclide à partir duquel on va pouvoir dériver d'innombrables théorèmes mathématiques. La fécondité de ces concepts abstraits et de leurs interactions m'a toujours fasciné, et le concept de *droite géométrique* en fait partie, peut-être sous l'influence du papier-peint de ma chambre quand j'étais jeune :-)
+
+![Ma chambre euclidienne lorsque j'habitais chez mes parents](images/ma-chambre-euclidienne.jpg)
+
+<details>
+  <summary>Combien de points d'intersections obtient-on avec $n$ droites non parallèles et non concourantes en un même point ? </summary>
+  
+  Pour trouver un point d'intersection, il faut choisir 2 droites parmi les $n$ droites disponibles, ce qui revient à calculer une combinaison de 2 éléments parmi $n$ : 
+  
+  $$ \binom{n}{2} = \frac{n(n-1)}{2}$$
+  
+  Et vous reconnaissez la formule donnant le nombre de poignées de main échangées dans un groupe de $n$ personnes !
+  
+</details>
+
+Ce qui est formidable, c'est que cette invention spéculative au coeur de la géométrie n'était pas étrangère des problèmes concrets de l'époque, puisque c'est cette même géométrie qui permis de cartographier le ciel, de calculer le mouvement des planètes, de prédire les éclipses, de s'orienter en mer, de construire des cathédrales, calculer la taille de parcelles agricoles, et même de mesurer la circonférence de la Terre[^57] !, 
+
+[^57]: C'est d'ailleurs l'étymologie du mot [géométrie](https://fr.wiktionary.org/wiki/g%C3%A9om%C3%A9trie).
+
+Ce dialogue entre les concepts et le réel, entre ce qui "relie" la ligne sans épaisseur et la corde tendue (bien réelle) dont Hadamard dit qu'elle donne l'image de la première (ou bien le contraire), est probablement ce qui m'a motivé à travailler pendant ma thèse sur la super-résolution de lignes [@polisanoConvex2019][^56]. Le pont entre le continu et le discret m'a toujours intéressé. Et ce pont, est une limite. La ligne euclidienne est un bord, un passage à la limite où l'épaisseur tend vers 0.  Elle naît d'un geste : celui du premier géomètre traçant sur le sable une trajectoire continue, que le langage permet ensuite d'énoncer ("cette ligne est sans épaisseur") et que l'écriture fige. C'est dans ce va-et-vient entre la trace et le langage que la notion de bord prend son sens mathématique et a permis de développer des méthodes de calcul de surfaces. Ce geste constitutif est également au cœur de la démonstration. Par exemple Le théorème 1 du livre I d'Euclide construit un triangle équilatéral en traçant deux cercles centrés sur les extrémités d'un segment, dont l'intersection produit un point, et l'on "voit" que ce point existe parce que le tracé est continu. 
+
+[^56]: Que j'ai par la suite améliorée et simplifiée dans cet autre article [@polisanoGridless2024].
+
+
+<div style="display: flex; justify-content: center;">
+<iframe width="315" height="560"
+src="https://www.youtube.com/embed/N3srzGMAPEM"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+</div>
+
+Le point n'est pas l'entité première nous dit [@longo2023cauchemar], il est le signe (*semeion*) qui marque une position sur la ligne ou à l'intersection de deux lignes. Le mot "théorème" on l'a dit partage sa racine (*theorein*, voir) avec celle de "théâtre" : prouver, c'est d'abord montrer. Et ce "voir" s'appuie sur des rotations, des translations, des symétries, qui précèdent et stabilisent les axiomes eux-mêmes.
+
+La ligne et le point, c'est un peu comme le [paradoxe de l'oeuf et de la poule](https://fr.wikipedia.org/wiki/Paradoxe_de_l%27%C5%93uf_et_de_la_poule), on peut définir la ligne à partir d'une collection infinie de points (qui sont les éléments de base, façon ensembliste à la Cantor); ou bien définir le point à partir de l'intersection de deux droites (qui sont les éléments de base et le point n'est que l'empreinte qu'elles laissent de leur croisement). Le cadre se situe tantôt du côté du discret, tantôt du côté du continu et du spatial. Et bien que je concède à [@dieudonne_devons-nous_1974] que nous avons aussi une expérience du discret (où le jeune enfant a la capacité de s'évader du continu homogène en distinguant un objet d'un nombre, en comptant, etc), l'expérience du point[^57] reste selon moi nettement moins "naturelle" que celle de la ligne, et en cela je rejoins [@thom_mathematiques_1970] disant : *Il ne fait guère de doute que d’un point de vue psychologique (et pour moi, ontologique), le continu géométrique est l’être premier. Car avoir conscience, c’est avoir conscience du temps et de l’espace ; le continu géométrique est en quelque sorte adhérent à toute pensée consciente.*
+
+[@longo2023cauchemar] fournit une explication de l'intuition "naturelle" qui se trame derrière le concept de ligne :
+
+> L'étude du cerveau montre que celui-ci impose des bords aux objets, mais surtout l'organisation du monde en lignes continues relève des gestes primaires de l'organisme, de la boucle constitutive rétention-protension : on pratique un « recollement» entre la trajectoire retenue par la mémoire et celle qui est prévue, précédée d'une saccade anticipatrice. [...] Le prédateur qui est en nous a développé un système complexe de prévisions préconscientes, matérialisées dans des saccades oculaires qui précèdent la proie, anticipent sa trajectoire'. Les joueurs de tennis le savent très bien: ils doivent intégrer dans un circuit cérébral et corporel rapide la vision, la prévision et l'action qui leur permettent d'allonger le bras vers le bon endroit avant que la balle n'arrive. La fuite aussi demande une prévision de la trajectoire du prédateur : il faut l'anticiper pour se sauver à temps. [...] La continuité du mouvement devient ensuite un objet mathématique : la trajectoire en tant que ligne primordiale, continue car résultat d'un suivi et d'un recollement fait à partir du tout premier cortex visuel. Mais ces structures biologiques, neuronales en réalité, ne contiennent pas déjà les concepts de la ligne et du bord : elles ne sont que des conditions de possibilité d'un rapport primaire au monde que le langage, le dessin et l'écriture organisent conceptuellement à partir d'un geste - le suivi dans le continu du mouvement d’une proie et le tracé des bords de figures sur un rocher précèdent le concept, le rendent possible, mais ne le déterminent pas et peuvent encore moins être identifiés au concept.
+
+On retrouve ici la dialectique décrite par Grothendieck entre l'image informe et le langage qui lui donne forme. La logique et la déduction restent nécessaires à la rigueur de la preuve, mais le sens réside d'abord dans l'invention du concept par ce geste transgressif : la ligne sans épaisseur. Le rêve formaliste d'une transparence totale, où toute notion serait distillée dans un langage entièrement explicite, se heurte à cet enracinement des mathématiques dans une pratique historique du sens. Le prix à payer pour que le texte mathématique soit compréhensible par un humain est une "rigueur informelle", un jeu inévitable d'ambiguïtés qui évoquent, tout en restant l'expression d'une construction rigoureuse. [@thom_mathematiques_1970] disait à ce propos :
+
+> Tout mathématicien doté d’un tant soit peu d’honnêteté intellectuelle reconnaîtra que, dans chacune de ses démonstrations, il est capable d’attacher
+un sens à chacun des symboles qu’il manipule. [...] Toute démonstration est avant tout la révélation d’une nouvelle structure, dont les éléments
+gisaient séparés dans l’intuition, et dont le raisonnement reconstruit la genèse
+progressive. En ce sens, toute démonstration est une maïeutique : il s’agit de
+recréer chez le lecteur les processus psychologiques propres à la manifestation de la vérité implicite, dont il détenait toutes les données mais qui restait
+voilée dans l’informulé.
+
+
+<!-- Voici trois caricatures de [Maurice Tournade](https://www.maurice-tournade.com/caricatures) : -->
+
+<!-- ::: {layout-ncol=3} -->
+<!-- ![](images/giscard.jpeg) -->
+
+<!-- ![](images/mitterand.jpeg) -->
+
+<!-- ![](images/chirac.jpeg) -->
+<!-- ::: -->
+
+<!-- Quelques traits suffisent à reconnaître de quels présidents il s'agit -->
+
+<!-- #### Conception de la rigueur -->
+
+<!-- > Il faut en prendre son parti. Il n’y a pas de définition rigoureuse de la rigueur. Nous affirmerons donc : est rigoureuse toute démonstration qui, chez -->
+<!-- tout lecteur suffisamment instruit et préparé, suscite un état d’évidence qui -->
+<!-- entraîne l’adhésion. Et cette évidence provient de la possibilité d’avoir une -->
+<!-- conception assez claire de chacun des symboles utilisés pour que leur combinatoire force la conviction. -->
 
 <!-- > La chose cependant qui me paraît la plus essentielle pour la qualité de toute recherche, -->
 <!-- qu’elle soit intellectuelle ou autre, n’est aucunement question d’expérience. C’est l’exigence -->
@@ -1416,7 +1779,7 @@ N'est pas Grothendieck qui veut. Beaucoup d'élèves ont eu cette relation patho
 > Or, pour comprendre une théorie, il ne suffit pas de constater que le chemin que l’on a suivi n’est pas coupé par un obstacle, il faut se rendre compte des raisons qui l’ont fait choisir. Pourra-t-on donc jamais dire qu’on comprend une théorie si on veut lui donner d’emblée sa forme définitive, celle que la logique impeccable lui impose, sans qu’il reste aucune trace des tâtonnements qui y ont conduit
 ? Non, on ne la comprendra pas réellement, on ne pourra même la retenir, ou on ne la retiendra qu’à force de l’apprendre par coeur. [@poincare_logique_1889]
 
-Et s'il fallait réintroduire ces éléments dans l'enseignement des mathématiques pour en donner le goût aux élèves ? Et même peut-être dans le monde de la recherche lui-même ?
+Et s'il fallait réintroduire ces éléments dans l'enseignement des mathématiques pour en donner le goût aux élèves ? Prendre le contrepied de l'[aphorisme de Gauss](https://accromath.uqam.ca/2015/03/confidences-darchimede-ou-le-mai%CC%82tre-geometre-divulgue-un-joli-truc-du-metier-de-son-cru/) selon lequel *Quand un bel édifice est achevé, on ne doit pas y lire ce que fut l’échafaudage*.      Et même peut-être dans le monde de la recherche lui-même ? 
 
 > Nicolas Bouleau : – Si l'on établit un parallèle entre création mathématique et création architecturale, parallèle qui peut être poussé assez loin, on est frappé par une différence criante : alors que les architectes expliquent largement leur processus de création et publient leur esquisses et leurs démarches, il n'y a rien de tel chez les mathématiciens qui ne fournissent que des œuvres parachevées.  
 > Laurent Schwartz : – C'est une habitude, on pourrait ne pas faire comme ça. Les ébauches d'un peintre sont considérées comme passionnantes, celles d'un mathématicien par habitude sociale imposée on n'en donne pas les étapes. Ceci dit, lorsque je fais un amphi, je montre toujours comment on arrive là. Les étapes de ma recherche je les connais, je sais par où je suis passé et où j'ai souffert pour obtenir tel ou tel résultat. C'est simplement que les éditeurs n'en veulent pas et que Bourbaki[^42] a imposé un style tellement concis qu'on ne peut plus expliquer ce qu'on fait, il y a beaucoup d'autres styles qui sont plus explicatifs et meilleurs. [@bouleau_dialogues_1994]
@@ -1535,44 +1898,6 @@ Je ne sais pas dans quelle mesure ces dispositifs alternatifs peuvent être int�
 
 <!-- symbolisme carré + noms aux choses évoque des images mentaleq --> 
 
-<!-- >  S’il y a une chose qui m’a fasciné dans les mathématiques depuis mon enfance, c’est -->
-<!-- justement cette puissance à cerner par des mots, et à exprimer de façon parfaite, l’essence de -->
-<!-- telles choses mathématiques qui au premier abord se présentent sous une forme si élusive, ou -->
-<!-- si mystérieuse, qu’elles paraissent au-delà des mots... -->
-
-<!-- > Le soin extrême que j’accorde aux noms donnés aux choses découle naturellement du respect que j’ai pour -->
-<!-- ces choses, dont le nom est censé exprimer l’essence, ou du moins quelque aspect essentiel. Par les échos qui me -->
-<!-- parviennent, j’ai été choqué plus d’une fois par l’affectation de dédain qui aujourd’hui semble de mise vis-à-vis -->
-<!-- de cette attitude de respect, dédain qui s’exprime parfois par l’usage de noms abracadabrants pour des notions -->
-<!-- importantes.  -->
-
-<!-- > Le nom “topos” a été choisi (en association avec celui de “topologie”, ou “topologique”) pour suggérer -->
-<!-- qu’il s’agit de “l’objet par excellence” auquel s’applique l’intuition topologique. Par le riche nuage d’images -->
-<!-- mentales que ce nom suscite, il faut le considérer comme étant plus ou moins l’équivalent du terme “espace” (topologique), avec simplement une insistance plus grande sur la spécifité “topologique” de la notion. (Ainsi, il -->
-<!-- y a des “espaces vectoriels”, mais pas de “topos vectoriels” jusqu’à nouvel ordre !) Il s’impose de garder les deux -->
-<!-- expressions conjointement, chacune avec sa spécifité propre. -->
-
-<!-- > Quant à exprimer une grande idée, “la dire” donc, c’est là, le plus souvent, une chose -->
-<!-- presque aussi délicate que sa conception même et sa lente gestation dans celui qui l’a conçue -->
-<!-- — ou pour mieux dire, ce laborieux travail de gestation et de formation n’est autre justement -->
-<!-- que celui qui “exprime” l’idée : le travail qui consiste à la dégager patiemment, jour après -->
-<!-- jour, des voiles de brumes qui l’entourent à sa naissance, pour arriver peu à peu à lui donner -->
-<!-- forme tangible, en un tableau qui s’enrichit, s’affermit et s’affine au fil des semaines, des mois -->
-<!-- et des années. Nommer simplement l’idée, par quelque formule frappante, ou par des motsclef plus ou moins techniques, peut être affaire de quelques lignes, voire de quelques pages -->
-<!-- — mais rares seront ceux qui, sans déjà bien la connaître, sauront entendre ce “nom” et y -->
-<!-- reconnaître un visage. Et quand l’idée est arrivée en pleine maturité, cent pages peut-être -->
-<!-- suffiront à l’exprimer, à la pleine satisfaction de l’ouvrier en qui elle était née — comme il se -->
-<!-- peut aussi que dix mille pages, longuement travaillées et pesées, n’y suffiront pas (*) -->
-
-<!-- > Traditionnellement, on distingue trois types de “qualités” ou d’“aspects” des choses de -->
-<!-- l’Univers, qui soient objet de la réflexion mathématique : ce sont le nombre (**), la grandeur, -->
-<!-- et la forme. On peut aussi les appeler l’aspect “arithmétique”, l’aspect “métrique” (ou “analytique”), et l’aspect “géométrique” des choses. Dans la plupart des situations étudiées dans -->
-<!-- là mathématique, ces trois aspects sont présents simultanément et en interaction étroite. -->
-<!-- Cependant, le plus souvent, il y a une prédominance bien marquée de l’un des trois. Il me -->
-<!-- semble que chez la plupart des mathématiciens, il est assez clair (pour ceux qui les connaissent, ou qui sont au courant de leur oeuvre) quel est leur tempérament de base, s’ils sont -->
-<!-- “arithméticiens”, “analystes”, ou “géomètres” — et ceci, alors même qu’ils auraient beaucoup de cordes à leur violon, et qu’ils auraient travaillé dans tous les registres et diapasons -->
-<!-- imaginables -->
-
 
 
 <!-- 7:27 "Education échec et maths" : Euclide formalisme vs créativité geste audacieux -->
@@ -1590,6 +1915,10 @@ Je ne sais pas dans quelle mesure ces dispositifs alternatifs peuvent être int�
 
 
 <!-- **Beauté et mathématiques** -->
+
+<!-- Mieux encore, on peut vouloir apprendre les mathématiques pour elles-mêmes, indépendamment de toutes ces retombées positives. Après tout, on apprécie la poésie non pour son utilité mais parce qu'on la trouve belle[^25]. Personne d'ailleurs ne cherche à justifier l'utilité des vers en alexandrins dans la vie de tous les jours, nous pouvons donc aussi être honnêtes et dire qu'il y a en effet peu de situations de la vie courante où les gens seront amenés à effectuer un raisonnement par récurrence. Cela ne disqualifie pas pour autant son enseignement comme on l'a vu. -->
+
+<!-- [^25]: « Le véritable esprit de joie, d’exaltation, le sentiment d’être plus qu’un homme, qui sont la pierre de touche de l’excellence la plus haute, se trouvent dans les mathématiques comme dans la poésie » – Bertrand Russel. -->
 
 
 <!-- > «Je me souviens très bien de ce que j’ai ressenti la première fois que j’ai vu des gens faire du kitesurf. Je me suis dit que ce que je voyais n’était pas possible. Et dans le même temps c’était visiblement possible. Je suis resté longtemps à regarder.Quelque chose du même ordre m’a intrigué lors de ma rencontre avec les mathématiques. Elles m’ont semblé trop dures, trop abstraites, trop incompréhensibles. Faire des mathématiques, ça n’avait pas l’air possible. Et dans le même temps, ça avait l’air possible.La difficulté des mathématiques, le vertige et la terreur qu’elles nous inspirent, ce n’est que la première partie de l’expérience émotionnelle. La seconde partie, c’est l’incroyable sentiment de puissance et de magie qui se dégage de la compréhension profonde, quand on finit par découvrir que non seulement c’était possible, mais qu’en plus c’était facile.C’était même facile depuis le début et on ne le voyait pas.Chaque apprentissage mathématique reproduit cette double expérience de vertige et de puissance. Si vous n’aimez pas les sensations fortes, les mathématiques ne sont pas faites pour vous.» -->
@@ -1680,6 +2009,8 @@ Je ne sais pas dans quelle mesure ces dispositifs alternatifs peuvent être int�
 <!-- (après avoir oublié l’effort qu’il lui a fallu pour l’ingurgiter bon gré mas gré) ; et “l’abstrait”, -->
 <!-- c’est tout ce qui se présente sous la forme d’un inconnu rébarbatif dont il répugnerait à faire -->
 <!-- connaissance, vu le prix... -->
+
+<!-- Hardy idées mathématiques en strates plus ou moins profondes -->
 
 <!-- ## Appendices -->
 
